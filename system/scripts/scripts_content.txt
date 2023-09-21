@@ -6,4 +6,6 @@
 divert "/user/scripts/scripts_content.txt"
 
 require "content/r1/scripts.txt"
-require "content/test/scripts.txt"
+//require "content/test/scripts.txt"
+
+include "content/official/scripts.txt"
