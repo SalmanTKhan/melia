@@ -1,5 +1,5 @@
-CREATE TABLE `account_properties` (
-  `propertyId` bigint(20) NOT NULL,
+CREATE TABLE IF NOT EXISTS `account_properties` (
+  `propertyId` bigint(20)  NOT NULL,
   `accountId` bigint(20) NOT NULL,
   `name` varchar(64) NOT NULL,
   `type` varchar(1) NOT NULL,
@@ -13,5 +13,8 @@ ALTER TABLE `account_properties`
 ALTER TABLE `account_properties`
   MODIFY `propertyId` bigint(20) NOT NULL AUTO_INCREMENT;
 
+ALTER TABLE `account_properties`
+  ADD KEY `account_properties_ibfk_1` (`accountId`);
+  
 ALTER TABLE `account_properties`
   ADD CONSTRAINT `account_properties_ibfk_1` FOREIGN KEY (`accountId`) REFERENCES `accounts` (`accountId`) ON DELETE CASCADE ON UPDATE CASCADE;
