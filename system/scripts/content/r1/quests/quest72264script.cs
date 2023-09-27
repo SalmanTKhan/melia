@@ -27,7 +27,7 @@ public class Quest72264Script : QuestScript
 		AddPrerequisite(new LevelPrerequisite(446));
 		AddPrerequisite(new CompletedPrerequisite("EP12_FINALE_04"));
 
-		AddReward(new ExpReward(-2147483648, -2147483648));
+		AddReward(new ExpReward(2249869568, 2249869568));
 		AddReward(new ItemReward("misc_Growth_Reinforce_Tier3", 117));
 		AddReward(new ItemReward("Premium_RankReset_14d", 1));
 

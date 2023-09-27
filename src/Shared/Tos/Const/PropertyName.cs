@@ -8387,6 +8387,31 @@
 		public const string AchieveReward_Challenge_16 = "AchieveReward_Challenge_16";
 		public const string AchieveReward_Challenge_15 = "AchieveReward_Challenge_15";
 		public const string AchieveReward_Challenge_18 = "AchieveReward_Challenge_18";
+		public const string HUD_SKIN_DATE_DEFAULT_GRADE = "HUD_SKIN_DATE_DEFAULT_GRADE";
+		public const string ep15elf_dagger_cabinet = "ep15elf_dagger_cabinet";
+		public const string ContentsTotalShop_2309_1 = "ContentsTotalShop_2309_1";
+		public const string ep15elf_bow_cabinet = "ep15elf_bow_cabinet";
+		public const string ep15elf_thstaff_cabinet = "ep15elf_thstaff_cabinet";
+		public const string ep15elf_crossbow_cabinet = "ep15elf_crossbow_cabinet";
+		public const string ep15elf_theme = "ep15elf_theme";
+		public const string dress_ep15elf02_1 = "dress_ep15elf02_1";
+		public const string dress_ep15elf01_2 = "dress_ep15elf01_2";
+		public const string dress_ep15elf02_2 = "dress_ep15elf02_2";
+		public const string dress_ep15elf01_1 = "dress_ep15elf01_1";
+		public const string EVENT_W_MOON_TOTAL_COIN_CAPA = "EVENT_W_MOON_TOTAL_COIN_CAPA";
+		public const string EVENT_W_MOON_DAILY_COIN_GAIN = "EVENT_W_MOON_DAILY_COIN_GAIN";
+		public const string EVENT_W_MOON_SHOP_02 = "EVENT_W_MOON_SHOP_02";
+		public const string EVENT_W_MOON_SHOP_09 = "EVENT_W_MOON_SHOP_09";
+		public const string EVENT_W_MOON_SHOP_01 = "EVENT_W_MOON_SHOP_01";
+		public const string EVENT_W_MOON_SHOP_10 = "EVENT_W_MOON_SHOP_10";
+		public const string EVENT_W_MOON_SHOP_08 = "EVENT_W_MOON_SHOP_08";
+		public const string EVENT_W_MOON_SHOP_07 = "EVENT_W_MOON_SHOP_07";
+		public const string EVENT_W_MOON_SHOP_03 = "EVENT_W_MOON_SHOP_03";
+		public const string EVENT_W_MOON_SHOP_05 = "EVENT_W_MOON_SHOP_05";
+		public const string EVENT_W_MOON_SHOP_06 = "EVENT_W_MOON_SHOP_06";
+		public const string EVENT_W_MOON_SHOP_04 = "EVENT_W_MOON_SHOP_04";
+		public const string InDunCountType_901 = "InDunCountType_901";
+		public const string CONTENTS_TOTAL_SHOP_POSE_19 = "CONTENTS_TOTAL_SHOP_POSE_19";
 
 		// Guild
 		public const string MaxCount = "MaxCount";
@@ -19159,6 +19184,9 @@
 		public const string EVENT_2023_POPOBOOST_MAX_GEARSCORE = "EVENT_2023_POPOBOOST_MAX_GEARSCORE";
 		public const string Hide_3435 = "Hide_3435";
 		public const string Kill_boss_dragoon_ex = "Kill_boss_dragoon_ex";
+		public const string Hide_3436 = "Hide_3436";
+		public const string Kill_event_boss_lucy = "Kill_event_boss_lucy";
+		public const string Pose_FLOWERSCENT = "Pose_FLOWERSCENT";
 
 		// SessionObject
 		public const string PosX = "PosX";
@@ -27008,6 +27036,7 @@
 		public const string MG_Last_Goddess_Raid_DreamyForest_Auto = "MG_Last_Goddess_Raid_DreamyForest_Auto";
 		public const string MG_Last_FallenDragoon_Guild_Raid = "MG_Last_FallenDragoon_Guild_Raid";
 		public const string MG_Last_FallenDragoon_Guild_Raid_Block = "MG_Last_FallenDragoon_Guild_Raid_Block";
+		public const string MG_Last_Event2023_Moon_Rabbit = "MG_Last_Event2023_Moon_Rabbit";
 
 		// Skill
 		public const string Tooltip_Attr = "Tooltip_Attr";

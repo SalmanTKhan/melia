@@ -9,6 +9,7 @@
 // File Mask: 
 //  ID Bytes: 
 //   History: 
+//   i378059: hudSkin, and hudInfo removed, replaced with skinId and l1 (seems to be accountId broken)
 //------------------------------------------------
 
 #include "inc/common.bt"
@@ -16,5 +17,5 @@
 ServerHeaderFixed header;
 
 int handle;
-char hudSkin[128];
-char hudInfo[512];
+int skinId;
+int64 l1; // Missing half the account id.

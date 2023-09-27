@@ -431,6 +431,11 @@ namespace Melia.Zone.World.Actors.Characters
 		public int BalloonId { get; set; }
 
 		/// <summary>
+		/// Character's HUD Skin Id
+		/// </summary>
+		public int HUDSkin { get; private set; }
+
+		/// <summary>
 		/// Animation Pairing
 		/// </summary>
 		public bool IsPaired { get; set; }
@@ -637,6 +642,11 @@ namespace Melia.Zone.World.Actors.Characters
 		public void SetHeadDirection(Direction dir)
 		{
 			this.HeadDirection = dir;
+		}
+
+		public void SetHUDSkin(int skinId)
+		{
+			this.HUDSkin = skinId;
 		}
 
 		/// <summary>

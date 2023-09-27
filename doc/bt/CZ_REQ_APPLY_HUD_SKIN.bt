@@ -1,20 +1,17 @@
 //------------------------------------------------
-//--- 010 Editor v13.0.2 Binary Template
+//--- 010 Editor v13.0.1 Binary Template
 //
-//      File: ZC_SEND_APPLY_HUD_SKIN_OTHER.bt
+//      File: CZ_REQ_APPLY_HUD_SKIN.bt
 //   Authors: Salman T. Khan
-//   Version: i374025 (Papaya)
+//   Version: i378059
 //   Purpose: 
 //  Category: 
 // File Mask: 
 //  ID Bytes: 
 //   History: 
-//   i378059: hudSkin, and hudInfo removed, replaced with skinId
 //------------------------------------------------
-
 #include "inc/common.bt"
 
-ServerHeaderFixed header;
+ClientHeaderFixed header;
 
-int handle;
 int skinId;

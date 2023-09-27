@@ -175,8 +175,8 @@ namespace Melia.Zone.World.Spawning
 				monster.Components.Add(new MovementComponent(monster));
 				monster.Components.Add(new AiComponent(monster, "BasicMonster"));
 
-				monster.SpawnLocation = new Location(map.Id, pos);
 				map.AddMonster(monster);
+				monster.SpawnLocation = new Location(map.Id, pos);
 				monster.PossiblyBecomeRare();
 			}
 

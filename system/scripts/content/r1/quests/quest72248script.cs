@@ -28,7 +28,7 @@ public class Quest72248Script : QuestScript
 
 		AddObjective("kill0", "Kill 10 Bloguz Goblin Archer(s) or Grey Wolf(s) or Grey Wolf Chief(s) or Necko(s) or Bloguz Goblin Rider(s)", new KillObjective(10, 59354, 59358, 59357, 59360, 59366));
 
-		AddReward(new ExpReward(-2147483648, -2147483648));
+		AddReward(new ExpReward(2249869568, 2249869568));
 		AddReward(new ItemReward("Vis", 25288));
 		AddReward(new ItemReward("misc_Growth_Reinforce_Tier3", 16));
 

@@ -26,7 +26,7 @@ public class Quest72262Script : QuestScript
 		AddPrerequisite(new LevelPrerequisite(446));
 		AddPrerequisite(new CompletedPrerequisite("EP12_FINALE_02"));
 
-		AddReward(new ExpReward(-2147483648, -2147483648));
+		AddReward(new ExpReward(2249869568, 2249869568));
 		AddReward(new ItemReward("Vis", 26314));
 		AddReward(new ItemReward("misc_Growth_Reinforce_Tier3", 17));
 

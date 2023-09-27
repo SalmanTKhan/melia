@@ -64,7 +64,7 @@ public class Quest91161Script : QuestScript
 
 	public override void OnComplete(Character character, Quest quest)
 	{
-		character.Quests.Start("격동의 핵으로 : RAID_CASTLE_EP14_2_MQ_2");
+		character.Quests.Start("RAID_CASTLE_EP14_2_MQ_2");
 	}
 }
 

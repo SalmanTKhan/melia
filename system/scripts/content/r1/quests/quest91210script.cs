@@ -29,6 +29,19 @@ public class Quest91210Script : QuestScript
 
 		AddReward(new ExpReward(5699999744, 5699999744));
 		AddReward(new ItemReward("Vis", 47586));
+
+		AddDialogHook("EP15_2_D_NICOPOLIS_2_MQ_6_END", "BeforeEnd", BeforeEnd);
+	}
+
+	private async Task<HookResult> BeforeEnd(Dialog dialog)
+	{
+		var character = dialog.Player;
+
+		if (!character.Quests.IsCompletable(this.QuestId))
+			return HookResult.Skip;
+
+
+		return HookResult.Break;
 	}
 }
 

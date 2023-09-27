@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Numerics;
 using Melia.Shared.Data.Database;
 using Melia.Shared.Network;
 using Melia.Shared.Network.Helpers;
@@ -26,6 +27,7 @@ using Melia.Zone.World.Houses;
 using Melia.Zone.World.Items;
 using Melia.Zone.World.Maps;
 using Yggdrasil.Extensions;
+using Yggdrasil.Geometry.Shapes;
 using Yggdrasil.Logging;
 using Yggdrasil.Util;
 
@@ -995,6 +997,20 @@ namespace Melia.Zone.Network
 			**/
 
 			character.Connection.Send(packet);
+		}
+
+		public static void ZC_WORLD_MSG(Character character, int achievementId, int achievementPointId, int achievementPointValue)
+		{
+			var packet = new Packet(Op.ZC_WORLD_MSG);
+
+			packet.PutInt(0);
+			packet.PutString(character.Name, 64);
+			packet.PutInt(achievementId);
+			packet.PutInt(achievementPointId);
+			packet.PutInt(achievementPointValue);
+			packet.PutByte(0);
+
+			ZoneServer.Instance.World.Broadcast(packet);
 		}
 
 		/// <summary>
@@ -5813,6 +5829,104 @@ namespace Melia.Zone.Network
 			packet.PutByte(0);
 
 			map.Broadcast(packet);
+		}
+
+		/// <summary>
+		/// Show an aura on a weapon
+		/// </summary>
+		/// <param name="actor"></param>
+		/// <param name="equipSlot"></param>
+		/// <param name="auraName"></param>
+		/// <param name="i2"></param>
+		/// <param name="b1"></param>
+		public static void ZC_SET_AURA_INFO(IActor actor, EquipSlot equipSlot, string auraName, int i2 = 1, byte b1 = 0)
+		{
+			var packet = new Packet(Op.ZC_SET_AURA_INFO);
+
+			packet.PutInt(actor.Handle);
+			packet.PutInt((int)equipSlot);
+			packet.PutString(auraName, 256);
+			packet.PutInt(i2);
+			packet.PutByte(b1);
+
+			actor.Map.Broadcast(packet, actor);
+		}
+
+		/// <summary>
+		/// Show an aura on a weapon
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="actor"></param>
+		/// <param name="equipSlot"></param>
+		/// <param name="auraName"></param>
+		/// <param name="i2"></param>
+		/// <param name="b1"></param>
+		public static void ZC_SET_AURA_INFO(IZoneConnection conn, IActor actor, EquipSlot equipSlot, string auraName, int i2 = 1, byte b1 = 0)
+		{
+			var packet = new Packet(Op.ZC_SET_AURA_INFO);
+
+			packet.PutInt(actor.Handle);
+			packet.PutInt((int)equipSlot);
+			packet.PutString(auraName, 256);
+			packet.PutInt(i2);
+			packet.PutByte(b1);
+
+			conn.Send(packet);
+		}
+
+		/// <summary>
+		/// Apply HUD Skin for "Myself"
+		/// </summary>
+		/// <param name="character"></param>
+		public static void ZC_SEND_APPLY_HUD_SKIN_MYSELF(Character character)
+		{
+			var packet = new Packet(Op.ZC_SEND_APPLY_HUD_SKIN_MYSELF);
+
+			packet.PutInt(character.Handle);
+			packet.PutInt(character.HUDSkin);
+
+			character.Connection.Send(packet);
+		}
+
+		/// <summary>
+		/// Apply HUD Skin for "Other" characters
+		/// </summary>
+		/// <param name="character"></param>
+		public static void ZC_SEND_APPLY_HUD_SKIN_OTHER(IZoneConnection conn, Character character)
+		{
+			var packet = new Packet(Op.ZC_SEND_APPLY_HUD_SKIN_OTHER);
+
+			packet.PutInt(character.Handle);
+			packet.PutInt(character.HUDSkin);
+
+			conn.Send(packet);
+		}
+
+		/// <summary>
+		/// Apply HUD Skin for "Party" characters
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="character"></param>
+		/// <param name="party"></param>
+		public static void ZC_SEND_APPLY_HUD_SKIN_PARTY(IZoneConnection conn, Character character, Party party)
+		{
+			var packet = new Packet(Op.ZC_SEND_APPLY_HUD_SKIN_PARTY);
+
+			packet.PutInt(character.Handle);
+			packet.PutInt(character.HUDSkin);
+			packet.PutLong(party.ObjectId);
+
+			conn.Send(packet);
+		}
+
+		public static void ZC_SEND_MODE_HUD_SKIN(Character character, byte b1 = 0)
+		{
+			var packet = new Packet(Op.ZC_SEND_MODE_HUD_SKIN);
+
+			packet.PutInt(character.Handle);
+			packet.PutByte(b1);
+
+			character.Connection.Send(packet);
 		}
 
 		/// <summary>

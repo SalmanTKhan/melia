@@ -484,6 +484,8 @@ public static class ItemId
 	public const int HAIR_M_145 = 12154;
 	public const int HAIR_M_146 = 12155;
 	public const int HAIR_M_147 = 12156;
+	public const int HAIR_M_153 = 12157;
+	public const int HAIR_M_154 = 12158;
 	public const int HAIR_F_101 = 12501;
 	public const int HAIR_F_102 = 12502;
 	public const int HAIR_F_103 = 12503;
@@ -533,6 +535,8 @@ public static class ItemId
 	public const int HAIR_F_150 = 12550;
 	public const int HAIR_F_151 = 12551;
 	public const int HAIR_F_152 = 12552;
+	public const int HAIR_F_153 = 12553;
+	public const int HAIR_F_154 = 12554;
 	public const int LENS01_001 = 18001;
 	public const int LENS01_002 = 18002;
 	public const int LENS01_003 = 18003;
@@ -4019,6 +4023,8 @@ public static class ItemId
 	public const int Hat_7th_BritishRoyal = 11102011;
 	public const int Hat_Ep15explorer01 = 11102012;
 	public const int Hat_Ep15explorer02 = 11102013;
+	public const int Hat_Ep15elf01 = 11102014;
+	public const int Hat_Ep15elf02 = 11102015;
 	public const int Guiltynelaima_Shield = 11104006;
 	public const int EP15_Artefact_004 = 11104010;
 	public const int Ep15spring01_Shield = 11104014;
@@ -4636,6 +4642,7 @@ public static class ItemId
 	public const int DRESS_ROOM_COLLECT_13 = 11039013;
 	public const int DRESS_ROOM_COLLECT_14 = 11039014;
 	public const int DRESS_ROOM_COLLECT_15 = 11039015;
+	public const int DRESS_ROOM_COLLECT_16 = 11039016;
 
 	// Consume
 	//-----------------------------------------------------------------------
@@ -5141,6 +5148,10 @@ public static class ItemId
 	public const int GEM_BOX_Templar = 2500315;
 	public const int GEM_BOX_Sapper = 2500328;
 	public const int GEM_BOX_Hunter = 2500345;
+	public const int EVENT_W_MOON_BOX_1 = 10000637;
+	public const int EVENT_W_MOON_BOX_2 = 10000638;
+	public const int EVENT_W_MOON_BOX_3 = 10000639;
+	public const int EVENT_W_MOON_BOX_4 = 10000640;
 	public const int EVENT_2004_Arbor_Day_BOX = 10003011;
 	public const int EVENT_2004_Arbor_Day_Gift_Pouch1 = 10003012;
 	public const int EVENT_2004_Arbor_Day_Gift_Pouch2 = 10003013;
@@ -7946,6 +7957,9 @@ public static class ItemId
 	public const int Tosw_Colony_Flag_Klapeda = 721062;
 	public const int Tosw_Colony_Flag_Orsha = 721063;
 	public const int Tosw_Colony_Flag_Pedimian = 721064;
+	public const int Papaya_Colony_Flag_Klapeda = 721065;
+	public const int Papaya_Colony_Flag_Orsha = 721066;
+	public const int Papaya_Colony_Flag_Pedimian = 721067;
 	public const int Spread_Bait_Basic = 730400;
 	public const int Event_1902_Spread_Bait = 730499;
 	public const int Spread_Bait_Premium_1 = 730500;
@@ -9146,6 +9160,9 @@ public static class ItemId
 	public const int Secret_Medicine_Int_500 = 11200324;
 	public const int Secret_Medicine_Con_500 = 11200325;
 	public const int Short_Term_Dragoon_Master_Contract = 11200330;
+	public const int EVENT_2308_Tree_Of_Creator = 11200342;
+	public const int EVENT_2308_Walking_Tos_Guide = 11200343;
+	public const int EVENT_2308_Territorial_Conquerors = 11200344;
 
 	// Earring
 	//-----------------------------------------------------------------------
@@ -12955,6 +12972,7 @@ public static class ItemId
 	public const int Event_2207_Unity = 10000613;
 	public const int Event_2212_Snow_Key = 10000623;
 	public const int Tos_Event_Coin = 10000627;
+	public const int EVENT_W_MOON_COIN = 10000636;
 	public const int Event_2003_WhiteDay_Candy_Set = 10003005;
 	public const int Moru_Evnet_Bamboo_Leaf = 10003044;
 	public const int Card_Xpupkit10_Event_1 = 10003174;
@@ -13509,6 +13527,7 @@ public static class ItemId
 	public const int Secret_Medicine_Str_500_Recipe = 11201082;
 	public const int Secret_Medicine_Int_500_Recipe = 11201083;
 	public const int Secret_Medicine_Con_500_Recipe = 11201084;
+	public const int Portal_Stone_Misc_Recipe_2 = 11201097;
 
 	// PasteBait
 	//-----------------------------------------------------------------------
@@ -15457,6 +15476,11 @@ public static class ItemId
 	public const int Legend_ExpPotion_Care = 904310;
 	public const int Global_Gacha_HairAcc_Bonus_14d = 904319;
 	public const int TWN_Gacha_HairAcc_Bonus_14d = 904327;
+	public const int Weekly_BorderSkin_Normal = 904328;
+	public const int Weekly_BorderSkin_Magic = 904329;
+	public const int Weekly_BorderSkin_Unique = 904330;
+	public const int Weekly_BorderSkin_Legend = 904331;
+	public const int Weekly_BorderSkin_Goddess = 904332;
 	public const int Gacha_HairAcc_022 = 1000001;
 	public const int Gacha_TP_123_JP = 1000002;
 	public const int Gacha_TP_124_JP = 1000003;
@@ -15639,6 +15663,7 @@ public static class ItemId
 	public const int Balloon_Skin_Fruit_Melon_Balloon = 1250063;
 	public const int Balloon_Skin_Fruit_Orange_Balloon = 1250064;
 	public const int Fruit_Chat_Ballon_Select_Box = 1250065;
+	public const int Gesture_FLOWERSCENT = 1250066;
 	public const int GLOBAL_STEAM_REWARD_1 = 2000001;
 	public const int GLOBAL_Transcend_Scroll_9_440 = 2000004;
 	public const int PCbang_Legend_ExpPotion_Team_Trade = 2000007;
@@ -17939,6 +17964,10 @@ public static class ItemId
 	public const int Costume_Ep15explorer01_F = 11101022;
 	public const int Costume_Ep15explorer02_F = 11101023;
 	public const int Costume_Ep15explorer03_F = 11101024;
+	public const int Costume_Ep15elf01_M = 11101025;
+	public const int Costume_Ep15elf02_M = 11101026;
+	public const int Costume_Ep15elf01_F = 11101027;
+	public const int Costume_Ep15elf02_F = 11101028;
 	public const int EP15_Helmet_Ep15snowknight01 = 11103001;
 	public const int Helmet_Nightrabbit = 11103002;
 	public const int Helmet_M_Ep15explorer15 = 11103003;
@@ -17950,11 +17979,13 @@ public static class ItemId
 	public const int Wing_Ep15unicorn = 11105006;
 	public const int Wing_7th_Helena = 11105007;
 	public const int Wing_Ep15explorer = 11105008;
+	public const int Wing_Ep15elf = 11105009;
 	public const int Effect_Ep15snowknight_Aurora = 11106001;
 	public const int Effect_Ep15snowknight_Snowflake = 11106002;
 	public const int Effect_Nightrabbit = 11106003;
 	public const int Effect_Ep15spring01 = 11106004;
 	public const int Effect_Ep15unicorn = 11106005;
+	public const int Effect_Ep15elf = 11106006;
 	public const int Unlock_Earring_Belonging_Scroll = 11200002;
 	public const int Ticket_Earring_Raid_1d = 11200003;
 	public const int Ticket_Earring_Raid = 11200004;
@@ -18200,11 +18231,15 @@ public static class ItemId
 	public const int Selectbox_Ep15reprint05 = 11205080;
 	public const int Special_Gift_Box_Leticia_2309 = 11205081;
 	public const int I202309_Ep15package = 11205082;
+	public const int Selectbox_Ep15elf01 = 11205083;
+	public const int Selectbox_Ep15elf02 = 11205084;
+	public const int Certificate_RidePet_Elf = 11205085;
 	public const int I202309_Papaya_Totalgrowth_Package_A = 11205086;
 	public const int I202309_Papaya_Totalgrowth_Package_B = 11205087;
 	public const int I202309_Papaya_Reinforce_Package_A = 11205088;
 	public const int I202309_Papaya_Reinforce_Package_B = 11205089;
 	public const int I202309_Papaya_Allinone_Package = 11205090;
+	public const int Special_Gift_Box_Leticia_2310 = 11205091;
 
 	// Quest
 	//-----------------------------------------------------------------------
@@ -22464,6 +22499,7 @@ public static class ItemId
 	public const int EP14_RAID_TRINKET = 11100043;
 	public const int Guiltynelaima_Dagger = 11104003;
 	public const int EP15_Artefact_002 = 11104008;
+	public const int Ep15elf_Dagger = 11104029;
 	public const int EP15_RAID_DAGGER = 11107010;
 	public const int EP15_RAID_PISTOL = 11107012;
 	public const int EP15_RAID_TRINKET = 11107016;
@@ -25668,6 +25704,9 @@ public static class ItemId
 	public const int Ep15explorer_Sword = 11104023;
 	public const int Ep15explorer_Thstaff = 11104024;
 	public const int Ep15explorer_Bow = 11104025;
+	public const int Ep15elf_Bow = 11104027;
+	public const int Ep15elf_Crossbow = 11104028;
+	public const int Ep15elf_Thstaff = 11104030;
 	public const int EP15_RAID_SWORD = 11107000;
 	public const int EP15_RAID_THSWORD = 11107001;
 	public const int EP15_RAID_STAFF = 11107002;

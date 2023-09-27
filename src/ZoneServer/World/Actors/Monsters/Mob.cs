@@ -778,6 +778,9 @@ namespace Melia.Zone.World.Actors.Monsters
 			if (entity.IsDead)
 				return false;
 
+			if (entity.Layer != this.Layer)
+				return false;
+
 			// For now, let's specify that mobs can attack any combat
 			// entities, since we want them them to be able to attack
 			// both characters and other mobs.
@@ -800,7 +803,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// <returns></returns>
 		public bool CanFight()
 		{
-			if (this.IsDead)
+			if (this.IsDead || this.IsBuffActive(BuffId.Stun))
 				return false;
 
 			return true;
@@ -812,7 +815,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// <returns></returns>
 		public bool CanMove()
 		{
-			if (this.IsDead || this.IsBuffActive(BuffId.Stop_Debuff))
+			if (this.IsDead || this.IsBuffActive(BuffId.Stun) || this.IsBuffActive(BuffId.Stop_Debuff))
 				return false;
 
 			return true;

@@ -28,7 +28,7 @@ public class Quest72260Script : QuestScript
 
 		AddObjective("kill0", "Kill 15 Oak Cannoneer(s) or Orc Flagbearer(s) or Orc Captain(s)", new KillObjective(15, 59329, 59331, 59355));
 
-		AddReward(new ExpReward(-2147483648, -2147483648));
+		AddReward(new ExpReward(2249869568, 2249869568));
 		AddReward(new ItemReward("Vis", 26314));
 		AddReward(new ItemReward("misc_Growth_Reinforce_Tier3", 17));
 

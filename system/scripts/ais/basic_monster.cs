@@ -21,12 +21,11 @@ public class BasicMonsterAiScript : AiScript
 		During("Idle", CheckEnemies);
 		During("Attack", CheckTarget);
 		During("Attack", CheckMaster);
-		During("ReturnHome", CheckLocation);
 	}
 
 	protected override void Root()
 	{
-		StartRoutine("Idle", Idle());
+		StartRoutine("ReturnHome", ReturnHome());
 	}
 
 	protected IEnumerable Idle()
@@ -130,19 +129,12 @@ public class BasicMonsterAiScript : AiScript
 		}
 	}
 
-	private void CheckLocation()
-	{
-		if (this.Entity is IMonster monster && monster.SpawnLocation.Position.Get2DDistance(monster.Position) > MaxRoamDistance)
-			StartRoutine("ReturnHome", ReturnHome());
-		else
-			StartRoutine("Idle", Idle());
-	}
-
 	protected IEnumerable ReturnHome()
 	{
-		if (this.Entity is IMonster monster && monster.SpawnLocation != null)
+		if (this.Entity is IMonster monster && monster.SpawnLocation != null
+			&& monster.SpawnLocation.Position.Get2DDistance(monster.Position) > MaxRoamDistance)
 		{
-			Log.Debug("Returning Home: {0}", this.Entity.Handle);
+			SetRunning(true);
 			yield return MoveTo(monster.SpawnLocation.Position.GetRandomInRange2D(15, 30));
 		}
 		StartRoutine("Idle", Idle());

@@ -28,7 +28,7 @@ public class Quest72254Script : QuestScript
 
 		AddObjective("kill0", "Kill 15 Orc Spearman(s) or Orc Peltast(s) or Orc Shaman(s) or Orc Leader(s)", new KillObjective(15, 59326, 59327, 59356, 59328));
 
-		AddReward(new ExpReward(-2147483648, -2147483648));
+		AddReward(new ExpReward(2249869568, 2249869568));
 		AddReward(new ItemReward("Vis", 26019));
 		AddReward(new ItemReward("misc_Growth_Reinforce_Tier3", 17));
 

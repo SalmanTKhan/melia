@@ -3313,6 +3313,7 @@ public static class MonsterId
 	public const int RidePet_Dragonboat_1 = 65017;
 	public const int RidePet_Unicorn = 65018;
 	public const int RidePet_Explorer = 65019;
+	public const int RidePet_Elf = 65020;
 	public const int Gtower_StoneWhale = 90001;
 	public const int Gtower_Chapparition = 90002;
 	public const int Gtower_TombLord = 90003;
@@ -3521,6 +3522,7 @@ public static class MonsterId
 	public const int Mon_Skullarcher = 101004;
 	public const int TEST_Hauberk = 101009;
 	public const int Event_LuckyBreak_Moru = 101010;
+	public const int Event_Boss_Lucy = 101012;
 	public const int BW_Boss_Kerberos = 102000;
 	public const int BW_Boss_Lapedame = 102001;
 	public const int BW_Boss_Foculus = 102002;
@@ -7583,6 +7585,11 @@ public static class MonsterId
 	public const int Guild_Fallendragoon_Raid_Start_Npc = 160181;
 	public const int Hiddennpc_Solo_Reward_Multiple = 160182;
 	public const int Slogutis_Projectile = 160183;
+	public const int Papaya_Colony_Flag_Klapeda = 160184;
+	public const int Papaya_Colony_Flag_Orsha = 160185;
+	public const int Papaya_Colony_Flag_Pedimian = 160186;
+	public const int Event_2023_Moon_Rabit_Start_Npc = 160187;
+	public const int Event_2023_Moon_Rabit_Whorfzone = 160188;
 	public const int E_Statue_Zemina = 161000;
 	public const int Npc_Kupole_Velcoffer = 161001;
 	public const int Npc_Teliavelis = 161002;

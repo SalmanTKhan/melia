@@ -9,6 +9,7 @@
 // File Mask: 
 //  ID Bytes: 
 //   History: 
+//   i378059: hudSkin, hudInfo, and hudOther removed, replaced with skinId
 //------------------------------------------------
 
 #include "inc/common.bt"
@@ -16,6 +17,4 @@
 ServerHeaderFixed header;
 
 int handle;
-char hudSkin[128];
-char hudInfo[386];
-char hudOther[126];
+int skinId;

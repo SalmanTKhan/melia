@@ -27,7 +27,7 @@ public class Quest72252Script : QuestScript
 		AddPrerequisite(new LevelPrerequisite(436));
 		AddPrerequisite(new CompletedPrerequisite("CASTLE102_MQ_04"));
 
-		AddReward(new ExpReward(-2147483648, -2147483648));
+		AddReward(new ExpReward(2249869568, 2249869568));
 		AddReward(new ItemReward("misc_Growth_Reinforce_Tier3", 16));
 
 		AddDialogHook("CASTLE102_RAIMA_WHEEL", "BeforeStart", BeforeStart);

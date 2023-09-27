@@ -27,7 +27,7 @@ public class Quest72256Script : QuestScript
 		AddPrerequisite(new LevelPrerequisite(441));
 		AddPrerequisite(new CompletedPrerequisite("DCAPITAL53_1_MQ_02"));
 
-		AddReward(new ExpReward(-2147483648, -2147483648));
+		AddReward(new ExpReward(2249869568, 2249869568));
 		AddReward(new ItemReward("Vis", 26019));
 		AddReward(new ItemReward("misc_Growth_Reinforce_Tier3", 17));
 

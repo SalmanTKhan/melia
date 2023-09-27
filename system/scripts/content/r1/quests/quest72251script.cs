@@ -27,7 +27,7 @@ public class Quest72251Script : QuestScript
 		AddPrerequisite(new LevelPrerequisite(436));
 		AddPrerequisite(new CompletedPrerequisite("CASTLE102_MQ_03"));
 
-		AddReward(new ExpReward(-2147483648, -2147483648));
+		AddReward(new ExpReward(2249869568, 2249869568));
 		AddReward(new ItemReward("Vis", 25288));
 		AddReward(new ItemReward("misc_Growth_Reinforce_Tier3", 17));
 

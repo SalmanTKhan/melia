@@ -38,7 +38,7 @@ public class Quest91201Script : QuestScript
 
 	public override void OnComplete(Character character, Quest quest)
 	{
-		character.Quests.Start("마신의 수정 파괴(2) : EP15_2_D_NICOPOLIS_1_MQ_6");
+		character.Quests.Start("EP15_2_D_NICOPOLIS_1_MQ_6");
 	}
 }
 

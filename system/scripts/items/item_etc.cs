@@ -29,6 +29,24 @@ public class ItemEtcScripts : GeneralScript
 	}
 
 	/// <summary>
+	/// Increase an entry count for Challenge Mode: Division Singularity?
+	/// </summary>
+	/// <param name="character"></param>
+	/// <param name="item"></param>
+	/// <param name="strArg"></param>
+	/// <param name="numArg1"></param>
+	/// <param name="numArg2"></param>
+	/// <returns></returns>
+	[ScriptableFunction("SCR_USE_ChallengeExpertModeCountUp")]
+	public ItemUseResult SCR_USE_ChallengeExpertModeCountUp(Character character, Item item, string strArg, float numArg1, float numArg2)
+	{
+		character.ModifyAccountProperty(PropertyName.ChallengeMode_HardMode_EnableEntryCount, 1);
+		character.AddonMessage(AddonMessage.NOTICE_Dm_Scroll, "!@#$ChallengeExpertModeReset_MSG2#@!");
+
+		return ItemUseResult.Okay;
+	}
+
+	/// <summary>
 	/// Summons a friendly monster
 	/// </summary>
 	/// <param name="character"></param>

@@ -26,6 +26,7 @@ using Melia.Zone.World.Actors.Monsters;
 using Melia.Zone.World.Items;
 using Melia.Zone.World.Maps;
 using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.FileIO;
 using Yggdrasil.Logging;
 
 namespace Melia.Zone.Network
@@ -195,6 +196,10 @@ namespace Melia.Zone.Network
 			Send.ZC_ADDITIONAL_SKILL_POINT(character);
 			Send.ZC_SET_DAYLIGHT_INFO(character);
 			//Send.ZC_DAYLIGHT_FIXED(character);
+
+			Send.ZC_SEND_APPLY_HUD_SKIN_MYSELF(character);
+			Send.ZC_SEND_APPLY_HUD_SKIN_OTHER(conn, character);
+
 			Send.ZC_NORMAL.AccountProperties(character);
 
 			Send.ZC_NORMAL.SetSessionKey(conn);
@@ -236,6 +241,9 @@ namespace Melia.Zone.Network
 			// Send updates for the cooldowns loaded from db, so the client
 			// will display the restored cooldowns
 			Send.ZC_COOLDOWN_LIST(character, character.Components.Get<CooldownComponent>().GetAll());
+
+			character.AddonMessage(AddonMessage.ENABLE_PCBANG_SHOP, null, 1);
+			Send.ZC_PCBANG_SHOP_RENTAL(conn);
 
 			character.OpenEyes();
 
@@ -4151,11 +4159,9 @@ namespace Melia.Zone.Network
 			if (house != null)
 			{
 				conn.ActiveHouse = null;
-				var lastMapId = (int)character.EtcProperties.GetFloat(PropertyName.LastWarpMapID);
-				if (lastMapId == 0)
-					lastMapId = 1001;
-				//if (ZoneServer.Instance.World.Maps.TryGet(lastMapId, out var map) && map.Ground.TryGetRandomPosition(out var rndPos))
-				//	character.Warp(map.Id, rndPos);
+				var lastMapId = (int)character.EtcProperties.GetFloat(PropertyName.LastWarpMapID, 1001);
+				if (ZoneServer.Instance.World.Maps.TryGet(lastMapId, out var map) && map.Ground.TryGetRandomPosition(out var rndPos))
+					character.Warp(map.Id, rndPos);
 			}
 		}
 
@@ -4171,12 +4177,14 @@ namespace Melia.Zone.Network
 			var i1 = packet.GetInt(); // 1
 			var i2 = packet.GetInt(); // 0
 
-			//var dungeon = ZoneServer.Instance.Data.InstanceDungeonDb.Find(dungeonId);
-			// TODO Check Entry Qualifications
-			//if (dungeon == null)
+			var dungeon = ZoneServer.Instance.Data.InstanceDungeonDb.Find(dungeonId);
+			if (dungeon == null)
 			{
 				Log.Warning("CZ_SOLO_INDUN_ENTER: User '{0}' tried to enter dungeon with id ({1}) that doesn't exist.", conn.Account.Name, dungeonId);
+				return;
 			}
+
+			// TODO Check Entry Qualifications
 		}
 
 		[PacketHandler(Op.CZ_QUEST_CHECK_SAVE)]
@@ -4596,6 +4604,43 @@ namespace Melia.Zone.Network
 			}
 
 			character.Resurrect(option);
+		}
+
+		/// <summary>
+		/// Request to apply HUD skin.
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="packet"></param>
+		[PacketHandler(Op.CZ_REQ_APPLY_HUD_SKIN)]
+		public void CZ_REQ_APPLY_HUD_SKIN(IZoneConnection conn, Packet packet)
+		{
+			var skinId = packet.GetInt();
+
+			var character = conn.SelectedCharacter;
+
+			if (skinId < 0 || skinId > 5)
+			{
+				Log.Warning("CZ_REQ_APPLY_HUD_SKIN: User '{0}' tried to apply an invalid skin id {1}.", conn.Account.Name, skinId);
+				return;
+			}
+
+			// TODO: Check if player owns the HUD skin?
+			character.SetHUDSkin(skinId);
+			Send.ZC_SEND_APPLY_HUD_SKIN_MYSELF(character);
+			if (conn.Party != null)
+				Send.ZC_SEND_APPLY_HUD_SKIN_PARTY(conn, character, conn.Party);
+			Send.ZC_SEND_APPLY_HUD_SKIN_OTHER(conn, character);
+		}
+
+		/// <summary>
+		/// Request the current HUD skin.
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="packet"></param>
+		[PacketHandler(Op.CZ_REQ_APPLY_HUD_SKIN)]
+		public void CZ_REQ_CURRENT_HUD_SKIN(IZoneConnection conn, Packet packet)
+		{
+			// TODO: Don't know if this is used for anything else.
 		}
 	}
 }

@@ -143,6 +143,9 @@ namespace Melia.Zone.Commands
 				Log.Debug("Testing {0}", args.Get(0));
 				switch (args.Get(0))
 				{
+					case "world":
+						Send.ZC_WORLD_MSG(sender, 101226, 411, 300);
+						break;
 					case "7":
 					{
 						var effectId1 = 6836;
