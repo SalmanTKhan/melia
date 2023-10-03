@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Melia.Shared.ObjectProperties;
 using Melia.Zone.Network;
-using Melia.Zone.World.Actors.CombatEntities.Components;
 
 namespace Melia.Zone.World.Actors.Characters.Components
 {
 	/// <summary>
 	/// Assister Cabinet.
 	/// </summary>
-	public class AssisterCabinetComponent : CharacterComponent
+	public class AssisterCabinet
 	{
 		/// <summary>
 		/// Assister Collection
 		/// </summary>
 		private readonly IList<AssisterCard> _assisters = new List<AssisterCard>();
+
+		public Character Character { get; set; }
 
 		/// <summary>
 		/// Assister Collection Count
@@ -30,36 +29,62 @@ namespace Melia.Zone.World.Actors.Characters.Components
 			}
 		}
 
-		public AssisterCabinetComponent(Character character) : base(character)
+		public AssisterCabinet()
 		{
 		}
 
 		/// <summary>
-		/// Add to client's album
+		/// Add to account's album
 		/// </summary>
 		/// <param name="assister"></param>
-		public void Add(string assister)
+		public bool Add(string assister)
 		{
 			var card = new AssisterCard(-1, assister, this.Count);
-			this.Add(card);
+
+			return this.Add(card);
 		}
 
 		/// <summary>
-		/// Add to client's album
+		/// Add to account's album
 		/// </summary>
-		/// <param name="assister"></param>
-		public void Add(AssisterCard card, bool silently = false)
+		/// <param name="card"></param>
+		public bool Add(AssisterCard card, bool silently = false)
 		{
+			if (!this.Character.Connection.Account.IsAssistersEnabled)
+				return false;
+
+			if (card.DbId == -1)
+				ZoneServer.Instance.Database.CreateAssister(this.Character.AccountDbId, ref card);
+
 			lock (this._assisters)
 				this._assisters.Add(card);
+
 			if (!silently)
 				Send.ZC_ANCIENT_CARD_ADD(this.Character, card);
+
+			return true;
 		}
+
+		/// <summary>
+		/// Combine cards
+		/// </summary>
+		/// <param name="cards"></param>
+		public void Combine(params AssisterCard[] cards)
+		{
+			// TODO: Combine Cards?
+		}
+
+		public void Evolve(params AssisterCard[] cards)
+		{
+			// TODO: Evolve Cards?
+		}
+
 
 		/// <summary>
 		/// Swap to card slot
 		/// </summary>
-		/// <param name="assister"></param>
+		/// <param name="slot1"></param>
+		/// <param name="slot2"></param>
 		public void Swap(int slot1, int slot2)
 		{
 			lock (this._assisters)
@@ -92,16 +117,19 @@ namespace Melia.Zone.World.Actors.Characters.Components
 		/// Assister card's globally unique id.
 		/// </summary>
 		/// <remarks>
-		/// This is different than the item's object id.
+		/// This is different than the original item's object id.
+		/// Looks like it's in the item id range
+		/// (So might be an item subclass?)                                 
 		/// </remarks>
-		public long ObjectId { get; set; }
+		public long DbId { get; set; }
+		public long ObjectId => this.DbId + ObjectIdRanges.Assisters;
 		public string Name { get; set; }
 		public int Slot { get; set; }
 		public long Experience { get; set; } = 0;
 
-		public AssisterCard(long objectId, string name, int slot)
+		public AssisterCard(long id, string name, int slot)
 		{
-			this.ObjectId = objectId;
+			this.DbId = id;
 			this.Name = name;
 			this.Slot = slot;
 		}

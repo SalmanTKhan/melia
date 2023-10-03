@@ -36,7 +36,7 @@ namespace Melia.Zone.Skills.Handlers.Archer.Engineer
 
 			skill.IncreaseOverheat();
 			caster.TurnTowards(designatedTarget);
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			var groundEffectHandle = ZoneServer.Instance.World.CreateEffectHandle();
 

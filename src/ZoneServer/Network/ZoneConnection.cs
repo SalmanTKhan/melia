@@ -58,6 +58,7 @@ namespace Melia.Zone.Network
 		/// Gets or sets the current house.
 		/// </summary>
 		PersonalHouse ActiveHouse { get; set; }
+		DateTime LastHeartBeat { get; set; }
 
 		/// <summary>
 		/// Generate a session key.
@@ -110,6 +111,11 @@ namespace Melia.Zone.Network
 		/// Gets or sets the current house.
 		/// </summary>
 		public PersonalHouse ActiveHouse { get; set; }
+
+		/// <summary>
+		/// Gets or sets the last heartbeat.
+		/// </summary>
+		public DateTime LastHeartBeat { get; set; }
 
 		/// <summary>
 		/// Handles the given packet for this connection.

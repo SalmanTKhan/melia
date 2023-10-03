@@ -44,29 +44,31 @@ namespace Melia.Zone.World.Actors.Monsters
 			this.Create(new FloatProperty(PropertyName.Level, this.Monster.Data.Level));
 			this.Create(new FloatProperty(PropertyName.Lv, this.Monster.Data.Level));
 
-			this.Create(new CFloatProperty(PropertyName.MHP, () => this.CalculateProperty("SCR_Get_MON_MHP")));
+			this.Create(PropertyName.MHP, "SCR_Get_MON_MHP");
 			this.Create(new FloatProperty(PropertyName.HP, min: 0));
 
-			this.Create(new CFloatProperty(PropertyName.MSP, () => this.CalculateProperty("SCR_Get_MON_MSP")));
+			this.Create(PropertyName.MSP, "SCR_Get_MON_MSP");
 			this.Create(new FloatProperty(PropertyName.SP, min: 0));
 
-			this.Create(new CFloatProperty(PropertyName.MINPATK, () => this.CalculateProperty("SCR_Get_MON_MINPATK")));
-			this.Create(new CFloatProperty(PropertyName.MAXPATK, () => this.CalculateProperty("SCR_Get_MON_MAXPATK")));
-			this.Create(new CFloatProperty(PropertyName.MINMATK, () => this.CalculateProperty("SCR_Get_MON_MINMATK")));
-			this.Create(new CFloatProperty(PropertyName.MAXMATK, () => this.CalculateProperty("SCR_Get_MON_MAXMATK")));
-			this.Create(new CFloatProperty(PropertyName.DEF, () => this.CalculateProperty("SCR_Get_MON_DEF")));
-			this.Create(new CFloatProperty(PropertyName.MDEF, () => this.CalculateProperty("SCR_Get_MON_MDEF")));
-			this.Create(new CFloatProperty(PropertyName.DR, () => this.CalculateProperty("SCR_Get_MON_DR")));
-			this.Create(new CFloatProperty(PropertyName.HR, () => this.CalculateProperty("SCR_Get_MON_HR")));
-			this.Create(new CFloatProperty(PropertyName.SR, () => this.CalculateProperty("SCR_Get_MON_SR")));
-			this.Create(new CFloatProperty(PropertyName.SDR, () => this.CalculateProperty("SCR_Get_MON_SDR")));
-			this.Create(new CFloatProperty(PropertyName.CRTHR, () => this.CalculateProperty("SCR_Get_MON_CRTHR")));
-			this.Create(new CFloatProperty(PropertyName.CRTDR, () => this.CalculateProperty("SCR_Get_MON_CRTDR")));
-			this.Create(new CFloatProperty(PropertyName.CRTATK, () => this.CalculateProperty("SCR_Get_MON_CRTATK")));
+			this.Create(PropertyName.MINPATK, "SCR_Get_MON_MINPATK");
+			this.Create(PropertyName.MAXPATK, "SCR_Get_MON_MAXPATK");
+			this.Create(PropertyName.MINMATK, "SCR_Get_MON_MINMATK");
+			this.Create(PropertyName.MAXMATK, "SCR_Get_MON_MAXMATK");
+			this.Create(PropertyName.DEF, "SCR_Get_MON_DEF");
+			this.Create(PropertyName.MDEF, "SCR_Get_MON_MDEF");
+			this.Create(PropertyName.DR, "SCR_Get_MON_DR");
+			this.Create(PropertyName.HR, "SCR_Get_MON_HR");
+			this.Create(PropertyName.SR, "SCR_Get_MON_SR");
+			this.Create(PropertyName.SDR, "SCR_Get_MON_SDR");
+			this.Create(PropertyName.CRTHR, "SCR_Get_MON_CRTHR");
+			this.Create(PropertyName.CRTDR, "SCR_Get_MON_CRTDR");
+			this.Create(PropertyName.CRTATK, "SCR_Get_MON_CRTATK");
 
 			this.Create(new FloatProperty(PropertyName.WlkMSPD, this.Monster.Data.WalkSpeed));
 			this.Create(new FloatProperty(PropertyName.RunMSPD, this.Monster.Data.RunSpeed));
-			this.Create(new CFloatProperty(PropertyName.MSPD, () => this.CalculateProperty("SCR_Get_MON_MSPD")));
+			this.Create(PropertyName.MSPD, "SCR_Get_MON_MSPD");
+			this.Create(PropertyName.RHP, "SCR_Get_MON_RHP");
+			this.Create(PropertyName.RHPTIME, "SCR_Get_MON_RHPTIME");
 
 			this.Create(new RFloatProperty(PropertyName.Attribute, () => (int)this.Monster.Data.Attribute));
 			this.Create(new RFloatProperty(PropertyName.ArmorMaterial, () => (int)this.Monster.Data.ArmorMaterial));
@@ -95,6 +97,17 @@ namespace Melia.Zone.World.Actors.Monsters
 		}
 
 		/// <summary>
+		/// Creates a new calculated float property that uses the given
+		/// function.
+		/// </summary>
+		/// <param name="propertyName"></param>
+		/// <param name="calcFuncName"></param>
+		private void Create(string propertyName, string calcFuncName)
+		{
+			this.Create(new CFloatProperty(propertyName, () => this.CalculateProperty(calcFuncName)));
+		}
+
+		/// <summary>
 		/// Calls the calculation function with the given name and returns
 		/// the result.
 		/// </summary>
@@ -104,6 +117,23 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// Thrown if the function doesn't exist.
 		/// </exception>
 		private float CalculateProperty(string calcFuncName)
+		{
+			if (!ScriptableFunctions.Monster.TryGet(calcFuncName, out var func))
+				throw new ArgumentException($"Scriptable monster function '{calcFuncName}' not found.");
+
+			return func(this.Monster);
+		}
+
+		/// <summary>
+		/// Calls the calculation function with the given name and returns
+		/// the result.
+		/// </summary>
+		/// <param name="calcFuncName"></param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">
+		/// Thrown if the function doesn't exist.
+		/// </exception>
+		private float CalculatePropertyCustom(string calcFuncName)
 		{
 			// Custom calculation methods can be defined for monsters by
 			// creating functions that are suffixed with the monster class

@@ -269,6 +269,7 @@ namespace Melia.Zone.World.Actors.Monsters
 			this.Components.Add(new CombatComponent(this));
 			this.Components.Add(new CooldownComponent(this));
 			this.Components.Add(new EffectsComponent(this));
+			this.Components.Add(new RecoveryComponent(this));
 
 			this.LoadData();
 		}
@@ -838,11 +839,9 @@ namespace Melia.Zone.World.Actors.Monsters
 		public void Heal(float hpAmount, float spAmount)
 		{
 			this.Properties.Modify(PropertyName.HP, hpAmount);
-			this.Properties.Modify(PropertyName.SP, spAmount);
-
 			this.HpChangeCounter++;
 
-			Send.ZC_UPDATE_ALL_STATUS(this, this.HpChangeCounter);
+			Send.ZC_ADD_HP(this, hpAmount, this.Hp, this.HpChangeCounter);
 		}
 
 		/// <summary>

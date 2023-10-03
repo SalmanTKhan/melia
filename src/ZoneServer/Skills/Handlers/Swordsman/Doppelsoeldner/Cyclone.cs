@@ -30,7 +30,7 @@ namespace Melia.Zone.Skills.Handlers.Doppelsoeldner
 			}
 
 			skill.IncreaseOverheat();
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			// We'll ignore the data sent by the client and get the
 			// positions ourselves, because players are dirty cheaters

@@ -35,6 +35,7 @@
 		public const long Companions = 0x0C00000000000000;
 		public const long Party = 0x0D00000000000000;
 		public const long Guild = 0x0E00000000000000;
+		public const long Assisters = 0x0F00000000000000;
 
 		// Old stuff for referecence:
 

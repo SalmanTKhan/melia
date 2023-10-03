@@ -349,6 +349,11 @@ namespace Melia.Zone.World.Actors.Characters
 		public SummonComponent Summons { get; }
 
 		/// <summary>
+		/// Returns the account's assister cabinet.
+		/// </summary>
+		public AssisterCabinet AssisterCabinet => this.Connection.Account.AssisterCabinet;
+
+		/// <summary>
 		/// Character's properties.
 		/// </summary>
 		/// <remarks>

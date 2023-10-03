@@ -52,7 +52,7 @@ namespace Melia.Zone.Skills.Handlers.Hunter
 				}
 
 				skill.IncreaseOverheat();
-				caster.Components.Get<CombatComponent>().SetAttackState(true);
+				caster.SetAttackState(true);
 
 				var skillHandle = ZoneServer.Instance.World.CreateSkillHandle();
 				Send.ZC_SKILL_READY(caster, skill, skillHandle, caster.Position, farPos);

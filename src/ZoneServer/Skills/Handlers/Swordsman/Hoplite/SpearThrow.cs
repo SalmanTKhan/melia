@@ -37,7 +37,7 @@ namespace Melia.Zone.Skills.Handlers.Hoplite
 			}
 
 			skill.IncreaseOverheat();
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			var castRange = originPos.Get2DDistance(farPos);
 			if (castRange > skill.Data.MaxRange)

@@ -5,6 +5,7 @@ using Melia.Shared.Network.Helpers;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Scripting;
 using Melia.Shared.Tos.Const;
+using Melia.Shared.Tos.Const.Web;
 using Melia.Zone.World;
 using Melia.Zone.World.Actors.Characters.Components;
 using Melia.Zone.World.Maps;
@@ -31,7 +32,7 @@ namespace Melia.Zone.Database
 		/// <summary>
 		/// A reference to the account's assister cabinet.
 		/// </summary>
-		public AssisterCabinetComponent AssisterCabinet { get; set; }
+		public AssisterCabinet AssisterCabinet { get; set; }
 
 		/// <summary>
 		/// Track Popo Points (PCBANG_Points)
@@ -72,22 +73,43 @@ namespace Melia.Zone.Database
 		/// <summary>
 		/// Amount of Free TP.
 		/// </summary>
-		public int Medals { get; set; }
+		public int Medals
+		{
+			get => (int)this.Properties.GetFloat(PropertyName.Medal);
+			set => this.Properties.SetFloat(PropertyName.Medal, value);
+		}
 
 		/// <summary>
 		/// Amount of Event TP.
 		/// </summary>
-		public int GiftMedals { get; set; }
+		public int GiftMedals
+		{
+			get => (int)this.Properties.GetFloat(PropertyName.GiftMedal);
+			set => this.Properties.SetFloat(PropertyName.GiftMedal, value);
+		}
 
 		/// <summary>
 		/// Amount of TP.
 		/// </summary>
-		public int PremiumMedals { get; set; }
+		public int PremiumMedals
+		{
+			get => (int)this.Properties.GetFloat(PropertyName.PremiumMedal);
+			set => this.Properties.SetFloat(PropertyName.PremiumMedal, value);
+		}
 
 		/// <summary>
 		/// Id of the barrack map.
 		/// </summary>
-		public int SelectedBarrack { get; set; }
+		public int SelectedBarrack
+		{
+			get => (int)this.Properties.GetFloat(PropertyName.SelectedBarrack, 11);
+			set => this.Properties.SetFloat(PropertyName.SelectedBarrack, value);
+		}
+
+		/// <summary>
+		/// Assister's Enabled
+		/// </summary>
+		public bool IsAssistersEnabled => this.Properties.GetFloat(PropertyName.ANCIENT_UNLOCK_UI, 0) == 1;
 
 		/// <summary>
 		/// Barrack Layer
@@ -114,11 +136,10 @@ namespace Melia.Zone.Database
 		/// </summary>
 		public Account()
 		{
-			// TODO: Remove the selected barrack once those are saved to the database.
-			this.SelectedBarrack = 11;
 			this.Settings = new AccountSettings();
 			_chatMacros = new List<ChatMacro>();
 			_revealedMaps = new Dictionary<int, RevealedMap>();
+			this.AssisterCabinet = new AssisterCabinet();
 
 			this.LoadDefaultChatMacros();
 		}

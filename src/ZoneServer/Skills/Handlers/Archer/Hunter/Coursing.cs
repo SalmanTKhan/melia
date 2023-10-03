@@ -53,7 +53,7 @@ namespace Melia.Zone.Skills.Handlers.Hunter
 
 				skill.IncreaseOverheat();
 				caster.TurnTowards(target);
-				caster.Components.Get<CombatComponent>().SetAttackState(true);
+				caster.SetAttackState(true);
 
 				var radius = (float)farPos.Get2DDistance(originPos);
 				Send.ZC_NORMAL.UpdateSkillEffect(caster, 0, caster.Position, caster.Direction, Position.Zero);

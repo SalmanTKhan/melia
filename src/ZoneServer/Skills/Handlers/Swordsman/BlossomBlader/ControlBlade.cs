@@ -36,7 +36,7 @@ namespace Melia.Zone.Skills.Handlers.BlossomBlader
 
 			skill.IncreaseOverheat();
 			caster.TurnTowards(designatedTarget);
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			var radius = (int)skill.Data.SplashRange * 2;
 			var targets = caster.Map.GetAttackableEntitiesInRange(caster, farPos, radius);

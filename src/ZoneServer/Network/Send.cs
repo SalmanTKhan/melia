@@ -1302,6 +1302,44 @@ namespace Melia.Zone.Network
 		}
 
 		/// <summary>
+		/// Send Achievements Unlocked
+		/// </summary>
+		/// <param name="character"></param>
+		public static void ZC_SPLIT_ACHIEVE_POINT_LIST(Character character)
+		{
+			var pointIds = character.Achievements.GetPointIds();
+			var packet = new Packet(Op.ZC_SPLIT_ACHIEVE_POINT_LIST);
+
+			packet.PutShort(pointIds.Length);
+			packet.PutByte(1);
+			foreach (var pointId in pointIds)
+			{
+				packet.PutInt(pointId);
+				packet.PutInt(character.Achievements.GetPoints(pointId));
+			}
+
+			character.Connection.Send(packet);
+		}
+
+		/// <summary>
+		/// Send Achievements Unlocked
+		/// </summary>
+		/// <param name="character"></param>
+		public static void ZC_SPLIT_ACHIEVE_SET(Character character)
+		{
+			var achievements = character.Achievements.GetAchievements();
+			var packet = new Packet(Op.ZC_SPLIT_ACHIEVE_SET);
+
+			packet.PutShort(achievements.Length);
+			packet.PutByte(1);
+			packet.PutByte(1);
+			foreach (var achievement in achievements)
+				packet.PutInt(achievement);
+
+			character.Connection.Send(packet);
+		}
+
+		/// <summary>
 		/// Sends ZC_ITEM_INVENTORY_LIST to character, containing a list of
 		/// all items in their inventory.
 		/// </summary>
@@ -3175,11 +3213,11 @@ namespace Melia.Zone.Network
 		/// <summary>
 		/// Updates a characters HP for damage and healing.
 		/// </summary>
-		/// <param name="character"></param>
+		/// <param name="actor"></param>
 		/// <param name="amount"></param>
 		/// <param name="currentHp"></param>
 		/// <param name="priority"></param>
-		public static void ZC_ADD_HP(Character character, float amount, float currentHp, int priority)
+		public static void ZC_ADD_HP(IActor actor, float amount, float currentHp, int priority)
 		{
 			// For some reason they send 1 for the amount if the expected
 			// amount was negative, such as in the case of damage?
@@ -3192,12 +3230,12 @@ namespace Melia.Zone.Network
 			var adjustedAmount = (isDamage ? 1 : amount);
 
 			var packet = new Packet(Op.ZC_ADD_HP);
-			packet.PutInt(character.Handle);
+			packet.PutInt(actor.Handle);
 			packet.PutInt((int)adjustedAmount);
 			packet.PutInt((int)currentHp);
 			packet.PutInt(priority);
 
-			character.Connection.Send(packet);
+			actor.Map.Broadcast(packet, actor);
 		}
 
 		/// <summary>
@@ -4850,7 +4888,7 @@ namespace Melia.Zone.Network
 		/// <summary>
 		/// Loading Assister Cards
 		/// </summary>
-		/// <param name="caster"></param>
+		/// <param name="conn"></param>
 		public static void ZC_ANCIENT_CARD_LOAD(IZoneConnection conn)
 		{
 			var packet = new Packet(Op.ZC_ANCIENT_CARD_LOAD);
@@ -4866,7 +4904,7 @@ namespace Melia.Zone.Network
 					{
 						zpacket.PutLpString(card.Name);
 						zpacket.PutLong(card.Experience);
-						zpacket.PutLong(card.ObjectId);
+						zpacket.PutLong(card.DbId);
 						zpacket.PutInt(card.Slot);
 						zpacket.PutInt(1);
 						zpacket.PutInt(1);
@@ -4879,9 +4917,9 @@ namespace Melia.Zone.Network
 		}
 
 		/// <summary>
-		/// Adding an Assister Card
+		/// Adding an Assister Card to the cabinet.
 		/// </summary>
-		/// <param name="caster"></param>
+		/// <param name="character"></param>
 		/// <param name="card"></param>
 		public static void ZC_ANCIENT_CARD_ADD(Character character, AssisterCard card)
 		{
@@ -4891,12 +4929,22 @@ namespace Melia.Zone.Network
 			{
 				zpacket.PutLpString(card.Name);
 				zpacket.PutLong(card.Experience); // ? might be something else
-				zpacket.PutLong(card.ObjectId);
+				zpacket.PutLong(card.DbId);
 				zpacket.PutInt(card.Slot);
 				zpacket.PutInt(1);
 				zpacket.PutInt(1);
 				zpacket.PutByte(0);
 			});
+
+			character.Connection.Send(packet);
+		}
+
+		public static void ZC_ANCIENT_CARD_REMOVE(Character character, AssisterCard card)
+		{
+			var packet = new Packet(Op.ZC_ANCIENT_CARD_ADD);
+
+			packet.PutEmptyBin(12);
+			packet.PutLong(card.DbId);
 
 			character.Connection.Send(packet);
 		}
@@ -4914,7 +4962,7 @@ namespace Melia.Zone.Network
 			{
 				zpacket.PutLpString(card.Name);
 				zpacket.PutLong(card.Experience); // ? might be something else
-				zpacket.PutLong(card.ObjectId);
+				zpacket.PutLong(card.DbId);
 				zpacket.PutInt(card.Slot);
 				zpacket.PutInt(1);
 				zpacket.PutInt(1);
@@ -6005,6 +6053,46 @@ namespace Melia.Zone.Network
 			packet.PutByte(semitone);
 
 			character.Map.Broadcast(packet, character);
+		}
+
+		/// <summary>
+		/// Set scrolling limits on zoom from mouse wheel
+		/// </summary>
+		/// <param name="character"></param>
+		/// <param name="type"></param>
+		/// <param name="xLimit"></param>
+		/// <param name="yLimit"></param>
+		/// <param name="zLimit"></param>
+		public static void ZC_CUSTOM_WHEEL_ZOOM(Character character, byte type, float xLimit, float yLimit, float zLimit)
+		{
+			var packet = new Packet(Op.ZC_CUSTOM_WHEEL_ZOOM);
+
+			packet.PutByte(type);
+			packet.PutFloat(xLimit);
+			packet.PutFloat(yLimit);
+			packet.PutFloat(zLimit);
+
+			character.Connection.Send(packet);
+		}
+
+		/// <summary>
+		/// Notice sent to seller on item sold in market
+		/// </summary>
+		/// <param name="character"></param>
+		/// <param name="itemId"></param>
+		/// <param name="itemAmount"></param>
+		/// <param name="i2"></param>
+		public static void ZC_SOLD_ITEM_NOTICE(Character character, int itemId, int itemAmount, int i2 = 1)
+		{
+			var packet = new Packet(Op.ZC_SOLD_ITEM_NOTICE);
+
+			packet.PutString(character.Name, 128);
+			packet.PutLong(character.AccountObjectId);
+			packet.PutInt(itemAmount);
+			packet.PutInt(itemId);
+			packet.PutInt(i2);
+
+			character.Connection.Send(packet);
 		}
 
 		/// <summary>

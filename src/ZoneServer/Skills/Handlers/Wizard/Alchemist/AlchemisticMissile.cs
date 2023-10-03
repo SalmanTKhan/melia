@@ -48,7 +48,7 @@ namespace Melia.Zone.Skills.Handlers.Alchemist
 
 			skill.IncreaseOverheat();
 			caster.TurnTowards(target);
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			if (target == null)
 			{

@@ -35,8 +35,11 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 				return;
 
 			this.UpdateHp(elapsed);
-			this.UpdateSp(elapsed);
-			this.UpdateStamina(elapsed);
+			if (this.Entity is Character)
+			{
+				this.UpdateSp(elapsed);
+				this.UpdateStamina(elapsed);
+			}
 		}
 
 		/// <summary>

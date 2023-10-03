@@ -45,7 +45,7 @@ namespace Melia.Zone.Skills.Handlers.Hoplite
 
 			skill.IncreaseOverheat();
 			caster.TurnTowards(target);
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			Send.ZC_NORMAL.ApplyBuff(caster, "Stabbing_Debuff", skill.Id, 1);
 			if (caster is Character character)

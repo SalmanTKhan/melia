@@ -54,7 +54,7 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 
 			skill.IncreaseOverheat();
 			caster.TurnTowards(target);
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			var skillHandle = ZoneServer.Instance.World.CreateSkillHandle();
 

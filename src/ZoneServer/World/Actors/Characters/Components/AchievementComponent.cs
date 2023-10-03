@@ -51,6 +51,12 @@ namespace Melia.Zone.World.Actors.Characters.Components
 			return false;
 		}
 
+		/// <summary>
+		/// Add achievement points
+		/// </summary>
+		/// <param name="achievementPoint"></param>
+		/// <param name="points"></param>
+		/// <param name="silently"></param>
 		public void AddAchievementPoints(string achievementPoint, int points, bool silently = false)
 		{
 			if (!ZoneServer.Instance.Data.AchievementPointDb.TryFind(achievementPoint, out var pointData))
@@ -62,10 +68,17 @@ namespace Melia.Zone.World.Actors.Characters.Components
 			this.AddAchievementPoints(pointData.Id, points);
 
 			if (!silently)
+			{
 				Send.ZC_ACHIEVE_POINT(this.Character, points, -1, -1);
-			this.CheckAchievements(pointData);
+				this.CheckAchievements(pointData);
+			}
 		}
 
+		/// <summary>
+		/// Add achievement points
+		/// </summary>
+		/// <param name="achievementPointId"></param>
+		/// <param name="points"></param>
 		public void AddAchievementPoints(int achievementPointId, int points)
 		{
 			lock (_achievementPoints)
@@ -97,9 +110,7 @@ namespace Melia.Zone.World.Actors.Characters.Components
 			}
 
 			lock (_achievements)
-			{
 				_achievements[achievementId] = true;
-			}
 
 			if (!silently)
 				Send.ZC_ACHIEVE_POINT(this.Character, pointData.Id, _achievementPoints[pointData.Id], achievement.Id);

@@ -54,6 +54,7 @@ namespace Melia.Zone.Database
 			this.SaveProperties("account_properties", "accountId", account.Id, account.Properties);
 			this.SaveChatMacros(account);
 			this.SaveRevealedMaps(account);
+			this.SaveAssisters(account);
 
 			return true;
 		}
@@ -86,15 +87,14 @@ namespace Melia.Zone.Database
 					account.Medals = reader.GetInt32("medals");
 					account.GiftMedals = reader.GetInt32("giftMedals");
 					account.PremiumMedals = reader.GetInt32("premiumMedals");
-
 				}
 			}
 
 			this.LoadProperties("account_properties", "accountId", account.Id, account.Properties);
 			this.LoadVars(account.Variables.Perm, "vars_accounts", "accountId", account.Id);
-			this.LoadProperties("account_properties", "accountId", account.Id, account.Properties);
 			this.LoadChatMacros(account);
 			this.LoadRevealedMaps(account);
+			this.LoadAssisters(account);
 
 			return account;
 		}
@@ -180,9 +180,9 @@ namespace Melia.Zone.Database
 			this.LoadCompanions(character);
 			this.LoadParty(character);
 			this.LoadGuild(character);
-			//this.LoadQuests(character);
 			this.LoadHelp(character);
-			//this.LoadAchievements(character);
+			this.LoadAchievements(character);
+			this.LoadAchievementPoints(character);
 
 			// Initialize the properties to trigger calculated properties
 			// and to set some properties in case the character is new and
@@ -233,7 +233,7 @@ namespace Melia.Zone.Database
 		/// <param name="character"></param>
 		private void SaveAchievements(Character character)
 		{
-			var jobs = character.Jobs.GetList();
+			var achievements = character.Achievements.GetAchievements();
 
 			using (var conn = this.GetConnection())
 			using (var trans = conn.BeginTransaction())
@@ -244,12 +244,12 @@ namespace Melia.Zone.Database
 					cmd.ExecuteNonQuery();
 				}
 
-				foreach (var job in jobs)
+				foreach (var achievement in achievements)
 				{
 					using (var cmd = new InsertCommand("INSERT INTO `achievements` {0}", conn, trans))
 					{
 						cmd.Set("characterId", character.DbId);
-						cmd.Set("achievementId", job.Id);
+						cmd.Set("achievementId", achievement);
 
 						cmd.Execute();
 					}
@@ -275,7 +275,7 @@ namespace Melia.Zone.Database
 					while (reader.Read())
 					{
 						var pointId = reader.GetInt32("pointId");
-						var points = reader.GetInt32("points");
+						var points = reader.GetInt32("pointValue");
 
 						character.Achievements.AddAchievementPoints(pointId, points);
 					}
@@ -306,7 +306,7 @@ namespace Melia.Zone.Database
 					{
 						cmd.Set("characterId", character.DbId);
 						cmd.Set("pointId", pointId);
-						cmd.Set("points", character.Achievements.GetPoints(pointId));
+						cmd.Set("pointValue", character.Achievements.GetPoints(pointId));
 
 						cmd.Execute();
 					}
@@ -605,6 +605,8 @@ namespace Melia.Zone.Database
 			this.SaveQuests(character);
 			if (character.HasCompanions)
 				this.SaveCompanions(character);
+			this.SaveAchievements(character);
+			this.SaveAchievementPoints(character);
 
 			return false;
 		}
@@ -1200,6 +1202,8 @@ namespace Melia.Zone.Database
 		/// <param name="account"></param>
 		private void LoadAssisters(Account account)
 		{
+			if (!account.IsAssistersEnabled)
+				return;
 			using (var conn = this.GetConnection())
 			using (var mc = new MySqlCommand("SELECT * FROM `assisters` WHERE `accountId` = @accountId", conn))
 			{
@@ -1210,8 +1214,9 @@ namespace Melia.Zone.Database
 					while (reader.Read())
 					{
 						var card = new AssisterCard(reader.GetInt64("assisterId"), reader.GetString("name"), reader.GetInt16("slot"));
+						card.Experience = reader.GetInt64("exp");
 
-						account.AssisterCabinet.Add(card);
+						account.AssisterCabinet.Add(card, true);
 					}
 				}
 			}
@@ -1255,23 +1260,17 @@ namespace Melia.Zone.Database
 		/// <param name="account"></param>
 		private void SaveAssisters(Account account)
 		{
-			if (account.AssisterCabinet == null)
+			if (!account.IsAssistersEnabled)
 				return;
 
 			using (var conn = this.GetConnection())
 			using (var trans = conn.BeginTransaction())
 			{
-				using (var mc = new MySqlCommand("DELETE FROM `assisters` WHERE `accountId` = @accountId", conn, trans))
-				{
-					mc.Parameters.AddWithValue("@accountId", account.Id);
-					mc.ExecuteNonQuery();
-				}
-
 				foreach (var assister in account.AssisterCabinet.GetAssisters())
 				{
 					using (var cmd = new InsertCommand("INSERT INTO `assisters` {0}", conn, trans))
 					{
-						cmd.Set("assisterId", assister.ObjectId);
+						cmd.Set("assisterId", assister.DbId);
 						cmd.Set("accountId", account.Id);
 						cmd.Set("name", assister.Name);
 						cmd.Set("slot", assister.Slot);
@@ -1291,7 +1290,7 @@ namespace Melia.Zone.Database
 		/// <param name="accountId"></param>
 		/// <param name="assister"></param>
 		/// <returns></returns>
-		public void CreateAssister(long accountId, AssisterCard assister)
+		public void CreateAssister(long accountId, ref AssisterCard assister)
 		{
 			using (var conn = this.GetConnection())
 			using (var trans = conn.BeginTransaction())
@@ -1304,7 +1303,7 @@ namespace Melia.Zone.Database
 					cmd.Set("exp", assister.Experience);
 
 					cmd.Execute();
-					assister.ObjectId = cmd.LastId;
+					assister.DbId = cmd.LastId;
 				}
 
 				trans.Commit();

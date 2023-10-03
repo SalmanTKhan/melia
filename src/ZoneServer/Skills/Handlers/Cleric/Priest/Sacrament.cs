@@ -34,7 +34,7 @@ namespace Melia.Zone.Skills.Handlers.Priest
 			}
 
 			skill.IncreaseOverheat();
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			var radius = (int)skill.Data.SplashRange * 2;
 			var targets = caster.Map.GetAttackableEntitiesInRange(caster, farPos, radius);

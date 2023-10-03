@@ -25,7 +25,7 @@ namespace Melia.Zone.Skills.Handlers.Barbarian
 			}
 
 			skill.IncreaseOverheat();
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 			caster.Properties.SetFloat(PropertyName.Jumpable, 0);
 
 			var skillHandle = ZoneServer.Instance.World.CreateSkillHandle();

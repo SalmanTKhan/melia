@@ -105,11 +105,13 @@ namespace Melia.Zone.Network
 			conn.SelectedCharacter = character;
 			conn.Party = ZoneServer.Instance.World.GetParty(character.PartyId);
 			conn.Guild = ZoneServer.Instance.World.GetGuild(character.GuildId);
+			conn.Account.AssisterCabinet.Character = character;
 
 			ZoneServer.Instance.ServerEvents.OnPlayerLoggedIn(character);
 
 			map.AddCharacter(character);
 			conn.LoggedIn = true;
+			conn.LastHeartBeat = DateTime.Now;
 			conn.GenerateSessionKey();
 
 			ZoneServer.Instance.Database.SaveSessionKey(character.DbId, conn.SessionKey);
@@ -145,7 +147,9 @@ namespace Melia.Zone.Network
 			Send.ZC_SESSION_OBJECTS(character);
 			Send.ZC_OPTION_LIST(conn);
 			Send.ZC_SKILLMAP_LIST(character);
-			Send.ZC_ACHIEVE_POINT_LIST(character);
+			//Send.ZC_ACHIEVE_POINT_LIST(character);
+			Send.ZC_SPLIT_ACHIEVE_POINT_LIST(character);
+			Send.ZC_SPLIT_ACHIEVE_SET(character);
 			Send.ZC_CHAT_MACRO_LIST(character);
 			Send.ZC_MAP_REVEAL_LIST(conn);
 			Send.ZC_NPC_STATE_LIST(character);
@@ -173,6 +177,13 @@ namespace Melia.Zone.Network
 			Send.ZC_UPDATE_SP(character, character.Sp, false);
 			Send.ZC_LOGIN_TIME(conn, DateTime.Now);
 			Send.ZC_MYPC_ENTER(character);
+
+			if (conn.Account.IsAssistersEnabled)
+			{
+				// TODO: Check if Card Album is unlocked
+				Send.ZC_ANCIENT_CARD_RESET(conn);
+				Send.ZC_ANCIENT_CARD_LOAD(conn);
+			}
 
 			if (conn.Party != null)
 			{
@@ -2580,6 +2591,11 @@ namespace Melia.Zone.Network
 		public void CZ_HEARTBEAT(IZoneConnection conn, Packet packet)
 		{
 			var secondsSinceStart = packet.GetFloat();
+
+			// If it's been more than 30 seconds since last heart beat, disconnect the client.
+			if (conn.LastHeartBeat < DateTime.Now.AddSeconds(-30))
+				conn.Close();
+			conn.LastHeartBeat = DateTime.Now;
 		}
 
 		/// <summary>
@@ -4033,14 +4049,26 @@ namespace Melia.Zone.Network
 		public void CZ_HOUSING_REQUEST_ARRANGED_FURNITURE(IZoneConnection conn, Packet packet)
 		{
 			if (conn.ActiveHouse == null)
+			{
+				Log.Warning("CZ_HOUSING_CLOSE_EDIT_MODE: User '{0}' doesn't have an active personal house.", conn.Account.Name);
 				return;
+			}
 		}
 
+		/// <summary>
+		/// Personal House close Edit mode
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="packet"></param>
 		[PacketHandler(Op.CZ_HOUSING_CLOSE_EDIT_MODE)]
 		public void CZ_HOUSING_CLOSE_EDIT_MODE(IZoneConnection conn, Packet packet)
 		{
 			if (conn.ActiveHouse == null)
+			{
+				Log.Warning("CZ_HOUSING_CLOSE_EDIT_MODE: User '{0}' doesn't have an active personal house.", conn.Account.Name);
 				return;
+			}
+
 			conn.ActiveHouse.SetEditMode(false);
 		}
 
@@ -4052,11 +4080,47 @@ namespace Melia.Zone.Network
 		[PacketHandler(Op.CZ_PERSONAL_HOUSING_REQUEST_GROUP_LIST)]
 		public void CZ_PERSONAL_HOUSING_REQUEST_GROUP_LIST(IZoneConnection conn, Packet packet)
 		{
-			if (conn.ActiveHouse == null)
-				return;
 			var character = conn.SelectedCharacter;
 
+			if (conn.ActiveHouse == null)
+			{
+				Log.Warning("CZ_PERSONAL_HOUSING_REQUEST_GROUP_LIST: User '{0}' doesn't have an active personal house.", conn.Account.Name);
+				return;
+			}
+
 			Send.ZC_PERSONAL_HOUSING_ANSWER_GROUP_LIST(character);
+		}
+
+		/// <summary>
+		/// A request to combine ancient cards
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="packet"></param>
+		[PacketHandler(Op.CZ_ANCIENT_CARD_COMBINE)]
+		public void CZ_ANCIENT_CARD_COMBINE(IZoneConnection conn, Packet packet)
+		{
+			var cardCount = packet.GetInt();
+			var itemWorldIds = packet.GetList(cardCount, packet.GetLong);
+
+			var character = conn.SelectedCharacter;
+
+			//conn.Account.AssisterCabinet.TryGet();
+		}
+
+		/// <summary>
+		/// A request to evolve an ancient card.
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="packet"></param>
+		[PacketHandler(Op.CZ_ANCIENT_CARD_EVOLVE)]
+		public void CZ_ANCIENT_CARD_EVOLVE(IZoneConnection conn, Packet packet)
+		{
+			var cardCount = packet.GetInt();
+			var itemWorldIds = packet.GetList(cardCount, packet.GetLong);
+
+			var character = conn.SelectedCharacter;
+
+			//conn.Account.AssisterCabinet.TryGet();
 		}
 
 		[PacketHandler(Op.CZ_CANCEL_PAIR_ANIMATION)]
@@ -4637,7 +4701,7 @@ namespace Melia.Zone.Network
 		/// </summary>
 		/// <param name="conn"></param>
 		/// <param name="packet"></param>
-		[PacketHandler(Op.CZ_REQ_APPLY_HUD_SKIN)]
+		[PacketHandler(Op.CZ_REQ_CURRENT_HUD_SKIN)]
 		public void CZ_REQ_CURRENT_HUD_SKIN(IZoneConnection conn, Packet packet)
 		{
 			// TODO: Don't know if this is used for anything else.

@@ -8,6 +8,7 @@ using System;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Tos.Const;
 using Melia.Zone.Scripting;
+using Melia.Zone.World.Actors;
 using Melia.Zone.World.Actors.CombatEntities.Components;
 using Melia.Zone.World.Actors.Monsters;
 using static Melia.Shared.Network.NormalOp;
@@ -409,5 +410,34 @@ public class MonsterCalculationsFunctionsScript : GeneralScript
 			return fixValue;
 
 		return monster.Data.CritAttack;
+	}
+
+	[ScriptableFunction]
+	public float SCR_Get_MON_RHPTIME(Mob monster)
+	{
+		if (!monster.Components.Get<CombatComponent>()?.AttackState ?? false)
+			return 500;
+		return 10000;
+	}
+
+	[ScriptableFunction]
+	public float SCR_Get_COMPANION_RHPTIME(Mob monster)
+	{
+		return 5000;
+	}
+
+	[ScriptableFunction]
+	public float SCR_Get_MON_RHP(Mob monster)
+	{
+		if (monster.Properties.Has(PropertyName.FixedLife))
+			return 0;
+
+		//if (monster.IsBuffTypeActive("Curse"))
+		//	return 0;
+
+		var value = monster.MaxHp * 0.02f;
+		var byBuffs = monster.Properties.GetFloat(PropertyName.RHP_BM);
+
+		return MathF.Floor(value + byBuffs);
 	}
 }

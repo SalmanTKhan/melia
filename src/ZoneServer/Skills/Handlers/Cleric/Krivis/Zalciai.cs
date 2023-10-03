@@ -33,7 +33,7 @@ namespace Melia.Zone.Skills.Handlers.Kriwi
 			}
 
 			skill.IncreaseOverheat();
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			var skillHandle = ZoneServer.Instance.World.CreateSkillHandle();
 

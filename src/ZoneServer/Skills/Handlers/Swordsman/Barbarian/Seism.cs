@@ -44,7 +44,7 @@ namespace Melia.Zone.Skills.Handlers.Barbarian
 			}
 
 			skill.IncreaseOverheat();
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			// Not actually skill handle but not to sure what to use here for skill ready
 			var skillHandle = ZoneServer.Instance.World.CreateSkillHandle();

@@ -45,7 +45,7 @@ namespace Melia.Zone.Skills.Handlers.Doppelsoeldner
 
 			skill.IncreaseOverheat();
 			caster.TurnTowards(target);
-			caster.Components.Get<CombatComponent>().SetAttackState(true);
+			caster.SetAttackState(true);
 
 			var skillHandle = ZoneServer.Instance.World.CreateSkillHandle();
 			var buff = new Buff(BuffId.Redel_Buff, 0, 0, TimeSpan.FromSeconds(3), caster, caster);
