@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30211)]
 public class Quest30211Script : QuestScript
@@ -55,7 +56,7 @@ public class Quest30211Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/ORCHARD_34_3_SQ_OBJ_7/F_spread_in010_green/0.9/BOT");
+		ZoneServer.Instance.World.FindNPC("ORCHARD_34_3_SQ_OBJ_7")?.PlayEffectLocal(character.Connection, "F_spread_in010_green", 0.9f, "BOT");
 		dialog.HideNPC("ORCHARD_34_3_SQ_OBJ_7");
 		await Task.Delay(1000);
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "You have removed the Tree Vines{nl}Now go to enhance the Antidote");

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80127)]
 public class Quest80127Script : QuestScript
@@ -62,7 +63,7 @@ public class Quest80127Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/LIMESTONE_52_2_ALLENA/F_burstup024_dark/4/BOT");
+		ZoneServer.Instance.World.FindNPC("LIMESTONE_52_2_ALLENA")?.PlayEffectLocal(character.Connection, "F_burstup024_dark", 4f, "BOT");
 		dialog.HideNPC("LIMESTONE_52_2_DARKWALL");
 		await dialog.Msg("LIMESTONE_52_2_MQ_2_succ");
 		character.Quests.Complete(this.QuestId);

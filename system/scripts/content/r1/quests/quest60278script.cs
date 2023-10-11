@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(60278)]
 public class Quest60278Script : QuestScript
@@ -60,8 +61,8 @@ public class Quest60278Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("FANTASYLIB485_MQ_7_3");
-		await dialog.Msg("EffectLocal/F_wizard_samsara_light");
-		await dialog.Msg("EffectLocal/F_light119_yellow");
+		character.PlayEffectLocal("F_wizard_samsara_light");
+		character.PlayEffectLocal("F_light119_yellow");
 		await dialog.Msg("FANTASYLIB485_MQ_7_4");
 		dialog.HideNPC("FLIBRARY484_VIVORA_NPC");
 		await dialog.Msg("FadeOutIN/3000");

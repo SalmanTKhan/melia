@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(9000)]
 public class Quest9000Script : QuestScript
@@ -63,7 +64,7 @@ public class Quest9000Script : QuestScript
 
 		await dialog.Msg("ROKAS31_PACT_END_COMP");
 		await dialog.Msg("FadeOutIN/1000");
-		await dialog.Msg("EffectLocalNPC/ROKAS31_PACT_END/F_pc_warp_circle/1/BOT");
+		ZoneServer.Instance.World.FindNPC("ROKAS31_PACT_END")?.PlayEffectLocal(character.Connection, "F_pc_warp_circle", 1f, "BOT");
 		dialog.HideNPC("ROKAS31_PACT_END");
 		dialog.UnHideNPC("ROKAS31_REXITHER2");
 		character.Quests.Complete(this.QuestId);

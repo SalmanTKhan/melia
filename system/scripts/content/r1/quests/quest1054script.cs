@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(1054)]
 public class Quest1054Script : QuestScript
@@ -61,13 +62,9 @@ public class Quest1054Script : QuestScript
 		{
 			character.Inventory.RemoveItem("ROKAS30_PIPOTI02_ITEM", 1);
 			// Func/SCR_ROKAS30_PIPOTI02_TREASUREBOX_OPEN;
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(2000);
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("ROKAS30_PIPOTI02_TREASUREBOX");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/2000");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The treasure chest disappeared!{nl}Right-click on the treasure map and look for the next location!");
 			character.Quests.Complete(this.QuestId);
 		}

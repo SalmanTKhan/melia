@@ -34,11 +34,6 @@
     <ProjectReference Include="..\..\src\ZoneServer\ZoneServer.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\official\tracks\" />
-    <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="content\official\scripts.txt" />
     <Content Include="content\r1\mobs\scripts.txt" />
     <Content Include="content\r1\scripts.txt" />
     <Content Include="content\r1\warps\scripts.txt" />

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(60210)]
 public class Quest60210Script : QuestScript
@@ -43,11 +44,11 @@ public class Quest60210Script : QuestScript
 				await dialog.Msg("LSCAVE551_SQ_1_1_1");
 				dialog.UnHideNPC("LSCAVE551_ALTAR_NPC");
 				character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("LSCAVE551_SQ_1_ST1");
-					await dialog.Msg("왜 못들어가느냐고 묻는다");
+				await dialog.Msg("LSCAVE551_SQ_1_ST1");
+				await dialog.Msg("왜 못들어가느냐고 묻는다");
 				character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("LSCAVE551_SQ_1_ST2");
-					await dialog.Msg("용병단은 왜 꾸린 건지 물어본다");
+				await dialog.Msg("LSCAVE551_SQ_1_ST2");
+				await dialog.Msg("용병단은 왜 꾸린 건지 물어본다");
 				await dialog.Msg("LSCAVE551_SQ_1_ST3");
 				character.Quests.Start(this.QuestId);
 				break;

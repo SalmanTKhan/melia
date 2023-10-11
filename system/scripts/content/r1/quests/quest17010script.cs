@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(17010)]
 public class Quest17010Script : QuestScript
@@ -65,11 +66,8 @@ public class Quest17010Script : QuestScript
 		{
 			character.Inventory.RemoveItem("FTOWER42_SQ_04_01", 10);
 			await dialog.Msg("FTOWER42_SQ_04_COMP");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCChat/FTOWER42_SQ_04/드디어..");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/FTOWER42_SQ_04/F_archer_scarecrow_shot_smoke/2/MID");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("FTOWER42_SQ_04")?.PlayEffectLocal(character.Connection, "F_archer_scarecrow_shot_smoke", 2f, "MID");
 			dialog.HideNPC("FTOWER42_SQ_04");
 			character.Quests.Complete(this.QuestId);
 		}

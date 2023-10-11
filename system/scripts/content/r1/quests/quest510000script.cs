@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(510000)]
 public class Quest510000Script : QuestScript
@@ -54,6 +55,7 @@ public class Quest510000Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
+		//TX_GODDESS_CARD_OPEN
 		// Func/REPUTATION_EP13_OPEN;
 		await dialog.Msg("REPUTATION_OPEN_QUEST_DLG2");
 		character.Quests.Complete(this.QuestId);

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30250)]
 public class Quest30250Script : QuestScript
@@ -57,7 +58,7 @@ public class Quest30250Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/CASTLE_20_1_OBJ_9/F_pc_making_finish_white/1.0/MID");
+		ZoneServer.Instance.World.FindNPC("CASTLE_20_1_OBJ_9")?.PlayEffectLocal(character.Connection, "F_pc_making_finish_white", 1.0f, "MID");
 		dialog.HideNPC("CASTLE_20_1_OBJ_9");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Acquired the Outer Wall Core.{nl}Return to Kupole Milda.");
 		character.Quests.Complete(this.QuestId);

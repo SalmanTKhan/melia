@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50014)]
 public class Quest50014Script : QuestScript
@@ -63,13 +64,9 @@ public class Quest50014Script : QuestScript
 		{
 			character.Inventory.RemoveItem("SIAULIAI50_DRUG01", 1);
 			await dialog.Msg("SIAULIAI_50_1_SQ_070_succ01");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/SIAULIAI_50_1_SQ_MAN02/std/1");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCChat/SIAULIAI_50_1_SQ_MAN03/아픈게 좀 나아진거 같아.");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("SIAULIAI_50_1_SQ_070_succ02");
 			character.Quests.Complete(this.QuestId);
 		}

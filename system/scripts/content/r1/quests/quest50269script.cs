@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50269)]
 public class Quest50269Script : QuestScript
@@ -54,6 +55,7 @@ public class Quest50269Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
+		//SCR_UNDERFORTRESS69_HQ1_ACHIEVE_REWARD
 		await dialog.Msg("UNDERFORTRESS69_HQ1_succ1");
 		await dialog.Msg("BalloonText/UNDERFORTRESS69_HQ1_AMANDA/5");
 		await dialog.Msg("FadeOutIN/1000");

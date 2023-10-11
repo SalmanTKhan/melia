@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(91038)]
 public class Quest91038Script : QuestScript
@@ -69,9 +70,7 @@ public class Quest91038Script : QuestScript
 		{
 			character.Inventory.RemoveItem("EP13_F_SIAULIAI_1_MQ_06_ITEM_01", 1);
 			await dialog.Msg("EP13_F_SIAULIAI_1_MQ_06_DLG2");
-			character.Quests.Complete(this.QuestId);
 			// Func/SCR_QUEST_ATTENDACE_MONGOLOG;
-			character.Quests.Complete(this.QuestId);
 			// Func/SCR_NEXTQUEST_LEVEL_CHECK/EP13_F_SIAULIAI_2_MQ_01;
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30223)]
 public class Quest30223Script : QuestScript
@@ -56,12 +57,9 @@ public class Quest30223Script : QuestScript
 		if (character.Inventory.HasItem("CASTLE_20_3_SQ_5_ITEM_3", 1))
 		{
 			character.Inventory.RemoveItem("CASTLE_20_3_SQ_5_ITEM_3", 1);
-			await dialog.Msg("EffectLocalNPC/CASTLE_20_3_OBJ_8/F_burstup007_smoke1/0.6/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("CASTLE_20_3_OBJ_8")?.PlayEffectLocal(character.Connection, "F_burstup007_smoke1", 0.6f, "BOT");
 			dialog.HideNPC("CASTLE_20_3_OBJ_8");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("CASTLE_20_3_OBJ_8_AFTER");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Scroll, "There is Magic Circle Maintenance Department near the magical eye.{nl}Check the content.");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30149)]
 public class Quest30149Script : QuestScript
@@ -45,7 +46,7 @@ public class Quest30149Script : QuestScript
 		{
 			case 1:
 				await dialog.Msg("PRISON_78_MQ_5_agree");
-				await dialog.Msg("EffectLocalNPC/PRISON_78_NPC_1/F_lineup020_blue_mint/0.6/BOT");
+				ZoneServer.Instance.World.FindNPC("PRISON_78_NPC_1")?.PlayEffectLocal(character.Connection, "F_lineup020_blue_mint", 0.6f, "BOT");
 				dialog.HideNPC("PRISON_78_NPC_1");
 				character.Quests.Start(this.QuestId);
 				break;

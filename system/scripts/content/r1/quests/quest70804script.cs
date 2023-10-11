@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70804)]
 public class Quest70804Script : QuestScript
@@ -65,8 +66,8 @@ public class Quest70804Script : QuestScript
 			return HookResult.Skip;
 
 		character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("WHITETREES231_SQ_05_succ1");
-					await dialog.Msg("I am the Revelator");
+		await dialog.Msg("WHITETREES231_SQ_05_succ1");
+		await dialog.Msg("I am the Revelator");
 		await dialog.Msg("WHITETREES231_SQ_05_succ2");
 		character.Quests.Complete(this.QuestId);
 

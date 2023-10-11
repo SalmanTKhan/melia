@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70560)]
 public class Quest70560Script : QuestScript
@@ -56,8 +57,8 @@ public class Quest70560Script : QuestScript
 			return HookResult.Skip;
 
 		character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("PILGRIM413_SQ_01_succ1");
-					await dialog.Msg("자신이 바로 계시자임을 밝힌다");
+		await dialog.Msg("PILGRIM413_SQ_01_succ1");
+		await dialog.Msg("자신이 바로 계시자임을 밝힌다");
 		await dialog.Msg("PILGRIM413_SQ_01_succ2");
 		dialog.UnHideNPC("ABBEY416_SQ_01");
 		dialog.HideNPC("ABBEY416_SQ_01_1");

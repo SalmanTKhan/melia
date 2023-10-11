@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70224)]
 public class Quest70224Script : QuestScript
@@ -66,19 +67,12 @@ public class Quest70224Script : QuestScript
 		{
 			character.Inventory.RemoveItem("TABLELAND28_2_SQ05_ITEM", 5);
 			await dialog.Msg("TABLELAND28_2_SQ_05_4");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("TABLELAND282_SQ_06");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("TABLELAND282_SQ_05_P");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/TABLELAND282_SQ_06_F/ON/1");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("TABLELAND282_SQ_01");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("TABLELAND282_SQ_01_R");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("TABLELAND28_2_SQ_05_5");
 			character.Quests.Complete(this.QuestId);
 		}

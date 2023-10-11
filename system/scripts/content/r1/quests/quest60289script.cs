@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(60289)]
 public class Quest60289Script : QuestScript
@@ -65,9 +66,7 @@ public class Quest60289Script : QuestScript
 		{
 			character.Inventory.RemoveItem("DCAPITAL105_SQ_9_ITEM", 5);
 			await dialog.Msg("DCAPITAL105_SQ_9_3");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1800");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("DCAPITAL105_KUPOLE_NPC");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(8243)]
 public class Quest8243Script : QuestScript
@@ -64,7 +65,7 @@ public class Quest8243Script : QuestScript
 
 		await dialog.Msg("KATYN14_MQ_02_03");
 		await Task.Delay(5000);
-		await dialog.Msg("EffectLocalNPC/KATYN14_VACENIN_CHASE/F_pc_warp_circle/1/BOT");
+		ZoneServer.Instance.World.FindNPC("KATYN14_VACENIN_CHASE")?.PlayEffectLocal(character.Connection, "F_pc_warp_circle", 1f, "BOT");
 		await dialog.Msg("FadeOutIN/1000");
 		dialog.HideNPC("KATYN14_VACENIN_CHASE");
 		character.Quests.Complete(this.QuestId);

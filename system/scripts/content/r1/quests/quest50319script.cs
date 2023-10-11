@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50319)]
 public class Quest50319Script : QuestScript
@@ -60,13 +61,9 @@ public class Quest50319Script : QuestScript
 		{
 			character.Inventory.RemoveItem("WTREES22_1_SUBQ4_ITEM1", 1);
 			await dialog.Msg("WTREES22_1_SUBQ4_SUCC1");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Follow Indrea to Skauda Lot.");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("WTREES221_SUBQ_NPC2");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("WTREES221_SUBQ_NPC3");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
 			character.Quests.Complete(this.QuestId);
 		}

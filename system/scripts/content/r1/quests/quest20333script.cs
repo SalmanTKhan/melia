@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20333)]
 public class Quest20333Script : QuestScript
@@ -61,7 +62,7 @@ public class Quest20333Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/CHATHEDRAL56_MQ05_PUZZLE/F_spin022_blue/0.5/BOT");
+		ZoneServer.Instance.World.FindNPC("CHATHEDRAL56_MQ05_PUZZLE")?.PlayEffectLocal(character.Connection, "F_spin022_blue", 0.5f, "BOT");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Acquired Maven's key!");
 		await dialog.Msg("CHATHEDRAL56_MQ05_PUZZLE_ED");
 		// Func/SCR_CHATHEDRAL56_MQ05_LAYER;

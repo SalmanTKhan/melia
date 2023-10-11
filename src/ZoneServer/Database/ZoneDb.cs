@@ -49,7 +49,6 @@ namespace Melia.Zone.Database
 					return false;
 			}
 
-			this.SaveProperties("account_properties", "accountId", account.Id, account.Properties);
 			this.SaveVariables(account.Variables.Perm, "vars_accounts", "accountId", account.Id);
 			this.SaveProperties("account_properties", "accountId", account.Id, account.Properties);
 			this.SaveChatMacros(account);

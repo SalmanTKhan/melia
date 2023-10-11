@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30247)]
 public class Quest30247Script : QuestScript
@@ -44,11 +45,8 @@ public class Quest30247Script : QuestScript
 		{
 			character.Inventory.RemoveItem("CASTLE_20_1_SQ_5_ITEM", 1);
 			await dialog.Msg("NPCAin/CASTLE_20_1_OBJ_4_WALL/dead/1");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(1000);
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/CASTLE_20_1_OBJ_4/STD/1");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("CASTLE_20_1_OBJ_4_WALL");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90065)]
 public class Quest90065Script : QuestScript
@@ -45,7 +46,7 @@ public class Quest90065Script : QuestScript
 		switch (await dialog.Select("KATYN_45_3_SQ_11_ST", "KATYN_45_3_SQ_11", "I'll hand you the sculpture.", "Please wait a bit"))
 		{
 			case 1:
-				await dialog.Msg("EffectLocalNPC/KATYN_45_3_OWL3/F_light018_yellow/2/MID");
+				ZoneServer.Instance.World.FindNPC("KATYN_45_3_OWL3")?.PlayEffectLocal(character.Connection, "F_light018_yellow", 2f, "MID");
 				await dialog.Msg("KATYN_45_3_SQ_11_AG");
 				dialog.HideNPC("KATYN_45_3_AJEL4");
 				dialog.UnHideNPC("KATYN_45_3_AJEL3");

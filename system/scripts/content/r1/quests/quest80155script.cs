@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80155)]
 public class Quest80155Script : QuestScript
@@ -65,7 +66,7 @@ public class Quest80155Script : QuestScript
 
 		dialog.UnHideNPC("LIMESTONECAVE_52_4_MEDENA_2");
 		dialog.HideNPC("LIMESTONECAVE_52_4_MEDENA");
-		await dialog.Msg("EffectLocalNPC/LIMESTONECAVE_52_4_MEDENA/F_burstup024_dark/2/BOT");
+		ZoneServer.Instance.World.FindNPC("LIMESTONECAVE_52_4_MEDENA")?.PlayEffectLocal(character.Connection, "F_burstup024_dark", 2f, "BOT");
 		await dialog.Msg("LIMESTONE_52_4_MQ_7_succ");
 		character.Quests.Complete(this.QuestId);
 

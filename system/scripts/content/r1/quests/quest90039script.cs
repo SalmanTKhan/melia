@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90039)]
 public class Quest90039Script : QuestScript
@@ -68,10 +69,8 @@ public class Quest90039Script : QuestScript
 			character.Inventory.RemoveItem("KATYN_45_1_SQ_9_ITEM2", 6);
 			character.Inventory.RemoveItem("KATYN_45_1_SQ_9_ITEM1", 6);
 			dialog.HideNPC("KATYN_45_1_SQ_9_STONE");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("KATYN_45_1_SQ_9_SU");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/KATYN_45_1_OWL3/F_light018_yellow/2/MID");
+			ZoneServer.Instance.World.FindNPC("KATYN_45_1_OWL3")?.PlayEffectLocal(character.Connection, "F_light018_yellow", 2f, "MID");
 			character.Quests.Complete(this.QuestId);
 		}
 

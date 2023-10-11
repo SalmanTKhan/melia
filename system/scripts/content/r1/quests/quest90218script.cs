@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90218)]
 public class Quest90218Script : QuestScript
@@ -63,7 +64,6 @@ public class Quest90218Script : QuestScript
 		{
 			character.Inventory.RemoveItem("CORAL_44_3_SQ_80_ITEM", 15);
 			await dialog.Msg("CORAL_44_3_SQ_80_SU");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("CORAL_44_3_SQ_80_RUINS");
 			character.Quests.Complete(this.QuestId);
 		}

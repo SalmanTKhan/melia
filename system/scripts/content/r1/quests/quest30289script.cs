@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30289)]
 public class Quest30289Script : QuestScript
@@ -58,7 +59,7 @@ public class Quest30289Script : QuestScript
 			return HookResult.Skip;
 
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The Demon Treaty is now in your hands.{nl}Return to the site of the treaty seal.");
-		await dialog.Msg("EffectLocalNPC/WTREES_21_1_OBJ_4/F_pc_making_finish_red/2.0/MID");
+		ZoneServer.Instance.World.FindNPC("WTREES_21_1_OBJ_4")?.PlayEffectLocal(character.Connection, "F_pc_making_finish_red", 2.0f, "MID");
 		character.Quests.Complete(this.QuestId);
 
 		return HookResult.Break;

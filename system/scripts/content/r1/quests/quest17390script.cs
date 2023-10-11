@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(17390)]
 public class Quest17390Script : QuestScript
@@ -58,9 +59,9 @@ public class Quest17390Script : QuestScript
 		await dialog.Msg("JOB_BOCOR4_2_COMP1");
 		await Task.Delay(1000);
 		await dialog.Msg("CameraShockWaveLocal/2/99999/10/10/100/30");
-		await dialog.Msg("EffectLocalNPC/MASTER_BOCORS/F_pc_warp_circle/1/BOT");
+		ZoneServer.Instance.World.FindNPC("MASTER_BOCORS")?.PlayEffectLocal(character.Connection, "F_pc_warp_circle", 1f, "BOT");
 		await Task.Delay(1000);
-		await dialog.Msg("EffectLocalNPC/MASTER_BOCORS/I_cleric_devinestigma_force_dark/2/MID");
+		ZoneServer.Instance.World.FindNPC("MASTER_BOCORS")?.PlayEffectLocal(character.Connection, "I_cleric_devinestigma_force_dark", 2f, "MID");
 		await Task.Delay(1000);
 		await dialog.Msg("JOB_BOCOR4_2_COMP2");
 		character.Quests.Complete(this.QuestId);

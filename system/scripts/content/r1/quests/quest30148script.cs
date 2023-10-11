@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30148)]
 public class Quest30148Script : QuestScript
@@ -66,8 +67,7 @@ public class Quest30148Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PRISON_78_MQ_4_ITEM", 12);
 			await dialog.Msg("PRISON_78_MQ_4_succ");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/PRISON_78_NPC_1/I_smoke045_spread_in_red/1/MID");
+			ZoneServer.Instance.World.FindNPC("PRISON_78_NPC_1")?.PlayEffectLocal(character.Connection, "I_smoke045_spread_in_red", 1f, "MID");
 			character.Quests.Complete(this.QuestId);
 		}
 

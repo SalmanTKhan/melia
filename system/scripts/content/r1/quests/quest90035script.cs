@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90035)]
 public class Quest90035Script : QuestScript
@@ -69,14 +70,10 @@ public class Quest90035Script : QuestScript
 			character.Inventory.RemoveItem("KATYN_45_1_SQ_5_ITEM1", 4);
 			character.Inventory.RemoveItem("KATYN_45_1_SQ_5_ITEM2", 4);
 			await dialog.Msg("KATYN_45_1_SQ_5_SU");
-			character.Quests.Complete(this.QuestId);
 			// Func/SCR_KATYN_45_2_LOOK;
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/KATYN_45_1_AJEL2/ABSORB/0");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(1000);
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/KATYN_45_1_OWL1/I_smoke013_dark1/2/MID");
+			ZoneServer.Instance.World.FindNPC("KATYN_45_1_OWL1")?.PlayEffectLocal(character.Connection, "I_smoke013_dark1", 2f, "MID");
 			character.Quests.Complete(this.QuestId);
 		}
 

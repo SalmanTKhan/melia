@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20160)]
 public class Quest20160Script : QuestScript
@@ -61,7 +62,7 @@ public class Quest20160Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("ROKAS25_SQ_04_succ_01");
-		await dialog.Msg("EffectLocalNPC/ROKAS25_BINSENT/F_pc_warp_circle/1/BOT");
+		ZoneServer.Instance.World.FindNPC("ROKAS25_BINSENT")?.PlayEffectLocal(character.Connection, "F_pc_warp_circle", 1f, "BOT");
 		await Task.Delay(2000);
 		character.Quests.Complete(this.QuestId);
 

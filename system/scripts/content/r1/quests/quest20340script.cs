@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20340)]
 public class Quest20340Script : QuestScript
@@ -45,7 +46,7 @@ public class Quest20340Script : QuestScript
 		switch (await dialog.Select("CHATHEDRAL54_MQ05_PART3_select01", "CHATHEDRAL54_MQ05_PART3", "Go to test the last verification", "Take some time to prepare"))
 		{
 			case 1:
-				await dialog.Msg("EffectLocalNPC/CHATHEDRAL56_MQ_BISHOP_AFTER/F_cleric_resurrection_shot/1/BOT");
+				ZoneServer.Instance.World.FindNPC("CHATHEDRAL56_MQ_BISHOP_AFTER")?.PlayEffectLocal(character.Connection, "F_cleric_resurrection_shot", 1f, "BOT");
 				dialog.HideNPC("CHATHEDRAL56_MQ_BISHOP_AFTER");
 				await dialog.Msg("CHATHEDRAL54_MQ05_PART3_AG");
 				character.Quests.Start(this.QuestId);

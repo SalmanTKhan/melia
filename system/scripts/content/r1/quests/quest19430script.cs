@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19430)]
 public class Quest19430Script : QuestScript
@@ -64,7 +65,7 @@ public class Quest19430Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("KATYN13_ADDQUEST3_succ1");
-		await dialog.Msg("EffectLocalNPC/KATYN13_1_OWLBOSS/F_light018/1/MID");
+		ZoneServer.Instance.World.FindNPC("KATYN13_1_OWLBOSS")?.PlayEffectLocal(character.Connection, "F_light018", 1f, "MID");
 		await dialog.Msg("NPCForceEffect/KATYN13_1_OWLBOSS/1");
 		character.Quests.Complete(this.QuestId);
 

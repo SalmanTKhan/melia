@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(60051)]
 public class Quest60051Script : QuestScript
@@ -46,7 +47,7 @@ public class Quest60051Script : QuestScript
 			case 1:
 				await dialog.Msg("FadeOutIN/1000");
 				dialog.UnHideNPC("PILGRIM312_HAUBERK_01");
-				await dialog.Msg("EffectLocalNPC/PILGRIM312_HAUBERK_01/F_spread_out004_dark/0.7/BOT");
+				ZoneServer.Instance.World.FindNPC("PILGRIM312_HAUBERK_01")?.PlayEffectLocal(character.Connection, "F_spread_out004_dark", 0.7f, "BOT");
 				await Task.Delay(3000);
 				// Func/PILGRIM312_SQ_01_01_ADD;
 				character.Quests.Start(this.QuestId);

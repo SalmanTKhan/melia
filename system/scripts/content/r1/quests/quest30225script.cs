@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30225)]
 public class Quest30225Script : QuestScript
@@ -52,7 +53,7 @@ public class Quest30225Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/CASTLE_20_3_OBJ_7/F_light089_green/0.8/BOT");
+		ZoneServer.Instance.World.FindNPC("CASTLE_20_3_OBJ_7")?.PlayEffectLocal(character.Connection, "F_light089_green", 0.8f, "BOT");
 		await Task.Delay(3000);
 		// Func/SCR_CASTLE_20_3_SQ_CLUE_RUN/3;
 		character.Quests.Complete(this.QuestId);

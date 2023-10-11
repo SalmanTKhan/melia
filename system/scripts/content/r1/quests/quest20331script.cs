@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20331)]
 public class Quest20331Script : QuestScript
@@ -44,7 +45,7 @@ public class Quest20331Script : QuestScript
 		{
 			case 1:
 				dialog.HideNPC("CHATHEDRAL56_MQ_BISHOP");
-				await dialog.Msg("EffectLocalNPC/CHATHEDRAL56_MQ_BISHOP/F_buff_basic025_white_line_2/1/BOT");
+				ZoneServer.Instance.World.FindNPC("CHATHEDRAL56_MQ_BISHOP")?.PlayEffectLocal(character.Connection, "F_buff_basic025_white_line_2", 1f, "BOT");
 				character.Quests.Start(this.QuestId);
 				break;
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90111)]
 public class Quest90111Script : QuestScript
@@ -66,7 +67,6 @@ public class Quest90111Script : QuestScript
 		{
 			character.Inventory.RemoveItem("MAPLE_25_1_SQ_40_ITEM2", 3);
 			dialog.UnHideNPC("MAPLE_25_1_SQ_40_DOG");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("MAPLE_25_1_SQ_40_SU");
 			character.Quests.Complete(this.QuestId);
 		}

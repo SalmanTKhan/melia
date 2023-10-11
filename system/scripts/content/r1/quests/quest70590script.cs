@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70590)]
 public class Quest70590Script : QuestScript
@@ -60,8 +61,8 @@ public class Quest70590Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("BalloonText/PILGRIM415_SQ_11_succ/3");
-		await dialog.Msg("EffectLocalNPC/PILGRIM415_SQ_11/F_spread_out033_ground_light/1/BOT");
-		await dialog.Msg("EffectLocalNPC/PILGRIM415_SQ_11/F_light094_blue/2/BOT");
+		ZoneServer.Instance.World.FindNPC("PILGRIM415_SQ_11")?.PlayEffectLocal(character.Connection, "F_spread_out033_ground_light", 1f, "BOT");
+		ZoneServer.Instance.World.FindNPC("PILGRIM415_SQ_11")?.PlayEffectLocal(character.Connection, "F_light094_blue", 2f, "BOT");
 		character.Quests.Complete(this.QuestId);
 
 		return HookResult.Break;

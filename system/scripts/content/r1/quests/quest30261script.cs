@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30261)]
 public class Quest30261Script : QuestScript
@@ -42,8 +43,8 @@ public class Quest30261Script : QuestScript
 
 		await dialog.Msg("CASTLE_20_4_SQ_8_succ");
 		character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("CASTLE_20_4_SQ_8_SUC01");
-					await dialog.Msg("왕실의 사연에 대해 물어본다");
+		await dialog.Msg("CASTLE_20_4_SQ_8_SUC01");
+		await dialog.Msg("왕실의 사연에 대해 물어본다");
 		await dialog.Msg("CASTLE_20_4_SQ_8_SUC02");
 		character.Quests.Complete(this.QuestId);
 

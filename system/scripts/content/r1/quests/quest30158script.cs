@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30158)]
 public class Quest30158Script : QuestScript
@@ -56,7 +57,6 @@ public class Quest30158Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PRISON_79_MQ_5_ITEM", 5);
 			dialog.UnHideNPC("PRISON_79_OBJ_3_EFFECT");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "You have lit the Blue Lamp{nl}Look for the Red Lamp");
 			character.Quests.Complete(this.QuestId);
 		}

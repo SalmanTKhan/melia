@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90152)]
 public class Quest90152Script : QuestScript
@@ -68,13 +69,9 @@ public class Quest90152Script : QuestScript
 			character.Inventory.RemoveItem("F_DCAPITAL_20_6_SQ_55_ITEM1", 8);
 			character.Inventory.RemoveItem("F_DCAPITAL_20_6_SQ_55_ITEM2", 4);
 			await dialog.Msg("F_DCAPITAL_20_6_SQ_55_SU");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("DCAPITAL_20_6_SQ_55");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/DCAPITAL_20_6_REDA/atk/0");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/DCAPITAL_20_6_REDA/I_light013_spark_yellow/2/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("DCAPITAL_20_6_REDA")?.PlayEffectLocal(character.Connection, "I_light013_spark_yellow", 2f, "BOT");
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Kupole Leda has granted enhanced the divine energy detector orb.");
 			character.Quests.Complete(this.QuestId);
 		}

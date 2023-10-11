@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30265)]
 public class Quest30265Script : QuestScript
@@ -62,7 +63,6 @@ public class Quest30265Script : QuestScript
 		{
 			character.Inventory.RemoveItem("KATYN_18_RE_SQ_1_ITEM", 6);
 			await dialog.Msg("KATYN_18_RE_SQ_1_succ");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("KATYN_18_RE_SQ_OBJ_1");
 			character.Quests.Complete(this.QuestId);
 		}

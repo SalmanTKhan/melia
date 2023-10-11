@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30144)]
 public class Quest30144Script : QuestScript
@@ -67,9 +68,7 @@ public class Quest30144Script : QuestScript
 			character.Inventory.RemoveItem("JOB_RUNECASTER_6_1_ITEM_3", 15);
 			character.Inventory.RemoveItem("JOB_RUNECASTER_6_1_ITEM_4", 5);
 			await dialog.Msg("JOB_RUNECASTER_6_1_succ1");
-			character.Quests.Complete(this.QuestId);
 			// Func/SCR_JOB_RUNECASTER_6_1_SUCC_RUN;
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("JOB_RUNECASTER_6_1_succ2");
 			character.Quests.Complete(this.QuestId);
 		}

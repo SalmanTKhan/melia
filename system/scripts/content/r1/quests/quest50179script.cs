@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50179)]
 public class Quest50179Script : QuestScript
@@ -56,9 +57,9 @@ public class Quest50179Script : QuestScript
 
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "You destroyed the cursed statue!");
 		// Func/TABLE73_SUBQ1_COMPLETE;
-		await dialog.Msg("EffectLocalNPC/TABLE73_SUB_ARTIFACT2/F_explosion098_dark_blue/1/BOT");
+		ZoneServer.Instance.World.FindNPC("TABLE73_SUB_ARTIFACT2")?.PlayEffectLocal(character.Connection, "F_explosion098_dark_blue", 1f, "BOT");
 		await dialog.Msg("NPCAin/TABLE73_SUB_ARTIFACT2/DEAD/0");
-		await dialog.Msg("EffectLocalNPC/TABLELAND73_SUBQ4_DEVICE/F_explosion098_dark_blue/1/BOT");
+		ZoneServer.Instance.World.FindNPC("TABLELAND73_SUBQ4_DEVICE")?.PlayEffectLocal(character.Connection, "F_explosion098_dark_blue", 1f, "BOT");
 		await dialog.Msg("NPCAin/TABLELAND73_SUBQ4_DEVICE/DEAD/0");
 		dialog.HideNPC("TABLE73_SUB_ARTIFACT2");
 		dialog.HideNPC("TABLELAND73_SUBQ4_DEVICE");

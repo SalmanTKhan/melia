@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50071)]
 public class Quest50071Script : QuestScript
@@ -45,7 +46,7 @@ public class Quest50071Script : QuestScript
 		{
 			case 1:
 				await dialog.Msg("UNDER_67_SQ030_startnpc02");
-				await dialog.Msg("EffectLocalNPC/UNDER67_SQ030/F_buff_basic025_white_line/1/BOT");
+				ZoneServer.Instance.World.FindNPC("UNDER67_SQ030")?.PlayEffectLocal(character.Connection, "F_buff_basic025_white_line", 1f, "BOT");
 				dialog.HideNPC("UNDER67_SQ030");
 				character.Quests.Start(this.QuestId);
 				break;

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50388)]
 public class Quest50388Script : QuestScript
@@ -65,9 +66,8 @@ public class Quest50388Script : QuestScript
 			character.Inventory.RemoveItem("NICOPOLIS_812_SUBQ3_ITEM3", 1);
 			character.Inventory.RemoveItem("NICOPOLIS_812_SUBQ3_ITEM4", 1);
 			character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("NICOPOLIS812_SQ02_SUCC_MSG1");
-					await dialog.Msg("조사를 위해 입주 기록지를 달라고 한다");
-			character.Quests.Complete(this.QuestId);
+			await dialog.Msg("NICOPOLIS812_SQ02_SUCC_MSG1");
+			await dialog.Msg("조사를 위해 입주 기록지를 달라고 한다");
 			await dialog.Msg("NICOPOLIS812_SQ02_SUCC_2");
 			character.Quests.Complete(this.QuestId);
 		}

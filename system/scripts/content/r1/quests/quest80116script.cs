@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80116)]
 public class Quest80116Script : QuestScript
@@ -45,8 +46,8 @@ public class Quest80116Script : QuestScript
 		{
 			case 1:
 				character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("LIMESTONE_52_1_MQ_ST02");
-					await dialog.Msg("마법진을 복구하는 방법을 묻는다");
+				await dialog.Msg("LIMESTONE_52_1_MQ_ST02");
+				await dialog.Msg("마법진을 복구하는 방법을 묻는다");
 				await dialog.Msg("LIMESTONE_52_1_MQ_4_AG");
 				character.Quests.Start(this.QuestId);
 				break;
@@ -66,7 +67,6 @@ public class Quest80116Script : QuestScript
 		{
 			character.Inventory.RemoveItem("LIMESTONE_52_1_MQ_4_CRYSTAL", 8);
 			dialog.HideNPC("LIMSTONE_52_1_CRYSTAL_PIECE");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("LIMESTONE_52_1_MQ_4_succ");
 			character.Quests.Complete(this.QuestId);
 		}

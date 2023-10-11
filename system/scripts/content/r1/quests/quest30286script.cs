@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30286)]
 public class Quest30286Script : QuestScript
@@ -54,7 +55,7 @@ public class Quest30286Script : QuestScript
 
 		// Func/SCR_WTREES_21_1_SQ_3_SUCC;
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The magic barrier was disabled and the treaty revealed itself.{nl}To obtain the demon treaty, collect the Impure Blood of Yudejan.");
-		await dialog.Msg("EffectLocalNPC/WTREES_21_1_OBJ_2/F_spread_in023_blue/0.7/BOT");
+		ZoneServer.Instance.World.FindNPC("WTREES_21_1_OBJ_2")?.PlayEffectLocal(character.Connection, "F_spread_in023_blue", 0.7f, "BOT");
 		dialog.HideNPC("WTREES_21_1_OBJ_2_EFFECT");
 		dialog.UnHideNPC("WTREES_21_1_OBJ_4");
 		dialog.UnHideNPC("WTREES_21_1_OBJ_7");

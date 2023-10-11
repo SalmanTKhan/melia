@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(17020)]
 public class Quest17020Script : QuestScript
@@ -61,7 +62,7 @@ public class Quest17020Script : QuestScript
 
 		await dialog.Msg("FTOWER44_SQ_04_COMP");
 		await dialog.Msg("NPCChat/FTOWER44_SQ_04/풀어줘서 고맙다.");
-		await dialog.Msg("EffectLocalNPC/FTOWER44_SQ_04/F_archer_scarecrow_shot_smoke/2/MID");
+		ZoneServer.Instance.World.FindNPC("FTOWER44_SQ_04")?.PlayEffectLocal(character.Connection, "F_archer_scarecrow_shot_smoke", 2f, "MID");
 		dialog.HideNPC("FTOWER44_SQ_04");
 		character.Quests.Complete(this.QuestId);
 

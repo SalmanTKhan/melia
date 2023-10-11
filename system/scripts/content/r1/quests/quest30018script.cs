@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30018)]
 public class Quest30018Script : QuestScript
@@ -65,7 +66,7 @@ public class Quest30018Script : QuestScript
 
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Exclaimation, "You sense ominous energy from the pot!{nl}Return to Kupole Vita and inform her about the situation", 5);
 		await dialog.Msg("CameraShockWaveLocal/2/99999/10/2/200/0");
-		await dialog.Msg("EffectLocalNPC/CATACOMB_38_1_OBJ_01/F_wizard_attackground_shot_smoke/1/BOT");
+		ZoneServer.Instance.World.FindNPC("CATACOMB_38_1_OBJ_01")?.PlayEffectLocal(character.Connection, "F_wizard_attackground_shot_smoke", 1f, "BOT");
 		character.Quests.Complete(this.QuestId);
 
 		return HookResult.Break;

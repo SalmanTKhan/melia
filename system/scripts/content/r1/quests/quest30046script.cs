@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30046)]
 public class Quest30046Script : QuestScript
@@ -64,17 +65,11 @@ public class Quest30046Script : QuestScript
 		{
 			character.Inventory.RemoveItem("JOB_PARDONER_6_1_ITEM", 1);
 			await dialog.Msg("JOB_PARDONER_6_1_succ");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PARDONER_6_1_NOTE01");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PARDONER_6_1_NOTE02");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PARDONER_6_1_NOTE03");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PARDONER_6_1_NOTE04");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PARDONER_6_1_NOTE05");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PARDONER_6_1_NOTE06");
 			character.Quests.Complete(this.QuestId);
 		}

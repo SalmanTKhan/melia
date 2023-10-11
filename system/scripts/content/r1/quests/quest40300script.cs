@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40300)]
 public class Quest40300Script : QuestScript
@@ -52,7 +53,7 @@ public class Quest40300Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/FARM47_DRUM02_D/I_smoke005_dark/1/BOT");
+		ZoneServer.Instance.World.FindNPC("FARM47_DRUM02_D")?.PlayEffectLocal(character.Connection, "I_smoke005_dark", 1f, "BOT");
 		dialog.HideNPC("FARM47_DRUM02_D");
 		await dialog.Msg("FadeOutIN/2000");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "As the cask opened, the lower part of the small sculpture has appeared");

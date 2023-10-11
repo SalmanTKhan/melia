@@ -1477,9 +1477,9 @@ namespace Melia.Zone.World.Actors.Characters
 		/// Plays effect for the character.
 		/// </summary>
 		/// <param name="packetString"></param>
-		public void PlayEffect(string packetString, float scale = 1, byte b1 = 1, string heightOffset = "BOT", byte b2 = 0)
+		public void PlayEffectLocal(string packetString, float scale = 1, string heightOffset = "BOT")
 		{
-			Send.ZC_NORMAL.PlayEffect(this, b1, heightOffset, b2, scale, packetString, 0, 0);
+			this.PlayEffectLocal(this.Connection, packetString, scale, heightOffset);
 		}
 
 		/// <summary>

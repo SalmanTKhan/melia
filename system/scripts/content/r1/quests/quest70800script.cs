@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70800)]
 public class Quest70800Script : QuestScript
@@ -62,13 +63,9 @@ public class Quest70800Script : QuestScript
 		{
 			character.Inventory.RemoveItem("WHITETREES23_1_SQ01_ITEM", 7);
 			await dialog.Msg("NPCAin/WHITETREES231_SQ_01/std/1");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("WHITETREES231_SQ_01_succ");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("WHITETREES231_SQ_01");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "There is something suspicious about the mysterious hunter.{nl}Go and ask him about what really happened.");
 			character.Quests.Complete(this.QuestId);
 		}

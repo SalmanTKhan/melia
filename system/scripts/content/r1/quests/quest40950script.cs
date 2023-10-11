@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40950)]
 public class Quest40950Script : QuestScript
@@ -54,7 +55,7 @@ public class Quest40950Script : QuestScript
 			return HookResult.Skip;
 
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "As you brushed off black powders, you can see the engraved letters!");
-		await dialog.Msg("EffectLocalNPC/ROKAS_36_1_PILLA01/F_ground139_light_green/1/BOT");
+		ZoneServer.Instance.World.FindNPC("ROKAS_36_1_PILLA01")?.PlayEffectLocal(character.Connection, "F_ground139_light_green", 1f, "BOT");
 		await Task.Delay(2000);
 		await dialog.Msg("ROKAS_36_1_SQ_010_COMP");
 		character.Quests.Complete(this.QuestId);

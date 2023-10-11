@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(41835)]
 public class Quest41835Script : QuestScript
@@ -64,11 +65,8 @@ public class Quest41835Script : QuestScript
 		{
 			character.Inventory.RemoveItem("F_3CMLAKE_27_3_SQ_3_ITEM", 9);
 			await dialog.Msg("F_3CMLAKE_27_3_SQ_3_DLG4");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("F_3CMLAKE_27_3_SQ_3_NPC1");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("F_3CMLAKE_27_3_SQ_2_NPC1");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("F_3CMLAKE_27_3_SQ_2_NPC3");
 			character.Quests.Complete(this.QuestId);
 		}

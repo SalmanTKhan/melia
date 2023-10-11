@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20284)]
 public class Quest20284Script : QuestScript
@@ -67,7 +68,6 @@ public class Quest20284Script : QuestScript
 		{
 			character.Inventory.RemoveItem("HUEVILLAGE_58_3_MQ02_ITEM1", 1);
 			await dialog.Msg("HUEVILLAGE_58_3_MQ02_succ01");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Find the Village Headman");
 			character.Quests.Complete(this.QuestId);
 		}

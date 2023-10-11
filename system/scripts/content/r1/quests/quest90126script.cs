@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90126)]
 public class Quest90126Script : QuestScript
@@ -56,8 +57,8 @@ public class Quest90126Script : QuestScript
 			return HookResult.Skip;
 
 		character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("MAPLE_25_2_SQ_80_SU");
-					await dialog.Msg("진심으로 위로해준다");
+		await dialog.Msg("MAPLE_25_2_SQ_80_SU");
+		await dialog.Msg("진심으로 위로해준다");
 		await dialog.Msg("MAPLE_25_2_SQ_80_SU_2");
 		character.Quests.Complete(this.QuestId);
 

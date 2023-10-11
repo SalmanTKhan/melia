@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40890)]
 public class Quest40890Script : QuestScript
@@ -73,7 +74,6 @@ public class Quest40890Script : QuestScript
 		{
 			character.Inventory.RemoveItem("FLASH_58_SQ_040_ITEM_1", 1);
 			await dialog.Msg("FLASH_58_SQ_040_COMP");
-			character.Quests.Complete(this.QuestId);
 			// Func/FLASH_58_SQ_050_SVTRIGAILA_SHIELD_OFF;
 			character.Quests.Complete(this.QuestId);
 		}

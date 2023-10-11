@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30214)]
 public class Quest30214Script : QuestScript
@@ -45,7 +46,7 @@ public class Quest30214Script : QuestScript
 		switch (await dialog.Select("ORCHARD_34_3_SQ_10_select", "ORCHARD_34_3_SQ_10", "Give the Antidote and ingredients", "Say that you think it will be fine to eat seperately"))
 		{
 			case 1:
-				await dialog.Msg("EffectLocalNPC/ORCHARD_34_3_SQ_NPC_3/F_spread_in002_green/0.5/MID");
+				ZoneServer.Instance.World.FindNPC("ORCHARD_34_3_SQ_NPC_3")?.PlayEffectLocal(character.Connection, "F_spread_in002_green", 0.5f, "MID");
 				await dialog.Msg("ORCHARD_34_3_SQ_10_agree");
 				character.Quests.Start(this.QuestId);
 				break;

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40900)]
 public class Quest40900Script : QuestScript
@@ -63,8 +64,8 @@ public class Quest40900Script : QuestScript
 
 		await dialog.Msg("CameraShockWaveLocal/2/99999/3/3/200/2");
 		// Func/FLASH_58_SQ_050_PC_KNOCKBACK;
-		await dialog.Msg("EffectLocalNPC/FLASH_SOUL_COLLECTOR_S2_D/F_burstup002_dark/2/BOT");
-		await dialog.Msg("EffectLocalNPC/FLASH_SOUL_COLLECTOR_S2_D/F_buff_explosion_burst/2/BOT");
+		ZoneServer.Instance.World.FindNPC("FLASH_SOUL_COLLECTOR_S2_D")?.PlayEffectLocal(character.Connection, "F_burstup002_dark", 2f, "BOT");
+		ZoneServer.Instance.World.FindNPC("FLASH_SOUL_COLLECTOR_S2_D")?.PlayEffectLocal(character.Connection, "F_buff_explosion_burst", 2f, "BOT");
 		dialog.HideNPC("FLASH_SOUL_COLLECTOR_S2_D");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The barrier stone has been destroyed due to a great explosion!");
 		character.Quests.Complete(this.QuestId);

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70582)]
 public class Quest70582Script : QuestScript
@@ -59,9 +60,8 @@ public class Quest70582Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PILGRIM41_5_SQ02_2_ITEM", 1);
 			character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("PILGRIM415_SQ_03_succ1");
-					await dialog.Msg("자신 역시 수도사 스텔라의 부탁을 받았다고 한다");
-			character.Quests.Complete(this.QuestId);
+			await dialog.Msg("PILGRIM415_SQ_03_succ1");
+			await dialog.Msg("자신 역시 수도사 스텔라의 부탁을 받았다고 한다");
 			await dialog.Msg("PILGRIM415_SQ_03_succ2");
 			character.Quests.Complete(this.QuestId);
 		}

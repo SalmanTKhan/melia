@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80082)]
 public class Quest80082Script : QuestScript
@@ -68,7 +69,6 @@ public class Quest80082Script : QuestScript
 		{
 			character.Inventory.RemoveItem("ABBEY_35_3_EVIL_BLOOD", 9);
 			await dialog.Msg("ABBEY_35_3_SQ_5_succ");
-			character.Quests.Complete(this.QuestId);
 			// Func/ABBEY_35_3_SQ_5_COMP;
 			character.Quests.Complete(this.QuestId);
 		}

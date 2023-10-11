@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(91002)]
 public class Quest91002Script : QuestScript
@@ -53,6 +54,7 @@ public class Quest91002Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
+		//SCR_ASSISTOR_TUTO_01_CLEAR_TX
 		// Func/SCR_AQ_TEAMCLEAR;
 		await dialog.Msg("ASSISTOR_TUTO_DLG_02");
 		dialog.ShowHelp("TUTO_ASSISTOR_01");

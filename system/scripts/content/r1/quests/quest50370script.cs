@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50370)]
 public class Quest50370Script : QuestScript
@@ -56,13 +57,9 @@ public class Quest50370Script : QuestScript
 		{
 			character.Inventory.RemoveItem("WTREES22_1_SUBQ8_ITEM1", 1);
 			await dialog.Msg("WTREES22_1_SUBQ9_1_SUCC1");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Follow Indrea to Dainuoti Lot.");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("WTREES221_SUBQ_NPC4");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("WTREES221_SUBQ_NPC5");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
 			character.Quests.Complete(this.QuestId);
 		}

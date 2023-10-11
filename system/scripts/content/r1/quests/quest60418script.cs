@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(60418)]
 public class Quest60418Script : QuestScript
@@ -47,11 +48,8 @@ public class Quest60418Script : QuestScript
 		{
 			character.Inventory.RemoveItem("CASTLE96_MQ_7_ITEM", 15);
 			await dialog.Msg("CASTLE96_MQ_8_3");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/3000");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("CASTLE96_MQ_NERGUI_NPC");
-			character.Quests.Complete(this.QuestId);
 			// Func/CASTLE96_FOLLOWNPC_LIB_CANCEL/0;
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19590)]
 public class Quest19590Script : QuestScript
@@ -58,13 +59,9 @@ public class Quest19590Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PILGRIM47_ITEM_01", 1);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Found the Crystal Core and destroyed it!{nl}The corruption will now disappear!");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(500);
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("PILGRIM47_CURSE01");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("PILGRIM47_CRYST05");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("PILGRIM47_CURSE02");
 			character.Quests.Complete(this.QuestId);
 		}

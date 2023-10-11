@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50285)]
 public class Quest50285Script : QuestScript
@@ -63,7 +64,6 @@ public class Quest50285Script : QuestScript
 		{
 			character.Inventory.RemoveItem("CHATHEDRAL54_HIDDENQ1_ITEM1", 6);
 			await dialog.Msg("CHATHEDRAL54_HQ1_succ1");
-			character.Quests.Complete(this.QuestId);
 			// Func/CHATHEDRAL54_HIDDENQ1_COMP;
 			character.Quests.Complete(this.QuestId);
 		}

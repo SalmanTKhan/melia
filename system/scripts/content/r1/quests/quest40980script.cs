@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40980)]
 public class Quest40980Script : QuestScript
@@ -53,7 +54,7 @@ public class Quest40980Script : QuestScript
 
 		// Func/ROKAS_36_1_SQ_040_COMP_FUNC;
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Due to shining moss, you are able to read what the writings say!");
-		await dialog.Msg("EffectLocalNPC/ROKAS_36_1_PILLA04/F_ground139_light_orange/1/BOT");
+		ZoneServer.Instance.World.FindNPC("ROKAS_36_1_PILLA04")?.PlayEffectLocal(character.Connection, "F_ground139_light_orange", 1f, "BOT");
 		await Task.Delay(2000);
 		await dialog.Msg("ROKAS_36_1_SQ_040_COMP");
 		character.Quests.Complete(this.QuestId);

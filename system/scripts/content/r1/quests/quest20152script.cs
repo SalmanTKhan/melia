@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20152)]
 public class Quest20152Script : QuestScript
@@ -69,11 +70,8 @@ public class Quest20152Script : QuestScript
 		{
 			character.Inventory.RemoveItem("ROKAS24_SQ_03_ITEM", 8);
 			await dialog.Msg("ROKAS24_SQ_03_succ01");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/ROKAS_24_ARCHAEOLOGIST/F_ground095_circle/1/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("ROKAS_24_ARCHAEOLOGIST")?.PlayEffectLocal(character.Connection, "F_ground095_circle", 1f, "BOT");
 			await dialog.Msg("FadeOutIN/1000");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("ROKAS_24_ARCHAEOLOGIST");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40820)]
 public class Quest40820Script : QuestScript
@@ -61,7 +62,7 @@ public class Quest40820Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/FLASH_29_1_DETECTOR01/I_spread_out001_light_violet2/2/MID");
+		ZoneServer.Instance.World.FindNPC("FLASH_29_1_DETECTOR01")?.PlayEffectLocal(character.Connection, "I_spread_out001_light_violet2", 2f, "MID");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The detector starts to activate!");
 		character.Quests.Complete(this.QuestId);
 

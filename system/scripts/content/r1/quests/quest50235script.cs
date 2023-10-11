@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50235)]
 public class Quest50235Script : QuestScript
@@ -57,7 +58,7 @@ public class Quest50235Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/BRACKEN433_ARROW_NPC/F_pc_making_finish_white/1/BOT");
+		ZoneServer.Instance.World.FindNPC("BRACKEN433_ARROW_NPC")?.PlayEffectLocal(character.Connection, "F_pc_making_finish_white", 1f, "BOT");
 		dialog.HideNPC("BRACKEN433_ARROW_NPC");
 		character.Quests.Complete(this.QuestId);
 

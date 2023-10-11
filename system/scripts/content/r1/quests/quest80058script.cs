@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80058)]
 public class Quest80058Script : QuestScript
@@ -58,9 +59,9 @@ public class Quest80058Script : QuestScript
 
 		await dialog.Msg("TABLELAND_11_1_SQ_07_succ");
 		await dialog.Msg("NPCAin/TABLELAND_11_1_SQ_07_ENDNPC/absorb/0");
-		await dialog.Msg("EffectLocalNPC/TABLELAND_11_1_SQ_07_ENDNPC/E_wizard_shoggoth_force/1/MID");
+		ZoneServer.Instance.World.FindNPC("TABLELAND_11_1_SQ_07_ENDNPC")?.PlayEffectLocal(character.Connection, "E_wizard_shoggoth_force", 1f, "MID");
 		await Task.Delay(1000);
-		await dialog.Msg("EffectLocalNPC/TABLELAND_11_1_DARK_WALL/F_smoke019_dark/1/BOT");
+		ZoneServer.Instance.World.FindNPC("TABLELAND_11_1_DARK_WALL")?.PlayEffectLocal(character.Connection, "F_smoke019_dark", 1f, "BOT");
 		dialog.HideNPC("TABLELAND_11_1_DARK_WALL");
 		dialog.HideNPC("TABLELAND_11_1_SQ_07_BACK");
 		await Task.Delay(1000);

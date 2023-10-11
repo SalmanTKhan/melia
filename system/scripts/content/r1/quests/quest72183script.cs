@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(72183)]
 public class Quest72183Script : QuestScript
@@ -60,6 +61,7 @@ public class Quest72183Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
+		//SCR_D_STARTOWER_89_MQ_30_TRACK_END
 		// Func/SCR_STARTOWER_DEFENCE_DEVICE_UNLOCK_EFFECT/0;
 		// Func/SCR_D_STARTOWER_89_MQ_30_AFTER_TRACK_PLAY;
 		character.Quests.Complete(this.QuestId);

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20137)]
 public class Quest20137Script : QuestScript
@@ -55,7 +56,7 @@ public class Quest20137Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("ROKAS25_REXIPHER6_03");
-		await dialog.Msg("EffectLocalNPC/ROKAS25_ZACHARIEL32/I_force003_green/1/BOT");
+		ZoneServer.Instance.World.FindNPC("ROKAS25_ZACHARIEL32")?.PlayEffectLocal(character.Connection, "I_force003_green", 1f, "BOT");
 		dialog.UnHideNPC("ROKAS25_ZACHARIEL32");
 		character.Quests.Complete(this.QuestId);
 

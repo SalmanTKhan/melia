@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19880)]
 public class Quest19880Script : QuestScript
@@ -65,7 +66,7 @@ public class Quest19880Script : QuestScript
 		await dialog.Msg("PILGRIM52_SQ_020_COMP");
 		await Task.Delay(3000);
 		// Func/SCR_PILGRIM52_PC_DRINK_ANI;
-		await dialog.Msg("EffectLocal/F_light003_violet");
+		character.PlayEffectLocal("F_light003_violet");
 		await dialog.Msg("PILGRIM52_SQ_020_COMP_2");
 		// Func/SCR_PILGRIM52_SQ_020_ASIDE;
 		character.Quests.Complete(this.QuestId);

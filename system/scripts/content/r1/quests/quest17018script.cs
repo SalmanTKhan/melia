@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(17018)]
 public class Quest17018Script : QuestScript
@@ -48,7 +49,7 @@ public class Quest17018Script : QuestScript
 		{
 			case 1:
 				await dialog.Msg("FTOWER44_SQ_02_AG");
-				await dialog.Msg("EffectLocalNPC/FTOWER44_SQ_01/F_pc_warp_circle/0.5/BOT");
+				ZoneServer.Instance.World.FindNPC("FTOWER44_SQ_01")?.PlayEffectLocal(character.Connection, "F_pc_warp_circle", 0.5f, "BOT");
 				dialog.HideNPC("FTOWER44_SQ_01");
 				character.Quests.Start(this.QuestId);
 				break;

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(8274)]
 public class Quest8274Script : QuestScript
@@ -56,7 +57,7 @@ public class Quest8274Script : QuestScript
 			return HookResult.Skip;
 
 		await Task.Delay(500);
-		await dialog.Msg("EffectLocalNPC/KATYN14_SUB_WOLF/F_pc_warp_circle/1/BOT");
+		ZoneServer.Instance.World.FindNPC("KATYN14_SUB_WOLF")?.PlayEffectLocal(character.Connection, "F_pc_warp_circle", 1f, "BOT");
 		dialog.HideNPC("KATYN14_SUB_WOLF");
 		await dialog.Msg("FadeOutIN/500");
 		dialog.HideNPC("KATYN14_SUB_08_STONE");

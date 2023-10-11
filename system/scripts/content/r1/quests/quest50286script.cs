@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50286)]
 public class Quest50286Script : QuestScript
@@ -60,13 +61,9 @@ public class Quest50286Script : QuestScript
 			character.Inventory.RemoveItem("SIAULIAI462_HIDDENQ1_ITEM1", 10);
 			character.Inventory.RemoveItem("SIAULIAI462_HIDDENQ1_ITEM2", 6);
 			await dialog.Msg("SIAULIAI462_HQ1_succ3");
-			character.Quests.Complete(this.QuestId);
 			// Func/SIAULIAI462_HIDDENQ1_COMP;
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("BalloonText/SIAULIAI462_HQ1_INFOR1/3");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1500");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("SIAULIAI462_HQ1_succ2");
 			character.Quests.Complete(this.QuestId);
 		}

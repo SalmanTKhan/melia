@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30210)]
 public class Quest30210Script : QuestScript
@@ -53,7 +54,7 @@ public class Quest30210Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/ORCHARD_34_3_SQ_OBJ_6/F_ground020/1.0/BOT");
+		ZoneServer.Instance.World.FindNPC("ORCHARD_34_3_SQ_OBJ_6")?.PlayEffectLocal(character.Connection, "F_ground020", 1.0f, "BOT");
 		character.Quests.Complete(this.QuestId);
 
 		return HookResult.Break;

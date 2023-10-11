@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50157)]
 public class Quest50157Script : QuestScript
@@ -63,8 +64,8 @@ public class Quest50157Script : QuestScript
 
 		await dialog.Msg("TABLELAND_71_SQ1_succ01");
 		character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("TABLE71_SELECTDIALOG1");
-					await dialog.Msg("맞다고 한다");
+		await dialog.Msg("TABLE71_SELECTDIALOG1");
+		await dialog.Msg("맞다고 한다");
 		await dialog.Msg("TABLELAND_71_SQ1_succ02");
 		character.Quests.Complete(this.QuestId);
 

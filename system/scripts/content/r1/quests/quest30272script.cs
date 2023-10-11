@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30272)]
 public class Quest30272Script : QuestScript
@@ -47,7 +48,7 @@ public class Quest30272Script : QuestScript
 		switch (await dialog.Select("KATYN_18_RE_SQ_8_select", "KATYN_18_RE_SQ_8", "Piece of cake. Count on me.", "Pointless."))
 		{
 			case 1:
-				await dialog.Msg("EffectLocalNPC/KATYN_18_RE_SQ_NPC_3/F_light077_yellow/1.0/MID");
+				ZoneServer.Instance.World.FindNPC("KATYN_18_RE_SQ_NPC_3")?.PlayEffectLocal(character.Connection, "F_light077_yellow", 1.0f, "MID");
 				await dialog.Msg("KATYN_18_RE_SQ_8_agree");
 				dialog.HideNPC("KATYN_18_RE_SQ_NPC_3");
 				await dialog.Msg("FadeOutIN/1000");

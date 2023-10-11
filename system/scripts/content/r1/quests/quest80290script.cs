@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80290)]
 public class Quest80290Script : QuestScript
@@ -66,8 +67,7 @@ public class Quest80290Script : QuestScript
 		{
 			character.Inventory.RemoveItem("F_3CMLAKE87_MQ6_ITEM", 4);
 			await dialog.Msg("F_3CMLAKE_87_MQ_06_SU");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/F_3CMLAKE_87_MQ_05_NPC/F_light015_violet2/1/TOP");
+			ZoneServer.Instance.World.FindNPC("F_3CMLAKE_87_MQ_05_NPC")?.PlayEffectLocal(character.Connection, "F_light015_violet2", 1f, "TOP");
 			character.Quests.Complete(this.QuestId);
 		}
 

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(41100)]
 public class Quest41100Script : QuestScript
@@ -66,10 +67,8 @@ public class Quest41100Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PILGRIM_36_2_SQ_100_ITEM_1", 19);
 			await dialog.Msg("PILGRIM_36_2_SQ_100_COMP");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(1000);
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/PILGRIM_36_2_GEDAS/F_circle004_rize/8/MID");
+			ZoneServer.Instance.World.FindNPC("PILGRIM_36_2_GEDAS")?.PlayEffectLocal(character.Connection, "F_circle004_rize", 8f, "MID");
 			character.Quests.Complete(this.QuestId);
 		}
 

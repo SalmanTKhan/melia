@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70128)]
 public class Quest70128Script : QuestScript
@@ -62,7 +63,6 @@ public class Quest70128Script : QuestScript
 		{
 			character.Inventory.RemoveItem("THORN39_1_SQ01_ITEM", 8);
 			await dialog.Msg("THORN39_1_SQ_01_3");
-			character.Quests.Complete(this.QuestId);
 			// Func/SCR_THORN391_COMPANION_RETURN;
 			character.Quests.Complete(this.QuestId);
 		}

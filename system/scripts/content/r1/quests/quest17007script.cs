@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(17007)]
 public class Quest17007Script : QuestScript
@@ -62,7 +63,7 @@ public class Quest17007Script : QuestScript
 
 		await dialog.Msg("FTOWER42_SQ_01_COMP");
 		await dialog.Msg("NPCChat/FTOWER42_SQ_01/이제 자유로와 질 수 있어..");
-		await dialog.Msg("EffectLocalNPC/FTOWER42_SQ_01/F_archer_scarecrow_shot_smoke/2/BOT");
+		ZoneServer.Instance.World.FindNPC("FTOWER42_SQ_01")?.PlayEffectLocal(character.Connection, "F_archer_scarecrow_shot_smoke", 2f, "BOT");
 		dialog.HideNPC("FTOWER42_SQ_01");
 		character.Quests.Complete(this.QuestId);
 

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19930)]
 public class Quest19930Script : QuestScript
@@ -59,21 +60,13 @@ public class Quest19930Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PILGRIM52_ITEM_16", 1);
 			await dialog.Msg("PCAin/UNLOCK/0");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(100);
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/PILGRIM52_BAG/OPEN/1");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(4000);
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/PILGRIM52_BAG/OPENSTD/1");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(1000);
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "You've found an old handkerchief in the chest");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(100);
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/PILGRIM52_BAG/CLOSE_1/1");
 			character.Quests.Complete(this.QuestId);
 		}

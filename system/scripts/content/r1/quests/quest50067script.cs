@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50067)]
 public class Quest50067Script : QuestScript
@@ -66,9 +67,7 @@ public class Quest50067Script : QuestScript
 		{
 			character.Inventory.RemoveItem("UNDER67_MQ5_ITEM01", 3);
 			await dialog.Msg("UNDER_67_MQ050_succ03");
-			character.Quests.Complete(this.QuestId);
 			// Func/UNDER67_MQ05_MAKING;
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("UNDER_67_MQ050_succ02");
 			character.Quests.Complete(this.QuestId);
 		}

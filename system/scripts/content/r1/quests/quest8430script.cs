@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(8430)]
 public class Quest8430Script : QuestScript
@@ -63,11 +64,9 @@ public class Quest8430Script : QuestScript
 		if (character.Inventory.HasItem("ZACHA1F_SQ_03_ITEM", 6))
 		{
 			character.Inventory.RemoveItem("ZACHA1F_SQ_03_ITEM", 6);
-			await dialog.Msg("EffectLocalNPC/ZACHA1F_SQ_03/F_circle020_light/1/MID");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("ZACHA1F_SQ_03")?.PlayEffectLocal(character.Connection, "F_circle020_light", 1f, "MID");
 			await Task.Delay(1500);
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/ZACHA1F_SQ_03/F_light003_yellow/0.7/TOP");
+			ZoneServer.Instance.World.FindNPC("ZACHA1F_SQ_03")?.PlayEffectLocal(character.Connection, "F_light003_yellow", 0.7f, "TOP");
 			character.Quests.Complete(this.QuestId);
 		}
 

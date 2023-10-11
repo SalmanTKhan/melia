@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50393)]
 public class Quest50393Script : QuestScript
@@ -65,9 +66,7 @@ public class Quest50393Script : QuestScript
 		{
 			character.Inventory.RemoveItem("NICOPOLIS_812_SUBQ7_ITEM1", 13);
 			await dialog.Msg("NICOPOLIS812_SQ07_SUCC1");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NICOPOLIS812_SQ07_SUCC2");
 			character.Quests.Complete(this.QuestId);
 		}

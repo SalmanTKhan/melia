@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19700)]
 public class Quest19700Script : QuestScript
@@ -57,7 +58,7 @@ public class Quest19700Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("PILGRIM50_SQ_090_COMP");
-		await dialog.Msg("EffectLocalNPC/PILGRIM50_GHOST4/I_smoke013_dark/1/BOT");
+		ZoneServer.Instance.World.FindNPC("PILGRIM50_GHOST4")?.PlayEffectLocal(character.Connection, "I_smoke013_dark", 1f, "BOT");
 		await dialog.Msg("FadeOutIN/1000");
 		dialog.HideNPC("PILGRIM50_GHOST4");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Exclaimation, "The Pilgrim's Soul disappeared!", 3);

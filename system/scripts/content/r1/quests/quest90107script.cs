@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90107)]
 public class Quest90107Script : QuestScript
@@ -66,7 +67,6 @@ public class Quest90107Script : QuestScript
 		{
 			character.Inventory.RemoveItem("MAPLE_25_3_SQ_120_ITEM", 8);
 			await dialog.Msg("MAPLE_25_3_SQ_130_SU");
-			character.Quests.Complete(this.QuestId);
 			// Func/MAPLE_25_3_SQ_130_RUN;
 			character.Quests.Complete(this.QuestId);
 		}

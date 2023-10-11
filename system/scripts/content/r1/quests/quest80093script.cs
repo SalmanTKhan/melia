@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80093)]
 public class Quest80093Script : QuestScript
@@ -62,16 +63,11 @@ public class Quest80093Script : QuestScript
 		{
 			character.Inventory.RemoveItem("Drug_holywater", 10);
 			await dialog.Msg("ABBEY_35_4_SQ_5_succ");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/ABBEY_35_4_ELDER/event_idle2/0");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(500);
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/ABBEY_35_4_ELDER/spread_in011_blue/2/MID");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/ABBEY_35_4_ELDER/F_buff_basic018_blue_fire_1/2/BOT");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/ABBEY_35_4_ELDER/F_pc_making_finish_white/1/TOP");
+			ZoneServer.Instance.World.FindNPC("ABBEY_35_4_ELDER")?.PlayEffectLocal(character.Connection, "spread_in011_blue", 2f, "MID");
+			ZoneServer.Instance.World.FindNPC("ABBEY_35_4_ELDER")?.PlayEffectLocal(character.Connection, "F_buff_basic018_blue_fire_1", 2f, "BOT");
+			ZoneServer.Instance.World.FindNPC("ABBEY_35_4_ELDER")?.PlayEffectLocal(character.Connection, "F_pc_making_finish_white", 1f, "TOP");
 			character.Quests.Complete(this.QuestId);
 		}
 

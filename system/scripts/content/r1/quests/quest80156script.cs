@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80156)]
 public class Quest80156Script : QuestScript
@@ -63,8 +64,8 @@ public class Quest80156Script : QuestScript
 			return HookResult.Skip;
 
 		character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("LIMESTONE_52_4_MQ_8_SUC01");
-					await dialog.Msg("성구를 보여주며 테브린 종유동의 일을 말한다");
+		await dialog.Msg("LIMESTONE_52_4_MQ_8_SUC01");
+		await dialog.Msg("성구를 보여주며 테브린 종유동의 일을 말한다");
 		await dialog.Msg("LIMESTONE_52_4_MQ_8_succ");
 		character.Quests.Complete(this.QuestId);
 

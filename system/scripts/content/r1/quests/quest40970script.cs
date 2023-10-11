@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40970)]
 public class Quest40970Script : QuestScript
@@ -51,7 +52,7 @@ public class Quest40970Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/ROKAS_36_1_PILLA03/F_ground139_light_green/1/BOT");
+		ZoneServer.Instance.World.FindNPC("ROKAS_36_1_PILLA03")?.PlayEffectLocal(character.Connection, "F_ground139_light_green", 1f, "BOT");
 		await dialog.Msg("ROKAS_36_1_SQ_030_COMP");
 		character.Quests.Complete(this.QuestId);
 

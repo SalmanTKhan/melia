@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30133)]
 public class Quest30133Script : QuestScript
@@ -63,11 +64,8 @@ public class Quest30133Script : QuestScript
 		{
 			character.Inventory.RemoveItem("ORCHARD_34_1_SQ_4_ITEM_2", 5);
 			await dialog.Msg("ORCHARD_34_1_SQ_4_succ");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/2000");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("ORCHARD_34_1_SQ_NPC_2_1");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("ORCHARD_34_1_SQ_NPC_2_2");
 			character.Quests.Complete(this.QuestId);
 		}

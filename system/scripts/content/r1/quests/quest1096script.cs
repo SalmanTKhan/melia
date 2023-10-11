@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(1096)]
 public class Quest1096Script : QuestScript
@@ -60,8 +61,7 @@ public class Quest1096Script : QuestScript
 		if (character.Inventory.HasItem("Vis", 1000))
 		{
 			character.Inventory.RemoveItem("Vis", 1000);
-			await dialog.Msg("EffectLocalNPC/JOB_HUNTER2_1_NPC/archer_buff_skl_Recuperate_circle/1.5/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("JOB_HUNTER2_1_NPC")?.PlayEffectLocal(character.Connection, "archer_buff_skl_Recuperate_circle", 1.5f, "BOT");
 			await dialog.Msg("JOB_RANGER2_2_succ1");
 			character.Quests.Complete(this.QuestId);
 		}

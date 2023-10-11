@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(17026)]
 public class Quest17026Script : QuestScript
@@ -65,7 +66,7 @@ public class Quest17026Script : QuestScript
 
 		await dialog.Msg("FTOWER45_SQ_05_COMP");
 		await dialog.Msg("NPCChat/FTOWER45_SQ_04/이제 정말 풀려 나는군.");
-		await dialog.Msg("EffectLocalNPC/FTOWER45_SQ_04/I_pattern002_explosion_mash_green/2/MID");
+		ZoneServer.Instance.World.FindNPC("FTOWER45_SQ_04")?.PlayEffectLocal(character.Connection, "I_pattern002_explosion_mash_green", 2f, "MID");
 		dialog.HideNPC("FTOWER45_SQ_04");
 		character.Quests.Complete(this.QuestId);
 

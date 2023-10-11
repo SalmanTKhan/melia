@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50281)]
 public class Quest50281Script : QuestScript
@@ -61,7 +62,6 @@ public class Quest50281Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PILGRIMROAD362_HIDDENQ1_ITEM4", 4);
 			await dialog.Msg("PILGRIMROAD362_HQ3_succ1");
-			character.Quests.Complete(this.QuestId);
 			// Func/PILGRIM362_HIDDENQ1_COMP;
 			character.Quests.Complete(this.QuestId);
 		}

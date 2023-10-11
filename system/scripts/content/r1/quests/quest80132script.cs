@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80132)]
 public class Quest80132Script : QuestScript
@@ -67,7 +68,6 @@ public class Quest80132Script : QuestScript
 		{
 			character.Inventory.RemoveItem("LIMESTONE_52_2_MQ_7_STONE", 4);
 			// Func/LIMESTONE_52_2_MQ_7_END;
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("LIMESTONE_52_2_DARKWALL_2");
 			character.Quests.Complete(this.QuestId);
 		}

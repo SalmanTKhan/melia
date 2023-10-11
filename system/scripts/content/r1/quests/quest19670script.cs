@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19670)]
 public class Quest19670Script : QuestScript
@@ -56,7 +57,7 @@ public class Quest19670Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("PILGRIM50_SQ_060_COMP");
-		await dialog.Msg("EffectLocalNPC/PILGRIM50_GHOST2/I_bomb005_dark/1/BOT");
+		ZoneServer.Instance.World.FindNPC("PILGRIM50_GHOST2")?.PlayEffectLocal(character.Connection, "I_bomb005_dark", 1f, "BOT");
 		await dialog.Msg("FadeOutIN/1000");
 		dialog.HideNPC("PILGRIM50_GHOST2");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Calmed the soul!");

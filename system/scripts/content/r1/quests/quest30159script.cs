@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30159)]
 public class Quest30159Script : QuestScript
@@ -59,7 +60,6 @@ public class Quest30159Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PRISON_79_MQ_6_ITEM", 10);
 			dialog.UnHideNPC("PRISON_79_OBJ_5_EFFECT");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "You have lit the Red Lamp{nl}Return to Zanas' Spirit");
 			character.Quests.Complete(this.QuestId);
 		}

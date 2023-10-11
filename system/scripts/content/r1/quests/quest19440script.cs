@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19440)]
 public class Quest19440Script : QuestScript
@@ -65,7 +66,6 @@ public class Quest19440Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PILGRIM46_ITEM_01", 6);
 			await dialog.Msg("NPCAin/PILGRIM46_NPC01/STD/0");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("PILGRIM46_SQ_010_COMP");
 			character.Quests.Complete(this.QuestId);
 		}

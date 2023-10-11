@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19461)]
 public class Quest19461Script : QuestScript
@@ -41,7 +42,7 @@ public class Quest19461Script : QuestScript
 		{
 			case 1:
 				await dialog.Msg("PILGRIM46_SQ_031_AC");
-				await dialog.Msg("EffectLocalNPC/PILGRIM46_NPC01/I_spread_out001_light_violet2/1/BOT");
+				ZoneServer.Instance.World.FindNPC("PILGRIM46_NPC01")?.PlayEffectLocal(character.Connection, "I_spread_out001_light_violet2", 1f, "BOT");
 				character.AddonMessage(AddonMessage.NOTICE_Dm_Exclaimation, "Liliya passed away. {nl}Make a grave for her.", 5);
 				character.Quests.Start(this.QuestId);
 				break;
@@ -60,7 +61,7 @@ public class Quest19461Script : QuestScript
 		dialog.HideNPC("PILGRIM46_NPC01");
 		await dialog.Msg("FadeOutIN/1000");
 		dialog.UnHideNPC("PILGRIM46_TOMB");
-		await dialog.Msg("EffectLocalNPC/PILGRIM46_TOMB/F_cleric_flins_spread_out/5/BOT");
+		ZoneServer.Instance.World.FindNPC("PILGRIM46_TOMB")?.PlayEffectLocal(character.Connection, "F_cleric_flins_spread_out", 5f, "BOT");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Made a grave for Liliya");
 		character.Quests.Complete(this.QuestId);
 

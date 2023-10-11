@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(91201)]
 public class Quest91201Script : QuestScript
@@ -29,11 +30,6 @@ public class Quest91201Script : QuestScript
 
 		AddReward(new ExpReward(5699999744, 5699999744));
 		AddReward(new ItemReward("Vis", 47586));
-	}
-
-	public override void OnStart(Character character, Quest quest)
-	{
-		// Func/Func/SCR_EP15_2_D_NICOPOLIS_1_MQ_5_Balloontext;
 	}
 
 	public override void OnComplete(Character character, Quest quest)

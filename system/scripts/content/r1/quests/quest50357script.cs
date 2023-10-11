@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50357)]
 public class Quest50357Script : QuestScript
@@ -66,8 +67,7 @@ public class Quest50357Script : QuestScript
 		{
 			character.Inventory.RemoveItem("ABBEY22_5_SUBQ4_ITEM1", 20);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Placed the flesh of Black Hohen Olben.");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/ABBEY225_SUBQ2_NPC1/F_buff_basic034_pink/2/BOT");
+			ZoneServer.Instance.World.FindNPC("ABBEY225_SUBQ2_NPC1")?.PlayEffectLocal(character.Connection, "F_buff_basic034_pink", 2f, "BOT");
 			character.Quests.Complete(this.QuestId);
 		}
 

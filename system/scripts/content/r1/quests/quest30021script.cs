@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30021)]
 public class Quest30021Script : QuestScript
@@ -63,7 +64,6 @@ public class Quest30021Script : QuestScript
 		{
 			character.Inventory.RemoveItem("CATACOMB_38_1_SQ_05_ITEM", 6);
 			await dialog.Msg("CATACOMB_38_1_SQ_05_succ");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("CATACOMB_38_1_OBJ_02");
 			character.Quests.Complete(this.QuestId);
 		}

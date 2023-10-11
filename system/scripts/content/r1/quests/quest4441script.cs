@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(4441)]
 public class Quest4441Script : QuestScript
@@ -61,7 +62,7 @@ public class Quest4441Script : QuestScript
 		await Task.Delay(2000);
 		await dialog.Msg("BalloonText/ROKAS24_QB_14_succ4/2");
 		await dialog.Msg("NPCAin/ROKAS_24_FLORIJONAS2/event_drink/0");
-		await dialog.Msg("EffectLocalNPC/ROKAS_24_FLORIJONAS2/F_burstup001_red/0.5/BOT");
+		ZoneServer.Instance.World.FindNPC("ROKAS_24_FLORIJONAS2")?.PlayEffectLocal(character.Connection, "F_burstup001_red", 0.5f, "BOT");
 		await Task.Delay(3000);
 		await dialog.Msg("ROKAS24_QB_14_succ3");
 		character.Quests.Complete(this.QuestId);

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(91193)]
 public class Quest91193Script : QuestScript
@@ -65,11 +66,8 @@ public class Quest91193Script : QuestScript
 		{
 			character.Inventory.RemoveItem("EP15_1_ABBEY2_SQ2_ITEM", 25);
 			await dialog.Msg("EP15_1_ABBEY2_SQ2_DLG3");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/2500");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("EP15_1_ABBEY2_SQ1_NPC");
-			character.Quests.Complete(this.QuestId);
 			// Func/SCR_EP15_1_ABBEY2_SQ2_balloontext;
 			character.Quests.Complete(this.QuestId);
 		}

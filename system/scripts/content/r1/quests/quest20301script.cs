@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20301)]
 public class Quest20301Script : QuestScript
@@ -61,7 +62,7 @@ public class Quest20301Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/CHATHEDRAL53_MQ03/F_archer_concentration_shot_lineup/2/BOT");
+		ZoneServer.Instance.World.FindNPC("CHATHEDRAL53_MQ03")?.PlayEffectLocal(character.Connection, "F_archer_concentration_shot_lineup", 2f, "BOT");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Completed the scripture for the spirit");
 		character.Quests.Complete(this.QuestId);
 

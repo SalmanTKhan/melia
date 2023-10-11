@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(8478)]
 public class Quest8478Script : QuestScript
@@ -66,11 +67,8 @@ public class Quest8478Script : QuestScript
 		{
 			character.Inventory.RemoveItem("FTOWER_FIRE_ESSENCE", 1);
 			await dialog.Msg("FTOWER43_MQ_01_03");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("FTOWER43_GRITA_01");
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(500);
-			character.Quests.Complete(this.QuestId);
 			// Func/FTOWER43_MQ_02_RUNNPC;
 			character.Quests.Complete(this.QuestId);
 		}

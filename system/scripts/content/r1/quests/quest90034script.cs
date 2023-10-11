@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90034)]
 public class Quest90034Script : QuestScript
@@ -41,7 +42,7 @@ public class Quest90034Script : QuestScript
 		{
 			case 1:
 				await dialog.Msg("KATYN_45_1_SQ_4_AG");
-				await dialog.Msg("EffectLocalNPC/KATYN_45_1_OWL1/I_smoke013_dark1/2/MID");
+				ZoneServer.Instance.World.FindNPC("KATYN_45_1_OWL1")?.PlayEffectLocal(character.Connection, "I_smoke013_dark1", 2f, "MID");
 				// Func/SCR_KATYN_45_1_SQ4;
 				character.Quests.Start(this.QuestId);
 				break;

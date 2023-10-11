@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30009)]
 public class Quest30009Script : QuestScript
@@ -58,7 +59,7 @@ public class Quest30009Script : QuestScript
 		if (character.Inventory.HasItem("CATACOMB_04_SQ_02_ITEM", 1))
 		{
 			character.Inventory.RemoveItem("CATACOMB_04_SQ_02_ITEM", 1);
-			await dialog.Msg("EffectLocalNPC/CATACOMB_04_OBJ_01/F_lineup020_blue_mint/1/BOT");
+			ZoneServer.Instance.World.FindNPC("CATACOMB_04_OBJ_01")?.PlayEffectLocal(character.Connection, "F_lineup020_blue_mint", 1f, "BOT");
 			character.Quests.Complete(this.QuestId);
 		}
 

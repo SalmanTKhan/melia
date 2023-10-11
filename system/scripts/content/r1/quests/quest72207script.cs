@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(72207)]
 public class Quest72207Script : QuestScript
@@ -66,10 +67,9 @@ public class Quest72207Script : QuestScript
 		if (character.Inventory.HasItem("STARTOWER_91_MQ_90_ITEM02", 1))
 		{
 			character.Inventory.RemoveItem("STARTOWER_91_MQ_90_ITEM02", 1);
+			//SCR_STARTOWER_91_MQ_90_END
 			await dialog.Msg("STARTOWER_91_MQ_90_DLG3");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("D_STARTOWER_91_RESISTANCE_LEADER_BAYL_02");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19800)]
 public class Quest19800Script : QuestScript
@@ -53,7 +54,7 @@ public class Quest19800Script : QuestScript
 			return HookResult.Skip;
 
 		await Task.Delay(1000);
-		await dialog.Msg("EffectLocalNPC/PILGRIM51_SR03/I_spread_out001_light_fire/2/TOP");
+		ZoneServer.Instance.World.FindNPC("PILGRIM51_SR03")?.PlayEffectLocal(character.Connection, "I_spread_out001_light_fire", 2f, "TOP");
 		await Task.Delay(2000);
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The Sanctum has been purified");
 		character.Quests.Complete(this.QuestId);

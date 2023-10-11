@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(41000)]
 public class Quest41000Script : QuestScript
@@ -53,7 +54,7 @@ public class Quest41000Script : QuestScript
 
 		await Task.Delay(2000);
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Finally, it seems I would be able to read the letters!");
-		await dialog.Msg("EffectLocalNPC/ROKAS_36_1_PILLA06/F_ground139_light_orange/1/BOT");
+		ZoneServer.Instance.World.FindNPC("ROKAS_36_1_PILLA06")?.PlayEffectLocal(character.Connection, "F_ground139_light_orange", 1f, "BOT");
 		await Task.Delay(1000);
 		await dialog.Msg("ROKAS_36_1_SQ_060_COMP");
 		character.Quests.Complete(this.QuestId);

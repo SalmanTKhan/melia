@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(72189)]
 public class Quest72189Script : QuestScript
@@ -58,6 +59,7 @@ public class Quest72189Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
+		//SCR_STARTOWER_89_MQ_90_END
 		await dialog.Msg("STARTOWER_89_MQ_90_DLG3");
 		await dialog.Msg("FadeOutIN/1000");
 		dialog.HideNPC("D_STARTOWER_89_RESISTANCE_LEADER_BAYL_04");

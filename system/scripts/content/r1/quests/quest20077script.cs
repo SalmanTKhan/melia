@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20077)]
 public class Quest20077Script : QuestScript
@@ -53,8 +54,8 @@ public class Quest20077Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/KATYN13_ADDQUEST6_NPC/F_burstup036_fire/1/BOT");
-		await dialog.Msg("EffectLocalNPC/KATYN13_ADDQUEST1_NPC/F_burstup036_fire/1/BOT");
+		ZoneServer.Instance.World.FindNPC("KATYN13_ADDQUEST6_NPC")?.PlayEffectLocal(character.Connection, "F_burstup036_fire", 1f, "BOT");
+		ZoneServer.Instance.World.FindNPC("KATYN13_ADDQUEST1_NPC")?.PlayEffectLocal(character.Connection, "F_burstup036_fire", 1f, "BOT");
 		await Task.Delay(1000);
 		dialog.HideNPC("KATYN13_ADDQUEST1_NPC");
 		dialog.HideNPC("KATYN13_ADDQUEST6_NPC");

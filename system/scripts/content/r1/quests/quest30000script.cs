@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30000)]
 public class Quest30000Script : QuestScript
@@ -58,7 +59,6 @@ public class Quest30000Script : QuestScript
 		{
 			character.Inventory.RemoveItem("JOB_FALCONER5_1_ITEM", 20);
 			await dialog.Msg("JOB_FALCONER5_1_succ");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "If you don't have a Hawk, you can adopt one for free at the Companion Trader!");
 			character.Quests.Complete(this.QuestId);
 		}

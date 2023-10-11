@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90047)]
 public class Quest90047Script : QuestScript
@@ -63,7 +64,7 @@ public class Quest90047Script : QuestScript
 		// Func/SCR_KATYN_45_2_LOOK;
 		await dialog.Msg("NPCAin/KATYN_45_2_AJEL3/ABSORB/0");
 		await Task.Delay(1500);
-		await dialog.Msg("EffectLocalNPC/KATYN_45_2_OWL4/F_light018_yellow/2/MID");
+		ZoneServer.Instance.World.FindNPC("KATYN_45_2_OWL4")?.PlayEffectLocal(character.Connection, "F_light018_yellow", 2f, "MID");
 		character.Quests.Complete(this.QuestId);
 
 		return HookResult.Break;

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(8333)]
 public class Quest8333Script : QuestScript
@@ -43,7 +44,7 @@ public class Quest8333Script : QuestScript
 		switch (await dialog.Select("KATYN18_MQ_27_01", "KATYN18_MQ_27", "Moving to the test site", "Cancel"))
 		{
 			case 1:
-				await dialog.Msg("EffectLocalNPC/KATYN18_TESTER_03/mon_foot_smoke_3/2.5");
+				ZoneServer.Instance.World.FindNPC("KATYN18_TESTER_03")?.PlayEffectLocal(character.Connection, "mon_foot_smoke_3");
 				dialog.HideNPC("KATYN18_TESTER_03");
 				character.Quests.Start(this.QuestId);
 				character.Tracks.Start(this.TrackData);

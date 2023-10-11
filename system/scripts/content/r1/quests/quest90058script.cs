@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90058)]
 public class Quest90058Script : QuestScript
@@ -62,7 +63,7 @@ public class Quest90058Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("KATYN_45_3_SQ_4_SU");
-		await dialog.Msg("EffectLocalNPC/JOB_DIEVDIRBYS2_NPC/F_light008/0.5/MID");
+		ZoneServer.Instance.World.FindNPC("JOB_DIEVDIRBYS2_NPC")?.PlayEffectLocal(character.Connection, "F_light008", 0.5f, "MID");
 		character.Quests.Complete(this.QuestId);
 
 		return HookResult.Break;

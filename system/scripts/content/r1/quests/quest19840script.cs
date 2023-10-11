@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19840)]
 public class Quest19840Script : QuestScript
@@ -62,10 +63,8 @@ public class Quest19840Script : QuestScript
 		if (character.Inventory.HasItem("PILGRIM51_ITEM_09", 1))
 		{
 			character.Inventory.RemoveItem("PILGRIM51_ITEM_09", 1);
-			await dialog.Msg("EffectLocalNPC/PILGRIM51_SR06/F_bg_fire001_2/0.5/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("PILGRIM51_SR06")?.PlayEffectLocal(character.Connection, "F_bg_fire001_2", 0.5f, "BOT");
 			await Task.Delay(500);
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The Sanctum has been purified");
 			character.Quests.Complete(this.QuestId);
 		}

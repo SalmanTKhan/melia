@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50363)]
 public class Quest50363Script : QuestScript
@@ -67,7 +68,6 @@ public class Quest50363Script : QuestScript
 		{
 			character.Inventory.RemoveItem("ABBEY22_5_SUBQ9_ITEM1", 15);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Placed essence of Black Harugal.");
-			character.Quests.Complete(this.QuestId);
 			// Func/ABBEY22_5_SUBQ8_COMP;
 			character.Quests.Complete(this.QuestId);
 		}

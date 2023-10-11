@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70807)]
 public class Quest70807Script : QuestScript
@@ -66,9 +67,7 @@ public class Quest70807Script : QuestScript
 		{
 			character.Inventory.RemoveItem("WHITETREES23_1_SQ08_ITEM", 18);
 			await dialog.Msg("WHITETREES231_SQ_08_succ1");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/2000");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("WHITETREES231_SQ_08_succ2");
 			character.Quests.Complete(this.QuestId);
 		}

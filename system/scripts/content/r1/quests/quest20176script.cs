@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20176)]
 public class Quest20176Script : QuestScript
@@ -51,7 +52,7 @@ public class Quest20176Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("NPCAin/ZACHA32_DEVICE_1_2/ON/1");
-		await dialog.Msg("EffectLocalNPC/ZACHA32_DEVICE_1_2/F_light003_green/3/MID");
+		ZoneServer.Instance.World.FindNPC("ZACHA32_DEVICE_1_2")?.PlayEffectLocal(character.Connection, "F_light003_green", 3f, "MID");
 		character.Quests.Complete(this.QuestId);
 
 		return HookResult.Break;

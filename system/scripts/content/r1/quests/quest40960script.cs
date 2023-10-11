@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40960)]
 public class Quest40960Script : QuestScript
@@ -58,13 +59,9 @@ public class Quest40960Script : QuestScript
 		{
 			character.Inventory.RemoveItem("ROKAS_36_1_SQ_020_ITEM_1", 40);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The crystal emanating the mysterious ray begins to shine brightly!");
-			character.Quests.Complete(this.QuestId);
 			// Func/ROKAS_36_1_SQ_020_COMP_FUNC;
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/ROKAS_36_1_PILLA02/F_ground139_light_green/1/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("ROKAS_36_1_PILLA02")?.PlayEffectLocal(character.Connection, "F_ground139_light_green", 1f, "BOT");
 			await Task.Delay(2000);
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("ROKAS_36_1_SQ_020_COMP");
 			character.Quests.Complete(this.QuestId);
 		}

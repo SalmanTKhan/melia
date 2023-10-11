@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(8336)]
 public class Quest8336Script : QuestScript
@@ -40,7 +41,7 @@ public class Quest8336Script : QuestScript
 		switch (await dialog.Select("KATYN18_MQ_30_01", "KATYN18_MQ_30", "Open the door that leads to Thorn Forest", "Cancel"))
 		{
 			case 1:
-				await dialog.Msg("EffectLocal/healing/5");
+				character.PlayEffectLocal("healing", 5);
 				dialog.HideNPC("WARP_F_FKATYN_18");
 				character.Quests.Start(this.QuestId);
 				character.Tracks.Start(this.TrackData);

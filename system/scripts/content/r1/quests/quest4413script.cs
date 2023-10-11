@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(4413)]
 public class Quest4413Script : QuestScript
@@ -61,7 +62,7 @@ public class Quest4413Script : QuestScript
 
 		await dialog.Msg("ROKAS27_QB_1_succ1");
 		dialog.HideNPC("ROKAS27_DESIG_01");
-		await dialog.Msg("EffectLocalNPC/ROKAS27_DESIG_01/F_pc_warp_circle/1/BOT");
+		ZoneServer.Instance.World.FindNPC("ROKAS27_DESIG_01")?.PlayEffectLocal(character.Connection, "F_pc_warp_circle", 1f, "BOT");
 		await dialog.Msg("FadeOutIN/2000");
 		dialog.UnHideNPC("ROKAS27_DESIG_02");
 		character.Quests.Complete(this.QuestId);

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90105)]
 public class Quest90105Script : QuestScript
@@ -41,8 +42,8 @@ public class Quest90105Script : QuestScript
 		{
 			case 1:
 				character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("MAPLE_25_3_SQ_110_AG1_1");
-					await dialog.Msg("지금, 하나의 몸으로 두 큐폴이 말하고 있다고 말해준다");
+				await dialog.Msg("MAPLE_25_3_SQ_110_AG1_1");
+				await dialog.Msg("지금, 하나의 몸으로 두 큐폴이 말하고 있다고 말해준다");
 				await dialog.Msg("MAPLE_25_3_SQ_110_AG");
 				await dialog.Msg("MAPLE_25_3_SQ_110_AG2");
 				await dialog.Msg("MAPLE_25_3_SQ_110_AG3");

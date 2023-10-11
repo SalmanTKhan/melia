@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(4220)]
 public class Quest4220Script : QuestScript
@@ -61,9 +62,7 @@ public class Quest4220Script : QuestScript
 		{
 			character.Inventory.RemoveItem("D_Bube_Mane", 5);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The barrier stone that is blocking the closed area is collapsing!");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("CMINE3_BOSSROOM_OPEN");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("WS_ACT4_3_ACT4_BOSS");
 			character.Quests.Complete(this.QuestId);
 		}

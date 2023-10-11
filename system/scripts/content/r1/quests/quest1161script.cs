@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(1161)]
 public class Quest1161Script : QuestScript
@@ -49,6 +50,7 @@ public class Quest1161Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
+		//SCR_TUTO_TP_SHOP_SUCCESS_TX_FUNC
 		await dialog.Msg("TUTO_TP_SHOP_SUCCESS_DLG1");
 		// Func/SCR_TUTO_TP_SHOP_SUCCESS_FUNC;
 		character.Quests.Complete(this.QuestId);

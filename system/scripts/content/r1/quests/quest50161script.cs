@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50161)]
 public class Quest50161Script : QuestScript
@@ -65,9 +66,7 @@ public class Quest50161Script : QuestScript
 		{
 			character.Inventory.RemoveItem("TABLELAND71_SUBQ5ITEM", 10);
 			await dialog.Msg("TABLELAND_71_SQ5_succ1");
-			character.Quests.Complete(this.QuestId);
 			// Func/TABLELAND71_SUBQ1_COMPLETE;
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("TABLELAND_71_SQ5_succ2");
 			character.Quests.Complete(this.QuestId);
 		}

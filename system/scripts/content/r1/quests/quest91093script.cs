@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(91093)]
 public class Quest91093Script : QuestScript
@@ -65,13 +66,9 @@ public class Quest91093Script : QuestScript
 			character.Inventory.RemoveItem("EP14_1_FCASTLE2_MQ_2_ITEM1", 4);
 			character.Inventory.RemoveItem("EP14_1_FCASTLE2_MQ_2_ITEM2", 3);
 			await dialog.Msg("FadeOutIN/2000");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("EP14_1_F_CASTLE_2_MQ_DUMMY_1");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("EP14_1_FCASTLE2_MQ_2_DUMMYNPC_1");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("EP14_1_FCASTLE2_MQ_2_DUMMYNPC_2");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("EP14_1_FCASTLE2_MQ_2_CNPC_DLG1");
 			character.Quests.Complete(this.QuestId);
 		}

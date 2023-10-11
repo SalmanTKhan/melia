@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80167)]
 public class Quest80167Script : QuestScript
@@ -59,7 +60,7 @@ public class Quest80167Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/LIMESTONE_52_5_MQ_6_ANTIEVIL_2/F_explosion004_yellow2/1/BOT");
+		ZoneServer.Instance.World.FindNPC("LIMESTONE_52_5_MQ_6_ANTIEVIL_2")?.PlayEffectLocal(character.Connection, "F_explosion004_yellow2", 1f, "BOT");
 		await dialog.Msg("CameraShockWaveLocal/2/99999/50/2/50/0");
 		// Func/SCR_LIMESTONE_52_5_MQ_6_SUCC;
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Activating the exorcising device dealt a great amount of damage to the demons!");

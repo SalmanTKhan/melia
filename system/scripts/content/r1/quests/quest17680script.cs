@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(17680)]
 public class Quest17680Script : QuestScript
@@ -69,7 +70,6 @@ public class Quest17680Script : QuestScript
 			character.Inventory.RemoveItem("JOB_NECROMANCER4_1_ITEM2", 3);
 			character.Inventory.RemoveItem("JOB_NECROMANCER4_1_ITEM3", 1);
 			await dialog.Msg("JOB_NECROMANCER4_1_COMP");
-			character.Quests.Complete(this.QuestId);
 			dialog.ShowHelp("TUTO_CLASS_NECROMANCER");
 			character.Quests.Complete(this.QuestId);
 		}

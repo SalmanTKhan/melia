@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40990)]
 public class Quest40990Script : QuestScript
@@ -58,15 +59,10 @@ public class Quest40990Script : QuestScript
 		{
 			character.Inventory.RemoveItem("ROKAS_36_1_SQ_050_ITEM_1", 13);
 			// Func/ROKAS_36_1_PILLA05_UNHIDE;
-			character.Quests.Complete(this.QuestId);
 			await Task.Delay(2000);
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "You can read the letters!");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/ROKAS_36_1_PILLA05/F_ground139_light_orange/1/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("ROKAS_36_1_PILLA05")?.PlayEffectLocal(character.Connection, "F_ground139_light_orange", 1f, "BOT");
 			await Task.Delay(1000);
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("ROKAS_36_1_SQ_050_COMP");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80428)]
 public class Quest80428Script : QuestScript
@@ -64,8 +65,7 @@ public class Quest80428Script : QuestScript
 		if (character.Inventory.HasItem("F_MAPLE_242_MQ_02_ITEM", 1))
 		{
 			character.Inventory.RemoveItem("F_MAPLE_242_MQ_02_ITEM", 1);
-			await dialog.Msg("EffectLocalNPC/F_MAPLE_242_MQ_02_NPC2/F_lineup014_yellow/2/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("F_MAPLE_242_MQ_02_NPC2")?.PlayEffectLocal(character.Connection, "F_lineup014_yellow", 2f, "BOT");
 			await dialog.Msg("F_MAPLE_24_2_MQ_02_SU");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -47,6 +47,10 @@ namespace Melia.Zone.Database
 				if (!int.TryParse(split[i + 1], out var value))
 					throw new ArgumentException("Invalid value '" + split[i + 1] + "'.");
 
+				// Handle removed account options gracefully.
+				if (!this.IsValid(option))
+					continue;
+
 				this.Set(option, value);
 			}
 		}
@@ -90,6 +94,10 @@ namespace Melia.Zone.Database
 			{
 				foreach (var option in _options)
 				{
+					// Handle removed account options gracefully.
+					if (!this.IsValid(option.Key))
+						continue;
+
 					if (i++ != 0)
 						sb.Append(' ');
 					sb.AppendFormat("{0} {1}", option.Key, option.Value);

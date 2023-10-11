@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(72164)]
 public class Quest72164Script : QuestScript
@@ -56,7 +57,8 @@ public class Quest72164Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/JOB_LINKER2_1_NPC/archer_buff_skl_Recuperate_circle/1.5/BOT");
+		//SCR_MASTER_SAGE1_GIVE_BOOK
+		ZoneServer.Instance.World.FindNPC("JOB_LINKER2_1_NPC")?.PlayEffectLocal(character.Connection, "archer_buff_skl_Recuperate_circle", 1.5f, "BOT");
 		await dialog.Msg("MASTER_SAGE1_DLG2");
 		await dialog.Msg("FadeOutIN/1000");
 		await dialog.Msg("MASTER_SAGE1_DLG3");

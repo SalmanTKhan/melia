@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(8249)]
 public class Quest8249Script : QuestScript
@@ -65,13 +66,9 @@ public class Quest8249Script : QuestScript
 		{
 			character.Inventory.RemoveItem("KATYN14_MQ_08_ITEM", 1);
 			await dialog.Msg("KATYN14_MQ_08_03");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/KATYN14_ROY/F_pc_warp_circle/1/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("KATYN14_ROY")?.PlayEffectLocal(character.Connection, "F_pc_warp_circle", 1f, "BOT");
 			await Task.Delay(500);
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("KATYN14_ROY");
 			character.Quests.Complete(this.QuestId);
 		}

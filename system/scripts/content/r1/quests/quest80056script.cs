@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80056)]
 public class Quest80056Script : QuestScript
@@ -66,8 +67,7 @@ public class Quest80056Script : QuestScript
 		{
 			character.Inventory.RemoveItem("TABLELAND_11_1_SQ_05_PARTS", 30);
 			await dialog.Msg("TABLELAND_11_1_SQ_05_succ");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/TABLELAND_11_1_LEMIJA2/F_pc_making_finish_white/2/MID");
+			ZoneServer.Instance.World.FindNPC("TABLELAND_11_1_LEMIJA2")?.PlayEffectLocal(character.Connection, "F_pc_making_finish_white", 2f, "MID");
 			character.Quests.Complete(this.QuestId);
 		}
 

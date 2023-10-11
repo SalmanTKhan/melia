@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80133)]
 public class Quest80133Script : QuestScript
@@ -45,8 +46,8 @@ public class Quest80133Script : QuestScript
 		{
 			case 1:
 				character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("LIMESTONE_52_2_MQ_8_ST02");
-					await dialog.Msg("Let's go.");
+				await dialog.Msg("LIMESTONE_52_2_MQ_8_ST02");
+				await dialog.Msg("Let's go.");
 				await dialog.Msg("LIMESTONE_52_2_MQ_8_AG");
 				// Func/LIMESTONE_52_2_REENTER_RUN;
 				character.Quests.Start(this.QuestId);

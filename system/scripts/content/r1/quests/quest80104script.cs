@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80104)]
 public class Quest80104Script : QuestScript
@@ -46,7 +47,7 @@ public class Quest80104Script : QuestScript
 			case 1:
 				await dialog.Msg("NPCAin/CORAL_35_2_LUTAS_2/bury/1");
 				dialog.UnHideNPC("CORAL_35_2_TERRA_MAKING");
-				await dialog.Msg("EffectLocalNPC/CORAL_35_2_TERRA_MAKING/F_pattern015_white/1/BOT");
+				ZoneServer.Instance.World.FindNPC("CORAL_35_2_TERRA_MAKING")?.PlayEffectLocal(character.Connection, "F_pattern015_white", 1f, "BOT");
 				character.Quests.Start(this.QuestId);
 				break;
 		}

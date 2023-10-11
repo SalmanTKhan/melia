@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90088)]
 public class Quest90088Script : QuestScript
@@ -71,15 +72,10 @@ public class Quest90088Script : QuestScript
 			character.Inventory.RemoveItem("CATACOMB_25_4_SQ_60_ITEM3", 1);
 			character.Inventory.RemoveItem("CATACOMB_25_4_SQ_90_ITEM", 1);
 			await dialog.Msg("CATACOMB_25_4_SQ_60_SU");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("CATACOMB_25_4_SQ_60_1");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("CATACOMB_25_4_SQ_60_2");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("CATACOMB_25_4_SQ_60_3");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("CATACOMB_25_4_SQ_60_4");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("BalloonText/CATACOMB_25_4_SQ_60_SU2/7");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50266)]
 public class Quest50266Script : QuestScript
@@ -57,6 +58,7 @@ public class Quest50266Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
+		//SCR_TABLELAND28_1_HQ1_ACHIEVE_REWARD
 		await dialog.Msg("TABLELAND28_1_HQ1_succ1");
 		// Func/TABLE281_HIDDENQ1_COM;
 		character.Quests.Complete(this.QuestId);

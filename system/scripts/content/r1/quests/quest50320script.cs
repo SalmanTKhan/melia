@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50320)]
 public class Quest50320Script : QuestScript
@@ -63,9 +64,7 @@ public class Quest50320Script : QuestScript
 		{
 			character.Inventory.RemoveItem("WTREES22_1_SUBQ5_ITEM4", 18);
 			await dialog.Msg("WTREES22_1_SUBQ5_SUCC1");
-			character.Quests.Complete(this.QuestId);
 			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Indrea is applying raspberry juice on some branches.");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/WTREES221_SUBQ_NPC3/talk/0");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50249)]
 public class Quest50249Script : QuestScript
@@ -45,8 +46,8 @@ public class Quest50249Script : QuestScript
 		{
 			case 1:
 				character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("WHITETREES561_SUBQ2_AGREE1");
-					await dialog.Msg("감사는 나중에 하고, 일단 실을 구할 방법이 무엇인지 묻는다");
+				await dialog.Msg("WHITETREES561_SUBQ2_AGREE1");
+				await dialog.Msg("감사는 나중에 하고, 일단 실을 구할 방법이 무엇인지 묻는다");
 				await dialog.Msg("WHITETREES561_SUBQ2_AGREE2");
 				character.Quests.Start(this.QuestId);
 				break;

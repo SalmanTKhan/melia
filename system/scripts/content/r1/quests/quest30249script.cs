@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30249)]
 public class Quest30249Script : QuestScript
@@ -52,7 +53,7 @@ public class Quest30249Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/CASTLE_20_1_OBJ_7/F_burstup007_blue/1.0/BOT");
+		ZoneServer.Instance.World.FindNPC("CASTLE_20_1_OBJ_7")?.PlayEffectLocal(character.Connection, "F_burstup007_blue", 1.0f, "BOT");
 		dialog.HideNPC("CASTLE_20_1_OBJ_7");
 		dialog.HideNPC("CASTLE_20_1_BARRIER_2");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Disarmed the Tertiary Core Protection Device.{nl}Time to get to the restricted area.");

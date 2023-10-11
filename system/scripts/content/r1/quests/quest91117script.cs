@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(91117)]
 public class Quest91117Script : QuestScript
@@ -65,7 +66,6 @@ public class Quest91117Script : QuestScript
 			character.Inventory.RemoveItem("EP14_1_FCASTLE5_MQ_1_ITEM1", 50);
 			character.Inventory.RemoveItem("EP14_1_FCASTLE5_MQ_1_ITEM2", 1);
 			await dialog.Msg("EP14_1_FCASTLE5_MQ_1_CNPC_DLG1");
-			character.Quests.Complete(this.QuestId);
 			// Func/SCR_QUEST_ATTENDACE_MONGOLOG;
 			character.Quests.Complete(this.QuestId);
 		}

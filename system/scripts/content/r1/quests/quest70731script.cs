@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70731)]
 public class Quest70731Script : QuestScript
@@ -67,7 +68,6 @@ public class Quest70731Script : QuestScript
 			character.Inventory.RemoveItem("BRACKEN42_2_SQ12_1_ITEM", 11);
 			character.Inventory.RemoveItem("BRACKEN42_2_SQ12_2_ITEM", 7);
 			await dialog.Msg("BRACKEN422_SQ_12_succ");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
 			character.Quests.Complete(this.QuestId);
 		}

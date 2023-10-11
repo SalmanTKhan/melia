@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80054)]
 public class Quest80054Script : QuestScript
@@ -37,7 +38,7 @@ public class Quest80054Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("BalloonText/TABLELAND_11_1_SQ_03_END/5");
-		await dialog.Msg("EffectLocalNPC/TABLELAND_11_1_SQ_03_TRACE/I_smoke_red2/2/BOT");
+		ZoneServer.Instance.World.FindNPC("TABLELAND_11_1_SQ_03_TRACE")?.PlayEffectLocal(character.Connection, "I_smoke_red2", 2f, "BOT");
 		await Task.Delay(1000);
 		dialog.HideNPC("TABLELAND_11_1_SQ_03_TRACE");
 		await Task.Delay(3000);

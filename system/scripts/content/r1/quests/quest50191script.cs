@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50191)]
 public class Quest50191Script : QuestScript
@@ -53,7 +54,7 @@ public class Quest50191Script : QuestScript
 			return HookResult.Skip;
 
 		// Func/TABLE74_SUBQ8_COMPLETE;
-		await dialog.Msg("EffectLocalNPC/TABLE74_SUBQ_ARTIFACT/F_explosion006_orange1/1/BOT");
+		ZoneServer.Instance.World.FindNPC("TABLE74_SUBQ_ARTIFACT")?.PlayEffectLocal(character.Connection, "F_explosion006_orange1", 1f, "BOT");
 		await dialog.Msg("NPCAin/TABLE74_SUBQ_ARTIFACT/DEAD/0");
 		dialog.HideNPC("TABLE74_SUBQ_ARTIFACT");
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "You have destroyed the device.");

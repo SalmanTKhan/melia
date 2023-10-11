@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(92043)]
 public class Quest92043Script : QuestScript
@@ -67,9 +68,7 @@ public class Quest92043Script : QuestScript
 		{
 			character.Inventory.RemoveItem("EP13_F_SIAULIAI_2_SQ_ITEM_03", 10);
 			await dialog.Msg("EP13_F_SIAULIAI_2_SQ_05_3");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("EP13_F_SIAULIAI_2_SQ_05_3_PAYA");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("BalloonText/EP13_F_SIAULIAI_2_SQ_05_1_1/0");
 			character.Quests.Complete(this.QuestId);
 		}

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(4405)]
 public class Quest4405Script : QuestScript
@@ -67,11 +68,8 @@ public class Quest4405Script : QuestScript
 		{
 			character.Inventory.RemoveItem("THORN23_Thorn_1", 5);
 			await dialog.Msg("THORN23_Q_15_succ1");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/F_wizard_backmasking_light/1/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("F_wizard_backmasking_light")?.PlayEffectLocal(character.Connection, "1");
 			await Task.Delay(1300);
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("THORN23_Q_15_succ2");
 			character.Quests.Complete(this.QuestId);
 		}

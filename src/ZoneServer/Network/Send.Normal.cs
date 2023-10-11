@@ -515,6 +515,55 @@ namespace Melia.Zone.Network
 			/// <param name="b2"></param>
 			/// <param name="scale"></param>
 			/// <param name="animationName"></param>
+			public static void PlayEffect(IZoneConnection conn, IActor actor, byte b1 = 1, string heightOffset = "BOT", byte b2 = 1, float scale = 1, string animationName = "F_pc_class_change", float f1 = 0, int associatedHandle = 0)
+			{
+				if (!ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName, out var animation))
+				{
+					Log.Warning("PlayAnimation: Packet String not found with id {0}.", animationName);
+					return;
+				}
+
+				if (!Enum.TryParse<HeightOffset>(heightOffset, out var hOffset))
+					throw new ArgumentException($"Height offset '{heightOffset}' not found.");
+
+				PlayEffect(conn, actor, b1, (int)hOffset, b2, scale, animation.Id, f1, associatedHandle);
+			}
+
+			/// <summary>
+			/// Plays an animation effect.
+			/// </summary>
+			/// <param name="actor"></param>
+			/// <param name="b1"></param>
+			/// <param name="heightOffset"></param>
+			/// <param name="b2"></param>
+			/// <param name="scale"></param>
+			/// <param name="animationId"></param>
+			public static void PlayEffect(IZoneConnection conn, IActor actor, byte b1, int heightOffset, byte b2, float scale, int animationId, float f1 = 0, int associatedHandle = 0)
+			{
+				var packet = new Packet(Op.ZC_NORMAL);
+				packet.PutInt(NormalOp.Zone.PlayEffect);
+
+				packet.PutInt(actor.Handle);
+				packet.PutByte(b1); // Prev: 0
+				packet.PutInt(heightOffset);
+				packet.PutByte(b2); // Prev: 0
+				packet.PutFloat(scale); // Effect size Prev: 6
+				packet.PutInt(animationId);
+				packet.PutFloat(f1);
+				packet.PutInt(associatedHandle);
+
+				conn.Send(packet);
+			}
+
+			/// <summary>
+			/// Plays an animation effect.
+			/// </summary>
+			/// <param name="actor"></param>
+			/// <param name="b1"></param>
+			/// <param name="heightOffset"></param>
+			/// <param name="b2"></param>
+			/// <param name="scale"></param>
+			/// <param name="animationName"></param>
 			public static void PlayEffect(IActor actor, byte b1 = 1, string heightOffset = "BOT", byte b2 = 1, float scale = 1, string animationName = "F_pc_class_change", float f1 = 0, int associatedHandle = 0)
 			{
 				if (!ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName, out var animation))

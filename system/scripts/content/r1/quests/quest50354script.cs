@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50354)]
 public class Quest50354Script : QuestScript
@@ -55,7 +56,7 @@ public class Quest50354Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("ABBEY22_4_SUBQ11_SUCC1");
-		await dialog.Msg("EffectLocalNPC/ABBEY22_4_SUBQ11_FLURRY/F_buff_basic028_violet_line/1/BOT");
+		ZoneServer.Instance.World.FindNPC("ABBEY22_4_SUBQ11_FLURRY")?.PlayEffectLocal(character.Connection, "F_buff_basic028_violet_line", 1f, "BOT");
 		dialog.HideNPC("ABBEY22_4_SUBQ11_FLURRY");
 		dialog.UnHideNPC("ABBEY225_FLURRY1");
 		character.Quests.Complete(this.QuestId);

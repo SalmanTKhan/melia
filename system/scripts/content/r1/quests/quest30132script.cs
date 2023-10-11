@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30132)]
 public class Quest30132Script : QuestScript
@@ -63,15 +64,10 @@ public class Quest30132Script : QuestScript
 		{
 			character.Inventory.RemoveItem("ORCHARD_34_1_SQ_3_ITEM", 1);
 			await dialog.Msg("ORCHARD_34_1_SQ_3_succ");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("ORCHARD_34_1_SQ_2_OBJ_2_1");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("ORCHARD_34_1_SQ_2_OBJ_2_2");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("ORCHARD_34_1_SQ_2_OBJ_2_3");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("ORCHARD_34_1_SQ_2_OBJ_2_4");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("ORCHARD_34_1_SQ_2_OBJ_2_5");
 			character.Quests.Complete(this.QuestId);
 		}

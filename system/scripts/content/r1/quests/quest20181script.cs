@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20181)]
 public class Quest20181Script : QuestScript
@@ -42,7 +43,7 @@ public class Quest20181Script : QuestScript
 		switch (await dialog.Select("ROKAS29_MQ3_select01", "ROKAS29_MQ3", "Go to where the epitaph is", "I can only help so much"))
 		{
 			case 1:
-				await dialog.Msg("EffectLocalNPC/ROKAS29_MQ_REXITHER3/F_pc_warp_circle/1/BOT");
+				ZoneServer.Instance.World.FindNPC("ROKAS29_MQ_REXITHER3")?.PlayEffectLocal(character.Connection, "F_pc_warp_circle", 1f, "BOT");
 				dialog.HideNPC("ROKAS29_MQ_REXITHER3");
 				await dialog.Msg("FadeOutIN/2000");
 				character.Quests.Start(this.QuestId);

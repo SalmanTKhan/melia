@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(8335)]
 public class Quest8335Script : QuestScript
@@ -61,7 +62,7 @@ public class Quest8335Script : QuestScript
 		dialog.HideNPC("KATYN18_MAIN_OWL");
 		dialog.UnHideNPC("KATYN18_MAIN_OWL_2");
 		await dialog.Msg("KATYN18_MQ_29_03");
-		await dialog.Msg("EffectLocalNPC/KATYN18_MQ_29_TRACK/mon_foot_smoke_3/2.5");
+		ZoneServer.Instance.World.FindNPC("KATYN18_MQ_29_TRACK")?.PlayEffectLocal(character.Connection, "mon_foot_smoke_3");
 		dialog.HideNPC("KATYN18_MQ_29_TRACK");
 		character.Quests.Complete(this.QuestId);
 

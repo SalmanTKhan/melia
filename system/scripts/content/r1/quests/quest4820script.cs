@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(4820)]
 public class Quest4820Script : QuestScript
@@ -55,7 +56,7 @@ public class Quest4820Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("KATYN13_1_Q2_14");
-		await dialog.Msg("EffectLocalNPC/KATYN13_1_OWLJUNIOR1/F_light018/1/MID");
+		ZoneServer.Instance.World.FindNPC("KATYN13_1_OWLJUNIOR1")?.PlayEffectLocal(character.Connection, "F_light018", 1f, "MID");
 		// Func/SCR_KATYN13_1_TO_OWLJUNIOR1_MON;
 		character.Quests.Complete(this.QuestId);
 

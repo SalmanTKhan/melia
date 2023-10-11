@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80046)]
 public class Quest80046Script : QuestScript
@@ -50,7 +51,7 @@ public class Quest80046Script : QuestScript
 			case 1:
 				await dialog.Msg("NPCAin/ORCHARD324_LADA/IDLE/0");
 				await Task.Delay(1000);
-				await dialog.Msg("EffectLocal/F_buff_basic025_white_line");
+				character.PlayEffectLocal("F_buff_basic025_white_line");
 				character.Quests.Start(this.QuestId);
 				character.Tracks.Start(this.TrackData);
 				break;

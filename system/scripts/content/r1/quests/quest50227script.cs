@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50227)]
 public class Quest50227Script : QuestScript
@@ -64,18 +65,12 @@ public class Quest50227Script : QuestScript
 		if (character.Inventory.HasItem("BRACKEN434_SUBQ6_ITEM1", 12))
 		{
 			character.Inventory.RemoveItem("BRACKEN434_SUBQ6_ITEM1", 12);
-			await dialog.Msg("EffectLocalNPC/BRACKEN434_SUB6_NPC2/F_burstup036_fire/0.3/BOT");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/BRACKEN434_SUB6_NPC1/F_burstup036_fire/0.3/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("BRACKEN434_SUB6_NPC2")?.PlayEffectLocal(character.Connection, "F_burstup036_fire", 0.3f, "BOT");
+			ZoneServer.Instance.World.FindNPC("BRACKEN434_SUB6_NPC1")?.PlayEffectLocal(character.Connection, "F_burstup036_fire", 0.3f, "BOT");
 			dialog.HideNPC("BRACKEN434_SUB6_NPC2");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("BRACKEN434_SUB6_NPC1");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("BRACKEN43_4_SQ6_SUCC1");
-			character.Quests.Complete(this.QuestId);
 			// Func/BRACKEN434_SUBQ6_COMPLETE;
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("BRACKEN43_4_SQ6_SUCC2");
 			character.Quests.Complete(this.QuestId);
 		}

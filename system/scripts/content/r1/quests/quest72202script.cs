@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(72202)]
 public class Quest72202Script : QuestScript
@@ -54,6 +55,7 @@ public class Quest72202Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
+		//SCR_STARTOWER_91_MQ_40_END
 		// Func/SCR_STARTOWER_90_SUB_DEVICE_UNLOCK_EFFECT;
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "You've disarmed all Protective Devices!{nl}Report to Byle.");
 		character.Quests.Complete(this.QuestId);

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30120)]
 public class Quest30120Script : QuestScript
@@ -65,13 +66,9 @@ public class Quest30120Script : QuestScript
 			character.Inventory.RemoveItem("JOB_PLAGUEDOCTOR71_ITEM3", 1);
 			character.Inventory.RemoveItem("JOB_PLAGUEDOCTOR71_ITEM4", 1);
 			await dialog.Msg("JOB_PLAGUEDOCTOR_7_1_succ");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PLAGUEDOCTOR71_NPC1");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PLAGUEDOCTOR71_NPC2");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PLAGUEDOCTOR71_NPC3");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("JOB_PLAGUEDOCTOR71_NPC4");
 			character.Quests.Complete(this.QuestId);
 		}

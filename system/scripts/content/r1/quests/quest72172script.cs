@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(72172)]
 public class Quest72172Script : QuestScript
@@ -59,7 +60,8 @@ public class Quest72172Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/MASTER_ICEMAGE/archer_buff_skl_Recuperate_circle/1.5/BOT");
+		//SCR_MASTER_ICEMAGE2_2_GIVE_BOOK
+		ZoneServer.Instance.World.FindNPC("MASTER_ICEMAGE")?.PlayEffectLocal(character.Connection, "archer_buff_skl_Recuperate_circle", 1.5f, "BOT");
 		await dialog.Msg("MASTER_CRYOMANCER2_2_DLG1");
 		await dialog.Msg("FadeOutIN/1000");
 		await dialog.Msg("MASTER_CRYOMANCER2_2_DLG3");

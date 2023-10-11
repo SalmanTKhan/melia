@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(17011)]
 public class Quest17011Script : QuestScript
@@ -62,7 +63,7 @@ public class Quest17011Script : QuestScript
 
 		await dialog.Msg("FTOWER42_SQ_05_COMP");
 		await dialog.Msg("NPCChat/FTOWER42_SQ_05/속박에서 풀려난다..");
-		await dialog.Msg("EffectLocalNPC/FTOWER42_SQ_05/F_archer_scarecrow_shot_smoke/2/MID");
+		ZoneServer.Instance.World.FindNPC("FTOWER42_SQ_05")?.PlayEffectLocal(character.Connection, "F_archer_scarecrow_shot_smoke", 2f, "MID");
 		dialog.HideNPC("FTOWER42_SQ_05");
 		character.Quests.Complete(this.QuestId);
 

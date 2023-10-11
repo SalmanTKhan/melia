@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(40570)]
 public class Quest40570Script : QuestScript
@@ -52,7 +53,7 @@ public class Quest40570Script : QuestScript
 			return HookResult.Skip;
 
 		// Func/SCR_REMAINS37_2_SQ_010_SHOVEL_ANIMATION;
-		await dialog.Msg("EffectLocalNPC/REMAINS37_2_HEAL/I_smoke014_3/1/BOT");
+		ZoneServer.Instance.World.FindNPC("REMAINS37_2_HEAL")?.PlayEffectLocal(character.Connection, "I_smoke014_3", 1f, "BOT");
 		dialog.HideNPC("REMAINS37_2_HEAL");
 		await dialog.Msg("FadeOutIN/2500");
 		dialog.UnHideNPC("REMAINS37_2_MT01");

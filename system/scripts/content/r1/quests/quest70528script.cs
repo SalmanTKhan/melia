@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(70528)]
 public class Quest70528Script : QuestScript
@@ -63,13 +64,9 @@ public class Quest70528Script : QuestScript
 		{
 			character.Inventory.RemoveItem("PILGRIM41_2_SQ09_ITEM", 30);
 			await dialog.Msg("PILGRIM412_SQ_09_succ1");
-			character.Quests.Complete(this.QuestId);
 			// Func/SCR_PILGRIM412_SQ_09_RUN;
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("PILGRIM412_SQ_09_succ2");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("PILGRIM412_SQ_07");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
 			character.Quests.Complete(this.QuestId);
 		}

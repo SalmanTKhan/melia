@@ -464,5 +464,12 @@ namespace Melia.Zone.World
 		/// <param name="map"></param>
 		public void AddMap(Map map)
 			=> this.Maps.Add(map);
+
+		public Npc FindNPC(string dialogName)
+		{
+			this.NPCs.TryGetValue(dialogName, out var npc);
+
+			return npc;
+		}
 	}
 }

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50336)]
 public class Quest50336Script : QuestScript
@@ -66,15 +67,10 @@ public class Quest50336Script : QuestScript
 		{
 			character.Inventory.RemoveItem("WTREES22_3_SUBQ2_ITEM1", 35);
 			await dialog.Msg("WTREES22_3_SUBQ2_SUCC1");
-			character.Quests.Complete(this.QuestId);
 			// Func/SCR_WTREES22_3_SUBQ2_COMP;
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("WTREES22_3_SUBQ2_SUCC2");
-			character.Quests.Complete(this.QuestId);
 			dialog.UnHideNPC("WTREES22_3_SUBQ1_NPC2");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("WTREES22_3_SUBQ1_NPC1");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("FadeOutIN/1000");
 			character.Quests.Complete(this.QuestId);
 		}

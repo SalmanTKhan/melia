@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(72197)]
 public class Quest72197Script : QuestScript
@@ -61,6 +62,7 @@ public class Quest72197Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
+		//SCR_D_STARTOWER_90_MQ_70_END
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The traps are no longer working after the Defensive Devices were shut down.{nl}Now go and talk to Elder Adaux.");
 		// Func/SCR_STARTOWER_DEFENCE_DEVICE_UNLOCK_EFFECT;
 		character.Quests.Complete(this.QuestId);

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30181)]
 public class Quest30181Script : QuestScript
@@ -59,7 +60,7 @@ public class Quest30181Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/PRISON_81_OBJ_6/F_light082_line_red/1.8/MID");
+		ZoneServer.Instance.World.FindNPC("PRISON_81_OBJ_6")?.PlayEffectLocal(character.Connection, "F_light082_line_red", 1.8f, "MID");
 		await dialog.Msg("NPCAin/PRISON_81_OBJ_6/STD/1");
 		await dialog.Msg("CameraShockWaveLocal/2/99999/50/2/50/0");
 		// Func/SCR_PRISON_81_MQ_8_SUCC;

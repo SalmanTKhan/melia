@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(1165)]
 public class Quest1165Script : QuestScript
@@ -35,9 +36,16 @@ public class Quest1165Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The Legend Card slot was unlocked by the power of the goddesses!");
-		// Func/LEGEND_CARD_LIFT_SUCC_FUNC;
-		character.Quests.Complete(this.QuestId);
+		//TX_LEGEND_CARD_LIFT_FUNC
+		if (character.EtcProperties.GetFloat(PropertyName.IS_LEGEND_CARD_OPEN) != 1)
+		{
+			character.SetEtcProperty(PropertyName.IS_LEGEND_CARD_OPEN, 1);
+			character.ModifyAccountProperty(PropertyName.LEGEND_CARD_LIFT_TEAM_COMPLETE_COUNT, 1);
+			character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The Legend Card slot was unlocked by the power of the goddesses!");
+			// Func/LEGEND_CARD_LIFT_SUCC_FUNC;
+			character.AddonMessage(AddonMessage.MSG_PLAY_LEGENDCARD_OPEN_EFFECT);
+			character.Quests.Complete(this.QuestId);
+		}
 
 		return HookResult.Break;
 	}

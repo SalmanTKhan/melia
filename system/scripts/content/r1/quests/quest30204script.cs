@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30204)]
 public class Quest30204Script : QuestScript
@@ -52,7 +53,7 @@ public class Quest30204Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/PRISON_82_SQ_OBJ_2/F_light089_green/0.3/BOT");
+		ZoneServer.Instance.World.FindNPC("PRISON_82_SQ_OBJ_2")?.PlayEffectLocal(character.Connection, "F_light089_green", 0.3f, "BOT");
 		// Func/SCR_PRISON_82_SQ_2_SUCC;
 		character.Quests.Complete(this.QuestId);
 

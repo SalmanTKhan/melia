@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(90097)]
 public class Quest90097Script : QuestScript
@@ -63,10 +64,8 @@ public class Quest90097Script : QuestScript
 		{
 			character.Inventory.RemoveItem("MAPLE_25_3_SQ_30_ITEM", 5);
 			await dialog.Msg("MAPLE_25_3_SQ_30_SU");
-			character.Quests.Complete(this.QuestId);
 			await dialog.Msg("NPCAin/MAPLE_25_3_LINA/ATK/0");
-			character.Quests.Complete(this.QuestId);
-			await dialog.Msg("EffectLocalNPC/MAPLE_25_3_LINA/F_buff_basic023_red_fire/2/BOT");
+			ZoneServer.Instance.World.FindNPC("MAPLE_25_3_LINA")?.PlayEffectLocal(character.Connection, "F_buff_basic023_red_fire", 2f, "BOT");
 			character.Quests.Complete(this.QuestId);
 		}
 

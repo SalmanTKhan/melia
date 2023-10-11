@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(20312)]
 public class Quest20312Script : QuestScript
@@ -63,7 +64,7 @@ public class Quest20312Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/CATHEDRAL54MQ02_OBJECT/F_pc_making_finish_white/1/BOT");
+		ZoneServer.Instance.World.FindNPC("CATHEDRAL54MQ02_OBJECT")?.PlayEffectLocal(character.Connection, "F_pc_making_finish_white", 1f, "BOT");
 		dialog.HideNPC("CATHEDRAL54MQ02_OBJECT");
 		character.Quests.Complete(this.QuestId);
 

@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(19740)]
 public class Quest19740Script : QuestScript
@@ -54,9 +55,9 @@ public class Quest19740Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("EffectLocalNPC/PILGRIM51_SR02/I_cleric_devinestigma_force_dark/1/BOT");
+		ZoneServer.Instance.World.FindNPC("PILGRIM51_SR02")?.PlayEffectLocal(character.Connection, "I_cleric_devinestigma_force_dark", 1f, "BOT");
 		await Task.Delay(1000);
-		await dialog.Msg("EffectLocalNPC/PILGRIM51_SR02/F_burstup001_blue/0.7/BOT");
+		ZoneServer.Instance.World.FindNPC("PILGRIM51_SR02")?.PlayEffectLocal(character.Connection, "F_burstup001_blue", 0.7f, "BOT");
 		await Task.Delay(500);
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "Purified the Sanctum!");
 		character.Quests.Complete(this.QuestId);

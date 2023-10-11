@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(80154)]
 public class Quest80154Script : QuestScript
@@ -48,8 +49,8 @@ public class Quest80154Script : QuestScript
 			case 1:
 				// Func/LIMESTONE_52_4_REENTER_RUN;
 				character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
-					await dialog.Msg("LIMESTONE_52_4_MQ_6_ST01");
-					await dialog.Msg("메데나와 함께 여신을 구하겠다고 한다");
+				await dialog.Msg("LIMESTONE_52_4_MQ_6_ST01");
+				await dialog.Msg("메데나와 함께 여신을 구하겠다고 한다");
 				await dialog.Msg("LIMESTONE_52_4_MQ_6_AG01");
 				await dialog.Msg("LIMESTONE_52_4_MQ_6_AG02");
 				await dialog.Msg("LIMESTONE_52_4_MQ_6_AG03");

@@ -467,6 +467,11 @@
 		/// Necromancer Corpse Parts Update
 		/// </summary>
 		public static readonly string UPDATE_NECRONOMICON_UI = "UPDATE_NECRONOMICON_UI";
+
+		/// <summary>
+		/// An effect played when you unlock Legendary Card Slot?
+		/// </summary>
+		public const string MSG_PLAY_LEGENDCARD_OPEN_EFFECT = "MSG_PLAY_LEGENDCARD_OPEN_EFFECT";
 	}
 
 	/// <summary>
@@ -680,11 +685,6 @@
 		/// Magnum Opus
 		/// </summary>
 		public const string PUZZLE_COMPLETE = "PUZZLE_COMPLETE()";
-
-		/// <summary>
-		/// An effect played when you unlock Legendary Card Slot?
-		/// </summary>
-		public const string MSG_PLAY_LEGENDCARD_OPEN_EFFECT = "MSG_PLAY_LEGENDCARD_OPEN_EFFECT";
 	}
 
 	public static class CustomDialog

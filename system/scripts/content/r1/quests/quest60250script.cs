@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(60250)]
 public class Quest60250Script : QuestScript
@@ -62,7 +63,6 @@ public class Quest60250Script : QuestScript
 		{
 			character.Inventory.RemoveItem("FANTASYLIB482_MQ_3_ITEM", 8);
 			await dialog.Msg("FANTASYLIB482_MQ_3_3");
-			character.Quests.Complete(this.QuestId);
 			dialog.HideNPC("FANTASYLIB482_MQ_3_NPC");
 			character.Quests.Complete(this.QuestId);
 		}

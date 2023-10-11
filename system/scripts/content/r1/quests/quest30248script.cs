@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30248)]
 public class Quest30248Script : QuestScript
@@ -53,7 +54,7 @@ public class Quest30248Script : QuestScript
 			return HookResult.Skip;
 
 		character.AddonMessage(AddonMessage.NOTICE_Dm_Clear, "The Secondary Core Protection Device has been disarmed.{nl}Now, on to the Tertiary Core Protection Device.");
-		await dialog.Msg("EffectLocalNPC/CASTLE_20_1_OBJ_6/F_light082_line_red/2.0/BOT");
+		ZoneServer.Instance.World.FindNPC("CASTLE_20_1_OBJ_6")?.PlayEffectLocal(character.Connection, "F_light082_line_red", 2.0f, "BOT");
 		dialog.HideNPC("CASTLE_20_1_OBJ_6_1");
 		dialog.HideNPC("CASTLE_20_1_OBJ_6_2");
 		dialog.HideNPC("CASTLE_20_1_OBJ_6_3");

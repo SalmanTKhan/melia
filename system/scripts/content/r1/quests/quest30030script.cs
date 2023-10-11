@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(30030)]
 public class Quest30030Script : QuestScript
@@ -64,7 +65,7 @@ public class Quest30030Script : QuestScript
 			return HookResult.Skip;
 
 		await dialog.Msg("CATACOMB_02_SQ_07_succ");
-		await dialog.Msg("EffectLocalNPC/CATACOMB_02_NPC_01/F_light003_blue/0.5/MID");
+		ZoneServer.Instance.World.FindNPC("CATACOMB_02_NPC_01")?.PlayEffectLocal(character.Connection, "F_light003_blue", 0.5f, "MID");
 		dialog.HideNPC("CATACOMB_02_NPC_01");
 		character.Quests.Complete(this.QuestId);
 

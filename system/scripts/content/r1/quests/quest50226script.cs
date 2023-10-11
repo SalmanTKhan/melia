@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
+using Melia.Shared.Tos.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
@@ -12,7 +14,6 @@ using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
 using Melia.Zone.World.Quests.Rewards;
-using Melia.Shared.Tos.Const;
 
 [QuestScript(50226)]
 public class Quest50226Script : QuestScript
@@ -61,8 +62,7 @@ public class Quest50226Script : QuestScript
 		if (character.Inventory.HasItem("BRACKEN434_SUBQ5_ITEM", 12))
 		{
 			character.Inventory.RemoveItem("BRACKEN434_SUBQ5_ITEM", 12);
-			await dialog.Msg("EffectLocalNPC/BRACKEN434_SUBQ1_NPC3/F_pc_drug_staup/1/BOT");
-			character.Quests.Complete(this.QuestId);
+			ZoneServer.Instance.World.FindNPC("BRACKEN434_SUBQ1_NPC3")?.PlayEffectLocal(character.Connection, "F_pc_drug_staup", 1f, "BOT");
 			await dialog.Msg("BRACKEN43_4_SQ5_SUCC1");
 			character.Quests.Complete(this.QuestId);
 		}
