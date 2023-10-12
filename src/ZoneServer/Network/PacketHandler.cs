@@ -357,10 +357,13 @@ namespace Melia.Zone.Network
 		{
 			var unkByte = packet.GetByte();
 
-			Log.Info("User '{0}' is logging out.", conn.Account.Name);
+			if (conn.LoggedIn)
+			{
+				Log.Info("User '{0}' is logging out.", conn.Account.Name);
 
-			Send.ZC_SAVE_INFO(conn);
-			Send.ZC_LOGOUT_OK(conn);
+				Send.ZC_SAVE_INFO(conn);
+				Send.ZC_LOGOUT_OK(conn);
+			}
 		}
 
 		/// <summary>
@@ -1750,7 +1753,7 @@ namespace Melia.Zone.Network
 
 					var combat = character.Components.Get<CombatComponent>();
 
-					Send.ZC_ADDON_MSG(conn.SelectedCharacter, "GAMEEXIT_TIMER_END", 0, "None");
+					Send.ZC_ADDON_MSG(conn.SelectedCharacter, AddonMessage.GAMEEXIT_TIMER_END, 0, "None");
 					break;
 				default:
 					Log.Warning("CZ_RUN_GAMEEXIT_TIMER: User '{0}' tried to transfer to '{1}' which is an unknown state.", conn.Account.Name, destination);

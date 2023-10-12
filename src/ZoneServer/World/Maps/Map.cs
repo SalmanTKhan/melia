@@ -20,7 +20,7 @@ namespace Melia.Zone.World.Maps
 {
 	public class Map : IUpdateable
 	{
-		private int _layer = 1;
+		private int _layer = DefaultLayer;
 
 		/// <summary>
 		/// The default layer for every map.
@@ -770,7 +770,10 @@ namespace Melia.Zone.World.Maps
 			lock (_characters)
 			{
 				foreach (var character in _characters.Values)
-					character.Connection.Send(packet);
+				{
+					if (character.Connection.LoggedIn)
+						character.Connection.Send(packet);
+				}
 			}
 		}
 

@@ -368,7 +368,7 @@ namespace Melia.Zone.World.Actors.Characters.Components
 				this.AddStack(item, addType, false, inventoryType, notificationDelay);
 			}
 
-			Send.ZC_OBJECT_PROPERTY(this.Character, "NowWeight");
+			Send.ZC_OBJECT_PROPERTY(this.Character, PropertyName.NowWeight);
 
 			// Temp fix. The amounts on item stacks that items were added
 			// to are sometimes wrong, a full updates fixes that. Maybe

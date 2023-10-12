@@ -2,7 +2,10 @@
 using Melia.Shared.Data.Database;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Tos.Const;
+using Melia.Zone.Network;
 using Melia.Zone.Scripting;
+using Melia.Zone.World.Actors.CombatEntities.Components;
+using Yggdrasil.Logging;
 
 namespace Melia.Zone.World.Actors.Monsters
 {
@@ -34,6 +37,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		{
 			this.Monster = monster;
 			this.AddDefaultProperties();
+			this.InitEvents();
 		}
 
 		/// <summary>
@@ -94,6 +98,24 @@ namespace Melia.Zone.World.Actors.Monsters
 
 			this.AutoUpdateMax(PropertyName.HP, PropertyName.MHP);
 			this.AutoUpdateMax(PropertyName.SP, PropertyName.MSP);
+		}
+
+		/// <summary>
+		/// Sets up event subscriptions, to react to actions of the
+		/// monster with property updates.
+		/// </summary>
+		private void InitEvents()
+		{
+			this.Monster.CombatState.CombatStateChanged += this.CombatStateChanged;
+		}
+
+		/// <summary>
+		/// Recalculates and updates HP recovery time properties.
+		/// </summary>
+		/// <param name="mob"></param>
+		private void CombatStateChanged(ICombatEntity combatEntity, bool attackState)
+		{
+			this.Invalidate(PropertyName.RHPTIME);
 		}
 
 		/// <summary>

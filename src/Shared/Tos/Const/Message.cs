@@ -47,6 +47,7 @@
 		/// Used for quitting the game, transitioning from the zone to the barrack, and possibly other reasons.
 		/// </summary>
 		public const string EXPIREDITEM_ALERT_OPEN = "EXPIREDITEM_ALERT_OPEN";
+		public const string GAMEEXIT_TIMER_END = "GAMEEXIT_TIMER_END";
 
 		public const string RESET_STAT_UP = "RESET_STAT_UP";
 		public const string RESET_SKL_UP = "RESET_SKL_UP";
@@ -253,13 +254,13 @@
 		/// Show Crystal in top left HUD, used during raids
 		/// param: unlimited
 		/// </summary>
-		public static string SHOW_SOUL_CRISTAL = "SHOW_SOUL_CRISTAL";
+		public const string SHOW_SOUL_CRISTAL = "SHOW_SOUL_CRISTAL";
 
 		/// <summary>
 		/// ? Pre-raid starting npc
 		/// params: irredians_level
 		/// </summary>
-		public static string STYLE_INFO_UPDATE = "STYLE_INFO_UPDATE";
+		public const string STYLE_INFO_UPDATE = "STYLE_INFO_UPDATE";
 
 		/// <summary>
 		/// Params set by server?
@@ -300,76 +301,76 @@
 		/// <summary>
 		/// Free Random Option
 		/// </summary>
-		public static readonly string MSG_SUCCESS_FREE_RANDOM_OPTION = "MSG_SUCCESS_FREE_RANDOM_OPTION";
+		public const string MSG_SUCCESS_FREE_RANDOM_OPTION = "MSG_SUCCESS_FREE_RANDOM_OPTION";
 
 		/// <summary>
 		/// After item is appraised
 		/// </summary>
 		/// <remarks>Parameter: Equip</remarks>
-		public static readonly string UPDATE_ITEM_APPRAISAL = "UPDATE_ITEM_APPRAISAL";
+		public const string UPDATE_ITEM_APPRAISAL = "UPDATE_ITEM_APPRAISAL";
 
 		/// <summary>
 		/// Market Register an Item
 		/// </summary>
-		public static string MARKET_REGISTER = "MARKET_REGISTER";
+		public const string MARKET_REGISTER = "MARKET_REGISTER";
 
 		/// <summary>
 		/// Open Dialog for Equipment
 		/// </summary>
-		public static string OPEN_DLG_REPAIR = "OPEN_DLG_REPAIR";
+		public const string OPEN_DLG_REPAIR = "OPEN_DLG_REPAIR";
 
 		/// <summary>
 		/// After equipment is repaired
 		/// </summary>
-		public static string UPDATE_DLG_REPAIR = "UPDATE_DLG_REPAIR";
+		public const string UPDATE_DLG_REPAIR = "UPDATE_DLG_REPAIR";
 
 		/// <summary>
 		/// After equipment is repaired
 		/// Param: Equip
 		/// </summary>
-		public static string UPDATE_ITEM_REPAIR = "UPDATE_ITEM_REPAIR";
+		public const string UPDATE_ITEM_REPAIR = "UPDATE_ITEM_REPAIR";
 
 		/// <summary>
 		/// Open Dialog for Socket Management
 		/// </summary>
-		public static readonly string DO_OPEN_MANAGE_GEM_UI = "DO_OPEN_MANAGE_GEM_UI";
+		public const string DO_OPEN_MANAGE_GEM_UI = "DO_OPEN_MANAGE_GEM_UI";
 
 		/// <summary>
 		/// After equipment is appraised from NPC
 		/// Param: Equip
 		/// </summary>
-		public static string SUCCESS_APPRALSAL = "SUCCESS_APPRALSAL";
+		public const string SUCCESS_APPRALSAL = "SUCCESS_APPRALSAL";
 
 		/// <summary>
 		/// Episode Cleared
 		/// </summary>
-		public static string EPISODE_REWARD_CLEAR = "EPISODE_REWARD_CLEAR";
+		public const string EPISODE_REWARD_CLEAR = "EPISODE_REWARD_CLEAR";
 
 		/// <summary>
 		/// Open Collection UI
 		/// </summary>
-		public static string COLLECTION_UI_OPEN = "COLLECTION_UI_OPEN";
+		public const string COLLECTION_UI_OPEN = "COLLECTION_UI_OPEN";
 
 		/// <summary>
 		/// Show tutorial help for dialog activation via spacebar.
 		/// </summary>
-		public static string DIALOG_SPACE_TUTORIAL = "DIALOG_SPACE_TUTORIAL";
+		public const string DIALOG_SPACE_TUTORIAL = "DIALOG_SPACE_TUTORIAL";
 
 		/// <summary>
 		/// Add Chat Emoticon?
 		/// </summary>
-		public static string ADD_CHAT_EMOTICON = "ADD_CHAT_EMOTICON";
+		public const string ADD_CHAT_EMOTICON = "ADD_CHAT_EMOTICON";
 
 		/// <summary>
 		/// Show Contents Alert UI
 		/// Used with Goddess Gear Equip
 		/// </summary>
-		public static string SHOW_CONTENTS_ALERT_UI = "SHOW_CONTENTS_ALERT_UI";
+		public const string SHOW_CONTENTS_ALERT_UI = "SHOW_CONTENTS_ALERT_UI";
 
 		/// <summary>
 		/// Used in exchanging items for content points
 		/// </summary>
-		public static string ITEM_POINT_EXTRACTOR_EXECUTE = "ITEM_POINT_EXTRACTOR_EXECUTE";
+		public const string ITEM_POINT_EXTRACTOR_EXECUTE = "ITEM_POINT_EXTRACTOR_EXECUTE";
 
 		/// <summary>
 		/// Equip item list update?
@@ -466,7 +467,7 @@
 		/// <summary>
 		/// Necromancer Corpse Parts Update
 		/// </summary>
-		public static readonly string UPDATE_NECRONOMICON_UI = "UPDATE_NECRONOMICON_UI";
+		public const string UPDATE_NECRONOMICON_UI = "UPDATE_NECRONOMICON_UI";
 
 		/// <summary>
 		/// An effect played when you unlock Legendary Card Slot?

@@ -253,6 +253,11 @@ namespace Melia.Zone.World.Actors.Monsters
 		public EffectsComponent Effects { get; }
 
 		/// <summary>
+		/// Monster's combat state.
+		/// </summary>
+		public CombatComponent CombatState { get; }
+
+		/// <summary>
 		/// Return the monster's temporary variables.
 		/// </summary>
 		public Variables Vars { get; } = new Variables();
@@ -266,7 +271,7 @@ namespace Melia.Zone.World.Actors.Monsters
 			this.MonsterType = type;
 
 			this.Components.Add(this.Buffs = new BuffComponent(this));
-			this.Components.Add(new CombatComponent(this));
+			this.Components.Add(this.CombatState = new CombatComponent(this));
 			this.Components.Add(new CooldownComponent(this));
 			this.Components.Add(new EffectsComponent(this));
 			this.Components.Add(new RecoveryComponent(this));
@@ -320,6 +325,7 @@ namespace Melia.Zone.World.Actors.Monsters
 			if (this.IsDead)
 				return true;
 
+			this.Components.Get<CombatComponent>().SetAttackState(true);
 			this.Properties.Modify(PropertyName.HP, -damage);
 			this.HpChangeCounter++;
 

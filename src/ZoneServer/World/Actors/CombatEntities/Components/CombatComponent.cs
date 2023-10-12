@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Melia.Shared.Tos.Const;
+using Melia.Zone.Buffs;
 using Melia.Zone.Network;
 using Yggdrasil.Logging;
 using Yggdrasil.Scheduling;
@@ -31,6 +33,11 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		public DateTime LastCombatTime { get; private set; }
 
 		/// <summary>
+		/// Raised when combat state changes.
+		/// </summary>
+		public event Action<ICombatEntity, bool> CombatStateChanged;
+
+		/// <summary>
 		/// Creates new component for entity.
 		/// </summary>
 		/// <param name="entity"></param>
@@ -42,16 +49,21 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// Sets the entity's attack state.
 		/// </summary>
 		/// <param name="state"></param>
-		public void SetAttackState(bool inAttackState)
+		public void SetAttackState(bool state)
 		{
-			this.AttackState = inAttackState;
+			var prevState = this.AttackState;
+
+			this.AttackState = state;
 			this.LastCombatTime = DateTime.Now;
 
-			Send.ZC_PC_ATKSTATE(this.Entity, inAttackState);
+			Send.ZC_PC_ATKSTATE(this.Entity, state);
+
+			if (prevState != state)
+				CombatStateChanged?.Invoke(this.Entity, state);
 		}
 
 		/// <summary>
-		/// 
+		/// Component update
 		/// </summary>
 		/// <param name="elapsed"></param>
 		/// <exception cref="NotImplementedException"></exception>
@@ -103,16 +115,14 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		{
 			lock (_hitLock)
 			{
-				foreach (var kv in _damageTaken.OrderByDescending(a => a.Value))
+				foreach (var handle in from kv in _damageTaken.OrderByDescending(a => a.Value)
+									   let handle = kv.Key
+									   select handle)
 				{
-					var handle = kv.Key;
-
 					if (!this.Entity.Map.TryGetCombatEntity(handle, out var attacker))
 						continue;
-
 					if (attacker.IsDead)
 						continue;
-
 					return attacker;
 				}
 			}

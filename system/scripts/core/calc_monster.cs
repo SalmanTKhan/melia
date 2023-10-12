@@ -415,9 +415,10 @@ public class MonsterCalculationsFunctionsScript : GeneralScript
 	[ScriptableFunction]
 	public float SCR_Get_MON_RHPTIME(Mob monster)
 	{
-		if (!monster.Components.Get<CombatComponent>()?.AttackState ?? false)
-			return 500;
-		return 10000;
+		if (monster.CombatState.AttackState)
+			return 20000;
+		return 500;
+
 	}
 
 	[ScriptableFunction]
