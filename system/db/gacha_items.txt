@@ -200,4 +200,6 @@
 { id: 226, name: "Gacha_7TH_010_TWN", price: 300, count: 11, itemName: "Gacha_7TH_010_TWN", group: "CUBE", gachaType: "hair", rewardGroup: "Gacha_7TH_001_TWN", gachaLog: "Gacha_7TH_001_TWN", consumeType: "CUBE", openCountAllow: false },
 { id: 231, name: "Gacha_2023_W_Resale_001", price: 37, count: 1, itemName: "Gacha_2023_W_Resale_001", group: "CUBE", gachaType: "hair", rewardGroup: "Gacha_2023_W_Resale_001", gachaLog: "Gacha_2023_W_Resale_001", consumeType: "CUBE", openCountAllow: true },
 { id: 232, name: "Gacha_2023_W_Resale_010", price: 370, count: 11, itemName: "Gacha_2023_W_Resale_010", group: "CUBE", gachaType: "hair", rewardGroup: "Gacha_2023_W_Resale_001", gachaLog: "Gacha_2023_W_Resale_001", consumeType: "CUBE", openCountAllow: true },
+{ id: 233, name: "Gacha_Halloween_Animals_Resale_001", price: 37, count: 1, itemName: "Gacha_Halloween_Animals_Resale_001", group: "CUBE", gachaType: "hair", rewardGroup: "Gacha_Halloween_Animals_Resale_001", gachaLog: "Gacha_Halloween_Animals_Resale_001", consumeType: "CUBE", openCountAllow: true },
+{ id: 234, name: "Gacha_Halloween_Animals_Resale_010", price: 370, count: 11, itemName: "Gacha_Halloween_Animals_Resale_010", group: "CUBE", gachaType: "hair", rewardGroup: "Gacha_Halloween_Animals_Resale_001", gachaLog: "Gacha_Halloween_Animals_Resale_001", consumeType: "CUBE", openCountAllow: true },
 ]

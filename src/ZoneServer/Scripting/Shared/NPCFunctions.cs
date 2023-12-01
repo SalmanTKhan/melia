@@ -1,19 +1,17 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Melia.Shared.Tos.Const;
-using Melia.Shared.World;
+using Melia.Shared.Tos.Properties;
 using Melia.Shared.Util;
+using Melia.Shared.World;
+using Melia.Zone.Buffs;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting.Dialogues;
+using Melia.Zone.World.Actors;
+using Melia.Zone.World.Actors.Characters.Components;
 using Melia.Zone.World.Actors.Monsters;
 using Melia.Zone.World.Items;
 using static Melia.Zone.Scripting.Shortcuts;
-using Melia.Zone.Buffs;
-using System;
-using Yggdrasil.Util;
-using Melia.Shared.Tos.Properties;
-using Melia.Zone.World.Actors;
-using Melia.Zone.World.Actors.Characters;
-using Melia.Zone.World.Actors.Characters.Components;
 
 namespace Melia.Zone.Scripting.Shared
 {
@@ -46,7 +44,7 @@ namespace Melia.Zone.Scripting.Shared
 		/// </summary>
 		/// <param name="dialog"></param>
 		/// <returns></returns>
-		[DialogFunction("GUILD_HOUSE_OBJECT")]
+		[DialogFunction("GUILD_TOWER")]
 		public static async Task GUILD_TOWER(Dialog dialog)
 		{
 			var guild = (dialog.Npc as IGuildMember)?.Guild;
@@ -80,11 +78,10 @@ namespace Melia.Zone.Scripting.Shared
 		/// <returns></returns>
 		public static async Task TREASUREBOX_LV(Dialog dialog, string className, int amount, string itemRequiredToUnlock = "")
 		{
-			if (!string.IsNullOrEmpty(itemRequiredToUnlock) && dialog.Player.RemoveItem(itemRequiredToUnlock) == 0)
+			if (!string.IsNullOrEmpty(itemRequiredToUnlock) && dialog.Player.RemoveItem(itemRequiredToUnlock) > 0)
 				return;
 			await OpenChest(dialog.Player, dialog.Npc);
 			dialog.Player.AddItem(className, amount);
-			dialog.Close();
 			await Task.Yield();
 		}
 
@@ -97,33 +94,35 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			var result = await dialog.TimeAction("!@#$Auto_KyeongBae_Jung#@!", "WORSHIP", TimeSpan.FromSeconds(1));
 			if (result == TimeActionResult.Completed)
-				dialog.ExecuteScript("INTE_WARP_OPEN_BY_NPC()");
+				await dialog.ExecuteScript("INTE_WARP_OPEN_BY_NPC()");
 		}
 
-		[DialogFunction("TEST_TP_SHOP")]
+		[DialogFunction]
 		public static async Task TEST_TP_SHOP(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("TEST_RANK")]
+		[DialogFunction]
 		public static async Task TEST_RANK(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("SKILLPOINTUP2")]
+		[DialogFunction]
 		public static async Task SKILLPOINTUP2(Dialog dialog)
 		{
-			dialog.Close();
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("IMC_GUARD")]
+		[DialogFunction]
 		public static async Task IMC_GUARD(Dialog dialog)
 		{
-			dialog.Close();
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FEDIMIAN_GRITA")]
@@ -131,7 +130,8 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("FEDIMIAN_GRITA_BASIC01");
 			await dialog.Msg("FEDIMIAN_GRITA_BASIC02");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("JOB_SQUIRE3_1_NPC")]
@@ -139,7 +139,8 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_SQUIRE3_1_NPC_BASIC01");
 			await dialog.Msg("JOB_SQUIRE3_1_NPC_BASIC03");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("WARP_C_FEDIMIAN")]
@@ -154,14 +155,16 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("FEDIMIAN_DETECTIVE_GUARD_basic03");
 			await dialog.Msg("FEDIMIAN_DETECTIVE_GUARD_basic04");
 			await dialog.Msg("FEDIMIAN_DETECTIVE_GUARD_basic05");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("CRIMINAL")]
 		public static async Task CRIMINAL(Dialog dialog)
 		{
 			await dialog.Msg("CRIMINAL_basic01");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("REMAIN39_SQ03_GIRL")]
@@ -169,34 +172,39 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("REMAIN39_SQ03_GIRL_basic01");
 			await dialog.Msg("REMAIN39_SQ03_GIRL_basic02");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("MASTER_ROGUE")]
 		public static async Task MASTER_ROGUE(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_ROGUE_BASIC01");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FED_TOOL")]
 		public static async Task FED_TOOL(Dialog dialog)
 		{
 			await dialog.Msg("FED_TOOL_BASIC01");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FED_EQUIP")]
 		public static async Task FED_EQUIP(Dialog dialog)
 		{
 			await dialog.Msg("FED_EQUIP_BASIC01");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FEDIMIAN_SIGN1")]
 		public static async Task FEDIMIAN_SIGN1(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FEDIMIAN_OLDMAN1")]
@@ -205,39 +213,45 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("FEDIMIAN_OLDMAN1_BASIC01");
 			await dialog.Msg("FEDIMIAN_OLDMAN1_3");
 
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FEDIMIAN_SIGN2")]
 		public static async Task FEDIMIAN_SIGN2(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FEDIMIAN_SIGN3")]
 		public static async Task FEDIMIAN_SIGN3(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FEDIMIAN_SIGN4")]
 		public static async Task FEDIMIAN_SIGN4(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("MASTER_HACKAPELL")]
 		public static async Task MASTER_HACKAPELL(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_HACKAPELL_basic");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("JOB_DRUID3_1_NPC")]
 		public static async Task JOB_DRUID3_1_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_DRUID3_1_NPC_basic01");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FEDIMIAN_NPC_11")]
@@ -246,7 +260,8 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("FEDIMIAN_NPC_11_basic01");
 			await dialog.Msg("FEDIMIAN_NPC_11_basic02");
 			await dialog.Msg("FEDIMIAN_NPC_11_basic03");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FEDIMIAN_NPC_12")]
@@ -254,25 +269,30 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("FEDIMIAN_NPC_12_basic01");
 			await dialog.Msg("FEDIMIAN_NPC_12_basic02");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("PILGRIM_PRE_BOARD")]
 		public static async Task PILGRIM_PRE_BOARD(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("MASTER_DOPPELSOELDNER")]
 		public static async Task MASTER_DOPPELSOELDNER(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_DOPPELSOELDNER_normal");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("BLACKSMITH_FEDIMIAN")]
 		public static async Task BLACKSMITH_FEDIMIAN(Dialog dialog)
 		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 			switch (await dialog.Select("FEDIMIAN_Smith_basic1", "@dicID_^*$ETC_20150317_004808$*^", "@dicID_^*$ITEM_20150317_002801$*^", "@dicID_^*$ETC_20150317_006116$*^", "@dicID_^*$UI_20160811_002287$*^", "@dicID_^*$SKILL_20150317_001404$*^", "@dicID_^*$ETC_20171128_030158$*^", "@dicID_^*$ETC_20171128_030159$*^", "@dicID_^*$ETC_20180629_034259$*^", "!@#$Auto_JongLyo#@!"))
 			{
 				case 5:
@@ -280,39 +300,36 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.CustomDialog(CustomDialog.APPRAISAL);
 					break;
 			}
-			dialog.Close();
 		}
 
 		[DialogFunction("MARKET_FEDIMIAN")]
 		public static async Task MARKET_FEDIMIAN(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
 		[DialogFunction("WAREHOUSE_FEDIMIAN")]
 		public static async Task WAREHOUSE_FEDIMIAN(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
 		[DialogFunction("FED_ACCESSORY")]
 		public static async Task FED_ACCESSORY(Dialog dialog)
 		{
 			await dialog.Msg("FED_ACCESSORY_Select_1");
-			dialog.Close();
 		}
 
 		[DialogFunction("SHINOBI_POTTER")]
 		public static async Task SHINOBI_POTTER(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("TP_NPC")]
+		[DialogFunction]
 		public static async Task TP_NPC(Dialog dialog)
 		{
 			await dialog.Msg("TP_NPC_basic01");
 			await dialog.Msg("TP_NPC_basic02");
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 			dialog.AddonMessage("TP_SHOP_UI_OPEN");
 		}
 
@@ -334,6 +351,7 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction("AUTO_CAHLLENGE_ENTER")]
 		public static async Task AUTO_CAHLLENGE_ENTER(Dialog dialog)
 		{
+			await Task.Yield();
 		}
 
 		[DialogFunction("FEDIMIAN_APPRAISER_NPC")]
@@ -347,50 +365,48 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MATADOR_MASTER_basic1");
 			await dialog.Msg("MATADOR_MASTER_basic2");
-			dialog.Close();
 		}
 
 		[DialogFunction("EXPLORER_ANASTAZIJA")]
 		public static async Task EXPLORER_ANASTAZIJA(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
 		[DialogFunction("NPC_JUNK_SHOP_FEDIMIAN_ORSHA")]
 		public static async Task NPC_JUNK_SHOP_FEDIMIAN_ORSHA(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("FEDIMIAN_OFFICIAL_BOARD")]
 		public static async Task FEDIMIAN_OFFICIAL_BOARD(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("EXORCIST_MASTER")]
 		public static async Task EXORCIST_MASTER(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("CHAR420_STEP321_NPC")]
 		public static async Task CHAR420_STEP321_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("CHAR420_STEP323_NPC1")]
 		public static async Task CHAR420_STEP323_NPC1(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("FEDIMIAN_TERIAVELIS")]
 		public static async Task FEDIMIAN_TERIAVELIS(Dialog dialog)
 		{
 			await dialog.Msg("NPC_TERIAVELIS_DLG1");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("OUTLAW_MASTER_W_NPC")]
@@ -399,20 +415,20 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("OUTLAW_MASTER_W_NPC_basic_1");
 			await dialog.Msg("OUTLAW_MASTER_W_NPC_basic_2");
 			await dialog.Msg("OUTLAW_MASTER_W_NPC_basic_3");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("OUTLAW_MASTER_M_NPC")]
 		public static async Task OUTLAW_MASTER_M_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("PAYAUTA_EP11_NPC_CITY_1")]
 		public static async Task PAYAUTA_EP11_NPC_CITY_1(Dialog dialog)
 		{
 			await dialog.Msg("PAYAUTA_EP11_NPC_CITY_1_basic1");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("INSTANCE_DUNGEON")]
@@ -482,24 +498,24 @@ namespace Melia.Zone.Scripting.Shared
 					}
 					break;
 			}
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		public static async Task EVENT_2006_SUMMER_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("EVENT_GODDESS_ROULETTE_NPC")]
 		public static async Task EVENT_GODDESS_ROULETTE_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("FEDIMIAN_NAUJOVES")]
 		public static async Task FEDIMIAN_NAUJOVES(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("SHOP_NPC_RAGANA_CITY_1")]
@@ -508,35 +524,35 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg(RandomElement("SHOP_NPC_RAGANA_CITY_1_basic1",
 				"SHOP_NPC_RAGANA_CITY_1_basic2",
 				"SHOP_NPC_RAGANA_CITY_1_basic3"));
-			dialog.ExecuteScript(ClientScripts.REQ_SILVER_GACHA_SHOP_OPEN);
+			await dialog.ExecuteScript(ClientScripts.REQ_SILVER_GACHA_SHOP_OPEN);
 		}
 
 		[DialogFunction("KLAPEDA_FISHING_BOARD")]
 		public static async Task KLAPEDA_FISHING_BOARD(Dialog dialog)
 		{
-			dialog.ExecuteScript(ClientScripts.FISHING_RANK_OPEN);
+			await dialog.ExecuteScript(ClientScripts.FISHING_RANK_OPEN);
 		}
 
 		[DialogFunction("FISHING_SUB_NPC")]
 		public static async Task FISHING_SUB_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		public static async Task EVENT_2006_SUMMER_CAT(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		public static async Task EVENT_2101_SUPPLY_NPC5(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("REPUTATION_QUEST_BOARD_01")]
 		public static async Task REPUTATION_QUEST_BOARD_01(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ALCHEIST_EXPERT_NPC_FEDIMIAN")]
@@ -558,7 +574,7 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.Msg("UNKNOWN_SANTUARY_GATE_INFO_CANT_1");
 					break;
 			}
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("BOUNTY_HUNT_START")]
@@ -574,22 +590,22 @@ namespace Melia.Zone.Scripting.Shared
 			switch (await dialog.Select("EP13CARE_TRADE_DLG1", "!@#$EP13CARE_TRADE1#@!", "!@#$EP13CARE_TRADE2#@!", "!@#$EP13CARE_TRADE3#@!", "!@#$EP13CARE_TRADE4#@!", "!@#$EP13CARE_TRADE5#@!", "!@#$EP13CARE_TRADE6#@!", "!@#$Auto_JongLyo#@!"))
 			{
 				case 1:
-					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_Moru");
+					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_Moru");
 					break;
 				case 2:
-					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_ExtractKit");
+					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_ExtractKit");
 					break;
 				case 3:
-					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_EnchantJewel");
+					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_EnchantJewel");
 					break;
 				case 4:
-					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_UniqueMaterial");
+					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_UniqueMaterial");
 					break;
 				case 5:
-					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_HiddenAbility");
+					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_HiddenAbility");
 					break;
 				case 6:
-					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_Vibora");
+					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "GoddessCare_Vibora");
 					break;
 			}
 		}
@@ -597,7 +613,7 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction("BLESSED_CUBE")]
 		public static async Task BLESSED_CUBE(Dialog dialog)
 		{
-			dialog.ExecuteScript(ClientScripts.BLESSED_CUBE_OPEN);
+			await dialog.ExecuteScript(ClientScripts.BLESSED_CUBE_OPEN);
 		}
 
 		[DialogFunction("DUCTILITY_NPC")]
@@ -606,7 +622,7 @@ namespace Melia.Zone.Scripting.Shared
 			switch (await dialog.Select("COMMON_SKILL_ENCHANT_DLG1", "!@#$COMMON_SKILL_ENCHANT_MSG1#@!", "!@#$Auto_JongLyo#@!"))
 			{
 				case 1:
-					dialog.ExecuteScript(ClientScripts.REQ_COMMON_SKILL_ENCHANT_UI_OPEN);
+					await dialog.ExecuteScript(ClientScripts.REQ_COMMON_SKILL_ENCHANT_UI_OPEN);
 					break;
 			}
 		}
@@ -620,10 +636,10 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.Msg("EVENT_TOS_WHOLE_DLG2");
 					break;
 				case 2:
-					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_TOS_WHOLE_SHOP");
+					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_TOS_WHOLE_SHOP");
 					break;
 			}
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("TREEDAY_NPC")]
@@ -632,29 +648,29 @@ namespace Melia.Zone.Scripting.Shared
 			switch (await dialog.Select("EVENT_TREEDAY_SHOP_DLG1", "!@#$EVENT_2304_ARBOR_DAY_SHOP#@!", "!@#$Auto_JongLyo#@!"))
 			{
 				case 1:
-					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_2304_ARBOR_DAY_SHOP");
+					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_2304_ARBOR_DAY_SHOP");
 					break;
 			}
 		}
 
 		public static async Task EVENT_2109_MOON_RABBIT_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		public static async Task CITY_EVENT_2110_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		public static async Task EVENT_2110_POT_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		public static async Task CITY_EVENT_2110_NPC2(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		public static async Task EVENT_2212_LAST_CHRISTMAS_NPC(Dialog dialog)
@@ -663,24 +679,21 @@ namespace Melia.Zone.Scripting.Shared
 			{
 				case 1:
 					await dialog.Msg("EVENT_2212_LAST_CHRISTMAS_DLG2");
-					dialog.Close();
+					await Task.Yield();
 					break;
 				case 2:
 					await dialog.Msg("EVENT_2212_LAST_CHRISTMAS_DLG3");
-					dialog.Close();
+					await Task.Yield();
 					break;
 				case 3:
-					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_2212_LAST_CHRISTMAS_SHOP");
-					break;
-				default:
-					dialog.Close();
+					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_2212_LAST_CHRISTMAS_SHOP");
 					break;
 			}
 		}
 
 		public static async Task EVENT_2207_UNITY(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		public static async Task EVENT_2301_HAPPY_NEW_YEAR_NPC(Dialog dialog)
@@ -689,17 +702,17 @@ namespace Melia.Zone.Scripting.Shared
 			{
 				case 1:
 					await dialog.Msg("EVENT_2301_HAPPY_NEW_YEAR_DLG2");
-					dialog.Close();
+					await Task.Yield();
 					break;
 				case 2:
 					await dialog.Msg("EVENT_2301_HAPPY_NEW_YEAR_DLG3");
-					dialog.Close();
+					await Task.Yield();
 					break;
 				case 3:
 					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_2301_HAPPY_NEW_YEAR_SHOP");
 					break;
 				default:
-					dialog.Close();
+					await Task.Yield();
 					break;
 			}
 		}
@@ -708,7 +721,7 @@ namespace Melia.Zone.Scripting.Shared
 		public static async Task STEAM_TREASURE_EVENT(Dialog dialog)
 		{
 			await dialog.Msg("GLOBAL_EVENT_BOARD_NO_EVENT");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("EMILIA")]
@@ -722,7 +735,7 @@ namespace Melia.Zone.Scripting.Shared
 					break;
 			}
 			await dialog.Msg("KLAPEDA_Emilia_basic22");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("AKALABETH")]
@@ -749,7 +762,7 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.OpenShop("Klapeda_Accessory");
 					break;
 				case 2:
-					dialog.ExecuteScript(ClientScripts.REQ_BRIQUETTING_HAIR_ACC_UI_OPEN);
+					await dialog.ExecuteScript(ClientScripts.REQ_BRIQUETTING_HAIR_ACC_UI_OPEN);
 					break;
 			}
 		}
@@ -771,10 +784,10 @@ namespace Melia.Zone.Scripting.Shared
 					break;
 				case 2:
 					if (dialog.Player.GuildId == 0)
-						dialog.ExecuteScript(ClientScripts.OPEN_GUILD_CREATE_UI);
+						await dialog.ExecuteScript(ClientScripts.OPEN_GUILD_CREATE_UI);
 					break;
 			}
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_CLERIC")]
@@ -790,7 +803,7 @@ namespace Melia.Zone.Scripting.Shared
 					dialog.ExecuteScript(ClientScripts.HIDDENABILITY_DECOMPOSE_UI_OPEN);
 					break;
 				default:
-					dialog.Close();
+					await Task.Yield();
 					break;
 			}
 		}
@@ -820,7 +833,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("KLAPEDA_Villagers_basic20");
 			await dialog.Msg("KLAPEDA_Villagers_basic21");
 			await dialog.Msg("KLAPEDA_Villagers_basic22");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ACT_SMOM")]
@@ -833,7 +846,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("KLAPEDA_Smom_basic5");
 			await dialog.Msg("KLAPEDA_Smom_basic6");
 			await dialog.Msg("KLAPEDA_Smom_basic7");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_PRIEST")]
@@ -841,13 +854,13 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_PRIEST_basic1");
 			await dialog.Msg("MASTER_PRIEST_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("KLAPEDA_SIGN9")]
 		public static async Task KLAPEDA_SIGN9(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("BLACKSMITH")]
@@ -921,14 +934,14 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_PELTASTA_basic1");
 			await dialog.Msg("MASTER_PELTASTA_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_ICEMAGE")]
 		public static async Task MASTER_ICEMAGE(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_ICEMAGE_basic1");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_QU")]
@@ -936,7 +949,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_QU_basic1");
 			await dialog.Msg("MASTER_QU_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_RANGER")]
@@ -944,7 +957,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_RANGER_basic1");
 			await dialog.Msg("MASTER_RANGER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_SWORDMAN")]
@@ -959,7 +972,7 @@ namespace Melia.Zone.Scripting.Shared
 					dialog.ExecuteScript(ClientScripts.HIDDENABILITY_DECOMPOSE_UI_OPEN);
 					break;
 			}
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_WIZARD")]
@@ -967,7 +980,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_WIZARD_basic1");
 			await dialog.Msg("MASTER_WIZARD_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_ARCHER")]
@@ -980,10 +993,10 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.OpenShop("Master_Archer");
 					break;
 				case 2:
-					dialog.ExecuteScript(ClientScripts.HIDDENABILITY_DECOMPOSE_UI_OPEN);
+					await dialog.ExecuteScript(ClientScripts.HIDDENABILITY_DECOMPOSE_UI_OPEN);
 					break;
 				default:
-					dialog.Close();
+					await Task.Yield();
 					break;
 			}
 		}
@@ -991,50 +1004,49 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction("KLAPEDA_SIGN30")]
 		public static async Task KLAPEDA_SIGN30(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("KLAPEDA_SIGN31")]
 		public static async Task KLAPEDA_SIGN31(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("KLAPEDA_SIGN32")]
 		public static async Task KLAPEDA_SIGN32(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
-		[DialogFunction("KLAPEDA_SIGN33")]
+		[DialogFunction]
 		public static async Task KLAPEDA_SIGN33(Dialog dialog)
 		{
 			dialog.Chat("!@#$KlaipedaCentralPlaza#@!");
-			dialog.Close();
 		}
 
 		[DialogFunction("KLAPEDA_SIGN_WELCOME")]
 		public static async Task KLAPEDA_SIGN_WELCOME(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.Msg("KLAPEDA_SIGN_WELCOME");
 		}
 
 		[DialogFunction("KLAPEDA_SIGN35")]
 		public static async Task KLAPEDA_SIGN35(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.Msg("KLAPEDA_SIGN35");
 		}
 
 		[DialogFunction("KLAPEDA_SIGN36")]
 		public static async Task KLAPEDA_SIGN36(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.Msg("KLAPEDA_SIGN36");
 		}
 
 		[DialogFunction("KLAPEDA_BOARD_01")]
 		public static async Task KLAPEDA_BOARD_01(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.Msg("KLAPEDA_BOARD_01");
 		}
 
 		[DialogFunction("HUEVILLAGE_58_3_KLAIPEDA_NPC")]
@@ -1042,90 +1054,52 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("HUEVILLAGE_58_3_KLAIPEDA_NPC_basic01");
 			await dialog.Msg("HUEVILLAGE_58_3_KLAIPEDA_NPC_basic02");
-			dialog.Close();
 		}
 
-		[DialogFunction("PETSHOP_KLAIPE")]
+		[DialogFunction]
 		public static async Task PETSHOP_KLAIPE(Dialog dialog)
 		{
 			var character = dialog.Player;
+
+			var options = dialog.CreateOptions(
+				Option(ScpArgMsg("shop_companion"), "shop"),
+				Option(ScpArgMsg("shop_companion_info"), "info"),
+				Option("Leave", "leave")
+			);
+
 			if (character.HasCompanions)
+				options.Insert(1, Option(ScpArgMsg("shop_companion_learnabil"), "learnabil"));
+
+			var selectedOption = await dialog.Select("PETSHOP_KLAIPE_basic1", options);
+
+			// TODO: Figure out if class gets free companion
+			switch (selectedOption)
 			{
-				switch (await dialog.Select("PETSHOP_KLAIPE_basic1", "@dicID_^*$ITEM_20150717_005797$*^!@#$PetCouponExchange1#@!", "!@#$shop_companion#@!", "!@#$shop_companion_learnabil#@!", "!@#$shop_companion_info#@!", "!@#$Auto_DaeHwa_JongLyo#@!"))
-				{
-					case 1:
-						dialog.ExecuteScript(string.Format(ClientScripts.TRY_CECK_BARRACK_SLOT_BY_COMPANION_EXCHANGE, 1));
-						break;
-					case 2:
-						await dialog.OpenShop("Klapeda_Companion");
-						break;
-					case 3:
-						dialog.AddonMessage(AddonMessage.COMPANION_UI_OPEN);
-						break;
-				}
+				case "shop":
+					await dialog.OpenShop("Klapeda_Companion");
+					break;
+				case "learnabil":
+					dialog.AddonMessage(AddonMessage.COMPANION_UI_OPEN);
+					break;
+				case "info":
+					await dialog.Msg("PETSHOP_KLAIPE_basic2");
+					break;
+				case "adopt":
+					var name = await dialog.Input(ScpArgMsg("InputCompanionName") + "*@*" + ScpArgMsg("InputCompanionName"));
+					var monsterId = MonsterId.Velheider;
+					var companion = new Companion(character, monsterId, MonsterType.Friendly);
+					companion.Name = name;
+					character.CreateCompanion(companion);
+					await dialog.ExecuteScript(ClientScripts.PET_ADOPT_SUCCESS);
+					companion.SetCompanionState(true);
+					break;
 			}
-			else
-			{
-				// TODO: Figure out if class gets free companion
-				if (!character.SessionObjects.Main.Properties.Has(PropertyName.Exception_JOB_VELHIDER_COUPON))
-				{
-					switch (await dialog.Select("PETSHOP_KLAIPE_basic1", "!@#$shop_companion#@!", "!@#$shop_companion_learnabil#@!", "!@#$shop_companion_info#@!", "!@#$Auto_DaeHwa_JongLyo#@!"))
-					{
-						case 1:
-							await dialog.OpenShop("Klapeda_Companion");
-							break;
-						case 2:
-							dialog.AddonMessage(AddonMessage.COMPANION_UI_OPEN);
-							break;
-						case 3:
-							await dialog.Msg("PETSHOP_KLAIPE_basic2");
-							dialog.Close();
-							break;
-						default:
-							dialog.Close();
-							break;
-					}
-				}
-				else
-				{
-					switch (await dialog.Select("PETSHOP_KLAIPE_basic1", "!@#$shop_companion#@!", "!@#$shop_companion_learnabil#@!", "!@#$shop_companion_info#@!", "!@#$FREE_COMPANION_MSG1$*$JOB$*$@dicID_^*$ETC_20150317_006286$*^$*$COMPANION$*$@dicID_^*$ETC_20150317_007299$*^#@!", "!@#$Auto_DaeHwa_JongLyo#@!"))
-					{
-						case 1:
-							await dialog.OpenShop("Klapeda_Companion");
-							break;
-						case 2:
-							dialog.AddonMessage(AddonMessage.COMPANION_UI_OPEN);
-							break;
-						case 3:
-							await dialog.Msg("PETSHOP_KLAIPE_basic2");
-							dialog.Close();
-							break;
-						case 4:
-							Send.ZC_DIALOG_CLOSE(character.Connection);
-							var name = await dialog.Input("!@#$InputCompanionName#@!*@*!@#$InputCompanionName#@!");
-							//var monsterId = MonsterId.Velheider;
-							//var companion = new Companion(character, monsterId, NpcType.Friendly);
-							//companion.Name = name;
-							//character.CreateCompanion(companion);
-							//dialog.ExecuteScript(ClientScripts.PET_ADOPT_SUCCESS);
-							//companion.SetCompanionState(true);
-							break;
-						default:
-							dialog.Close();
-							break;
-					}
-				}
-			}
-			await Task.Yield();
 		}
 
 		[DialogFunction("PETSHOP_KLAIPE_PET")]
 		public static async Task PETSHOP_KLAIPE_PET(Dialog dialog)
 		{
-			dialog.Leave();
 			dialog.PlayAnimation("pet");
-
-			await Task.Yield();
 		}
 
 		[DialogFunction("JOURNEY_SHOP")]
@@ -1136,25 +1110,29 @@ namespace Melia.Zone.Scripting.Shared
 			switch (await dialog.Select("RENA_BASIC01", "@dicID_^*$ETC_20150317_002514$*^", "@dicID_^*$ETC_20160310_021033$*^", "@dicID_^*$ETC_20211217_065424$*^", "@dicID_^*$ETC_20190802_042398$*^", "@dicID_^*$ETC_20180418_032113$*^", "@dicID_^*$ETC_20190104_037030$*^", "@dicID_^*$ETC_20190223_040846$*^", "!@#$Auto_JongLyo#@!"))
 			{
 				case 1:
-					dialog.ExecuteScript(ClientScripts.OPEN_DO_JOURNAL);
+					await dialog.ExecuteScript(ClientScripts.OPEN_DO_JOURNAL);
 					break;
 				case 2:
-					// If stories to share (different map names)
-					switch (await dialog.Select("RENA_NORMAL3_SELECT1", "@dicID_^*$ETC_20150317_001153$*^", "@dicID_^*$ETC_20200128_043943$*^", "!@#$Auto_JongLyo#@!"))
+					var hasMapsToCheck = false;
+					if (hasMapsToCheck)
 					{
-						case 1:
-							// Add item
-							player.EtcProperties.SetFloat(PropertyName.Reward_f_siauliai_out, 1);
-							Send.ZC_OBJECT_PROPERTY(player, PropertyName.Reward_f_siauliai_out);
-							Send.ZC_PC_PROP_UPDATE(player, (short)PropertyTable.GetId("PCEtc", PropertyName.Reward_f_siauliai_out), 1);
-							break;
-						default:
-							dialog.Close();
-							break;
+						// If stories to share (different map names)
+						switch (await dialog.Select("RENA_NORMAL3_SELECT1", "@dicID_^*$ETC_20150317_001153$*^", "@dicID_^*$ETC_20200128_043943$*^", "!@#$Auto_JongLyo#@!"))
+						{
+							case 1:
+								// Depending on which maps have been visited add reward item and reward property.
+								// Reference property: PropertyName.Reward_{mapname}
+								player.EtcProperties.SetFloat(PropertyName.Reward_f_siauliai_out, 1);
+								Send.ZC_OBJECT_PROPERTY(player, PropertyName.Reward_f_siauliai_out);
+								Send.ZC_PC_PROP_UPDATE(player, (short)PropertyTable.GetId("PCEtc", PropertyName.Reward_f_siauliai_out), 1);
+								break;
+						}
 					}
-					// No stories to share
-					await dialog.Msg("RENA_NORMAL3_NULL1");
-					dialog.Close();
+					else
+					{
+						// No stories to share
+						await dialog.Msg("RENA_NORMAL3_NULL1");
+					}
 					break;
 				case 3:
 				{
@@ -1167,20 +1145,11 @@ namespace Melia.Zone.Scripting.Shared
 									player.AddItem(11030377);
 									Send.ZC_ADDON_MSG(player, AddonMessage.NOTICE_Dm_GetItem, 0, "!@#$GET_KEDORA_SUPPORT_BOX_MSG_1#@!");
 									break;
-								default:
-									dialog.Close();
-									break;
 							}
-							break;
-						default:
-							dialog.Close();
 							break;
 					}
 				}
 				break;
-				default:
-					dialog.Close();
-					break;
 			}
 		}
 
@@ -1194,7 +1163,7 @@ namespace Melia.Zone.Scripting.Shared
 					switch (await dialog.Select("COLLECT_REWARD_ITEM_FLOANA", "!@#$Yes#@!", "!@#$No#@!"))
 					{
 						default:
-							dialog.Close();
+							await Task.Yield();
 							break;
 					}
 					break;
@@ -1202,28 +1171,21 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.OpenShop("Magic_Society");
 					break;
 				case 4:
-					dialog.Close();
-					dialog.ExecuteScript(ClientScripts.CONTENTS_TOTAL_SHOP_OPEN);
+					await dialog.ExecuteScript(ClientScripts.CONTENTS_TOTAL_SHOP_OPEN);
 					break;
 				case 5:
-					dialog.Close();
-					dialog.ExecuteScript(ClientScripts.SEASONOFF_CONTENTS_TOTAL_SHOP_OPEN);
+					await dialog.ExecuteScript(ClientScripts.SEASONOFF_CONTENTS_TOTAL_SHOP_OPEN);
 					break;
 				case 6:
-					dialog.Close();
-					dialog.ExecuteScript(ClientScripts.CLASS_COSTUME_TOTAL_SHOP_OPEN);
+					await dialog.ExecuteScript(ClientScripts.CLASS_COSTUME_TOTAL_SHOP_OPEN);
 					break;
 				case 7:
-					dialog.Close();
 					switch (await dialog.Select("COLLECTION_SHOP_NORMAL_7_ORSHA", "!@#$JOURNEY_SHOP_LvRewards_Msg1#@!", "!@#$JOURNEY_SHOP_LvRewards_Msg2$*$LV$*$440#@!", "!@#$Auto_JongLyo#@!"))
 					{
 						default:
-							dialog.Close();
+							await Task.Yield();
 							break;
 					}
-					break;
-				default:
-					dialog.Close();
 					break;
 			}
 		}
@@ -1283,10 +1245,10 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.Msg("CHAR318_MSETP1_DLG1");
 					break;
 				default:
-					dialog.Close();
+					await Task.Yield();
 					break;
 			}
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MISSIONSHOP_NPC_01")]
@@ -1306,7 +1268,7 @@ namespace Melia.Zone.Scripting.Shared
 			if (party == null)
 			{
 				await dialog.Msg("PARTYQUEST_NPC_01_CANCLE1");
-				dialog.Close();
+				await Task.Yield();
 			}
 			else
 			{
@@ -1317,7 +1279,7 @@ namespace Melia.Zone.Scripting.Shared
 						party.SetProperty(PropertyName.P_PARTY_Q_030, "1");
 						break;
 					default:
-						dialog.Close();
+						await Task.Yield();
 						break;
 				}
 			}
@@ -1327,52 +1289,50 @@ namespace Melia.Zone.Scripting.Shared
 		public static async Task DROPITEM_REQUEST1_NPC(Dialog dialog)
 		{
 			await dialog.Msg("DROPITEM_REQUEST1_NPC_basic1");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("KLAPEDA_FISHING_CAT")]
 		public static async Task KLAPEDA_FISHING_CAT(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("LOWLV_GREEN_SELPHUI")]
 		public static async Task LOWLV_GREEN_SELPHUI(Dialog dialog)
 		{
 			await dialog.Msg("LOWLV_GREEN_SELPHUI_BASIC");
-			dialog.Close();
 		}
 
 		[DialogFunction("LOWLV_BOASTER_MUENCHHAUSEN")]
 		public static async Task LOWLV_BOASTER_MUENCHHAUSEN(Dialog dialog)
 		{
-			await dialog.Msg("MUENCHHAUSEN_BASIC1");
-			await dialog.Msg("MUENCHHAUSEN_BASIC2");
-			dialog.Close();
+			await dialog.Msg(RandomElement<string>("MUENCHHAUSEN_BASIC1", "MUENCHHAUSEN_BASIC2"));
 		}
 
 		[DialogFunction("KLAPEDA_FISHING_MANAGER")]
 		public static async Task KLAPEDA_FISHING_MANAGER(Dialog dialog)
 		{
-			switch (await dialog.Select("Fish_Shop_Klapead", "{img minimap_1_MAIN 16 16}@dicID_^*$QUEST_LV_0100_20170912_016977$*^", "@dicID_^*$QUEST_LV_0200_20150714_008439$*^", "@dicID_^*$ETC_20170726_028404$*^", "!@#$Auto_JongLyo#@!"))
+			if (await dialog.HooksByDialogName("BeforeStart"))
+				await Task.Yield();
+			else if (await dialog.HooksByDialogName("BeforeEnd"))
+				await Task.Yield();
+			else
 			{
-				case 2:
-					switch (await dialog.Select("Fish_Shop_Klapead_Dlg5", "!@#$FISH_RUBBING_YES#@!", "!@#$FISH_RUBBING_NO#@!"))
-					{
-						case 1:
-							await dialog.Msg("Fish_Shop_Klapead_Dlg10");
-							break;
-						default:
-							dialog.Close();
-							break;
-					}
-					break;
-				case 3:
-					await dialog.OpenShop("Fish_Shop_Manager");
-					break;
-				default:
-					dialog.Close();
-					break;
+				switch (await dialog.Select("Fish_Shop_Klapead", "{img minimap_1_MAIN 16 16}@dicID_^*$QUEST_LV_0100_20170912_016977$*^", "@dicID_^*$QUEST_LV_0200_20150714_008439$*^", "@dicID_^*$ETC_20170726_028404$*^", "!@#$Auto_JongLyo#@!"))
+				{
+					case 2:
+						switch (await dialog.Select("Fish_Shop_Klapead_Dlg5", "!@#$FISH_RUBBING_YES#@!", "!@#$FISH_RUBBING_NO#@!"))
+						{
+							case 1:
+								await dialog.Msg("Fish_Shop_Klapead_Dlg10");
+								break;
+						}
+						break;
+					case 3:
+						await dialog.OpenShop("Fish_Shop_Manager");
+						break;
+				}
 			}
 		}
 
@@ -1381,7 +1341,6 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("WORLDPVP_SELECT_MSG1");
 			await dialog.Msg("WORLDPVP_SELECT_MSG2");
-			dialog.Close();
 		}
 
 		[DialogFunction("CHAR119_MSTEP3_4_NPC")]
@@ -1389,7 +1348,6 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("CHAR119_MSTEP3_4_NPC_basic1");
 			await dialog.Msg("CHAR119_MSTEP3_4_NPC_basic2");
-			dialog.Close();
 		}
 
 		[DialogFunction("ONMYOJI_MASTER")]
@@ -1398,7 +1356,6 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("ONMYOJI_MASTER_basic1");
 			await dialog.Msg("ONMYOJI_MASTER_basic2");
 			await dialog.Msg("ONMYOJI_MASTER_basic3");
-			dialog.Close();
 		}
 
 		[DialogFunction("NPC_JUNK_SHOP_KLAPEDA")]
@@ -1436,16 +1393,10 @@ namespace Melia.Zone.Scripting.Shared
 							Send.ZC_NORMAL.ShowItemBalloon(character);
 							Send.ZC_NORMAL.ShowItemBalloon(character, item, "junksilvergacha_itembox_low", "{@st43}", "JunkSilverGachaResultInRaidRewardSmall", 5);
 							break;
-						default:
-							dialog.Close();
-							break;
 					}
 					break;
 				case 2:
 					await dialog.Msg("NPC_JUNK_SHOP_CHECK_LV_2");
-					break;
-				default:
-					dialog.Close();
 					break;
 			}
 		}
@@ -1453,7 +1404,6 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction("BEAUTY_IN_MOVE")]
 		public static async Task BEAUTY_IN_MOVE(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
 		[DialogFunction("CTRLTYPE_RESET_NPC")]
@@ -1468,7 +1418,7 @@ namespace Melia.Zone.Scripting.Shared
 			switch (await dialog.Select("JOB_BALLENCE_REWARD_NPC_DLG_11_GLOBAL\\!@#$JOB_BALLENCE_REWARD_NPC_CHECK_CLASS#@!", "!@#$EVENT_1901_RANKRESET_NPC_1#@!", "!@#$Auto_JongLyo#@!"))
 			{
 				default:
-					dialog.Close();
+					await Task.Yield();
 					break;
 			}
 		}
@@ -1484,7 +1434,7 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.OpenShop("Master_Scout");
 					break;
 				case 2:
-					dialog.ExecuteScript(ClientScripts.HIDDENABILITY_DECOMPOSE_UI_OPEN);
+					await dialog.ExecuteScript(ClientScripts.HIDDENABILITY_DECOMPOSE_UI_OPEN);
 					break;
 			}
 		}
@@ -1493,13 +1443,11 @@ namespace Melia.Zone.Scripting.Shared
 		public static async Task ALCHEIST_EXPERT_NPC_KLAPEDA(Dialog dialog)
 		{
 			await dialog.Msg("ALCHEIST_EXPERT_NPC_KLAPEDA_basic");
-			dialog.Close();
 		}
 
 		[DialogFunction("TOSHERO_TUTO_NPC_01")]
 		public static async Task TOSHERO_TUTO_NPC_01(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
 		[DialogFunction("MASTER_HIGHLANDER")]
@@ -1507,7 +1455,6 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_HIGHLANDER_basic1");
 			await dialog.Msg("MASTER_HIGHLANDER_basic2");
-			dialog.Close();
 		}
 
 		[DialogFunction("MASTER_BOCORS")]
@@ -1515,7 +1462,6 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_BOCORS_basic2");
 			await dialog.Msg("MASTER_BOCORS_basic1");
-			dialog.Close();
 		}
 
 		[DialogFunction("MASTER_FIREMAGE")]
@@ -1523,38 +1469,35 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_FIREMAGE_basic1");
 			await dialog.Msg("MASTER_FIREMAGE_basic2");
-			dialog.Close();
 		}
 
 		[DialogFunction("MASTER_CHAR2_24_CITY")]
 		public static async Task MASTER_CHAR2_24_CITY(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_CHAR2_24_1_basic1");
-			dialog.Close();
 		}
 
 		[DialogFunction("FEDIMIAN_BOARD_01")]
 		public static async Task FEDIMIAN_BOARD_01(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
 		[DialogFunction("C_REQUEST_1_NPC_01")]
 		public static async Task C_REQUEST_1_NPC_01(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("C_REQUEST_1_NPC_02")]
 		public static async Task C_REQUEST_1_NPC_02(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_KEDORLA_BOARD01")]
 		public static async Task ORSHA_KEDORLA_BOARD01(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_BLACKSMITH")]
@@ -1569,10 +1512,10 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.CustomDialog(CustomDialog.APPRAISAL);
 					break;
 				default:
-					dialog.Close();
+					await Task.Yield();
 					break;
 			}
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_EQUIPMENT_DEALER")]
@@ -1580,27 +1523,27 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("ORSHA_EQUIPMENT_DEALER_basic01");
 			await dialog.Msg("ORSHA_EQUIPMENT_DEALER_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_KEDORLA_MEMBER01")]
 		public static async Task ORSHA_KEDORLA_MEMBER01(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("C_ORSHA_HAMONDAIL")]
 		public static async Task C_ORSHA_HAMONDAIL(Dialog dialog)
 		{
 			await dialog.Msg("C_ORSHA_HAMONDAIL_basic_01");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("C_ORSHA_SOLDIER_02")]
 		public static async Task C_ORSHA_SOLDIER_02(Dialog dialog)
 		{
 			await dialog.Msg("C_ORSHA_SOLDIER_02_basic_01");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("C_ORSHA_URBONAS")]
@@ -1608,7 +1551,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("C_ORSHA_URBONAS_basic_01");
 			await dialog.Msg("C_ORSHA_URBONAS_basic_02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_TOOL_NPC")]
@@ -1616,7 +1559,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("ORSHA_TOOL_NPC_basic01");
 			await dialog.Msg("ORSHA_TOOL_NPC_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_ACCESSARY_NPC")]
@@ -1624,7 +1567,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("ORSHA_ACCESSARY_NPC_basic01");
 			await dialog.Msg("ORSHA_ACCESSARY_NPC_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("DAOSHI_MASTER")]
@@ -1632,7 +1575,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("DAOSHI_MASTER_basic1");
 			await dialog.Msg("DAOSHI_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_PELTASTA_NPC")]
@@ -1640,7 +1583,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_PELTASTA_basic01");
 			await dialog.Msg("JOB_2_PELTASTA_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_HOPLITE_NPC")]
@@ -1648,7 +1591,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_HOPLITE_basic01");
 			await dialog.Msg("JOB_2_HOPLITE_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_CLERIC_NPC")]
@@ -1656,7 +1599,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_CLERIC_basic01");
 			await dialog.Msg("JOB_2_CLERIC_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_KRIVIS_NPC")]
@@ -1664,7 +1607,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_KRIVIS_basic01");
 			await dialog.Msg("JOB_2_KRIVIS_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_PRIEST_NPC")]
@@ -1672,7 +1615,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_PRIEST_basic01");
 			await dialog.Msg("JOB_2_PRIEST_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_BOKOR_NPC")]
@@ -1680,7 +1623,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_BOKOR_basic01");
 			await dialog.Msg("JOB_2_BOKOR_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_RODELERO_NPC")]
@@ -1688,7 +1631,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_RODELERO_basic01");
 			await dialog.Msg("JOB_2_RODELERO_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_CATAPHRACT_NPC")]
@@ -1696,7 +1639,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_CATAPHRACT_basic01");
 			await dialog.Msg("JOB_2_CATAPHRACT_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_PALADIN_NPC")]
@@ -1704,21 +1647,21 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_PALADIN_basic01");
 			await dialog.Msg("JOB_2_PALADIN_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("C_ORSHA_PRANAS")]
 		public static async Task C_ORSHA_PRANAS(Dialog dialog)
 		{
 			await dialog.Msg("ORSHA_MQ2_01_02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("C_ORSHA_SOLDIER_01")]
 		public static async Task C_ORSHA_SOLDIER_01(Dialog dialog)
 		{
 			await dialog.Msg("C_ORSHA_SOLDIER_01_basic_01");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_SADHU_NPC")]
@@ -1726,7 +1669,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_SADHU_basic01");
 			await dialog.Msg("JOB_2_SADHU_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_SWORDMAN_NPC")]
@@ -1734,7 +1677,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_SWORDMAN_basic01");
 			await dialog.Msg("JOB_2_SWORDMAN_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("WARP_C_ORSHA")]
@@ -1746,7 +1689,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_WIZARD_MASTER_basic1");
 			await dialog.Msg("JOB_2_WIZARD_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_PYROMANCER_MASTER")]
@@ -1754,7 +1697,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_PYROMANCER_MASTER_basic1");
 			await dialog.Msg("JOB_2_PYROMANCER_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_CRYOMANCER_MASTER")]
@@ -1762,7 +1705,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_CRYOMANCER_MASTER_basic1");
 			await dialog.Msg("JOB_2_CRYOMANCER_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_PSYCHOKINO_MASTER")]
@@ -1770,7 +1713,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_PSYCHOKINO_MASTER_basic1");
 			await dialog.Msg("JOB_2_PSYCHOKINO_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_LINKER_MASTER")]
@@ -1778,7 +1721,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_LINKER_MASTER_basic1");
 			await dialog.Msg("JOB_2_LINKER_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_THAUMATURGE_MASTER")]
@@ -1786,7 +1729,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_THAUMATURGE_MASTER_basic1");
 			await dialog.Msg("JOB_2_THAUMATURGE_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_ELEMENTALIST_MASTER")]
@@ -1794,7 +1737,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_ELEMENTALIST_MASTER_basic1");
 			await dialog.Msg("JOB_2_ELEMENTALIST_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_ARCHER_MASTER")]
@@ -1802,7 +1745,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_ARCHER_MASTER_basic1");
 			await dialog.Msg("JOB_2_ARCHER_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_RANGER_MASTER")]
@@ -1810,7 +1753,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_RANGER_MASTER_basic1");
 			await dialog.Msg("JOB_2_RANGER_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_QUARRELSHOOTER_MASTER")]
@@ -1826,7 +1769,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_SAPPER_MASTER_basic1");
 			await dialog.Msg("JOB_2_SAPPER_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_HUNTER_MASTER")]
@@ -1834,7 +1777,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_HUNTER_MASTER_basic1");
 			await dialog.Msg("JOB_2_HUNTER_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_WUGUSHI_MASTER")]
@@ -1842,7 +1785,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_WUGUSHI_MASTER_basic1");
 			await dialog.Msg("JOB_2_WUGUSHI_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("JOB_2_SCOUT_MASTER")]
@@ -1850,25 +1793,25 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("JOB_2_SCOUT_MASTER_basic1");
 			await dialog.Msg("JOB_2_SCOUT_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_PETSHOP")]
 		public static async Task ORSHA_PETSHOP(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_MARKET")]
 		public static async Task ORSHA_MARKET(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_WAREHOUSE")]
 		public static async Task ORSHA_WAREHOUSE(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_COLLECTION_SHOP")]
@@ -1877,14 +1820,14 @@ namespace Melia.Zone.Scripting.Shared
 			switch (await dialog.Select("ORSHA_COLLECTION_SHOP_basic01", "@dicID_^*$ETC_20190104_037034$*^", "@dicID_^*$ETC_20190104_037035$*^", "@dicID_^*$ETC_20180320_031806$*^", "@dicID_^*$ETC_20200129_044673$*^", "@dicID_^*$ETC_20210115_054932$*^", "@dicID_^*$ETC_20210809_061344$*^", "@dicID_^*$ETC_20200129_044674$*^", "!@#$Auto_JongLyo#@!"))
 			{
 				case 1:
-					dialog.Close();
+					await Task.Yield();
 					dialog.AddonMessage(AddonMessage.COLLECTION_UI_OPEN);
 					break;
 				case 2:
 					switch (await dialog.Select("COLLECT_REWARD_ITEM_FLOANA", "!@#$Yes#@!", "!@#$No#@!"))
 					{
 						default:
-							dialog.Close();
+							await Task.Yield();
 							break;
 					}
 					break;
@@ -1892,28 +1835,21 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.OpenShop("Magic_Society");
 					break;
 				case 4:
-					dialog.Close();
-					dialog.ExecuteScript(ClientScripts.CONTENTS_TOTAL_SHOP_OPEN);
+					await dialog.ExecuteScript(ClientScripts.CONTENTS_TOTAL_SHOP_OPEN);
 					break;
 				case 5:
-					dialog.Close();
-					dialog.ExecuteScript(ClientScripts.SEASONOFF_CONTENTS_TOTAL_SHOP_OPEN);
+					await dialog.ExecuteScript(ClientScripts.SEASONOFF_CONTENTS_TOTAL_SHOP_OPEN);
 					break;
 				case 6:
-					dialog.Close();
-					dialog.ExecuteScript(ClientScripts.CLASS_COSTUME_TOTAL_SHOP_OPEN);
+					await dialog.ExecuteScript(ClientScripts.CLASS_COSTUME_TOTAL_SHOP_OPEN);
 					break;
 				case 7:
-					dialog.Close();
+					await Task.Yield();
 					switch (await dialog.Select("COLLECTION_SHOP_NORMAL_7_ORSHA", "!@#$JOURNEY_SHOP_LvRewards_Msg1#@!", "!@#$JOURNEY_SHOP_LvRewards_Msg2$*$LV$*$440#@!", "!@#$Auto_JongLyo#@!"))
 					{
 						default:
-							dialog.Close();
 							break;
 					}
-					break;
-				default:
-					dialog.Close();
 					break;
 			}
 		}
@@ -1922,31 +1858,31 @@ namespace Melia.Zone.Scripting.Shared
 		public static async Task ORSHA_JOURNEY_SHOP(Dialog dialog)
 		{
 			await dialog.Msg("ORSHA_JOURNEY_SHOP_basic01");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_NPC01")]
 		public static async Task ORSHA_NPC01(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_NPC02")]
 		public static async Task ORSHA_NPC02(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_BOOK01")]
 		public static async Task ORSHA_BOOK01(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_BOOK02")]
 		public static async Task ORSHA_BOOK02(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("TREASUREBOX_LV_C_ORSHA150")]
@@ -1956,47 +1892,47 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction("HIDDEN_MIKO_JUROTA")]
 		public static async Task HIDDEN_MIKO_JUROTA(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ORSHA_CHAR119_MSTEP1")]
 		public static async Task ORSHA_CHAR119_MSTEP1(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("EP12_PRELUDE_NERINGA_ORSHA1")]
 		public static async Task EP12_PRELUDE_NERINGA_ORSHA1(Dialog dialog)
 		{
 			await dialog.Msg("EP12_NERINGA_NORMAL_02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("FISHING_SUB_ORSHA_NPC")]
 		public static async Task FISHING_SUB_ORSHA_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("EP13_WEEK_REPUTATION_01")]
 		public static async Task EP13_WEEK_REPUTATION_01(Dialog dialog)
 		{
 			await dialog.Msg("REPUTATION_NPC_BASIC6");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("CLO_MASTER")]
 		public static async Task CLO_MASTER(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_CLO_NPC_basic");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ARQ_MASTER")]
 		public static async Task ARQ_MASTER(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_ARQ_NPC_basic");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("SAGE_MASTER")]
@@ -2004,27 +1940,27 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("SAGE_MASTER_basic1");
 			await dialog.Msg("SAGE_MASTER_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("CHAR119_MSTEP3_3_1_NPC")]
 		public static async Task CHAR119_MSTEP3_3_1_NPC(Dialog dialog)
 		{
 			await dialog.Msg("CHAR119_MSTEP3_3_1_NPC_basic1");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ALCHEIST_EXPERT_NPC_ORSHA")]
 		public static async Task ALCHEIST_EXPERT_NPC_ORSHA(Dialog dialog)
 		{
 			await dialog.Msg("ALCHEIST_EXPERT_NPC_ORSHA_basic");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("THREECMLAKE_84_HIDDEN_MADAM")]
 		public static async Task THREECMLAKE_84_HIDDEN_MADAM(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_HWARANG_NPC")]
@@ -2032,20 +1968,20 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_HWARANG_NPC_basic01");
 			await dialog.Msg("MASTER_HWARANG_NPC_basic02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("EP14_MULIA_NPC_3")]
 		public static async Task EP14_MULIA_NPC_3(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("EP14_F_CORAL_RAID_1_NPC_1")]
 		public static async Task EP14_F_CORAL_RAID_1_NPC_1(Dialog dialog)
 		{
 			await dialog.Msg("EP14_F_CORAL_RAID_1_NPC_1_basic_1");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("WARP_C_NUNNERY")]
@@ -2055,13 +1991,13 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction("REQUEST_MISSION_ABBEY")]
 		public static async Task REQUEST_MISSION_ABBEY(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("C_NUNNERY_NPC1")]
 		public static async Task C_NUNNERY_NPC1(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("ENCHANTER_MASTER")]
@@ -2070,7 +2006,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("ENCHANTER_MASTER_basic1");
 			await dialog.Msg("ENCHANTER_MASTER_basic2");
 			await dialog.Msg("ENCHANTER_MASTER_basic3");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("HT_ESCAPE_MERCHANT")]
@@ -2078,13 +2014,13 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("HT_ESCAPE_MERCHANT_BASIC01");
 			await dialog.Msg("HT_ESCAPE_MERCHANT_BASIC02");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("KEY_QUEST_NPC_NUNNERY")]
 		public static async Task KEY_QUEST_NPC_NUNNERY(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_MATROSS_NPC")]
@@ -2092,7 +2028,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_MATROSS_NPC_basic1");
 			await dialog.Msg("MASTER_MATROSS_NPC_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_ARDITI_NPC")]
@@ -2100,7 +2036,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_ARDITI_NPC_basic1");
 			await dialog.Msg("MASTER_ARDITI_NPC_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_SHERIFF_NPC")]
@@ -2108,7 +2044,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_SHERIFF_NPC_basic1");
 			await dialog.Msg("MASTER_SHERIFF_NPC_basic2");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_TERRAMANCER_NPC")]
@@ -2117,7 +2053,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("MASTER_TERRAMANCER_NPC_basic1");
 			await dialog.Msg("MASTER_TERRAMANCER_NPC_basic2");
 			await dialog.Msg("MASTER_TERRAMANCER_NPC_basic_move");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_BLOSSOMBLADER_NPC")]
@@ -2125,7 +2061,7 @@ namespace Melia.Zone.Scripting.Shared
 		{
 			await dialog.Msg("MASTER_BLOSSOMBLADER_NPC_basic1");
 			await dialog.Msg("MASTER_BLOSSOMBLADER_NPC_basic_move");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_RANGDA_NPC")]
@@ -2134,59 +2070,60 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("MASTER_RANGDA_NPC_basic1");
 			await dialog.Msg("MASTER_RANGDA_NPC_basic2");
 			await dialog.Msg("MASTER_RANGDA_NPC_basic_move");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("NPC_MIELAS_01")]
 		public static async Task NPC_MIELAS_01(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("NPC_RANGDAGIRL_01")]
 		public static async Task NPC_RANGDAGIRL_01(Dialog dialog)
 		{
 			await dialog.Msg("NPC_RANGDAGIRL_01_basic1");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_LUCHADOR_NPC")]
 		public static async Task MASTER_LUCHADOR_NPC(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_LUCHADOR_NPC_basic01");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("MASTER_LAMA_NPC")]
 		public static async Task MASTER_LAMA_NPC(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_CHAR4_22_1_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("MASTER_SPE_NPC")]
 		public static async Task MASTER_SPE_NPC(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_Char1_24_1_basic1");
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("BEAUTY_HAIRSHOP_MOVE")]
 		public static async Task BEAUTY_HAIRSHOP_MOVE(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("BEAUTY_BOUTIQUE_MOVE")]
 		public static async Task BEAUTY_BOUTIQUE_MOVE(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("BEAUTY_OUT_MOVE")]
 		public static async Task BEAUTY_OUT_MOVE(Dialog dialog)
 		{
-			dialog.Close();
+			await Task.Yield();
 		}
 
 		[DialogFunction("BEAUTY_SHOP_HAIR_F")]
@@ -2195,32 +2132,25 @@ namespace Melia.Zone.Scripting.Shared
 			switch (await dialog.Select("BEAUTY_SHOP_HAIR_F1", "!@#$BEAUTY_SHOP_HAIR_F2#@!", "!@#$BEAUTY_SHOP_HAIR_F3#@!", "!@#$BEAUTY_SHOP_HAIR_F4#@!", "!@#$BEAUTY_SHOP_SKIN#@!", "!@#$BEAUTY_SHOP_HAIR_ETC#@!", "!@#$BEAUTY_SHOP_HAIR_COUPON#@!", "!@#$Close#@!"))
 			{
 				case 1:
-					dialog.Close();
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "HAIR", 2);
 					break;
 				case 2:
-					dialog.Close();
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "WIG", 2);
 					break;
 				case 3:
-					dialog.Close();
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "DESIGNCUT", 2);
 					break;
 				case 4:
-					dialog.Close();
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "SKIN");
 					break;
 				case 5:
-					dialog.Close();
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "ETC");
 					break;
 				case 6:
-					dialog.Close();
-					dialog.ExecuteScript(ClientScripts.BEAUTY_COUPON_OPEN);
 					dialog.AddonMessage(AddonMessage.UPDATE_BEAUTY_COUPON_STAMP, "None");
+					await dialog.ExecuteScript(ClientScripts.BEAUTY_COUPON_OPEN);
 					break;
 			}
-			dialog.Close();
 		}
 
 		[DialogFunction("BEAUTY_SHOP_HAIR_M")]
@@ -2229,32 +2159,25 @@ namespace Melia.Zone.Scripting.Shared
 			switch (await dialog.Select("BEAUTY_SHOP_HAIR_M1", "!@#$BEAUTY_SHOP_HAIR_M2#@!", "!@#$BEAUTY_SHOP_HAIR_M3#@!", "!@#$BEAUTY_SHOP_HAIR_M4#@!", "!@#$BEAUTY_SHOP_SKIN#@!", "!@#$BEAUTY_SHOP_HAIR_ETC#@!", "!@#$BEAUTY_SHOP_HAIR_COUPON#@!", "!@#$Close#@!"))
 			{
 				case 1:
-					dialog.Close();
 					dialog.AddonMessage("BEAUTYSHOP_UI_OPEN", "HAIR", 1);
 					break;
 				case 2:
-					dialog.Close();
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "WIG", 1);
 					break;
 				case 3:
-					dialog.Close();
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "DESIGNCUT", 1);
 					break;
 				case 4:
-					dialog.Close();
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "SKIN");
 					break;
 				case 5:
-					dialog.Close();
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "ETC");
 					break;
 				case 6:
-					dialog.Close();
-					dialog.ExecuteScript(ClientScripts.BEAUTY_COUPON_OPEN);
 					dialog.AddonMessage(AddonMessage.UPDATE_BEAUTY_COUPON_STAMP, "None");
+					await dialog.ExecuteScript(ClientScripts.BEAUTY_COUPON_OPEN);
 					break;
 			}
-			dialog.Close();
 		}
 
 		[DialogFunction("BEAUTY_SHOP_FASHION")]
@@ -2263,23 +2186,18 @@ namespace Melia.Zone.Scripting.Shared
 			switch (await dialog.Select("BEAUTY_SHOP_FASHION", "!@#$BEAUTY_SHOP_FASHION_1#@!", "!@#$BEAUTY_SHOP_FASHION_2#@!", "!@#$BEAUTY_SHOP_FASHION_4#@!", "!@#$PREVIEW_SILVERGACHA#@!", "!@#$Close#@!"))
 			{
 				case 1:
-					dialog.Close();
 					dialog.AddonMessage("BEAUTYSHOP_UI_OPEN", "COSTUME", 1);
 					break;
 				case 2:
-					dialog.Close();
 					dialog.AddonMessage("BEAUTYSHOP_UI_OPEN", "COSTUME", 2);
 					break;
 				case 3:
-					dialog.Close();
 					dialog.AddonMessage("BEAUTYSHOP_UI_OPEN", "PREVIEW");
 					break;
 				case 4:
-					dialog.Close();
 					dialog.AddonMessage("BEAUTYSHOP_UI_OPEN", "PREVIEW_SILVERGACHA");
 					break;
 			}
-			dialog.Close();
 		}
 
 		[DialogFunction("SIALUL_WEST_DRASIUS")]
@@ -2325,7 +2243,6 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("SIAU_FRON_NPC_01_basic02");
 			await dialog.HooksByDialogName("BeforeStart");
 			await dialog.HooksByDialogName("BeforeEnd");
-			dialog.Close();
 		}
 
 		[DialogFunction("SIAUL_WEST_RESIDENT1")]

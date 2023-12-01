@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Melia.Shared.Data.Database;
 using Melia.Shared.Network;
 using Melia.Zone.Events;
 using Melia.Zone.World.Actors.Characters;
@@ -35,16 +36,13 @@ namespace Melia.Zone.World
 
 		private int _genTypes = 1_000_000;
 
-		private readonly Dictionary<int, Map> _mapsId = new Dictionary<int, Map>();
-		private readonly Dictionary<string, Map> _mapsName = new Dictionary<string, Map>();
 		private readonly Dictionary<int, MonsterSpawner> _spawners = new Dictionary<int, MonsterSpawner>();
 		private readonly Dictionary<string, SpawnAreaCollection> _spawnAreaCollections = new Dictionary<string, SpawnAreaCollection>();
-		private readonly object _mapsLock = new object();
 
 		/// <summary>
 		/// Returns the amount of maps in the world.
 		/// </summary>
-		public int Count { get { lock (_mapsLock) return _mapsId.Count; } }
+		public int Count => this.Maps.Count;
 
 		/// <summary>
 		/// Returns the world's heartbeat, a manager for regularly
@@ -155,8 +153,7 @@ namespace Melia.Zone.World
 			foreach (var entry in ZoneServer.Instance.Data.MapDb.Entries.Values)
 			{
 				var map = new Map(entry.Id, entry.ClassName);
-				_mapsId.Add(map.Id, map);
-				_mapsName.Add(map.ClassName, map);
+				this.AddMap(map);
 
 				this.Heartbeat.Add(map);
 			}
@@ -170,6 +167,7 @@ namespace Melia.Zone.World
 			this.Heartbeat.Add(new TimeEventRaiser());
 
 			this.DayNightCycle = new DayNightCycle();
+
 			if (ZoneServer.Instance.Conf.World.EnableDayNightCycle)
 				this.Heartbeat.Add(this.DayNightCycle);
 		}
@@ -187,26 +185,14 @@ namespace Melia.Zone.World
 		/// </summary>
 		/// <param name="mapId"></param>
 		public Map GetMap(int mapId)
-		{
-			Map result;
-			lock (_mapsLock)
-				_mapsId.TryGetValue(mapId, out result);
-
-			return result;
-		}
+			=> this.Maps.Get(mapId);
 
 		/// <summary>
 		/// Returns map by name, or null if it doesn't exist.
 		/// </summary>
 		/// <param name="mapClassName"></param>
 		public Map GetMap(string mapClassName)
-		{
-			Map result;
-			lock (_mapsLock)
-				_mapsName.TryGetValue(mapClassName, out result);
-
-			return result;
-		}
+		=> this.Maps.Get(mapClassName);
 
 		/// <summary>
 		/// Returns map by name via out, returns false if the map doesn't
@@ -215,10 +201,7 @@ namespace Melia.Zone.World
 		/// <param name="mapClassId"></param>
 		/// <param name="map"></param>
 		public bool TryGetMap(int mapClassId, out Map map)
-		{
-			map = this.GetMap(mapClassId);
-			return map != null;
-		}
+		=> this.Maps.TryGet(mapClassId, out map);
 
 		/// <summary>
 		/// Returns map by name via out, returns false if the map doesn't
@@ -227,21 +210,14 @@ namespace Melia.Zone.World
 		/// <param name="mapClassName"></param>
 		/// <param name="map"></param>
 		public bool TryGetMap(string mapClassName, out Map map)
-		{
-			map = this.GetMap(mapClassName);
-			return map != null;
-		}
+		=> this.Maps.TryGet(mapClassName, out map);
 
 		/// <summary>
 		/// Removes all scripted entities, like NPCs.
 		/// </summary>
 		public void RemoveScriptedEntities()
 		{
-			lock (_mapsLock)
-			{
-				foreach (var map in _mapsId.Values)
-					map.RemoveScriptedEntities();
-			}
+			this.Maps.RemoveScriptedEntities();
 
 			lock (_spawners)
 			{
@@ -250,7 +226,6 @@ namespace Melia.Zone.World
 					spawner.InitializePopulation();
 					this.Heartbeat.Remove(spawner);
 				}
-
 				_spawners.Clear();
 			}
 
@@ -263,19 +238,7 @@ namespace Melia.Zone.World
 		/// or null if none were found.
 		/// </summary>
 		public Character GetCharacterByTeamName(string teamName)
-		{
-			lock (_mapsLock)
-			{
-				foreach (var map in _mapsId.Values)
-				{
-					var character = map.GetCharacterByTeamName(teamName);
-					if (character != null)
-						return character;
-				}
-			}
-
-			return null;
-		}
+		=> this.Maps.GetCharacterByTeamName(teamName);
 
 		/// <summary>
 		/// Adds a monster spawner object to the world
@@ -351,15 +314,6 @@ namespace Melia.Zone.World
 		}
 
 		/// <summary>
-		/// Returns all characters that are currently online.
-		/// </summary>
-		public Character[] GetCharacters()
-		{
-			lock (_mapsLock)
-				return _mapsId.Values.SelectMany(a => a.GetCharacters()).ToArray();
-		}
-
-		/// <summary>
 		/// Returns the first monster that matches the given predicate
 		/// on any map via out. Returns false if no matching monster was
 		/// found.
@@ -368,72 +322,39 @@ namespace Melia.Zone.World
 		/// <param name="monster"></param>
 		/// <returns></returns>
 		public bool TryGetMonster(Func<IMonster, bool> predicate, out IMonster monster)
-		{
-			lock (_mapsLock)
-			{
-				foreach (var map in _mapsId.Values)
-				{
-					if (map.TryGetMonster(predicate, out var m))
-					{
-						monster = m;
-						return true;
-					}
-				}
-			}
-
-			monster = null;
-			return false;
-		}
+			=> this.Maps.TryGetMonster(predicate, out monster);
 
 		/// <summary>
 		/// Returns the total number of player characters across all maps.
 		/// </summary>
 		/// <returns></returns>
 		public int GetCharacterCount()
-		{
-			lock (_mapsLock)
-				return _mapsId.Values.Sum(a => a.CharacterCount);
-		}
+			=> this.Maps.GetCharacterCount();
+
+		/// <summary>
+		/// Returns all characters that are currently online.
+		/// </summary>
+		public Character[] GetCharacters()
+			=> this.Maps.GetCharacters();
 
 		/// <summary>
 		/// Returns all online characters that match the given predicate.
 		/// </summary>
 		public Character[] GetCharacters(Func<Character, bool> predicate)
-		{
-			lock (_mapsLock)
-				return _mapsId.Values.SelectMany(a => a.GetCharacters(predicate)).ToArray();
-		}
+			=> this.Maps.GetCharacters(predicate);
 
 		/// <summary>
 		/// Broadcasts packet on all maps.
 		/// </summary>
 		/// <param name="packet"></param>
 		public void Broadcast(Packet packet)
-		{
-			lock (_mapsLock)
-			{
-				foreach (var map in _mapsId.Values)
-					map.Broadcast(packet);
-			}
-		}
+			=> this.Maps.Broadcast(packet);
 
 		/// <summary>
 		/// Returns all online characters that match the given predicate.
 		/// </summary>
 		public Character GetCharacter(Func<Character, bool> predicate)
-		{
-			lock (_mapsLock)
-			{
-				foreach (var map in _mapsId.Values)
-				{
-					var character = map.GetCharacter(predicate);
-
-					if (character != null)
-						return character;
-				}
-				return null;
-			}
-		}
+			=> this.Maps.GetCharacter(predicate);
 
 		/// <summary>
 		/// Returns a party if found by id or null

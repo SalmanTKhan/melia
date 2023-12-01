@@ -10,6 +10,7 @@ namespace Melia.Shared.Tos.Const
 	{
 		public const int Familiar = 57432;
 		public const int SkeletonArcher = 58534;
+		public const int Velheider = 60001;
 		public const int DirtyPole = 103016;
 		public const int CorpseTower = 103017;
 		public const int Shoggoth = 103018;

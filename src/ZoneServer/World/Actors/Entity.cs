@@ -45,6 +45,11 @@ namespace Melia.Zone.World.Actors
 		MoveType MoveType { get; }
 
 		/// <summary>
+		/// Gets or sets the entity's tendency
+		/// </summary>
+		public TendencyType Tendency { get; set; }
+
+		/// <summary>
 		/// Returns the entity's level.
 		/// </summary>
 		int Level { get; }

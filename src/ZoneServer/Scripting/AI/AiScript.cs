@@ -8,6 +8,7 @@ using Melia.Zone.World.Actors.CombatEntities.Components;
 using Melia.Zone.World.Actors.Monsters;
 using Melia.Zone.World.Maps;
 using Yggdrasil.Ai.Enumerable;
+using Yggdrasil.Logging;
 using Yggdrasil.Scheduling;
 using Yggdrasil.Scripting;
 
@@ -67,10 +68,7 @@ namespace Melia.Zone.Scripting.AI
 		{
 			this.Entity = combatEntity;
 
-			if (combatEntity is Mob mob)
-			{
-				this.SetTendency(mob.Tendency);
-			}
+			this.SetTendency(combatEntity.Tendency);
 
 			if (ZoneServer.Instance.Data.FactionDb.TryFind(this.Entity.Faction, out var factionData))
 				this.HatesFaction(factionData.Hostile);

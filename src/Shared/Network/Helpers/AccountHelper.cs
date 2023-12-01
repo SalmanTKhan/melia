@@ -55,10 +55,5 @@ namespace Melia.Shared.Network.Helpers
 		/// Returns the selected barrack layer.
 		/// </summary>
 		int SelectedBarrackLayer { get; }
-
-		/// <summary>
-		/// Returns a reference to the account's properties.
-		/// </summary>
-		Properties Properties { get; }
 	}
 }

@@ -272,9 +272,8 @@ namespace Melia.Zone.Commands
 						else
 						{
 							var monster = new Mob(400001, MonsterType.Mob);
-
-							Position pos = sender.Position;
-							Direction dir = sender.Direction;
+							var pos = sender.Position;
+							var dir = sender.Direction;
 
 							monster.Position = pos;
 							monster.Direction = dir;
@@ -789,11 +788,8 @@ namespace Melia.Zone.Commands
 			}
 
 			var tendency = TendencyType.Peaceful;
-			if (args.TryGet("tendency", out var tendencyArg))
-			{
-				if (tendencyArg.ToLower() == "aggressive")
-					tendency = TendencyType.Aggressive;
-			}
+			if (args.TryGet("tendency", out var tendencyArg) && tendencyArg.ToLower() == "aggressive")
+				tendency = TendencyType.Aggressive;
 
 			var rnd = new Random(Environment.TickCount);
 			for (var i = 0; i < amount; ++i)
@@ -817,6 +813,7 @@ namespace Melia.Zone.Commands
 				monster.Direction = dir;
 				monster.Tendency = tendency;
 				monster.Components.Add(new MovementComponent(monster));
+				monster.SpawnLocation = new Location(sender.Map.WorldId, pos);
 
 				if (args.TryGet("hp", out var hpStr))
 				{
@@ -2429,7 +2426,8 @@ namespace Melia.Zone.Commands
 		/// <summary>
 		/// Official slash command to invite a character to a party
 		/// </summary>
-		/// <param name="character"></param>
+		/// <param name="sender"></param>
+		/// <param name="target"></param>
 		/// <param name="message"></param>
 		/// <param name="command"></param>
 		/// <param name="args"></param>
@@ -2453,8 +2451,13 @@ namespace Melia.Zone.Commands
 			}
 
 			var targetCharacter = ZoneServer.Instance.World.GetCharacterByTeamName(args.Get(0));
-			if (targetCharacter != null)
-				Send.ZC_NORMAL.PartyInvite(targetCharacter, sender, PartyType.Party);
+			if (targetCharacter == null)
+			{
+				Log.Debug("HandlePartyInvite: Invalid call by user '{0}': {1}", sender.Username, command);
+				return CommandResult.Okay;
+			}
+
+			Send.ZC_NORMAL.PartyInvite(targetCharacter, sender, PartyType.Party);
 
 			return CommandResult.Okay;
 		}

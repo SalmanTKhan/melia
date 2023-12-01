@@ -207,7 +207,7 @@ namespace Melia.Zone.Scripting
 			}
 		}
 
-		public void CreateBattleBoxInLayer(Character character, Track track)
+		public static void CreateBattleBoxInLayer(Character character, Track track)
 		{
 			track.HasBattleBoxInLayer = true;
 			foreach (var actor in track.Actors)

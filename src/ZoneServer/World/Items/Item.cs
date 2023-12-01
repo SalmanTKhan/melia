@@ -68,8 +68,8 @@ namespace Melia.Zone.World.Items
 		/// </summary>
 		public int Price { get; private set; }
 
-
 		private int _durability = -1; // Initialized as -1 to force Max Durability if no durability specified.
+
 		/// <summary>
 		/// Returns the item's current durability.
 		/// </summary>
@@ -191,6 +191,17 @@ namespace Melia.Zone.World.Items
 					throw new NullReferenceException($"Unknown item '{this.Id}' cooldown group '{this.Data.CooldownGroup}'.");
 			}
 
+			if (this.Data.MaxDurability != 0)
+			{
+				this.Properties.SetFloat(PropertyName.MaxDur, this.Data.MaxDurability);
+				if (this.Data.Name.StartsWith("Old "))
+					this.Properties.Modify(PropertyName.MaxDur, -this.Data.MaxDurability * .50f);
+				if (_durability != -1)
+					this.Properties.SetFloat(PropertyName.Dur, this.Durability);
+				else
+					this.Properties.SetFloat(PropertyName.Dur, this.Properties.GetFloat(PropertyName.MaxDur));
+			}
+
 			if (this.Data.MinAtk != 0) this.Properties.SetFloat(PropertyName.MINATK, this.Data.MinAtk);
 			if (this.Data.MaxAtk != 0) this.Properties.SetFloat(PropertyName.MAXATK, this.Data.MaxAtk);
 			if (this.Data.MAtk != 0) this.Properties.SetFloat(PropertyName.MATK, this.Data.MAtk);
@@ -306,6 +317,25 @@ namespace Melia.Zone.World.Items
 			if (this.Data.MagicFireAtk != 0) this.Properties.SetFloat(PropertyName.Magic_Fire_Atk, this.Data.MagicFireAtk);
 			if (this.Data.MagicLightningAtk != 0) this.Properties.SetFloat(PropertyName.Magic_Lightning_Atk, this.Data.MagicLightningAtk);
 			if (this.Data.Cooldown != 0) this.Properties.SetFloat(PropertyName.CoolDown, this.Data.Cooldown);
+			if (this.Data.MinLevel != 0) this.Properties.SetFloat(PropertyName.UseLv, this.Data.MinLevel);
+			if (this.Data.Grade != 0)
+			{
+				var modifier = (this.Data.Grade * 0.05f) + 0.05f;
+
+				this.Properties.SetFloat(PropertyName.ItemGrade, this.Data.Grade);
+
+				if (this.Data.MinAtk != 0)
+					this.Properties.Modify(PropertyName.MINATK, MathF.Floor(this.Data.MinAtk * modifier));
+
+				if (this.Data.MaxAtk != 0)
+					this.Properties.Modify(PropertyName.MAXATK, MathF.Round(this.Data.MaxAtk * modifier));
+
+				if (this.Data.MAtk != 0)
+					this.Properties.Modify(PropertyName.MATK, MathF.Round(this.Data.MAtk * modifier));
+
+				if (this.Data.PAtk != 0)
+					this.Properties.Modify(PropertyName.PATK, MathF.Round(this.Data.PAtk * modifier));
+			}
 		}
 
 		/// <summary>

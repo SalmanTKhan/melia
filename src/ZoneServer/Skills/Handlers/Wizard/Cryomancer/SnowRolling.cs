@@ -57,7 +57,7 @@ namespace Melia.Zone.Skills.Handlers.Cryomancer
 			Send.ZC_NORMAL.UpdateSkillEffect(caster, caster.Handle, caster.Position, caster.Direction, caster.Position);
 
 			if (caster is Character character)
-				character.Components.Get<SkillComponent>()?.AddSilent(new Skill(character, SkillId.Common_StateClear, 1));
+				character.Skills.AddSilent(new Skill(character, SkillId.Common_StateClear, 1));
 			Send.ZC_NORMAL.ApplyBuff(caster, "SnowRolling_Buff", SkillId.Common_StateClear, 1);
 
 			var snowball = new Mob(47312, MonsterType.Friendly);

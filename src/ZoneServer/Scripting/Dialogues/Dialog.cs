@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Melia.Shared.Data.Database;
+using Melia.Shared.Tos.Const;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting.Hooking;
 using Melia.Zone.World.Actors;
@@ -47,7 +48,7 @@ namespace Melia.Zone.Scripting.Dialogues
 		{
 			get
 			{
-				if (!(this.Initiator is Character character))
+				if (this.Initiator is not Character character)
 					throw new InvalidOperationException($"The triggerer is not of type Character, but {this.Initiator.GetType().Name}.");
 
 				return character;
@@ -61,7 +62,7 @@ namespace Melia.Zone.Scripting.Dialogues
 		{
 			get
 			{
-				if (!(this.Trigger is Npc npc))
+				if (this.Trigger is not Npc npc)
 					throw new InvalidOperationException($"The trigger is not of type Npc, but {this.Initiator.GetType().Name}.");
 
 				return npc;
@@ -128,6 +129,7 @@ namespace Melia.Zone.Scripting.Dialogues
 			{
 				await dialogFunc(this);
 				this.Close();
+				this.Leave();
 			}
 			catch (OperationCanceledException)
 			{
@@ -148,7 +150,10 @@ namespace Melia.Zone.Scripting.Dialogues
 		internal void Resume(string response)
 		{
 			if (this.State != DialogState.Waiting)
-				throw new InvalidOperationException($"The dialog is not paused and waiting for a response.");
+			{
+				// throw new InvalidOperationException($"The dialog is not paused and waiting for a response.");
+				return;
+			}
 
 			_response = response;
 			_resumeSignal.Release();
@@ -348,6 +353,16 @@ namespace Melia.Zone.Scripting.Dialogues
 		/// <param name="options">List of options to select from.</param>
 		/// <returns></returns>
 		public async Task<string> Select(string text, params DialogOption[] options)
+			=> await this.Select(text, (IEnumerable<DialogOption>)options);
+
+		/// <summary>
+		/// Shows a menu with options to select from, returns the key
+		/// of the selected option.
+		/// </summary>
+		/// <param name="text">Text to display with the options.</param>
+		/// <param name="options">List of options to select from.</param>
+		/// <returns></returns>
+		public async Task<string> Select(string text, IEnumerable<DialogOption> options)
 		{
 			// Go through SelectSimple to get the integer response
 			// and then look up the key in the options to return it.
@@ -355,9 +370,18 @@ namespace Melia.Zone.Scripting.Dialogues
 			var optionsTexts = options.Select(a => a.Text);
 			var selectedIndex = await this.Select(text, optionsTexts);
 
-			var response = options[selectedIndex - 1].Key;
+			var response = options.ElementAt(selectedIndex - 1).Key;
 			return response;
 		}
+
+		/// <summary>
+		/// Returns a mutable list of options to be passed to the Select
+		/// method.
+		/// </summary>
+		/// <param name="options"></param>
+		/// <returns></returns>
+		public List<DialogOption> CreateOptions(params DialogOption[] options)
+			=> options.ToList();
 
 		/// <summary>
 		/// Shows a menu with options to select from and returns the
@@ -614,24 +638,10 @@ namespace Melia.Zone.Scripting.Dialogues
 		/// </summary>
 		/// <param name="script"></param>
 		/// <param name="args">arguments for the script</param>
-		public void ExecuteScript(string script, params object[] args)
+		public async Task ExecuteScript(string script, params object[] args)
 		{
-			this.State = DialogState.Ended;
+			this.State = DialogState.Waiting;
 			Send.ZC_EXEC_CLIENT_SCP(this.Player.Connection, args.Length > 0 ? string.Format(script, args) : script);
-			this.Leave();
-
-			//await this.GetClientResponse();
-		}
-
-		/// <summary>
-		/// Custom dialog, predefined dialogs in the client
-		/// </summary>
-		/// <param name="function"></param>
-		/// <param name="dialog"></param>
-		/// <param name="argCount"></param>
-		public async Task TimedAction(string function, string dialog = "", int argCount = 0)
-		{
-			Send.ZC_CUSTOM_DIALOG(this.Player.Connection, function, dialog, argCount);
 
 			await this.GetClientResponse();
 		}
@@ -661,29 +671,56 @@ namespace Melia.Zone.Scripting.Dialogues
 			await this.GetClientResponse();
 		}
 
+		/// <summary>
+		/// Leave the dialog trigger
+		/// </summary>
+		/// <remarks>
+		/// Not too sure if this is used for anything - @SalmanTKhan
+		/// </remarks>
 		public void Leave()
 		{
 			Send.ZC_LEAVE_TRIGGER(this.Player.Connection);
 		}
 
+		/// <summary>
+		/// Play an animation only visible to the dialog's 
+		/// target player.
+		/// </summary>
+		/// <param name="animationId"></param>
 		public void PlayAnimation(string animationId)
 		{
 			Send.ZC_PLAY_ANI(this.Player, this.Npc, animationId);
 		}
 
+		/// <summary>
+		/// Show a chat bubble only visible to the dialog's 
+		/// target player.
+		/// </summary>
+		/// <param name="format"></param>
+		/// <param name="args"></param>
 		public void Chat(string format, params object[] args)
 		{
 			Send.ZC_CHAT(this.Player, this.Npc, format, args);
 		}
 
+		/// <summary>
+		/// Show a help message to the dialog's 
+		/// target player.
+		/// </summary>
+		/// <param name="helpName"></param>
 		public void ShowHelp(string helpName)
 		{
 			this.Player.ShowHelp(helpName);
 		}
 
+		/// <summary>
+		/// Unhide an NPC for a specific player
+		/// </summary>
+		/// <param name="npcName"></param>
 		public void UnHideNPC(string npcName)
 		{
 			Log.Debug("Warning - UnHideNPC is not implemented yet.");
+			//this.Player.UnHideNPC(npcName);
 		}
 
 		public void HideNPC(string npcName)

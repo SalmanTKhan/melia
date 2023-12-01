@@ -66,7 +66,6 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// Component update
 		/// </summary>
 		/// <param name="elapsed"></param>
-		/// <exception cref="NotImplementedException"></exception>
 		public void Update(TimeSpan elapsed)
 		{
 			this.UpdateAttackState();
@@ -75,7 +74,6 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// <summary>
 		/// Updates the entity's attack state.
 		/// </summary>
-		/// <exception cref="NotImplementedException"></exception>
 		private void UpdateAttackState()
 		{
 			if (!this.AttackState)

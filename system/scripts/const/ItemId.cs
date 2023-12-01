@@ -4015,6 +4015,7 @@ public static class ItemId
 	public const int Hat_Jellyzele_Crown = 11102002;
 	public const int Hat_Nightrabbit = 11102003;
 	public const int Hat_Ep15spring01 = 11102004;
+	public const int Hat_Squirrel = 11102005;
 	public const int Hat_Ep15picnic01 = 11102006;
 	public const int Hat_Ep15picnic02 = 11102007;
 	public const int Hat_Kepaberet = 11102008;
@@ -4025,6 +4026,7 @@ public static class ItemId
 	public const int Hat_Ep15explorer02 = 11102013;
 	public const int Hat_Ep15elf01 = 11102014;
 	public const int Hat_Ep15elf02 = 11102015;
+	public const int Hat_Tw_Ridingclothes = 11102016;
 	public const int Guiltynelaima_Shield = 11104006;
 	public const int EP15_Artefact_004 = 11104010;
 	public const int Ep15spring01_Shield = 11104014;
@@ -4043,6 +4045,9 @@ public static class ItemId
 	public const int EP15_RAID_PLATE_LEG = 11107026;
 	public const int EP15_RAID_PLATE_FOOT = 11107027;
 	public const int EP15_RAID_PLATE_HAND = 11107028;
+	public const int Costume_Char2_160 = 11108000;
+	public const int Hat_M_Char2_160 = 11108002;
+	public const int Hat_F_Char2_160 = 11108003;
 
 	// BELT
 	//-----------------------------------------------------------------------
@@ -4643,6 +4648,7 @@ public static class ItemId
 	public const int DRESS_ROOM_COLLECT_14 = 11039014;
 	public const int DRESS_ROOM_COLLECT_15 = 11039015;
 	public const int DRESS_ROOM_COLLECT_16 = 11039016;
+	public const int DRESS_ROOM_COLLECT_17 = 11039017;
 
 	// Consume
 	//-----------------------------------------------------------------------
@@ -4975,6 +4981,7 @@ public static class ItemId
 	public const int Gacha_Goddess_AbyssalObserver_Party_Dummy = 642994;
 	public const int Gacha_Goddess_AbyssalObserver_Auto_Dummy = 642995;
 	public const int Gacha_Goddess_AbyssalObserver_Solo_Dummy = 642996;
+	public const int Gacha_BridgeWailing_Dimension_Party = 642997;
 	public const int Piece_BorutaSeal = 699041;
 	public const int Cube_FD_Weapon_75 = 800001;
 	public const int Cube_FD_Armor_75 = 800002;
@@ -8242,6 +8249,9 @@ public static class ItemId
 	public const int Achieve_WeeklyRank_20 = 904346;
 	public const int Achieve_PilgrimRank_Jellyzele = 904347;
 	public const int Achieve_PilgrimRank_Spreader = 904348;
+	public const int Achieve_WeeklyRank_21 = 904349;
+	public const int Achieve_WeeklyRank_22 = 904350;
+	public const int Achieve_WeeklyRank_23 = 904351;
 	public const int Scroll_SkillItem = 910001;
 	public const int Scroll_SkillItem_Cleric_Cure = 910005;
 	public const int Scroll_SkillItem_Kriwi_Aukuras = 910006;
@@ -8555,6 +8565,15 @@ public static class ItemId
 	public const int PersonalHousing_Item_Hp_F_Ignas_Bronze = 1248063;
 	public const int PersonalHousing_Item_Hp_F_Ignas_Silver = 1248064;
 	public const int PersonalHousing_Item_Hp_F_Ignas_Gold = 1248065;
+	public const int PersonalHousing_Item_Hp_F_Roze_Bronze = 1248066;
+	public const int PersonalHousing_Item_Hp_F_Roze_Silver = 1248067;
+	public const int PersonalHousing_Item_Hp_F_Roze_Gold = 1248068;
+	public const int PersonalHousing_Item_Hp_F_Upinis_Bronze = 1248069;
+	public const int PersonalHousing_Item_Hp_F_Upinis_Silver = 1248070;
+	public const int PersonalHousing_Item_Hp_F_Upinis_Gold = 1248071;
+	public const int PersonalHousing_Item_Hp_F_Slogutis_Bronze = 1248072;
+	public const int PersonalHousing_Item_Hp_F_Slogutis_Silver = 1248073;
+	public const int PersonalHousing_Item_Hp_F_Slogutis_Gold = 1248074;
 	public const int Motion_Medeina_Emotion01 = 1250003;
 	public const int Motion_Medeina_Emotion02 = 1250004;
 	public const int Egg_003_ContentsTotalShop = 1250005;
@@ -8806,6 +8825,9 @@ public static class ItemId
 	public const int Event_2210_Stew2 = 10000620;
 	public const int Event_2210_Stew3 = 10000621;
 	public const int LegendCard_Move_Scroll = 10000625;
+	public const int Event_2310_Stew1 = 10000642;
+	public const int Event_2310_Stew2 = 10000643;
+	public const int Event_2310_Stew3 = 10000644;
 	public const int Event_Enchantchip_Limit_1 = 10002006;
 	public const int Moru_Ruby_Limit_1 = 10002012;
 	public const int Moru_Gold_Limit_1 = 10002013;
@@ -9026,6 +9048,8 @@ public static class ItemId
 	public const int Moru_Ruby_Limit_Renew = 10820021;
 	public const int Event_Enchantchip_Limit_Renew = 10820022;
 	public const int Moru_Gold_Limit_Renew = 10820023;
+	public const int Event_Goddess_Statue_Team_36 = 10820031;
+	public const int Event_Adventure_Reward_Seed_36 = 10820032;
 	public const int Unique_Enchant_Jewel_450 = 11030015;
 	public const int Legend_Enchant_Jewel_500 = 11030016;
 	public const int Challenge_RepeatHealPotion_Solo = 11030081;
@@ -9195,6 +9219,7 @@ public static class ItemId
 	public const int SoloRaidCntReset_Team_Event_2 = 10600087;
 	public const int SoloRaidCntReset_Team_Event_4 = 10600184;
 	public const int SoloRaidCntReset_Team_Event_5 = 10600215;
+	public const int Event_ChallengeModeReset_36 = 10820028;
 
 	// Event
 	//-----------------------------------------------------------------------
@@ -9879,6 +9904,7 @@ public static class ItemId
 	public const int Event_2304_ARBOR_DAY_BOX4 = 10000633;
 	public const int Event_2304_ARBOR_DAY_BOX5 = 10000634;
 	public const int Event_2304_ARBOR_DAY_BOX6 = 10000635;
+	public const int Event_2310_Pumpkin_Candy = 10000641;
 	public const int Event_Ability_Point_Stone_10000_Limit_1 = 10002000;
 	public const int Event_Misc_Pvpmine2_Ticket_5000_Limit_1 = 10002001;
 	public const int Event_Contents_Total_Point_Boost_Coupon_Limit_1 = 10002002;
@@ -9906,6 +9932,7 @@ public static class ItemId
 	public const int Event_Misc_Pvpmine2_Ticket_10000_Limit_1 = 10002029;
 	public const int Event_Abrasive_460_NoTrade_Limit_1 = 10002030;
 	public const int Event_Misc_GemExpStone8_Limit_1 = 10002031;
+	public const int Event_2310_Stew_Ingredient = 10002038;
 	public const int Event_Irredians_Accessory_Box = 10003004;
 	public const int Event_Roulette_Draconas_Box = 10003016;
 	public const int Event_Roulette_Boruta_Box = 10003017;
@@ -10112,6 +10139,9 @@ public static class ItemId
 	public const int Event_Misc_Reinforce_PercentUp_480_NoTrade_Limit_Renew = 10820020;
 	public const int Event_Misc_Engrave_460_NoTrade_Limit_Renew = 10820024;
 	public const int Event_Card_Xpupkit10_Limit_Renew = 10820025;
+	public const int Event_Dungeoncount_36 = 10820029;
+	public const int Event_IndunReset_Team_36 = 10820030;
+	public const int Event_Ability_Point_Stone_10000_36 = 10820033;
 	public const int Event_Vibora_Ticket_1cnt = 11030320;
 	public const int Premium_Episode_UnlockScroll_EP_1 = 11035170;
 	public const int Premium_Episode_UnlockScroll_EP_2 = 11035171;
@@ -13528,6 +13558,13 @@ public static class ItemId
 	public const int Secret_Medicine_Int_500_Recipe = 11201083;
 	public const int Secret_Medicine_Con_500_Recipe = 11201084;
 	public const int Portal_Stone_Misc_Recipe_2 = 11201097;
+	public const int Misc_Wing_Roze = 11201098;
+	public const int Misc_Wing_Upinis = 11201099;
+	public const int Misc_Wing_Slogutis = 11201100;
+	public const int Misc_Wing_Slogutis_Glove = 11201101;
+	public const int High_Enchantchip_Low_Recipe = 11201103;
+	public const int BridgeWailing_Dimension_Recipe = 11201104;
+	public const int BridgeWailing_Dimension_Recipe_NoTrade = 11201105;
 
 	// PasteBait
 	//-----------------------------------------------------------------------
@@ -14038,6 +14075,7 @@ public static class ItemId
 	public const int Premium_AbillityArts_Char3_21_1d = 490490;
 	public const int Premium_AbillityArts_Char5_16_1d = 490491;
 	public const int Premium_Popoboost_Ticket_2308 = 490492;
+	public const int Premium_Enchantchip_High_20 = 490493;
 	public const int PremiumToken_60d = 491001;
 	public const int DLC_BOX1 = 491002;
 	public const int Steam_Premium_TpBox_650 = 491003;
@@ -14484,6 +14522,7 @@ public static class ItemId
 	public const int Premium_Translate_Refill = 494410;
 	public const int Class_Unlock_Achievement_Select = 494411;
 	public const int EmoticonItem_Summer_Popo_1 = 494412;
+	public const int Premium_QuestClearScroll_Box_2 = 494419;
 	public const int Alice_Pack_2016 = 495076;
 	public const int Vakarine_Box_01 = 495087;
 	public const int Vakarine_Box_02 = 495088;
@@ -14572,6 +14611,9 @@ public static class ItemId
 	public const int Ocelot_Box_06 = 495182;
 	public const int Ocelot_Box_07 = 495183;
 	public const int EngraveSlotExtension_Ticket_30d_30d = 495184;
+	public const int Premium_Enchantchip_High = 495185;
+	public const int Premium_Enchantchip_High_NoTrade = 495186;
+	public const int Premium_Enchantchip_High_20_NoTrade = 495187;
 	public const int Premium_Vakarine = 500000;
 	public const int Steam_NewRankDLC = 500001;
 	public const int Premium_Forever = 500002;
@@ -15619,6 +15661,8 @@ public static class ItemId
 	public const int Gacha_7TH_010_TWN = 1000149;
 	public const int Gacha_2023_W_Resale_001 = 1000154;
 	public const int Gacha_2023_W_Resale_010 = 1000155;
+	public const int Gacha_Halloween_Animals_Resale_001 = 1000156;
+	public const int Gacha_Halloween_Animals_Resale_010 = 1000157;
 	public const int PersonalHousing_Item_Voucher_1 = 1249900;
 	public const int PersonalHousing_Item_Voucher_2 = 1249901;
 	public const int PersonalHousing_Item_Voucher_3 = 1249902;
@@ -16245,6 +16289,8 @@ public static class ItemId
 	public const int Summer_Breeze_Entry_B_Package = 2500380;
 	public const int Summer_Breeze_Enhance_Package = 2500381;
 	public const int Summer_Breeze_All_In_One_Package = 2500382;
+	public const int Papaya_Special_Ep15_2_Package = 2500383;
+	public const int Halloween_Cube_Special_Package = 2500384;
 	public const int Costume_Com_199_Teamtrade = 6360008;
 	public const int Costume_Com_200_Teamtrade = 6360009;
 	public const int Chat_Balloon_Event_Arbor_Day_30d = 10000012;
@@ -16507,6 +16553,7 @@ public static class ItemId
 	public const int Event_Ticket_RevivalPaulius_Auto_Enter_Limit_Renew = 10820011;
 	public const int Event_Ticket_Vasilissa_Party_Enter_Limit_Renew = 10820015;
 	public const int Ticket_Rozethemisterable_Auto_Enter_Limit_Renew = 10820026;
+	public const int Multiple_Token_MythicHARD_Event36 = 10820027;
 	public const int EP12_Costume_Com_001 = 11004001;
 	public const int EP12_Costume_Com_002 = 11004002;
 	public const int EP12_Costume_Com_003 = 11004003;
@@ -17929,6 +17976,15 @@ public static class ItemId
 	public const int Selectbox_Ep13tcance02_2_W = 11035755;
 	public const int Selectbox_Ep13tcance03_2_W = 11035756;
 	public const int Selectbox_Ep13raincoat03_2_W = 11035757;
+	public const int Selectbox_Gacha_Halloween_Animals_Resale = 11035758;
+	public const int Jumping_ExpCard_500Lv = 11035759;
+	public const int Selectbox_Costume_NoTrade_1_PAPAYA = 11035760;
+	public const int Selectbox_Costume_NoTrade_2_PAPAYA = 11035761;
+	public const int Selectbox_Costume_NoTrade_3_PAPAYA = 11035762;
+	public const int Selectbox_Costume_NoTrade_4_PAPAYA = 11035763;
+	public const int Selectbox_Costume_NoTrade_36_PAPAYA = 11035764;
+	public const int Selectbox_Costume_NoTrade_40_PAPAYA = 11035765;
+	public const int Selectbox_Costume_NoTrade_41_PAPAYA = 11035766;
 	public const int EP13_Reputation_Costume_1 = 11040101;
 	public const int EP13_Reputation_Costume_2 = 11040102;
 	public const int EP13_Reputation_Costume_3 = 11040103;
@@ -17968,24 +18024,37 @@ public static class ItemId
 	public const int Costume_Ep15elf02_M = 11101026;
 	public const int Costume_Ep15elf01_F = 11101027;
 	public const int Costume_Ep15elf02_F = 11101028;
+	public const int Costume_Ep15ridingclothes01_M = 11101029;
+	public const int Costume_Ep15ridingclothes01_F = 11101030;
+	public const int Costume_Ep15heartqueen01_M = 11101031;
+	public const int Costume_Ep15heartqueen02_M = 11101032;
+	public const int Costume_Ep15heartqueen01_F = 11101033;
+	public const int Costume_Ep15heartqueen02_F = 11101034;
 	public const int EP15_Helmet_Ep15snowknight01 = 11103001;
 	public const int Helmet_Nightrabbit = 11103002;
 	public const int Helmet_M_Ep15explorer15 = 11103003;
 	public const int Helmet_F_Ep15explorer15 = 11103004;
 	public const int Wing_Guiltynelaima_1 = 11105001;
 	public const int Wing_Guiltynelaima_2 = 11105002;
+	public const int Wing_Squirrel = 11105003;
 	public const int Wing_Spreader_Backboard = 11105004;
 	public const int Wing_Balloon_Nightrabbit = 11105005;
 	public const int Wing_Ep15unicorn = 11105006;
 	public const int Wing_7th_Helena = 11105007;
 	public const int Wing_Ep15explorer = 11105008;
 	public const int Wing_Ep15elf = 11105009;
+	public const int Wing_Roze = 11105010;
+	public const int Wing_Upinis = 11105011;
+	public const int Wing_Slogutis = 11105012;
+	public const int Wing_Slogutis_Glove = 11105013;
+	public const int Wing_Ep15heartqueen = 11105014;
 	public const int Effect_Ep15snowknight_Aurora = 11106001;
 	public const int Effect_Ep15snowknight_Snowflake = 11106002;
 	public const int Effect_Nightrabbit = 11106003;
 	public const int Effect_Ep15spring01 = 11106004;
 	public const int Effect_Ep15unicorn = 11106005;
 	public const int Effect_Ep15elf = 11106006;
+	public const int Wing_Char2_160 = 11108001;
 	public const int Unlock_Earring_Belonging_Scroll = 11200002;
 	public const int Ticket_Earring_Raid_1d = 11200003;
 	public const int Ticket_Earring_Raid = 11200004;
@@ -18155,9 +18224,21 @@ public static class ItemId
 	public const int Box_Balance_Care_Item_6_7d = 11200339;
 	public const int Unlock_EP15_Belonging_Scroll_ReCycle_8ea = 11200340;
 	public const int Box_Balance_Care_Item_6_1d = 11200341;
+	public const int Multiple_Token_BridgeWailing_Dimension_Party = 11200345;
+	public const int Multiple_Token_BridgeWailing_Dimension_Party_NoTrade = 11200346;
+	public const int Ticket_BridgeWailing_Dimension_Party_Enter = 11200347;
+	public const int Ticket_BridgeWailing_Dimension_Party_Enter_NoTrade = 11200348;
+	public const int Ticket_BridgeWailing_Dimension_Party_Enter_LimitTime = 11200349;
 	public const int Multiple_Token_TurbulentCore_Party = 11201009;
 	public const int Multiple_Token_TurbulentCore_Party_NoTrade = 11201010;
 	public const int Misc_Reinforce_PercentUp_500_NoTrade_11ea_Recycle = 11201070;
+	public const int High_Enchantchip_Low = 11201102;
+	public const int Misc_Reinforce_PercentUp_500_NoTrade_10ea_Achieve = 11201106;
+	public const int Misc_Reinforce_PercentUp_500_NoTrade_15ea_Achieve = 11201107;
+	public const int Misc_Reinforce_PercentUp_500_NoTrade_30ea_Achieve = 11201108;
+	public const int Ectonite_250_Box_Achieve = 11201109;
+	public const int Ectonite_500_Box_Achieve = 11201110;
+	public const int Ectonite_1000_Box_Achieve = 11201111;
 	public const int Certificate_RidePet_Scooter = 11205001;
 	public const int Give_SpearMaster_Vibora_NoTrade = 11205002;
 	public const int Spearmaster_Standard_Class_Pack = 11205003;
@@ -18240,6 +18321,16 @@ public static class ItemId
 	public const int I202309_Papaya_Reinforce_Package_B = 11205089;
 	public const int I202309_Papaya_Allinone_Package = 11205090;
 	public const int Special_Gift_Box_Leticia_2310 = 11205091;
+	public const int Selectbox_Ep15ridingclothes01 = 11205092;
+	public const int Certificate_RidePet_Tw_Zebra = 11205093;
+	public const int Special_Gift_Box_Leticia_2311 = 11205094;
+	public const int Tosw_2311_Package_1a = 11205095;
+	public const int Tosw_2311_Package_1b = 11205096;
+	public const int Tosw_2311_Package_2a = 11205097;
+	public const int Tosw_2311_Package_2b = 11205098;
+	public const int Tosw_2311_Package_3a = 11205099;
+	public const int Selectbox_Ep15heartqueen01 = 11205101;
+	public const int Selectbox_Ep15heartqueen02 = 11205102;
 
 	// Quest
 	//-----------------------------------------------------------------------
@@ -25707,6 +25798,9 @@ public static class ItemId
 	public const int Ep15elf_Bow = 11104027;
 	public const int Ep15elf_Crossbow = 11104028;
 	public const int Ep15elf_Thstaff = 11104030;
+	public const int Ep15heartqueen_Rapier = 11104032;
+	public const int Ep15heartqueen_Mace = 11104033;
+	public const int Ep15heartqueen_Thsword = 11104034;
 	public const int EP15_RAID_SWORD = 11107000;
 	public const int EP15_RAID_THSWORD = 11107001;
 	public const int EP15_RAID_STAFF = 11107002;

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Melia.Zone.Scripting.Dialogues;
 
 namespace Melia.Zone.Scripting.Shared
@@ -23,8 +20,11 @@ namespace Melia.Zone.Scripting.Shared
 				foreach (DialogFunctionAttribute attr in method.GetCustomAttributes(typeof(DialogFunctionAttribute), false))
 				{
 					var func = (DialogFunc)Delegate.CreateDelegate(typeof(DialogFunc), method);
-					foreach (var dialog in attr.DialogIds)
-						this.Add(dialog, func);
+					if (attr.DialogIds?.Length > 0)
+						foreach (var dialog in attr.DialogIds)
+							this.Add(dialog, func);
+					else
+						this.Add(method.Name, func);
 				}
 			}
 			foreach (var method in typeof(Triggers).GetMethods())
@@ -57,12 +57,23 @@ namespace Melia.Zone.Scripting.Shared
 	/// <summary>
 	/// Specifies which items an DialogFunction should be used for.
 	/// </summary>
+	[AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
 	public class DialogFunctionAttribute : Attribute
 	{
 		/// <summary>
 		/// Returns list of ids of dialogs the script should be used for.
 		/// </summary>
 		public string[] DialogIds { get; }
+
+		/// <summary>
+		/// Creates new attribute that uses the name of the method it's
+		/// on as the script function name.
+		/// </summary>
+		public DialogFunctionAttribute()
+		{
+			// Getting the method name actually happens in the dialog
+			// function loading code, see DialogFunctions.
+		}
 
 		/// <summary>
 		/// Creates new instance.

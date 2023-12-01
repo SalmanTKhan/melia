@@ -26,7 +26,10 @@ namespace Melia.Shared.Data.Database
 
 		public EquipType EquipType1 { get; set; }
 		public EquipType EquipType2 { get; set; }
+		public int Grade { get; set; }
 		public int MinLevel { get; set; }
+		public int Durability { get; set; }
+		public int MaxDurability { get; set; }
 
 		public float MinAtk { get; set; }
 		public float MaxAtk { get; set; }
@@ -271,7 +274,10 @@ namespace Melia.Shared.Data.Database
 			data.SellPrice = entry.ReadInt("sellPrice", 0);
 			data.EquipType1 = entry.ReadEnum<EquipType>("equipType1", EquipType.None);
 			data.EquipType2 = entry.ReadEnum<EquipType>("equipType2", EquipType.None);
+			data.Grade = entry.ReadInt("grade", 0);
 			data.MinLevel = entry.ReadInt("minLevel", 1);
+			data.Durability = entry.ReadInt("durability", 0);
+			data.MaxDurability = entry.ReadInt("maxDurability", 0);
 
 			data.MinAtk = entry.ReadFloat("minAtk", 0);
 			data.MaxAtk = entry.ReadFloat("maxAtk", 0);
@@ -361,7 +367,7 @@ namespace Melia.Shared.Data.Database
 			data.AddSoul = entry.ReadFloat("addSoul", 0);
 			data.AddHoly = entry.ReadFloat("addHoly", 0);
 			data.AddDark = entry.ReadFloat("addDark", 0);
-			data.BaseSocket = entry.ReadFloat("baseSocket", 0);
+			data.BaseSocket = entry.ReadFloat("maxSocketCount", 0);
 			data.MaxSocketCount = entry.ReadFloat("maxSocketCount", 0);
 			data.BaseSocketMa = entry.ReadFloat("baseSocketMa", 0);
 			data.MaxSocketMa = entry.ReadFloat("maxSocketMa", 0);

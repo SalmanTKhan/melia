@@ -1542,5 +1542,14 @@ namespace Melia.Shared.Tos.Const
 		RepairKit = 4265,
 		MasterContract = 4266,
 		MovingForward = 4267,
+		S_Kundela = 4350,
+		S_Ngadhundi = 4351,
+		S_Ngadhundi_OH = 4352,
+		S_Bloodexplosion = 4353,
+		S_Bloodpool = 4354,
+		S_Enervation = 4355,
+		S_Plague = 4356,
+		S_Curseofblood = 4357,
+		S_Bloodtransfusion = 4358,
 	}
 }

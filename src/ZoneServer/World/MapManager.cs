@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Melia.Shared.Network;
+using Melia.Zone.World.Actors.Characters;
+using Melia.Zone.World.Actors.Monsters;
 using Melia.Zone.World.Maps;
 
 namespace Melia.Zone.World
@@ -12,6 +13,8 @@ namespace Melia.Zone.World
 	/// </summary>
 	public class MapManager
 	{
+		private readonly Dictionary<int, Map> _mapsId = new Dictionary<int, Map>();
+		private readonly Dictionary<string, Map> _mapsName = new Dictionary<string, Map>();
 		private readonly Dictionary<int, Map> _maps = new Dictionary<int, Map>();
 
 		/// <summary>
@@ -39,7 +42,9 @@ namespace Melia.Zone.World
 				if (_maps.ContainsKey(map.WorldId))
 					throw new ArgumentException($"Map id {map.Id} already exists.");
 
+				_mapsId.Add(map.Id, map);
 				_maps.Add(map.WorldId, map);
+				_mapsName.Add(map.ClassName, map);
 			}
 		}
 
@@ -87,17 +92,30 @@ namespace Melia.Zone.World
 		/// Returns the map with the given id. Returns null if map
 		/// was not found.
 		/// </summary>
-		/// <param name="worldMapId"></param>
+		/// <param name="worldId"></param>
 		/// <returns></returns>
-		public Map Get(int worldMapId)
+		public Map Get(int worldId)
 		{
 			lock (_maps)
 			{
-				if (!_maps.TryGetValue(worldMapId, out var map))
+				if (!_maps.TryGetValue(worldId, out var map))
 					return null;
 
 				return map;
 			}
+		}
+
+		/// <summary>
+		/// Returns map by name, or null if it doesn't exist.
+		/// </summary>
+		/// <param name="mapClassName"></param>
+		public Map Get(string mapClassName)
+		{
+			Map result;
+			lock (_mapsName)
+				_mapsName.TryGetValue(mapClassName, out result);
+
+			return result;
 		}
 
 		/// <summary>
@@ -193,6 +211,122 @@ namespace Melia.Zone.World
 			}
 
 			throw new Exception("No dynamic map ids available.");
+		}
+
+		/// <summary>
+		/// Removes all scripted entities, like NPCs.
+		/// </summary>
+		public void RemoveScriptedEntities()
+		{
+			lock (_maps)
+			{
+				foreach (var map in _maps.Values)
+					map.RemoveScriptedEntities();
+			}
+		}
+
+		/// <summary>
+		/// Returns the first character found with the given team name,
+		/// or null if none were found.
+		/// </summary>
+		public Character GetCharacterByTeamName(string teamName)
+		{
+			lock (_maps)
+			{
+				foreach (var map in _maps.Values)
+				{
+					var character = map.GetCharacterByTeamName(teamName);
+					if (character != null)
+						return character;
+				}
+			}
+
+			return null;
+		}
+
+		/// <summary>
+		/// Returns the first monster that matches the given predicate
+		/// on any map via out. Returns false if no matching monster was
+		/// found.
+		/// </summary>
+		/// <param name="predicate"></param>
+		/// <param name="monster"></param>
+		/// <returns></returns>
+		public bool TryGetMonster(Func<IMonster, bool> predicate, out IMonster monster)
+		{
+			lock (_maps)
+			{
+				foreach (var map in _maps.Values)
+				{
+					if (map.TryGetMonster(predicate, out var m))
+					{
+						monster = m;
+						return true;
+					}
+				}
+			}
+
+			monster = null;
+			return false;
+		}
+
+		/// <summary>
+		/// Returns the total number of player characters across all maps.
+		/// </summary>
+		/// <returns></returns>
+		public int GetCharacterCount()
+		{
+			lock (_maps)
+				return _maps.Values.Sum(a => a.CharacterCount);
+		}
+
+		/// <summary>
+		/// Returns all characters that are currently online.
+		/// </summary>
+		public Character[] GetCharacters()
+		{
+			lock (_maps)
+				return _maps.Values.SelectMany(a => a.GetCharacters()).ToArray();
+		}
+
+		/// <summary>
+		/// Returns all online characters that match the given predicate.
+		/// </summary>
+		public Character[] GetCharacters(Func<Character, bool> predicate)
+		{
+			lock (_maps)
+				return _maps.Values.SelectMany(a => a.GetCharacters(predicate)).ToArray();
+		}
+
+		/// <summary>
+		/// Broadcasts packet on all maps.
+		/// </summary>
+		/// <param name="packet"></param>
+		public void Broadcast(Packet packet)
+		{
+			lock (_maps)
+			{
+				foreach (var map in _maps.Values)
+					map.Broadcast(packet);
+			}
+		}
+
+		/// <summary>
+		/// Returns all online characters that match the given predicate.
+		/// </summary>
+		public Character GetCharacter(Func<Character, bool> predicate)
+		{
+			lock (_maps)
+			{
+				foreach (var map in _maps.Values)
+				{
+					var character = map.GetCharacter(predicate);
+
+					if (character != null)
+						return character;
+				}
+				return null;
+			}
 		}
 	}
 }

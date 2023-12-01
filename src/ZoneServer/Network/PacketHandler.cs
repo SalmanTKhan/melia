@@ -1027,6 +1027,7 @@ namespace Melia.Zone.Network
 			else
 			{
 				Send.ZC_DIALOG_CLOSE(conn);
+				Send.ZC_LEAVE_TRIGGER(conn);
 				conn.CurrentDialog = null;
 			}
 		}
@@ -2834,6 +2835,17 @@ namespace Melia.Zone.Network
 		}
 
 		/// <summary>
+		/// Sent when a shop is opened?
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="packet"></param>
+		[PacketHandler(Op.CZ_OPEN_SHOP_LOG)]
+		public void CZ_OPEN_SHOP_LOG(IZoneConnection conn, Packet packet)
+		{
+			// TODO: Log the shop type?
+		}
+
+		/// <summary>
 		/// Sent when setting Custom Greeting Message
 		/// </summary>
 		/// <param name="conn"></param>
@@ -3550,10 +3562,7 @@ namespace Melia.Zone.Network
 			if (sender != null)
 			{
 				var party = sender.Connection.Party;
-				if (party == null)
-				{
-					party = ZoneServer.Instance.World.Parties.Create(sender);
-				}
+				party ??= ZoneServer.Instance.World.Parties.Create(sender);
 				party.AddMember(character);
 			}
 		}

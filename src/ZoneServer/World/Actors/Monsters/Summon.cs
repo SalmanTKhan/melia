@@ -7,6 +7,7 @@ using Melia.Zone.Network;
 using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Actors.CombatEntities.Components;
 using Yggdrasil.Scheduling;
+using Yggdrasil.Util;
 
 namespace Melia.Zone.World.Actors.Monsters
 {
@@ -33,7 +34,7 @@ namespace Melia.Zone.World.Actors.Monsters
 				this.AssociatedHandle = this.Owner.Handle;
 				this.Components.Add(new MovementComponent(this));
 				this.Components.Add(new AiComponent(this, "BasicMonster", this.Owner));
-				this.Position = this.Owner.Position.GetRandomInRange2D(15, new Random());
+				this.Position = this.Owner.Position.GetRandomInRange2D(15, RandomProvider.Get());
 				Send.ZC_SET_POS(this);
 				this.Map.AddMonster(this);
 				Send.ZC_HARDCODED_SKILL(this, 1);

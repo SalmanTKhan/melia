@@ -977,6 +977,15 @@
 { shopName: "Personal_Housing", productId: 20242, itemId: 1248063, amount: 1, priceMultiplier: 1 },
 { shopName: "Personal_Housing", productId: 20243, itemId: 1248064, amount: 1, priceMultiplier: 1 },
 { shopName: "Personal_Housing", productId: 20244, itemId: 1248065, amount: 1, priceMultiplier: 1 },
+{ shopName: "Personal_Housing", productId: 20245, itemId: 1248066, amount: 1, priceMultiplier: 1 },
+{ shopName: "Personal_Housing", productId: 20246, itemId: 1248067, amount: 1, priceMultiplier: 1 },
+{ shopName: "Personal_Housing", productId: 20247, itemId: 1248068, amount: 1, priceMultiplier: 1 },
+{ shopName: "Personal_Housing", productId: 20248, itemId: 1248069, amount: 1, priceMultiplier: 1 },
+{ shopName: "Personal_Housing", productId: 20249, itemId: 1248070, amount: 1, priceMultiplier: 1 },
+{ shopName: "Personal_Housing", productId: 20250, itemId: 1248071, amount: 1, priceMultiplier: 1 },
+{ shopName: "Personal_Housing", productId: 20251, itemId: 1248072, amount: 1, priceMultiplier: 1 },
+{ shopName: "Personal_Housing", productId: 20252, itemId: 1248073, amount: 1, priceMultiplier: 1 },
+{ shopName: "Personal_Housing", productId: 20253, itemId: 1248074, amount: 1, priceMultiplier: 1 },
 
 { shopName: "Event2002_Fish_Shop", productId: 21001, itemId: 10000002, amount: 1, priceMultiplier: 1 },
 

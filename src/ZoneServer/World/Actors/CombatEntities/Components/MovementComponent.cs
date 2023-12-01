@@ -138,7 +138,10 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 					var toCellPos = this.Entity.Map.Ground.GetCellPosition(this.Destination);
 
 					// Update clients
-					Send.ZC_MOVE_PATH(this.Entity, fromCellPos, toCellPos, speed);
+					if (this.Entity is Character)
+						Send.ZC_MOVE_DIR(this.Entity, this.Destination, this.Entity.Direction, 0);
+					else
+						Send.ZC_MOVE_PATH(this.Entity, fromCellPos, toCellPos, speed);
 				}
 
 				return _moveTime;

@@ -34,7 +34,7 @@ namespace Melia.Zone.Skills.Handlers.Jaguar
 			Send.ZC_SKILL_MELEE_TARGET(caster, skill, caster);
 
 			if (caster is Character character)
-				character.Components.Get<SkillComponent>()?.Add(new Skill(character, SkillId.Jaguar_Attack, 1));
+				character.Skills.Add(new Skill(character, SkillId.Jaguar_Attack, 1));
 
 			Send.ZC_SYNC_START(caster, skillHandle, 1);
 			caster.Components.Get<BuffComponent>()?.Start(BuffId.JaguarStance_Buff);

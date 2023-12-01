@@ -58,6 +58,10 @@ namespace Melia.Zone.Network
 		/// Gets or sets the current house.
 		/// </summary>
 		PersonalHouse ActiveHouse { get; set; }
+
+		/// <summary>
+		/// Gets or sets the last heartbeat.
+		/// </summary>
 		DateTime LastHeartBeat { get; set; }
 
 		/// <summary>
@@ -65,6 +69,38 @@ namespace Melia.Zone.Network
 		/// </summary>
 		/// <returns></returns>
 		string GenerateSessionKey();
+	}
+
+	public class DummyConnection : IZoneConnection
+	{
+		public Account Account { get; set; }
+		public Character SelectedCharacter { get; set; }
+		public Dialog CurrentDialog { get; set; }
+		public Party Party { get; set; }
+		public Guild Guild { get; set; }
+		public ShopData ActiveShop { get; set; }
+		public ShopData ShopCreated { get; set; }
+		public PersonalHouse ActiveHouse { get; set; }
+		public DateTime LastHeartBeat { get; set; }
+		public bool LoggedIn { get; set; }
+		public string SessionKey { get; set; }
+
+		public void Close()
+		{
+		}
+
+		public void Close(int milliseconds)
+		{
+		}
+
+		public string GenerateSessionKey()
+		{
+			return "";
+		}
+
+		public void Send(Packet packet)
+		{
+		}
 	}
 
 	/// <summary>

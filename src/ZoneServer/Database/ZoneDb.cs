@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Melia.Shared.Data.Database;
 using Melia.Shared.Database;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Tos.Const;
@@ -10,6 +11,7 @@ using Melia.Shared.Tos.Const.Web;
 using Melia.Shared.Tos.Properties;
 using Melia.Shared.World;
 using Melia.Zone.Buffs;
+using Melia.Zone.Scripting;
 using Melia.Zone.Skills;
 using Melia.Zone.World;
 using Melia.Zone.World.Actors.Characters;
@@ -1537,6 +1539,10 @@ namespace Melia.Zone.Database
 							var status = (QuestStatus)reader.GetInt32("status");
 							var startTime = reader.GetDateTimeSafe("startTime");
 							var completeTime = reader.GetDateTimeSafe("completeTime");
+
+							// Skip quests without scripts
+							if (!QuestScript.TryGet(questClassId, out var questScript))
+								continue;
 
 							var quest = Quest.Create(questClassId);
 							quest.Status = status;

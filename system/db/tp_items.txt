@@ -5,6 +5,7 @@
 //---------------------------------------------------------------------------
 
 [
+{ id: 10, className: "ClassName10", itemClassName: "Halloween_Cube_Special_Package", price: 296, itemDate: "231031" },
 { id: 16, className: "ClassName16", itemClassName: "2023_package_all_newbie", price: 499, itemDate: "230105" },
 { id: 51, className: "ClassName51", itemClassName: "rada_Dungeon_Key01_NoTrade_500ea", price: 49, itemDate: "210430" },
 { id: 52, className: "ClassName52", itemClassName: "GoddessCard_Reinforce_package", price: 43, itemDate: "210429" },
@@ -36,10 +37,9 @@
 { id: 124, className: "ClassName124", itemClassName: "ExchangeACC_Book_490", price: 33, itemDate: "210617" },
 { id: 125, className: "ClassName125", itemClassName: "premium_popoboost_ticket_2308", price: 145, itemDate: "230829" },
 { id: 126, className: "ClassName126", itemClassName: "202309_ep15package", price: 95, itemDate: "230905" },
-{ id: 201, className: "ClassName201", itemClassName: "Gacha_2023_W_Resale_001", price: 37, itemDate: "230829" },
-{ id: 202, className: "ClassName202", itemClassName: "Gacha_2023_W_Resale_010", price: 370, itemDate: "230829" },
-{ id: 301, className: "ClassName301", itemClassName: "Premium_Enchantchip", price: 8, itemDate: "210125" },
-{ id: 302, className: "ClassName302", itemClassName: "Premium_Enchantchip_20", price: 128, itemDate: "210124" },
+{ id: 201, className: "ClassName201", itemClassName: "Gacha_Halloween_Animals_Resale_001", price: 37, itemDate: "231029" },
+{ id: 202, className: "ClassName202", itemClassName: "Gacha_Halloween_Animals_Resale_010", price: 370, itemDate: "231030" },
+{ id: 302, className: "ClassName302", itemClassName: "Premium_Enchantchip_high_20", price: 160, itemDate: "231101" },
 { id: 303, className: "ClassName303", itemClassName: "Premium_repairPotion", price: 3, itemDate: "210123" },
 { id: 304, className: "ClassName304", itemClassName: "RestartCristal", price: 2, itemDate: "210122" },
 { id: 305, className: "ClassName305", itemClassName: "RestartCristal_bundle10", price: 18, itemDate: "210121" },

@@ -107,6 +107,11 @@ namespace Melia.Zone.World.Actors.Characters
 		public MoveType MoveType => MoveType.Normal;
 
 		/// <summary>
+		/// Gets or sets the character's tendency
+		/// </summary>
+		public TendencyType Tendency { get; set; } = TendencyType.Peaceful;
+
+		/// <summary>
 		/// Character's name.
 		/// </summary>
 		public override string Name { get; set; }
@@ -292,11 +297,6 @@ namespace Melia.Zone.World.Actors.Characters
 		/// Returns true if the character has run out of HP and died.
 		/// </summary>
 		public bool IsDead => (this.Hp == 0);
-
-		/// <summary>
-		/// Returns the character's component collection.
-		/// </summary>
-		public ComponentCollection Components { get; } = new ComponentCollection();
 
 		/// <summary>
 		/// Character's session objects.
@@ -516,7 +516,7 @@ namespace Melia.Zone.World.Actors.Characters
 		/// Gives character its initial properties if they're missing,
 		/// such as on a newly created character.
 		/// </summary>
-		public void InitProperties()
+		public virtual void InitProperties()
 		{
 			if (this.Job == null)
 				throw new InvalidOperationException("Character's jobs need to be loaded before initializing the properties.");
@@ -1583,7 +1583,7 @@ namespace Melia.Zone.World.Actors.Characters
 		}
 
 		/// <summary>
-		/// Remove an item from the inventory.
+		/// Remove an item from the inventory and returns amount removed.
 		/// </summary>
 		/// <param name="itemClassName"></param>
 		/// <param name="amount"></param>
@@ -1595,7 +1595,7 @@ namespace Melia.Zone.World.Actors.Characters
 		}
 
 		/// <summary>
-		/// Remove an item from the inventory.
+		/// Remove an item from the inventory and returns amount removed.
 		/// </summary>
 		/// <param name="itemId"></param>
 		/// <param name="amount"></param>

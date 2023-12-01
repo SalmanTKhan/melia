@@ -141,6 +141,7 @@ namespace Melia.Zone.World.Maps
 		public Map(int id, string name)
 		{
 			this.Id = id;
+			this.WorldId = id;
 			this.ClassName = name;
 
 			this.Load();

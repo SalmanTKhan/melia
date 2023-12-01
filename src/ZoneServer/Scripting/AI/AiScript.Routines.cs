@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Melia.Shared.Tos.Const;
+using Melia.Shared.Tos.Const.Web;
 using Melia.Shared.World;
 using Melia.Zone.Network;
 using Melia.Zone.Skills;
@@ -142,7 +144,7 @@ namespace Melia.Zone.Scripting.AI
 		{
 			skill = null;
 
-			if (!(this.Entity is Mob mob))
+			if (this.Entity is not Mob mob)
 				return false;
 
 			if (!mob.Data.Skills.Any())
@@ -190,7 +192,6 @@ namespace Melia.Zone.Scripting.AI
 			}
 			skill.IncreaseOverheat();
 			handler.Handle(skill, this.Entity, target);
-
 
 			var useTime = skill.Properties.ShootTime;
 			yield break;
@@ -240,7 +241,7 @@ namespace Melia.Zone.Scripting.AI
 				// It's currently unknown why, but for the monster speed to
 				// match a character's speed it needs to be multiplied by 2.4.
 				// Setting them to the exact same value does not work.
-				if (followTarget is Character character)
+				if (followTarget is Character)
 					targetMspd *= 2.4f;
 
 				this.SetFixedMoveSpeed(targetMspd);

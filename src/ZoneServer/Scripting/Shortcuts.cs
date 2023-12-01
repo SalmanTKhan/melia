@@ -84,6 +84,38 @@ namespace Melia.Zone.Scripting
 			=> string.Format(Localization.GetPlural(key, keyPlural, n), args);
 
 		/// <summary>
+		/// Script Argument Message
+		/// Wraps key value pairs with ToS
+		/// specific message codes.
+		/// </summary>
+		/// <param name="msg"></param>
+		/// <param name="args"></param>
+		/// <returns></returns>
+		public static string ScpArgMsg(string msg, params object[] args)
+		{
+			var result = new StringBuilder();
+			var prefix = "!@#$";
+			var suffix = "#@!";
+
+			result.Append(prefix);
+			result.Append(msg);
+			if (args != null && args.Length % 2 != 1)
+			{
+				for (var i = 0; i < args.Length; i += 2)
+				{
+					var key = args[i];
+					var value = args[i + 1];
+
+					result.Append("$*$" + key);
+					result.Append("$*$" + value);
+				}
+			}
+			result.Append(suffix);
+
+			return result.ToString();
+		}
+
+		/// <summary>
 		/// 
 		/// </summary>
 		/// <param name="genType"></param>
@@ -125,6 +157,27 @@ namespace Melia.Zone.Scripting
 			return monster;
 		}
 
+		/// <summary>
+		/// Adds new NPC to the world.
+		/// </summary>
+		/// <remarks>
+		/// Used in generated scripts.
+		/// </remarks>
+		/// <param name="genType"></param>
+		/// <param name="monsterId"></param>
+		/// <param name="name"></param>
+		/// <param name="map"></param>
+		/// <param name="x"></param>
+		/// <param name="y"></param>
+		/// <param name="z"></param>
+		/// <param name="direction"></param>
+		/// <param name="dialogFuncName"></param>
+		/// <param name="enterFuncName"></param>
+		/// <param name="leaveFuncName"></param>
+		/// <param name="status"></param>
+		/// <param name="range"></param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException"></exception>
 		public static Npc AddNpc(int genType, int monsterId, string name, string map, double x, double y, double z, double direction, string dialogFuncName = "", string enterFuncName = "", string leaveFuncName = "", int status = -1, double range = 100)
 		{
 			if (!ZoneServer.Instance.World.TryGetMap(map, out var mapObj))
@@ -138,7 +191,7 @@ namespace Melia.Zone.Scripting
 				name = Dialog.WrapLocalizationKey(name);
 			}
 			// Insert line breaks in tagged NPC names that don't have one
-			else if (name.StartsWith("[") && !name.Contains("{nl}"))
+			else if (name.StartsWith('[') && !name.Contains("{nl}"))
 			{
 				var endIndex = name.LastIndexOf("] ");
 				if (endIndex != -1)
@@ -178,6 +231,17 @@ namespace Melia.Zone.Scripting
 			mapObj.AddMonster(monster);
 
 			return monster;
+		}
+
+		/// <summary>
+		/// Adds new NPC to the world.
+		/// </summary>
+		/// <remarks>
+		/// Used in generated scripts.
+		/// </remarks>
+		public static Npc AddNpc(int monsterId, string name, string map, double x, double y, double z, double direction, string dialogFuncName = "", string enterFuncName = "", string leaveFuncName = "", int status = -1, double range = 100)
+		{
+			return AddNpc(0, monsterId, name, map, x, y, z, direction, dialogFuncName, enterFuncName, leaveFuncName, status, range);
 		}
 
 		/// <summary>
