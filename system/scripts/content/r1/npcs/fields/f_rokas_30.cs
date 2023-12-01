@@ -14,154 +14,163 @@ public class FRokas30NpcScript : GeneralScript
 	{
 		// Rukas Plateau
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Rukas Plateau", "f_rokas_30", 1019, -1097, 45, "", "ROKAS30_ROKAS29", "");
+		AddNpc(59, 40001, "Rukas Plateau", "f_rokas_30", 1019, 148, -1097, 45, "", "ROKAS30_ROKAS29", "");
 		
 		// Zachariel Crossroads
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Zachariel Crossroads", "f_rokas_30", -1773, -116, 263, "", "ROKAS30_ROKAS31", "");
+		AddNpc(60, 40001, "Zachariel Crossroads", "f_rokas_30", -1773, 215, -116, 263, "", "ROKAS30_ROKAS31", "");
 		
 		// Stonemason Pipoti
 		//-------------------------------------------------------------------------
-		AddNpc(20109, "Stonemason Pipoti", "f_rokas_30", 1406, 662, 0, "ROKAS30_PIPOTI");
+		AddNpc(608, 20109, "Stonemason Pipoti", "f_rokas_30", 1406, 284, 662, 0, "ROKAS30_PIPOTI", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_rokas_30", 1240, -221, 90, "", "ROKAS30_PIPOTI01_TRIGGER", "");
+		AddNpc(609, 40095, " ", "f_rokas_30", 1240, 148, -221, 90, "", "ROKAS30_PIPOTI01_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_rokas_30", 359, 1078, 90, "ROKAS30_PIPOTI02_TRIGGER");
+		AddNpc(610, 20025, " ", "f_rokas_30", 359, 402, 1078, 90, "ROKAS30_PIPOTI02_TRIGGER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_rokas_30", -220.8241, 716.849, 90, "ROKAS30_PIPOTI03_TRIGGER");
+		AddNpc(611, 20025, " ", "f_rokas_30", -220.8241, 348.6877, 716.849, 90, "ROKAS30_PIPOTI03_TRIGGER", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_rokas_30", 34.86766, -311.3383, 90, "ROKAS30_PIPOTI04_TRIGGER");
+		AddNpc(612, 20025, " ", "f_rokas_30", 34.86766, 215.7491, -311.3383, 90, "ROKAS30_PIPOTI04_TRIGGER", "", "", 0);
 		
 		// Liaison Officer Bale
 		//-------------------------------------------------------------------------
-		AddNpc(20108, "Liaison Officer Bale", "f_rokas_30", 950.13, -782.25, 45, "ROKAS30_BAIL");
+		AddNpc(619, 20108, "Liaison Officer Bale", "f_rokas_30", 950.13, 148.17, -782.25, 45, "ROKAS30_BAIL", "", "");
 		
 		// Historian Colin
 		//-------------------------------------------------------------------------
-		AddNpc(147421, "Historian Colin", "f_rokas_30", 1140, -476, 90, "ROKAS30_COLLIN");
+		AddNpc(620, 147421, "Historian Colin", "f_rokas_30", 1140, 148, -476, 90, "ROKAS30_COLLIN", "", "");
 		
 		// Historian Cyrenia Odell
 		//-------------------------------------------------------------------------
-		AddNpc(147345, "Historian Cyrenia Odell", "f_rokas_30", 1551, 410, 90, "ROKAS30_ODEL");
+		AddNpc(621, 147345, "Historian Cyrenia Odell", "f_rokas_30", 1551, 284, 410, 90, "ROKAS30_ODEL", "", "", 0);
 		
 		// Soldier's Corpse
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Soldier's Corpse", "f_rokas_30", 741, 623, 0, "ROKAS30_MQ2_1_SCAR");
+		AddNpc(624, 10023, "Soldier's Corpse", "f_rokas_30", 741, 326, 623, 0, "ROKAS30_MQ2_1_SCAR", "", "", 0);
 		
 		// Sviesa Altar
 		//-------------------------------------------------------------------------
-		AddNpc(47102, "Sviesa Altar", "f_rokas_30", -1351, -873, 90, "ROKAS30_SAELDEVICE2");
+		AddNpc(627, 47102, "Sviesa Altar", "f_rokas_30", -1351, 193, -873, 90, "ROKAS30_SAELDEVICE2", "", "");
 		
 		// Chesed Altar
 		//-------------------------------------------------------------------------
-		AddNpc(47102, "Chesed Altar", "f_rokas_30", 542, 1065, 90, "ROKAS30_SEALDESTROY1");
+		AddNpc(629, 47102, "Chesed Altar", "f_rokas_30", 542, 402, 1065, 90, "ROKAS30_SEALDESTROY1", "", "", 0);
 		
 		// Gedulah Altar
 		//-------------------------------------------------------------------------
-		AddNpc(47102, "Gedulah Altar", "f_rokas_30", -205, 484, 90, "ROKAS30_SAELDEVICE1");
+		AddNpc(630, 47102, "Gedulah Altar", "f_rokas_30", -205, 348, 484, 90, "ROKAS30_SAELDEVICE1", "", "");
 		
 		// Tzedej Altar
 		//-------------------------------------------------------------------------
-		AddNpc(47102, "Tzedej Altar", "f_rokas_30", -310, -250, 91, "ROKAS30_SEALDESTROY2");
+		AddNpc(631, 47102, "Tzedej Altar", "f_rokas_30", -310, 215, -250, 91, "ROKAS30_SEALDESTROY2", "", "", 0);
 		
 		// Historian Cyrenia Odell
 		//-------------------------------------------------------------------------
-		AddNpc(147345, "Historian Cyrenia Odell", "f_rokas_30", -1397, -493, 90, "", "ROKAS30_ODEL_KIDNAP", "");
+		AddNpc(632, 147345, "Historian Cyrenia Odell", "f_rokas_30", -1397, 215, -493, 90, "", "ROKAS30_ODEL_KIDNAP", "");
 		
 		// Zachariel's Brave Protector
 		//-------------------------------------------------------------------------
-		AddNpc(20011, "Zachariel's Brave Protector", "f_rokas_30", -164, 488, 90, "ROKAS30_ZACARIEL_SERVANT1");
+		AddNpc(638, 20011, "Zachariel's Brave Protector", "f_rokas_30", -164, 348, 488, 90, "ROKAS30_ZACARIEL_SERVANT1", "", "", 1);
 		
 		// Zachariel's Faithful Protector
 		//-------------------------------------------------------------------------
-		AddNpc(20015, "Zachariel's Faithful Protector", "f_rokas_30", -1313, -838, 90, "ROKAS30_ZACARIEL_SERVANT2");
+		AddNpc(639, 20015, "Zachariel's Faithful Protector", "f_rokas_30", -1313, 179, -838, 90, "ROKAS30_ZACARIEL_SERVANT2", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20101, "", "f_rokas_30", 1018, 389, 90, "", "ROKAS30_SUDDEN_ATTACK", "");
+		AddNpc(640, 20101, "", "f_rokas_30", 1018, 304, 389, 90, "", "ROKAS30_SUDDEN_ATTACK", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20101, "", "f_rokas_30", 1000, 394, 90, "", "ROKAS30_SUDDEN_ATTACK", "");
+		AddNpc(640, 20101, "", "f_rokas_30", 1000, 318, 394, 90, "", "ROKAS30_SUDDEN_ATTACK", "");
 		
 		// Wounded Historian Laulas
 		//-------------------------------------------------------------------------
-		AddNpc(152002, "Wounded Historian Laulas", "f_rokas_30", 752.5544, 475.0016, 17, "ROKAS30_HURT");
+		AddNpc(641, 152002, "Wounded Historian Laulas", "f_rokas_30", 752.5544, 326.1654, 475.0016, 17, "ROKAS30_HURT", "", "");
+		AddNpc(642, 20026, "", "f_rokas_30", -288, 215, -219, 90, "", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_rokas_30", 539, 992, 90, "", "ROKAS30_SEALPRODECT_1", "");
+		AddNpc(643, 20026, "", "f_rokas_30", 539, 401, 992, 90, "", "ROKAS30_SEALPRODECT_1", "");
 		
 		// Historian Cyrenia Odell
 		//-------------------------------------------------------------------------
-		AddNpc(147345, "Historian Cyrenia Odell", "f_rokas_30", 145, 385, 90, "ROKAS_ODEL2");
+		AddNpc(644, 147345, "Historian Cyrenia Odell", "f_rokas_30", 145, 325, 385, 90, "ROKAS_ODEL2", "", "", 1);
+		AddNpc(646, 147366, "Field Gen x", "f_rokas_30", 961.0912, 148.1685, -951.2369, 90, "", "", "");
+		AddNpc(647, 147363, "Field Gen x", "f_rokas_30", 1137.24, 148.17, -502.44, 90, "", "", "");
+		AddNpc(648, 147362, "Field Gen x", "f_rokas_30", 1407.99, 284.07, 652.19, 90, "", "", "");
+		AddNpc(648, 147362, "Field Gen x", "f_rokas_30", 1593.11, 284.07, 446.59, 90, "", "", "");
 		
 		// Escanciu Village
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Escanciu Village", "f_rokas_30", -209, 893, 180, "", "ROKAS30_REMAINS39", "");
+		AddNpc(649, 40001, "Escanciu Village", "f_rokas_30", -209, 347, 893, 180, "", "ROKAS30_REMAINS39", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_rokas_30", 825.83, -989.87, 90, "WARP_F_ROKAS_30", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(650, 40120, "Statue of Goddess Vakarine", "f_rokas_30", 825.83, 148.17, -989.87, 90, "WARP_F_ROKAS_30", "STOUP_CAMP", "STOUP_CAMP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147318, " ", "f_rokas_30", -368.19, -217.26, 52, "", "ROKAS30_MQ6_1_HOGMA", "");
+		AddNpc(651, 147318, " ", "f_rokas_30", -368.19, 215.75, -217.26, 52, "", "ROKAS30_MQ6_1_HOGMA", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147318, " ", "f_rokas_30", -304.69, -205.57, -47, "", "ROKAS30_MQ6_1_HOGMA", "");
+		AddNpc(652, 147318, " ", "f_rokas_30", -304.69, 215.75, -205.57, -47, "", "ROKAS30_MQ6_1_HOGMA", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147316, " ", "f_rokas_30", -397.53, -185.71, 50, "", "ROKAS30_MQ6_1_HOGMA", "");
+		AddNpc(653, 147316, " ", "f_rokas_30", -397.53, 215.75, -185.71, 50, "", "ROKAS30_MQ6_1_HOGMA", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147317, " ", "f_rokas_30", -359.11, -187.03, -2, "", "ROKAS30_MQ6_1_HOGMA", "");
+		AddNpc(654, 147317, " ", "f_rokas_30", -359.11, 215.75, -187.03, -2, "", "ROKAS30_MQ6_1_HOGMA", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147315, " ", "f_rokas_30", -326.79, -280.26, 126, "", "ROKAS30_MQ6_1_HOGMA", "");
+		AddNpc(655, 147315, " ", "f_rokas_30", -326.79, 215.75, -280.26, 126, "", "ROKAS30_MQ6_1_HOGMA", "");
+		AddNpc(656, 147363, "Field Gen x", "f_rokas_30", 774.587, 326.2405, 582.9858, 90, "", "", "");
 		
 		// Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Treasure Chest", "f_rokas_30", 359.9, 1077.96, 91, "ROKAS30_PIPOTI02_TREASUREBOX");
+		AddNpc(657, 147392, "Treasure Chest", "f_rokas_30", 359.9, 402.11, 1077.96, 91, "ROKAS30_PIPOTI02_TREASUREBOX", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_rokas_30", -1491.976, -416.7656, 90, "ROKAS30_PIPOTI05_TRIGGER");
+		AddNpc(613, 20025, " ", "f_rokas_30", -1491.976, 215.7491, -416.7656, 90, "ROKAS30_PIPOTI05_TRIGGER", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "", "f_rokas_30", 954.4147, 410.9212, 90, "", "ROKAS30_ATK_DEFENCE_TRIGGER", "");
+		AddNpc(607, 20041, "", "f_rokas_30", 954.4147, 326.2417, 410.9212, 90, "", "ROKAS30_ATK_DEFENCE_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147392, " ", "f_rokas_30", -239, 727, 90, "ROKAS30_PIPOTI03_TREASUREBOX");
+		AddNpc(660, 147392, " ", "f_rokas_30", -239, 348, 727, 90, "ROKAS30_PIPOTI03_TREASUREBOX", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147392, " ", "f_rokas_30", 34.87, -311.34, -85, "ROKAS30_PIPOTI04_TREASUREBOX");
+		AddNpc(661, 147392, " ", "f_rokas_30", 34.87, 215.7491, -311.34, -85, "ROKAS30_PIPOTI04_TREASUREBOX", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147392, " ", "f_rokas_30", -1510.02, -414.29, 90, "ROKAS30_PIPOTI05_TREASUREBOX");
+		AddNpc(662, 147392, " ", "f_rokas_30", -1510.02, 215.7491, -414.29, 90, "ROKAS30_PIPOTI05_TREASUREBOX", "", "", 1);
+		AddNpc(665, 147361, "", "f_rokas_30", 131.3679, 325.1429, 383.279, 90, "", "", "");
+		AddNpc(666, 147362, "", "f_rokas_30", 1016.255, 148.2031, -1099.573, 90, "", "", "");
+		AddNpc(667, 147362, "", "f_rokas_30", -1770.319, 215.7491, -117.6072, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_rokas_30", -433.94, 306.96, 90, "TREASUREBOX_LV_F_ROKAS_30668");
+		AddNpc(668, 147392, "Lv1 Treasure Chest", "f_rokas_30", -433.94, 348.79, 306.96, 90, "TREASUREBOX_LV_F_ROKAS_30668", "", "");
 		
 		// Disease Detector
 		//-------------------------------------------------------------------------
-		AddNpc(154025, "Disease Detector", "f_rokas_30", 1119.305, -347.1675, 90, "JOB_PLAGUEDOCTOR71_NPC1");
+		AddNpc(669, 154025, "Disease Detector", "f_rokas_30", 1119.305, 148.1685, -347.1675, 90, "JOB_PLAGUEDOCTOR71_NPC1", "", "", 1);
 	}
 }

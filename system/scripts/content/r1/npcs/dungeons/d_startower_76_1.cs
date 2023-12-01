@@ -14,10 +14,10 @@ public class DStartower761NpcScript : GeneralScript
 	{
 		// Dina Bee Farm
 		//-------------------------------------------------------------------------
-		AddNpc(147507, "Dina Bee Farm", "d_startower_76_1", -1099.635, 778.5563, 90, "STARTOWER_76_1_TO_SIAULIAI_46_4");
+		AddNpc(1, 147507, "Dina Bee Farm", "d_startower_76_1", -1099.635, 372.39, 778.5563, 90, "STARTOWER_76_1_TO_SIAULIAI_46_4", "", "");
 		
 		// Nazarene Tower
 		//-------------------------------------------------------------------------
-		AddNpc(147507, "Nazarene Tower", "d_startower_76_1", 2771.767, 249.7847, 90, "D_STARTOWER_76_1_TO_D_STARTOWER_76_2");
+		AddNpc(18, 147507, "Nazarene Tower", "d_startower_76_1", 2771.767, 333.3574, 249.7847, 90, "D_STARTOWER_76_1_TO_D_STARTOWER_76_2", "", "");
 	}
 }

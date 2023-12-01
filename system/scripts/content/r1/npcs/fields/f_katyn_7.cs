@@ -14,134 +14,137 @@ public class FKatyn7NpcScript : GeneralScript
 	{
 		// Middle Boss Trigger
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Middle Boss Trigger", "f_katyn_7", 976, 187, 0, "", "KATYN7_PREBOSS", "");
+		AddNpc(3, 20026, "Middle Boss Trigger", "f_katyn_7", 976, 296, 187, 0, "", "KATYN7_PREBOSS", "");
 		
 		// Tenet Garden
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Tenet Garden", "f_katyn_7", 663, -4459, 0, "", "KATYN7_GELE574", "");
+		AddNpc(101, 40001, "Tenet Garden", "f_katyn_7", 663, 300, -4459, 0, "", "KATYN7_GELE574", "");
 		
 		// Owl Burial Ground
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Owl Burial Ground", "f_katyn_7", -864, 3894, 180, "", "KATYN7_KATYN7_2", "");
+		AddNpc(103, 40001, "Owl Burial Ground", "f_katyn_7", -864, 297, 3894, 180, "", "KATYN7_KATYN7_2", "");
 		
 		// Commander Vacenin
 		//-------------------------------------------------------------------------
-		AddNpc(20129, "Commander Vacenin", "f_katyn_7", 761, -3576, 0, "KATYN7_KEYNPC_1");
+		AddNpc(107, 20129, "Commander Vacenin", "f_katyn_7", 761, 295, -3576, 0, "KATYN7_KEYNPC_1", "", "");
 		
 		// Fallen Messenger
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Fallen Messenger", "f_katyn_7", 813, 573, 14, "KATYN7_KEYNPC_3");
+		AddNpc(505, 10033, "Fallen Messenger", "f_katyn_7", 813, 295, 573, 14, "KATYN7_KEYNPC_3", "", "", 1);
 		
 		// Officer Felix
 		//-------------------------------------------------------------------------
-		AddNpc(20107, "Officer Felix", "f_katyn_7", -1237, -1204, 0, "KATYN7_KEYNPC_4");
+		AddNpc(506, 20107, "Officer Felix", "f_katyn_7", -1237, 418, -1204, 0, "KATYN7_KEYNPC_4", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_katyn_7", 895, -3102, 0, "KATYN_SUCH_POINT_01");
+		AddNpc(507, 46011, "Bonfire", "f_katyn_7", 895, 295, -3102, 0, "KATYN_SUCH_POINT_01", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_katyn_7", 898, -1688, 0, "KATYN_SUCH_POINT_02");
+		AddNpc(514, 46011, "Bonfire", "f_katyn_7", 898, 299, -1688, 0, "KATYN_SUCH_POINT_02", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_katyn_7", 5, -915, 0, "KATYN_SUCH_POINT_03");
+		AddNpc(508, 46011, "Bonfire", "f_katyn_7", 5, 299, -915, 0, "KATYN_SUCH_POINT_03", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_katyn_7", 1139, -834, 0, "KATYN_SUCH_POINT_04");
+		AddNpc(509, 46011, "Bonfire", "f_katyn_7", 1139, 296, -834, 0, "KATYN_SUCH_POINT_04", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_katyn_7", -1066, -2319, 0, "KATYN_SUCH_POINT_05");
+		AddNpc(510, 46011, "Bonfire", "f_katyn_7", -1066, 419, -2319, 0, "KATYN_SUCH_POINT_05", "", "");
 		
 		// Patrol Scout
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Patrol Scout", "f_katyn_7", 672, -3810, 90, "KATYN_SUCH_POINT_01_SOLDIER");
+		AddNpc(515, 20016, "Patrol Scout", "f_katyn_7", 672, 295, -3810, 90, "KATYN_SUCH_POINT_01_SOLDIER", "", "");
 		
 		// Sleeping Owl Statue
 		//-------------------------------------------------------------------------
-		AddNpc(12081, "Sleeping Owl Statue", "f_katyn_7", -1270, 1330, 0, "KATYN71_OWL_01");
+		AddNpc(5, 12081, "Sleeping Owl Statue", "f_katyn_7", -1270, 296, 1330, 0, "KATYN71_OWL_01", "", "");
 		
 		// Officer's Spirit
 		//-------------------------------------------------------------------------
-		AddNpc(20107, "Officer's Spirit", "f_katyn_7", -1280, 1240, 0, "KATYN71_OFFICER");
+		AddNpc(8, 20107, "Officer's Spirit", "f_katyn_7", -1280, 296, 1240, 0, "KATYN71_OFFICER", "", "", 0);
 		
 		// Soldier's Spirit
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Soldier's Spirit", "f_katyn_7", -1250, 1290, 0, "", "KATYN71_DEADSOL", "");
+		AddNpc(9, 10033, "Soldier's Spirit", "f_katyn_7", -1250, 296, 1290, 0, "", "KATYN71_DEADSOL", "");
 		
 		// Soldier's Spirit
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Soldier's Spirit", "f_katyn_7", -1271, 1292, 0, "", "KATYN71_DEADSOL", "");
+		AddNpc(9, 10033, "Soldier's Spirit", "f_katyn_7", -1271, 296, 1292, 0, "", "KATYN71_DEADSOL", "");
 		
 		// Soldier's Spirit
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Soldier's Spirit", "f_katyn_7", -1237, 1307, 0, "", "KATYN71_DEADSOL", "");
+		AddNpc(9, 10033, "Soldier's Spirit", "f_katyn_7", -1237, 296, 1307, 0, "", "KATYN71_DEADSOL", "");
 		
 		// Soldier's Spirit
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Soldier's Spirit", "f_katyn_7", -1287, 1306, 0, "", "KATYN71_DEADSOL", "");
+		AddNpc(9, 10033, "Soldier's Spirit", "f_katyn_7", -1287, 296, 1306, 0, "", "KATYN71_DEADSOL", "");
 		
 		// Soldier's Spirit
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Soldier's Spirit", "f_katyn_7", -1236, 1329, 0, "", "KATYN71_DEADSOL", "");
+		AddNpc(9, 10033, "Soldier's Spirit", "f_katyn_7", -1236, 296, 1329, 0, "", "KATYN71_DEADSOL", "");
 		
 		// Officer's Spirit
 		//-------------------------------------------------------------------------
-		AddNpc(20107, "Officer's Spirit", "f_katyn_7", -420, 3440, 0, "KATYN71_OFFICER_AFTER");
+		AddNpc(10, 20107, "Officer's Spirit", "f_katyn_7", -420, 296, 3440, 0, "KATYN71_OFFICER_AFTER", "", "", 1);
 		
 		// Position Trigger of Commander Vacenin
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Position Trigger of Commander Vacenin", "f_katyn_7", 1026, -3727, 0, "", "KATYN7_KEYNPC_1_TRIGGER", "");
+		AddNpc(108, 20026, "Position Trigger of Commander Vacenin", "f_katyn_7", 1026, 295, -3727, 0, "", "KATYN7_KEYNPC_1_TRIGGER", "");
 		
 		// Notice
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Notice", "f_katyn_7", 616, -1575, 360, "F_KATYN_7_BOARD02");
+		AddNpc(10002, 40070, "Notice", "f_katyn_7", 616, 296, -1575, 360, "F_KATYN_7_BOARD02", "", "");
+		AddNpc(10003, 20041, "", "f_katyn_7", -93, 248, 892, 360, "", "", "");
 		
 		// Trap Case
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "Trap Case", "f_katyn_7", -124, 1592, 90, "", "REPEAT_MON_GEN_TRIGGER", "");
+		AddNpc(10006, 20041, "Trap Case", "f_katyn_7", -124, 247, 1592, 90, "", "REPEAT_MON_GEN_TRIGGER", "");
 		
 		// Trap Case
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "Trap Case", "f_katyn_7", 190, -3513, 90, "", "REPEAT_MON_GEN_TRIGGER", "");
+		AddNpc(10006, 20041, "Trap Case", "f_katyn_7", 190, 418, -3513, 90, "", "REPEAT_MON_GEN_TRIGGER", "");
 		
 		// Trap Case
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "Trap Case", "f_katyn_7", 372, -3562, 90, "", "REPEAT_MON_GEN_TRIGGER", "");
+		AddNpc(10006, 20041, "Trap Case", "f_katyn_7", 372, 295, -3562, 90, "", "REPEAT_MON_GEN_TRIGGER", "");
 		
 		// Trap Case
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "Trap Case", "f_katyn_7", 329, -933, 90, "", "REPEAT_MON_GEN_TRIGGER", "");
+		AddNpc(10006, 20041, "Trap Case", "f_katyn_7", 329, 295, -933, 90, "", "REPEAT_MON_GEN_TRIGGER", "");
 		
 		// Bait Install Place
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Bait Install Place", "f_katyn_7", -917.4514, 3306.635, 90, "KATYN7_MQ06_TRACK");
+		AddNpc(10016, 20025, "Bait Install Place", "f_katyn_7", -917.4514, 295.7024, 3306.635, 90, "KATYN7_MQ06_TRACK", "", "");
 		
 		// Scout
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Scout", "f_katyn_7", -1621, 3900, 171, "KATYN71_SOLDIER01_1", "KATYN71_SOLDIER01");
+		AddNpc(10018, 20016, "Scout", "f_katyn_7", -1621, 295, 3900, 171, "KATYN71_SOLDIER01_1", "KATYN71_SOLDIER01", "");
 		
 		// Scout
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Scout", "f_katyn_7", -1572.675, 3929.488, 219, "KATYN71_BOSS");
+		AddNpc(10019, 20016, "Scout", "f_katyn_7", -1572.675, 295.7185, 3929.488, 219, "KATYN71_BOSS", "", "", 0);
 		
 		// Scout
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Scout", "f_katyn_7", -1542.716, 3990.158, 247, "KATYN71_SOLDIER01_2", "KATYN71_SOLDIER02");
+		AddNpc(10020, 20016, "Scout", "f_katyn_7", -1542.716, 295.7185, 3990.158, 247, "KATYN71_SOLDIER01_2", "KATYN71_SOLDIER02", "");
 		
 		// Scout
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Scout", "f_katyn_7", 994.428, -3990.511, 90, "KATYN7_KEYNPC_5");
+		AddNpc(10021, 20016, "Scout", "f_katyn_7", 994.428, 295.7079, -3990.511, 90, "KATYN7_KEYNPC_5", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_katyn_7", -321.4175, 1961.274, 90, "", "JOB_ROGUE4_1_TRIGGER", "");
+		AddNpc(10023, 20026, "", "f_katyn_7", -321.4175, 247.956, 1961.274, 90, "", "JOB_ROGUE4_1_TRIGGER", "");
+		AddNpc(10024, 147362, "Field Gen x", "f_katyn_7", 677.3121, 295.2072, -4389.714, 90, "", "", "");
+		AddNpc(10024, 147362, "Field Gen x", "f_katyn_7", -856.7756, 297.2703, 3829.618, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_katyn_7", -2082.19, 1663.05, 90, "TREASUREBOX_LV_F_KATYN_710025");
+		AddNpc(10025, 147392, "Lv1 Treasure Chest", "f_katyn_7", -2082.19, 344.77, 1663.05, 90, "TREASUREBOX_LV_F_KATYN_710025", "", "");
 	}
 }

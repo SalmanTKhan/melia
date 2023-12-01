@@ -14,150 +14,167 @@ public class FFlash61NpcScript : GeneralScript
 	{
 		// Roxona Market
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Roxona Market", "f_flash_61", -100, 1555, 180, "", "FLASH61_FLASH60", "");
+		AddNpc(1, 40001, "Roxona Market", "f_flash_61", -100, 435, 1555, 180, "", "FLASH61_FLASH60", "");
 		
 		// Verkti Square
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Verkti Square", "f_flash_61", -875, -378, 360, "", "FLASH61_FLASH59", "");
+		AddNpc(2, 40001, "Verkti Square", "f_flash_61", -875, 510, -378, 360, "", "FLASH61_FLASH59", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_flash_61", -99.65971, 1297.89, 0, "WARP_F_FLASH_61", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(13, 40120, "Statue of Goddess Vakarine", "f_flash_61", -99.65971, 435.358, 1297.89, 0, "WARP_F_FLASH_61", "STOUP_CAMP", "STOUP_CAMP");
 		
 		// [Knights of Kaliss]{nl}Chronomancer Sabina
 		//-------------------------------------------------------------------------
-		AddNpc(154021, "[Knights of Kaliss]{nl}Chronomancer Sabina", "f_flash_61", -1061.378, 140.2957, 193, "FLASH61_SABINA");
+		AddNpc(16, 154021, "[Knights of Kaliss]{nl}Chronomancer Sabina", "f_flash_61", -1061.378, 511.1575, 140.2957, 193, "FLASH61_SABINA", "", "");
 		
 		// [Royal Army]{nl}Nomabis
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Nomabis", "f_flash_61", -133.004, 1427.027, 6, "FLASH61_NOBAVIS");
+		AddNpc(17, 10033, "[Royal Army]{nl}Nomabis", "f_flash_61", -133.004, 435.358, 1427.027, 6, "FLASH61_NOBAVIS", "", "");
 		
 		// [Royal Army]{nl}Lyle
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Lyle", "f_flash_61", -33.12047, 1428.105, -58, "FLASH61_LAIL");
+		AddNpc(18, 10033, "[Royal Army]{nl}Lyle", "f_flash_61", -33.12047, 435.358, 1428.105, -58, "FLASH61_LAIL", "", "");
 		
 		// Fortress of the Land Warp Portal
 		//-------------------------------------------------------------------------
-		AddNpc(47122, "Fortress of the Land Warp Portal", "f_flash_61", -1145.027, 476.3383, 90, "FLASH61_SQ_09_1");
+		AddNpc(19, 47122, "Fortress of the Land Warp Portal", "f_flash_61", -1145.027, 392.95, 476.3383, 90, "FLASH61_SQ_09_1", "", "");
 		
 		// Fortress of the Land Warp Portal
 		//-------------------------------------------------------------------------
-		AddNpc(47122, "Fortress of the Land Warp Portal", "f_flash_61", 1079.267, 444.9598, 90, "FLASH61_SQ_09_2");
+		AddNpc(20, 47122, "Fortress of the Land Warp Portal", "f_flash_61", 1079.267, 620.1237, 444.9598, 90, "FLASH61_SQ_09_2", "", "");
 		
 		// Fortress of the Land Warp Portal
 		//-------------------------------------------------------------------------
-		AddNpc(47122, "Fortress of the Land Warp Portal", "f_flash_61", 1351.595, 1315.352, 90, "FLASH61_SQ_09_3");
+		AddNpc(21, 47122, "Fortress of the Land Warp Portal", "f_flash_61", 1351.595, 498.9985, 1315.352, 90, "FLASH61_SQ_09_3", "", "");
 		
 		// Fortress of the Land Warp Portal
 		//-------------------------------------------------------------------------
-		AddNpc(47122, "Fortress of the Land Warp Portal", "f_flash_61", -748.5673, 1334.063, 90, "FLASH61_SQ_09_4");
+		AddNpc(22, 47122, "Fortress of the Land Warp Portal", "f_flash_61", -748.5673, 441.482, 1334.063, 90, "FLASH61_SQ_09_4", "", "");
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -977.8478, -325.1236, -56, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -977.8478, 511.1575, -325.1236, -56, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -1053.621, -236.0759, 89, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -1053.621, 511.1575, -236.0759, 89, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -1110.489, -67.51708, 228, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -1110.489, 511.1575, -67.51708, 228, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -751.0582, -170.8694, 186, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -751.0582, 511.1575, -170.8694, 186, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -795.7519, 20.57065, 90, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -795.7519, 511.1575, 20.57065, 90, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -555.1258, 70.82113, 90, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -555.1258, 511.1575, 70.82113, 90, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -574.4045, -51.50171, 90, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -574.4045, 511.1575, -51.50171, 90, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -319.3603, 118.9465, 54, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -319.3603, 392.8823, 118.9465, 54, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -152.0002, 238.2108, 90, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -152.0002, 392.8823, 238.2108, 90, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -110.6683, 45.57288, 90, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -110.6683, 392.8823, 45.57288, 90, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Petrified Books
 		//-------------------------------------------------------------------------
-		AddNpc(154037, "Petrified Books", "f_flash_61", -773.5033, 140.126, 145, "FLASH61_SQ_07_NPC");
+		AddNpc(26, 154037, "Petrified Books", "f_flash_61", -773.5033, 511.1575, 140.126, 145, "FLASH61_SQ_07_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 1259.266, 1193.93, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 1259.266, 498.9985, 1193.93, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 1139.808, 1021.66, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 1139.808, 498.9985, 1021.66, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 1031.235, 1300.717, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 1031.235, 498.9985, 1300.717, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 887.2004, 1132.367, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 887.2004, 498.9985, 1132.367, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 773.2869, 1015.118, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 773.2869, 498.9985, 1015.118, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 993.3409, 993.6188, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 993.3409, 498.9985, 993.6188, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 790.282, 1323.239, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 790.282, 498.9985, 1323.239, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 1241.394, 1320.249, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 1241.394, 498.9985, 1320.249, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 1375.063, 1042.654, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 1375.063, 498.9985, 1042.654, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 692.0434, 1289.908, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 692.0434, 498.9985, 1289.908, 180, "FLASH61_SQ_04_NPC", "", "", 0);
 		
 		// Stolen Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Stolen Supplies", "f_flash_61", 703.9805, 926.0905, 180, "FLASH61_SQ_04_NPC");
+		AddNpc(27, 46212, "Stolen Supplies", "f_flash_61", 703.9805, 498.9985, 926.0905, 180, "FLASH61_SQ_04_NPC", "", "", 0);
+		AddNpc(25, 154023, "Petrified Soldier", "f_flash_61", -281.466, 415.0637, 945.4102, 49, "", "", "");
+		AddNpc(25, 154023, "Petrified Soldier", "f_flash_61", 222.3369, 415.0637, 1046.653, 13, "", "", "");
+		AddNpc(25, 154023, "Petrified Soldier", "f_flash_61", 466.8629, 415.0637, 1071.962, -67, "", "", "");
+		AddNpc(25, 154023, "Petrified Soldier", "f_flash_61", 385.406, 415.0637, 912.6246, 187, "", "", "");
+		AddNpc(25, 154023, "Petrified Soldier", "f_flash_61", 89.78247, 392.8823, 775.9484, 241, "", "", "");
+		AddNpc(29, 154028, "Petrified Soldier", "f_flash_61", -278.1443, 402.9416, 829.9908, 43, "", "", "");
+		AddNpc(29, 154028, "Petrified Soldier", "f_flash_61", -158.7345, 432.0862, 1079.893, -8, "", "", "");
+		AddNpc(29, 154028, "Petrified Soldier", "f_flash_61", 114.93, 415.0637, 905.9009, 255, "", "", "");
+		AddNpc(29, 154028, "Petrified Soldier", "f_flash_61", -183.9872, 392.8823, 709.2211, 51, "", "", "");
+		AddNpc(30, 154029, "Petrified Soldier", "f_flash_61", 83.68874, 415.0637, 1061.134, 90, "", "", "");
+		AddNpc(30, 154029, "Petrified Soldier", "f_flash_61", -170.0931, 392.8823, 606.3987, 177, "", "", "");
+		AddNpc(30, 154029, "Petrified Soldier", "f_flash_61", -21.66286, 392.8823, 497.446, 183, "", "", "");
+		AddNpc(31, 147364, "Gate Entrance x", "f_flash_61", -872.7717, 511.1575, -388.9532, 90, "", "", "");
+		AddNpc(31, 147364, "Gate Entrance x", "f_flash_61", -80.44366, 435.358, 1459.657, 90, "", "", "");
+		AddNpc(31, 147364, "Gate Entrance x", "f_flash_61", -78.80817, 435.358, 1333.99, 90, "", "", "");
+		AddNpc(31, 147364, "Gate Entrance x", "f_flash_61", -1073.021, 511.1575, 164.216, 90, "", "", "");
 		
 		// Vedas Plateau
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Vedas Plateau", "f_flash_61", 452.1687, 1631.381, 132, "", "FLASH61_TABLELAND11_1", "");
+		AddNpc(34, 40001, "Vedas Plateau", "f_flash_61", 452.1687, 435.358, 1631.381, 132, "", "FLASH61_TABLELAND11_1", "");
+		AddNpc(35, 147364, "FieldCantGen", "f_flash_61", 449.8455, 435.358, 1634.37, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_flash_61", -735.61, 189.44, 0, "TREASUREBOX_LV_F_FLASH_611000");
+		AddNpc(1000, 147392, "Lv1 Treasure Chest", "f_flash_61", -735.61, 511.26, 189.44, 0, "TREASUREBOX_LV_F_FLASH_611000", "", "");
 		
 		// Tatenye Prison
 		//-------------------------------------------------------------------------
-		AddNpc(147507, "Tatenye Prison", "f_flash_61", -613, 1451, 90, "FLASH_61_TO_VELNIASPRISON_77_1");
+		AddNpc(36, 147507, "Tatenye Prison", "f_flash_61", -613, 435, 1451, 90, "FLASH_61_TO_VELNIASPRISON_77_1", "", "");
 		
 		// Roxona Underground Facility Mission
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Roxona Underground Facility Mission", "f_flash_61", 553.78, 1061.81, 90, "", "FLASH61_TO_CASTLE_MISSION_RN", "");
+		AddNpc(1001, 40001, "Roxona Underground Facility Mission", "f_flash_61", 553.78, 415.06, 1061.81, 90, "", "FLASH61_TO_CASTLE_MISSION_RN", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_flash_61", -1087.343, 638.2819, 90, "", "EXPLORER_MISLE39", "");
+		AddNpc(1003, 40095, " ", "f_flash_61", -1087.343, 392.9545, 638.2819, 90, "", "EXPLORER_MISLE39", "");
 	}
 }

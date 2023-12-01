@@ -14,110 +14,115 @@ public class DThorn20NpcScript : GeneralScript
 	{
 		// Gate Route
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Gate Route", "d_thorn_20", -1549, -1884, 260, "", "THORN20_THORN19", "");
+		AddNpc(1, 40001, "Gate Route", "d_thorn_20", -1549, 602, -1884, 260, "", "THORN20_THORN19", "");
 		
 		// Kvailas Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Kvailas Forest", "d_thorn_20", 2575, 1060, 167, "", "THORN20_THORN21", "");
+		AddNpc(2, 40001, "Kvailas Forest", "d_thorn_20", 2575, 489, 1060, 167, "", "THORN20_THORN21", "");
 		
 		// Corrupted Altar
 		//-------------------------------------------------------------------------
-		AddNpc(153019, "Corrupted Altar", "d_thorn_20", 2529.13, -1249.79, 76, "", "THORN_MQ06MAGIC_UNHIDE", "");
+		AddNpc(839, 153019, "Corrupted Altar", "d_thorn_20", 2529.13, 489.05, -1249.79, 76, "", "THORN_MQ06MAGIC_UNHIDE", "");
 		
 		// Corrupted Altar
 		//-------------------------------------------------------------------------
-		AddNpc(153019, "Corrupted Altar", "d_thorn_20", 2528.41, 738.83, 76, "", "THORN_MQ07MAGIC_UNHIDE", "");
+		AddNpc(840, 153019, "Corrupted Altar", "d_thorn_20", 2528.41, 488.94, 738.83, 76, "", "THORN_MQ07MAGIC_UNHIDE", "");
 		
 		// Corrupted Altar
 		//-------------------------------------------------------------------------
-		AddNpc(153019, "Corrupted Altar", "d_thorn_20", -1078.92, -383.52, 76, "", "THORN_MQ04MAGIC_UNHIDE", "");
+		AddNpc(841, 153019, "Corrupted Altar", "d_thorn_20", -1078.92, 583.26, -383.52, 76, "", "THORN_MQ04MAGIC_UNHIDE", "");
 		
 		// Passage of the Recluse
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Passage of the Recluse", "d_thorn_20", 3049, -816, 180, "", "THORN20_PCATHEDRAL1", "");
+		AddNpc(844, 40001, "Passage of the Recluse", "d_thorn_20", 3049, 491, -816, 180, "", "THORN20_PCATHEDRAL1", "");
 		
 		// Dvasia Peak
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Dvasia Peak", "d_thorn_20", 1241, -1506, 270, "", "THORN20_THORN22", "");
+		AddNpc(845, 40001, "Dvasia Peak", "d_thorn_20", 1241, 438, -1506, 270, "", "THORN20_THORN22", "");
 		
 		// Believer Alvydas
 		//-------------------------------------------------------------------------
-		AddNpc(147389, "Believer Alvydas", "d_thorn_20", -732.6138, -1851.019, 90, "THORN20_MQ01");
+		AddNpc(851, 147389, "Believer Alvydas", "d_thorn_20", -732.6138, 490.2488, -1851.019, 90, "THORN20_MQ01", "", "");
 		
 		// Believer Raminta
 		//-------------------------------------------------------------------------
-		AddNpc(147397, "Believer Raminta", "d_thorn_20", -98.84291, -260.2638, 90, "THORN20_MQ02_BOSS");
+		AddNpc(852, 147397, "Believer Raminta", "d_thorn_20", -98.84291, 548.7081, -260.2638, 90, "THORN20_MQ02_BOSS", "", "");
 		
 		// Believer Evaldas
 		//-------------------------------------------------------------------------
-		AddNpc(147398, "Believer Evaldas", "d_thorn_20", -428.9864, 647.1365, 90, "THORN20_MQ03_TRACK");
+		AddNpc(853, 147398, "Believer Evaldas", "d_thorn_20", -428.9864, 542.501, 647.1365, 90, "THORN20_MQ03_TRACK", "", "");
 		
 		// Believer Zaneta
 		//-------------------------------------------------------------------------
-		AddNpc(147386, "Believer Zaneta", "d_thorn_20", -1223.182, 602.5321, 90, "THORN20_MQ04_TRACK");
+		AddNpc(854, 147386, "Believer Zaneta", "d_thorn_20", -1223.182, 557.6079, 602.5321, 90, "THORN20_MQ04_TRACK", "", "");
 		
 		// Believer Simas
 		//-------------------------------------------------------------------------
-		AddNpc(147389, "Believer Simas", "d_thorn_20", 2163.389, -1415.44, 90, "THORN20_MAGIC3STAGE");
+		AddNpc(855, 147389, "Believer Simas", "d_thorn_20", 2163.389, 449.9989, -1415.44, 90, "THORN20_MAGIC3STAGE", "", "");
 		
 		// Believer Onute
 		//-------------------------------------------------------------------------
-		AddNpc(147397, "Believer Onute", "d_thorn_20", 2315.642, 58.2023, 90, "THORN20_MQ07_TRACK");
+		AddNpc(856, 147397, "Believer Onute", "d_thorn_20", 2315.642, 490.1493, 58.2023, 90, "THORN20_MQ07_TRACK", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_thorn_20", 2526.682, 734.735, 90, "", "THORN20_MQ07_TRIGGER", "");
+		AddNpc(857, 20026, "", "d_thorn_20", 2526.682, 488.9384, 734.735, 90, "", "THORN20_MQ07_TRIGGER", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_thorn_20", -59.48851, 351.3292, 90, "", "THORN20_MQ02_TRACK", "");
+		AddNpc(858, 20026, "", "d_thorn_20", -59.48851, 558.973, 351.3292, 90, "", "THORN20_MQ02_TRACK", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_thorn_20", -813.3397, 960.9757, 90, "", "THORN20_MQ03_TRIGGER", "");
+		AddNpc(859, 20026, "", "d_thorn_20", -813.3397, 517.9268, 960.9757, 90, "", "THORN20_MQ03_TRIGGER", "");
 		
 		// Warning
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Warning", "d_thorn_20", 1334.503, -1444.386, 90, "UPPER_WARNING_D_THORN_20");
+		AddNpc(860, 40070, "Warning", "d_thorn_20", 1334.503, 438.515, -1444.386, 90, "UPPER_WARNING_D_THORN_20", "", "");
 		
 		// Corrupted Altar
 		//-------------------------------------------------------------------------
-		AddNpc(153019, "Corrupted Altar", "d_thorn_20", -1343, 232, 76, "", "THORN_MQ04MAGIC_UNHIDE2", "");
+		AddNpc(862, 153019, "Corrupted Altar", "d_thorn_20", -1343, 583.26, 232, 76, "", "THORN_MQ04MAGIC_UNHIDE2", "");
 		
 		// Corrupted Altar
 		//-------------------------------------------------------------------------
-		AddNpc(153019, "Corrupted Altar", "d_thorn_20", -16.84, 314.33, 76, "", "THORN_MQ02MAGIC_UNHIDE2", "");
+		AddNpc(863, 153019, "Corrupted Altar", "d_thorn_20", -16.84, 558.99, 314.33, 76, "", "THORN_MQ02MAGIC_UNHIDE2", "");
 		
 		// Corrupted Altar
 		//-------------------------------------------------------------------------
-		AddNpc(153019, "Corrupted Altar", "d_thorn_20", -812.92, 966.12, 76, "", "THORN_MQ03MAGIC_UNHIDE2", "");
+		AddNpc(864, 153019, "Corrupted Altar", "d_thorn_20", -812.92, 517.96, 966.12, 76, "", "THORN_MQ03MAGIC_UNHIDE2", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "", "d_thorn_20", 525.1425, -1965.911, 90, "", "JOB_QUARREL3_2_TRIGGER", "");
+		AddNpc(3, 20041, "", "d_thorn_20", 525.1425, 490.2488, -1965.911, 90, "", "JOB_QUARREL3_2_TRIGGER", "");
 		
 		// Lv3 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147393, "Lv3 Treasure Chest", "d_thorn_20", 580.54, -2066.05, 90, "TREASUREBOX_LV_D_THORN_20865");
+		AddNpc(865, 147393, "Lv3 Treasure Chest", "d_thorn_20", 580.54, 490.35, -2066.05, 90, "TREASUREBOX_LV_D_THORN_20865", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20024, " ", "d_thorn_20", 1751.203, -1363.114, 90, "SAULE_PURIFICATION");
+		AddNpc(866, 20024, " ", "d_thorn_20", 1751.203, 433.4252, -1363.114, 90, "SAULE_PURIFICATION", "", "", 1);
 		
 		// Viltis Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Viltis Forest", "d_thorn_20", -911, 1739, 190, "", "THORN20_THORN39_1", "");
+		AddNpc(867, 40001, "Viltis Forest", "d_thorn_20", -911, 522, 1739, 190, "", "THORN20_THORN39_1", "");
+		AddNpc(868, 147362, "Field Gen x", "d_thorn_20", -1493.267, 602.4921, -1896.596, 90, "", "", "");
+		AddNpc(868, 147362, "Field Gen x", "d_thorn_20", -912.5187, 521.516, 1664.604, 90, "", "", "");
+		AddNpc(868, 147362, "Field Gen x", "d_thorn_20", 2571.989, 488.9932, 1000.779, 90, "", "", "");
+		AddNpc(868, 147362, "Field Gen x", "d_thorn_20", 1317.552, 439.4052, -1519.6, 90, "", "", "");
+		AddNpc(868, 147362, "Field Gen x", "d_thorn_20", 3034.043, 491.6372, -876.2472, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_thorn_20", 656.34, -1853.62, -45, "TREASUREBOX_LV_D_THORN_20700");
+		AddNpc(700, 147392, "Lv1 Treasure Chest", "d_thorn_20", 656.34, 490.35, -1853.62, -45, "TREASUREBOX_LV_D_THORN_20700", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "d_thorn_20", -81.17542, 79.36737, 90, "", "EXPLORER_MISLE24", "");
+		AddNpc(869, 40095, " ", "d_thorn_20", -81.17542, 560.8685, 79.36737, 90, "", "EXPLORER_MISLE24", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "d_thorn_20", 2641.724, 895.7717, 63, "", "HUEVILLAGE_58_4_MQ09_BLACK_MAN", "");
+		AddNpc(870, 147469, " ", "d_thorn_20", 2641.724, 488.9138, 895.7717, 63, "", "HUEVILLAGE_58_4_MQ09_BLACK_MAN", "");
 	}
 }

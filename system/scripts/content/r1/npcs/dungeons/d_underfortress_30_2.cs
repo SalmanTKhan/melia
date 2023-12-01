@@ -14,22 +14,37 @@ public class DUnderfortress302NpcScript : GeneralScript
 	{
 		// Ruklys Hall of Fame
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Ruklys Hall of Fame", "d_underfortress_30_2", 1214.862, -704.8499, 90, "", "UNDERFORTRESS30_2_UNDERFORTRESS30_1", "");
+		AddNpc(4, 40001, "Ruklys Hall of Fame", "d_underfortress_30_2", 1214.862, 187.6292, -704.8499, 90, "", "UNDERFORTRESS30_2_UNDERFORTRESS30_1", "");
 		
 		// Evacuation Residential District
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Evacuation Residential District", "d_underfortress_30_2", -1696.534, -697.921, -87, "", "UNDERFORTRESS30_2_UNDERFORTRESS30_3", "");
+		AddNpc(5, 40001, "Evacuation Residential District", "d_underfortress_30_2", -1696.534, 235.0492, -697.921, -87, "", "UNDERFORTRESS30_2_UNDERFORTRESS30_3", "");
+		AddNpc(6, 147362, " ", "d_underfortress_30_2", -1642.042, 213.0823, -696.9325, 90, "", "", "");
+		AddNpc(6, 147362, " ", "d_underfortress_30_2", 1132.994, 156.6684, -698.5383, 90, "", "", "");
+		AddNpc(7, 20026, " ", "d_underfortress_30_2", -995.481, 150.4334, 1450.922, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47192, " ", "d_underfortress_30_2", -960.9432, 1628.18, 93, "UNDER301_MONSTER_PAIR_GIMMICK");
+		AddNpc(8, 47192, " ", "d_underfortress_30_2", -960.9432, 150.4334, 1628.18, 93, "UNDER301_MONSTER_PAIR_GIMMICK", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -1083.095, 150.4334, 1304.398, 90, "", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -1093.964, 150.4334, 1603.604, 90, "", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -782.6296, 150.4334, 1294.947, 28, "", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -799.9307, 150.4334, 1590.789, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153138, " ", "d_underfortress_30_2", 488.793, -433.8552, 1, "UNDER30_1_BASE_BALL");
+		AddNpc(11, 153138, " ", "d_underfortress_30_2", 488.793, 260.7068, -433.8552, 1, "UNDER30_1_BASE_BALL", "", "");
+		AddNpc(12, 20026, " ", "d_underfortress_30_2", -157.8758, 150.5885, 356.095, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153134, " ", "d_underfortress_30_2", 832.0229, 471.0039, -28, "UNDER30_2_EVENT2_OBJ1");
+		AddNpc(14, 153134, " ", "d_underfortress_30_2", 832.0229, 228.1641, 471.0039, -28, "UNDER30_2_EVENT2_OBJ1", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -1036.672, 150.4334, 1474.071, 90, "", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -825.9431, 150.4334, 1445.947, 90, "", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -945.769, 150.4334, 1338.898, 90, "", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -925.855, 150.4334, 1545.475, 90, "", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -932.5653, 150.4334, 1441.994, 90, "", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -921.4194, 150.4334, 1636.613, 90, "", "", "");
+		AddNpc(10, 20025, " ", "d_underfortress_30_2", -1089.115, 150.4334, 1401.935, 90, "", "", "");
 	}
 }

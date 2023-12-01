@@ -14,94 +14,99 @@ public class DFiretower44NpcScript : GeneralScript
 	{
 		// Mage Tower 3F
 		//-------------------------------------------------------------------------
-		AddNpc(147500, "Mage Tower 3F", "d_firetower_44", 584.4926, -1318.89, 90, "", "FIRETOWER44_TO_FIRETOWER43", "");
+		AddNpc(7, 147500, "Mage Tower 3F", "d_firetower_44", 584.4926, 280.7716, -1318.89, 90, "", "FIRETOWER44_TO_FIRETOWER43", "");
 		
 		// Mage Tower 5F
 		//-------------------------------------------------------------------------
-		AddNpc(147500, "Mage Tower 5F", "d_firetower_44", -2718.143, 62.12241, 90, "", "FIRETOWER44_TO_FIRETOWER45", "");
+		AddNpc(8, 147500, "Mage Tower 5F", "d_firetower_44", -2718.143, 576.2475, 62.12241, 90, "", "FIRETOWER44_TO_FIRETOWER45", "");
 		
 		// Grita
 		//-------------------------------------------------------------------------
-		AddNpc(147449, "Grita", "d_firetower_44", 571.6976, -1149.573, -11, "FTOWER44_GRITA_01");
+		AddNpc(100, 147449, "Grita", "d_firetower_44", 571.6976, 300.1312, -1149.573, -11, "FTOWER44_GRITA_01", "", "", 1);
 		
 		// Furry Odd
 		//-------------------------------------------------------------------------
-		AddNpc(20145, "Furry Odd", "d_firetower_44", 1262, -184, 90, "FTOWER44_SQ_01");
+		AddNpc(201, 20145, "Furry Odd", "d_firetower_44", 1262, 328, -184, 90, "FTOWER44_SQ_01", "", "", 0);
 		
 		// Furry Odd
 		//-------------------------------------------------------------------------
-		AddNpc(20145, "Furry Odd", "d_firetower_44", 1896, 253, 90, "FTOWER44_SQ_02");
+		AddNpc(202, 20145, "Furry Odd", "d_firetower_44", 1896, 505, 253, 90, "FTOWER44_SQ_02", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_firetower_44", 1780, 507, 90, "", "FTOWER44_SQ_03", "");
+		AddNpc(203, 20026, "", "d_firetower_44", 1780, 510, 507, 90, "", "FTOWER44_SQ_03", "");
 		
 		// Sealed Stone
 		//-------------------------------------------------------------------------
-		AddNpc(151050, "Sealed Stone", "d_firetower_44", 32, 310, 90, "FTOWER44_SQ_04");
+		AddNpc(204, 151050, "Sealed Stone", "d_firetower_44", 32, 440, 310, 90, "FTOWER44_SQ_04", "", "", 0);
 		
 		// Sealed Stone
 		//-------------------------------------------------------------------------
-		AddNpc(151050, "Sealed Stone", "d_firetower_44", -453.0844, -1449.623, 90, "FTOWER44_SQ_05");
+		AddNpc(205, 151050, "Sealed Stone", "d_firetower_44", -453.0844, 364.3753, -1449.623, 90, "FTOWER44_SQ_05", "", "", 0);
 		
 		// Magic Stabilizing Device 
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Magic Stabilizing Device ", "d_firetower_44", 158.0137, 113.6509, 90, "FTOWER44_MQ_02");
+		AddNpc(207, 147372, "Magic Stabilizing Device ", "d_firetower_44", 158.0137, 440.0579, 113.6509, 90, "FTOWER44_MQ_02", "", "");
 		
 		// FTOWER44_MQ_05_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "FTOWER44_MQ_05_TRIGGER", "d_firetower_44", -2194.911, 62.18592, 90, "", "FTOWER44_MQ_05_TRIGGER", "");
+		AddNpc(211, 20026, "FTOWER44_MQ_05_TRIGGER", "d_firetower_44", -2194.911, 525.4075, 62.18592, 90, "", "FTOWER44_MQ_05_TRIGGER", "");
 		
 		// Flame Crystal
 		//-------------------------------------------------------------------------
-		AddNpc(151001, "Flame Crystal", "d_firetower_44", -391.8288, -617.7429, 90, "FTOWER44_MQ_03");
+		AddNpc(215, 151001, "Flame Crystal", "d_firetower_44", -391.8288, 322.3343, -617.7429, 90, "FTOWER44_MQ_03", "", "");
 		
 		// Flame Crystal
 		//-------------------------------------------------------------------------
-		AddNpc(151001, "Flame Crystal", "d_firetower_44", -554.4518, -736.5818, 90, "FTOWER44_MQ_03");
+		AddNpc(215, 151001, "Flame Crystal", "d_firetower_44", -554.4518, 322.3343, -736.5818, 90, "FTOWER44_MQ_03", "", "");
 		
 		// Flame Crystal
 		//-------------------------------------------------------------------------
-		AddNpc(151001, "Flame Crystal", "d_firetower_44", -495.4181, -1278.579, 90, "FTOWER44_MQ_03");
+		AddNpc(215, 151001, "Flame Crystal", "d_firetower_44", -495.4181, 435.3824, -1278.579, 90, "FTOWER44_MQ_03", "", "");
 		
 		// Warning
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Warning", "d_firetower_44", -568.1971, -367.1758, 90, "FTOWER_44_WARING");
+		AddNpc(218, 40070, "Warning", "d_firetower_44", -568.1971, 355.7188, -367.1758, 90, "FTOWER_44_WARING", "", "");
 		
 		// Spell Control Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Spell Control Magic Circle", "d_firetower_44", -1603, 614, 90, "FTOWER44_MQ_04_NPC");
+		AddNpc(223, 147469, "Spell Control Magic Circle", "d_firetower_44", -1603, 536, 614, 90, "FTOWER44_MQ_04_NPC", "", "", 0);
 		
 		// Flame Crystal
 		//-------------------------------------------------------------------------
-		AddNpc(151001, "Flame Crystal", "d_firetower_44", -418.7737, -1561.873, 90, "FTOWER44_MQ_03");
+		AddNpc(215, 151001, "Flame Crystal", "d_firetower_44", -418.7737, 372.0525, -1561.873, 90, "FTOWER44_MQ_03", "", "");
 		
 		// Flame Crystal
 		//-------------------------------------------------------------------------
-		AddNpc(151001, "Flame Crystal", "d_firetower_44", -267.795, -1334.424, 90, "FTOWER44_MQ_03");
+		AddNpc(215, 151001, "Flame Crystal", "d_firetower_44", -267.795, 364.3754, -1334.424, 90, "FTOWER44_MQ_03", "", "");
+		AddNpc(224, 147366, "No Field Gen", "d_firetower_44", 571.5973, 286.5724, -1423.363, 90, "", "", "");
+		AddNpc(225, 147364, "No Field Gen", "d_firetower_44", -2760.104, 576.2475, 68.69717, 90, "", "", "");
+		AddNpc(225, 147364, "No Field Gen", "d_firetower_44", 1312.598, 323.6079, -79.11691, 90, "", "", "");
+		AddNpc(225, 147364, "No Field Gen", "d_firetower_44", 1805.502, 507.3971, 359.2759, 90, "", "", "");
 		
 		// Grita
 		//-------------------------------------------------------------------------
-		AddNpc(147449, "Grita", "d_firetower_44", -1596.22, 587.6, 180, "FTOWER44_GRITA_REMAIN");
+		AddNpc(227, 147449, "Grita", "d_firetower_44", -1596.22, 536.96, 587.6, 180, "FTOWER44_GRITA_REMAIN", "", "", 1);
 		
 		// Psychokino Tome Volume 4
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Psychokino Tome Volume 4", "d_firetower_44", 1411.337, -656.3796, 90, "JOB_2_PSYCHOKINO_5_1_BOOK_4");
+		AddNpc(229, 147311, "Psychokino Tome Volume 4", "d_firetower_44", 1411.337, 432.7419, -656.3796, 90, "JOB_2_PSYCHOKINO_5_1_BOOK_4", "", "", 1);
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_firetower_44", 744.7, 554.75, 90, "TREASUREBOX_LV_D_FIRETOWER_44230");
+		AddNpc(230, 147392, "Lv1 Treasure Chest", "d_firetower_44", 744.7, 451.3, 554.75, 90, "TREASUREBOX_LV_D_FIRETOWER_44230", "", "");
 		
 		// Mage Tower Guild Mission
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Mage Tower Guild Mission", "d_firetower_44", -368.5267, -1505.354, -75, "", "FIRETOWER44_TO_GUILDMISSION", "");
+		AddNpc(231, 40001, "Mage Tower Guild Mission", "d_firetower_44", -368.5267, 366.6802, -1505.354, -75, "", "FIRETOWER44_TO_GUILDMISSION", "");
+		AddNpc(225, 147364, "No Field Gen", "d_firetower_44", -373.4781, 366.6401, -1501.563, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "d_firetower_44", 653.94, -1663.74, 90, "HT2_FTOWER_44_TSCOPE");
+		AddNpc(232, 152057, " ", "d_firetower_44", 653.94, 310.02, -1663.74, 90, "HT2_FTOWER_44_TSCOPE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "d_firetower_44", 544.1, -1687.83, 90, "HT2_FTOWER_44_TSCOPE");
+		AddNpc(232, 152057, " ", "d_firetower_44", 544.1, 310.02, -1687.83, 90, "HT2_FTOWER_44_TSCOPE", "", "");
 	}
 }

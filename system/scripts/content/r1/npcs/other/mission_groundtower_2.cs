@@ -14,10 +14,10 @@ public class MissionGroundtower2NpcScript : GeneralScript
 	{
 		// Kupole Ruta
 		//-------------------------------------------------------------------------
-		AddNpc(154013, "Kupole Ruta", "mission_groundtower_2", 5451.209, -6240.683, -7, "GT2_LUTHA_NPC");
+		AddNpc(1, 154013, "Kupole Ruta", "mission_groundtower_2", 5451.209, 239.8083, -6240.683, -7, "GT2_LUTHA_NPC", "", "");
 		
 		// CK_SOLMIKI
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "CK_SOLMIKI", "mission_groundtower_2", 5593.586, -6469.392, 90, "", "GT2_INIT_MGAME_STARTER", "");
+		AddNpc(2, 20026, "CK_SOLMIKI", "mission_groundtower_2", 5593.586, 239.8083, -6469.392, 90, "", "GT2_INIT_MGAME_STARTER", "");
 	}
 }

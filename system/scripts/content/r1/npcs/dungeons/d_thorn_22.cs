@@ -14,142 +14,149 @@ public class DThorn22NpcScript : GeneralScript
 	{
 		// Saknis Plains
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Saknis Plains", "d_thorn_22", -986, -2219, 0, "", "THORN22_KATYN14", "");
+		AddNpc(1, 40001, "Saknis Plains", "d_thorn_22", -986, 470, -2219, 0, "", "THORN22_KATYN14", "");
 		
 		// Sunset Flag Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Sunset Flag Forest", "d_thorn_22", 987, 1109, 156, "", "THORN22_THORN23", "");
+		AddNpc(2, 40001, "Sunset Flag Forest", "d_thorn_22", 987, 289, 1109, 156, "", "THORN22_THORN23", "");
 		
 		// Dvasia Peak
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Dvasia Peak", "d_thorn_22", -1020, -891, 183, "", "THORN22_1_THORN22_2", "");
+		AddNpc(3, 40001, "Dvasia Peak", "d_thorn_22", -1020, 554, -891, 183, "", "THORN22_1_THORN22_2", "");
 		
 		// Dvasia Peak
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Dvasia Peak", "d_thorn_22", -1216.202, -386.6535, 23, "", "THORN22_2_THORN22_1", "");
+		AddNpc(4, 40001, "Dvasia Peak", "d_thorn_22", -1216.202, 553.8387, -386.6535, 23, "", "THORN22_2_THORN22_1", "");
 		
 		// Dvasia Peak
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Dvasia Peak", "d_thorn_22", -1035, 664, 162, "", "THORN22_2_THORN22_3", "");
+		AddNpc(5, 40001, "Dvasia Peak", "d_thorn_22", -1035, 553, 664, 162, "", "THORN22_2_THORN22_3", "");
 		
 		// Dvasia Peak
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Dvasia Peak", "d_thorn_22", -689, 846, -30, "", "THORN22_3_THORN22_2", "");
+		AddNpc(6, 40001, "Dvasia Peak", "d_thorn_22", -689, 554, 846, -30, "", "THORN22_3_THORN22_2", "");
 		
 		// THORN22_ADD_SUB_01
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "THORN22_ADD_SUB_01", "d_thorn_22", -1250, -1900, 90, "", "THORN22_ADD_SUB_01", "");
+		AddNpc(100, 20026, "THORN22_ADD_SUB_01", "d_thorn_22", -1250, 490, -1900, 90, "", "THORN22_ADD_SUB_01", "");
 		
 		// Soldier Rudolfas
 		//-------------------------------------------------------------------------
-		AddNpc(10032, "Soldier Rudolfas", "d_thorn_22", -2209.116, -1218.271, 90, "THORN22_ADD_SUB_02");
+		AddNpc(101, 10032, "Soldier Rudolfas", "d_thorn_22", -2209.116, 444.0274, -1218.271, 90, "THORN22_ADD_SUB_02", "", "");
 		
 		// THORN22_ADD_SUB_03
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "THORN22_ADD_SUB_03", "d_thorn_22", -170, -1360, 90, "", "THORN22_ADD_SUB_03", "");
+		AddNpc(102, 20026, "THORN22_ADD_SUB_03", "d_thorn_22", -170, 560, -1360, 90, "", "THORN22_ADD_SUB_03", "");
 		
 		// THORN22_ADD_SUB_04
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "THORN22_ADD_SUB_04", "d_thorn_22", 530, -1420, 90, "", "THORN22_ADD_SUB_04", "");
+		AddNpc(103, 20026, "THORN22_ADD_SUB_04", "d_thorn_22", 530, 446, -1420, 90, "", "THORN22_ADD_SUB_04", "");
 		
 		// Soldier Aspas
 		//-------------------------------------------------------------------------
-		AddNpc(10022, "Soldier Aspas", "d_thorn_22", -529.7094, 1000.646, 90, "THORN22_ADD_SUB_05");
+		AddNpc(104, 10022, "Soldier Aspas", "d_thorn_22", -529.7094, 554.6918, 1000.646, 90, "THORN22_ADD_SUB_05", "", "");
 		
 		// Soldier Dominic
 		//-------------------------------------------------------------------------
-		AddNpc(20011, "Soldier Dominic", "d_thorn_22", -984.7786, -2094.786, 90, "THORN22_DOMINIC");
+		AddNpc(501, 20011, "Soldier Dominic", "d_thorn_22", -984.7786, 485.7462, -2094.786, 90, "THORN22_DOMINIC", "", "");
 		
 		// Soldier Samson
 		//-------------------------------------------------------------------------
-		AddNpc(20012, "Soldier Samson", "d_thorn_22", -1145.517, -1475.99, 90, "THORN22_SAMSON");
+		AddNpc(502, 20012, "Soldier Samson", "d_thorn_22", -1145.517, 554.7429, -1475.99, 90, "THORN22_SAMSON", "", "");
 		
 		// Pile of Branches
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Pile of Branches", "d_thorn_22", -1503.655, -2162.258, 90, "THORN22_FIREWOOD_1");
+		AddNpc(503, 46011, "Pile of Branches", "d_thorn_22", -1503.655, 489.6177, -2162.258, 90, "THORN22_FIREWOOD_1", "", "", 0);
 		
 		// Pile of Branches
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Pile of Branches", "d_thorn_22", -1702.254, -2214.025, 90, "THORN22_FIREWOOD_2");
+		AddNpc(504, 46011, "Pile of Branches", "d_thorn_22", -1702.254, 489.6177, -2214.025, 90, "THORN22_FIREWOOD_2", "", "", 0);
 		
 		// Camping Place
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Camping Place", "d_thorn_22", -1591, -1782, 90, "THORN22_Q_6_TRIGGER");
+		AddNpc(505, 20025, "Camping Place", "d_thorn_22", -1591, 602, -1782, 90, "THORN22_Q_6_TRIGGER", "", "");
 		
 		// Firewood
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Firewood", "d_thorn_22", -1591, -1782, 90, "", "THORN22_Q_6_BONFIRE", "");
+		AddNpc(506, 46011, "Firewood", "d_thorn_22", -1591, 602, -1782, 90, "", "THORN22_Q_6_BONFIRE", "");
 		
 		// Commander O'Rourke
 		//-------------------------------------------------------------------------
-		AddNpc(20125, "Commander O'Rourke", "d_thorn_22", -996.5063, -1339.736, 90, "THORN22_OROURKE");
+		AddNpc(507, 20125, "Commander O'Rourke", "d_thorn_22", -996.5063, 554.74, -1339.736, 90, "THORN22_OROURKE", "", "", 0);
 		
 		// Commander Julian
 		//-------------------------------------------------------------------------
-		AddNpc(20107, "Commander Julian", "d_thorn_22", 13.53287, -1289.193, 90, "THORN22_JULIAN");
+		AddNpc(508, 20107, "Commander Julian", "d_thorn_22", 13.53287, 557.6118, -1289.193, 90, "THORN22_JULIAN", "", "");
 		
 		// Soldier Poulter
 		//-------------------------------------------------------------------------
-		AddNpc(20013, "Soldier Poulter", "d_thorn_22", 762, -721, 90, "THORN22_POULLTER");
+		AddNpc(509, 20013, "Soldier Poulter", "d_thorn_22", 762, 626, -721, 90, "THORN22_POULLTER", "", "", 0);
 		
 		// THORN22_Q_14 trigger
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "THORN22_Q_14 trigger", "d_thorn_22", 419, -1509, 90, "", "THORN22_Q_14_TRIGGER", "");
+		AddNpc(510, 20041, "THORN22_Q_14 trigger", "d_thorn_22", 419, 446, -1509, 90, "", "THORN22_Q_14_TRIGGER", "");
 		
 		// Soldier Dainus
 		//-------------------------------------------------------------------------
-		AddNpc(20012, "Soldier Dainus", "d_thorn_22", 78.69625, 247.3788, 90, "THORN22_BOSSKILL_1_TRIGGER");
+		AddNpc(511, 20012, "Soldier Dainus", "d_thorn_22", 78.69625, 401.7676, 247.3788, 90, "THORN22_BOSSKILL_1_TRIGGER", "", "");
 		
 		// Substitute Owl Sculpture
 		//-------------------------------------------------------------------------
-		AddNpc(12081, "Substitute Owl Sculpture", "d_thorn_22", 218.158, -1294.214, -5, "THORN22_OWL1");
+		AddNpc(512, 12081, "Substitute Owl Sculpture", "d_thorn_22", 218.158, 557.6118, -1294.214, -5, "THORN22_OWL1", "", "");
 		
 		// THORN22_Q_16 trigger
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "THORN22_Q_16 trigger", "d_thorn_22", -1242.855, -243.1983, 90, "", "THORN22_Q_16_TRIGGER", "");
+		AddNpc(513, 20041, "THORN22_Q_16 trigger", "d_thorn_22", -1242.855, 553.8387, -243.1983, 90, "", "THORN22_Q_16_TRIGGER", "");
 		
 		// Settled Owl Sculpture
 		//-------------------------------------------------------------------------
-		AddNpc(48002, "Settled Owl Sculpture", "d_thorn_22", -1425.893, -155.0305, 22, "THORN22_OWL2");
+		AddNpc(514, 48002, "Settled Owl Sculpture", "d_thorn_22", -1425.893, 553.8387, -155.0305, 22, "THORN22_OWL2", "", "");
 		
 		// THORN22_Q_18 trigger
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "THORN22_Q_18 trigger", "d_thorn_22", -1236, 371, 90, "", "THORN22_Q_18_TRIGGER", "");
+		AddNpc(515, 20041, "THORN22_Q_18 trigger", "d_thorn_22", -1236, 553, 371, 90, "", "THORN22_Q_18_TRIGGER", "");
 		
 		// THORN22_Q_1_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "THORN22_Q_1_TRIGGER", "d_thorn_22", -780, -1520, 90, "", "THORN22_Q_1_TRIGGER", "");
+		AddNpc(516, 20026, "THORN22_Q_1_TRIGGER", "d_thorn_22", -780, 554, -1520, 90, "", "THORN22_Q_1_TRIGGER", "");
 		
 		// Rotten Tree Stump
 		//-------------------------------------------------------------------------
-		AddNpc(46213, "Rotten Tree Stump", "d_thorn_22", 76, -606, 77, "THORN22_Q_9_TRIGGER");
+		AddNpc(517, 46213, "Rotten Tree Stump", "d_thorn_22", 76, 539, -606, 77, "THORN22_Q_9_TRIGGER", "", "");
 		
 		// Sirdgela Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Sirdgela Forest", "d_thorn_22", -2299, -1493, -85, "", "THORN22_THORN20", "");
+		AddNpc(601, 40001, "Sirdgela Forest", "d_thorn_22", -2299, 440, -1493, -85, "", "THORN22_THORN20", "");
 		
 		// Soldier Kallus
 		//-------------------------------------------------------------------------
-		AddNpc(20013, "Soldier Kallus", "d_thorn_22", -1301, -354, 90, "THORN22_Q_18");
+		AddNpc(603, 20013, "Soldier Kallus", "d_thorn_22", -1301, 553, -354, 90, "THORN22_Q_18", "", "", 1);
 		
 		// Warning
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Warning", "d_thorn_22", -2102.793, -1347.919, 2, "THORN22_AREA_WARING01");
+		AddNpc(826, 40070, "Warning", "d_thorn_22", -2102.793, 440.8167, -1347.919, 2, "THORN22_AREA_WARING01", "", "");
 		
 		// THORN22_Q_9_TRACK
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "THORN22_Q_9_TRACK", "d_thorn_22", 467.889, 499.9865, 90, "", "THORN22_Q_9_TRACK", "");
+		AddNpc(829, 20026, "THORN22_Q_9_TRACK", "d_thorn_22", 467.889, 289.7747, 499.9865, 90, "", "THORN22_Q_9_TRACK", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "d_thorn_22", 66.92315, -1211.507, 45, "WARP_D_THORN_22", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(7, 40120, "Statue of Goddess Vakarine", "d_thorn_22", 66.92315, 559.9864, -1211.507, 45, "WARP_D_THORN_22", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(831, 147362, "Field Gen x", "d_thorn_22", -978.8121, 476.4794, -2168.937, 90, "", "", "");
+		AddNpc(831, 147362, "Field Gen x", "d_thorn_22", -2236.588, 440.8167, -1497.827, 90, "", "", "");
+		AddNpc(831, 147362, "Field Gen x", "d_thorn_22", -1016.284, 554.7429, -934.3744, 90, "", "", "");
+		AddNpc(831, 147362, "Field Gen x", "d_thorn_22", -1238.117, 554.3195, -340.9456, 90, "", "", "");
+		AddNpc(831, 147362, "Field Gen x", "d_thorn_22", -1072.831, 554.2874, 597.8363, 90, "", "", "");
+		AddNpc(831, 147362, "Field Gen x", "d_thorn_22", -622.361, 554.6918, 861.4381, 90, "", "", "");
+		AddNpc(831, 147362, "Field Gen x", "d_thorn_22", 978.3737, 289.7773, 1065.293, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_thorn_22", 1109.28, -1282.3, 90, "TREASUREBOX_LV_D_THORN_22832");
+		AddNpc(832, 147392, "Lv1 Treasure Chest", "d_thorn_22", 1109.28, 446.61, -1282.3, 90, "TREASUREBOX_LV_D_THORN_22832", "", "");
 		
 		// [Chaplain Master]{nl}Ceslovas
 		//-------------------------------------------------------------------------
-		AddNpc(156018, "[Chaplain Master]{nl}Ceslovas", "d_thorn_22", 119.0161, -1162.524, 0, "CHAPLAIN_MASTER", "THORN22_HIDDEN_CHAPLAIN_IN");
+		AddNpc(833, 156018, "[Chaplain Master]{nl}Ceslovas", "d_thorn_22", 119.0161, 568.91, -1162.524, 0, "CHAPLAIN_MASTER", "THORN22_HIDDEN_CHAPLAIN_IN", "", 0);
 	}
 }

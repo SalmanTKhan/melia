@@ -14,6 +14,6 @@ public class DPrison751NpcScript : GeneralScript
 	{
 		// Gytis Settlement Area
 		//-------------------------------------------------------------------------
-		AddNpc(147507, "Gytis Settlement Area", "d_prison_75_1", -516, 1633, 90, "PRISON_75_1_TO_SIAULIAI_50_1");
+		AddNpc(13, 147507, "Gytis Settlement Area", "d_prison_75_1", -516, -196, 1633, 90, "PRISON_75_1_TO_SIAULIAI_50_1", "", "");
 	}
 }

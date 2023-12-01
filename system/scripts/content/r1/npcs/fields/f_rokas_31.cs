@@ -14,58 +14,64 @@ public class FRokas31NpcScript : GeneralScript
 	{
 		// King's Plateau
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "King's Plateau", "f_rokas_31", 940, -998, 139, "", "ROKAS31_ROKAS30", "");
+		AddNpc(1, 40001, "King's Plateau", "f_rokas_31", 940, 107, -998, 139, "", "ROKAS31_ROKAS30", "");
 		
 		// Royal Mausoleum 1F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Royal Mausoleum 1F", "f_rokas_31", -1271, 715, 225, "", "ROKAS31_ZACHARIEL32", "");
+		AddNpc(2, 40001, "Royal Mausoleum 1F", "f_rokas_31", -1271, 274, 715, 225, "", "ROKAS31_ZACHARIEL32", "");
 		
 		// Stele Road
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Stele Road", "f_rokas_31", 470, -1399, -49, "", "ROKAS31_REMAINS37", "");
+		AddNpc(3, 40001, "Stele Road", "f_rokas_31", 470, 107, -1399, -49, "", "ROKAS31_REMAINS37", "");
 		
 		// Rexipher
 		//-------------------------------------------------------------------------
-		AddNpc(47413, "Rexipher", "f_rokas_31", 656, -1211, 90, "ROKAS31_PACT_END");
+		AddNpc(601, 47413, "Rexipher", "f_rokas_31", 656, 107, -1211, 90, "ROKAS31_PACT_END", "", "", 1);
 		
 		// Rexipher
 		//-------------------------------------------------------------------------
-		AddNpc(47413, "Rexipher", "f_rokas_31", -159.3123, -501.1689, 90, "ROKAS31_REXITHER2");
+		AddNpc(602, 47413, "Rexipher", "f_rokas_31", -159.3123, 107.1039, -501.1689, 90, "ROKAS31_REXITHER2", "", "", 1);
+		AddNpc(604, 20041, "", "f_rokas_31", 412, 107, -971, 90, "", "", "");
 		
 		// REXITHER3
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "REXITHER3", "f_rokas_31", -1100, 280, 90, "", "ROKAS31_REXITHER3TRACK", "");
+		AddNpc(605, 20026, "REXITHER3", "f_rokas_31", -1100, 236, 280, 90, "", "ROKAS31_REXITHER3TRACK", "");
 		
 		// Varkis' Records
 		//-------------------------------------------------------------------------
-		AddNpc(47192, "Varkis' Records", "f_rokas_31", -1229, 576, 200, "ROKAS31_RECORD");
+		AddNpc(611, 47192, "Varkis' Records", "f_rokas_31", -1229, 217, 576, 200, "ROKAS31_RECORD", "", "", 1);
 		
 		// Historian Cyrenia Odell
 		//-------------------------------------------------------------------------
-		AddNpc(147345, "Historian Cyrenia Odell", "f_rokas_31", -127.13, -373.19, 0, "ROKAS31_ODEL2");
+		AddNpc(613, 147345, "Historian Cyrenia Odell", "f_rokas_31", -127.13, 107.1, -373.19, 0, "ROKAS31_ODEL2", "", "", 1);
 		
 		// Royal Mausoleum Guardian Device
 		//-------------------------------------------------------------------------
-		AddNpc(47107, "Royal Mausoleum Guardian Device", "f_rokas_31", 57.36679, -750.577, 90, "ROKAS31_REXITHER1");
+		AddNpc(617, 47107, "Royal Mausoleum Guardian Device", "f_rokas_31", 57.36679, 107.1039, -750.577, 90, "ROKAS31_REXITHER1", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_rokas_31", -765.7032, -870.5676, 0, "ROKAS31_SUB_01_BOX");
+		AddNpc(618, 147392, "Lv1 Treasure Chest", "f_rokas_31", -765.7032, 107.1039, -870.5676, 0, "ROKAS31_SUB_01_BOX", "", "", 0);
 		
 		// Powerless Security Guard
 		//-------------------------------------------------------------------------
-		AddNpc(147410, "Powerless Security Guard", "f_rokas_31", 508.9426, 84.36481, 4, "ROKAS31_SUB");
+		AddNpc(619, 147410, "Powerless Security Guard", "f_rokas_31", 508.9426, 107.1039, 84.36481, 4, "ROKAS31_SUB", "", "");
 		
 		// Statue of Goddess Zemyna
 		//-------------------------------------------------------------------------
-		AddNpc(40110, "Statue of Goddess Zemyna", "f_rokas_31", 496, -27, -10, "F_ROKAS_31_EV_55_001", "F_ROKAS_31_EV_55_001", "F_ROKAS_31_EV_55_001");
+		AddNpc(621, 40110, "Statue of Goddess Zemyna", "f_rokas_31", 496, 107, -27, -10, "F_ROKAS_31_EV_55_001", "F_ROKAS_31_EV_55_001", "F_ROKAS_31_EV_55_001");
+		AddNpc(623, 151051, " ", "f_rokas_31", -500.4034, 107.1039, -1023.292, 90, "", "", "");
+		AddNpc(624, 147361, "", "f_rokas_31", -108.192, 107.1039, -366.0789, 90, "", "", "");
+		AddNpc(625, 147362, "", "f_rokas_31", 942.2876, 107.1039, -983.4635, 90, "", "", "");
+		AddNpc(626, 147362, "", "f_rokas_31", 454.1528, 107.1039, -1415.588, 90, "", "", "");
+		AddNpc(627, 147362, "", "f_rokas_31", -1246.498, 274.0697, 699.2065, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_rokas_31", -736, -1088, 90, "TREASUREBOX_LV_F_ROKAS_31629");
+		AddNpc(629, 147392, "Lv1 Treasure Chest", "f_rokas_31", -736, 107.1, -1088, 90, "TREASUREBOX_LV_F_ROKAS_31629", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_rokas_31", -381.6117, 143.3963, 90, "", "EXPLORER_MISLE30", "");
+		AddNpc(630, 40095, " ", "f_rokas_31", -381.6117, 205.7646, 143.3963, 90, "", "EXPLORER_MISLE30", "");
 	}
 }

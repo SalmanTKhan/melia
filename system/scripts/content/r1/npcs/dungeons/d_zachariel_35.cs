@@ -14,142 +14,150 @@ public class DZachariel35NpcScript : GeneralScript
 	{
 		// Royal Mausoleum 3F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Royal Mausoleum 3F", "d_zachariel_35", 1631, -1277, 193, "", "ZACHARIEL35_1_ZACHARIEL34_1", "");
+		AddNpc(1, 40001, "Royal Mausoleum 3F", "d_zachariel_35", 1631, 93, -1277, 193, "", "ZACHARIEL35_1_ZACHARIEL34_1", "");
 		
 		// Royal Mausoleum 5F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Royal Mausoleum 5F", "d_zachariel_35", -202, 692, 34, "", "ZACHARIEL35_ZACHARIEL36", "");
+		AddNpc(4, 40001, "Royal Mausoleum 5F", "d_zachariel_35", -202, -75, 692, 34, "", "ZACHARIEL35_ZACHARIEL36", "");
 		
 		// Hidden Quest NPC Summon
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Hidden Quest NPC Summon", "d_zachariel_35", 732, 850, 90, "", "ZACHA4F_MQ_01", "");
+		AddNpc(101, 20026, "Hidden Quest NPC Summon", "d_zachariel_35", 732, -51, 850, 90, "", "ZACHA4F_MQ_01", "");
 		
 		// Royal Mausoleum Blueprint
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "Royal Mausoleum Blueprint", "d_zachariel_35", 1154, -1341, 10, "ZACHA4F_MQ");
+		AddNpc(9, 47254, "Royal Mausoleum Blueprint", "d_zachariel_35", 1154, -52, -1341, 10, "ZACHA4F_MQ", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_zachariel_35", 927, -1257, 90, "", "ZACHA4F_MQ_01", "");
+		AddNpc(10, 20026, "", "d_zachariel_35", 927, -53, -1257, 90, "", "ZACHA4F_MQ_01", "");
 		
 		// Royal Mausoleum Blueprint
 		//-------------------------------------------------------------------------
-		AddNpc(47252, "Royal Mausoleum Blueprint", "d_zachariel_35", 1161.14, -292.09, 16, "ZACHA4F_MQ_02");
+		AddNpc(11, 47252, "Royal Mausoleum Blueprint", "d_zachariel_35", 1161.14, -52.88, -292.09, 16, "ZACHA4F_MQ_02", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_zachariel_35", 436.42, 1268.35, 90, "", "ZACHA4F_MQ_03_TRACK", "");
+		AddNpc(12, 20026, "", "d_zachariel_35", 436.42, -51.14, 1268.35, 90, "", "ZACHA4F_MQ_03_TRACK", "");
 		
 		// Royal Mausoleum Blueprint
 		//-------------------------------------------------------------------------
-		AddNpc(47252, "Royal Mausoleum Blueprint", "d_zachariel_35", 109.81, -30.09, 45, "ZACHA4F_MQ_04");
+		AddNpc(13, 47252, "Royal Mausoleum Blueprint", "d_zachariel_35", 109.81, -27.09, -30.09, 45, "ZACHA4F_MQ_04", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_zachariel_35", -305, 1276, 90, "", "ZACHA4F_MQ_05_TRACK", "");
+		AddNpc(14, 20026, "", "d_zachariel_35", -305, -24, 1276, 90, "", "ZACHA4F_MQ_05_TRACK", "");
 		
 		// Royal Mausoleum Archives
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "Royal Mausoleum Archives", "d_zachariel_35", 739, -1529, 0, "ZACHA4F_SQ_01");
+		AddNpc(3000, 47254, "Royal Mausoleum Archives", "d_zachariel_35", 739, -54, -1529, 0, "ZACHA4F_SQ_01", "", "");
 		
 		// Royal Mausoleum Archives
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "Royal Mausoleum Archives", "d_zachariel_35", -1288.46, -15.26, 84, "ZACHA4F_SQ_03");
+		AddNpc(3002, 47254, "Royal Mausoleum Archives", "d_zachariel_35", -1288.46, -22.48, -15.26, 84, "ZACHA4F_SQ_03", "", "");
 		
 		// Royal Mausoleum Archives
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "Royal Mausoleum Archives", "d_zachariel_35", -859, -1088, 90, "ZACHA4F_SQ_05");
+		AddNpc(3004, 47254, "Royal Mausoleum Archives", "d_zachariel_35", -859, -52, -1088, 90, "ZACHA4F_SQ_05", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_zachariel_35", 1152, -46, 90, "", "ZACHA35_SACRIFICE", "");
+		AddNpc(601, 20026, "", "d_zachariel_35", 1152, -22, -46, 90, "", "ZACHA35_SACRIFICE", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_zachariel_35", 425, 1338, 90, "", "ZACHA35_TRICK", "");
+		AddNpc(602, 20026, "", "d_zachariel_35", 425, -46, 1338, 90, "", "ZACHA35_TRICK", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_zachariel_35", 349, -28, 90, "", "ZACHA35_LETHALBLOW", "");
+		AddNpc(603, 20026, "", "d_zachariel_35", 349, -26, -28, 90, "", "ZACHA35_LETHALBLOW", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_zachariel_35", -842, -10, 90, "", "ZACHA35_TRAP", "");
+		AddNpc(604, 20026, "", "d_zachariel_35", -842, -52, -10, 90, "", "ZACHA35_TRAP", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_zachariel_35", 150, -1517, 90, "", "ZACHA35_IDENTIFY", "");
+		AddNpc(605, 20026, "", "d_zachariel_35", 150, -26, -1517, 90, "", "ZACHA35_IDENTIFY", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_zachariel_35", 18, -1402, 90, "", "ZACHA35_DESTINY", "");
+		AddNpc(606, 20026, "", "d_zachariel_35", 18, -26, -1402, 90, "", "ZACHA35_DESTINY", "");
 		
 		// Guardian Stone Statue
 		//-------------------------------------------------------------------------
-		AddNpc(47260, "Guardian Stone Statue", "d_zachariel_35", -26, -33, 89, "ZACHA4F_GUARDIAN01");
+		AddNpc(3007, 47260, "Guardian Stone Statue", "d_zachariel_35", -26, -27, -33, 89, "ZACHA4F_GUARDIAN01", "", "");
 		
 		// Guardian Stone Statue
 		//-------------------------------------------------------------------------
-		AddNpc(47260, "Guardian Stone Statue", "d_zachariel_35", 241.46, -31.61, 93, "ZACHA4F_GUARDIAN02");
+		AddNpc(3008, 47260, "Guardian Stone Statue", "d_zachariel_35", 241.46, -27.09, -31.61, 93, "ZACHA4F_GUARDIAN02", "", "");
 		
 		// Guardian Stone Statue
 		//-------------------------------------------------------------------------
-		AddNpc(47260, "Guardian Stone Statue", "d_zachariel_35", -364.4, 1599.69, 0, "ZACHA4F_MQ05");
+		AddNpc(3014, 47260, "Guardian Stone Statue", "d_zachariel_35", -364.4, -53.87, 1599.69, 0, "ZACHA4F_MQ05", "", "");
 		
 		// Royal Mausoleum Blueprint
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "Royal Mausoleum Blueprint", "d_zachariel_35", 792.85, 1545.11, 90, "ZACHA4F_MQ_03");
+		AddNpc(3015, 47254, "Royal Mausoleum Blueprint", "d_zachariel_35", 792.85, -51.14, 1545.11, 90, "ZACHA4F_MQ_03", "", "");
 		
 		// Guardian Stone Statue
 		//-------------------------------------------------------------------------
-		AddNpc(47260, "Guardian Stone Statue", "d_zachariel_35", 1142.71, -39.5, 86, "ZACHA4F_MQ_02_HIDE");
+		AddNpc(3018, 47260, "Guardian Stone Statue", "d_zachariel_35", 1142.71, -22.78, -39.5, 86, "ZACHA4F_MQ_02_HIDE", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(47261, "", "d_zachariel_35", 530.76, 1085.03, 90, "", "ZACHA4F_MQ_03_HIDE01", "");
+		AddNpc(3019, 47261, "", "d_zachariel_35", 530.76, -83.11, 1085.03, 90, "", "ZACHA4F_MQ_03_HIDE01", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "", "d_zachariel_35", 361.03, 1086.03, 90, "", "ZACHA4F_MQ_03_HIDE02", "");
+		AddNpc(3020, 47254, "", "d_zachariel_35", 361.03, -51.13, 1086.03, 90, "", "ZACHA4F_MQ_03_HIDE02", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "", "d_zachariel_35", 529.82, 927.6, 179, "", "ZACHA4F_MQ_03_HIDE02", "");
+		AddNpc(3020, 47254, "", "d_zachariel_35", 529.82, -51.55, 927.6, 179, "", "ZACHA4F_MQ_03_HIDE02", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "", "d_zachariel_35", 530.44, 1241.87, -5, "", "ZACHA4F_MQ_03_HIDE02", "");
+		AddNpc(3020, 47254, "", "d_zachariel_35", 530.44, -51.14, 1241.87, -5, "", "ZACHA4F_MQ_03_HIDE02", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "", "d_zachariel_35", 742.17, 1087.5, 262, "", "ZACHA4F_MQ_03_HIDE02", "");
+		AddNpc(3020, 47254, "", "d_zachariel_35", 742.17, -51.13, 1087.5, 262, "", "ZACHA4F_MQ_03_HIDE02", "");
+		AddNpc(3023, 20170, "Search Skill Trigger", "d_zachariel_35", -1094.21, -52.08, -1382.68, 90, "", "", "");
+		AddNpc(3024, 147362, "Field Gen x", "d_zachariel_35", 1631.889, 78.82722, -1311.734, 90, "", "", "");
+		AddNpc(3024, 147362, "Field Gen x", "d_zachariel_35", -243.0089, -61.07127, 753.8372, 90, "", "", "");
+		AddNpc(3025, 147366, "Field Gen x", "d_zachariel_35", -168.6871, -26.82899, -1541.698, 90, "", "", "");
+		AddNpc(3025, 147366, "Field Gen x", "d_zachariel_35", 137.4436, -26.82899, -1579.052, 90, "", "", "");
+		AddNpc(3025, 147366, "Field Gen x", "d_zachariel_35", -12.30451, -53.84221, -1304.235, 90, "", "", "");
+		AddNpc(3025, 147366, "Field Gen x", "d_zachariel_35", 645.4659, -54.46268, -1579.895, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_zachariel_35", -110.82, 1350, 270, "TREASUREBOX_LV_D_ZACHARIEL_353026");
+		AddNpc(3026, 147392, "Lv1 Treasure Chest", "d_zachariel_35", -110.82, -53.77, 1350, 270, "TREASUREBOX_LV_D_ZACHARIEL_353026", "", "");
+		AddNpc(3027, 20026, " ", "d_zachariel_35", 477.9092, -54.46268, -1484.367, 90, "", "", "");
 		
 		// Mystery Cube
 		//-------------------------------------------------------------------------
-		AddNpc(152077, "Mystery Cube", "d_zachariel_35", -17.14, -1556.44, 90, "HT_ZACHA_CUBE01");
+		AddNpc(3032, 152077, "Mystery Cube", "d_zachariel_35", -17.14, -26.83, -1556.44, 90, "HT_ZACHA_CUBE01", "", "");
 		
 		// Royal Mausoleum Blueprint
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "Royal Mausoleum Blueprint", "d_zachariel_35", -190.07, -1669.56, 90, "HT_ZACHA_DESK01");
+		AddNpc(3033, 47254, "Royal Mausoleum Blueprint", "d_zachariel_35", -190.07, -26.83, -1669.56, 90, "HT_ZACHA_DESK01", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "d_zachariel_35", 701.484, 1279.807, 90, "", "EXPLORER_MISLE46", "");
+		AddNpc(3034, 40095, " ", "d_zachariel_35", 701.484, -52.87862, 1279.807, 90, "", "EXPLORER_MISLE46", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147382, "", "d_zachariel_35", 1370.784, -1440.167, 35, "ZACHA4F_MQ_01_BLACKMAN");
+		AddNpc(3035, 147382, "", "d_zachariel_35", 1370.784, -54.46268, -1440.167, 35, "ZACHA4F_MQ_01_BLACKMAN", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147382, "", "d_zachariel_35", 581.3153, 0.2468915, 26, "ZACHA4F_MQ_04_BLACKMAN");
+		AddNpc(3036, 147382, "", "d_zachariel_35", 581.3153, -53.03908, 0.2468915, 26, "ZACHA4F_MQ_04_BLACKMAN", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147382, "", "d_zachariel_35", -781.0486, 1587.999, -34, "ZACHA4F_MQ_05_BLACKMAN");
+		AddNpc(3037, 147382, "", "d_zachariel_35", -781.0486, -53.86669, 1587.999, -34, "ZACHA4F_MQ_05_BLACKMAN", "", "", 1);
 	}
 }

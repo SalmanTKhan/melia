@@ -14,90 +14,92 @@ public class DFiretower42NpcScript : GeneralScript
 	{
 		// Mage Tower 1F
 		//-------------------------------------------------------------------------
-		AddNpc(147500, "Mage Tower 1F", "d_firetower_42", 2547.029, -125.3858, 90, "", "FIRETOWER42_TO_FIRETOWER41", "");
+		AddNpc(8, 147500, "Mage Tower 1F", "d_firetower_42", 2547.029, 71.5563, -125.3858, 90, "", "FIRETOWER42_TO_FIRETOWER41", "");
 		
 		// Mage Tower 3F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Mage Tower 3F", "d_firetower_42", -933, -2391, 95, "", "FIRETOWER42_TO_FIRETOWER43", "");
+		AddNpc(9, 40001, "Mage Tower 3F", "d_firetower_42", -933, 2, -2391, 95, "", "FIRETOWER42_TO_FIRETOWER43", "");
 		
 		// Grita
 		//-------------------------------------------------------------------------
-		AddNpc(147449, "Grita", "d_firetower_42", 2458, -53, 45, "FTOWER42_GRITA_01");
+		AddNpc(100, 147449, "Grita", "d_firetower_42", 2458, 70, -53, 45, "FTOWER42_GRITA_01", "", "", 1);
 		
 		// Flame Vapor
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Flame Vapor", "d_firetower_42", 1931, -1195, 90, "", "FTOWER42_MQ_02", "");
+		AddNpc(101, 20026, "Flame Vapor", "d_firetower_42", 1931, 25, -1195, 90, "", "FTOWER42_MQ_02", "");
 		
 		// Flame Vapor
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Flame Vapor", "d_firetower_42", 2018, -1558, 90, "", "FTOWER42_MQ_02", "");
+		AddNpc(101, 20026, "Flame Vapor", "d_firetower_42", 2018, 25, -1558, 90, "", "FTOWER42_MQ_02", "");
 		
 		// Flame Vapor
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Flame Vapor", "d_firetower_42", 1711, -1458, 90, "", "FTOWER42_MQ_02", "");
+		AddNpc(101, 20026, "Flame Vapor", "d_firetower_42", 1711, 25, -1458, 90, "", "FTOWER42_MQ_02", "");
 		
 		// Flame Vapor
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Flame Vapor", "d_firetower_42", 1733, -1275, 90, "", "FTOWER42_MQ_02", "");
+		AddNpc(101, 20026, "Flame Vapor", "d_firetower_42", 1733, 25, -1275, 90, "", "FTOWER42_MQ_02", "");
 		
 		// Flame Vapor
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Flame Vapor", "d_firetower_42", 1532, -1376, 90, "", "FTOWER42_MQ_02", "");
+		AddNpc(101, 20026, "Flame Vapor", "d_firetower_42", 1532, 22, -1376, 90, "", "FTOWER42_MQ_02", "");
 		
 		// Flame Vapor
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Flame Vapor", "d_firetower_42", 1224.349, -1330.708, 90, "", "FTOWER42_MQ_02", "");
+		AddNpc(101, 20026, "Flame Vapor", "d_firetower_42", 1224.349, 75.0989, -1330.708, 90, "", "FTOWER42_MQ_02", "");
 		
 		// Flame Vapor
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Flame Vapor", "d_firetower_42", 1156.604, -1482.165, 90, "", "FTOWER42_MQ_02", "");
+		AddNpc(101, 20026, "Flame Vapor", "d_firetower_42", 1156.604, 75.0989, -1482.165, 90, "", "FTOWER42_MQ_02", "");
 		
 		// Flame Fusion Machine
 		//-------------------------------------------------------------------------
-		AddNpc(147307, "Flame Fusion Machine", "d_firetower_42", -1386, -2368, 88, "FTOWER42_MQ_05");
+		AddNpc(102, 147307, "Flame Fusion Machine", "d_firetower_42", -1386, 8, -2368, 88, "FTOWER42_MQ_05", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_firetower_42", 1928, -1115, 90, "", "FTOWER42_SQ_SUB", "");
+		AddNpc(201, 20026, "", "d_firetower_42", 1928, 28, -1115, 90, "", "FTOWER42_SQ_SUB", "");
 		
 		// Sealed Stone
 		//-------------------------------------------------------------------------
-		AddNpc(151050, "Sealed Stone", "d_firetower_42", 2024, -1564, 90, "FTOWER42_SQ_01");
+		AddNpc(202, 151050, "Sealed Stone", "d_firetower_42", 2024, 33, -1564, 90, "FTOWER42_SQ_01", "", "", 0);
 		
 		// Sealed Stone
 		//-------------------------------------------------------------------------
-		AddNpc(151050, "Sealed Stone", "d_firetower_42", 1190, -20, 90, "FTOWER42_SQ_02");
+		AddNpc(203, 151050, "Sealed Stone", "d_firetower_42", 1190, 71, -20, 90, "FTOWER42_SQ_02", "", "", 0);
 		
 		// Sealed Stone
 		//-------------------------------------------------------------------------
-		AddNpc(151050, "Sealed Stone", "d_firetower_42", 482, -569, 90, "FTOWER42_SQ_04");
+		AddNpc(204, 151050, "Sealed Stone", "d_firetower_42", 482, 73, -569, 90, "FTOWER42_SQ_04", "", "", 1);
 		
 		// Sealed Stone
 		//-------------------------------------------------------------------------
-		AddNpc(151050, "Sealed Stone", "d_firetower_42", -1033, -674, 90, "FTOWER42_SQ_05");
+		AddNpc(205, 151050, "Sealed Stone", "d_firetower_42", -1033, 2, -674, 90, "FTOWER42_SQ_05", "", "", 0);
+		AddNpc(219, 147366, "No Field Gen", "d_firetower_42", 2496.427, 71.5563, -158.5963, 90, "", "", "");
+		AddNpc(219, 147366, "No Field Gen", "d_firetower_42", -1225.114, 8.345703, -2347.021, 90, "", "", "");
 		
 		// Psychokino Tome Volume 2
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Psychokino Tome Volume 2", "d_firetower_42", 951.6255, 330.9335, 90, "JOB_2_PSYCHOKINO_5_1_BOOK_2");
+		AddNpc(222, 147311, "Psychokino Tome Volume 2", "d_firetower_42", 951.6255, 71.2507, 330.9335, 90, "JOB_2_PSYCHOKINO_5_1_BOOK_2", "", "", 1);
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_firetower_42", 2066.69, -593.81, 90, "TREASUREBOX_LV_D_FIRETOWER_42223");
+		AddNpc(223, 147392, "Lv1 Treasure Chest", "d_firetower_42", 2066.69, 20.58, -593.81, 90, "TREASUREBOX_LV_D_FIRETOWER_42223", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "d_firetower_42", 874.511, -1280.474, 90, "SAGE_JOBQ_IN_FTOWER1");
+		AddNpc(224, 20025, "", "d_firetower_42", 874.511, 75.0989, -1280.474, 90, "SAGE_JOBQ_IN_FTOWER1", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "d_firetower_42", 1044.086, -1419.79, 90, "SAGE_JOBQ_IN_FTOWER2");
+		AddNpc(225, 20025, "", "d_firetower_42", 1044.086, 75.0989, -1419.79, 90, "SAGE_JOBQ_IN_FTOWER2", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "d_firetower_42", 1069.819, -1143.149, 90, "SAGE_JOBQ_IN_FTOWER4");
+		AddNpc(226, 20025, "", "d_firetower_42", 1069.819, 75.0989, -1143.149, 90, "SAGE_JOBQ_IN_FTOWER4", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "d_firetower_42", 850.2706, -1502.643, 90, "SAGE_JOBQ_IN_FTOWER3");
+		AddNpc(227, 20025, "", "d_firetower_42", 850.2706, 75.0989, -1502.643, 90, "SAGE_JOBQ_IN_FTOWER3", "", "");
 	}
 }

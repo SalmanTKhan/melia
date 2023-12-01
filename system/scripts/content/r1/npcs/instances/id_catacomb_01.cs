@@ -14,114 +14,119 @@ public class IdCatacomb01NpcScript : GeneralScript
 	{
 		// Inner Catacombs
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Inner Catacombs", "id_catacomb_01", -250, -134, 179, "", "WS_CATACOMB01_1_CATACOMB01_2", "");
+		AddNpc(6, 40001, "Inner Catacombs", "id_catacomb_01", -250, 935, -134, 179, "", "WS_CATACOMB01_1_CATACOMB01_2", "");
 		
 		// Catacombs Outskirts
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Catacombs Outskirts", "id_catacomb_01", -260, 478, 0, "", "WS_CATACOMB01_2_CATACOMB01_1", "");
+		AddNpc(7, 40001, "Catacombs Outskirts", "id_catacomb_01", -260, 935, 478, 0, "", "WS_CATACOMB01_2_CATACOMB01_1", "");
 		
 		// Blurred Astral Body
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Blurred Astral Body", "id_catacomb_01", -229.1274, -2565.841, 90, "CATACOMB_01_SPIRIT_01");
+		AddNpc(601, 147469, "Blurred Astral Body", "id_catacomb_01", -229.1274, 935.6871, -2565.841, 90, "CATACOMB_01_SPIRIT_01", "", "");
 		
 		// Blurred Astral Body
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Blurred Astral Body", "id_catacomb_01", -142.8405, -1030.828, 90, "CATACOMB_01_SPIRIT_01");
+		AddNpc(601, 147469, "Blurred Astral Body", "id_catacomb_01", -142.8405, 936.2567, -1030.828, 90, "CATACOMB_01_SPIRIT_01", "", "");
+		AddNpc(602, 147366, "Gate Entrance x", "id_catacomb_01", -242.2459, 935.6871, -261.4104, 90, "", "", "");
 		
 		// Statue guiding the soul
 		//-------------------------------------------------------------------------
-		AddNpc(20135, "Statue guiding the soul", "id_catacomb_01", 1658.325, -621.8292, 0, "", "CATACOMB_01_SPIRIT_02", "");
+		AddNpc(603, 20135, "Statue guiding the soul", "id_catacomb_01", 1658.325, 887.5892, -621.8292, 0, "", "CATACOMB_01_SPIRIT_02", "");
+		AddNpc(604, 147363, "Gate Entrance x", "id_catacomb_01", 1658.122, 887.7968, -731.7316, 90, "", "", "");
 		
 		// Blurred Box
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Blurred Box", "id_catacomb_01", -217.5575, -1804.256, 45, "CATACOMB_01_SPIRIT_03");
+		AddNpc(605, 147392, "Blurred Box", "id_catacomb_01", -217.5575, 960.6872, -1804.256, 45, "CATACOMB_01_SPIRIT_03", "", "", 1);
 		
 		// Bleak Shadow
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Bleak Shadow", "id_catacomb_01", -535.9864, 867.0446, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(606, 20026, "Bleak Shadow", "id_catacomb_01", -535.9864, 955.0643, 867.0446, 90, "", "CATACOMB_01_EVILAURA_01", "");
 		
 		// Bleak Shadow
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Bleak Shadow", "id_catacomb_01", -470.9926, 1145.751, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(606, 20026, "Bleak Shadow", "id_catacomb_01", -470.9926, 933.4761, 1145.751, 90, "", "CATACOMB_01_EVILAURA_01", "");
 		
 		// Bleak Shadow
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Bleak Shadow", "id_catacomb_01", -525.5616, 1413.986, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(606, 20026, "Bleak Shadow", "id_catacomb_01", -525.5616, 952.1689, 1413.986, 90, "", "CATACOMB_01_EVILAURA_01", "");
 		
 		// Bleak Shadow
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Bleak Shadow", "id_catacomb_01", -235.3258, 826.0167, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(606, 20026, "Bleak Shadow", "id_catacomb_01", -235.3258, 935.6871, 826.0167, 90, "", "CATACOMB_01_EVILAURA_01", "");
 		
 		// Bleak Shadow
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Bleak Shadow", "id_catacomb_01", -225.3825, 1121.134, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(606, 20026, "Bleak Shadow", "id_catacomb_01", -225.3825, 915.6871, 1121.134, 90, "", "CATACOMB_01_EVILAURA_01", "");
 		
 		// Bleak Shadow
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Bleak Shadow", "id_catacomb_01", -216.222, 1359.507, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(606, 20026, "Bleak Shadow", "id_catacomb_01", -216.222, 935.6871, 1359.507, 90, "", "CATACOMB_01_EVILAURA_01", "");
 		
 		// Bleak Shadow
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Bleak Shadow", "id_catacomb_01", 44.46272, 866.0585, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(606, 20026, "Bleak Shadow", "id_catacomb_01", 44.46272, 916.152, 866.0585, 90, "", "CATACOMB_01_EVILAURA_01", "");
 		
 		// Bleak Shadow
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Bleak Shadow", "id_catacomb_01", 47.69323, 1128.774, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(606, 20026, "Bleak Shadow", "id_catacomb_01", 47.69323, 919.1976, 1128.774, 90, "", "CATACOMB_01_EVILAURA_01", "");
 		
 		// Bleak Shadow
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Bleak Shadow", "id_catacomb_01", 79.6908, 1415.757, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(606, 20026, "Bleak Shadow", "id_catacomb_01", 79.6908, 937.0817, 1415.757, 90, "", "CATACOMB_01_EVILAURA_01", "");
+		AddNpc(607, 154005, "", "id_catacomb_01", 428.1915, 929.8558, 2712.693, 90, "", "", "");
+		AddNpc(602, 147366, "Gate Entrance x", "id_catacomb_01", -258.7648, 935.6871, 655.3992, 90, "", "", "");
+		AddNpc(602, 147366, "Gate Entrance x", "id_catacomb_01", -243.6189, 955.6871, -3426.757, 90, "", "", "");
 		
 		// Tenet Garden
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Tenet Garden", "id_catacomb_01", -247.2492, -3548.954, 0, "", "CATACOMB_01_TO_GELE_57_4", "");
+		AddNpc(5, 40001, "Tenet Garden", "id_catacomb_01", -247.2492, 935.6871, -3548.954, 0, "", "CATACOMB_01_TO_GELE_57_4", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "id_catacomb_01", 1344.74, -1033.726, 90, "WARP_ID_CATACOMB_01", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(8, 40120, "Statue of Goddess Vakarine", "id_catacomb_01", 1344.74, 887.0438, -1033.726, 90, "WARP_ID_CATACOMB_01", "STOUP_CAMP", "STOUP_CAMP");
 		
 		// Watcher's Epitaph
 		//-------------------------------------------------------------------------
-		AddNpc(152009, "Watcher's Epitaph", "id_catacomb_01", 1611.627, -955.1895, 0, "CATACOMB_01_TOMBSTONE_01");
+		AddNpc(609, 152009, "Watcher's Epitaph", "id_catacomb_01", 1611.627, 868.5986, -955.1895, 0, "CATACOMB_01_TOMBSTONE_01", "", "");
 		
 		// Watcher's Epitaph
 		//-------------------------------------------------------------------------
-		AddNpc(152009, "Watcher's Epitaph", "id_catacomb_01", -641.7699, -615.2181, 0, "CATACOMB_01_TOMBSTONE_02");
+		AddNpc(610, 152009, "Watcher's Epitaph", "id_catacomb_01", -641.7699, 935.6871, -615.2181, 0, "CATACOMB_01_TOMBSTONE_02", "", "");
 		
 		// Watcher's Epitaph
 		//-------------------------------------------------------------------------
-		AddNpc(147463, "Watcher's Epitaph", "id_catacomb_01", 995.5764, 2860.073, 90, "CATACOMB_01_TOMBSTONE_03");
+		AddNpc(611, 147463, "Watcher's Epitaph", "id_catacomb_01", 995.5764, 915.9975, 2860.073, 90, "CATACOMB_01_TOMBSTONE_03", "", "");
 		
 		// Notice
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Notice", "id_catacomb_01", -174.0962, -2942.402, 45, "CATACOMB_01_BOARD_01");
+		AddNpc(612, 40070, "Notice", "id_catacomb_01", -174.0962, 935.6871, -2942.402, 45, "CATACOMB_01_BOARD_01", "", "");
 		
 		// Watcher's Epitaph
 		//-------------------------------------------------------------------------
-		AddNpc(147463, "Watcher's Epitaph", "id_catacomb_01", 99.65654, 1985.888, 90, "CATACOMB_01_TOMBSTONE_04");
+		AddNpc(613, 147463, "Watcher's Epitaph", "id_catacomb_01", 99.65654, 935.6872, 1985.888, 90, "CATACOMB_01_TOMBSTONE_04", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "id_catacomb_01", 180.11, -523.76, 90, "TREASUREBOX_LV_ID_CATACOMB_01700");
+		AddNpc(700, 147392, "Lv1 Treasure Chest", "id_catacomb_01", 180.11, 935.79, -523.76, 90, "TREASUREBOX_LV_ID_CATACOMB_01700", "", "");
 		
 		// Old Diary
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Old Diary", "id_catacomb_01", -571.3657, -1099.73, 28, "LOWLV_MASTER_ENCY_SQ_30_BOOK");
+		AddNpc(701, 147311, "Old Diary", "id_catacomb_01", -571.3657, 972.35, -1099.73, 28, "LOWLV_MASTER_ENCY_SQ_30_BOOK", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "id_catacomb_01", 923.4175, 3010.379, 90, "", "LOWLV_MASTER_ENCY_SQ_40", "");
+		AddNpc(702, 20026, " ", "id_catacomb_01", 923.4175, 922.28, 3010.379, 90, "", "LOWLV_MASTER_ENCY_SQ_40", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "id_catacomb_01", 240.4168, 2901.987, 90, "", "EXPLORER_MISLE9", "");
+		AddNpc(704, 40095, " ", "id_catacomb_01", 240.4168, 974.6631, 2901.987, 90, "", "EXPLORER_MISLE9", "");
 		
 		// Binding Orb
 		//-------------------------------------------------------------------------
-		AddNpc(147357, "Binding Orb", "id_catacomb_01", -61, -2364, 55, "EXORCIST_JOB_QUEST_OBJ_START");
+		AddNpc(705, 147357, "Binding Orb", "id_catacomb_01", -61, 935, -2364, 55, "EXORCIST_JOB_QUEST_OBJ_START", "", "", 1);
 		
 		// Exorcism Site
 		//-------------------------------------------------------------------------
-		AddNpc(155099, "Exorcism Site", "id_catacomb_01", -91.86, -2376.17, 90, "", "EXORCIST_PLACE_HIDE", "");
+		AddNpc(706, 155099, "Exorcism Site", "id_catacomb_01", -91.86, 935.69, -2376.17, 90, "", "EXORCIST_PLACE_HIDE", "");
 	}
 }

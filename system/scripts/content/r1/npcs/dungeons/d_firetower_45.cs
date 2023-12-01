@@ -14,70 +14,73 @@ public class DFiretower45NpcScript : GeneralScript
 	{
 		// Mage Tower 4F
 		//-------------------------------------------------------------------------
-		AddNpc(147500, "Mage Tower 4F", "d_firetower_45", -1215.601, -2087.144, 90, "", "FIRETOWER45_TO_FIRETOWER44", "");
+		AddNpc(10, 147500, "Mage Tower 4F", "d_firetower_45", -1215.601, 185.0355, -2087.144, 90, "", "FIRETOWER45_TO_FIRETOWER44", "");
 		
 		// Simon Shaw
 		//-------------------------------------------------------------------------
-		AddNpc(20139, "Simon Shaw", "d_firetower_45", -1361, -1314, 90, "FTOWER45_SQ_01");
+		AddNpc(201, 20139, "Simon Shaw", "d_firetower_45", -1361, 347, -1314, 90, "FTOWER45_SQ_01", "", "", 0);
 		
 		// Simon Shaw
 		//-------------------------------------------------------------------------
-		AddNpc(20139, "Simon Shaw", "d_firetower_45", -1239, 24, 90, "FTOWER45_SQ_03");
+		AddNpc(202, 20139, "Simon Shaw", "d_firetower_45", -1239, 610, 24, 90, "FTOWER45_SQ_03", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_firetower_45", -1430, -193, 90, "", "FTOWER45_SQ_T", "");
+		AddNpc(203, 20026, "", "d_firetower_45", -1430, 595, -193, 90, "", "FTOWER45_SQ_T", "");
 		
 		// Sealed Stone
 		//-------------------------------------------------------------------------
-		AddNpc(151050, "Sealed Stone", "d_firetower_45", 599, 1146, 90, "FTOWER45_SQ_04");
+		AddNpc(204, 151050, "Sealed Stone", "d_firetower_45", 599, 245, 1146, 90, "FTOWER45_SQ_04", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_firetower_45", 197, 1441, 90, "", "FTOWER45_SQ_05", "");
+		AddNpc(205, 20026, "", "d_firetower_45", 197, 145, 1441, 90, "", "FTOWER45_SQ_05", "");
 		
 		// Magic Suppressor
 		//-------------------------------------------------------------------------
-		AddNpc(151003, "Magic Suppressor", "d_firetower_45", -576, -1092, 0, "FTOWER45_MQ_01_D", "FTOWER45_MQ_01_E");
+		AddNpc(103, 151003, "Magic Suppressor", "d_firetower_45", -576, 282, -1092, 0, "FTOWER45_MQ_01_D", "FTOWER45_MQ_01_E", "", 0);
 		
 		// Magic Suppressor
 		//-------------------------------------------------------------------------
-		AddNpc(151003, "Magic Suppressor", "d_firetower_45", -501, -745, 45, "FTOWER45_MQ_02_D", "FTOWER45_MQ_02_E");
+		AddNpc(105, 151003, "Magic Suppressor", "d_firetower_45", -501, 467, -745, 45, "FTOWER45_MQ_02_D", "FTOWER45_MQ_02_E", "", 0);
 		
 		// Magic Suppressor
 		//-------------------------------------------------------------------------
-		AddNpc(151003, "Magic Suppressor", "d_firetower_45", -12, 26, 91, "FTOWER45_MQ_03_D", "FTOWER45_MQ_03_E");
+		AddNpc(107, 151003, "Magic Suppressor", "d_firetower_45", -12, 378, 26, 91, "FTOWER45_MQ_03_D", "FTOWER45_MQ_03_E", "", 0);
 		
 		// Magic Suppressor
 		//-------------------------------------------------------------------------
-		AddNpc(151003, "Magic Suppressor", "d_firetower_45", -223, 1036, 72, "FTOWER45_MQ_04_D", "FTOWER45_MQ_04_E");
+		AddNpc(109, 151003, "Magic Suppressor", "d_firetower_45", -223, 246, 1036, 72, "FTOWER45_MQ_04_D", "FTOWER45_MQ_04_E", "", 0);
 		
 		// FTOWER45_MQ_05_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "FTOWER45_MQ_05_TRIGGER", "d_firetower_45", 826.4413, 2333.979, 90, "", "FTOWER45_MQ_05_E", "");
+		AddNpc(110, 20026, "FTOWER45_MQ_05_TRIGGER", "d_firetower_45", 826.4413, 254.1666, 2333.979, 90, "", "FTOWER45_MQ_05_E", "");
 		
 		// Goddess Gabija
 		//-------------------------------------------------------------------------
-		AddNpc(147452, "Goddess Gabija", "d_firetower_45", 837.07, 2330.39, 0, "FTOWER45_MQ_06_D");
+		AddNpc(112, 147452, "Goddess Gabija", "d_firetower_45", 837.07, 254.17, 2330.39, 0, "FTOWER45_MQ_06_D", "", "", 1);
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "d_firetower_45", -1689.079, -643.7197, 90, "WARP_D_FIRETOWER_45", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(210, 40120, "Statue of Goddess Vakarine", "d_firetower_45", -1689.079, 420.4852, -643.7197, 90, "WARP_D_FIRETOWER_45", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(212, 147366, "No Field Gen", "d_firetower_45", -1246.584, 185.0728, -1979.472, 90, "", "", "");
+		AddNpc(213, 147363, "No Field Gen", "d_firetower_45", -1233.915, 569.9911, -32.16641, 90, "", "", "");
+		AddNpc(212, 147366, "No Field Gen", "d_firetower_45", 846.588, 254.1665, 2387.415, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151018, " ", "d_firetower_45", 840.5307, 2307.611, 90, "FTOWER45_MQ_05_D");
+		AddNpc(214, 151018, " ", "d_firetower_45", 840.5307, 254.1666, 2307.611, 90, "FTOWER45_MQ_05_D", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(151053, "", "d_firetower_45", 860.4548, 2355.368, 0, "", "FTOWER45_GRITA_PHOENIX", "");
+		AddNpc(215, 151053, "", "d_firetower_45", 860.4548, 254.1665, 2355.368, 0, "", "FTOWER45_GRITA_PHOENIX", "");
 		
 		// Psychokino Tome Volume 5
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Psychokino Tome Volume 5", "d_firetower_45", -117.4209, 1675.798, 90, "JOB_2_PSYCHOKINO_5_1_BOOK_5");
+		AddNpc(218, 147311, "Psychokino Tome Volume 5", "d_firetower_45", -117.4209, 150.2385, 1675.798, 90, "JOB_2_PSYCHOKINO_5_1_BOOK_5", "", "", 1);
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_firetower_45", -1706.06, -187.25, 90, "TREASUREBOX_LV_D_FIRETOWER_45219");
+		AddNpc(219, 147392, "Lv1 Treasure Chest", "d_firetower_45", -1706.06, 607.02, -187.25, 90, "TREASUREBOX_LV_D_FIRETOWER_45219", "", "");
 	}
 }

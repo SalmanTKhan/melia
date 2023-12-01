@@ -14,42 +14,42 @@ public class FDcapital104NpcScript : GeneralScript
 	{
 		// Rinksmas Ruins
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Rinksmas Ruins", "f_dcapital_104", 1795.006, -2063.198, 80, "", "WARP_DCAPITAL104_TO_DCAPITAL53_1", "");
+		AddNpc(4, 40001, "Rinksmas Ruins", "f_dcapital_104", 1795.006, 2.09552, -2063.198, 80, "", "WARP_DCAPITAL104_TO_DCAPITAL53_1", "");
 		
 		// Goddess Laima
 		//-------------------------------------------------------------------------
-		AddNpc(154040, "Goddess Laima", "f_dcapital_104", 624.5918, 1983.782, 13, "EP12_FINALE_RAIMA02");
+		AddNpc(6, 154040, "Goddess Laima", "f_dcapital_104", 624.5918, 159.2845, 1983.782, 13, "EP12_FINALE_RAIMA02", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "f_dcapital_104", 219, 181, 90, "", "EP12_FINALE_DIRECTION_TRIGGER", "");
+		AddNpc(7, 20042, " ", "f_dcapital_104", 219, 2, 181, 90, "", "EP12_FINALE_DIRECTION_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154067, " ", "f_dcapital_104", -612.4031, 212.3094, 90, "", "EP12_FINALE_MQ_03_OBJECT01", "EP12_FINALE_MQ_03_OBJECT01");
+		AddNpc(8, 154067, " ", "f_dcapital_104", -612.4031, 2.828635, 212.3094, 90, "", "EP12_FINALE_MQ_03_OBJECT01", "EP12_FINALE_MQ_03_OBJECT01");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154067, " ", "f_dcapital_104", -18.549, 753.7501, 90, "", "EP12_FINALE_MQ_03_OBJECT02", "EP12_FINALE_MQ_03_OBJECT02");
+		AddNpc(9, 154067, " ", "f_dcapital_104", -18.549, 51.27679, 753.7501, 90, "", "EP12_FINALE_MQ_03_OBJECT02", "EP12_FINALE_MQ_03_OBJECT02");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154067, " ", "f_dcapital_104", 1026.035, 167.5896, 90, "", "EP12_FINALE_MQ_03_OBJECT03", "EP12_FINALE_MQ_03_OBJECT03");
+		AddNpc(10, 154067, " ", "f_dcapital_104", 1026.035, 2.819529, 167.5896, 90, "", "EP12_FINALE_MQ_03_OBJECT03", "EP12_FINALE_MQ_03_OBJECT03");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154067, " ", "f_dcapital_104", 589.715, -416.876, 90, "", "EP12_FINALE_MQ_03_OBJECT04", "EP12_FINALE_MQ_03_OBJECT04");
+		AddNpc(11, 154067, " ", "f_dcapital_104", 589.715, -59.68439, -416.876, 90, "", "EP12_FINALE_MQ_03_OBJECT04", "EP12_FINALE_MQ_03_OBJECT04");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(150227, "", "f_dcapital_104", 223.04, 271.37, 0, "EP12_FINALE_RAIMA01");
+		AddNpc(12, 150227, "", "f_dcapital_104", 223.04, 2.1, 271.37, 0, "EP12_FINALE_RAIMA01", "", "", 1);
 		
 		// Sacred Atspalvis 
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Sacred Atspalvis ", "f_dcapital_104", 742.0436, 1998.778, 17, "", "WARP_DCAPITAL104_TO_F_DCAPITAL_101", "");
+		AddNpc(13, 40001, "Sacred Atspalvis ", "f_dcapital_104", 742.0436, 159.1491, 1998.778, 17, "", "WARP_DCAPITAL104_TO_F_DCAPITAL_101", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_dcapital_104", 666.7079, 2016.974, 90, "", "EXPLORER_MISLE37", "");
+		AddNpc(14, 40095, " ", "f_dcapital_104", 666.7079, 159.1491, 2016.974, 90, "", "EXPLORER_MISLE37", "");
 	}
 }

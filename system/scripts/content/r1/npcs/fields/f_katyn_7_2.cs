@@ -14,182 +14,186 @@ public class FKatyn72NpcScript : GeneralScript
 	{
 		// Weak Owl Sculpture
 		//-------------------------------------------------------------------------
-		AddNpc(48002, "Weak Owl Sculpture", "f_katyn_7_2", 1902, -3093, 0, "KATYN72_SECTOR_01");
+		AddNpc(3, 48002, "Weak Owl Sculpture", "f_katyn_7_2", 1902, 282, -3093, 0, "KATYN72_SECTOR_01", "", "");
 		
 		// Sad Owl Sculpture
 		//-------------------------------------------------------------------------
-		AddNpc(48004, "Sad Owl Sculpture", "f_katyn_7_2", 1517, -752, 0, "KATYN72_SECTOR_02");
+		AddNpc(4, 48004, "Sad Owl Sculpture", "f_katyn_7_2", 1517, 297, -752, 0, "KATYN72_SECTOR_02", "", "");
 		
 		// Shy Owl Sculpture
 		//-------------------------------------------------------------------------
-		AddNpc(48002, "Shy Owl Sculpture", "f_katyn_7_2", 1845, 658, 0, "KATYN72_SECTOR_03");
+		AddNpc(5, 48002, "Shy Owl Sculpture", "f_katyn_7_2", 1845, 295, 658, 0, "KATYN72_SECTOR_03", "", "");
 		
 		// Sad Owl Sculpture
 		//-------------------------------------------------------------------------
-		AddNpc(48002, "Sad Owl Sculpture", "f_katyn_7_2", 1794, 1971, 0, "KATYN72_SECTOR_04");
+		AddNpc(6, 48002, "Sad Owl Sculpture", "f_katyn_7_2", 1794, 298, 1971, 0, "KATYN72_SECTOR_04", "", "");
 		
 		// Goddess Statues
 		//-------------------------------------------------------------------------
-		AddNpc(41410, "Goddess Statues", "f_katyn_7_2", 639, 2021, 45, "KATYN72_BOSS");
+		AddNpc(7, 41410, "Goddess Statues", "f_katyn_7_2", 639, 441, 2021, 45, "KATYN72_BOSS", "", "", 0);
 		
 		// Entrance of Kateen Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Entrance of Kateen Forest", "f_katyn_7_2", 228, -4282, 225, "", "KATYN7_2_KATYN7", "");
+		AddNpc(15, 40001, "Entrance of Kateen Forest", "f_katyn_7_2", 228, 296, -4282, 225, "", "KATYN7_2_KATYN7", "");
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 2450, -2727, 0, "KATYN72_CORPSE");
+		AddNpc(10, 10023, "Remains of a Soldier", "f_katyn_7_2", 2450, 184, -2727, 0, "KATYN72_CORPSE", "", "", 0);
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 1728, -2797, 45, "KATYN72_CORPSE");
+		AddNpc(30, 10023, "Remains of a Soldier", "f_katyn_7_2", 1728, 329, -2797, 45, "KATYN72_CORPSE", "", "", 0);
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 1864, -2613, 90, "KATYN72_CORPSE");
+		AddNpc(31, 10023, "Remains of a Soldier", "f_katyn_7_2", 1864, 329, -2613, 90, "KATYN72_CORPSE", "", "", 0);
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 2227, -2436, 135, "KATYN72_CORPSE");
+		AddNpc(32, 10023, "Remains of a Soldier", "f_katyn_7_2", 2227, 329, -2436, 135, "KATYN72_CORPSE", "", "", 0);
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 2691, -2528, 180, "KATYN72_CORPSE");
+		AddNpc(33, 10023, "Remains of a Soldier", "f_katyn_7_2", 2691, 184, -2528, 180, "KATYN72_CORPSE", "", "", 0);
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 2827, -2899, 0, "KATYN72_CORPSE");
+		AddNpc(34, 10023, "Remains of a Soldier", "f_katyn_7_2", 2827, 184, -2899, 0, "KATYN72_CORPSE", "", "", 0);
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 2694, -3215, 45, "KATYN72_CORPSE");
+		AddNpc(35, 10023, "Remains of a Soldier", "f_katyn_7_2", 2694, 184, -3215, 45, "KATYN72_CORPSE", "", "", 0);
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 2454, -3146, 90, "KATYN72_CORPSE");
+		AddNpc(36, 10023, "Remains of a Soldier", "f_katyn_7_2", 2454, 184, -3146, 90, "KATYN72_CORPSE", "", "", 0);
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 2535, -3298, 0, "KATYN72_CORPSE");
+		AddNpc(37, 10023, "Remains of a Soldier", "f_katyn_7_2", 2535, 184, -3298, 0, "KATYN72_CORPSE", "", "", 0);
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10023, "Remains of a Soldier", "f_katyn_7_2", 2230, -3166, 0, "KATYN72_CORPSE");
+		AddNpc(38, 10023, "Remains of a Soldier", "f_katyn_7_2", 2230, 281, -3166, 0, "KATYN72_CORPSE", "", "", 0);
 		
 		// Butterfly Tomb's Thicket
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3229, -4562, 0, "KATYN72_RASSFLY");
+		AddNpc(11, 153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3229, 184, -4562, 0, "KATYN72_RASSFLY", "", "");
 		
 		// Butterfly Tomb's Thicket
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3363.79, -4412.35, 0, "KATYN72_RASSFLY");
+		AddNpc(40, 153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3363.79, 183, -4412.35, 0, "KATYN72_RASSFLY", "", "");
 		
 		// Butterfly Tomb's Thicket
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3564.48, -4689.39, 0, "KATYN72_RASSFLY");
+		AddNpc(41, 153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3564.48, 183, -4689.39, 0, "KATYN72_RASSFLY", "", "");
 		
 		// Butterfly Tomb's Thicket
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3667.34, -4398.58, 0, "KATYN72_RASSFLY");
+		AddNpc(42, 153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3667.34, 183.03, -4398.58, 0, "KATYN72_RASSFLY", "", "");
 		
 		// Butterfly Tomb's Thicket
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3774.45, -4530.77, 0, "KATYN72_RASSFLY");
+		AddNpc(43, 153054, "Butterfly Tomb's Thicket", "f_katyn_7_2", 3774.45, 183, -4530.77, 0, "KATYN72_RASSFLY", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3856, 1393, 0, "KATYN72_TIED");
+		AddNpc(12, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3856, 197, 1393, 0, "KATYN72_TIED", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3890, 1223, 0, "KATYN72_TIED");
+		AddNpc(50, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3890, 197, 1223, 0, "KATYN72_TIED", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3929, 1056, 0, "KATYN72_TIED");
+		AddNpc(51, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3929, 197, 1056, 0, "KATYN72_TIED", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3899, 867, 0, "KATYN72_TIED");
+		AddNpc(52, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3899, 197, 867, 0, "KATYN72_TIED", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3800, 674, 0, "KATYN72_TIED");
+		AddNpc(53, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3800, 197, 674, 0, "KATYN72_TIED", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3590, 791, 0, "KATYN72_TIED");
+		AddNpc(54, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3590, 197, 791, 0, "KATYN72_TIED", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3520, 894, 0, "KATYN72_TIED");
+		AddNpc(55, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3520, 268, 894, 0, "KATYN72_TIED", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3395, 725, 0, "KATYN72_TIED");
+		AddNpc(56, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3395, 294, 725, 0, "KATYN72_TIED", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 2885, 1089, 0, "KATYN72_TIED");
+		AddNpc(57, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 2885, 343, 1089, 0, "KATYN72_TIED", "", "");
 		
 		// Trapped Soul of Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3230, 1143, 0, "KATYN72_TIED");
+		AddNpc(58, 10036, "Trapped Soul of Soldier", "f_katyn_7_2", 3230, 297, 1143, 0, "KATYN72_TIED", "", "");
 		
 		// Remains of a Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(20020, "Remains of a Soldier", "f_katyn_7_2", 2520, 2356, 0, "KATYN72_GHOST");
+		AddNpc(13, 20020, "Remains of a Soldier", "f_katyn_7_2", 2520, 298, 2356, 0, "KATYN72_GHOST", "", "", 0);
+		AddNpc(14, 20020, "Remains of a Soldier", "f_katyn_7_2", 2561.12, 297.72, 2305.38, 0, "", "", "");
+		AddNpc(60, 20020, "Remains of a Soldier", "f_katyn_7_2", 2528.6, 297.72, 2437.41, 0, "", "", "");
+		AddNpc(61, 20020, "Remains of a Soldier", "f_katyn_7_2", 2584.68, 297.72, 2347.78, 0, "", "", "");
+		AddNpc(62, 20020, "Remains of a Soldier", "f_katyn_7_2", 2645.11, 297.72, 2362.62, 0, "", "", "");
 		
 		// KATYN72_SUB_03
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN72_SUB_03", "f_katyn_7_2", 3690.82, -3878.825, 0, "", "KATYN72_SUB_03", "");
+		AddNpc(22, 20026, "KATYN72_SUB_03", "f_katyn_7_2", 3690.82, 183.0396, -3878.825, 0, "", "KATYN72_SUB_03", "");
 		
 		// KATYN7_2_ADD_BOSS_01
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN7_2_ADD_BOSS_01", "f_katyn_7_2", 3868.834, -277.3138, 0, "", "KATYN7_2_ADD_BOSS_01", "");
+		AddNpc(28, 20026, "KATYN7_2_ADD_BOSS_01", "f_katyn_7_2", 3868.834, 229.6948, -277.3138, 0, "", "KATYN7_2_ADD_BOSS_01", "");
 		
 		// Epitaph
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Epitaph", "f_katyn_7_2", -390, -2288, 90, "F_KATYN_7_2_HIDDENNPC_BOARD");
+		AddNpc(10001, 20025, "Epitaph", "f_katyn_7_2", -390, 257, -2288, 90, "F_KATYN_7_2_HIDDENNPC_BOARD", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147338, "", "f_katyn_7_2", 3974, -4449, 90, "", "KATYN7_2_BLOCK", "");
+		AddNpc(29, 147338, "", "f_katyn_7_2", 3974, 182, -4449, 90, "", "KATYN7_2_BLOCK", "");
 		
 		// Grave Keeper Romas
 		//-------------------------------------------------------------------------
-		AddNpc(20150, "Grave Keeper Romas", "f_katyn_7_2", 2444.8, -243.17, 90, "KATYN_7_2_HQ01_NPC02");
+		AddNpc(10018, 20150, "Grave Keeper Romas", "f_katyn_7_2", 2444.8, 345.06, -243.17, 90, "KATYN_7_2_HQ01_NPC02", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_katyn_7_2", 2118.98, -769.72, 90, "", "KATYN_7_2_HQ01_NPC01", "");
+		AddNpc(10019, 20026, "", "f_katyn_7_2", 2118.98, 305.47, -769.72, 90, "", "KATYN_7_2_HQ01_NPC01", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_katyn_7_2", -188, -2292, 91, "WARP_F_KATYN_7_2", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(1, 40120, "Statue of Goddess Vakarine", "f_katyn_7_2", -188, 256, -2292, 91, "WARP_F_KATYN_7_2", "STOUP_CAMP", "STOUP_CAMP");
 		
 		// Poslinkis Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Poslinkis Forest", "f_katyn_7_2", 267.451, 1751.844, 250, "", "KATYN7_2_KATYN13", "");
+		AddNpc(10023, 40001, "Poslinkis Forest", "f_katyn_7_2", 267.451, 391.7956, 1751.844, 250, "", "KATYN7_2_KATYN13", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147372, " ", "f_katyn_7_2", 3580.67, -478.8708, 90, "KATYN7_2_FALL");
+		AddNpc(10024, 147372, " ", "f_katyn_7_2", 3580.67, 229.6948, -478.8708, 90, "KATYN7_2_FALL", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147460, " ", "f_katyn_7_2", 3624.386, -3687.739, 241, "KATYN72_GOLEMLET");
+		AddNpc(10025, 147460, " ", "f_katyn_7_2", 3624.386, 182.9953, -3687.739, 241, "KATYN72_GOLEMLET", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_katyn_7_2", 3758.963, -578.9888, 90, "", "KATYN_7_2_JOB_4", "");
+		AddNpc(10026, 20026, "", "f_katyn_7_2", 3758.963, 229.6948, -578.9888, 90, "", "KATYN_7_2_JOB_4", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47190, " ", "f_katyn_7_2", 545.9863, -3200.732, 102, "KATYN7_2_HIDDEN_EVENT");
+		AddNpc(10027, 47190, " ", "f_katyn_7_2", 545.9863, 296.36, -3200.732, 102, "KATYN7_2_HIDDEN_EVENT", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_katyn_7_2", 3396.75, -4706.59, 90, "TREASUREBOX_LV_F_KATYN_7_210029");
+		AddNpc(10029, 147392, "Lv1 Treasure Chest", "f_katyn_7_2", 3396.75, 183.1, -4706.59, 90, "TREASUREBOX_LV_F_KATYN_7_210029", "", "");
 	}
 }

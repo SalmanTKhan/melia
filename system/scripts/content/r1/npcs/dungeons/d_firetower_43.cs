@@ -14,90 +14,95 @@ public class DFiretower43NpcScript : GeneralScript
 	{
 		// Grita
 		//-------------------------------------------------------------------------
-		AddNpc(147449, "Grita", "d_firetower_43", -2555, -190, 30, "FTOWER43_GRITA_01");
+		AddNpc(100, 147449, "Grita", "d_firetower_43", -2555, 525, -190, 30, "FTOWER43_GRITA_01", "", "", 1);
 		
 		// Mage Tower 2F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Mage Tower 2F", "d_firetower_43", -2473, -294, 65, "", "FIRETOWER43_TO_FIRETOWER42", "");
+		AddNpc(8, 40001, "Mage Tower 2F", "d_firetower_43", -2473, 494, -294, 65, "", "FIRETOWER43_TO_FIRETOWER42", "");
 		
 		// Mage Tower 4F
 		//-------------------------------------------------------------------------
-		AddNpc(147500, "Mage Tower 4F", "d_firetower_43", 1808.94, 694.11, 90, "", "FIRETOWER43_TO_FIRETOWER44", "");
+		AddNpc(9, 147500, "Mage Tower 4F", "d_firetower_43", 1808.94, 526.84, 694.11, 90, "", "FIRETOWER43_TO_FIRETOWER44", "");
 		
 		// Sealed Stone
 		//-------------------------------------------------------------------------
-		AddNpc(151050, "Sealed Stone", "d_firetower_43", -460, -831, 90, "FTOWER43_SQ_01");
+		AddNpc(201, 151050, "Sealed Stone", "d_firetower_43", -460, 322, -831, 90, "FTOWER43_SQ_01", "", "", 0);
 		
 		// Sealed Stone
 		//-------------------------------------------------------------------------
-		AddNpc(151050, "Sealed Stone", "d_firetower_43", 1306, -910, 90, "FTOWER43_SQ_03");
+		AddNpc(202, 151050, "Sealed Stone", "d_firetower_43", 1306, 432, -910, 90, "FTOWER43_SQ_03", "", "", 0);
 		
 		// Suspicious Table
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Suspicious Table", "d_firetower_43", 1370, -225, 90, "FTOWER43_SQ_05");
+		AddNpc(203, 147469, "Suspicious Table", "d_firetower_43", 1370, 340, -225, 90, "FTOWER43_SQ_05", "", "");
 		
 		// FTOWER43_MQ_04_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "FTOWER43_MQ_04_TRIGGER", "d_firetower_43", -609.71, 48.13, -8, "", "FTOWER43_MQ_04_TRIGGER", "");
+		AddNpc(206, 20026, "FTOWER43_MQ_04_TRIGGER", "d_firetower_43", -609.71, 361.59, 48.13, -8, "", "FTOWER43_MQ_04_TRIGGER", "");
 		
 		// FTOWER43_MQ_06_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "FTOWER43_MQ_06_TRIGGER", "d_firetower_43", 1274.03, -793.38, 90, "", "FTOWER43_MQ_06_TRIGGER", "");
+		AddNpc(208, 20026, "FTOWER43_MQ_06_TRIGGER", "d_firetower_43", 1274.03, 432.74, -793.38, 90, "", "FTOWER43_MQ_06_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -1668, 866, 120, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -1668, 537, 866, 120, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -1035, -147, 130, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -1035, 359, -147, 130, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -1762, 696, 180, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -1762, 537, 696, 180, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -1524, 895, 210, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -1524, 537, 895, 210, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -1166.43, -73.99, 240, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -1166.43, 358.9, -73.99, 240, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -947, 53, 270, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -947, 359, 53, 270, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -1079.01, 449.85, 75, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -1079.01, 450.69, 449.85, 75, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -1178.22, 176.63, 55, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -1178.22, 393.9, 176.63, 55, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -1526, 398, 15, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -1526, 536, 398, 15, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147311, " ", "d_firetower_43", -1188.98, -249.92, -60, "FTOWER43_MQ_03_BOOK");
+		AddNpc(219, 147311, " ", "d_firetower_43", -1188.98, 379.21, -249.92, -60, "FTOWER43_MQ_03_BOOK", "", "");
 		
 		// Magic Control Valve
 		//-------------------------------------------------------------------------
-		AddNpc(147504, "Magic Control Valve", "d_firetower_43", -1598, 708, 45, "FTOWER43_MQ_02_VALVE");
+		AddNpc(233, 147504, "Magic Control Valve", "d_firetower_43", -1598, 554, 708, 45, "FTOWER43_MQ_02_VALVE", "", "", 0);
 		
 		// Immobile Mineloader
 		//-------------------------------------------------------------------------
-		AddNpc(147472, "Immobile Mineloader", "d_firetower_43", 669, -730, 266, "FTOWER43_MQ_05_MINENPC");
+		AddNpc(234, 147472, "Immobile Mineloader", "d_firetower_43", 669, 359, -730, 266, "FTOWER43_MQ_05_MINENPC", "", "", 0);
+		AddNpc(235, 147363, "No Field Gen", "d_firetower_43", -2497.064, 525.3366, -129.0076, 90, "", "", "");
+		AddNpc(235, 147363, "No Field Gen", "d_firetower_43", -2449.462, 487.1746, -285.9921, 90, "", "", "");
+		AddNpc(236, 147365, "No Field Gen", "d_firetower_43", 1809.887, 526.0035, 653.3783, 90, "", "", "");
+		AddNpc(236, 147365, "No Field Gen", "d_firetower_43", 669.2776, 359.3129, -728.0454, 90, "", "", "");
+		AddNpc(236, 147365, "No Field Gen", "d_firetower_43", 1418.8, 432.7419, -780.4816, 90, "", "", "");
 		
 		// Psychokino Tome Volume 3
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Psychokino Tome Volume 3", "d_firetower_43", 1420.747, -75.5172, 90, "JOB_2_PSYCHOKINO_5_1_BOOK_3");
+		AddNpc(239, 147311, "Psychokino Tome Volume 3", "d_firetower_43", 1420.747, 323.6078, -75.5172, 90, "JOB_2_PSYCHOKINO_5_1_BOOK_3", "", "", 1);
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_firetower_43", -149.72, -1281.47, 90, "TREASUREBOX_LV_D_FIRETOWER_43241");
+		AddNpc(241, 147392, "Lv1 Treasure Chest", "d_firetower_43", -149.72, 364.48, -1281.47, 90, "TREASUREBOX_LV_D_FIRETOWER_43241", "", "");
 	}
 }

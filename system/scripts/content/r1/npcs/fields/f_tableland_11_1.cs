@@ -14,326 +14,334 @@ public class FTableland111NpcScript : GeneralScript
 	{
 		// Wagon Manager
 		//-------------------------------------------------------------------------
-		AddNpc(20150, "Wagon Manager", "f_tableland_11_1", -2319.81, 2045.69, 14, "TABLELAND_11_1_CART_MANAGER");
+		AddNpc(1, 20150, "Wagon Manager", "f_tableland_11_1", -2319.81, 801.67, 2045.69, 14, "TABLELAND_11_1_CART_MANAGER", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147355, "", "f_tableland_11_1", -2327.73, 2031.34, 7, "", "TABLELAND_11_1_CART_LEVER", "");
+		AddNpc(2, 147355, "", "f_tableland_11_1", -2327.73, 801.67, 2031.34, 7, "", "TABLELAND_11_1_CART_LEVER", "");
 		
 		// Ruklys Street
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Ruklys Street", "f_tableland_11_1", 615.5692, -1536.742, 23, "", "TABLELAND11_1_FLASH61", "");
+		AddNpc(3, 40001, "Ruklys Street", "f_tableland_11_1", 615.5692, -163.6477, -1536.742, 23, "", "TABLELAND11_1_FLASH61", "");
 		
 		// Mesafasla
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Mesafasla", "f_tableland_11_1", -2260.602, 2342.318, 195, "", "TABLELAND11_1_TABLELAND28_1", "");
+		AddNpc(4, 40001, "Mesafasla", "f_tableland_11_1", -2260.602, 801.6678, 2342.318, 195, "", "TABLELAND11_1_TABLELAND28_1", "");
 		
 		// Stogas Plateau
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Stogas Plateau", "f_tableland_11_1", -1070.479, -1326.732, 270, "", "TABLELAND11_1_TABLELAND28_2", "");
+		AddNpc(5, 40001, "Stogas Plateau", "f_tableland_11_1", -1070.479, -91.57693, -1326.732, 270, "", "TABLELAND11_1_TABLELAND28_2", "");
 		
 		// Grand Yard Mesa
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Grand Yard Mesa", "f_tableland_11_1", 486.9811, 2231.2, 162, "", "TABLELAND11_1_TABLELAND71", "");
+		AddNpc(6, 40001, "Grand Yard Mesa", "f_tableland_11_1", 486.9811, 94.4277, 2231.2, 162, "", "TABLELAND11_1_TABLELAND71", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155051, " ", "f_tableland_11_1", -403.5362, -785.8446, 90, "TABLELAND_11_1_PAIR");
+		AddNpc(12, 155051, " ", "f_tableland_11_1", -403.5362, -39.64056, -785.8446, 90, "TABLELAND_11_1_PAIR", "", "");
+		AddNpc(13, 154005, " ", "f_tableland_11_1", 31.41397, 94.53653, 1121.07, 90, "", "", "");
+		AddNpc(14, 154005, " ", "f_tableland_11_1", -84.61316, 56.15952, -32.13781, 90, "", "", "");
+		AddNpc(15, 154005, " ", "f_tableland_11_1", -620.3937, -109.8061, 266.6073, 90, "", "", "");
+		AddNpc(17, 147364, "Field Gen x", "f_tableland_11_1", -1081.015, -91.57693, -1327.994, 90, "", "", "");
+		AddNpc(17, 147364, "Field Gen x", "f_tableland_11_1", 609.0823, -163.6477, -1536.444, 90, "", "", "");
 		
 		// Necromancer Adomas
 		//-------------------------------------------------------------------------
-		AddNpc(156022, "Necromancer Adomas", "f_tableland_11_1", 370.1447, -1293.309, 0, "TABLELAND_11_1_ADOMAS", "TABLELAND_11_1_SQ_01_BALLOON");
+		AddNpc(18, 156022, "Necromancer Adomas", "f_tableland_11_1", 370.1447, -163.6477, -1293.309, 0, "TABLELAND_11_1_ADOMAS", "TABLELAND_11_1_SQ_01_BALLOON", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155012, " ", "f_tableland_11_1", 392.1046, -1270.231, 90, "TABLELAND_11_1_ADOMAS_BAG");
+		AddNpc(19, 155012, " ", "f_tableland_11_1", 392.1046, -163.6477, -1270.231, 90, "TABLELAND_11_1_ADOMAS_BAG", "", "", 0);
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", 436.2278, -1049.709, 0, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", 436.2278, -163.6477, -1049.709, 0, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", 18.20385, -1392.053, 90, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", 18.20385, -163.6477, -1392.053, 90, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -146.8938, -1222.94, 45, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -146.8938, -157.6168, -1222.94, 45, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", 417.8396, -1496.782, 180, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", 417.8396, -163.6477, -1496.782, 180, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", 113.4599, -1303.349, 0, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", 113.4599, -163.6477, -1303.349, 0, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -497.8517, -1198.539, 45, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -497.8517, -91.57693, -1198.539, 45, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -728.271, -1352.606, 90, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -728.271, -91.57693, -1352.606, 90, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -871.2722, -1181.674, 135, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -871.2722, -91.57693, -1181.674, 135, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -975.9651, -961.8662, 45, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -975.9651, -91.57693, -961.8662, 45, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -662.941, -1061.12, 0, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -662.941, -91.57693, -1061.12, 0, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", 252.7992, -1455.322, 90, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", 252.7992, -163.6477, -1455.322, 90, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -498.0118, -1330.972, 90, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -498.0118, -91.57693, -1330.972, 90, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Necromancer Lemija
 		//-------------------------------------------------------------------------
-		AddNpc(156020, "Necromancer Lemija", "f_tableland_11_1", -1050.656, -426.2432, 90, "TABLELAND_11_1_LEMIJA");
+		AddNpc(21, 156020, "Necromancer Lemija", "f_tableland_11_1", -1050.656, 0.1088562, -426.2432, 90, "TABLELAND_11_1_LEMIJA", "", "", 0);
 		
 		// TABLELAND_11_1_SQ_02_TRIG
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "TABLELAND_11_1_SQ_02_TRIG", "f_tableland_11_1", 369.7539, -1296.102, 90, "", "TABLELAND_11_1_SQ_02_TRIG", "");
+		AddNpc(22, 20026, "TABLELAND_11_1_SQ_02_TRIG", "f_tableland_11_1", 369.7539, -163.6477, -1296.102, 90, "", "TABLELAND_11_1_SQ_02_TRIG", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20024, " ", "f_tableland_11_1", -195.5342, 102.3604, 90, "TABLELAND_11_1_SQ_03_LAST");
+		AddNpc(23, 20024, " ", "f_tableland_11_1", -195.5342, 56.16, 102.3604, 90, "TABLELAND_11_1_SQ_03_LAST", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20024, " ", "f_tableland_11_1", 78.96552, -265.9193, 90, "TABLELAND_11_1_SQ_03_LOCK");
+		AddNpc(24, 20024, " ", "f_tableland_11_1", 78.96552, 56.16, -265.9193, 90, "TABLELAND_11_1_SQ_03_LOCK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20024, " ", "f_tableland_11_1", 148.373, 23.16305, 90, "TABLELAND_11_1_SQ_03_FOOD");
+		AddNpc(25, 20024, " ", "f_tableland_11_1", 148.373, 56.15952, 23.16305, 90, "TABLELAND_11_1_SQ_03_FOOD", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20024, " ", "f_tableland_11_1", -331.9324, -208.2641, 90, "TABLELAND_11_1_SQ_03_LETTER");
+		AddNpc(26, 20024, " ", "f_tableland_11_1", -331.9324, 56.15952, -208.2641, 90, "TABLELAND_11_1_SQ_03_LETTER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20024, " ", "f_tableland_11_1", 20.32935, 53.67175, 90, "TABLELAND_11_1_SQ_03_BLOOD");
+		AddNpc(27, 20024, " ", "f_tableland_11_1", 20.32935, 56.15952, 53.67175, 90, "TABLELAND_11_1_SQ_03_BLOOD", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20024, " ", "f_tableland_11_1", -186.9079, 33.40807, 90, "TABLELAND_11_1_SQ_03_TRACE");
+		AddNpc(28, 20024, " ", "f_tableland_11_1", -186.9079, 56.15952, 33.40807, 90, "TABLELAND_11_1_SQ_03_TRACE", "", "", 1);
 		
 		// TABLELAND_11_1_SQ_04_TRIG
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "TABLELAND_11_1_SQ_04_TRIG", "f_tableland_11_1", 1111.649, 538.7173, 90, "", "TABLELAND_11_1_SQ_04_TRIG", "");
+		AddNpc(29, 20026, "TABLELAND_11_1_SQ_04_TRIG", "f_tableland_11_1", 1111.649, 288.6196, 538.7173, 90, "", "TABLELAND_11_1_SQ_04_TRIG", "");
 		
 		// Necromancer Lemija
 		//-------------------------------------------------------------------------
-		AddNpc(156020, "Necromancer Lemija", "f_tableland_11_1", 1133.519, 465.867, 180, "TABLELAND_11_1_LEMIJA2");
+		AddNpc(30, 156020, "Necromancer Lemija", "f_tableland_11_1", 1133.519, 288.6196, 465.867, 180, "TABLELAND_11_1_LEMIJA2", "", "", 1);
 		
 		// SETPOSTRIG
 		//-------------------------------------------------------------------------
-		AddNpc(147362, "SETPOSTRIG", "f_tableland_11_1", -186.775, 619.1801, 90, "", "TABLELAND_11_1_SETPOS", "");
+		AddNpc(31, 147362, "SETPOSTRIG", "f_tableland_11_1", -186.775, 56.15952, 619.1801, 90, "", "TABLELAND_11_1_SETPOS", "");
 		
 		// SETPOSTRIG
 		//-------------------------------------------------------------------------
-		AddNpc(147362, "SETPOSTRIG", "f_tableland_11_1", -244.9505, 473.2522, 90, "", "TABLELAND_11_1_SETPOS", "");
+		AddNpc(31, 147362, "SETPOSTRIG", "f_tableland_11_1", -244.9505, 56.15952, 473.2522, 90, "", "TABLELAND_11_1_SETPOS", "");
 		
 		// SETPOSTRIG
 		//-------------------------------------------------------------------------
-		AddNpc(147362, "SETPOSTRIG", "f_tableland_11_1", 56.09069, 685.9441, 90, "", "TABLELAND_11_1_SETPOS", "");
+		AddNpc(31, 147362, "SETPOSTRIG", "f_tableland_11_1", 56.09069, 56.15952, 685.9441, 90, "", "TABLELAND_11_1_SETPOS", "");
 		
 		// SETPOSTRIG
 		//-------------------------------------------------------------------------
-		AddNpc(147362, "SETPOSTRIG", "f_tableland_11_1", -146.0549, 624.7339, 90, "", "TABLELAND_11_1_SETPOS", "");
+		AddNpc(31, 147362, "SETPOSTRIG", "f_tableland_11_1", -146.0549, 56.15952, 624.7339, 90, "", "TABLELAND_11_1_SETPOS", "");
 		
 		// SETPOSTRIG
 		//-------------------------------------------------------------------------
-		AddNpc(147362, "SETPOSTRIG", "f_tableland_11_1", -150.9961, 435.6929, 90, "", "TABLELAND_11_1_SETPOS", "");
+		AddNpc(31, 147362, "SETPOSTRIG", "f_tableland_11_1", -150.9961, 56.15952, 435.6929, 90, "", "TABLELAND_11_1_SETPOS", "");
 		
 		// SETPOSTRIG
 		//-------------------------------------------------------------------------
-		AddNpc(147362, "SETPOSTRIG", "f_tableland_11_1", 18.88575, 596.436, 90, "", "TABLELAND_11_1_SETPOS", "");
+		AddNpc(31, 147362, "SETPOSTRIG", "f_tableland_11_1", 18.88575, 56.15952, 596.436, 90, "", "TABLELAND_11_1_SETPOS", "");
 		
 		// SETPOSTRIG
 		//-------------------------------------------------------------------------
-		AddNpc(147362, "SETPOSTRIG", "f_tableland_11_1", -78.43358, 528.1328, 90, "", "TABLELAND_11_1_SETPOS", "");
+		AddNpc(31, 147362, "SETPOSTRIG", "f_tableland_11_1", -78.43358, 56.15952, 528.1328, 90, "", "TABLELAND_11_1_SETPOS", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20049, " ", "f_tableland_11_1", -124.2456, 331.5538, -76, "", "TABLELAND_11_1_DARK_WALL", "");
+		AddNpc(32, 20049, " ", "f_tableland_11_1", -124.2456, 56.15952, 331.5538, -76, "", "TABLELAND_11_1_DARK_WALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20049, " ", "f_tableland_11_1", -155.5113, 730.3018, 93, "", "TABLELAND_11_1_DARK_WALL", "");
+		AddNpc(32, 20049, " ", "f_tableland_11_1", -155.5113, 56.13449, 730.3018, 93, "", "TABLELAND_11_1_DARK_WALL", "");
 		
 		// Necromancer Faustas
 		//-------------------------------------------------------------------------
-		AddNpc(156019, "Necromancer Faustas", "f_tableland_11_1", 24.55948, 603.8309, 180, "TABLELAND_11_1_FAUSTAS");
+		AddNpc(33, 156019, "Necromancer Faustas", "f_tableland_11_1", 24.55948, 56.15952, 603.8309, 180, "TABLELAND_11_1_FAUSTAS", "", "", 1);
 		
 		// Cryomancer Elluma
 		//-------------------------------------------------------------------------
-		AddNpc(156021, "Cryomancer Elluma", "f_tableland_11_1", 25.82831, 650.2435, -45, "", "TABLELAND_11_1_ELEMA", "");
+		AddNpc(34, 156021, "Cryomancer Elluma", "f_tableland_11_1", 25.82831, 56.15952, 650.2435, -45, "", "TABLELAND_11_1_ELEMA", "");
 		
 		// TABLELAND_11_1_KRUVINA
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "TABLELAND_11_1_KRUVINA", "f_tableland_11_1", 26.30949, 623.3994, 90, "", "TABLELAND_11_1_KRUVINA", "");
+		AddNpc(35, 20025, "TABLELAND_11_1_KRUVINA", "f_tableland_11_1", 26.30949, 56.15952, 623.3994, 90, "", "TABLELAND_11_1_KRUVINA", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47251, " ", "f_tableland_11_1", 20.59948, 681.5065, 12, "TABLELAND_11_1_RIP");
+		AddNpc(36, 47251, " ", "f_tableland_11_1", 20.59948, 56.15952, 681.5065, 12, "TABLELAND_11_1_RIP", "", "", 1);
 		
 		// Necromancer Lemija
 		//-------------------------------------------------------------------------
-		AddNpc(156020, "Necromancer Lemija", "f_tableland_11_1", -9.446407, 657.3014, 45, "TABLELAND_11_1_LEMIJA3");
+		AddNpc(37, 156020, "Necromancer Lemija", "f_tableland_11_1", -9.446407, 56.15952, 657.3014, 45, "TABLELAND_11_1_LEMIJA3", "", "", 1);
 		
 		// Necromancer Faustas
 		//-------------------------------------------------------------------------
-		AddNpc(156019, "Necromancer Faustas", "f_tableland_11_1", 24.54312, 603.8735, 180, "", "TABLELAND_11_1_FAUSTAS_DOWN", "");
+		AddNpc(38, 156019, "Necromancer Faustas", "f_tableland_11_1", 24.54312, 56.15952, 603.8735, 180, "", "TABLELAND_11_1_FAUSTAS_DOWN", "");
 		
 		// TABLELAND_11_1_SQ_07_BACK
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "TABLELAND_11_1_SQ_07_BACK", "f_tableland_11_1", -165.6652, 765.1752, 93, "", "TABLELAND_11_1_SQ_07_BACK", "");
+		AddNpc(39, 20026, "TABLELAND_11_1_SQ_07_BACK", "f_tableland_11_1", -165.6652, 58.26156, 765.1752, 93, "", "TABLELAND_11_1_SQ_07_BACK", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156041, " ", "f_tableland_11_1", 24.17042, 603.8372, 90, "", "TABLELAND_11_1_DARK_EFF", "");
+		AddNpc(40, 156041, " ", "f_tableland_11_1", 24.17042, 56.15952, 603.8372, 90, "", "TABLELAND_11_1_DARK_EFF", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156041, " ", "f_tableland_11_1", 25.30449, 653.4459, 90, "", "TABLELAND_11_1_DARK_EFF", "");
+		AddNpc(40, 156041, " ", "f_tableland_11_1", 25.30449, 56.15952, 653.4459, 90, "", "TABLELAND_11_1_DARK_EFF", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20049, " ", "f_tableland_11_1", -165.5569, 765.8634, 93, "", "TABLELAND_11_1_DARK_WALL", "");
+		AddNpc(32, 20049, " ", "f_tableland_11_1", -165.5569, 58.35658, 765.8634, 93, "", "TABLELAND_11_1_DARK_WALL", "");
 		
 		// Necromancer Faustas
 		//-------------------------------------------------------------------------
-		AddNpc(156019, "Necromancer Faustas", "f_tableland_11_1", 33.17475, 639.3948, -45, "", "TABLELAND_11_1_FAUSTAS_DOWN2", "");
+		AddNpc(41, 156019, "Necromancer Faustas", "f_tableland_11_1", 33.17475, 56.15952, 639.3948, -45, "", "TABLELAND_11_1_FAUSTAS_DOWN2", "");
 		
 		// TABLELAND_11_1_SQ_07_WRONG
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "TABLELAND_11_1_SQ_07_WRONG", "f_tableland_11_1", 644.8788, 695.2903, 90, "", "TABLELAND_11_1_SQ_07_WRONG", "");
+		AddNpc(42, 20026, "TABLELAND_11_1_SQ_07_WRONG", "f_tableland_11_1", 644.8788, 288.6196, 695.2903, 90, "", "TABLELAND_11_1_SQ_07_WRONG", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -612.789, -199.8535, -24, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -612.789, 0.1088562, -199.8535, -24, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -523.9648, -486.6741, -61, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -523.9648, 0.1088562, -486.6741, -61, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -984.3355, -552.4557, 85, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -984.3355, 0.1088562, -552.4557, 85, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -617.7529, -560.1357, 116, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -617.7529, 0.1088562, -560.1357, 116, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -943.0579, -147.7905, 36, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -943.0579, 0.1088562, -147.7905, 36, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -763.6595, -183.2559, -14, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -763.6595, 0.1088562, -183.2559, -14, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -520.6324, -381.273, 248, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -520.6324, 0.1088562, -381.273, 248, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Frozen Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10020, "Frozen Soldier", "f_tableland_11_1", -997.4799, -233.9793, -11, "", "TABLELAND_11_1_FROST_GUARD", "");
+		AddNpc(20, 10020, "Frozen Soldier", "f_tableland_11_1", -997.4799, 0.1088562, -233.9793, -11, "", "TABLELAND_11_1_FROST_GUARD", "");
 		
 		// Necromancer Lemija
 		//-------------------------------------------------------------------------
-		AddNpc(156020, "Necromancer Lemija", "f_tableland_11_1", -118.2973, 317.3904, 180, "TABLELAND_11_1_SQ_07_ENDNPC");
+		AddNpc(43, 156020, "Necromancer Lemija", "f_tableland_11_1", -118.2973, 56.15952, 317.3904, 180, "TABLELAND_11_1_SQ_07_ENDNPC", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -247.3446, -794.5319, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -247.3446, -39.64056, -794.5319, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -586.311, -1258.334, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -586.311, -91.57693, -1258.334, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -858.5264, -927.6667, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -858.5264, -91.57693, -927.6667, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -982.7803, -320.1963, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -982.7803, 0.1088562, -320.1963, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -642.802, -269.6208, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -642.802, 0.1088562, -269.6208, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -835.1112, 371.8222, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -835.1112, -109.8061, 371.8222, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -207.0311, -59.38432, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -207.0311, 56.15952, -59.38432, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", 162.0519, -207.6171, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", 162.0519, 56.15952, -207.6171, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -33.37708, 579.4868, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -33.37708, 56.15952, 579.4868, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -168.5013, 1118.924, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -168.5013, 94.53653, 1118.924, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", 76.40571, 1296.124, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", 76.40571, 94.53653, 1296.124, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", -94.32203, 1943.492, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", -94.32203, 94.42767, 1943.492, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", 229.196, 2039.284, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", 229.196, 94.42767, 2039.284, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", 720.722, 626.8047, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", 720.722, 288.6196, 626.8047, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", 809.8906, 185.2116, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", 809.8906, 181.8805, 185.2116, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_11_1", 284.868, -70.87039, 90, "JOB_DRAGOON_8_1_KEY");
+		AddNpc(44, 20026, " ", "f_tableland_11_1", 284.868, 56.15952, -70.87039, 90, "JOB_DRAGOON_8_1_KEY", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_tableland_11_1", -680.03, 584.73, -45, "TREASUREBOX_LV_F_TABLELAND_11_11000");
+		AddNpc(1000, 147392, "Lv1 Treasure Chest", "f_tableland_11_1", -680.03, -109.71, 584.73, -45, "TREASUREBOX_LV_F_TABLELAND_11_11000", "", "");
 		
 		// [Austeja's Servant]{nl}Kupole Kaze
 		//-------------------------------------------------------------------------
-		AddNpc(154113, "[Austeja's Servant]{nl}Kupole Kaze", "f_tableland_11_1", -926.7845, 498.3503, 2, "RVR_BK_KAZE_NPC_1", "RVR_BK_KAZE_NPC_1");
+		AddNpc(5002, 154113, "[Austeja's Servant]{nl}Kupole Kaze", "f_tableland_11_1", -926.7845, -109.8061, 498.3503, 2, "RVR_BK_KAZE_NPC_1", "RVR_BK_KAZE_NPC_1", "");
+		AddNpc(5003, 147366, "Field Gen x", "f_tableland_11_1", -851.1127, -109.8061, 342.8993, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154046, " ", "f_tableland_11_1", -860.4761, 495.3255, 90, "BORUTOSKAPAS_GO_GUILDMISSION", "BORUTOSKAPAS_GO_GUILDMISSION");
+		AddNpc(5004, 154046, " ", "f_tableland_11_1", -860.4761, -109.8061, 495.3255, 90, "BORUTOSKAPAS_GO_GUILDMISSION", "BORUTOSKAPAS_GO_GUILDMISSION", "", 1);
+		AddNpc(5005, 160034, "Wagon Manager", "f_tableland_11_1", -2319.876, 801.6678, 2045.052, 90, "", "", "");
+		AddNpc(5006, 160034, "Wagon Arriving Point", "f_tableland_11_1", -365.2455, 157.5448, 1909.598, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_tableland_11_1", -481.8885, 1909.858, 90, "", "EXPLORER_MISLE33", "");
+		AddNpc(5007, 40095, " ", "f_tableland_11_1", -481.8885, 269.2175, 1909.858, 90, "", "EXPLORER_MISLE33", "");
 	}
 }

@@ -14,6 +14,7 @@ public class DCathedral781NpcScript : GeneralScript
 	{
 		// Stogas Plateau
 		//-------------------------------------------------------------------------
-		AddNpc(147507, "Stogas Plateau", "d_cathedral_78_1", 1359, 264, 90, "CATHEDRAL_78_1_TO_TABLELAND_28_2");
+		AddNpc(1, 147507, "Stogas Plateau", "d_cathedral_78_1", 1359, 145, 264, 90, "CATHEDRAL_78_1_TO_TABLELAND_28_2", "", "");
+		AddNpc(17, 147365, "CantGen", "d_cathedral_78_1", 1399.483, 144.2495, 225.5164, 90, "", "", "");
 	}
 }

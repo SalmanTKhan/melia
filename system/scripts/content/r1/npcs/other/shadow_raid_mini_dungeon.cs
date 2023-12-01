@@ -14,14 +14,14 @@ public class ShadowRaidMiniDungeonNpcScript : GeneralScript
 	{
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(151041, "", "shadow_raid_mini_dungeon", -138, 189, 45, "CASTLE102_AUSTEJA_02");
+		AddNpc(2, 151041, "", "shadow_raid_mini_dungeon", -138, 2, 189, 45, "CASTLE102_AUSTEJA_02", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(154086, "", "shadow_raid_mini_dungeon", -99, 189, 0, "CASTLE102_MQ_06_VIVORA");
+		AddNpc(3, 154086, "", "shadow_raid_mini_dungeon", -99, 2, 189, 0, "CASTLE102_MQ_06_VIVORA", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154066, " ", "shadow_raid_mini_dungeon", -218, 188, 90, "ANOTHER_SPACE_PORTAL");
+		AddNpc(1, 154066, " ", "shadow_raid_mini_dungeon", -218, 2, 188, 90, "ANOTHER_SPACE_PORTAL", "", "", 0);
 	}
 }

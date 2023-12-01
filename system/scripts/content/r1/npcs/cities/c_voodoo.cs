@@ -14,6 +14,6 @@ public class CVoodooNpcScript : GeneralScript
 	{
 		// [Bokor Master]{nl}Mama Marie Lavoie
 		//-------------------------------------------------------------------------
-		AddNpc(20136, "[Bokor Master]{nl}Mama Marie Lavoie", "c_voodoo", -22, 32, 360, "MASTER_BOCORS");
+		AddNpc(1, 20136, "[Bokor Master]{nl}Mama Marie Lavoie", "c_voodoo", -22, 0, 32, 360, "MASTER_BOCORS", "", "");
 	}
 }

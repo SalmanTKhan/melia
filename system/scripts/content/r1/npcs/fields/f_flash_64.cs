@@ -14,274 +14,283 @@ public class FFlash64NpcScript : GeneralScript
 	{
 		// Downtown
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Downtown", "f_flash_64", 12, -2596, -9, "", "FLASH64_FLASH63", "");
+		AddNpc(1, 40001, "Downtown", "f_flash_64", 12, 825, -2596, -9, "", "FLASH64_FLASH63", "");
 		
 		// Statue of Goddess Zemyna
 		//-------------------------------------------------------------------------
-		AddNpc(40110, "Statue of Goddess Zemyna", "f_flash_64", -570.1172, 1373.78, 105, "F_FLASH_64_EV_55_001", "F_FLASH_64_EV_55_001", "F_FLASH_64_EV_55_001");
+		AddNpc(7, 40110, "Statue of Goddess Zemyna", "f_flash_64", -570.1172, 885.3875, 1373.78, 105, "F_FLASH_64_EV_55_001", "F_FLASH_64_EV_55_001", "F_FLASH_64_EV_55_001");
 		
 		//   [Knights of Kaliss]{nl}Wilhelmina Carriot
 		//-------------------------------------------------------------------------
-		AddNpc(20106, "  [Knights of Kaliss]{nl}Wilhelmina Carriot", "f_flash_64", -365.7742, -1319.784, 17, "FLASH64_KARRIAT");
+		AddNpc(8, 20106, "  [Knights of Kaliss]{nl}Wilhelmina Carriot", "f_flash_64", -365.7742, 745.6932, -1319.784, 17, "FLASH64_KARRIAT", "", "");
 		
 		// [Cannoneer Master]{nl}Eda Saker Bazaras
 		//-------------------------------------------------------------------------
-		AddNpc(151071, "[Cannoneer Master]{nl}Eda Saker Bazaras", "f_flash_64", -399.1505, -1350.009, 104, "CANNONEER_MASTER");
+		AddNpc(34, 151071, "[Cannoneer Master]{nl}Eda Saker Bazaras", "f_flash_64", -399.1505, 745.6932, -1350.009, 104, "CANNONEER_MASTER", "", "");
 		
 		// [Musketeer Master]{nl}Alloden Marzarine
 		//-------------------------------------------------------------------------
-		AddNpc(151072, "[Musketeer Master]{nl}Alloden Marzarine", "f_flash_64", -314.8599, -1315.044, -18, "MUSKETEER_MASTER");
+		AddNpc(35, 151072, "[Musketeer Master]{nl}Alloden Marzarine", "f_flash_64", -314.8599, 745.6932, -1315.044, -18, "MUSKETEER_MASTER", "", "");
 		
 		// [Knights of Kaliss]{nl}Bokor Edita
 		//-------------------------------------------------------------------------
-		AddNpc(154019, "[Knights of Kaliss]{nl}Bokor Edita", "f_flash_64", -443.7715, 357.7411, 90, "FLASH64_EDITA");
+		AddNpc(10, 154019, "[Knights of Kaliss]{nl}Bokor Edita", "f_flash_64", -443.7715, 533.0458, 357.7411, 90, "FLASH64_EDITA", "", "");
 		
 		// [Knights of Kaliss]{nl}Alchemist Saliamonas
 		//-------------------------------------------------------------------------
-		AddNpc(154022, "[Knights of Kaliss]{nl}Alchemist Saliamonas", "f_flash_64", 29.38471, 357.1641, 90, "FLASH64_SALIAMONS");
+		AddNpc(11, 154022, "[Knights of Kaliss]{nl}Alchemist Saliamonas", "f_flash_64", 29.38471, 533.0458, 357.1641, 90, "FLASH64_SALIAMONS", "", "");
 		
 		// [Amanda Grave Robbers]{nl}Amanda
 		//-------------------------------------------------------------------------
-		AddNpc(153040, "[Amanda Grave Robbers]{nl}Amanda", "f_flash_64", -586.4934, 1560.286, 90, "FLASH64_AMANDA");
+		AddNpc(12, 153040, "[Amanda Grave Robbers]{nl}Amanda", "f_flash_64", -586.4934, 885.3876, 1560.286, 90, "FLASH64_AMANDA", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -1488.264, -134.8591, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(14, 154023, "Petrified Soldier", "f_flash_64", -1488.264, 578.3446, -134.8591, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -1339.244, -230.7649, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(14, 154023, "Petrified Soldier", "f_flash_64", -1339.244, 571.8387, -230.7649, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -1293.892, 92.75174, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(14, 154023, "Petrified Soldier", "f_flash_64", -1293.892, 578.3446, 92.75174, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -918.6711, -600.0803, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(14, 154023, "Petrified Soldier", "f_flash_64", -918.6711, 536.8473, -600.0803, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -942.6066, -295.9899, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(14, 154023, "Petrified Soldier", "f_flash_64", -942.6066, 564.7603, -295.9899, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -986.5865, 185.8792, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(14, 154023, "Petrified Soldier", "f_flash_64", -986.5865, 564.1514, 185.8792, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -1222.976, 332.83, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(14, 154023, "Petrified Soldier", "f_flash_64", -1222.976, 564.1956, 332.83, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -879.6102, 721.2842, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(14, 154023, "Petrified Soldier", "f_flash_64", -879.6102, 587.2318, 721.2842, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154024, "Petrified Grave Robber", "f_flash_64", -1495.083, -19.44955, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(15, 154024, "Petrified Grave Robber", "f_flash_64", -1495.083, 578.3446, -19.44955, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154024, "Petrified Grave Robber", "f_flash_64", -1179.681, -515.9983, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(15, 154024, "Petrified Grave Robber", "f_flash_64", -1179.681, 536.8472, -515.9983, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154024, "Petrified Grave Robber", "f_flash_64", -1235.594, 538.9385, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(15, 154024, "Petrified Grave Robber", "f_flash_64", -1235.594, 587.2318, 538.9385, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154024, "Petrified Grave Robber", "f_flash_64", -909.5046, 533.6248, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(15, 154024, "Petrified Grave Robber", "f_flash_64", -909.5046, 587.2318, 533.6248, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", 124.0561, -517.7546, -69, "FLASH64_SQ_03_NPC");
+		AddNpc(16, 154023, "Petrified Soldier", "f_flash_64", 124.0561, 688.4476, -517.7546, -69, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -229.9733, -519.9115, 90, "FLASH64_SQ_03_NPC");
+		AddNpc(16, 154023, "Petrified Soldier", "f_flash_64", -229.9733, 688.4476, -519.9115, 90, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -347.2222, -440.5534, 34, "FLASH64_SQ_03_NPC");
+		AddNpc(16, 154023, "Petrified Soldier", "f_flash_64", -347.2222, 688.4476, -440.5534, 34, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_64", -187.2584, -349.2137, 90, "FLASH64_SQ_03_NPC");
+		AddNpc(16, 154023, "Petrified Soldier", "f_flash_64", -187.2584, 688.4476, -349.2137, 90, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_flash_64", -1181.162, -354.1563, 90, "FLASH64_SQ_07_NPC");
+		AddNpc(17, 46011, "Bonfire", "f_flash_64", -1181.162, 564.7603, -354.1563, 90, "FLASH64_SQ_07_NPC", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_flash_64", -1246.267, 238.4076, 90, "FLASH64_SQ_07_NPC");
+		AddNpc(17, 46011, "Bonfire", "f_flash_64", -1246.267, 564.3389, 238.4076, 90, "FLASH64_SQ_07_NPC", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_flash_64", -1071.968, 657.2013, 90, "FLASH64_SQ_07_NPC");
+		AddNpc(17, 46011, "Bonfire", "f_flash_64", -1071.968, 587.2318, 657.2013, 90, "FLASH64_SQ_07_NPC", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_flash_64", -685.6849, 753.5668, 90, "FLASH64_SQ_07_NPC");
+		AddNpc(17, 46011, "Bonfire", "f_flash_64", -685.6849, 587.2318, 753.5668, 90, "FLASH64_SQ_07_NPC", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_flash_64", -1437.441, -450.3657, 90, "FLASH64_SQ_07_NPC");
+		AddNpc(17, 46011, "Bonfire", "f_flash_64", -1437.441, 512.7866, -450.3657, 90, "FLASH64_SQ_07_NPC", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", 4.748472, 1444.939, 214, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", 4.748472, 843.062, 1444.939, 214, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", 132.4586, 1595.133, 208, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", 132.4586, 843.062, 1595.133, 208, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", 125.2428, 1734.518, 52, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", 125.2428, 843.062, 1734.518, 52, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", -13.22925, 2047.852, 90, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", -13.22925, 843.062, 2047.852, 90, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", -244.2213, 1972.203, 203, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", -244.2213, 843.062, 1972.203, 203, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", -53.39711, 1892.053, -70, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", -53.39711, 843.062, 1892.053, -70, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", -297.5761, 1718.127, 21, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", -297.5761, 843.062, 1718.127, 21, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", -369.8693, 1782.008, 90, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", -369.8693, 843.062, 1782.008, 90, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", -207.4007, 1419.504, -60, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", -207.4007, 843.062, 1419.504, -60, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", -90.39127, 1404.168, 24, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", -90.39127, 843.062, 1404.168, 24, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147464, " ", "f_flash_64", -36.56491, 1648.127, 90, "FLASH64_MQ_01_NPC");
+		AddNpc(19, 147464, " ", "f_flash_64", -36.56491, 843.062, 1648.127, 90, "FLASH64_MQ_01_NPC", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(153094, "", "f_flash_64", -141.64, 2026.56, 20, "FLASH64_MQ_03_NPC");
+		AddNpc(20, 153094, "", "f_flash_64", -141.64, 843.06, 2026.56, 20, "FLASH64_MQ_03_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154026, "Petrified Soldier", "f_flash_64", -318.0145, -656.5358, 147, "FLASH64_SQ_03_NPC");
+		AddNpc(23, 154026, "Petrified Soldier", "f_flash_64", -318.0145, 688.4476, -656.5358, 147, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154029, "Petrified Soldier", "f_flash_64", -131.2334, -522.3377, 260, "FLASH64_SQ_03_NPC");
+		AddNpc(24, 154029, "Petrified Soldier", "f_flash_64", -131.2334, 688.4476, -522.3377, 260, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154026, "Petrified Soldier", "f_flash_64", 12.97611, -386.8947, 90, "FLASH64_SQ_03_NPC");
+		AddNpc(23, 154026, "Petrified Soldier", "f_flash_64", 12.97611, 688.4476, -386.8947, 90, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154026, "Petrified Soldier", "f_flash_64", -194.3963, -220.8631, 186, "FLASH64_SQ_03_NPC");
+		AddNpc(23, 154026, "Petrified Soldier", "f_flash_64", -194.3963, 688.4476, -220.8631, 186, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154029, "Petrified Soldier", "f_flash_64", -488.5532, -603.2667, 71, "FLASH64_SQ_03_NPC");
+		AddNpc(24, 154029, "Petrified Soldier", "f_flash_64", -488.5532, 688.4476, -603.2667, 71, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154029, "Petrified Soldier", "f_flash_64", -90.78517, -738.1331, 148, "FLASH64_SQ_03_NPC");
+		AddNpc(24, 154029, "Petrified Soldier", "f_flash_64", -90.78517, 688.4476, -738.1331, 148, "FLASH64_SQ_03_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154030, "Petrified Grave Robber", "f_flash_64", -1137.299, -106.3741, 260, "FLASH64_SQ_06_NPC");
+		AddNpc(25, 154030, "Petrified Grave Robber", "f_flash_64", -1137.299, 564.7603, -106.3741, 260, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154030, "Petrified Grave Robber", "f_flash_64", -1283.516, 237.2169, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(25, 154030, "Petrified Grave Robber", "f_flash_64", -1283.516, 564.3587, 237.2169, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154030, "Petrified Grave Robber", "f_flash_64", -706.1798, 760.4736, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(25, 154030, "Petrified Grave Robber", "f_flash_64", -706.1798, 587.2318, 760.4736, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154030, "Petrified Grave Robber", "f_flash_64", -1179.379, 642.0057, 15, "FLASH64_SQ_06_NPC");
+		AddNpc(25, 154030, "Petrified Grave Robber", "f_flash_64", -1179.379, 587.2318, 642.0057, 15, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154030, "Petrified Grave Robber", "f_flash_64", -1528.928, -517.265, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(25, 154030, "Petrified Grave Robber", "f_flash_64", -1528.928, 512.7897, -517.265, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154031, "Petrified Grave Robber", "f_flash_64", -1397.137, -292.6479, -62, "FLASH64_SQ_06_NPC");
+		AddNpc(26, 154031, "Petrified Grave Robber", "f_flash_64", -1397.137, 512.785, -292.6479, -62, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154031, "Petrified Grave Robber", "f_flash_64", -1027.725, -156.9993, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(26, 154031, "Petrified Grave Robber", "f_flash_64", -1027.725, 564.7603, -156.9993, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154031, "Petrified Grave Robber", "f_flash_64", -871.2647, 396.0716, 90, "FLASH64_SQ_06_NPC");
+		AddNpc(26, 154031, "Petrified Grave Robber", "f_flash_64", -871.2647, 533.0458, 396.0716, 90, "FLASH64_SQ_06_NPC", "", "", 0);
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_flash_64", -142.5398, -1353.881, 0, "WARP_F_FLASH_64", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(27, 40120, "Statue of Goddess Vakarine", "f_flash_64", -142.5398, 745.6932, -1353.881, 0, "WARP_F_FLASH_64", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(28, 147364, "Gate Entrance x", "f_flash_64", -239.636, 745.6932, -1320.013, 90, "", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_flash_64", -1371.177, 15.94517, 90, "FLASH64_SQ_07_NPC");
+		AddNpc(17, 46011, "Bonfire", "f_flash_64", -1371.177, 578.3446, 15.94517, 90, "FLASH64_SQ_07_NPC", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_flash_64", -959.5665, -224.9392, 90, "FLASH64_SQ_07_NPC");
+		AddNpc(17, 46011, "Bonfire", "f_flash_64", -959.5665, 564.7603, -224.9392, 90, "FLASH64_SQ_07_NPC", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_flash_64", -1043.663, 97.78067, 90, "FLASH64_SQ_07_NPC");
+		AddNpc(17, 46011, "Bonfire", "f_flash_64", -1043.663, 564.1897, 97.78067, 90, "FLASH64_SQ_07_NPC", "", "");
 		
 		// Bonfire
 		//-------------------------------------------------------------------------
-		AddNpc(46011, "Bonfire", "f_flash_64", -973.699, 513.249, 90, "FLASH64_SQ_07_NPC");
+		AddNpc(17, 46011, "Bonfire", "f_flash_64", -973.699, 587.2318, 513.249, 90, "FLASH64_SQ_07_NPC", "", "");
+		AddNpc(28, 147364, "Gate Entrance x", "f_flash_64", 8.079102, 826.0768, -2614.855, 90, "", "", "");
+		AddNpc(28, 147364, "Gate Entrance x", "f_flash_64", -427.0028, 533.0458, 342.8807, 90, "", "", "");
+		AddNpc(28, 147364, "Gate Entrance x", "f_flash_64", -20.09676, 533.0458, 308.2035, 90, "", "", "");
+		AddNpc(28, 147364, "Gate Entrance x", "f_flash_64", -527.0529, 885.3876, 1488.763, 90, "", "", "");
+		AddNpc(28, 147364, "Gate Entrance x", "f_flash_64", -9.010883, 843.062, 2352.276, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_flash_64", -400.5628, 710.5477, 266, "UNDER_67_SQ030_NPC");
+		AddNpc(30, 40095, " ", "f_flash_64", -400.5628, 603.4484, 710.5477, 266, "UNDER_67_SQ030_NPC", "", "");
 		
 		// Sentry Bailey
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Sentry Bailey", "f_flash_64", -2.366955, 2338.651, 146, "", "FLASH64_UNDERFORTRESS65", "");
+		AddNpc(31, 40001, "Sentry Bailey", "f_flash_64", -2.366955, 843.062, 2338.651, 146, "", "FLASH64_UNDERFORTRESS65", "");
 		
 		// Ibre Plateau
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Ibre Plateau", "f_flash_64", -374.3372, 2044.522, 198, "", "FLASH64_TABLELAND70", "");
+		AddNpc(33, 40001, "Ibre Plateau", "f_flash_64", -374.3372, 843.062, 2044.522, 198, "", "FLASH64_TABLELAND70", "");
 		
 		// Dingofasil District
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Dingofasil District", "f_flash_64", -1643.801, -424.0448, 270, "", "FLASH_64_TO_FLASH_58", "");
+		AddNpc(32, 40001, "Dingofasil District", "f_flash_64", -1643.801, 512.7926, -424.0448, 270, "", "FLASH_64_TO_FLASH_58", "");
+		AddNpc(28, 147364, "Gate Entrance x", "f_flash_64", -1643.954, 512.7927, -432.8732, 90, "", "", "");
+		AddNpc(28, 147364, "Gate Entrance x", "f_flash_64", -374.0178, 843.062, 2066.765, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_flash_64", -560.66, 526.11, 135, "TREASUREBOX_LV_F_FLASH_641000");
+		AddNpc(1000, 147392, "Lv1 Treasure Chest", "f_flash_64", -560.66, 673.74, 526.11, 135, "TREASUREBOX_LV_F_FLASH_641000", "", "");
 		
 		// [Murmillo Master]{nl}Phelixia
 		//-------------------------------------------------------------------------
-		AddNpc(157020, "[Murmillo Master]{nl}Phelixia", "f_flash_64", -200.1264, -1328.526, 7, "MURMILO_MASTER");
+		AddNpc(1002, 157020, "[Murmillo Master]{nl}Phelixia", "f_flash_64", -200.1264, 745.6932, -1328.526, 7, "MURMILO_MASTER", "", "");
 		
 		// [Lancer Master]{nl} Noer Parecius
 		//-------------------------------------------------------------------------
-		AddNpc(157021, "[Lancer Master]{nl} Noer Parecius", "f_flash_64", -60.3292, -1343.237, 6, "LANCER_MASTER");
+		AddNpc(1003, 157021, "[Lancer Master]{nl} Noer Parecius", "f_flash_64", -60.3292, 745.6932, -1343.237, 6, "LANCER_MASTER", "", "");
 		
 		//  [Zealot Master]{nl}Aliza Tal
 		//-------------------------------------------------------------------------
-		AddNpc(153196, " [Zealot Master]{nl}Aliza Tal", "f_flash_64", -405.8108, -1400.074, 90, "ZEALOT_MASTER");
+		AddNpc(1004, 153196, " [Zealot Master]{nl}Aliza Tal", "f_flash_64", -405.8108, 745.6932, -1400.074, 90, "ZEALOT_MASTER", "", "", 1);
+		AddNpc(1005, 20025, " ", "f_flash_64", -33.45537, 843.062, 2264.941, 90, "", "", "");
 	}
 }

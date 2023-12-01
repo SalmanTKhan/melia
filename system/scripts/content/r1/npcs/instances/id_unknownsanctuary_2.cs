@@ -14,6 +14,6 @@ public class IdUnknownsanctuary2NpcScript : GeneralScript
 	{
 		// Unknown Sanctuary Gate
 		//-------------------------------------------------------------------------
-		AddNpc(155174, "Unknown Sanctuary Gate", "id_Unknownsanctuary_2", 1733.314, -187.8173, 73, "UNKNOWN_SANTUARY_GATE_DUNGEON");
+		AddNpc(12, 155174, "Unknown Sanctuary Gate", "id_Unknownsanctuary_2", 1733.314, 39.25313, -187.8173, 73, "UNKNOWN_SANTUARY_GATE_DUNGEON", "", "");
 	}
 }

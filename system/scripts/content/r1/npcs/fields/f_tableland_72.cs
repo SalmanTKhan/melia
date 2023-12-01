@@ -14,166 +14,173 @@ public class FTableland72NpcScript : GeneralScript
 	{
 		// Kadumel Cliff
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Kadumel Cliff", "f_tableland_72", 777.5479, 2020.532, 183, "", "TABLELAND72_TABLELAND73", "");
+		AddNpc(6, 40001, "Kadumel Cliff", "f_tableland_72", 777.5479, 452.2046, 2020.532, 183, "", "TABLELAND72_TABLELAND73", "");
 		
 		// Grand Yard Mesa
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Grand Yard Mesa", "f_tableland_72", 1029.782, -1489.055, 48, "", "TABLELAND72_TABLELAND71", "");
+		AddNpc(7, 40001, "Grand Yard Mesa", "f_tableland_72", 1029.782, 508.6085, -1489.055, 48, "", "TABLELAND72_TABLELAND71", "");
 		
 		// Sentry Bailey
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Sentry Bailey", "f_tableland_72", 2131.741, 222.4766, 99, "", "TABLELAND72_UNDERFORTRESS65", "");
+		AddNpc(8, 40001, "Sentry Bailey", "f_tableland_72", 2131.741, 287.9069, 222.4766, 99, "", "TABLELAND72_UNDERFORTRESS65", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_tableland_72", -272.5474, -74.31588, 45, "WARP_F_TABLELAND_72", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(9, 40120, "Statue of Goddess Vakarine", "f_tableland_72", -272.5474, 406.1369, -74.31588, 45, "WARP_F_TABLELAND_72", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(11, 151051, "", "f_tableland_72", 410.6749, 508.6087, -980.1486, 90, "", "", "");
 		
 		// Unidentified Pillar
 		//-------------------------------------------------------------------------
-		AddNpc(155051, "Unidentified Pillar", "f_tableland_72", -509.8205, 18.53086, 26, "TABLELAND72_BASE_BALL");
+		AddNpc(12, 155051, "Unidentified Pillar", "f_tableland_72", -509.8205, 406.1369, 18.53086, 26, "TABLELAND72_BASE_BALL", "", "");
+		AddNpc(13, 154005, " ", "f_tableland_72", -1466.814, 452.6042, -263.9896, 90, "", "", "");
+		AddNpc(14, 154005, " ", "f_tableland_72", 1002.689, 288.1073, 561.6293, 90, "", "", "");
 		
 		// Cursed Statue
 		//-------------------------------------------------------------------------
-		AddNpc(153155, "Cursed Statue", "f_tableland_72", -576.3289, -1222.547, 64, "TABLE72_ARTIFACT", "TABLE72_ARTIFACT_MSG");
+		AddNpc(15, 153155, "Cursed Statue", "f_tableland_72", -576.3289, 406.1362, -1222.547, 64, "TABLE72_ARTIFACT", "TABLE72_ARTIFACT_MSG", "", 0);
 		
 		// Village Priest Chaleims
 		//-------------------------------------------------------------------------
-		AddNpc(155043, "Village Priest Chaleims", "f_tableland_72", -425.4432, 69.7235, -4, "TABLE72_PEAPLE1_1");
+		AddNpc(16, 155043, "Village Priest Chaleims", "f_tableland_72", -425.4432, 406.1369, 69.7235, -4, "TABLE72_PEAPLE1_1", "", "", 1);
 		
 		// Villager Argis
 		//-------------------------------------------------------------------------
-		AddNpc(155035, "Villager Argis", "f_tableland_72", -46.39484, -42.08913, -71, "TABLE72_PEAPLE2");
+		AddNpc(17, 155035, "Villager Argis", "f_tableland_72", -46.39484, 406.1369, -42.08913, -71, "TABLE72_PEAPLE2", "", "");
 		
 		// Villager Deailan
 		//-------------------------------------------------------------------------
-		AddNpc(155038, "Villager Deailan", "f_tableland_72", -73.00058, 23.92019, 263, "TABLE72_PEAPLE3");
+		AddNpc(18, 155038, "Villager Deailan", "f_tableland_72", -73.00058, 406.1369, 23.92019, 263, "TABLE72_PEAPLE3", "", "");
 		
 		// Villager Emils
 		//-------------------------------------------------------------------------
-		AddNpc(152065, "Villager Emils", "f_tableland_72", -97.83647, 112.7138, -62, "TABLE72_PEAPLE4");
+		AddNpc(19, 152065, "Villager Emils", "f_tableland_72", -97.83647, 406.1369, 112.7138, -62, "TABLE72_PEAPLE4", "", "");
 		
 		// Observation Orb
 		//-------------------------------------------------------------------------
-		AddNpc(153157, "Observation Orb", "f_tableland_72", -422.2, -61.51, 28, "TABLE72_MONITORING");
+		AddNpc(20, 153157, "Observation Orb", "f_tableland_72", -422.2, 406.14, -61.51, 28, "TABLE72_MONITORING", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151022, " ", "f_tableland_72", 1057.373, 818.384, 90, "TABLE72_SUBQ6_ARTIFACT");
+		AddNpc(21, 151022, " ", "f_tableland_72", 1057.373, 288.1073, 818.384, 90, "TABLE72_SUBQ6_ARTIFACT", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151022, " ", "f_tableland_72", 983.8279, 554.0048, 90, "TABLE72_SUBQ6_ARTIFACT");
+		AddNpc(21, 151022, " ", "f_tableland_72", 983.8279, 288.1073, 554.0048, 90, "TABLE72_SUBQ6_ARTIFACT", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151022, " ", "f_tableland_72", 1464.386, 435.4233, 90, "TABLE72_SUBQ6_ARTIFACT");
+		AddNpc(21, 151022, " ", "f_tableland_72", 1464.386, 288.1073, 435.4233, 90, "TABLE72_SUBQ6_ARTIFACT", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151022, " ", "f_tableland_72", 1161.542, 341.9553, 90, "TABLE72_SUBQ6_ARTIFACT");
+		AddNpc(21, 151022, " ", "f_tableland_72", 1161.542, 288.1073, 341.9553, 90, "TABLE72_SUBQ6_ARTIFACT", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151022, " ", "f_tableland_72", 1440.243, 795.589, 90, "TABLE72_SUBQ6_ARTIFACT");
+		AddNpc(21, 151022, " ", "f_tableland_72", 1440.243, 288.1073, 795.589, 90, "TABLE72_SUBQ6_ARTIFACT", "", "");
+		AddNpc(23, 147417, " ", "f_tableland_72", -1374.128, 411.2191, 474.9101, 90, "", "", "");
 		
 		// Sikljien Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Sikljien Herbs", "f_tableland_72", 682.3235, 1145.704, 90, "TABLE72_GLASS1");
+		AddNpc(24, 47201, "Sikljien Herbs", "f_tableland_72", 682.3235, 452.6042, 1145.704, 90, "TABLE72_GLASS1", "", "");
 		
 		// Sikljien Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Sikljien Herbs", "f_tableland_72", 684.5289, 1554.971, 90, "TABLE72_GLASS1");
+		AddNpc(24, 47201, "Sikljien Herbs", "f_tableland_72", 684.5289, 452.6042, 1554.971, 90, "TABLE72_GLASS1", "", "");
 		
 		// Sikljien Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Sikljien Herbs", "f_tableland_72", 412.9821, 1222.992, 90, "TABLE72_GLASS1");
+		AddNpc(24, 47201, "Sikljien Herbs", "f_tableland_72", 412.9821, 452.5901, 1222.992, 90, "TABLE72_GLASS1", "", "");
 		
 		// Sikljien Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Sikljien Herbs", "f_tableland_72", 590.727, 1318.209, 90, "TABLE72_GLASS1");
+		AddNpc(24, 47201, "Sikljien Herbs", "f_tableland_72", 590.727, 452.6042, 1318.209, 90, "TABLE72_GLASS1", "", "");
 		
 		// Sikljien Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Sikljien Herbs", "f_tableland_72", 886.8018, 1395.57, 90, "TABLE72_GLASS1");
+		AddNpc(24, 47201, "Sikljien Herbs", "f_tableland_72", 886.8018, 452.5005, 1395.57, 90, "TABLE72_GLASS1", "", "");
 		
 		// Village Priest Chaleims
 		//-------------------------------------------------------------------------
-		AddNpc(155043, "Village Priest Chaleims", "f_tableland_72", -1319.971, 473.3506, 233, "TABLE72_PEAPLE1_2");
+		AddNpc(25, 155043, "Village Priest Chaleims", "f_tableland_72", -1319.971, 411.2191, 473.3506, 233, "TABLE72_PEAPLE1_2", "", "", 1);
 		
 		// Village Priest Arntas
 		//-------------------------------------------------------------------------
-		AddNpc(155046, "Village Priest Arntas", "f_tableland_72", -394.346, 83.38422, -22, "TABLE72_PEAPLE5");
+		AddNpc(26, 155046, "Village Priest Arntas", "f_tableland_72", -394.346, 406.1369, 83.38422, -22, "TABLE72_PEAPLE5", "", "", 1);
 		
 		// Village Priest Chaleims
 		//-------------------------------------------------------------------------
-		AddNpc(155043, "Village Priest Chaleims", "f_tableland_72", -462.7413, -665.2462, 12, "TABLE72_PEAPLE1_3");
+		AddNpc(27, 155043, "Village Priest Chaleims", "f_tableland_72", -462.7413, 406.1362, -665.2462, 12, "TABLE72_PEAPLE1_3", "", "", 1);
 		
 		// Village Priest Arntas
 		//-------------------------------------------------------------------------
-		AddNpc(155046, "Village Priest Arntas", "f_tableland_72", -440.1138, -644.0313, -4, "TABLE72_PEAPLE5_1", "TABLE72_PEAPLE5_2");
+		AddNpc(28, 155046, "Village Priest Arntas", "f_tableland_72", -440.1138, 406.1362, -644.0313, -4, "TABLE72_PEAPLE5_1", "TABLE72_PEAPLE5_2", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_72", 243.7586, -131.3378, 90, "", "TABLE72_SUBQ7_TRIGGER", "");
+		AddNpc(22, 20026, " ", "f_tableland_72", 243.7586, 374.3105, -131.3378, 90, "", "TABLE72_SUBQ7_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151022, " ", "f_tableland_72", 1246.382, 616.5551, 90, "TABLE72_SUBQ6_ARTIFACT");
+		AddNpc(21, 151022, " ", "f_tableland_72", 1246.382, 288.1073, 616.5551, 90, "TABLE72_SUBQ6_ARTIFACT", "", "");
 		
 		// Sikljien Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Sikljien Herbs", "f_tableland_72", 481.0303, 1544.631, 90, "TABLE72_GLASS1");
+		AddNpc(24, 47201, "Sikljien Herbs", "f_tableland_72", 481.0303, 452.6042, 1544.631, 90, "TABLE72_GLASS1", "", "");
+		AddNpc(29, 147366, " ", "f_tableland_72", -492.225, 406.1369, -133.3673, 90, "", "", "");
+		AddNpc(29, 147366, " ", "f_tableland_72", -181.4235, 406.1369, 33.39716, 90, "", "", "");
+		AddNpc(30, 147365, " ", "f_tableland_72", -163.356, 406.1369, -310.4795, 90, "", "", "");
 		
 		// Sikljien Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Sikljien Herbs", "f_tableland_72", 736.6622, 1377.281, 90, "TABLE72_GLASS1");
+		AddNpc(24, 47201, "Sikljien Herbs", "f_tableland_72", 736.6622, 452.6042, 1377.281, 90, "TABLE72_GLASS1", "", "");
 		
 		// Sikljien Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Sikljien Herbs", "f_tableland_72", 420.5042, 1382.145, 90, "TABLE72_GLASS1");
+		AddNpc(24, 47201, "Sikljien Herbs", "f_tableland_72", 420.5042, 452.6042, 1382.145, 90, "TABLE72_GLASS1", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153149, " ", "f_tableland_72", -1276.883, -74.66573, 90, "TABLE72_SUBQ3_STONE");
+		AddNpc(33, 153149, " ", "f_tableland_72", -1276.883, 452.6042, -74.66573, 90, "TABLE72_SUBQ3_STONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153149, " ", "f_tableland_72", -1066.725, -8.734478, 90, "TABLE72_SUBQ3_STONE");
+		AddNpc(33, 153149, " ", "f_tableland_72", -1066.725, 452.5707, -8.734478, 90, "TABLE72_SUBQ3_STONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153149, " ", "f_tableland_72", -891.4731, -410.3914, 90, "TABLE72_SUBQ3_STONE");
+		AddNpc(33, 153149, " ", "f_tableland_72", -891.4731, 452.4037, -410.3914, 90, "TABLE72_SUBQ3_STONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153149, " ", "f_tableland_72", -1105.184, -227.5616, 90, "TABLE72_SUBQ3_STONE");
+		AddNpc(33, 153149, " ", "f_tableland_72", -1105.184, 452.6042, -227.5616, 90, "TABLE72_SUBQ3_STONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153149, " ", "f_tableland_72", -1329.137, -332.187, 90, "TABLE72_SUBQ3_STONE");
+		AddNpc(33, 153149, " ", "f_tableland_72", -1329.137, 452.6042, -332.187, 90, "TABLE72_SUBQ3_STONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153149, " ", "f_tableland_72", -1183.678, -461.8986, 90, "TABLE72_SUBQ3_STONE");
+		AddNpc(33, 153149, " ", "f_tableland_72", -1183.678, 452.6042, -461.8986, 90, "TABLE72_SUBQ3_STONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153149, " ", "f_tableland_72", -909.0793, -61.77457, 90, "TABLE72_SUBQ3_STONE");
+		AddNpc(33, 153149, " ", "f_tableland_72", -909.0793, 452.5615, -61.77457, 90, "TABLE72_SUBQ3_STONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153149, " ", "f_tableland_72", -843.9512, -197.6068, 90, "TABLE72_SUBQ3_STONE");
+		AddNpc(33, 153149, " ", "f_tableland_72", -843.9512, 452.5285, -197.6068, 90, "TABLE72_SUBQ3_STONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153149, " ", "f_tableland_72", -1033.348, -411.6584, 90, "TABLE72_SUBQ3_STONE");
+		AddNpc(33, 153149, " ", "f_tableland_72", -1033.348, 452.6041, -411.6584, 90, "TABLE72_SUBQ3_STONE", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_tableland_72", -581.2, 149.56, 45, "TREASUREBOX_LV_F_TABLELAND_721000");
+		AddNpc(1000, 147392, "Lv1 Treasure Chest", "f_tableland_72", -581.2, 487.47, 149.56, 45, "TREASUREBOX_LV_F_TABLELAND_721000", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_tableland_72", 587.6313, -122.6571, 90, "", "JOB_ONMYOJI_Q1_OBJ", "");
+		AddNpc(1001, 20026, " ", "f_tableland_72", 587.6313, 374.3105, -122.6571, 90, "", "JOB_ONMYOJI_Q1_OBJ", "");
 	}
 }

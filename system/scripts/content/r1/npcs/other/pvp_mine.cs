@@ -12,5 +12,8 @@ public class PvpMineNpcScript : GeneralScript
 {
 	public override void Load()
 	{
+		AddNpc(1, 20026, " ", "pvp_Mine", -42, 0, 42, 90, "", "", "");
+		AddNpc(2, 20026, " ", "pvp_Mine", -1444, 149, -1569, 90, "", "", "");
+		AddNpc(3, 20026, " ", "pvp_Mine", 1634, 149, 1580, 90, "", "", "");
 	}
 }

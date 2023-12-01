@@ -14,134 +14,139 @@ public class DChapel577NpcScript : GeneralScript
 	{
 		// Tenet Church 1F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Tenet Church 1F", "d_chapel_57_7", -683, -831, 180, "", "CHAPEL577_CHAPEL576", "");
+		AddNpc(1, 40001, "Tenet Church 1F", "d_chapel_57_7", -683, 36, -831, 180, "", "CHAPEL577_CHAPEL576", "");
 		
 		// Follower Algis
 		//-------------------------------------------------------------------------
-		AddNpc(147390, "Follower Algis", "d_chapel_57_7", 110, -579, 180, "CHAPLE577_ARUNE_02");
+		AddNpc(2, 147390, "Follower Algis", "d_chapel_57_7", 110, 165, -579, 180, "CHAPLE577_ARUNE_02", "", "", 1);
+		AddNpc(4, 147352, "", "d_chapel_57_7", 134.0443, 164.8635, -576.6367, 90, "", "", "");
 		
 		// Sventove Central Altar
 		//-------------------------------------------------------------------------
-		AddNpc(147358, "Sventove Central Altar", "d_chapel_57_7", -27, -137, 45, "CHAPLE577_HOLY_1");
+		AddNpc(5, 147358, "Sventove Central Altar", "d_chapel_57_7", -27, 48, -137, 45, "CHAPLE577_HOLY_1", "", "", 0);
 		
 		// Malda Altar
 		//-------------------------------------------------------------------------
-		AddNpc(147357, "Malda Altar", "d_chapel_57_7", 1516, -104, 45, "CHAPLE577_HOLY_2", "CHAPEL577_BASIC_1", "CHAPEL577_BASIC_1");
+		AddNpc(6, 147357, "Malda Altar", "d_chapel_57_7", 1516, 48, -104, 45, "CHAPLE577_HOLY_2", "CHAPEL577_BASIC_1", "CHAPEL577_BASIC_1");
 		
 		// Auka Altar
 		//-------------------------------------------------------------------------
-		AddNpc(147357, "Auka Altar", "d_chapel_57_7", -942, -106, 45, "CHAPLE577_HOLY_3", "CHAPEL577_BASIC_2", "CHAPEL577_BASIC_2");
+		AddNpc(7, 147357, "Auka Altar", "d_chapel_57_7", -942, 48, -106, 45, "CHAPLE577_HOLY_3", "CHAPEL577_BASIC_2", "CHAPEL577_BASIC_2");
 		
 		// Follower Algis
 		//-------------------------------------------------------------------------
-		AddNpc(147390, "Follower Algis", "d_chapel_57_7", -633.7751, -934.1711, 81, "CHAPLE577_ARUNE_01");
+		AddNpc(9, 147390, "Follower Algis", "d_chapel_57_7", -633.7751, 35.9174, -934.1711, 81, "CHAPLE577_ARUNE_01", "", "", 1);
 		
 		// Demon Queen Gesti
 		//-------------------------------------------------------------------------
-		AddNpc(147371, "Demon Queen Gesti", "d_chapel_57_7", -352.3609, 106.8771, 90, "", "CHAPLE577_GESTI", "");
+		AddNpc(10, 147371, "Demon Queen Gesti", "d_chapel_57_7", -352.3609, 35.9174, 106.8771, 90, "", "CHAPLE577_GESTI", "");
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", -346.5401, -197.8865, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", -346.5401, 35.9174, -197.8865, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", -340.3, -367.8275, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", -340.3, 35.9174, -367.8275, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", -131.7087, -380.3721, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", -131.7087, 35.9174, -380.3721, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", 64.47857, -384.0647, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", 64.47857, 35.9174, -384.0647, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", 247.7086, -377.229, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", 247.7086, 35.9174, -377.229, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", 259.531, -230.548, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", 259.531, 35.9174, -230.548, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", 257.5233, -46.80219, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", 257.5233, 35.9174, -46.80219, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", 250.7079, 173.8117, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", 250.7079, 35.9174, 173.8117, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", 54.16486, 150.1834, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", 54.16486, 35.9174, 150.1834, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", -329.22, 110.3992, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", -329.22, 35.9174, 110.3992, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", -349.8877, -12.43448, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", -349.8877, 35.9174, -12.43448, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Destroyed Altar Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Destroyed Altar Fragment", "d_chapel_57_7", -145.0195, 122.3284, 90, "CHAPLE577_MQ_03");
+		AddNpc(11, 147372, "Destroyed Altar Fragment", "d_chapel_57_7", -145.0195, 35.9174, 122.3284, 90, "CHAPLE577_MQ_03", "", "", 1);
 		
 		// Hidden Sanctuary's Wall Painting
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Hidden Sanctuary's Wall Painting", "d_chapel_57_7", 801.3845, -1249.958, 90, "CHAPLE577_MQ_10");
+		AddNpc(16, 147372, "Hidden Sanctuary's Wall Painting", "d_chapel_57_7", 801.3845, 35.9174, -1249.958, 90, "CHAPLE577_MQ_10", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_chapel_57_7", 944, -1135, 90, "", "CHAPLE577_SECRET_ROOM_WARP", "");
+		AddNpc(17, 20026, "", "d_chapel_57_7", 944, 36, -1135, 90, "", "CHAPLE577_SECRET_ROOM_WARP", "");
+		AddNpc(18, 147366, "Field Gen x", "d_chapel_57_7", 1015.049, 35.9174, -1307.737, 90, "", "", "");
+		AddNpc(18, 147366, "Field Gen x", "d_chapel_57_7", 95.87236, 164.8635, -723.9396, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147457, " ", "d_chapel_57_7", -228.6972, -309.131, 90, "CHAPLE577_MQ_04_1");
+		AddNpc(23, 147457, " ", "d_chapel_57_7", -228.6972, 35.9174, -309.131, 90, "CHAPLE577_MQ_04_1", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147457, " ", "d_chapel_57_7", -34.40312, -298.2475, 90, "CHAPLE577_MQ_04_2");
+		AddNpc(24, 147457, " ", "d_chapel_57_7", -34.40312, 35.9174, -298.2475, 90, "CHAPLE577_MQ_04_2", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147457, " ", "d_chapel_57_7", 168.0245, -297.6519, 90, "CHAPLE577_MQ_04_3");
+		AddNpc(25, 147457, " ", "d_chapel_57_7", 168.0245, 35.9174, -297.6519, 90, "CHAPLE577_MQ_04_3", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147457, " ", "d_chapel_57_7", 164.4969, -132.6013, 90, "CHAPLE577_MQ_04_4");
+		AddNpc(26, 147457, " ", "d_chapel_57_7", 164.4969, 35.9174, -132.6013, 90, "CHAPLE577_MQ_04_4", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147457, " ", "d_chapel_57_7", 162.2024, 41.21947, 90, "CHAPLE577_MQ_04_5");
+		AddNpc(27, 147457, " ", "d_chapel_57_7", 162.2024, 35.9174, 41.21947, 90, "CHAPLE577_MQ_04_5", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147457, " ", "d_chapel_57_7", -33.61777, 38.77794, 90, "CHAPLE577_MQ_04_6");
+		AddNpc(28, 147457, " ", "d_chapel_57_7", -33.61777, 35.9174, 38.77794, 90, "CHAPLE577_MQ_04_6", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147457, " ", "d_chapel_57_7", -237.2599, 36.85686, 90, "CHAPLE577_MQ_04_7");
+		AddNpc(29, 147457, " ", "d_chapel_57_7", -237.2599, 35.9174, 36.85686, 90, "CHAPLE577_MQ_04_7", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147457, " ", "d_chapel_57_7", -236.8307, -134.0267, 90, "CHAPLE577_MQ_04_8");
+		AddNpc(30, 147457, " ", "d_chapel_57_7", -236.8307, 35.9174, -134.0267, 90, "CHAPLE577_MQ_04_8", "", "");
 		
 		// Reading Desk
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Reading Desk", "d_chapel_57_7", 844, -1210, 90, "SANCTUM_BOOK_NO");
+		AddNpc(50, 147372, "Reading Desk", "d_chapel_57_7", 844, 36, -1210, 90, "SANCTUM_BOOK_NO", "", "");
 		
 		// Reading Desk
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Reading Desk", "d_chapel_57_7", 1017, -1213, 90, "SANCTUM_BOOK_OK");
+		AddNpc(51, 147372, "Reading Desk", "d_chapel_57_7", 1017, 36, -1213, 90, "SANCTUM_BOOK_OK", "", "");
+		AddNpc(57, 152003, " ", "d_chapel_57_7", 207.5349, 164.8635, -582.6235, -4, "", "", "");
+		AddNpc(59, 20170, "Search Skill Trigger", "d_chapel_57_7", 1339.51, 36.02, -339.81, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_chapel_57_7", -738.51, 125.63, 90, "TREASUREBOX_LV_D_CHAPEL_57_760");
+		AddNpc(60, 147392, "Lv1 Treasure Chest", "d_chapel_57_7", -738.51, 36.02, 125.63, 90, "TREASUREBOX_LV_D_CHAPEL_57_760", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "d_chapel_57_7", -10.03086, 1615.281, 90, "", "EXPLORER_MISLE8", "");
+		AddNpc(61, 40095, " ", "d_chapel_57_7", -10.03086, 63.72815, 1615.281, 90, "", "EXPLORER_MISLE8", "");
 	}
 }

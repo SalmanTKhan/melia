@@ -14,254 +14,259 @@ public class DStartower89NpcScript : GeneralScript
 	{
 		// Astral Tower 1F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Astral Tower 1F", "d_startower_89", 1230, -1978, -70, "", "D_STARTOWER_89_TO_D_STARTOWER_88", "");
+		AddNpc(1, 40001, "Astral Tower 1F", "d_startower_89", 1230, 877, -1978, -70, "", "D_STARTOWER_89_TO_D_STARTOWER_88", "");
 		
 		// Astral Tower 12F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Astral Tower 12F", "d_startower_89", 188, -521, 270, "", "D_STARTOWER_89_TO_D_STARTOWER_90", "");
+		AddNpc(2, 40001, "Astral Tower 12F", "d_startower_89", 188, 1304, -521, 270, "", "D_STARTOWER_89_TO_D_STARTOWER_90", "");
 		
 		// Resistance Commander Byle
 		//-------------------------------------------------------------------------
-		AddNpc(156120, "Resistance Commander Byle", "d_startower_89", 1301, -1893, 45, "D_STARTOWER_89_RESISTANCE_LEADER_BAYL_01");
+		AddNpc(3, 156120, "Resistance Commander Byle", "d_startower_89", 1301, 877, -1893, 45, "D_STARTOWER_89_RESISTANCE_LEADER_BAYL_01", "", "", 1);
 		
 		// Resistance Commander Byle
 		//-------------------------------------------------------------------------
-		AddNpc(156120, "Resistance Commander Byle", "d_startower_89", 221.9301, -829.4982, 90, "D_STARTOWER_89_RESISTANCE_LEADER_BAYL_02");
+		AddNpc(4, 156120, "Resistance Commander Byle", "d_startower_89", 221.9301, 973.2107, -829.4982, 90, "D_STARTOWER_89_RESISTANCE_LEADER_BAYL_02", "", "", 1);
 		
 		// Resistance Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(155163, "Resistance Soldier", "d_startower_89", 124, -701, 90, "D_STARTOWER_89_RESISTANCE_MEMBER_01");
+		AddNpc(5, 155163, "Resistance Soldier", "d_startower_89", 124, 972, -701, 90, "D_STARTOWER_89_RESISTANCE_MEMBER_01", "", "", 1);
 		
 		// Resistance Adjutant
 		//-------------------------------------------------------------------------
-		AddNpc(156133, "Resistance Adjutant", "d_startower_89", 202, -681, 0, "D_STARTOWER_89_RESISTANCE_MEMBER_02");
+		AddNpc(6, 156133, "Resistance Adjutant", "d_startower_89", 202, 972, -681, 0, "D_STARTOWER_89_RESISTANCE_MEMBER_02", "", "", 1);
 		
 		// Resistance Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(155164, "Resistance Soldier", "d_startower_89", 174, -750, 180, "D_STARTOWER_89_RESISTANCE_MEMBER_03");
+		AddNpc(7, 155164, "Resistance Soldier", "d_startower_89", 174, 973, -750, 180, "D_STARTOWER_89_RESISTANCE_MEMBER_03", "", "", 1);
 		
 		// Resistance Commander Byle
 		//-------------------------------------------------------------------------
-		AddNpc(156120, "Resistance Commander Byle", "d_startower_89", 373, 2102, 45, "D_STARTOWER_89_RESISTANCE_LEADER_BAYL_03");
+		AddNpc(8, 156120, "Resistance Commander Byle", "d_startower_89", 373, 1123, 2102, 45, "D_STARTOWER_89_RESISTANCE_LEADER_BAYL_03", "", "", 1);
 		
 		// Resistance Commander Byle
 		//-------------------------------------------------------------------------
-		AddNpc(156120, "Resistance Commander Byle", "d_startower_89", -253, -37, 90, "D_STARTOWER_89_RESISTANCE_LEADER_BAYL_04");
+		AddNpc(9, 156120, "Resistance Commander Byle", "d_startower_89", -253, 1218, -37, 90, "D_STARTOWER_89_RESISTANCE_LEADER_BAYL_04", "", "", 1);
 		
 		// Resistance Adjutant
 		//-------------------------------------------------------------------------
-		AddNpc(156117, "Resistance Adjutant", "d_startower_89", 68, 94, 90, "D_STARTOWER_89_RESISTANCE_MEMBER_04");
+		AddNpc(10, 156117, "Resistance Adjutant", "d_startower_89", 68, 1218, 94, 90, "D_STARTOWER_89_RESISTANCE_MEMBER_04", "", "", 1);
 		
 		// Proud Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(156127, "Proud Soldier", "d_startower_89", 126, 129, 0, "D_STARTOWER_89_RESISTANCE_MEMBER_05");
+		AddNpc(11, 156127, "Proud Soldier", "d_startower_89", 126, 1218, 129, 0, "D_STARTOWER_89_RESISTANCE_MEMBER_05", "", "", 1);
 		
 		// Sighing Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(156124, "Sighing Soldier", "d_startower_89", 130, 53, 180, "D_STARTOWER_89_RESISTANCE_MEMBER_06");
+		AddNpc(12, 156124, "Sighing Soldier", "d_startower_89", 130, 1218, 53, 180, "D_STARTOWER_89_RESISTANCE_MEMBER_06", "", "", 1);
 		
 		// Medic
 		//-------------------------------------------------------------------------
-		AddNpc(155165, "Medic", "d_startower_89", -156, -186, 90, "D_STARTOWER_89_RESISTANCE_MEMBER_07");
+		AddNpc(13, 155165, "Medic", "d_startower_89", -156, 1218, -186, 90, "D_STARTOWER_89_RESISTANCE_MEMBER_07", "", "", 1);
 		
 		// Injured Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(155164, "Injured Soldier", "d_startower_89", -134.7324, -183.0325, 0, "D_STARTOWER_89_RESISTANCE_MEMBER_08");
+		AddNpc(14, 155164, "Injured Soldier", "d_startower_89", -134.7324, 1218.06, -183.0325, 0, "D_STARTOWER_89_RESISTANCE_MEMBER_08", "", "", 1);
 		
 		// First Defensive Device
 		//-------------------------------------------------------------------------
-		AddNpc(153137, "First Defensive Device", "d_startower_89", 146, -842, 180, "D_STARTOWER_89_1ST_DEFENCE_DEVICE");
+		AddNpc(15, 153137, "First Defensive Device", "d_startower_89", 146, 973, -842, 180, "D_STARTOWER_89_1ST_DEFENCE_DEVICE", "", "");
 		
 		// Second Defensive Device
 		//-------------------------------------------------------------------------
-		AddNpc(153137, "Second Defensive Device", "d_startower_89", 468, 2038, 180, "D_STARTOWER_89_2ND_DEFENCE_DEVICE");
+		AddNpc(16, 153137, "Second Defensive Device", "d_startower_89", 468, 1123, 2038, 180, "D_STARTOWER_89_2ND_DEFENCE_DEVICE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_startower_89", 527, -846, 90, "", "D_STARTOWER_89_MQ_20_TRIGGER", "");
+		AddNpc(17, 20026, " ", "d_startower_89", 527, 973, -846, 90, "", "D_STARTOWER_89_MQ_20_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_startower_89", 765, 1114, 90, "", "D_STARTOWER_89_MQ_50_TRIGGER", "");
+		AddNpc(18, 20026, " ", "d_startower_89", 765, 987, 1114, 90, "", "D_STARTOWER_89_MQ_50_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_startower_89", 94, 1927, 90, "", "D_STARTOWER_89_MQ_60_TRIGGER", "");
+		AddNpc(19, 20026, " ", "d_startower_89", 94, 1034, 1927, 90, "", "D_STARTOWER_89_MQ_60_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "d_startower_89", -554, -260, 90, "", "D_STARTOWER_89_MQ_80_TRIGGER", "");
+		AddNpc(20, 40095, " ", "d_startower_89", -554, 1079, -260, 90, "", "D_STARTOWER_89_MQ_80_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 1466, -1565, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", 1466, 877, -1565, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 707, -862, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", 707, 972, -862, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 1354, -847, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", 1354, 975, -847, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 718, -78, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", 718, 1047, -78, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 810, 892, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", 810, 987, 892, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -22, 727, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", -22, 905, 727, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -455, 1629, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", -455, 940, 1629, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -117, 1091, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", -117, 999, 1091, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -737, 860, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", -737, 1048, 860, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -924, -117, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", -924, 1057, -117, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -538, -273, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", -538, 1079, -273, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -1191, 646, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
+		AddNpc(23, 20042, " ", "d_startower_89", -1191, 957, 646, 90, "", "STARTOWER_89_ARROWRAIN_TRAP", "STARTOWER_89_ARROWRAIN_TRAP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 1307, -1141, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 1307, 966, -1141, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 1351.05, -1138.74, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 1351.05, 965.9068, -1138.74, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 1048.943, -895.1771, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 1048.943, 972.9702, -895.1771, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 1048.453, -850.9902, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 1048.453, 972.9261, -850.9902, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 1048.024, -808.4247, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 1048.024, 972.9402, -808.4247, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 695.441, -560.5107, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 695.441, 975.006, -560.5107, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 737.1693, -638.3681, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 737.1693, 973.5853, -638.3681, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 413.8186, -892.1843, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 413.8186, 973.2107, -892.1843, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 713.2956, -601.6901, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 713.2956, 974.3925, -601.6901, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 439.286, -848.7277, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 439.286, 973.2107, -848.7277, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 411.6418, -808.5316, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 411.6418, 973.2107, -808.5316, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 387.1287, 766.2966, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 387.1287, 918.6121, 766.2966, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 746.0699, 428.9463, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 746.0699, 987.4133, 428.9463, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 709.1535, 428.4358, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 709.1535, 987.4133, 428.4358, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", 420.6641, 740.2083, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", 420.6641, 921.0422, 740.2083, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -140.0037, 881.0236, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -140.0037, 939.0865, 881.0236, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -114.6446, 921.6643, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -114.6446, 961.8241, 921.6643, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -157.2098, 952.0253, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -157.2098, 977.6336, 952.0253, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -352.6847, 1519.416, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -352.6847, 945.0666, 1519.416, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -211.3617, 1717.774, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -211.3617, 1022.263, 1717.774, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -250.6408, 1688.133, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -250.6408, 1000.504, 1688.133, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -474.673, 1061.312, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -474.673, 1029.446, 1061.312, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -1047.23, 580.8422, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -1047.23, 975.42, 580.8422, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -1007.129, 539.4123, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -1007.129, 994.2524, 539.4123, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -963.8016, -58.40914, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -963.8016, 1045.391, -58.40914, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -937.412, -113.0729, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -937.412, 1057.804, -113.0729, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -917.3733, -45.47331, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -917.3733, 1032.734, -45.47331, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -524.0596, 212.8982, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -524.0596, 1115.975, 212.8982, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20042, " ", "d_startower_89", -485.8332, 187.7208, 90, "", "STARTOWER_89_POISON_TRAP", "");
+		AddNpc(24, 20042, " ", "d_startower_89", -485.8332, 1115.672, 187.7208, 90, "", "STARTOWER_89_POISON_TRAP", "");
 		
 		// Elder Henika
 		//-------------------------------------------------------------------------
-		AddNpc(156135, "Elder Henika", "d_startower_89", -307, 95, 45, "D_STARTOWER_89_SCHAFFENSTAR_ELDER_HENIKA");
+		AddNpc(25, 156135, "Elder Henika", "d_startower_89", -307, 1218, 95, 45, "D_STARTOWER_89_SCHAFFENSTAR_ELDER_HENIKA", "", "", 1);
 		
 		// Lookout Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(150180, "Lookout Soldier", "d_startower_89", -262, 113, 270, "D_STARTOWER_89_RESISTANCE_MEMBER_09");
+		AddNpc(26, 150180, "Lookout Soldier", "d_startower_89", -262, 1218, 113, 270, "D_STARTOWER_89_RESISTANCE_MEMBER_09", "", "", 1);
+		AddNpc(35, 147366, " ", "d_startower_89", -71.03294, 1218.06, 18.21107, 90, "", "", "");
+		AddNpc(36, 147365, " ", "d_startower_89", 448.1208, 1123.448, 2044.203, 90, "", "", "");
+		AddNpc(36, 147365, " ", "d_startower_89", 94.17691, 973.2107, -984.0875, 90, "", "", "");
+		AddNpc(36, 147365, " ", "d_startower_89", 104.0785, 973.2107, -774.8223, 90, "", "", "");
+		AddNpc(37, 147364, " ", "d_startower_89", 1233.155, 877.1958, -1983.815, 90, "", "", "");
 	}
 }

@@ -14,6 +14,6 @@ public class DVelniasprison771NpcScript : GeneralScript
 	{
 		// Ruklys Street
 		//-------------------------------------------------------------------------
-		AddNpc(147507, "Ruklys Street", "d_velniasprison_77_1", -802, -1042, 90, "VELNIASPRISON_77_1_TO_FLASH_61");
+		AddNpc(1, 147507, "Ruklys Street", "d_velniasprison_77_1", -802, 38, -1042, 90, "VELNIASPRISON_77_1_TO_FLASH_61", "", "");
 	}
 }

@@ -14,174 +14,189 @@ public class FRemains373NpcScript : GeneralScript
 	{
 		// Namu Temple Ruins
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Namu Temple Ruins", "f_remains_37_3", -544.7141, -1603.678, 1, "", "REMAINS37_3_REMAINS37_2", "");
+		AddNpc(1, 40001, "Namu Temple Ruins", "f_remains_37_3", -544.7141, 3.8781, -1603.678, 1, "", "REMAINS37_3_REMAINS37_2", "");
 		
 		// Underground Grave of Ritinis
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Underground Grave of Ritinis", "f_remains_37_3", -3659.413, 1659.116, 268, "", "REMAINS37_3_CATABOMB_04", "");
+		AddNpc(2, 40001, "Underground Grave of Ritinis", "f_remains_37_3", -3659.413, 52.0789, 1659.116, 268, "", "REMAINS37_3_CATABOMB_04", "");
 		
 		// Archeologist Justas
 		//-------------------------------------------------------------------------
-		AddNpc(155034, "Archeologist Justas", "f_remains_37_3", -859.7477, -589.9202, 90, "REMAINS37_3_JUSTAS");
+		AddNpc(4, 155034, "Archeologist Justas", "f_remains_37_3", -859.7477, 7.1051, -589.9202, 90, "REMAINS37_3_JUSTAS", "", "", 0);
 		
 		// Archeologist Alruida
 		//-------------------------------------------------------------------------
-		AddNpc(153040, "Archeologist Alruida", "f_remains_37_3", -751.5617, 666.5717, -20, "REMAINS37_3_ALVYDA");
+		AddNpc(5, 153040, "Archeologist Alruida", "f_remains_37_3", -751.5617, 7.2529, 666.5717, -20, "REMAINS37_3_ALVYDA", "", "");
+		AddNpc(6, 147375, " ", "f_remains_37_3", -907.4705, 7.1051, -593.9478, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152035, " ", "f_remains_37_3", -2135.8, -460.5457, 90, "REMAINS37_3_PLATE01");
+		AddNpc(8, 152035, " ", "f_remains_37_3", -2135.8, 143.907, -460.5457, 90, "REMAINS37_3_PLATE01", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152036, " ", "f_remains_37_3", 397.6295, -143.1492, 90, "REMAINS37_3_PLATEPIECES");
+		AddNpc(9, 152036, " ", "f_remains_37_3", 397.6295, 92.1332, -143.1492, 90, "REMAINS37_3_PLATEPIECES", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152036, " ", "f_remains_37_3", 547.9893, 207.6277, 29, "REMAINS37_3_PLATEPIECES");
+		AddNpc(9, 152036, " ", "f_remains_37_3", 547.9893, 92.1332, 207.6277, 29, "REMAINS37_3_PLATEPIECES", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152036, " ", "f_remains_37_3", 670.3188, -178.4084, 169, "REMAINS37_3_PLATEPIECES");
+		AddNpc(9, 152036, " ", "f_remains_37_3", 670.3188, 92.1332, -178.4084, 169, "REMAINS37_3_PLATEPIECES", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152036, " ", "f_remains_37_3", 1070.134, -109.9483, 58, "REMAINS37_3_PLATEPIECES");
+		AddNpc(9, 152036, " ", "f_remains_37_3", 1070.134, 92.1332, -109.9483, 58, "REMAINS37_3_PLATEPIECES", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152036, " ", "f_remains_37_3", 1103.906, 218.7964, 156, "REMAINS37_3_PLATEPIECES");
+		AddNpc(9, 152036, " ", "f_remains_37_3", 1103.906, 92.1332, 218.7964, 156, "REMAINS37_3_PLATEPIECES", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152038, " ", "f_remains_37_3", -1595.987, 468.8334, 48, "REMAINS37_3_BIGVINES");
+		AddNpc(11, 152038, " ", "f_remains_37_3", -1595.987, 62.9642, 468.8334, 48, "REMAINS37_3_BIGVINES", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152035, " ", "f_remains_37_3", -1595.987, 468.8334, 90, "REMAINS37_3_PLATE03");
+		AddNpc(12, 152035, " ", "f_remains_37_3", -1595.987, 62.9642, 468.8334, 90, "REMAINS37_3_PLATE03", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155009, " ", "f_remains_37_3", -1750.322, -1014.653, 12, "REMAINS37_3_WELL", "REMAINS37_3_WELL");
+		AddNpc(14, 155009, " ", "f_remains_37_3", -1750.322, 60.1406, -1014.653, 12, "REMAINS37_3_WELL", "REMAINS37_3_WELL", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(10043, " ", "f_remains_37_3", -1803.538, 1361.263, 90, "REMAINS37_3_MAGNET");
+		AddNpc(17, 10043, " ", "f_remains_37_3", -1803.538, 59.9815, 1361.263, 90, "REMAINS37_3_MAGNET", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(10043, " ", "f_remains_37_3", -1386.894, 1345.734, 90, "REMAINS37_3_MAGNET");
+		AddNpc(17, 10043, " ", "f_remains_37_3", -1386.894, 59.9815, 1345.734, 90, "REMAINS37_3_MAGNET", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(10043, " ", "f_remains_37_3", -1353.187, 1059.288, 90, "REMAINS37_3_MAGNET");
+		AddNpc(17, 10043, " ", "f_remains_37_3", -1353.187, 59.9815, 1059.288, 90, "REMAINS37_3_MAGNET", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(10043, " ", "f_remains_37_3", -1100.475, 1489.764, 90, "REMAINS37_3_MAGNET");
+		AddNpc(17, 10043, " ", "f_remains_37_3", -1100.475, 59.9815, 1489.764, 90, "REMAINS37_3_MAGNET", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(10043, " ", "f_remains_37_3", -1341.717, 815.8755, 90, "REMAINS37_3_MAGNET");
+		AddNpc(17, 10043, " ", "f_remains_37_3", -1341.717, 36.3455, 815.8755, 90, "REMAINS37_3_MAGNET", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(10043, " ", "f_remains_37_3", -1498.994, 503.2154, 90, "REMAINS37_3_MAGNET");
+		AddNpc(17, 10043, " ", "f_remains_37_3", -1498.994, 62.96425, 503.2154, 90, "REMAINS37_3_MAGNET", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(10043, " ", "f_remains_37_3", -1180.302, 431.4881, 90, "REMAINS37_3_MAGNET");
+		AddNpc(17, 10043, " ", "f_remains_37_3", -1180.302, 62.9642, 431.4881, 90, "REMAINS37_3_MAGNET", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(10043, " ", "f_remains_37_3", -2326.049, 1458.708, 90, "REMAINS37_3_MAGNET");
+		AddNpc(17, 10043, " ", "f_remains_37_3", -2326.049, 55.15183, 1458.708, 90, "REMAINS37_3_MAGNET", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(10043, " ", "f_remains_37_3", -2640.187, 1279.199, 90, "REMAINS37_3_MAGNET");
+		AddNpc(17, 10043, " ", "f_remains_37_3", -2640.187, 53.2314, 1279.199, 90, "REMAINS37_3_MAGNET", "", "");
+		AddNpc(18, 20026, "REMAINS37_3_HIDDEN", "f_remains_37_3", -1292.594, 59.9815, 1590.07, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152037, " ", "f_remains_37_3", 907.9241, 358.5181, 192, "REMAINS37_3_PLATEPIECES");
+		AddNpc(26, 152037, " ", "f_remains_37_3", 907.9241, 92.1332, 358.5181, 192, "REMAINS37_3_PLATEPIECES", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152037, " ", "f_remains_37_3", 1131.236, -138.7986, 63, "REMAINS37_3_PLATEPIECES");
+		AddNpc(26, 152037, " ", "f_remains_37_3", 1131.236, 92.1332, -138.7986, 63, "REMAINS37_3_PLATEPIECES", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152037, " ", "f_remains_37_3", 410.2217, -119.6087, -23, "REMAINS37_3_PLATEPIECES");
+		AddNpc(26, 152037, " ", "f_remains_37_3", 410.2217, 92.1332, -119.6087, -23, "REMAINS37_3_PLATEPIECES", "", "");
+		AddNpc(27, 152040, " ", "f_remains_37_3", -837.0861, 7.0451, -603.8566, 5, "", "", "");
 		
 		// Archeologist Justas
 		//-------------------------------------------------------------------------
-		AddNpc(155034, "Archeologist Justas", "f_remains_37_3", -859.0741, -610.1102, 90, "REMAINS37_3_JUSTAS_AFTER");
+		AddNpc(28, 155034, "Archeologist Justas", "f_remains_37_3", -859.0741, 7.1051, -610.1102, 90, "REMAINS37_3_JUSTAS_AFTER", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152044, " ", "f_remains_37_3", -1747.711, -1021.968, 197, "", "REMAINS37_3_WELL_ROPE", "");
+		AddNpc(32, 152044, " ", "f_remains_37_3", -1747.711, 60.1406, -1021.968, 197, "", "REMAINS37_3_WELL_ROPE", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_remains_37_3", 455.1151, -1175.304, 0, "WARP_F_REMAINS_37_3", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(33, 40120, "Statue of Goddess Vakarine", "f_remains_37_3", 455.1151, 80.3744, -1175.304, 0, "WARP_F_REMAINS_37_3", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(34, 147364, "Gate Entrance x", "f_remains_37_3", 445.3654, 80.3744, -1192.115, 90, "", "", "");
+		AddNpc(35, 147362, "", "f_remains_37_3", -869.2113, 7.105118, -612.2848, 90, "", "", "");
+		AddNpc(36, 147362, "", "f_remains_37_3", -737.3444, 7.252853, 679.0669, 90, "", "", "");
+		AddNpc(38, 147362, "", "f_remains_37_3", -560.7008, 3.878076, -1585.192, 90, "", "", "");
+		AddNpc(39, 147362, "", "f_remains_37_3", -3655.978, 52.07893, 1636.807, 90, "", "", "");
 		
 		// [Dragoon Master]{nl}Valeska Himil
 		//-------------------------------------------------------------------------
-		AddNpc(151068, "[Dragoon Master]{nl}Valeska Himil", "f_remains_37_3", 359.8544, -1075.918, 0, "DRAGOON_MASTER");
+		AddNpc(41, 151068, "[Dragoon Master]{nl}Valeska Himil", "f_remains_37_3", 359.8544, 80.52022, -1075.918, 0, "DRAGOON_MASTER", "", "");
 		
 		// [Kabbalist Master]{nl}Libgar Hippathia
 		//-------------------------------------------------------------------------
-		AddNpc(151074, "[Kabbalist Master]{nl}Libgar Hippathia", "f_remains_37_3", 556.4647, -1240.867, 0, "KABBALIST_MASTER");
+		AddNpc(42, 151074, "[Kabbalist Master]{nl}Libgar Hippathia", "f_remains_37_3", 556.4647, 80.37436, -1240.867, 0, "KABBALIST_MASTER", "", "");
 		
 		// [Plague Doctor Master]{nl}Philip Aurellius
 		//-------------------------------------------------------------------------
-		AddNpc(151073, "[Plague Doctor Master]{nl}Philip Aurellius", "f_remains_37_3", 204.1007, -1549.232, 90, "PLAGUEDOCTOR_MASTER");
+		AddNpc(43, 151073, "[Plague Doctor Master]{nl}Philip Aurellius", "f_remains_37_3", 204.1007, 80.37436, -1549.232, 90, "PLAGUEDOCTOR_MASTER", "", "");
 		
 		// [Kedoran Merchant Alliance]{nl}Relic Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154074, "[Kedoran Merchant Alliance]{nl}Relic Collector", "f_remains_37_3", -2617.604, 2692.306, 5, "GT_RELICSHOP_NPC");
+		AddNpc(44, 154074, "[Kedoran Merchant Alliance]{nl}Relic Collector", "f_remains_37_3", -2617.604, 52.30331, 2692.306, 5, "GT_RELICSHOP_NPC", "", "");
+		AddNpc(45, 147366, "Gate Entrance x", "f_remains_37_3", -2778.249, 52.30331, 2497.352, 90, "", "", "");
+		AddNpc(45, 147366, "Gate Entrance x", "f_remains_37_3", -2605.625, 52.30331, 2552.621, 90, "", "", "");
+		AddNpc(45, 147366, "Gate Entrance x", "f_remains_37_3", -2714.06, 52.30331, 2049.349, 90, "", "", "");
 		
 		// Earth Tower Notice Board
 		//-------------------------------------------------------------------------
-		AddNpc(154046, "Earth Tower Notice Board", "f_remains_37_3", -2761.034, 2669.357, 90, "INSTANCE_GT_GROUNDTOWER_1");
+		AddNpc(46, 154046, "Earth Tower Notice Board", "f_remains_37_3", -2761.034, 52.30331, 2669.357, 90, "INSTANCE_GT_GROUNDTOWER_1", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_remains_37_3", -1766.15, -969.51, 135, "TREASUREBOX_LV_F_REMAINS_37_31000");
+		AddNpc(1000, 147392, "Lv1 Treasure Chest", "f_remains_37_3", -1766.15, 60.24, -969.51, 135, "TREASUREBOX_LV_F_REMAINS_37_31000", "", "");
 		
 		// [Hackapell Master]{nl}Flyntess
 		//-------------------------------------------------------------------------
-		AddNpc(57232, "[Hackapell Master]{nl}Flyntess", "f_remains_37_3", 604.5748, -1334.641, 8, "HACKAPELL_MASTER", "HACKAPELL_MASTER_IN");
+		AddNpc(47, 57232, "[Hackapell Master]{nl}Flyntess", "f_remains_37_3", 604.5748, 80.37437, -1334.641, 8, "HACKAPELL_MASTER", "HACKAPELL_MASTER_IN", "");
 		
 		// [Mergen Master]{nl}Vhangomont Breogen
 		//-------------------------------------------------------------------------
-		AddNpc(157022, "[Mergen Master]{nl}Vhangomont Breogen", "f_remains_37_3", 349.9032, -1567.621, 90, "MERGEN_MASTER");
+		AddNpc(48, 157022, "[Mergen Master]{nl}Vhangomont Breogen", "f_remains_37_3", 349.9032, 82.05595, -1567.621, 90, "MERGEN_MASTER", "", "");
 		
 		// [Kedoran Merchant Alliance]{nl}Operator
 		//-------------------------------------------------------------------------
-		AddNpc(20100, "[Kedoran Merchant Alliance]{nl}Operator", "f_remains_37_3", -2808.465, 2596.691, 90, "GT_RELICSHOP_NPC2");
+		AddNpc(1001, 20100, "[Kedoran Merchant Alliance]{nl}Operator", "f_remains_37_3", -2808.465, 52.30331, 2596.691, 90, "GT_RELICSHOP_NPC2", "", "");
 		
 		// Medical Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Medical Supplies", "f_remains_37_3", -412.6826, -644.6986, 90, "CHAR220_MSETP2_5_OBJ2_1");
+		AddNpc(1002, 151030, "Medical Supplies", "f_remains_37_3", -412.6826, 7.105118, -644.6986, 90, "CHAR220_MSETP2_5_OBJ2_1", "", "");
 		
 		// Medical Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Medical Supplies", "f_remains_37_3", -518.0944, -686.3282, 90, "CHAR220_MSETP2_5_OBJ2_2");
+		AddNpc(1003, 151030, "Medical Supplies", "f_remains_37_3", -518.0944, 7.105118, -686.3282, 90, "CHAR220_MSETP2_5_OBJ2_2", "", "");
 		
 		// Medical Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Medical Supplies", "f_remains_37_3", -518.6863, -352.2067, 90, "CHAR220_MSETP2_5_OBJ2_3");
+		AddNpc(1004, 151030, "Medical Supplies", "f_remains_37_3", -518.6863, 7.105118, -352.2067, 90, "CHAR220_MSETP2_5_OBJ2_3", "", "");
 		
 		// Medical Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Medical Supplies", "f_remains_37_3", -436.3757, -385.9413, 90, "CHAR220_MSETP2_5_OBJ2_4");
+		AddNpc(1005, 151030, "Medical Supplies", "f_remains_37_3", -436.3757, 7.105118, -385.9413, 90, "CHAR220_MSETP2_5_OBJ2_4", "", "");
 		
 		// Starry Town
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Starry Town", "f_remains_37_3", -702.9353, 764.9445, 165, "", "REMAINS37_3_NICO811", "");
+		AddNpc(1006, 40001, "Starry Town", "f_remains_37_3", -702.9353, 7.252859, 764.9445, 165, "", "REMAINS37_3_NICO811", "");
 		
 		// Ordinary Plant
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Ordinary Plant", "f_remains_37_3", 84.23958, -1086.137, 90, "F_TABLELAND_28_2_RAID_02_NPC_01");
+		AddNpc(1009, 47201, "Ordinary Plant", "f_remains_37_3", 84.23958, 80.37436, -1086.137, 90, "F_TABLELAND_28_2_RAID_02_NPC_01", "", "", 1);
+		
+		//  
+		//-------------------------------------------------------------------------
+		AddNpc(1010, 154046, " ", "f_remains_37_3", 826.12, 92.23, -229.22, 90, "FALLENDRAGOON_GO_GUILDMISSION", "FALLENDRAGOON_GO_GUILDMISSION", "", 1);
 	}
 }

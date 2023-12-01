@@ -14,134 +14,148 @@ public class FPilgrimroad413NpcScript : GeneralScript
 	{
 		// Salvia Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Salvia Forest", "f_pilgrimroad_41_3", -1543.187, 687.9524, -88, "", "PILGRIM41_3_PILGRIM41_2", "");
+		AddNpc(1, 40001, "Salvia Forest", "f_pilgrimroad_41_3", -1543.187, 62.01555, 687.9524, -88, "", "PILGRIM41_3_PILGRIM41_2", "");
 		
 		// Ouaas Memorial
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Ouaas Memorial", "f_pilgrimroad_41_3", -1064.135, -1412.153, -2, "", "PILGRIM41_3_PILGRIM41_5", "");
+		AddNpc(2, 40001, "Ouaas Memorial", "f_pilgrimroad_41_3", -1064.135, 173.3875, -1412.153, -2, "", "PILGRIM41_3_PILGRIM41_5", "");
 		
 		// Maven Abbey
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Maven Abbey", "f_pilgrimroad_41_3", 304.7036, -1040.122, 79, "", "PILGRIM41_3_ABBEY41_6", "");
+		AddNpc(3, 40001, "Maven Abbey", "f_pilgrimroad_41_3", 304.7036, 129.6608, -1040.122, 79, "", "PILGRIM41_3_ABBEY41_6", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_pilgrimroad_41_3", -899.8269, 515.5572, 45, "WARP_PILGRIMROAD_41_3", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(5, 40120, "Statue of Goddess Vakarine", "f_pilgrimroad_41_3", -899.8269, 62.01554, 515.5572, 45, "WARP_PILGRIMROAD_41_3", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(6, 147362, "FieldCantGen", "f_pilgrimroad_41_3", -1543.112, 62.01555, 688.6786, 50, "", "", "");
+		AddNpc(6, 147362, "FieldCantGen", "f_pilgrimroad_41_3", -1064.612, 173.3875, -1412.505, 90, "", "", "");
+		AddNpc(6, 147362, "FieldCantGen", "f_pilgrimroad_41_3", 303.6028, 129.6608, -1047.115, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155105, " ", "f_pilgrimroad_41_3", 832.64, -407.8641, 90, "PILGRIM41_3_PAIR");
+		AddNpc(7, 155105, " ", "f_pilgrimroad_41_3", 832.64, 137.9601, -407.8641, 90, "PILGRIM41_3_PAIR", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147306, " ", "f_pilgrimroad_41_3", -848.072, -998.4016, 90, "PILGRIM41_3_CURLING");
+		AddNpc(8, 147306, " ", "f_pilgrimroad_41_3", -848.072, 173.3875, -998.4016, 90, "PILGRIM41_3_CURLING", "", "");
+		AddNpc(9, 20026, "", "f_pilgrimroad_41_3", -266.942, 136.6415, -638.7809, 90, "", "", "");
+		AddNpc(9, 20026, "", "f_pilgrimroad_41_3", -1253.076, 136.6415, -185.1586, 90, "", "", "");
+		AddNpc(9, 20026, "", "f_pilgrimroad_41_3", -397.8129, 63.32967, 1061.811, 90, "", "", "");
+		AddNpc(9, 20026, "", "f_pilgrimroad_41_3", 1155.662, 52.27791, 1285.804, 90, "", "", "");
+		AddNpc(10, 20026, "", "f_pilgrimroad_41_3", 907.1396, 137.9601, -130.6535, 90, "", "", "");
+		AddNpc(10, 20026, "", "f_pilgrimroad_41_3", 762.1397, 52.27792, 497.1583, 90, "", "", "");
+		AddNpc(10, 20026, "", "f_pilgrimroad_41_3", -280.1722, 136.6415, 135.927, 90, "", "", "");
+		AddNpc(10, 20026, "", "f_pilgrimroad_41_3", -1322.288, 173.3875, -880.6228, 90, "", "", "");
 		
 		// Monk Stella
 		//-------------------------------------------------------------------------
-		AddNpc(155126, "Monk Stella", "f_pilgrimroad_41_3", -723.0068, 545.3333, 9, "PILGRIM413_SQ_02");
+		AddNpc(11, 155126, "Monk Stella", "f_pilgrimroad_41_3", -723.0068, 62.01555, 545.3333, 9, "PILGRIM413_SQ_02", "", "", 1);
 		
 		// Monk Stella
 		//-------------------------------------------------------------------------
-		AddNpc(155126, "Monk Stella", "f_pilgrimroad_41_3", 780.2238, 426.4961, 90, "PILGRIM413_SQ_06");
+		AddNpc(12, 155126, "Monk Stella", "f_pilgrimroad_41_3", 780.2238, 52.27792, 426.4961, 90, "PILGRIM413_SQ_06", "", "", 1);
 		
 		// Monk Stella
 		//-------------------------------------------------------------------------
-		AddNpc(155126, "Monk Stella", "f_pilgrimroad_41_3", 988.6484, 1036.448, 90, "PILGRIM413_SQ_08");
+		AddNpc(13, 155126, "Monk Stella", "f_pilgrimroad_41_3", 988.6484, 45.03738, 1036.448, 90, "PILGRIM413_SQ_08", "", "", 1);
 		
 		// Monk Stella
 		//-------------------------------------------------------------------------
-		AddNpc(155126, "Monk Stella", "f_pilgrimroad_41_3", 1001.34, 1197.2, 5, "PILGRIM413_SQ_08_1");
+		AddNpc(14, 155126, "Monk Stella", "f_pilgrimroad_41_3", 1001.34, 52.28, 1197.2, 5, "PILGRIM413_SQ_08_1", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(151051, "", "f_pilgrimroad_41_3", 1047.04, 1057.119, 246, "PILGRIM413_SQ_07");
+		AddNpc(15, 151051, "", "f_pilgrimroad_41_3", 1047.04, 45.03738, 1057.119, 246, "PILGRIM413_SQ_07", "", "", 0);
 		
 		// Tired Pilgrim
 		//-------------------------------------------------------------------------
-		AddNpc(155035, "Tired Pilgrim", "f_pilgrimroad_41_3", 849.7737, 127.4243, 117, "PILGRIM413_SQ_06_1");
+		AddNpc(16, 155035, "Tired Pilgrim", "f_pilgrimroad_41_3", 849.7737, 52.27792, 127.4243, 117, "PILGRIM413_SQ_06_1", "", "", 0);
 		
 		// Tired Pilgrim
 		//-------------------------------------------------------------------------
-		AddNpc(152064, "Tired Pilgrim", "f_pilgrimroad_41_3", 961.9285, 109.5651, 90, "PILGRIM413_SQ_06_2");
+		AddNpc(17, 152064, "Tired Pilgrim", "f_pilgrimroad_41_3", 961.9285, 52.27792, 109.5651, 90, "PILGRIM413_SQ_06_2", "", "", 0);
 		
 		// Tired Pilgrim
 		//-------------------------------------------------------------------------
-		AddNpc(155039, "Tired Pilgrim", "f_pilgrimroad_41_3", 1111.5, 517.0377, 3, "PILGRIM413_SQ_06_3");
+		AddNpc(18, 155039, "Tired Pilgrim", "f_pilgrimroad_41_3", 1111.5, 52.27791, 517.0377, 3, "PILGRIM413_SQ_06_3", "", "", 0);
 		
 		// Tired Pilgrim
 		//-------------------------------------------------------------------------
-		AddNpc(155033, "Tired Pilgrim", "f_pilgrimroad_41_3", 1178.565, 428.8376, -12, "PILGRIM413_SQ_06_4");
+		AddNpc(19, 155033, "Tired Pilgrim", "f_pilgrimroad_41_3", 1178.565, 52.27791, 428.8376, -12, "PILGRIM413_SQ_06_4", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(40095, "", "f_pilgrimroad_41_3", -1228.621, -309.5692, 90, "PILGRIM413_SQ_03_1");
+		AddNpc(20, 40095, "", "f_pilgrimroad_41_3", -1228.621, 136.6415, -309.5692, 90, "PILGRIM413_SQ_03_1", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(40095, "", "f_pilgrimroad_41_3", -1211.611, -236.0851, 90, "PILGRIM413_SQ_03_2");
+		AddNpc(21, 40095, "", "f_pilgrimroad_41_3", -1211.611, 136.6415, -236.0851, 90, "PILGRIM413_SQ_03_2", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(40095, "", "f_pilgrimroad_41_3", -1190.608, -160.5172, 90, "PILGRIM413_SQ_03_3");
+		AddNpc(22, 40095, "", "f_pilgrimroad_41_3", -1190.608, 136.6415, -160.5172, 90, "PILGRIM413_SQ_03_3", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(40095, "", "f_pilgrimroad_41_3", -1157.876, -93.09259, 90, "PILGRIM413_SQ_03_4");
+		AddNpc(23, 40095, "", "f_pilgrimroad_41_3", -1157.876, 136.6415, -93.09259, 90, "PILGRIM413_SQ_03_4", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_pilgrimroad_41_3", -1229.397, 691.8749, 90, "", "PILGRIM413_SQ_01", "");
+		AddNpc(24, 20026, "", "f_pilgrimroad_41_3", -1229.397, 62.01555, 691.8749, 90, "", "PILGRIM413_SQ_01", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_pilgrimroad_41_3", 625.3887, 307.2043, 90, "", "PILGRIM413_SQ_05", "");
+		AddNpc(25, 20026, "", "f_pilgrimroad_41_3", 625.3887, 84, 307.2043, 90, "", "PILGRIM413_SQ_05", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_pilgrimroad_41_3", 1047.04, 1057.119, 90, "", "PILGRIM413_SQ_09", "");
+		AddNpc(26, 20026, "", "f_pilgrimroad_41_3", 1047.04, 45.03738, 1057.119, 90, "", "PILGRIM413_SQ_09", "");
+		AddNpc(27, 147362, "Gate Entrance x", "f_pilgrimroad_41_3", -726.5321, 62.01555, 546.5388, 90, "", "", "");
+		AddNpc(28, 147362, "Gate Entrance x", "f_pilgrimroad_41_3", 1005.987, 45.03738, 1118.564, 90, "", "", "");
+		AddNpc(29, 147366, "Gate Entrance x", "f_pilgrimroad_41_3", 981.9142, 52.27791, 334.0399, 90, "", "", "");
 		
 		// Hidden Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", 669.14, 1155.49, 81, "PILGRIM413_KQ_1_BOX");
+		AddNpc(104, 154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", 669.14, 52.28, 1155.49, 81, "PILGRIM413_KQ_1_BOX", "", "", 1);
 		
 		// Hidden Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", 1301.3, 272.38, -74, "PILGRIM413_KQ_1_BOX");
+		AddNpc(104, 154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", 1301.3, 52.28, 272.38, -74, "PILGRIM413_KQ_1_BOX", "", "", 1);
 		
 		// Hidden Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", 1137.7, -694.7, 200, "PILGRIM413_KQ_1_BOX");
+		AddNpc(104, 154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", 1137.7, 137.96, -694.7, 200, "PILGRIM413_KQ_1_BOX", "", "", 1);
 		
 		// Hidden Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", -1379.38, -1021.33, 95, "PILGRIM413_KQ_1_BOX");
+		AddNpc(104, 154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", -1379.38, 173.39, -1021.33, 95, "PILGRIM413_KQ_1_BOX", "", "", 1);
 		
 		// Hidden Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", -768.77, -2.3, -25, "PILGRIM413_KQ_1_BOX");
+		AddNpc(104, 154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", -768.77, 136.64, -2.3, -25, "PILGRIM413_KQ_1_BOX", "", "", 1);
 		
 		// Hidden Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", -923.97, 861.72, -1, "PILGRIM413_KQ_1_BOX");
+		AddNpc(104, 154098, "Hidden Treasure Chest", "f_pilgrimroad_41_3", -923.97, 62.02, 861.72, -1, "PILGRIM413_KQ_1_BOX", "", "", 1);
 		
 		// [Shadowmancer Master]{nl}Eclipse Ubik
 		//-------------------------------------------------------------------------
-		AddNpc(153195, "[Shadowmancer Master]{nl}Eclipse Ubik", "f_pilgrimroad_41_3", 884.2289, 527.3183, 45, "JOB_SHADOWMANCER_MASTER");
+		AddNpc(105, 153195, "[Shadowmancer Master]{nl}Eclipse Ubik", "f_pilgrimroad_41_3", 884.2289, 52.27792, 527.3183, 45, "JOB_SHADOWMANCER_MASTER", "", "", 1);
 		
 		// Shadow Adaptation Training Device
 		//-------------------------------------------------------------------------
-		AddNpc(155159, "Shadow Adaptation Training Device", "f_pilgrimroad_41_3", 30.48, 40.73, -45, "JOB_SHADOWMASTER_Q1_OBJECT");
+		AddNpc(106, 155159, "Shadow Adaptation Training Device", "f_pilgrimroad_41_3", 30.48, 136.64, 40.73, -45, "JOB_SHADOWMASTER_Q1_OBJECT", "", "");
 		
 		// Pirate Captain Lowe
 		//-------------------------------------------------------------------------
-		AddNpc(156110, "Pirate Captain Lowe", "f_pilgrimroad_41_3", -736.7109, 377.894, 98, "CHAR220_MSETP2_4_NPC");
+		AddNpc(107, 156110, "Pirate Captain Lowe", "f_pilgrimroad_41_3", -736.7109, 62.01553, 377.894, 98, "CHAR220_MSETP2_4_NPC", "", "", 1);
 		
 		// Dimensional Rift
 		//-------------------------------------------------------------------------
-		AddNpc(154065, "Dimensional Rift", "f_pilgrimroad_41_3", 818.2333, 506.1568, 90, "PILGRIMROAD_RAID_LEGEND_PORTAL");
+		AddNpc(109, 154065, "Dimensional Rift", "f_pilgrimroad_41_3", 818.2333, 52.27792, 506.1568, 90, "PILGRIMROAD_RAID_LEGEND_PORTAL", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_pilgrimroad_41_3", 941.3651, 1348.198, 90, "", "EXPLORER_MISLE20", "");
+		AddNpc(110, 40095, " ", "f_pilgrimroad_41_3", 941.3651, 52.27792, 1348.198, 90, "", "EXPLORER_MISLE20", "");
 	}
 }

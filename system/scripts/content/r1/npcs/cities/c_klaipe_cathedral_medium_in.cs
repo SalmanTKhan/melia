@@ -14,10 +14,10 @@ public class CKlaipeCathedralMediumInNpcScript : GeneralScript
 	{
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "c_klaipe_cathedral_medium_in", -63.57682, 7.541009, 90, "", "GIVEHOLYTHING_Q_1_TRACK", "");
+		AddNpc(1, 147469, " ", "c_klaipe_cathedral_medium_in", -63.57682, 16.55554, 7.541009, 90, "", "GIVEHOLYTHING_Q_1_TRACK", "");
 		
 		// Laima's Sanctuary
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Laima's Sanctuary", "c_klaipe_cathedral_medium_in", 188.9748, 6.096366, 90, "", "WARP_C_KLAIPE_CATHEDRAL_MEDIUM", "");
+		AddNpc(2, 40001, "Laima's Sanctuary", "c_klaipe_cathedral_medium_in", 188.9748, 16.54021, 6.096366, 90, "", "WARP_C_KLAIPE_CATHEDRAL_MEDIUM", "");
 	}
 }

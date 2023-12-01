@@ -14,130 +14,130 @@ public class F3Cmlake273NpcScript : GeneralScript
 	{
 		// Laker Boy
 		//-------------------------------------------------------------------------
-		AddNpc(147481, "Laker Boy", "f_3cmlake_27_3", -190.3991, -972.2578, 90, "F_3CMLAKE_27_3_NPC1");
+		AddNpc(4, 147481, "Laker Boy", "f_3cmlake_27_3", -190.3991, -26.76865, -972.2578, 90, "F_3CMLAKE_27_3_NPC1", "", "", 0);
 		
 		// Laker Boy
 		//-------------------------------------------------------------------------
-		AddNpc(147481, "Laker Boy", "f_3cmlake_27_3", -14.68718, -135.9241, 90, "F_3CMLAKE_27_3_NPC2");
+		AddNpc(5, 147481, "Laker Boy", "f_3cmlake_27_3", -14.68718, -26.08971, -135.9241, 90, "F_3CMLAKE_27_3_NPC2", "", "", 1);
 		
 		// Water Plant
 		//-------------------------------------------------------------------------
-		AddNpc(152080, "Water Plant", "f_3cmlake_27_3", -5.289421, -1128.112, 90, "F_3CMLAKE_27_3_SQ_1_HNPC");
+		AddNpc(6, 152080, "Water Plant", "f_3cmlake_27_3", -5.289421, -26.76865, -1128.112, 90, "F_3CMLAKE_27_3_SQ_1_HNPC", "", "", 1);
 		
 		// Water Plant
 		//-------------------------------------------------------------------------
-		AddNpc(152080, "Water Plant", "f_3cmlake_27_3", 253.165, -1107.02, 90, "F_3CMLAKE_27_3_SQ_1_HNPC");
+		AddNpc(6, 152080, "Water Plant", "f_3cmlake_27_3", 253.165, -26.76865, -1107.02, 90, "F_3CMLAKE_27_3_SQ_1_HNPC", "", "", 1);
 		
 		// Water Plant
 		//-------------------------------------------------------------------------
-		AddNpc(152080, "Water Plant", "f_3cmlake_27_3", 214.4096, -936.6995, 90, "F_3CMLAKE_27_3_SQ_1_HNPC");
+		AddNpc(6, 152080, "Water Plant", "f_3cmlake_27_3", 214.4096, -26.76865, -936.6995, 90, "F_3CMLAKE_27_3_SQ_1_HNPC", "", "", 1);
 		
 		// Water Plant
 		//-------------------------------------------------------------------------
-		AddNpc(152080, "Water Plant", "f_3cmlake_27_3", -9.281256, -840.6525, 90, "F_3CMLAKE_27_3_SQ_1_HNPC");
+		AddNpc(6, 152080, "Water Plant", "f_3cmlake_27_3", -9.281256, -26.76865, -840.6525, 90, "F_3CMLAKE_27_3_SQ_1_HNPC", "", "", 1);
 		
 		// Water Plant
 		//-------------------------------------------------------------------------
-		AddNpc(152080, "Water Plant", "f_3cmlake_27_3", -80.57188, -907.6273, 90, "F_3CMLAKE_27_3_SQ_1_HNPC");
+		AddNpc(6, 152080, "Water Plant", "f_3cmlake_27_3", -80.57188, -26.76865, -907.6273, 90, "F_3CMLAKE_27_3_SQ_1_HNPC", "", "", 1);
 		
 		// Water Plant
 		//-------------------------------------------------------------------------
-		AddNpc(152080, "Water Plant", "f_3cmlake_27_3", -110.219, -1050.614, 90, "F_3CMLAKE_27_3_SQ_1_HNPC");
+		AddNpc(6, 152080, "Water Plant", "f_3cmlake_27_3", -110.219, -26.76865, -1050.614, 90, "F_3CMLAKE_27_3_SQ_1_HNPC", "", "", 1);
 		
 		// Water Plant
 		//-------------------------------------------------------------------------
-		AddNpc(152080, "Water Plant", "f_3cmlake_27_3", -65.32784, -1208.428, 90, "F_3CMLAKE_27_3_SQ_1_HNPC");
+		AddNpc(6, 152080, "Water Plant", "f_3cmlake_27_3", -65.32784, -26.76865, -1208.428, 90, "F_3CMLAKE_27_3_SQ_1_HNPC", "", "", 1);
 		
 		// Water Plant
 		//-------------------------------------------------------------------------
-		AddNpc(152080, "Water Plant", "f_3cmlake_27_3", 65.31915, -1021.522, 90, "F_3CMLAKE_27_3_SQ_1_HNPC");
+		AddNpc(6, 152080, "Water Plant", "f_3cmlake_27_3", 65.31915, -26.76865, -1021.522, 90, "F_3CMLAKE_27_3_SQ_1_HNPC", "", "", 1);
 		
 		// Water Plant Pile
 		//-------------------------------------------------------------------------
-		AddNpc(47203, "Water Plant Pile", "f_3cmlake_27_3", -158.2262, -896.6849, 90, "F_3CMLAKE_27_3_SQ_2_NPC1");
+		AddNpc(7, 47203, "Water Plant Pile", "f_3cmlake_27_3", -158.2262, -26.76865, -896.6849, 90, "F_3CMLAKE_27_3_SQ_2_NPC1", "", "", 0);
 		
 		// Aqueduct
 		//-------------------------------------------------------------------------
-		AddNpc(152079, "Aqueduct", "f_3cmlake_27_3", 52.79242, -84.88986, 90, "F_3CMLAKE_27_3_SQ_2_NPC3");
+		AddNpc(8, 152079, "Aqueduct", "f_3cmlake_27_3", 52.79242, -22.17522, -84.88986, 90, "F_3CMLAKE_27_3_SQ_2_NPC3", "", "", 1);
 		
 		// Water Point Magic Source
 		//-------------------------------------------------------------------------
-		AddNpc(153159, "Water Point Magic Source", "f_3cmlake_27_3", -723.8324, -620.761, 90, "F_3CMLAKE_27_3_SQ_3_NPC1");
+		AddNpc(10, 153159, "Water Point Magic Source", "f_3cmlake_27_3", -723.8324, -26.76865, -620.761, 90, "F_3CMLAKE_27_3_SQ_3_NPC1", "", "", 1);
 		
 		// Water Point Magic Source
 		//-------------------------------------------------------------------------
-		AddNpc(153159, "Water Point Magic Source", "f_3cmlake_27_3", -498.7029, -529.0994, 90, "F_3CMLAKE_27_3_SQ_3_NPC1");
+		AddNpc(10, 153159, "Water Point Magic Source", "f_3cmlake_27_3", -498.7029, -26.76865, -529.0994, 90, "F_3CMLAKE_27_3_SQ_3_NPC1", "", "", 1);
 		
 		// Water Point Magic Source
 		//-------------------------------------------------------------------------
-		AddNpc(153159, "Water Point Magic Source", "f_3cmlake_27_3", -521.5326, -330.0955, 90, "F_3CMLAKE_27_3_SQ_3_NPC1");
+		AddNpc(10, 153159, "Water Point Magic Source", "f_3cmlake_27_3", -521.5326, -26.76865, -330.0955, 90, "F_3CMLAKE_27_3_SQ_3_NPC1", "", "", 1);
 		
 		// Water Point Magic Source
 		//-------------------------------------------------------------------------
-		AddNpc(153159, "Water Point Magic Source", "f_3cmlake_27_3", -789.4523, -291.0576, 90, "F_3CMLAKE_27_3_SQ_3_NPC1");
+		AddNpc(10, 153159, "Water Point Magic Source", "f_3cmlake_27_3", -789.4523, -26.76865, -291.0576, 90, "F_3CMLAKE_27_3_SQ_3_NPC1", "", "", 1);
 		
 		// Water Point Magic Source
 		//-------------------------------------------------------------------------
-		AddNpc(153159, "Water Point Magic Source", "f_3cmlake_27_3", -707.2299, -457.3625, 90, "F_3CMLAKE_27_3_SQ_3_NPC1");
+		AddNpc(10, 153159, "Water Point Magic Source", "f_3cmlake_27_3", -707.2299, -26.76865, -457.3625, 90, "F_3CMLAKE_27_3_SQ_3_NPC1", "", "", 1);
 		
 		// Water Point Magic Source
 		//-------------------------------------------------------------------------
-		AddNpc(153159, "Water Point Magic Source", "f_3cmlake_27_3", -946.7679, -464.1923, 90, "F_3CMLAKE_27_3_SQ_3_NPC1");
+		AddNpc(10, 153159, "Water Point Magic Source", "f_3cmlake_27_3", -946.7679, -27.40841, -464.1923, 90, "F_3CMLAKE_27_3_SQ_3_NPC1", "", "", 1);
 		
 		// Water Point Magic Source
 		//-------------------------------------------------------------------------
-		AddNpc(153159, "Water Point Magic Source", "f_3cmlake_27_3", -972.0958, -248.9524, 90, "F_3CMLAKE_27_3_SQ_3_NPC1");
+		AddNpc(10, 153159, "Water Point Magic Source", "f_3cmlake_27_3", -972.0958, -27.5922, -248.9524, 90, "F_3CMLAKE_27_3_SQ_3_NPC1", "", "", 1);
 		
 		// Water Point Magic Source
 		//-------------------------------------------------------------------------
-		AddNpc(153159, "Water Point Magic Source", "f_3cmlake_27_3", -741.4828, -118.9433, 90, "F_3CMLAKE_27_3_SQ_3_NPC1");
+		AddNpc(10, 153159, "Water Point Magic Source", "f_3cmlake_27_3", -741.4828, -26.76865, -118.9433, 90, "F_3CMLAKE_27_3_SQ_3_NPC1", "", "", 1);
 		
 		// Laker Leader
 		//-------------------------------------------------------------------------
-		AddNpc(150179, "Laker Leader", "f_3cmlake_27_3", 776.9904, 311.575, 90, "F_3CMLAKE_27_3_NPC3");
+		AddNpc(11, 150179, "Laker Leader", "f_3cmlake_27_3", 776.9904, 19.45927, 311.575, 90, "F_3CMLAKE_27_3_NPC3", "", "", 1);
 		
 		// Laker Leader
 		//-------------------------------------------------------------------------
-		AddNpc(150179, "Laker Leader", "f_3cmlake_27_3", 1271.587, -860.1459, 90, "F_3CMLAKE_27_3_NPC4");
+		AddNpc(12, 150179, "Laker Leader", "f_3cmlake_27_3", 1271.587, -29.92323, -860.1459, 90, "F_3CMLAKE_27_3_NPC4", "", "", 1);
 		
 		// Plant with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1869.257, 331.6171, 90, "F_3CMLAKE_27_3_SQ_5_HNPC");
+		AddNpc(15, 153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1869.257, 15.09548, 331.6171, 90, "F_3CMLAKE_27_3_SQ_5_HNPC", "", "", 1);
 		
 		// Plant with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1814.401, 248.4681, 90, "F_3CMLAKE_27_3_SQ_5_HNPC");
+		AddNpc(15, 153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1814.401, 15.09548, 248.4681, 90, "F_3CMLAKE_27_3_SQ_5_HNPC", "", "", 1);
 		
 		// Plant with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1639.894, 287.8714, 90, "F_3CMLAKE_27_3_SQ_5_HNPC");
+		AddNpc(15, 153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1639.894, 15.09548, 287.8714, 90, "F_3CMLAKE_27_3_SQ_5_HNPC", "", "", 1);
 		
 		// Plant with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1737.945, 578.4922, 90, "F_3CMLAKE_27_3_SQ_5_HNPC");
+		AddNpc(15, 153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1737.945, 15.09548, 578.4922, 90, "F_3CMLAKE_27_3_SQ_5_HNPC", "", "", 1);
 		
 		// Plant with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1856.725, 453.5076, 90, "F_3CMLAKE_27_3_SQ_5_HNPC");
+		AddNpc(15, 153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1856.725, 15.09548, 453.5076, 90, "F_3CMLAKE_27_3_SQ_5_HNPC", "", "", 1);
 		
 		// Plant with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1747.567, 324.6046, 90, "F_3CMLAKE_27_3_SQ_5_HNPC");
+		AddNpc(15, 153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1747.567, 15.09549, 324.6046, 90, "F_3CMLAKE_27_3_SQ_5_HNPC", "", "", 1);
 		
 		// Plant with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Plant with Lake Energy", "f_3cmlake_27_3", 2000.891, 348.0634, 90, "F_3CMLAKE_27_3_SQ_5_HNPC");
+		AddNpc(15, 153054, "Plant with Lake Energy", "f_3cmlake_27_3", 2000.891, 15.09548, 348.0634, 90, "F_3CMLAKE_27_3_SQ_5_HNPC", "", "", 1);
 		
 		// Plant with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1994.988, 484.8672, 90, "F_3CMLAKE_27_3_SQ_5_HNPC");
+		AddNpc(15, 153054, "Plant with Lake Energy", "f_3cmlake_27_3", 1994.988, 15.09548, 484.8672, 90, "F_3CMLAKE_27_3_SQ_5_HNPC", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(153197, "", "f_3cmlake_27_3", 916.5714, -673.0851, 90, "", "F_3CMLAKE_27_3_SQ_7_HNPC", "");
+		AddNpc(16, 153197, "", "f_3cmlake_27_3", 916.5714, -28.54279, -673.0851, 90, "", "F_3CMLAKE_27_3_SQ_7_HNPC", "");
 		
 		// Maven 31 Waters
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Maven 31 Waters", "f_3cmlake_27_3", 22.01014, -1574.822, 2, "", "F_3CMLAKE_27_3_TO_F_3CMLAKE_27_2", "");
+		AddNpc(18, 40001, "Maven 31 Waters", "f_3cmlake_27_3", 22.01014, -28.47948, -1574.822, 2, "", "F_3CMLAKE_27_3_TO_F_3CMLAKE_27_2", "");
 	}
 }

@@ -14,378 +14,386 @@ public class FPilgrimroad52NpcScript : GeneralScript
 	{
 		// Forest of Prayer
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Forest of Prayer", "f_pilgrimroad_52", -1184.457, -3331.97, 350, "", "PILGRIM52_PILGRIM51", "");
+		AddNpc(2, 40001, "Forest of Prayer", "f_pilgrimroad_52", -1184.457, 139.8956, -3331.97, 350, "", "PILGRIM52_PILGRIM51", "");
 		
 		// Verkti Square
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Verkti Square", "f_pilgrimroad_52", -471, 2056, 180, "", "PILGRIM52_FLASH59", "");
+		AddNpc(3, 40001, "Verkti Square", "f_pilgrimroad_52", -471, 245, 2056, 180, "", "PILGRIM52_FLASH59", "");
 		
 		// Main Building
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Main Building", "f_pilgrimroad_52", 1033, -691, 115, "", "PILGRIM52_CATHEDRAL53", "");
+		AddNpc(4, 40001, "Main Building", "f_pilgrimroad_52", 1033, 47, -691, 115, "", "PILGRIM52_CATHEDRAL53", "");
 		
 		// Great Merchant Gilliam
 		//-------------------------------------------------------------------------
-		AddNpc(20154, "Great Merchant Gilliam", "f_pilgrimroad_52", 205, 553, 115, "REQ_SEMPLE_06");
+		AddNpc(5, 20154, "Great Merchant Gilliam", "f_pilgrimroad_52", 205, 214, 553, 115, "REQ_SEMPLE_06", "", "");
 		
 		// Pilgrim Theophilis
 		//-------------------------------------------------------------------------
-		AddNpc(155037, "Pilgrim Theophilis", "f_pilgrimroad_52", -993.1726, -2016.412, 90, "PILGRIM52_NPC01");
+		AddNpc(8, 155037, "Pilgrim Theophilis", "f_pilgrimroad_52", -993.1726, 139.4656, -2016.412, 90, "PILGRIM52_NPC01", "", "");
 		
 		// Pilgrim Witas
 		//-------------------------------------------------------------------------
-		AddNpc(155038, "Pilgrim Witas", "f_pilgrimroad_52", -481.6351, 392.3651, 95, "PILGRIM52_NPC02");
+		AddNpc(9, 155038, "Pilgrim Witas", "f_pilgrimroad_52", -481.6351, 215.1778, 392.3651, 95, "PILGRIM52_NPC02", "", "", 0);
 		
 		// Tombstone
 		//-------------------------------------------------------------------------
-		AddNpc(152009, "Tombstone", "f_pilgrimroad_52", -1336.022, -22.18338, 12, "PILGRIM52_TOMB01");
+		AddNpc(12, 152009, "Tombstone", "f_pilgrimroad_52", -1336.022, 156.583, -22.18338, 12, "PILGRIM52_TOMB01", "", "");
 		
 		// Tombstone
 		//-------------------------------------------------------------------------
-		AddNpc(152009, "Tombstone", "f_pilgrimroad_52", -738.9567, 1115.345, 12, "PILGRIM52_TOMB02");
+		AddNpc(13, 152009, "Tombstone", "f_pilgrimroad_52", -738.9567, 245.719, 1115.345, 12, "PILGRIM52_TOMB02", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147501, " ", "f_pilgrimroad_52", 671.9559, 2062.977, 22, "PILGRIM52_COLUMN01");
+		AddNpc(14, 147501, " ", "f_pilgrimroad_52", 671.9559, 233.8956, 2062.977, 22, "PILGRIM52_COLUMN01", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147501, " ", "f_pilgrimroad_52", 886.4635, 2571.722, 3, "PILGRIM52_COLUMN02");
+		AddNpc(15, 147501, " ", "f_pilgrimroad_52", 886.4635, 233.8956, 2571.722, 3, "PILGRIM52_COLUMN02", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147501, " ", "f_pilgrimroad_52", 1545.442, 2557.315, -76, "PILGRIM52_COLUMN03");
+		AddNpc(16, 147501, " ", "f_pilgrimroad_52", 1545.442, 233.8956, 2557.315, -76, "PILGRIM52_COLUMN03", "", "");
+		AddNpc(18, 152003, " ", "f_pilgrimroad_52", 1778.841, 232.1314, 2016.58, -10, "", "", "");
 		
 		// Pond of Silence
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Pond of Silence", "f_pilgrimroad_52", 1129.753, 2197.095, 90, "PILGRIM52_SPRING");
+		AddNpc(20, 147469, "Pond of Silence", "f_pilgrimroad_52", 1129.753, 219.5423, 2197.095, 90, "PILGRIM52_SPRING", "", "");
 		
 		// pilgrim52_SQ_072
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "pilgrim52_SQ_072", "f_pilgrimroad_52", 2662.322, -104.5612, 90, "", "PILGRIM52_TRIGGER", "");
+		AddNpc(21, 20026, "pilgrim52_SQ_072", "f_pilgrimroad_52", 2662.322, 156.4986, -104.5612, 90, "", "PILGRIM52_TRIGGER", "");
 		
 		// pilgrim52_SQ_061
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "pilgrim52_SQ_061", "f_pilgrimroad_52", 517.9269, -782.6625, 90, "", "PILGRIM_SUCCUBUS", "");
+		AddNpc(22, 20026, "pilgrim52_SQ_061", "f_pilgrimroad_52", 517.9269, 47.44299, -782.6625, 90, "", "PILGRIM_SUCCUBUS", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -899.9468, -2737.876, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -899.9468, 139.465, -2737.876, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -782.3813, -2721.165, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -782.3813, 139.465, -2721.165, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -749.5302, -2802.483, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -749.5302, 139.465, -2802.483, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -795.4399, -2782.364, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -795.4399, 139.465, -2782.364, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -835.4092, -2780.942, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -835.4092, 139.465, -2780.942, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -928.8033, -2692.38, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -928.8033, 139.465, -2692.38, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -901.4573, -2766.979, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -901.4573, 139.465, -2766.979, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -850.6093, -2717.864, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -850.6093, 139.465, -2717.864, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -775.5745, -2843.473, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -775.5745, 139.465, -2843.473, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -954.4254, -2733.813, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -954.4254, 139.465, -2733.813, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -679.3064, -2851.305, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -679.3064, 139.465, -2851.305, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_52", -679.8217, -2810.973, 90, "PILGRIM52_TOMBSTONE");
+		AddNpc(23, 147469, " ", "f_pilgrimroad_52", -679.8217, 139.465, -2810.973, 90, "PILGRIM52_TOMBSTONE", "", "");
 		
 		// Tree of Faith
 		//-------------------------------------------------------------------------
-		AddNpc(152012, "Tree of Faith", "f_pilgrimroad_52", 1041.164, 2276.617, -19, "", "PILGRIM52_TRUTHTREE", "");
+		AddNpc(24, 152012, "Tree of Faith", "f_pilgrimroad_52", 1041.164, 233.8956, 2276.617, -19, "", "PILGRIM52_TRUTHTREE", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -881.6045, -1769.293, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -881.6045, 139.4656, -1769.293, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -1053.532, -1680.649, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -1053.532, 139.4656, -1680.649, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -1129.098, -1547.181, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -1129.098, 139.4656, -1547.181, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -1208.473, -1751.897, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -1208.473, 139.4656, -1751.897, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -1328.01, -1700.115, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -1328.01, 139.4656, -1700.115, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -915.433, -1510.62, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -915.433, 139.4656, -1510.62, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -819.9713, -1474.81, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -819.9713, 139.4656, -1474.81, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -1502.994, -1468.063, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -1502.994, 139.4656, -1468.063, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -1490.358, -1667.201, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -1490.358, 139.4656, -1667.201, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_pilgrimroad_52", -1359.151, -1974.556, 90, "PILGRIM52_BIGREED");
+		AddNpc(25, 152057, " ", "f_pilgrimroad_52", -1359.151, 139.4656, -1974.556, 90, "PILGRIM52_BIGREED", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40030, " ", "f_pilgrimroad_52", -753.9049, 1145.289, 90, "PILGRIM52_BAG");
+		AddNpc(26, 40030, " ", "f_pilgrimroad_52", -753.9049, 245.719, 1145.289, 90, "PILGRIM52_BAG", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153055, " ", "f_pilgrimroad_52", 1082.597, 2123.322, 90, "PILGRIM52_POT_GET");
+		AddNpc(28, 153055, " ", "f_pilgrimroad_52", 1082.597, 233.8957, 2123.322, 90, "PILGRIM52_POT_GET", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47257, " ", "f_pilgrimroad_52", 420.0044, 881.6151, 90, "PILGRIM52_WATERPOT01");
+		AddNpc(30, 47257, " ", "f_pilgrimroad_52", 420.0044, 215.1778, 881.6151, 90, "PILGRIM52_WATERPOT01", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47257, " ", "f_pilgrimroad_52", 54.39734, 631.4136, 90, "PILGRIM52_WATERPOT02");
+		AddNpc(31, 47257, " ", "f_pilgrimroad_52", 54.39734, 215.1778, 631.4136, 90, "PILGRIM52_WATERPOT02", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47257, " ", "f_pilgrimroad_52", 561.1591, -117.3923, 90, "PILGRIM52_WATERPOT03");
+		AddNpc(32, 47257, " ", "f_pilgrimroad_52", 561.1591, 139.8698, -117.3923, 90, "PILGRIM52_WATERPOT03", "", "", 1);
 		
 		// Pot Settling Area
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Pot Settling Area", "f_pilgrimroad_52", 424.6603, 874.1747, 90, "PILGRIM52_PLACE01");
+		AddNpc(33, 147469, "Pot Settling Area", "f_pilgrimroad_52", 424.6603, 215.1778, 874.1747, 90, "PILGRIM52_PLACE01", "", "", 1);
 		
 		// Pot Settling Area
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Pot Settling Area", "f_pilgrimroad_52", 44.73014, 635.6563, 90, "PILGRIM52_PLACE02");
+		AddNpc(34, 147469, "Pot Settling Area", "f_pilgrimroad_52", 44.73014, 215.1778, 635.6563, 90, "PILGRIM52_PLACE02", "", "", 1);
 		
 		// Pot Settling Area
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Pot Settling Area", "f_pilgrimroad_52", 561.8187, -137.3844, 90, "PILGRIM52_PLACE03");
+		AddNpc(35, 147469, "Pot Settling Area", "f_pilgrimroad_52", 561.8187, 139.8698, -137.3844, 90, "PILGRIM52_PLACE03", "", "", 1);
 		
 		// Apsimesti Crossroads
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Apsimesti Crossroads", "f_pilgrimroad_52", 2646.451, 282.0819, 189, "", "WS_OUT_OF_SECRET", "");
+		AddNpc(36, 40001, "Apsimesti Crossroads", "f_pilgrimroad_52", 2646.451, 156.3518, 282.0819, 189, "", "WS_OUT_OF_SECRET", "");
 		
 		// Warning
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Warning", "f_pilgrimroad_52", -555.4303, 1933.056, 90, "UPPER_WARNING_F_PILGRIMROAD_52");
+		AddNpc(39, 40070, "Warning", "f_pilgrimroad_52", -555.4303, 245.719, 1933.056, 90, "UPPER_WARNING_F_PILGRIMROAD_52", "", "");
 		
 		// Witas' Grave
 		//-------------------------------------------------------------------------
-		AddNpc(152009, "Witas' Grave", "f_pilgrimroad_52", -453.0049, 391.303, -10, "", "PILGRIM52_NPC_TOMB", "");
+		AddNpc(40, 152009, "Witas' Grave", "f_pilgrimroad_52", -453.0049, 215.1778, 391.303, -10, "", "PILGRIM52_NPC_TOMB", "");
 		
 		// Tree of Faith
 		//-------------------------------------------------------------------------
-		AddNpc(152013, "Tree of Faith", "f_pilgrimroad_52", 1041.164, 2276.617, 6, "", "PILGRIM52_TRUTHTREE_REAL", "");
+		AddNpc(41, 152013, "Tree of Faith", "f_pilgrimroad_52", 1041.164, 233.8956, 2276.617, 6, "", "PILGRIM52_TRUTHTREE_REAL", "");
 		
 		// Tree of Faith Notice
 		//-------------------------------------------------------------------------
-		AddNpc(152007, "Tree of Faith Notice", "f_pilgrimroad_52", 1146.558, 2065.662, 45, "PILGRIM52_BOARD01");
+		AddNpc(42, 152007, "Tree of Faith Notice", "f_pilgrimroad_52", 1146.558, 233.8956, 2065.662, 45, "PILGRIM52_BOARD01", "", "");
 		
 		// Tree of Brothers Notice
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Tree of Brothers Notice", "f_pilgrimroad_52", 502.5437, 880.9619, 5, "PILGRIM52_BOARD02");
+		AddNpc(43, 40070, "Tree of Brothers Notice", "f_pilgrimroad_52", 502.5437, 215.1778, 880.9619, 5, "PILGRIM52_BOARD02", "", "");
 		
 		// Tree of Brothers Notice
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Tree of Brothers Notice", "f_pilgrimroad_52", 108.3882, 641.5708, 20, "PILGRIM52_BOARD03");
+		AddNpc(44, 40070, "Tree of Brothers Notice", "f_pilgrimroad_52", 108.3882, 215.1778, 641.5708, 20, "PILGRIM52_BOARD03", "", "");
 		
 		// Tree of Brothers Notice
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Tree of Brothers Notice", "f_pilgrimroad_52", 545.9645, -81.5094, 90, "PILGRIM52_BOARD04");
+		AddNpc(45, 40070, "Tree of Brothers Notice", "f_pilgrimroad_52", 545.9645, 139.8698, -81.5094, 90, "PILGRIM52_BOARD04", "", "");
 		
 		// Hidden Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(40030, "Hidden Treasure Chest", "f_pilgrimroad_52", 2652.372, -374.2712, 90, "PILGRIM52_BOX");
+		AddNpc(46, 40030, "Hidden Treasure Chest", "f_pilgrimroad_52", 2652.372, 156.583, -374.2712, 90, "PILGRIM52_BOX", "", "", 1);
 		
 		// Roxona Reconstruction Agency West Building
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Roxona Reconstruction Agency West Building", "f_pilgrimroad_52", -1865.088, -78.65852, 270, "", "PILGRIMROAD52_TO_FIRETOWER611", "");
+		AddNpc(50, 40001, "Roxona Reconstruction Agency West Building", "f_pilgrimroad_52", -1865.088, 165.0776, -78.65852, 270, "", "PILGRIMROAD52_TO_FIRETOWER611", "");
+		AddNpc(51, 153061, " ", "f_pilgrimroad_52", -402.1673, 245.719, 1307.699, 59, "", "", "");
+		AddNpc(52, 147362, "Field Gen x", "f_pilgrimroad_52", -1002.935, 139.4656, -2018.333, 90, "", "", "");
+		AddNpc(53, 147362, "Field Gen x", "f_pilgrimroad_52", -486.656, 215.1778, 386.0914, 90, "", "", "");
+		AddNpc(54, 147362, "Field Gen x", "f_pilgrimroad_52", -1188.226, 139.465, -3342.034, 90, "", "", "");
+		AddNpc(55, 147362, "Field Gen x", "f_pilgrimroad_52", -488.4096, 245.719, 2043.479, 90, "", "", "");
+		AddNpc(55, 147362, "Field Gen x", "f_pilgrimroad_52", -559.7771, 245.719, 2009.753, 90, "", "", "");
+		AddNpc(56, 147362, "Field Gen x", "f_pilgrimroad_52", 1022.263, 47.4431, -680.9613, 90, "", "", "");
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -1303.735, -49.10026, 90, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(57, 152035, "UnVisibleName", "f_pilgrimroad_52", -1303.735, 156.583, -49.10026, 90, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -1051.049, -231.7602, 41, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(57, 152035, "UnVisibleName", "f_pilgrimroad_52", -1051.049, 156.5829, -231.7602, 41, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -1270.039, 280.5297, 219, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(57, 152035, "UnVisibleName", "f_pilgrimroad_52", -1270.039, 156.583, 280.5297, 219, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -1680.821, -221.2974, 194, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(57, 152035, "UnVisibleName", "f_pilgrimroad_52", -1680.821, 156.583, -221.2974, 194, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -1416.592, -326.1793, 90, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(57, 152035, "UnVisibleName", "f_pilgrimroad_52", -1416.592, 156.583, -326.1793, 90, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -1628.156, 86.6378, 134, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(57, 152035, "UnVisibleName", "f_pilgrimroad_52", -1628.156, 156.583, 86.6378, 134, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -1048.25, 143.6305, 90, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(57, 152035, "UnVisibleName", "f_pilgrimroad_52", -1048.25, 156.583, 143.6305, 90, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 153.5591, -894.3568, 220, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(58, 152035, "UnVisibleName", "f_pilgrimroad_52", 153.5591, 47.44316, -894.3568, 220, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 555.4195, -896.3534, 7, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(58, 152035, "UnVisibleName", "f_pilgrimroad_52", 555.4195, 47.44299, -896.3534, 7, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 370.8177, -696.6901, 90, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(58, 152035, "UnVisibleName", "f_pilgrimroad_52", 370.8177, 47.4432, -696.6901, 90, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -1034.448, -1622.471, 209, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(59, 152035, "UnVisibleName", "f_pilgrimroad_52", -1034.448, 139.4656, -1622.471, 209, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -671.4498, -1613.755, -45, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(59, 152035, "UnVisibleName", "f_pilgrimroad_52", -671.4498, 139.4656, -1613.755, -45, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -893.7775, -1895.899, 38, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(59, 152035, "UnVisibleName", "f_pilgrimroad_52", -893.7775, 139.4656, -1895.899, 38, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -1323.327, -1740.095, 90, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(59, 152035, "UnVisibleName", "f_pilgrimroad_52", -1323.327, 139.4656, -1740.095, 90, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 497.6397, 757.3644, 90, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(60, 152035, "UnVisibleName", "f_pilgrimroad_52", 497.6397, 215.1778, 757.3644, 90, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 216.5358, 570.3478, 201, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(60, 152035, "UnVisibleName", "f_pilgrimroad_52", 216.5358, 215.1778, 570.3478, 201, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 201.2226, 237.7518, 143, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(60, 152035, "UnVisibleName", "f_pilgrimroad_52", 201.2226, 215.1778, 237.7518, 143, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -33.75003, -18.90929, 221, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(60, 152035, "UnVisibleName", "f_pilgrimroad_52", -33.75003, 215.1778, -18.90929, 221, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -230.5888, 567.3523, 90, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(60, 152035, "UnVisibleName", "f_pilgrimroad_52", -230.5888, 213.567, 567.3523, 90, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -82.34435, 340.1881, 260, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(60, 152035, "UnVisibleName", "f_pilgrimroad_52", -82.34435, 215.1778, 340.1881, 260, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -384.2159, 271.112, 62, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(60, 152035, "UnVisibleName", "f_pilgrimroad_52", -384.2159, 215.1778, 271.112, 62, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 707.5605, 535.4122, 90, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(60, 152035, "UnVisibleName", "f_pilgrimroad_52", 707.5605, 215.1778, 535.4122, 90, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 440.0687, 356.4141, 91, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(60, 152035, "UnVisibleName", "f_pilgrimroad_52", 440.0687, 215.1778, 356.4141, 91, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 1291.555, 1773.987, 99, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(61, 152035, "UnVisibleName", "f_pilgrimroad_52", 1291.555, 233.8955, 1773.987, 99, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 1587.616, 1966.561, 40, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(61, 152035, "UnVisibleName", "f_pilgrimroad_52", 1587.616, 233.8956, 1966.561, 40, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 907.7396, 1998.102, 220, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(61, 152035, "UnVisibleName", "f_pilgrimroad_52", 907.7396, 233.8956, 1998.102, 220, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 914.9423, 2357.621, 113, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(61, 152035, "UnVisibleName", "f_pilgrimroad_52", 914.9423, 233.8956, 2357.621, 113, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 1276.997, 2421.571, 252, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(61, 152035, "UnVisibleName", "f_pilgrimroad_52", 1276.997, 233.8957, 2421.571, 252, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 1618.519, 2355.488, 177, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(61, 152035, "UnVisibleName", "f_pilgrimroad_52", 1618.519, 233.8955, 2355.488, 177, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 1260.953, 2084.076, 59, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(61, 152035, "UnVisibleName", "f_pilgrimroad_52", 1260.953, 233.8955, 2084.076, 59, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -571.2722, 1480.44, 74, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(62, 152035, "UnVisibleName", "f_pilgrimroad_52", -571.2722, 245.719, 1480.44, 74, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -217.515, 1484.01, 17, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(62, 152035, "UnVisibleName", "f_pilgrimroad_52", -217.515, 245.719, 1484.01, 17, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", -417.0819, 1130.689, 207, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(62, 152035, "UnVisibleName", "f_pilgrimroad_52", -417.0819, 245.719, 1130.689, 207, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 437.3617, -276.1248, 33, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(63, 152035, "UnVisibleName", "f_pilgrimroad_52", 437.3617, 139.8697, -276.1248, 33, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 565.4221, -43.4278, 203, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(63, 152035, "UnVisibleName", "f_pilgrimroad_52", 565.4221, 139.8698, -43.4278, 203, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 777.3271, 114.649, 1, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(63, 152035, "UnVisibleName", "f_pilgrimroad_52", 777.3271, 140.2152, 114.649, 1, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 770.7182, -220.868, 90, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(63, 152035, "UnVisibleName", "f_pilgrimroad_52", 770.7182, 139.8753, -220.868, 90, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// UnVisibleName
 		//-------------------------------------------------------------------------
-		AddNpc(152035, "UnVisibleName", "f_pilgrimroad_52", 229.613, -166.2567, -76, "JOB_2_HOPLITE_ARMOR");
+		AddNpc(63, 152035, "UnVisibleName", "f_pilgrimroad_52", 229.613, 140.195, -166.2567, -76, "JOB_2_HOPLITE_ARMOR", "", "", 1);
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_pilgrimroad_52", 991.91, 1860.75, 90, "TREASUREBOX_LV_F_PILGRIMROAD_5264");
+		AddNpc(64, 147392, "Lv1 Treasure Chest", "f_pilgrimroad_52", 991.91, 234, 1860.75, 90, "TREASUREBOX_LV_F_PILGRIMROAD_5264", "", "");
 	}
 }

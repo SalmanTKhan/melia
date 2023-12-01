@@ -12,173 +12,194 @@ public class DVelniasprison511NpcScript : GeneralScript
 {
 	public override void Load()
 	{
+		AddNpc(1, 152003, " ", "d_velniasprison_51_1", 0.2518745, 222.3804, -519.1268, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154000, " ", "d_velniasprison_51_1", -623, -11, 90, "VELNIASP_511_GROUP_2_1");
+		AddNpc(2, 154000, " ", "d_velniasprison_51_1", -623, 223, -11, 90, "VELNIASP_511_GROUP_2_1", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154000, " ", "d_velniasprison_51_1", -970, 123, 90, "VELNIASP_511_GROUP_2_2");
+		AddNpc(3, 154000, " ", "d_velniasprison_51_1", -970, 345, 123, 90, "VELNIASP_511_GROUP_2_2", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154000, " ", "d_velniasprison_51_1", -38, 580, 90, "VELNIASP_511_GROUP_1_1");
+		AddNpc(4, 154000, " ", "d_velniasprison_51_1", -38, 223, 580, 90, "VELNIASP_511_GROUP_1_1", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154000, " ", "d_velniasprison_51_1", 72, 901, 90, "VELNIASP_511_GROUP_1_2");
+		AddNpc(5, 154000, " ", "d_velniasprison_51_1", 72, 260, 901, 90, "VELNIASP_511_GROUP_1_2", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154000, " ", "d_velniasprison_51_1", 672, -2, 90, "VELNIASP_511_GROUP_3_1");
+		AddNpc(6, 154000, " ", "d_velniasprison_51_1", 672, 224, -2, 90, "VELNIASP_511_GROUP_3_1", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154000, " ", "d_velniasprison_51_1", 908, -3, 90, "VELNIASP_511_GROUP_3_2");
+		AddNpc(7, 154000, " ", "d_velniasprison_51_1", 908, 347, -3, 90, "VELNIASP_511_GROUP_3_2", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154000, " ", "d_velniasprison_51_1", 18.91395, -891.9423, 90, "VELNIASP_511_GROUP_4_2");
+		AddNpc(8, 154000, " ", "d_velniasprison_51_1", 18.91395, 259.6985, -891.9423, 90, "VELNIASP_511_GROUP_4_2", "", "");
 		
 		// Aqueduct Bridge Area
 		//-------------------------------------------------------------------------
-		AddNpc(154000, "Aqueduct Bridge Area", "d_velniasprison_51_1", -118, 108, 90, "VELNIASP511_TO_FARM472");
+		AddNpc(9, 154000, "Aqueduct Bridge Area", "d_velniasprison_51_1", -118, 167, 108, 90, "VELNIASP511_TO_FARM472", "", "");
 		
 		// Demon Prison District 2
 		//-------------------------------------------------------------------------
-		AddNpc(154000, "Demon Prison District 2", "d_velniasprison_51_1", 182, -117, 90, "VELNIASP511_TO_VELNIASP512");
+		AddNpc(10, 154000, "Demon Prison District 2", "d_velniasprison_51_1", 182, 170, -117, 90, "VELNIASP511_TO_VELNIASP512", "", "");
 		
 		// Kupole Audra
 		//-------------------------------------------------------------------------
-		AddNpc(154011, "Kupole Audra", "d_velniasprison_51_1", -162.7315, -69.56984, 109, "VPRISON511_MQ_AUDRA");
+		AddNpc(11, 154011, "Kupole Audra", "d_velniasprison_51_1", -162.7315, 169.8299, -69.56984, 109, "VPRISON511_MQ_AUDRA", "", "", 1);
 		
 		// Kupole Zydrone
 		//-------------------------------------------------------------------------
-		AddNpc(154015, "Kupole Zydrone", "d_velniasprison_51_1", -1809.142, -485.5621, -76, "VPRISON511_MQ_ZYDRONE");
+		AddNpc(12, 154015, "Kupole Zydrone", "d_velniasprison_51_1", -1809.142, 346.412, -485.5621, -76, "VPRISON511_MQ_ZYDRONE", "", "", 1);
 		
 		// Demon Lord Hauberk
 		//-------------------------------------------------------------------------
-		AddNpc(57840, "Demon Lord Hauberk", "d_velniasprison_51_1", -11, -4, -65, "VPRISON511_MQ_HAUBERK");
+		AddNpc(13, 57840, "Demon Lord Hauberk", "d_velniasprison_51_1", -11, 170, -4, -65, "VPRISON511_MQ_HAUBERK", "", "", 1);
 		
 		// VELNIASPRISON_51_1_JOB_5_1_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "VELNIASPRISON_51_1_JOB_5_1_TRIGGER", "d_velniasprison_51_1", -506.4324, 1463.722, 90, "", "VELNIASPRISON_51_1_JOB_5_1_TRIGGER", "");
+		AddNpc(21, 20026, "VELNIASPRISON_51_1_JOB_5_1_TRIGGER", "d_velniasprison_51_1", -506.4324, 344.7429, 1463.722, 90, "", "VELNIASPRISON_51_1_JOB_5_1_TRIGGER", "");
+		AddNpc(22, 147366, "Gate Entrance x", "d_velniasprison_51_1", 0.9324055, 169.8258, -46.84412, 90, "", "", "");
 		
 		// Blut's Altar
 		//-------------------------------------------------------------------------
-		AddNpc(41327, "Blut's Altar", "d_velniasprison_51_1", -1831.048, 510.9551, -19, "VPRISON511_MQ_04_NPC");
+		AddNpc(23, 41327, "Blut's Altar", "d_velniasprison_51_1", -1831.048, 351.3505, 510.9551, -19, "VPRISON511_MQ_04_NPC", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_velniasprison_51_1", -13.20072, -3.10758, 90, "", "VPRISON511_MQ_01_NPC", "");
+		AddNpc(24, 20026, "", "d_velniasprison_51_1", -13.20072, 169.8298, -3.10758, 90, "", "VPRISON511_MQ_01_NPC", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(154001, "", "d_velniasprison_51_1", -1914.782, -475.0465, 165, "", "VPRISON511_MQ_05_1", "");
+		AddNpc(25, 154001, "", "d_velniasprison_51_1", -1914.782, 358.0696, -475.0465, 165, "", "VPRISON511_MQ_05_1", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(154003, "", "d_velniasprison_51_1", -2009.617, -461.1142, 90, "", "VPRISON511_MQ_05_1", "");
+		AddNpc(26, 154003, "", "d_velniasprison_51_1", -2009.617, 380.5843, -461.1142, 90, "", "VPRISON511_MQ_05_1", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1684.846, 346.4565, 265.3946, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1531.151, 346.4565, 366.1566, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1671.3, 346.4565, 438.6754, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1914.537, 346.4565, 451.5139, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1855.795, 346.4565, 321.7838, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 2139.354, 346.4565, -27.7231, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1844.153, 346.4565, -38.63947, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1566.185, 353.3614, -389.7746, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1728.347, 346.4565, -547.0886, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1730.181, 346.4565, -394.347, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1898.124, 346.4565, -481.9388, 90, "", "", "");
+		AddNpc(28, 147372, "Disabling Magic Circle", "d_velniasprison_51_1", 1849.676, 346.4565, -337.618, 90, "", "", "");
 		
 		// Abandoned Journal
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Abandoned Journal", "d_velniasprison_51_1", -300, 1623, 90, "VPRISON_PAPER01");
+		AddNpc(29, 147311, "Abandoned Journal", "d_velniasprison_51_1", -300, 344, 1623, 90, "VPRISON_PAPER01", "", "", 0);
 		
 		// Order to defeat the Demons
 		//-------------------------------------------------------------------------
-		AddNpc(147312, "Order to defeat the Demons", "d_velniasprison_51_1", -491, -159, 90, "VPRISON_PAPER03");
+		AddNpc(30, 147312, "Order to defeat the Demons", "d_velniasprison_51_1", -491, 222, -159, 90, "VPRISON_PAPER03", "", "", 0);
+		AddNpc(32, 147366, "Field Gen x", "d_velniasprison_51_1", -604.7133, 346.4572, -1630.356, 90, "", "", "");
+		AddNpc(32, 147366, "Field Gen x", "d_velniasprison_51_1", 516.3162, 343.0242, -1385.438, 90, "", "", "");
+		AddNpc(32, 147366, "Field Gen x", "d_velniasprison_51_1", -84.72616, 346.4572, -1541.881, 90, "", "", "");
+		AddNpc(32, 147366, "Field Gen x", "d_velniasprison_51_1", 14.96047, 259.6919, -1071.384, 90, "", "", "");
+		AddNpc(32, 147366, "Field Gen x", "d_velniasprison_51_1", -502.3513, 352.2903, -1303.888, 90, "", "", "");
+		AddNpc(32, 147366, "Field Gen x", "d_velniasprison_51_1", 511.9257, 350.5725, -1586.351, 90, "", "", "");
+		AddNpc(32, 147366, "Field Gen x", "d_velniasprison_51_1", 160.8945, 346.4565, -1528.303, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_velniasprison_51_1", 659.86, 1632.73, 90, "TREASUREBOX_LV_D_VELNIASPRISON_51_133");
+		AddNpc(33, 147392, "Lv1 Treasure Chest", "d_velniasprison_51_1", 659.86, 353.03, 1632.73, 90, "TREASUREBOX_LV_D_VELNIASPRISON_51_133", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155105, " ", "d_velniasprison_51_1", -637.8699, -1601.938, 90, "HIDDEN_MIKO_VPRISON_SUN");
+		AddNpc(34, 155105, " ", "d_velniasprison_51_1", -637.8699, 346.4572, -1601.938, 90, "HIDDEN_MIKO_VPRISON_SUN", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155105, " ", "d_velniasprison_51_1", -525.5469, -1606.792, 90, "HIDDEN_MIKO_VPRISON_MON");
+		AddNpc(35, 155105, " ", "d_velniasprison_51_1", -525.5469, 346.4572, -1606.792, 90, "HIDDEN_MIKO_VPRISON_MON", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155105, " ", "d_velniasprison_51_1", -524.1779, -1497.977, 90, "HIDDEN_MIKO_VPRISON_TUES");
+		AddNpc(36, 155105, " ", "d_velniasprison_51_1", -524.1779, 346.4572, -1497.977, 90, "HIDDEN_MIKO_VPRISON_TUES", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155105, " ", "d_velniasprison_51_1", -522.0824, -1377.652, 90, "HIDDEN_MIKO_VPRISON_WEDNES");
+		AddNpc(37, 155105, " ", "d_velniasprison_51_1", -522.0824, 352.2903, -1377.652, 90, "HIDDEN_MIKO_VPRISON_WEDNES", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155105, " ", "d_velniasprison_51_1", -524.2886, -1256.4, 90, "HIDDEN_MIKO_VPRISON_THURS");
+		AddNpc(38, 155105, " ", "d_velniasprison_51_1", -524.2886, 352.2903, -1256.4, 90, "HIDDEN_MIKO_VPRISON_THURS", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155105, " ", "d_velniasprison_51_1", -419.1836, -1251.821, 90, "HIDDEN_MIKO_VPRISON_FRI");
+		AddNpc(39, 155105, " ", "d_velniasprison_51_1", -419.1836, 352.2903, -1251.821, 90, "HIDDEN_MIKO_VPRISON_FRI", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155105, " ", "d_velniasprison_51_1", -325.4082, -1237.334, 90, "HIDDEN_MIKO_VPRISON_SATUR");
+		AddNpc(40, 155105, " ", "d_velniasprison_51_1", -325.4082, 352.2903, -1237.334, 90, "HIDDEN_MIKO_VPRISON_SATUR", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 390, -1425, 90, "HIDDEN_MIKO_VPRISON_BEAD_12");
+		AddNpc(41, 153166, " ", "d_velniasprison_51_1", 390, 346.4565, -1425, 90, "HIDDEN_MIKO_VPRISON_BEAD_12", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 456.6984, -1385.317, 90, "HIDDEN_MIKO_VPRISON_BEAD_1");
+		AddNpc(42, 153166, " ", "d_velniasprison_51_1", 456.6984, 343.7782, -1385.317, 90, "HIDDEN_MIKO_VPRISON_BEAD_1", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 529.2575, -1384.267, 90, "HIDDEN_MIKO_VPRISON_BEAD_2");
+		AddNpc(43, 153166, " ", "d_velniasprison_51_1", 529.2575, 343.0242, -1384.267, 90, "HIDDEN_MIKO_VPRISON_BEAD_2", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 590, -1425, 90, "HIDDEN_MIKO_VPRISON_BEAD_3");
+		AddNpc(44, 153166, " ", "d_velniasprison_51_1", 590, 346.4565, -1425, 90, "HIDDEN_MIKO_VPRISON_BEAD_3", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 631.4697, -1486.323, 90, "HIDDEN_MIKO_VPRISON_BEAD_4");
+		AddNpc(45, 153166, " ", "d_velniasprison_51_1", 631.4697, 346.4565, -1486.323, 90, "HIDDEN_MIKO_VPRISON_BEAD_4", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 628.8428, -1561.134, 90, "HIDDEN_MIKO_VPRISON_BEAD_5");
+		AddNpc(46, 153166, " ", "d_velniasprison_51_1", 628.8428, 350.5725, -1561.134, 90, "HIDDEN_MIKO_VPRISON_BEAD_5", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 590, -1625, 90, "HIDDEN_MIKO_VPRISON_BEAD_6");
+		AddNpc(47, 153166, " ", "d_velniasprison_51_1", 590, 350.5725, -1625, 90, "HIDDEN_MIKO_VPRISON_BEAD_6", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 529.1865, -1659.366, 90, "HIDDEN_MIKO_VPRISON_BEAD_7");
+		AddNpc(48, 153166, " ", "d_velniasprison_51_1", 529.1865, 350.5725, -1659.366, 90, "HIDDEN_MIKO_VPRISON_BEAD_7", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 456.6399, -1658.318, 90, "HIDDEN_MIKO_VPRISON_BEAD_8");
+		AddNpc(49, 153166, " ", "d_velniasprison_51_1", 456.6399, 350.5725, -1658.318, 90, "HIDDEN_MIKO_VPRISON_BEAD_8", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 390, -1625, 90, "HIDDEN_MIKO_VPRISON_BEAD_9");
+		AddNpc(50, 153166, " ", "d_velniasprison_51_1", 390, 346.4565, -1625, 90, "HIDDEN_MIKO_VPRISON_BEAD_9", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 358.0012, -1559.907, 90, "HIDDEN_MIKO_VPRISON_BEAD_10");
+		AddNpc(51, 153166, " ", "d_velniasprison_51_1", 358.0012, 346.4565, -1559.907, 90, "HIDDEN_MIKO_VPRISON_BEAD_10", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153166, " ", "d_velniasprison_51_1", 357.3603, -1488.468, 90, "HIDDEN_MIKO_VPRISON_BEAD_11");
+		AddNpc(52, 153166, " ", "d_velniasprison_51_1", 357.3603, 346.4565, -1488.468, 90, "HIDDEN_MIKO_VPRISON_BEAD_11", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_velniasprison_51_1", 307.3575, 1417.829, 90, "", "LOWLV_EYEOFBAIGA_SQ_60", "");
+		AddNpc(53, 20026, " ", "d_velniasprison_51_1", 307.3575, 346.15, 1417.829, 90, "", "LOWLV_EYEOFBAIGA_SQ_60", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_velniasprison_51_1", 69.05616, 906.4135, 90, "", "LOWLV_EYEOFBAIGA_SQ_50", "");
+		AddNpc(54, 20026, " ", "d_velniasprison_51_1", 69.05616, 259.3, 906.4135, 90, "", "LOWLV_EYEOFBAIGA_SQ_50", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154064, " ", "d_velniasprison_51_1", 531.98, 1426.38, 90, "LOWLV_EYEOFBAIGA_SQ_20");
+		AddNpc(55, 154064, " ", "d_velniasprison_51_1", 531.98, 346.15, 1426.38, 90, "LOWLV_EYEOFBAIGA_SQ_20", "", "");
 	}
 }

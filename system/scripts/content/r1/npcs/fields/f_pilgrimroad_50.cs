@@ -14,194 +14,197 @@ public class FPilgrimroad50NpcScript : GeneralScript
 	{
 		// Pilgrim Path
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Pilgrim Path", "f_pilgrimroad_50", -1933.78, -1179, 270, "", "PILGRIM50_PILGRIM47", "");
+		AddNpc(2, 40001, "Pilgrim Path", "f_pilgrimroad_50", -1933.78, 506, -1179, 270, "", "PILGRIM50_PILGRIM47", "");
 		
 		// Forest of Prayer
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Forest of Prayer", "f_pilgrimroad_50", 2243, -1306, 70, "", "PILGRIM50_PILGRIM51", "");
+		AddNpc(3, 40001, "Forest of Prayer", "f_pilgrimroad_50", 2243, 507, -1306, 70, "", "PILGRIM50_PILGRIM51", "");
 		
 		// REQ_SEMPLE_03
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "REQ_SEMPLE_03", "f_pilgrimroad_50", 891, -746, 90, "", "REQ_SEMPLE_03_01", "");
+		AddNpc(4, 20026, "REQ_SEMPLE_03", "f_pilgrimroad_50", 891, 507, -746, 90, "", "REQ_SEMPLE_03_01", "");
 		
 		// REQ_SEMPLE_03
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "REQ_SEMPLE_03", "f_pilgrimroad_50", -681, 740, 90, "", "REQ_SEMPLE_03_02", "");
+		AddNpc(5, 20026, "REQ_SEMPLE_03", "f_pilgrimroad_50", -681, 557, 740, 90, "", "REQ_SEMPLE_03_02", "");
 		
 		// REQ_SEMPLE_03
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "REQ_SEMPLE_03", "f_pilgrimroad_50", -1667, -361, 90, "", "REQ_SEMPLE_03_03", "");
+		AddNpc(6, 20026, "REQ_SEMPLE_03", "f_pilgrimroad_50", -1667, 507, -361, 90, "", "REQ_SEMPLE_03_03", "");
 		
 		// Pilgrim's Way Gate
 		//-------------------------------------------------------------------------
-		AddNpc(147306, "Pilgrim's Way Gate", "f_pilgrimroad_50", 695, 112, 11, "REQ_SEMPLE_04");
+		AddNpc(7, 147306, "Pilgrim's Way Gate", "f_pilgrimroad_50", 695, 656, 112, 11, "REQ_SEMPLE_04", "", "");
 		
 		// Pilgrim Gracius
 		//-------------------------------------------------------------------------
-		AddNpc(155036, "Pilgrim Gracius", "f_pilgrimroad_50", -87.67, -457.27, 90, "PILGRIM50_NPC01");
+		AddNpc(10, 155036, "Pilgrim Gracius", "f_pilgrimroad_50", -87.67, 507.36, -457.27, 90, "PILGRIM50_NPC01", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152006, " ", "f_pilgrimroad_50", -1935.658, 350.6418, 4, "PILGRIM50_ALTAR01");
+		AddNpc(11, 152006, " ", "f_pilgrimroad_50", -1935.658, 507.3573, 350.6418, 4, "PILGRIM50_ALTAR01", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152006, " ", "f_pilgrimroad_50", 1917.3, -805.45, -5, "PILGRIM50_ALTAR02");
+		AddNpc(12, 152006, " ", "f_pilgrimroad_50", 1917.3, 507.36, -805.45, -5, "PILGRIM50_ALTAR02", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_50", -412.77, 1035.43, 90, "PILGRIM50_ANGRY01");
+		AddNpc(14, 147469, " ", "f_pilgrimroad_50", -412.77, 580.88, 1035.43, 90, "PILGRIM50_ANGRY01", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_50", 461.57, 1695.43, 37, "PILGRIM50_ANGRY02");
+		AddNpc(15, 147469, " ", "f_pilgrimroad_50", 461.57, 640.69, 1695.43, 37, "PILGRIM50_ANGRY02", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_50", 1038.659, 55.03026, 202, "PILGRIM50_ANGRY03");
+		AddNpc(16, 147469, " ", "f_pilgrimroad_50", 1038.659, 680.3306, 55.03026, 202, "PILGRIM50_ANGRY03", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147412, " ", "f_pilgrimroad_50", -998.77, 860.71, 91, "PILGRIM50_FLOWER");
+		AddNpc(17, 147412, " ", "f_pilgrimroad_50", -998.77, 557.88, 860.71, 91, "PILGRIM50_FLOWER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147412, " ", "f_pilgrimroad_50", -988.78, 552.99, 91, "PILGRIM50_FLOWER");
+		AddNpc(17, 147412, " ", "f_pilgrimroad_50", -988.78, 557.88, 552.99, 91, "PILGRIM50_FLOWER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147412, " ", "f_pilgrimroad_50", -363.01, 674.59, 91, "PILGRIM50_FLOWER");
+		AddNpc(17, 147412, " ", "f_pilgrimroad_50", -363.01, 557.88, 674.59, 91, "PILGRIM50_FLOWER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147412, " ", "f_pilgrimroad_50", 527.43, 1363.73, 91, "PILGRIM50_FLOWER");
+		AddNpc(17, 147412, " ", "f_pilgrimroad_50", 527.43, 609.69, 1363.73, 91, "PILGRIM50_FLOWER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147412, " ", "f_pilgrimroad_50", 475.16, 1078.38, 91, "PILGRIM50_FLOWER");
+		AddNpc(17, 147412, " ", "f_pilgrimroad_50", 475.16, 609.69, 1078.38, 91, "PILGRIM50_FLOWER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147412, " ", "f_pilgrimroad_50", -28.71, 1570.62, 91, "PILGRIM50_FLOWER");
+		AddNpc(17, 147412, " ", "f_pilgrimroad_50", -28.71, 609.69, 1570.62, 91, "PILGRIM50_FLOWER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147412, " ", "f_pilgrimroad_50", -833.85, 1122.06, 91, "PILGRIM50_FLOWER");
+		AddNpc(18, 147412, " ", "f_pilgrimroad_50", -833.85, 557.88, 1122.06, 91, "PILGRIM50_FLOWER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147412, " ", "f_pilgrimroad_50", -370, 444.62, 91, "PILGRIM50_FLOWER");
+		AddNpc(18, 147412, " ", "f_pilgrimroad_50", -370, 557.88, 444.62, 91, "PILGRIM50_FLOWER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147412, " ", "f_pilgrimroad_50", 161.88, 858.23, 91, "PILGRIM50_FLOWER");
+		AddNpc(18, 147412, " ", "f_pilgrimroad_50", 161.88, 609.69, 858.23, 91, "PILGRIM50_FLOWER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_pilgrimroad_50", -102.25, -496.01, 90, "PILGRIM50_ALTAR");
+		AddNpc(19, 147469, " ", "f_pilgrimroad_50", -102.25, 524, -496.01, 90, "PILGRIM50_ALTAR", "", "", 0);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", 35.65, -484.64, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", 35.65, 507.36, -484.64, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", 65.86, -232.15, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", 65.86, 507.36, -232.15, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", -234.02, -248.28, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", -234.02, 507.36, -248.28, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", -167.46, -522.7, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", -167.46, 507.36, -522.7, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", -568.89, -211.8, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", -568.89, 507.36, -211.8, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", -482.24, -22.06, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", -482.24, 507.36, -22.06, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", 237.43, -456.06, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", 237.43, 507.36, -456.06, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Raging Pilgrim's Soul
 		//-------------------------------------------------------------------------
-		AddNpc(155034, "Raging Pilgrim's Soul", "f_pilgrimroad_50", 465, 1693, 54, "PILGRIM50_GHOST2");
+		AddNpc(21, 155034, "Raging Pilgrim's Soul", "f_pilgrimroad_50", 465, 635.69, 1693, 54, "PILGRIM50_GHOST2", "", "", 1);
 		
 		// Sign of Scripture with blood small
 		//-------------------------------------------------------------------------
-		AddNpc(147312, "Sign of Scripture with blood small", "f_pilgrimroad_50", 1077.777, 78.3875, 90, "", "PILGRIM50_BIBLE", "");
+		AddNpc(22, 147312, "Sign of Scripture with blood small", "f_pilgrimroad_50", 1077.777, 657.3453, 78.3875, 90, "", "PILGRIM50_BIBLE", "");
 		
 		// Altar-bound Pilgrim's Soul
 		//-------------------------------------------------------------------------
-		AddNpc(155037, "Altar-bound Pilgrim's Soul", "f_pilgrimroad_50", 1034.236, 55.90752, 180, "", "PILGRIM50_GHOST3", "");
+		AddNpc(23, 155037, "Altar-bound Pilgrim's Soul", "f_pilgrimroad_50", 1034.236, 680.3311, 55.90752, 180, "", "PILGRIM50_GHOST3", "");
 		
 		// Merge-bound Soul
 		//-------------------------------------------------------------------------
-		AddNpc(155038, "Merge-bound Soul", "f_pilgrimroad_50", -1923.522, 323.5752, 45, "PILGRIM50_GHOST4");
+		AddNpc(24, 155038, "Merge-bound Soul", "f_pilgrimroad_50", -1923.522, 507.3573, 323.5752, 45, "PILGRIM50_GHOST4", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152017, " ", "f_pilgrimroad_50", -429.4137, 1029.637, 135, "", "PILGRIM50_BUNT_1", "");
+		AddNpc(27, 152017, " ", "f_pilgrimroad_50", -429.4137, 557.8834, 1029.637, 135, "", "PILGRIM50_BUNT_1", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152017, " ", "f_pilgrimroad_50", -395.4834, 1020.972, 90, "", "PILGRIM50_BUNT_2", "");
+		AddNpc(28, 152017, " ", "f_pilgrimroad_50", -395.4834, 557.8834, 1020.972, 90, "", "PILGRIM50_BUNT_2", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152018, " ", "f_pilgrimroad_50", -405.174, 990.1272, 90, "", "PILGRIM50_BUNT_3", "");
+		AddNpc(29, 152018, " ", "f_pilgrimroad_50", -405.174, 557.8834, 990.1272, 90, "", "PILGRIM50_BUNT_3", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152018, " ", "f_pilgrimroad_50", -354.078, 996.8364, 145, "", "PILGRIM50_BUNT_4", "");
+		AddNpc(30, 152018, " ", "f_pilgrimroad_50", -354.078, 557.9724, 996.8364, 145, "", "PILGRIM50_BUNT_4", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152018, " ", "f_pilgrimroad_50", -413.2139, 1026.172, 90, "", "PILGRIM50_BUNT_5", "");
+		AddNpc(31, 152018, " ", "f_pilgrimroad_50", -413.2139, 557.8834, 1026.172, 90, "", "PILGRIM50_BUNT_5", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152006, " ", "f_pilgrimroad_50", 927.8116, -943.4997, 19, "PILGRIM50_ALTAR03");
+		AddNpc(32, 152006, " ", "f_pilgrimroad_50", 927.8116, 507.3573, -943.4997, 19, "PILGRIM50_ALTAR03", "", "");
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", 485.3366, -480.0877, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", 485.3366, 507.3573, -480.0877, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", -644.6732, -53.13154, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", -644.6732, 507.3573, -53.13154, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", -115.7337, -33.21194, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", -115.7337, 507.3573, -33.21194, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Soul restrained to the altar
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Soul restrained to the altar", "f_pilgrimroad_50", -751.1908, -252.1821, 90, "PILGRIM50_GHOST");
+		AddNpc(20, 15000, "Soul restrained to the altar", "f_pilgrimroad_50", -751.1908, 507.3573, -252.1821, 90, "PILGRIM50_GHOST", "", "", 1);
 		
 		// Abandoned Diary
 		//-------------------------------------------------------------------------
-		AddNpc(153014, "Abandoned Diary", "f_pilgrimroad_50", -1612, -872, 90, "PILGRIM50_DIARY");
+		AddNpc(33, 153014, "Abandoned Diary", "f_pilgrimroad_50", -1612, 507, -872, 90, "PILGRIM50_DIARY", "", "", 0);
 		
 		// Diary written in Anger
 		//-------------------------------------------------------------------------
-		AddNpc(147312, "Diary written in Anger", "f_pilgrimroad_50", 959.421, -890.0858, 90, "PILGRIM50_LOSTPAPER");
+		AddNpc(34, 147312, "Diary written in Anger", "f_pilgrimroad_50", 959.421, 507.3573, -890.0858, 90, "PILGRIM50_LOSTPAPER", "", "", 0);
+		AddNpc(37, 147364, "", "f_pilgrimroad_50", -73.29774, 507.3573, -467.9288, 90, "", "", "");
+		AddNpc(38, 147362, "", "f_pilgrimroad_50", -1903.896, 507.3573, -1190.86, 90, "", "", "");
+		AddNpc(39, 147362, "", "f_pilgrimroad_50", 2240.842, 507.3573, -1306.641, 90, "", "", "");
 		
 		// Genar Field
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Genar Field", "f_pilgrimroad_50", -161.1756, -725.1011, -10, "", "PILGRIM_50_TO_PILGRIM_49", "");
+		AddNpc(40, 40001, "Genar Field", "f_pilgrimroad_50", -161.1756, 507.3573, -725.1011, -10, "", "PILGRIM_50_TO_PILGRIM_49", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_pilgrimroad_50", -969.98, 1142.73, 90, "TREASUREBOX_LV_F_PILGRIMROAD_5041");
+		AddNpc(41, 147392, "Lv1 Treasure Chest", "f_pilgrimroad_50", -969.98, 557.98, 1142.73, 90, "TREASUREBOX_LV_F_PILGRIMROAD_5041", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_pilgrimroad_50", 588.187, 77.75356, 90, "", "JOB_PIED_PIPER_Q1_OBJ", "");
+		AddNpc(42, 20026, " ", "f_pilgrimroad_50", 588.187, 657.3268, 77.75356, 90, "", "JOB_PIED_PIPER_Q1_OBJ", "");
 	}
 }

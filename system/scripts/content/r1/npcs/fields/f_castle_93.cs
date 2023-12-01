@@ -12,141 +12,170 @@ public class FCastle93NpcScript : GeneralScript
 {
 	public override void Load()
 	{
+		AddNpc(4, 156106, " ", "f_castle_93", 1040.426, 291.6668, -191.3779, 120, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 1012.092, 291.6668, -161.3139, 120, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 1004.787, 291.6668, -126.1789, 120, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 999.636, 291.6668, -93.20924, 120, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 867.3062, 291.6668, 109.6189, 120, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 883.7407, 291.6668, 71.58256, 120, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 914.4982, 291.6668, 41.36195, 120, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 927.9795, 291.6668, 4.309532, 120, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 955.1881, 291.6668, -16.02148, 120, "", "", "");
 		
 		// Schaffenstar Adjutant Apollonius
 		//-------------------------------------------------------------------------
-		AddNpc(156116, "Schaffenstar Adjutant Apollonius", "f_castle_93", 190, -551, 90, "CASTLE93_NPC_MAIN01");
+		AddNpc(5, 156116, "Schaffenstar Adjutant Apollonius", "f_castle_93", 190, 291, -551, 90, "CASTLE93_NPC_MAIN01", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(155163, "Schaffenstar Member", "f_castle_93", 267, -188, 0, "CASTLE93_NPC_01");
+		AddNpc(6, 155163, "Schaffenstar Member", "f_castle_93", 267, 291, -188, 0, "CASTLE93_NPC_01", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156128, "Schaffenstar Member", "f_castle_93", 395, -193, 45, "CASTLE93_NPC_02");
+		AddNpc(7, 156128, "Schaffenstar Member", "f_castle_93", 395, 291, -193, 45, "CASTLE93_NPC_02", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156122, "Schaffenstar Member", "f_castle_93", 441, -499, 135, "CASTLE93_NPC_03");
+		AddNpc(8, 156122, "Schaffenstar Member", "f_castle_93", 441, 291, -499, 135, "CASTLE93_NPC_03", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156124, "Schaffenstar Member", "f_castle_93", 143, -487, 225, "CASTLE93_NPC_04");
+		AddNpc(9, 156124, "Schaffenstar Member", "f_castle_93", 143, 291, -487, 225, "CASTLE93_NPC_04", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156126, "Schaffenstar Member", "f_castle_93", 154, -389, 225, "CASTLE93_NPC_05");
+		AddNpc(10, 156126, "Schaffenstar Member", "f_castle_93", 154, 291, -389, 225, "CASTLE93_NPC_05", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156129, "Schaffenstar Member", "f_castle_93", 167, -229, -45, "CASTLE93_NPC_06");
+		AddNpc(11, 156129, "Schaffenstar Member", "f_castle_93", 167, 291, -229, -45, "CASTLE93_NPC_06", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156130, "Schaffenstar Member", "f_castle_93", 973.5048, -104, 135, "CASTLE93_NPC_07");
+		AddNpc(12, 156130, "Schaffenstar Member", "f_castle_93", 973.5048, 291.6668, -104, 135, "CASTLE93_NPC_07", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156123, "Schaffenstar Member", "f_castle_93", 990.864, -185.1895, 135, "CASTLE93_NPC_08");
+		AddNpc(13, 156123, "Schaffenstar Member", "f_castle_93", 990.864, 291.6668, -185.1895, 135, "CASTLE93_NPC_08", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(150180, "Schaffenstar Member", "f_castle_93", 846.3627, 40.25021, 45, "CASTLE93_NPC_09");
+		AddNpc(14, 150180, "Schaffenstar Member", "f_castle_93", 846.3627, 291.6668, 40.25021, 45, "CASTLE93_NPC_09", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156127, "Schaffenstar Member", "f_castle_93", 894.5943, -25.98899, 90, "CASTLE93_NPC_10");
+		AddNpc(15, 156127, "Schaffenstar Member", "f_castle_93", 894.5943, 291.6668, -25.98899, 90, "CASTLE93_NPC_10", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", -232, 291, 1077, -60, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", -202, 291, 1045, -50, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", -175, 291, 1010, -30, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", -135, 291, 1000, -10, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 3, 291, 997, 210, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 38, 291, 1020, 220, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 75, 291, 1049, 220, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 88, 291, 1090, 90, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", -32, 291, 981, 200, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 355, 291, -1181, 90, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 330, 291, -1223, 90, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 330, 291, -1311, 90, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 324, 291, -1268, 90, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 340, 291, -995, 240, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 328, 291, -1040, 90, "", "", "");
+		AddNpc(4, 156106, " ", "f_castle_93", 351, 291, -1075, 90, "", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147468, "", "f_castle_93", 584, -1075, 0, "CASTLE93_NPC_24");
+		AddNpc(16, 147468, "", "f_castle_93", 584, 291, -1075, 0, "CASTLE93_NPC_24", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147468, "", "f_castle_93", 316, -348, 0, "CASTLE93_NPC_24");
+		AddNpc(16, 147468, "", "f_castle_93", 316, 291, -348, 0, "CASTLE93_NPC_24", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147468, "", "f_castle_93", 21, 1074, 0, "CASTLE93_NPC_24");
+		AddNpc(16, 147468, "", "f_castle_93", 21, 291, 1074, 0, "CASTLE93_NPC_24", "", "", 0);
+		AddNpc(17, 147366, " ", "f_castle_93", 309.1638, 291.6668, -405.075, 90, "", "", "");
+		AddNpc(17, 147366, " ", "f_castle_93", 700.6738, 318.1835, -193.0034, 90, "", "", "");
+		AddNpc(17, 147366, " ", "f_castle_93", 560.1247, 291.4138, -1113.135, 90, "", "", "");
+		AddNpc(18, 147363, " ", "f_castle_93", -64.33958, 291.4138, 1100.164, 90, "", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(155165, "Schaffenstar Member", "f_castle_93", -124, 1027, 0, "CASTLE93_NPC_11");
+		AddNpc(19, 155165, "Schaffenstar Member", "f_castle_93", -124, 291, 1027, 0, "CASTLE93_NPC_11", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(150180, "Schaffenstar Member", "f_castle_93", -50, 1015, 0, "CASTLE93_NPC_12");
+		AddNpc(20, 150180, "Schaffenstar Member", "f_castle_93", -50, 291, 1015, 0, "CASTLE93_NPC_12", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(150179, "Schaffenstar Member", "f_castle_93", -28, 1067, 0, "CASTLE93_NPC_13");
+		AddNpc(21, 150179, "Schaffenstar Member", "f_castle_93", -28, 291, 1067, 0, "CASTLE93_NPC_13", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156127, "Schaffenstar Member", "f_castle_93", 387, -1036, -45, "CASTLE93_NPC_14");
+		AddNpc(22, 156127, "Schaffenstar Member", "f_castle_93", 387, 291, -1036, -45, "CASTLE93_NPC_14", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156124, "Schaffenstar Member", "f_castle_93", 402, -1191, 225, "CASTLE93_NPC_15");
+		AddNpc(23, 156124, "Schaffenstar Member", "f_castle_93", 402, 291, -1191, 225, "CASTLE93_NPC_15", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156123, "Schaffenstar Member", "f_castle_93", 611, -1036, 0, "CASTLE93_NPC_17");
+		AddNpc(25, 156123, "Schaffenstar Member", "f_castle_93", 611, 291, -1036, 0, "CASTLE93_NPC_17", "", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156122, "Schaffenstar Member", "f_castle_93", 500, -982, 45, "CASTLE93_NPC_16");
+		AddNpc(24, 156122, "Schaffenstar Member", "f_castle_93", 500, 291, -982, 45, "CASTLE93_NPC_16", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147468, "", "f_castle_93", 584, -1075, 0, "CASTLE93_NPC_25");
+		AddNpc(32, 147468, "", "f_castle_93", 584, 291, -1075, 0, "CASTLE93_NPC_25", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147468, "", "f_castle_93", 316, -348, 0, "CASTLE93_NPC_25");
+		AddNpc(32, 147468, "", "f_castle_93", 316, 291, -348, 0, "CASTLE93_NPC_25", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147468, "", "f_castle_93", 21, 1074, 0, "CASTLE93_NPC_25");
+		AddNpc(32, 147468, "", "f_castle_93", 21, 291, 1074, 0, "CASTLE93_NPC_25", "", "", 1);
 		
 		// Resistance Adjutant Benjaminas
 		//-------------------------------------------------------------------------
-		AddNpc(156134, "Resistance Adjutant Benjaminas", "f_castle_93", 219.2369, -591.6567, 90, "CASTLE93_NPC_18");
+		AddNpc(26, 156134, "Resistance Adjutant Benjaminas", "f_castle_93", 219.2369, 291.6668, -591.6567, 90, "CASTLE93_NPC_18", "", "", 1);
 		
 		// Resistance Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(156129, "Resistance Soldier", "f_castle_93", 871.8427, 7.92852, 90, "CASTLE93_NPC_19");
+		AddNpc(27, 156129, "Resistance Soldier", "f_castle_93", 871.8427, 291.6668, 7.92852, 90, "CASTLE93_NPC_19", "", "", 1);
 		
 		// Resistance Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(156125, "Resistance Soldier", "f_castle_93", 979.7959, -145.892, 135, "CASTLE93_NPC_20");
+		AddNpc(28, 156125, "Resistance Soldier", "f_castle_93", 979.7959, 291.6668, -145.892, 135, "CASTLE93_NPC_20", "", "", 1);
 		
 		// Resistance Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(156128, "Resistance Soldier", "f_castle_93", 159.0553, -159.6779, -45, "CASTLE93_NPC_21");
+		AddNpc(29, 156128, "Resistance Soldier", "f_castle_93", 159.0553, 291.6668, -159.6779, -45, "CASTLE93_NPC_21", "", "", 1);
 		
 		// Resistance Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(156127, "Resistance Soldier", "f_castle_93", 148.508, -436.7712, 225, "CASTLE93_NPC_22");
+		AddNpc(30, 156127, "Resistance Soldier", "f_castle_93", 148.508, 291.6668, -436.7712, 225, "CASTLE93_NPC_22", "", "", 1);
 		
 		// Resistance Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(150180, "Resistance Soldier", "f_castle_93", 325.6409, -193.2423, 0, "CASTLE93_NPC_23");
+		AddNpc(31, 150180, "Resistance Soldier", "f_castle_93", 325.6409, 291.6668, -193.2423, 0, "CASTLE93_NPC_23", "", "", 1);
 		
 		// Barynwell 87 Waters
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Barynwell 87 Waters", "f_castle_93", 1211.465, 64.41367, 110, "", "F_CASTLE_93_TO_F_3CMLAKE_87", "");
+		AddNpc(33, 40001, "Barynwell 87 Waters", "f_castle_93", 1211.465, 291.6668, 64.41367, 110, "", "F_CASTLE_93_TO_F_3CMLAKE_87", "");
 		
 		// Inner Wall District 10
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Inner Wall District 10", "f_castle_93", -2869.648, -219.702, -90, "", "F_CASTLE_93_TO_F_CASTLE_94", "");
+		AddNpc(34, 40001, "Inner Wall District 10", "f_castle_93", -2869.648, 406.3392, -219.702, -90, "", "F_CASTLE_93_TO_F_CASTLE_94", "");
 		
 		// Outer Wall District 9
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Outer Wall District 9", "f_castle_93", 507.2914, -920.1061, 208, "", "F_CASTLE_93_TO_F_CASTLE_20_1", "");
+		AddNpc(35, 40001, "Outer Wall District 9", "f_castle_93", 507.2914, 291.4138, -920.1061, 208, "", "F_CASTLE_93_TO_F_CASTLE_20_1", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_castle_93", -1409.581, -1575.551, 90, "", "EXPLORER_MISLE14", "");
+		AddNpc(36, 40095, " ", "f_castle_93", -1409.581, 302.6931, -1575.551, 90, "", "EXPLORER_MISLE14", "");
 	}
 }

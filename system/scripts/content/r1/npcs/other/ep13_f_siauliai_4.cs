@@ -14,74 +14,82 @@ public class Ep13FSiauliai4NpcScript : GeneralScript
 	{
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "ep13_f_siauliai_4", 112.216, 75.66612, 90, "", "EP13_F_SIAULIAI_4_MQ03_TRIG", "");
+		AddNpc(1, 20026, " ", "ep13_f_siauliai_4", 112.216, 79.90746, 75.66612, 90, "", "EP13_F_SIAULIAI_4_MQ03_TRIG", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "ep13_f_siauliai_4", 164.9881, -573.5817, 90, "", "EP13_F_SIAULIAI_4_MQ03_TRIG2", "");
+		AddNpc(2, 20026, " ", "ep13_f_siauliai_4", 164.9881, 149.3352, -573.5817, 90, "", "EP13_F_SIAULIAI_4_MQ03_TRIG2", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep13_f_siauliai_4", 117.8256, -257.4228, 90, "EP13_F_SIAULIAI_4_MQ04_WAY01");
+		AddNpc(3, 147469, " ", "ep13_f_siauliai_4", 117.8256, 80.32037, -257.4228, 90, "EP13_F_SIAULIAI_4_MQ04_WAY01", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep13_f_siauliai_4", 656.8864, -143.3087, 90, "EP13_F_SIAULIAI_4_MQ04_WAY02");
+		AddNpc(4, 147469, " ", "ep13_f_siauliai_4", 656.8864, 79.90744, -143.3087, 90, "EP13_F_SIAULIAI_4_MQ04_WAY02", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep13_f_siauliai_4", 871.0787, 484.4627, 90, "EP13_F_SIAULIAI_4_MQ04_WAY03");
+		AddNpc(5, 147469, " ", "ep13_f_siauliai_4", 871.0787, 79.90746, 484.4627, 90, "EP13_F_SIAULIAI_4_MQ04_WAY03", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep13_f_siauliai_4", 96.89069, -279.044, 90, "", "EP13_F_SIAULIAI_4_MQ04_WAY04", "");
+		AddNpc(6, 147469, " ", "ep13_f_siauliai_4", 96.89069, 80.16216, -279.044, 90, "", "EP13_F_SIAULIAI_4_MQ04_WAY04", "");
 		
 		// Goddess Lada
 		//-------------------------------------------------------------------------
-		AddNpc(156043, "Goddess Lada", "ep13_f_siauliai_4", 68.76344, -1014.144, 90, "EP13_GODDESS_LADA_ISA");
+		AddNpc(7, 156043, "Goddess Lada", "ep13_f_siauliai_4", 68.76344, 146.2609, -1014.144, 90, "EP13_GODDESS_LADA_ISA", "", "", 1);
 		
 		// Ragana's Messenger
 		//-------------------------------------------------------------------------
-		AddNpc(59583, "Ragana's Messenger", "ep13_f_siauliai_4", -606.0184, -527.0504, 152, "EP13_F_SIAULIAI_4_MQ_05_MAIL");
+		AddNpc(8, 59583, "Ragana's Messenger", "ep13_f_siauliai_4", -606.0184, 79.90726, -527.0504, 152, "EP13_F_SIAULIAI_4_MQ_05_MAIL", "", "", 1);
 		
 		// Baiga's Messenger
 		//-------------------------------------------------------------------------
-		AddNpc(59584, "Baiga's Messenger", "ep13_f_siauliai_4", -772.1847, 279.823, 15, "EP13_F_SIAULIAI_4_MQ_06_MAIL");
+		AddNpc(9, 59584, "Baiga's Messenger", "ep13_f_siauliai_4", -772.1847, 79.90745, 279.823, 15, "EP13_F_SIAULIAI_4_MQ_06_MAIL", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "ep13_f_siauliai_4", 543.4092, -142.095, 90, "", "EP13_F_SIAULIAI_4_MQ07_TRIG", "");
+		AddNpc(10, 20026, " ", "ep13_f_siauliai_4", 543.4092, 79.90746, -142.095, 90, "", "EP13_F_SIAULIAI_4_MQ07_TRIG", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "ep13_f_siauliai_4", 22.51642, -946.3156, 90, "WARP_EP13_F_SIAULIAI_4", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(12, 40120, "Statue of Goddess Vakarine", "ep13_f_siauliai_4", 22.51642, 146.2609, -946.3156, 90, "WARP_EP13_F_SIAULIAI_4", "STOUP_CAMP", "STOUP_CAMP");
 		
 		// Statue of Goddess Zemyna
 		//-------------------------------------------------------------------------
-		AddNpc(40110, "Statue of Goddess Zemyna", "ep13_f_siauliai_4", 1142.392, 609.9449, 17, "EP13_F_SIAULIAI_4_ZEMINA", "EP13_F_SIAULIAI_4_ZEMINA", "EP13_F_SIAULIAI_4_ZEMINA");
+		AddNpc(13, 40110, "Statue of Goddess Zemyna", "ep13_f_siauliai_4", 1142.392, 79.90748, 609.9449, 17, "EP13_F_SIAULIAI_4_ZEMINA", "EP13_F_SIAULIAI_4_ZEMINA", "EP13_F_SIAULIAI_4_ZEMINA");
+		AddNpc(14, 151029, " ", "ep13_f_siauliai_4", -283.3699, 10.28723, 899.2589, 90, "", "", "");
+		AddNpc(15, 151029, " ", "ep13_f_siauliai_4", -275.6921, 10.66573, 869.3282, 90, "", "", "");
+		AddNpc(16, 151029, " ", "ep13_f_siauliai_4", -251.2316, 9.955653, 891.5889, 90, "", "", "");
 		
 		// Suspicious Pile of Box Containing Something
 		//-------------------------------------------------------------------------
-		AddNpc(151029, "Suspicious Pile of Box Containing Something", "ep13_f_siauliai_4", -241.1957, 855.1622, 90, "EP13_F_SIAULIAI_MQ08_BOX");
+		AddNpc(17, 151029, "Suspicious Pile of Box Containing Something", "ep13_f_siauliai_4", -241.1957, 10.66563, 855.1622, 90, "EP13_F_SIAULIAI_MQ08_BOX", "", "");
+		AddNpc(18, 151029, " ", "ep13_f_siauliai_4", -312.3244, 10.66591, 877.9847, 90, "", "", "");
+		AddNpc(19, 151029, " ", "ep13_f_siauliai_4", -265.1964, 10.66582, 837.4897, 90, "", "", "");
+		AddNpc(21, 151029, " ", "ep13_f_siauliai_4", -301.8552, 10.66605, 843.1936, 90, "", "", "");
 		
 		// Paupys Crossing
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Paupys Crossing", "ep13_f_siauliai_4", 126.3742, -1144.248, 6, "", "WARP_EP13_F_SIAULIAI_4_TO_EP13_F_SIAULIAI_3", "");
+		AddNpc(22, 40001, "Paupys Crossing", "ep13_f_siauliai_4", 126.3742, 146.2609, -1144.248, 6, "", "WARP_EP13_F_SIAULIAI_4_TO_EP13_F_SIAULIAI_3", "");
 		
 		// Kirtimas Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Kirtimas Forest", "ep13_f_siauliai_4", 73.92236, 1200.827, 166, "", "WARP_EP13_F_SIAULIAI_4_TO_EP13_F_SIAULIAI_5", "");
+		AddNpc(23, 40001, "Kirtimas Forest", "ep13_f_siauliai_4", 73.92236, 79.90746, 1200.827, 166, "", "WARP_EP13_F_SIAULIAI_4_TO_EP13_F_SIAULIAI_5", "");
+		AddNpc(24, 150244, " ", "ep13_f_siauliai_4", -263.5627, 10.77657, 435.71, 90, "", "", "");
 		
 		// [Kingdom Reconstruction]{nl}Orsha Medical Solider
 		//-------------------------------------------------------------------------
-		AddNpc(153111, "[Kingdom Reconstruction]{nl}Orsha Medical Solider", "ep13_f_siauliai_4", 640.5109, 51.80798, 107, "EP13_F_SIAULIAI_4_REPUTATION_01");
+		AddNpc(25, 153111, "[Kingdom Reconstruction]{nl}Orsha Medical Solider", "ep13_f_siauliai_4", 640.5109, 79.90747, 51.80798, 107, "EP13_F_SIAULIAI_4_REPUTATION_01", "", "");
+		AddNpc(26, 147362, " ", "ep13_f_siauliai_4", 656.0301, 79.90746, 49.24568, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155107, " ", "ep13_f_siauliai_4", -221.6736, 871.6878, 90, "", "EP13_F_SIAULIAI_4_BOMB", "");
+		AddNpc(1012, 155107, " ", "ep13_f_siauliai_4", -221.6736, 10.66535, 871.6878, 90, "", "EP13_F_SIAULIAI_4_BOMB", "");
 		
 		// [Pied Piper Master]{nl}Jogaila
 		//-------------------------------------------------------------------------
-		AddNpc(153207, "[Pied Piper Master]{nl}Jogaila", "ep13_f_siauliai_4", -845.7841, 329.1088, 33, "EP15_F_ABBEY2_6_NPC");
+		AddNpc(1013, 153207, "[Pied Piper Master]{nl}Jogaila", "ep13_f_siauliai_4", -845.7841, 79.90744, 329.1088, 33, "EP15_F_ABBEY2_6_NPC", "", "", 1);
 	}
 }

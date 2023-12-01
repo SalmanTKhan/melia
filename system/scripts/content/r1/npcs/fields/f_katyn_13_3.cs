@@ -14,10 +14,10 @@ public class FKatyn133NpcScript : GeneralScript
 	{
 		// Letas Stream
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Letas Stream", "f_katyn_13_3", 2393, 294, 90, "", "KATYN13_3_KATYN12", "");
+		AddNpc(1, 40001, "Letas Stream", "f_katyn_13_3", 2393, 200, 294, 90, "", "KATYN13_3_KATYN12", "");
 		
 		// Ramstis Ridge
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Ramstis Ridge", "f_katyn_13_3", -1921, -350, 270, "", "KATYN13_3_ROKAS25", "");
+		AddNpc(2, 40001, "Ramstis Ridge", "f_katyn_13_3", -1921, 244, -350, 270, "", "KATYN13_3_ROKAS25", "");
 	}
 }

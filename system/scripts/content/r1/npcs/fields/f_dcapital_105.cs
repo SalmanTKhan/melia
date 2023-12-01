@@ -14,278 +14,281 @@ public class FDcapital105NpcScript : GeneralScript
 	{
 		// Taniel I Commemorative Orb
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Taniel I Commemorative Orb", "f_dcapital_105", -950.0858, -1317.412, -2, "", "WARP_DCAPITAL105_TO_DCAPITAL103", "");
+		AddNpc(1, 40001, "Taniel I Commemorative Orb", "f_dcapital_105", -950.0858, -10.62195, -1317.412, -2, "", "WARP_DCAPITAL105_TO_DCAPITAL103", "");
 		
 		// Closed Town 104
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Closed Town 104", "f_dcapital_105", -325.7116, 2083.584, 196, "", "WARP_DCAPITAL105_TO_DCAPITAL104", "");
+		AddNpc(2, 40001, "Closed Town 104", "f_dcapital_105", -325.7116, 257.293, 2083.584, 196, "", "WARP_DCAPITAL105_TO_DCAPITAL104", "");
 		
 		// Gliehel Memorial
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Gliehel Memorial", "f_dcapital_105", -1795.635, 63.40304, -42, "", "WARP_DCAPITAL105_TO_DCAPITAL106", "");
+		AddNpc(3, 40001, "Gliehel Memorial", "f_dcapital_105", -1795.635, 80.39858, 63.40304, -42, "", "WARP_DCAPITAL105_TO_DCAPITAL106", "");
 		
 		// DCAPITAL105_SQ_1_NPC
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "DCAPITAL105_SQ_1_NPC", "f_dcapital_105", -89.45473, -601.686, 90, "", "DCAPITAL105_SQ_1_NPC", "");
+		AddNpc(5, 20026, "DCAPITAL105_SQ_1_NPC", "f_dcapital_105", -89.45473, 129.7322, -601.686, 90, "", "DCAPITAL105_SQ_1_NPC", "");
 		
 		// DCAPITAL105_SQ_1_NPC
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "DCAPITAL105_SQ_1_NPC", "f_dcapital_105", -301.3294, -484.0935, 90, "", "DCAPITAL105_SQ_1_NPC", "");
+		AddNpc(5, 20026, "DCAPITAL105_SQ_1_NPC", "f_dcapital_105", -301.3294, 111.0152, -484.0935, 90, "", "DCAPITAL105_SQ_1_NPC", "");
 		
 		// Kupole Grisia
 		//-------------------------------------------------------------------------
-		AddNpc(154011, "Kupole Grisia", "f_dcapital_105", -334.881, -400.5529, 37, "DCAPITAL105_GRISIA_NPC_1");
+		AddNpc(6, 154011, "Kupole Grisia", "f_dcapital_105", -334.881, 111.0152, -400.5529, 37, "DCAPITAL105_GRISIA_NPC_1", "", "", 1);
 		
 		// Kupole Grisia
 		//-------------------------------------------------------------------------
-		AddNpc(154011, "Kupole Grisia", "f_dcapital_105", 6.198147, 859.3942, 90, "DCAPITAL105_GRISIA_NPC_2");
+		AddNpc(7, 154011, "Kupole Grisia", "f_dcapital_105", 6.198147, 284.7023, 859.3942, 90, "DCAPITAL105_GRISIA_NPC_2", "", "", 1);
 		
 		// Rescued Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154016, "Rescued Kupole", "f_dcapital_105", -359.9118, -416.6461, 88, "DCAPITAL105_KUPOLE_NPC");
+		AddNpc(8, 154016, "Rescued Kupole", "f_dcapital_105", -359.9118, 111.0152, -416.6461, 88, "DCAPITAL105_KUPOLE_NPC", "", "", 1);
 		
 		// DCAPITAL105_SQ_6_NPC
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "DCAPITAL105_SQ_6_NPC", "f_dcapital_105", -54.41552, 1593.758, 90, "", "DCAPITAL105_SQ_6_NPC", "");
+		AddNpc(9, 20026, "DCAPITAL105_SQ_6_NPC", "f_dcapital_105", -54.41552, 294.514, 1593.758, 90, "", "DCAPITAL105_SQ_6_NPC", "");
+		AddNpc(10, 147364, "", "f_dcapital_105", -326.9022, 111.0152, -414.4349, 90, "", "", "");
+		AddNpc(10, 147364, "", "f_dcapital_105", 51.21848, 284.7015, 812.7847, 90, "", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1209.311, -433.0887, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1209.311, 67.43076, -433.0887, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -885.0221, -313.583, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -885.0221, 62.975, -313.583, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -944.4072, -443.1031, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -944.4072, 62.29226, -443.1031, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1555.495, 151.935, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1555.495, 100.5794, 151.935, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1306.55, -181.6983, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1306.55, 100.5789, -181.6983, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1152.999, 5.242401, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1152.999, 100.5794, 5.242401, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1360.508, 231.5007, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1360.508, 100.5794, 231.5007, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1193.921, 318.229, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1193.921, 100.5794, 318.229, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -881.0117, 249.6697, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -881.0117, 159.3076, 249.6697, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -634.7234, 231.0096, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -634.7234, 210.5078, 231.0096, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1104.141, -124.1688, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1104.141, 67.42626, -124.1688, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -733.452, -150.544, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -733.452, 165.8138, -150.544, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1284.068, 490.2266, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1284.068, 121.2867, 490.2266, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1380.251, -8.808674, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1380.251, 100.5794, -8.808674, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1234.369, 172.6035, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1234.369, 100.5794, 172.6035, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Baltinel Parish Relic
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Baltinel Parish Relic", "f_dcapital_105", -1042.314, -232.4355, 90, "DCAPITAL105_SQ_2_NPC");
+		AddNpc(11, 153105, "Baltinel Parish Relic", "f_dcapital_105", -1042.314, 62.29231, -232.4355, 90, "DCAPITAL105_SQ_2_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 540.3799, -411.407, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 540.3799, 139.81, -411.407, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 355.5265, -404.4743, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 355.5265, 139.803, -404.4743, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 249.9982, -553.6063, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 249.9982, 139.7697, -553.6063, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 353.5648, -759.8931, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 353.5648, 139.81, -759.8931, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 512.7332, -705.9272, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 512.7332, 139.81, -705.9272, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 643.2232, -591.5472, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 643.2232, 139.81, -591.5472, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 847.8088, -373.3231, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 847.8088, 139.8263, -373.3231, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 795.2462, -101.2496, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 795.2462, 139.8304, -101.2496, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 964.8262, -22.41195, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 964.8262, 139.8314, -22.41195, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 1141.589, -63.32619, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 1141.589, 139.8251, -63.32619, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 1075.574, -237.2231, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 1075.574, 139.8288, -237.2231, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 948.8226, -164.6026, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 948.8226, 139.8293, -164.6026, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 1061.078, -526.1675, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 1061.078, 63.64267, -526.1675, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 1062.61, -795.3198, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 1062.61, -7.971149, -795.3198, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 1231.915, -636.313, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 1231.915, -8.501289, -636.313, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 995.0194, -1073.764, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 995.0194, 11.56833, -1073.764, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 1175.477, -918.5323, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 1175.477, -8.501289, -918.5323, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Kupole Trap
 		//-------------------------------------------------------------------------
-		AddNpc(154067, "Kupole Trap", "f_dcapital_105", 1169.353, -1107.409, 90, "DCAPITAL105_SQ_3_NPC");
+		AddNpc(12, 154067, "Kupole Trap", "f_dcapital_105", 1169.353, -8.501289, -1107.409, 90, "DCAPITAL105_SQ_3_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", -142.0675, 96.54414, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", -142.0675, 164.6963, 96.54414, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", 450.3233, 276.5915, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", 450.3233, 164.8816, 276.5915, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", 324.1125, 17.51997, 219, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", 324.1125, 164.8272, 17.51997, 219, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", -383.8578, 445.1035, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", -383.8578, 183.6116, 445.1035, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", -566.925, 411.5758, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", -566.925, 226.7541, 411.5758, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", -348.6393, 130.9649, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", -348.6393, 256.9917, 130.9649, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", 13.22672, 557.4419, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", 13.22672, 284.6343, 557.4419, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", 233.5258, 312.3339, -18, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", 233.5258, 164.8808, 312.3339, -18, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", 662.1002, 538.3173, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", 662.1002, 272.5027, 538.3173, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", -745.2025, 439.7825, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", -745.2025, 234.786, 439.7825, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", -1055.158, 523.3351, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", -1055.158, 197.7126, 523.3351, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", 160.1617, -75.63138, 196, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", 160.1617, 164.8216, -75.63138, 196, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", 932.9773, 605.7709, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", 932.9773, 126.5369, 605.7709, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Trapped Kupole
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Trapped Kupole", "f_dcapital_105", 818.7703, 446.9837, 90, "DCAPITAL105_SQ_5_NPC");
+		AddNpc(14, 154014, "Trapped Kupole", "f_dcapital_105", 818.7703, 97.319, 446.9837, 90, "DCAPITAL105_SQ_5_NPC", "", "");
 		
 		// Statue of Goddess Zemyna
 		//-------------------------------------------------------------------------
-		AddNpc(40110, "Statue of Goddess Zemyna", "f_dcapital_105", -1997.51, 1472.45, 90, "DCAPITAL_105_EV_55_001", "DCAPITAL_105_EV_55_001", "DCAPITAL_105_EV_55_001");
+		AddNpc(23, 40110, "Statue of Goddess Zemyna", "f_dcapital_105", -1997.51, 127.5562, 1472.45, 90, "DCAPITAL_105_EV_55_001", "DCAPITAL_105_EV_55_001", "DCAPITAL_105_EV_55_001");
 		
 		// Neringa
 		//-------------------------------------------------------------------------
-		AddNpc(154102, "Neringa", "f_dcapital_105", -1824.927, 1727.059, 45, "EP12_PRELUDE_NERINGA_DCAPITAL_105A");
+		AddNpc(26, 154102, "Neringa", "f_dcapital_105", -1824.927, 127.5562, 1727.059, 45, "EP12_PRELUDE_NERINGA_DCAPITAL_105A", "", "", 1);
 		
 		// Neringa
 		//-------------------------------------------------------------------------
-		AddNpc(154102, "Neringa", "f_dcapital_105", -1441.409, 324.7734, 45, "EP12_PRELUDE_NERINGA_DCAPITAL_105B");
+		AddNpc(27, 154102, "Neringa", "f_dcapital_105", -1441.409, 100.5613, 324.7734, 45, "EP12_PRELUDE_NERINGA_DCAPITAL_105B", "", "", 1);
 		
 		// Sacred Namott
 		//-------------------------------------------------------------------------
-		AddNpc(151064, "Sacred Namott", "f_dcapital_105", -1277, 1093, 45, "EP12_PRELUDE_Namot01");
+		AddNpc(28, 151064, "Sacred Namott", "f_dcapital_105", -1277, 164, 1093, 45, "EP12_PRELUDE_Namot01", "", "", 1);
 		
 		// Sacred Namott
 		//-------------------------------------------------------------------------
-		AddNpc(151064, "Sacred Namott", "f_dcapital_105", -1277, 893, 45, "EP12_PRELUDE_Namot02");
+		AddNpc(29, 151064, "Sacred Namott", "f_dcapital_105", -1277, 164, 893, 45, "EP12_PRELUDE_Namot02", "", "", 1);
 		
 		// Sacred Namott
 		//-------------------------------------------------------------------------
-		AddNpc(151064, "Sacred Namott", "f_dcapital_105", -1077, 893, 45, "EP12_PRELUDE_Namot03");
+		AddNpc(30, 151064, "Sacred Namott", "f_dcapital_105", -1077, 164, 893, 45, "EP12_PRELUDE_Namot03", "", "", 1);
 		
 		// Sacred Namott
 		//-------------------------------------------------------------------------
-		AddNpc(151064, "Sacred Namott", "f_dcapital_105", -1077, 1093, 45, "EP12_PRELUDE_Namot04");
+		AddNpc(31, 151064, "Sacred Namott", "f_dcapital_105", -1077, 164, 1093, 45, "EP12_PRELUDE_Namot04", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154067, " ", "f_dcapital_105", -1277, 1093, 90, "EP12_PRELUDE_HIDDEN_OBJECT01");
+		AddNpc(32, 154067, " ", "f_dcapital_105", -1277, 164, 1093, 90, "EP12_PRELUDE_HIDDEN_OBJECT01", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154067, " ", "f_dcapital_105", -1277, 893, 90, "EP12_PRELUDE_HIDDEN_OBJECT02");
+		AddNpc(33, 154067, " ", "f_dcapital_105", -1277, 164, 893, 90, "EP12_PRELUDE_HIDDEN_OBJECT02", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154067, " ", "f_dcapital_105", -1077, 893, 90, "EP12_PRELUDE_HIDDEN_OBJECT03");
+		AddNpc(34, 154067, " ", "f_dcapital_105", -1077, 164, 893, 90, "EP12_PRELUDE_HIDDEN_OBJECT03", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154067, " ", "f_dcapital_105", -1077, 1093, 90, "EP12_PRELUDE_HIDDEN_OBJECT04");
+		AddNpc(35, 154067, " ", "f_dcapital_105", -1077, 164, 1093, 90, "EP12_PRELUDE_HIDDEN_OBJECT04", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153197, " ", "f_dcapital_105", -1181.78, 991.2765, 90, "", "EP12_PRELUDE_04_START_TRIGGER", "");
+		AddNpc(36, 153197, " ", "f_dcapital_105", -1181.78, 164.3527, 991.2765, 90, "", "EP12_PRELUDE_04_START_TRIGGER", "");
+		AddNpc(37, 160034, "Transportation Device", "f_dcapital_105", -257.7142, 111.0919, -228.7726, 90, "", "", "");
 	}
 }

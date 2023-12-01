@@ -14,146 +14,152 @@ public class FPilgrimroad362NpcScript : GeneralScript
 	{
 		// The luggage of someone
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "The luggage of someone", "f_pilgrimroad_36_2", 1212.06, -463.182, 90, "JOB_DOPPELSOELDNER_6_1_OBJ01");
+		AddNpc(1, 47160, "The luggage of someone", "f_pilgrimroad_36_2", 1212.06, 119.5623, -463.182, 90, "JOB_DOPPELSOELDNER_6_1_OBJ01", "", "", 1);
 		
 		// Galeed Plateau
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Galeed Plateau", "f_pilgrimroad_36_2", 1701.768, -604.2138, 76, "", "PILGRIM_36_2_TO_ROKAS_36_1", "");
+		AddNpc(2, 40001, "Galeed Plateau", "f_pilgrimroad_36_2", 1701.768, 111.0817, -604.2138, 76, "", "PILGRIM_36_2_TO_ROKAS_36_1", "");
 		
 		// Manahas
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Manahas", "f_pilgrimroad_36_2", -28.12843, -999.9745, 4, "", "PILGRIM_36_2_TO_PILGRIM_48", "");
+		AddNpc(3, 40001, "Manahas", "f_pilgrimroad_36_2", -28.12843, 225.3776, -999.9745, 4, "", "PILGRIM_36_2_TO_PILGRIM_48", "");
 		
 		// Nahash Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Nahash Forest", "f_pilgrimroad_36_2", 560.5924, 1585.883, 187, "", "PILGRIM_36_2_TO_SIAULIAI_35_1", "");
+		AddNpc(4, 40001, "Nahash Forest", "f_pilgrimroad_36_2", 560.5924, 98.13425, 1585.883, 187, "", "PILGRIM_36_2_TO_SIAULIAI_35_1", "");
 		
 		// Alemeth Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Alemeth Forest", "f_pilgrimroad_36_2", -1702.741, 1343.997, 269, "", "PILGRIM_36_2_TO_ORCHARD_34_1", "");
+		AddNpc(5, 40001, "Alemeth Forest", "f_pilgrimroad_36_2", -1702.741, 153.1389, 1343.997, 269, "", "PILGRIM_36_2_TO_ORCHARD_34_1", "");
 		
 		// Albinas
 		//-------------------------------------------------------------------------
-		AddNpc(152061, "Albinas", "f_pilgrimroad_36_2", 1424.565, -219.7391, 270, "PILGRIM_36_2_ALBINAS");
+		AddNpc(7, 152061, "Albinas", "f_pilgrimroad_36_2", 1424.565, 119.5623, -219.7391, 270, "PILGRIM_36_2_ALBINAS", "", "", 0);
 		
 		// Damijonas
 		//-------------------------------------------------------------------------
-		AddNpc(155035, "Damijonas", "f_pilgrimroad_36_2", -212.0811, -574.3744, 9, "PILGRIM_36_2_DAMIJONAS");
+		AddNpc(8, 155035, "Damijonas", "f_pilgrimroad_36_2", -212.0811, 225.3776, -574.3744, 9, "PILGRIM_36_2_DAMIJONAS", "", "", 1);
 		
 		// Eduinas
 		//-------------------------------------------------------------------------
-		AddNpc(155036, "Eduinas", "f_pilgrimroad_36_2", 815.4304, 558.3114, 90, "PILGRIM_36_2_EDVINAS");
+		AddNpc(9, 155036, "Eduinas", "f_pilgrimroad_36_2", 815.4304, 130.9243, 558.3114, 90, "PILGRIM_36_2_EDVINAS", "", "");
 		
 		// Gedas
 		//-------------------------------------------------------------------------
-		AddNpc(152058, "Gedas", "f_pilgrimroad_36_2", -1466.564, -811.6622, 90, "PILGRIM_36_2_GEDAS");
+		AddNpc(10, 152058, "Gedas", "f_pilgrimroad_36_2", -1466.564, 95.0484, -811.6622, 90, "PILGRIM_36_2_GEDAS", "", "");
 		
 		// Barte
 		//-------------------------------------------------------------------------
-		AddNpc(152062, "Barte", "f_pilgrimroad_36_2", -1651.547, -933.2919, 90, "PILGRIM_36_2_BARTE");
+		AddNpc(11, 152062, "Barte", "f_pilgrimroad_36_2", -1651.547, 95.0484, -933.2919, 90, "PILGRIM_36_2_BARTE", "", "");
 		
 		// Nijole
 		//-------------------------------------------------------------------------
-		AddNpc(155033, "Nijole", "f_pilgrimroad_36_2", 1139.878, 690.5364, -11, "PILGRIM_36_2_NIJOLE");
+		AddNpc(13, 155033, "Nijole", "f_pilgrimroad_36_2", 1139.878, 130.9243, 690.5364, -11, "PILGRIM_36_2_NIJOLE", "", "");
 		
 		// Fabijus
 		//-------------------------------------------------------------------------
-		AddNpc(152059, "Fabijus", "f_pilgrimroad_36_2", -1605.681, -1054.656, 185, "PILGRIM_36_2_FABIJUS");
+		AddNpc(14, 152059, "Fabijus", "f_pilgrimroad_36_2", -1605.681, 95.0484, -1054.656, 185, "PILGRIM_36_2_FABIJUS", "", "", 0);
 		
 		// PILGRIM_36_2_SQ_010To start quest
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "PILGRIM_36_2_SQ_010To start quest", "f_pilgrimroad_36_2", 1420.525, -286.3961, 90, "", "PILGRIM_36_2_SQ_010_TRIGGER", "");
+		AddNpc(16, 20026, "PILGRIM_36_2_SQ_010To start quest", "f_pilgrimroad_36_2", 1420.525, 119.5623, -286.3961, 90, "", "PILGRIM_36_2_SQ_010_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152069, " ", "f_pilgrimroad_36_2", 1403.052, -221.0012, 3, "", "PILGRIM_36_2_SHRINE_FK", "");
+		AddNpc(17, 152069, " ", "f_pilgrimroad_36_2", 1403.052, 119.5623, -221.0012, 3, "", "PILGRIM_36_2_SHRINE_FK", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152008, " ", "f_pilgrimroad_36_2", -265.9797, -573.7136, -15, "PILGRIM_36_2_SHRINE_REAL");
+		AddNpc(18, 152008, " ", "f_pilgrimroad_36_2", -265.9797, 225.3776, -573.7136, -15, "PILGRIM_36_2_SHRINE_REAL", "", "", 0);
 		
 		// PILGRIM_36_2_SQ_020To complete quest
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "PILGRIM_36_2_SQ_020To complete quest", "f_pilgrimroad_36_2", -250.1871, -607.5973, 90, "", "PILGRIM_36_2_SQ_020_TRIGGER", "");
+		AddNpc(19, 20026, "PILGRIM_36_2_SQ_020To complete quest", "f_pilgrimroad_36_2", -250.1871, 225.3776, -607.5973, 90, "", "PILGRIM_36_2_SQ_020_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156016, " ", "f_pilgrimroad_36_2", -265.9782, -573.7136, -15, "PILGRIM_36_2_RUIN", "PILGRIM_36_2_RUIN");
+		AddNpc(20, 156016, " ", "f_pilgrimroad_36_2", -265.9782, 225.3776, -573.7136, -15, "PILGRIM_36_2_RUIN", "PILGRIM_36_2_RUIN", "", 1);
 		
 		// PILGRIM_36_2_SQ_050To complete quest
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "PILGRIM_36_2_SQ_050To complete quest", "f_pilgrimroad_36_2", 1408.766, -220.6874, 90, "", "PILGRIM_36_2_SQ_050_TRIGGER", "");
+		AddNpc(21, 20026, "PILGRIM_36_2_SQ_050To complete quest", "f_pilgrimroad_36_2", 1408.766, 119.5623, -220.6874, 90, "", "PILGRIM_36_2_SQ_050_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152063, " ", "f_pilgrimroad_36_2", 708.7467, -100.5652, 90, "PILGRIM_36_2_MATERIALS");
+		AddNpc(22, 152063, " ", "f_pilgrimroad_36_2", 708.7467, 130.9243, -100.5652, 90, "PILGRIM_36_2_MATERIALS", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152063, " ", "f_pilgrimroad_36_2", 663.0872, -377.4447, 90, "PILGRIM_36_2_MATERIALS");
+		AddNpc(22, 152063, " ", "f_pilgrimroad_36_2", 663.0872, 130.9243, -377.4447, 90, "PILGRIM_36_2_MATERIALS", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152063, " ", "f_pilgrimroad_36_2", 811.085, -326.991, 90, "PILGRIM_36_2_MATERIALS");
+		AddNpc(22, 152063, " ", "f_pilgrimroad_36_2", 811.085, 130.9243, -326.991, 90, "PILGRIM_36_2_MATERIALS", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152063, " ", "f_pilgrimroad_36_2", 523.2142, 75.577, 90, "PILGRIM_36_2_MATERIALS");
+		AddNpc(22, 152063, " ", "f_pilgrimroad_36_2", 523.2142, 130.9243, 75.577, 90, "PILGRIM_36_2_MATERIALS", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152063, " ", "f_pilgrimroad_36_2", 728.837, 248.3926, 90, "PILGRIM_36_2_MATERIALS");
+		AddNpc(22, 152063, " ", "f_pilgrimroad_36_2", 728.837, 130.9243, 248.3926, 90, "PILGRIM_36_2_MATERIALS", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152063, " ", "f_pilgrimroad_36_2", 945.8958, 9.119062, 90, "PILGRIM_36_2_MATERIALS");
+		AddNpc(22, 152063, " ", "f_pilgrimroad_36_2", 945.8958, 130.9243, 9.119062, 90, "PILGRIM_36_2_MATERIALS", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152063, " ", "f_pilgrimroad_36_2", 967.054, 302.2197, 90, "PILGRIM_36_2_MATERIALS");
+		AddNpc(22, 152063, " ", "f_pilgrimroad_36_2", 967.054, 130.9243, 302.2197, 90, "PILGRIM_36_2_MATERIALS", "", "", 0);
 		
 		// PILGRIM_36_2_SQ_150To start quest
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "PILGRIM_36_2_SQ_150To start quest", "f_pilgrimroad_36_2", 1253.899, -407.2492, 90, "", "PILGRIM_36_2_SQ_150_TRIGGER", "");
+		AddNpc(23, 20026, "PILGRIM_36_2_SQ_150To start quest", "f_pilgrimroad_36_2", 1253.899, 119.5623, -407.2492, 90, "", "PILGRIM_36_2_SQ_150_TRIGGER", "");
+		AddNpc(15, 147375, " ", "f_pilgrimroad_36_2", -1665.715, 95.0484, -1007.835, 94, "", "", "");
 		
 		// For effects of flame bombs
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "For effects of flame bombs", "f_pilgrimroad_36_2", 803.1058, 244.1496, 90, "", "PILGRIM_36_2_FIRE", "");
+		AddNpc(25, 20026, "For effects of flame bombs", "f_pilgrimroad_36_2", 803.1058, 130.9243, 244.1496, 90, "", "PILGRIM_36_2_FIRE", "");
+		AddNpc(26, 147364, "FieldCantGen", "f_pilgrimroad_36_2", 559.8366, 98.13425, 1584.322, 90, "", "", "");
+		AddNpc(26, 147364, "FieldCantGen", "f_pilgrimroad_36_2", -1703.001, 153.1389, 1342.208, 90, "", "", "");
+		AddNpc(26, 147364, "FieldCantGen", "f_pilgrimroad_36_2", -25.71816, 225.3776, -1001.36, 90, "", "", "");
+		AddNpc(26, 147364, "FieldCantGen", "f_pilgrimroad_36_2", 1700.659, 111.1168, -599.3414, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_pilgrimroad_36_2", -297.14, -545.6, 135, "TREASUREBOX_LV_F_PILGRIMROAD_36_21000");
+		AddNpc(1000, 147392, "Lv1 Treasure Chest", "f_pilgrimroad_36_2", -297.14, 225.48, -545.6, 135, "TREASUREBOX_LV_F_PILGRIMROAD_36_21000", "", "");
 		
 		// Merchant Dolonas
 		//-------------------------------------------------------------------------
-		AddNpc(152060, "Merchant Dolonas", "f_pilgrimroad_36_2", -660.7841, 825.1987, 9, "PILGRIM362_RP_1_NPC");
+		AddNpc(1001, 152060, "Merchant Dolonas", "f_pilgrimroad_36_2", -660.7841, 153.1389, 825.1987, 9, "PILGRIM362_RP_1_NPC", "", "");
+		AddNpc(26, 147364, "FieldCantGen", "f_pilgrimroad_36_2", -670.2092, 153.1389, 750.1852, 90, "", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20024, "", "f_pilgrimroad_36_2", 444.45, -27.14651, 58, "PILGRIMROAD362_HIDDEN_TABLE");
+		AddNpc(1002, 20024, "", "f_pilgrimroad_36_2", 444.45, 130.92, -27.14651, 58, "PILGRIMROAD362_HIDDEN_TABLE", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_pilgrimroad_36_2", 881.26, 1259.42, 90, "PILGRIMROAD362_HIDDEN_OBJ1");
+		AddNpc(1003, 20025, "", "f_pilgrimroad_36_2", 881.26, 98.13, 1259.42, 90, "PILGRIMROAD362_HIDDEN_OBJ1", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_pilgrimroad_36_2", 1.47, -871.47, 90, "PILGRIMROAD362_HIDDEN_OBJ2");
+		AddNpc(1004, 20025, "", "f_pilgrimroad_36_2", 1.47, 225.38, -871.47, 90, "PILGRIMROAD362_HIDDEN_OBJ2", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_pilgrimroad_36_2", -939.33, -234.51, 90, "PILGRIMROAD362_HIDDEN_OBJ3");
+		AddNpc(1005, 20025, "", "f_pilgrimroad_36_2", -939.33, 59.45, -234.51, 90, "PILGRIMROAD362_HIDDEN_OBJ3", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_pilgrimroad_36_2", -1374.33, 1166.72, 90, "PILGRIMROAD362_HIDDEN_OBJ4");
+		AddNpc(1006, 20025, "", "f_pilgrimroad_36_2", -1374.33, 153.14, 1166.72, 90, "PILGRIMROAD362_HIDDEN_OBJ4", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_pilgrimroad_36_2", -376.46, 1129.33, 90, "PILGRIMROAD362_HIDDEN_OBJ5");
+		AddNpc(1007, 20025, "", "f_pilgrimroad_36_2", -376.46, 153.14, 1129.33, 90, "PILGRIMROAD362_HIDDEN_OBJ5", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_pilgrimroad_36_2", 1020.05, 629.43, 90, "PILGRIMROAD362_HIDDEN_OBJ6");
+		AddNpc(1008, 20025, "", "f_pilgrimroad_36_2", 1020.05, 130.92, 629.43, 90, "PILGRIMROAD362_HIDDEN_OBJ6", "", "", 1);
 	}
 }

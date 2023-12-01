@@ -14,234 +14,261 @@ public class F3Cmlake261NpcScript : GeneralScript
 	{
 		// Skirgaila
 		//-------------------------------------------------------------------------
-		AddNpc(155165, "Skirgaila", "f_3cmlake_26_1", -282.8226, 1737.225, 45, "THREECMLAKE_SKIRGAILA");
+		AddNpc(1, 155165, "Skirgaila", "f_3cmlake_26_1", -282.8226, -70.4168, 1737.225, 45, "THREECMLAKE_SKIRGAILA", "", "");
 		
 		// Abraomas
 		//-------------------------------------------------------------------------
-		AddNpc(155164, "Abraomas", "f_3cmlake_26_1", -285.9585, 1680.352, 135, "THREECMLAKE_ABRAOMAS");
+		AddNpc(2, 155164, "Abraomas", "f_3cmlake_26_1", -285.9585, -70.4168, 1680.352, 135, "THREECMLAKE_ABRAOMAS", "", "");
 		
 		// Beholder
 		//-------------------------------------------------------------------------
-		AddNpc(147382, "Beholder", "f_3cmlake_26_1", 1635.313, 891.3168, 0, "THREECMLAKE_BLACKMAN01");
+		AddNpc(3, 147382, "Beholder", "f_3cmlake_26_1", 1635.313, -116, 891.3168, 0, "THREECMLAKE_BLACKMAN01", "", "");
 		
 		// Beholder
 		//-------------------------------------------------------------------------
-		AddNpc(147382, "Beholder", "f_3cmlake_26_1", 1062, -203, 0, "THREECMLAKE_BLACKMAN02");
+		AddNpc(4, 147382, "Beholder", "f_3cmlake_26_1", 1062, -112, -203, 0, "THREECMLAKE_BLACKMAN02", "", "");
 		
 		// Beholder
 		//-------------------------------------------------------------------------
-		AddNpc(147382, "Beholder", "f_3cmlake_26_1", 79, -1054, 0, "THREECMLAKE_BLACKMAN03");
+		AddNpc(5, 147382, "Beholder", "f_3cmlake_26_1", 79, -122, -1054, 0, "THREECMLAKE_BLACKMAN03", "", "");
 		
 		// Crystal Stone at the Rest Place
 		//-------------------------------------------------------------------------
-		AddNpc(155154, "Crystal Stone at the Rest Place", "f_3cmlake_26_1", -1730.072, 940.5042, 90, "THREECMLAKE261_SQ02_LINK_STONE01");
+		AddNpc(6, 155154, "Crystal Stone at the Rest Place", "f_3cmlake_26_1", -1730.072, -84.6521, 940.5042, 90, "THREECMLAKE261_SQ02_LINK_STONE01", "", "");
 		
 		// Crystal Stone at the Rest Place
 		//-------------------------------------------------------------------------
-		AddNpc(155154, "Crystal Stone at the Rest Place", "f_3cmlake_26_1", -1730.072, 940.5042, 90, "THREECMLAKE261_SQ02_LINK_STONE02");
+		AddNpc(7, 155154, "Crystal Stone at the Rest Place", "f_3cmlake_26_1", -1730.072, -84.6521, 940.5042, 90, "THREECMLAKE261_SQ02_LINK_STONE02", "", "");
 		
 		// Crystal Stone at the Lot
 		//-------------------------------------------------------------------------
-		AddNpc(155154, "Crystal Stone at the Lot", "f_3cmlake_26_1", 946.1144, 1472.923, 90, "THREECMLAKE261_SQ03_LINK_STONE01");
+		AddNpc(8, 155154, "Crystal Stone at the Lot", "f_3cmlake_26_1", 946.1144, -79.76691, 1472.923, 90, "THREECMLAKE261_SQ03_LINK_STONE01", "", "");
 		
 		// Crystal Stone at the Lot
 		//-------------------------------------------------------------------------
-		AddNpc(155154, "Crystal Stone at the Lot", "f_3cmlake_26_1", 946.1144, 1472.923, 90, "THREECMLAKE261_SQ03_LINK_STONE02");
+		AddNpc(9, 155154, "Crystal Stone at the Lot", "f_3cmlake_26_1", 946.1144, -79.76691, 1472.923, 90, "THREECMLAKE261_SQ03_LINK_STONE02", "", "");
 		
 		// Crystal Stone in the crossroad
 		//-------------------------------------------------------------------------
-		AddNpc(155154, "Crystal Stone in the crossroad", "f_3cmlake_26_1", 992.7289, -1190.601, 90, "THREECMLAKE261_SQ04_LINK_STONE01");
+		AddNpc(10, 155154, "Crystal Stone in the crossroad", "f_3cmlake_26_1", 992.7289, -96.07759, -1190.601, 90, "THREECMLAKE261_SQ04_LINK_STONE01", "", "");
 		
 		// Crystal Stone in the crossroad
 		//-------------------------------------------------------------------------
-		AddNpc(155154, "Crystal Stone in the crossroad", "f_3cmlake_26_1", 992.7289, -1190.601, 90, "THREECMLAKE261_SQ04_LINK_STONE02");
+		AddNpc(11, 155154, "Crystal Stone in the crossroad", "f_3cmlake_26_1", 992.7289, -96.07759, -1190.601, 90, "THREECMLAKE261_SQ04_LINK_STONE02", "", "");
 		
 		// Crystal Stone Protection Device
 		//-------------------------------------------------------------------------
-		AddNpc(155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -1216.86, 760.0836, 0, "THREECMLAKE261_SQ02_LANTERN01_1");
+		AddNpc(12, 155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -1216.86, -127.2909, 760.0836, 0, "THREECMLAKE261_SQ02_LANTERN01_1", "", "");
 		
 		// Crystal Stone Protection Device
 		//-------------------------------------------------------------------------
-		AddNpc(155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -1299.005, 1034.849, 0, "THREECMLAKE261_SQ02_LANTERN01_2");
+		AddNpc(13, 155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -1299.005, -127.2909, 1034.849, 0, "THREECMLAKE261_SQ02_LANTERN01_2", "", "");
 		
 		// Crystal Stone Protection Device
 		//-------------------------------------------------------------------------
-		AddNpc(155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -901.4683, 1030.005, 0, "THREECMLAKE261_SQ02_LANTERN01_3");
+		AddNpc(14, 155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -901.4683, -127.2909, 1030.005, 0, "THREECMLAKE261_SQ02_LANTERN01_3", "", "");
 		
 		// Crystal Stone Protection Device
 		//-------------------------------------------------------------------------
-		AddNpc(155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -904.5062, 779.7668, 0, "THREECMLAKE261_SQ02_LANTERN01_4");
+		AddNpc(15, 155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -904.5062, -127.2909, 779.7668, 0, "THREECMLAKE261_SQ02_LANTERN01_4", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20041, " ", "f_3cmlake_26_1", 1467.967, 760.1412, 90, "", "THREECMLAKE261_SQ01_TRACK_TRIG", "");
+		AddNpc(16, 20041, " ", "f_3cmlake_26_1", 1467.967, -121.0907, 760.1412, 90, "", "THREECMLAKE261_SQ01_TRACK_TRIG", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20041, " ", "f_3cmlake_26_1", 498.6059, -1195.453, 90, "", "THREECMLAKE261_SQ07_TRACK_TRIGGER", "");
+		AddNpc(17, 20041, " ", "f_3cmlake_26_1", 498.6059, -90.11833, -1195.453, 90, "", "THREECMLAKE261_SQ07_TRACK_TRIGGER", "");
 		
 		// Supplies Box
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Supplies Box", "f_3cmlake_26_1", -361.2717, 1120.718, 90, "THREECMLAKE_SACK");
+		AddNpc(18, 151030, "Supplies Box", "f_3cmlake_26_1", -361.2717, -124.5372, 1120.718, 90, "THREECMLAKE_SACK", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_3cmlake_26_1", 1961, -1351, 90, "THREECMLAKE_SKETCH_TRIG", "THREECMLAKE_SKETCH_TRIG");
+		AddNpc(24, 20026, " ", "f_3cmlake_26_1", 1961, -122, -1351, 90, "THREECMLAKE_SKETCH_TRIG", "THREECMLAKE_SKETCH_TRIG", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_3cmlake_26_1", 1109, -968, 90, "THREECMLAKE_SKETCH_TRIG", "THREECMLAKE_SKETCH_TRIG");
+		AddNpc(25, 20026, " ", "f_3cmlake_26_1", 1109, -96, -968, 90, "THREECMLAKE_SKETCH_TRIG", "THREECMLAKE_SKETCH_TRIG", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_3cmlake_26_1", 757, -409, 90, "THREECMLAKE_SKETCH_TRIG", "THREECMLAKE_SKETCH_TRIG");
+		AddNpc(26, 20026, " ", "f_3cmlake_26_1", 757, -112, -409, 90, "THREECMLAKE_SKETCH_TRIG", "THREECMLAKE_SKETCH_TRIG", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_3cmlake_26_1", -138, -1091, 90, "THREECMLAKE_SKETCH_TRIG", "THREECMLAKE_SKETCH_TRIG");
+		AddNpc(27, 20026, " ", "f_3cmlake_26_1", -138, -122, -1091, 90, "THREECMLAKE_SKETCH_TRIG", "THREECMLAKE_SKETCH_TRIG", "");
 		
 		// Supplies Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(155167, "Supplies Wagon", "f_3cmlake_26_1", 768.0928, -316.5382, 90, "THREECMLAKE_CART");
+		AddNpc(28, 155167, "Supplies Wagon", "f_3cmlake_26_1", 768.0928, -112.57, -316.5382, 90, "THREECMLAKE_CART", "", "");
 		
 		// Supplies Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(155167, "Supplies Wagon", "f_3cmlake_26_1", 1059.772, -447.0812, 90, "THREECMLAKE_CART");
+		AddNpc(28, 155167, "Supplies Wagon", "f_3cmlake_26_1", 1059.772, -112.412, -447.0812, 90, "THREECMLAKE_CART", "", "");
 		
 		// Supplies Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(155167, "Supplies Wagon", "f_3cmlake_26_1", 1931.469, -1053.475, 90, "THREECMLAKE_CART");
+		AddNpc(28, 155167, "Supplies Wagon", "f_3cmlake_26_1", 1931.469, -122.6178, -1053.475, 90, "THREECMLAKE_CART", "", "");
 		
 		// Supplies Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(155167, "Supplies Wagon", "f_3cmlake_26_1", 1829.885, -1353.903, 90, "THREECMLAKE_CART");
+		AddNpc(28, 155167, "Supplies Wagon", "f_3cmlake_26_1", 1829.885, -122.6178, -1353.903, 90, "THREECMLAKE_CART", "", "");
 		
 		// Supplies Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(155167, "Supplies Wagon", "f_3cmlake_26_1", 1548.943, -1291.684, 90, "THREECMLAKE_CART");
+		AddNpc(28, 155167, "Supplies Wagon", "f_3cmlake_26_1", 1548.943, -122.6178, -1291.684, 90, "THREECMLAKE_CART", "", "");
 		
 		// Supplies Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(155167, "Supplies Wagon", "f_3cmlake_26_1", 880.4, -1035.767, 90, "THREECMLAKE_CART");
+		AddNpc(28, 155167, "Supplies Wagon", "f_3cmlake_26_1", 880.4, -96.07761, -1035.767, 90, "THREECMLAKE_CART", "", "");
 		
 		// Supplies Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(155167, "Supplies Wagon", "f_3cmlake_26_1", 251.4598, -1093.764, 90, "THREECMLAKE_CART");
+		AddNpc(28, 155167, "Supplies Wagon", "f_3cmlake_26_1", 251.4598, -122.0254, -1093.764, 90, "THREECMLAKE_CART", "", "");
 		
 		// Supplies Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(155167, "Supplies Wagon", "f_3cmlake_26_1", -125.256, -1385.826, 90, "THREECMLAKE_CART");
+		AddNpc(28, 155167, "Supplies Wagon", "f_3cmlake_26_1", -125.256, -122.0254, -1385.826, 90, "THREECMLAKE_CART", "", "");
 		
 		// Barynwell 85 Waters
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Barynwell 85 Waters", "f_3cmlake_26_1", 2315.699, 752.7906, 90, "", "F_3CMLAKE_26_1_TO_F_3CMLAKE_85", "");
+		AddNpc(34, 40001, "Barynwell 85 Waters", "f_3cmlake_26_1", 2315.699, -121.2726, 752.7906, 90, "", "F_3CMLAKE_26_1_TO_F_3CMLAKE_85", "");
 		
 		// Lanko 22 Waters
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Lanko 22 Waters", "f_3cmlake_26_1", 145.1153, -2415.436, 0, "", "F_3CMLAKE_26_1_TO_F_3CMLAKE_26_2", "");
+		AddNpc(35, 40001, "Lanko 22 Waters", "f_3cmlake_26_1", 145.1153, -125.0978, -2415.436, 0, "", "F_3CMLAKE_26_1_TO_F_3CMLAKE_26_2", "");
 		
 		// Outer Wall District 9
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Outer Wall District 9", "f_3cmlake_26_1", -127.8488, 1983.716, 180, "", "F_3CMLAKE_26_1_TO_F_CASTLE_20_1", "");
+		AddNpc(33, 40001, "Outer Wall District 9", "f_3cmlake_26_1", -127.8488, -87.92723, 1983.716, 180, "", "F_3CMLAKE_26_1_TO_F_CASTLE_20_1", "");
 		
 		// Crystal Stone Protection Device
 		//-------------------------------------------------------------------------
-		AddNpc(155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -1216.86, 760.0836, 0, "THREECMLAKE261_SQ02_LANTERN02_1");
+		AddNpc(36, 155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -1216.86, -127.2909, 760.0836, 0, "THREECMLAKE261_SQ02_LANTERN02_1", "", "");
 		
 		// Crystal Stone Protection Device
 		//-------------------------------------------------------------------------
-		AddNpc(155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -1299.005, 1034.849, 0, "THREECMLAKE261_SQ02_LANTERN02_2");
+		AddNpc(37, 155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -1299.005, -127.2909, 1034.849, 0, "THREECMLAKE261_SQ02_LANTERN02_2", "", "");
 		
 		// Crystal Stone Protection Device
 		//-------------------------------------------------------------------------
-		AddNpc(155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -901.4683, 1030.005, 0, "THREECMLAKE261_SQ02_LANTERN02_3");
+		AddNpc(38, 155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -901.4683, -127.2909, 1030.005, 0, "THREECMLAKE261_SQ02_LANTERN02_3", "", "");
 		
 		// Crystal Stone Protection Device
 		//-------------------------------------------------------------------------
-		AddNpc(155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -904.5062, 779.7668, 0, "THREECMLAKE261_SQ02_LANTERN02_4");
+		AddNpc(39, 155105, "Crystal Stone Protection Device", "f_3cmlake_26_1", -904.5062, -127.2909, 779.7668, 0, "THREECMLAKE261_SQ02_LANTERN02_4", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_3cmlake_26_1", -440.1422, -1236.983, 90, "", "THREECMLAKE261_SQ14_TRACK_TRIG", "");
+		AddNpc(42, 40095, " ", "f_3cmlake_26_1", -440.1422, -53.81335, -1236.983, 90, "", "THREECMLAKE261_SQ14_TRACK_TRIG", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", 1002, -79, 1419, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", 880, -79, 1414, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", 880, -79, 1536, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", 998, -79, 1540, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", 1056, -96, -1128, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", 923, -96, -1127, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", 927, -96, -1261, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", 1056, -96, -1251, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", -1800, -84, 1008, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", -1798, -84, 872, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", -1665, -84, 878, 90, "", "", "");
+		AddNpc(53, 47106, " ", "f_3cmlake_26_1", -1660, -84, 1006, 90, "", "", "");
 		
 		// Supplies Box
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Supplies Box", "f_3cmlake_26_1", -379.1552, 613.081, 90, "THREECMLAKE_SACK");
+		AddNpc(18, 151030, "Supplies Box", "f_3cmlake_26_1", -379.1552, -124.5372, 613.081, 90, "THREECMLAKE_SACK", "", "");
 		
 		// Supplies Box
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Supplies Box", "f_3cmlake_26_1", 732.8275, 529.9048, 90, "THREECMLAKE_SACK");
+		AddNpc(18, 151030, "Supplies Box", "f_3cmlake_26_1", 732.8275, -122.3717, 529.9048, 90, "THREECMLAKE_SACK", "", "");
 		
 		// Supplies Box
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Supplies Box", "f_3cmlake_26_1", 878.8043, 756.2989, 90, "THREECMLAKE_SACK");
+		AddNpc(18, 151030, "Supplies Box", "f_3cmlake_26_1", 878.8043, -106.8621, 756.2989, 90, "THREECMLAKE_SACK", "", "");
 		
 		// Supplies Box
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Supplies Box", "f_3cmlake_26_1", 274.4371, 921.5217, 90, "THREECMLAKE_SACK");
+		AddNpc(18, 151030, "Supplies Box", "f_3cmlake_26_1", 274.4371, -124.5372, 921.5217, 90, "THREECMLAKE_SACK", "", "");
+		AddNpc(54, 151029, " ", "f_3cmlake_26_1", -388.0575, -124.5372, 581.3237, 90, "", "", "");
+		AddNpc(54, 151029, " ", "f_3cmlake_26_1", -390.5445, -124.5372, 1117.097, 90, "", "", "");
+		AddNpc(54, 151029, " ", "f_3cmlake_26_1", -87.92126, -124.5372, 887.5181, 0, "", "", "");
+		AddNpc(54, 151029, " ", "f_3cmlake_26_1", 256.9229, -124.5372, 909.7856, 90, "", "", "");
+		AddNpc(54, 151029, " ", "f_3cmlake_26_1", 713.954, -122.3717, 523.9941, 90, "", "", "");
+		AddNpc(54, 151029, " ", "f_3cmlake_26_1", 901.25, -106.8621, 774.5743, 90, "", "", "");
+		AddNpc(54, 151029, " ", "f_3cmlake_26_1", 1152.472, -122.3718, 905.8779, 90, "", "", "");
 		
 		// Supplies Box
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Supplies Box", "f_3cmlake_26_1", 1122.837, 903.044, 90, "THREECMLAKE_SACK");
+		AddNpc(18, 151030, "Supplies Box", "f_3cmlake_26_1", 1122.837, -122.3718, 903.044, 90, "THREECMLAKE_SACK", "", "");
 		
 		// Supplies Box
 		//-------------------------------------------------------------------------
-		AddNpc(151030, "Supplies Box", "f_3cmlake_26_1", 39.83909, 569.1634, 90, "THREECMLAKE_SACK");
+		AddNpc(18, 151030, "Supplies Box", "f_3cmlake_26_1", 39.83909, -124.5372, 569.1634, 90, "THREECMLAKE_SACK", "", "");
+		AddNpc(54, 151029, " ", "f_3cmlake_26_1", 43.46467, -124.5372, 597.8889, 90, "", "", "");
+		AddNpc(59, 147366, " ", "f_3cmlake_26_1", -135.5183, -70.41685, 1629.4, 90, "", "", "");
+		AddNpc(59, 147366, " ", "f_3cmlake_26_1", 949.7274, -112.5571, -329.4007, 90, "", "", "");
+		AddNpc(59, 147366, " ", "f_3cmlake_26_1", 1703.015, -121.0907, 760.7256, 90, "", "", "");
+		AddNpc(59, 147366, " ", "f_3cmlake_26_1", 1845.683, -121.0907, 765.3401, 90, "", "", "");
+		AddNpc(62, 147364, " ", "f_3cmlake_26_1", 78.33435, -122.0254, -1056.241, 90, "", "", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_3cmlake_26_1", -291.0521, 1488.81, 90, "WARP_F_3CMLAKE_26_1", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(63, 40120, "Statue of Goddess Vakarine", "f_3cmlake_26_1", -291.0521, -70.41682, 1488.81, 90, "WARP_F_3CMLAKE_26_1", "STOUP_CAMP", "STOUP_CAMP");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", -1710.663, 942.0873, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", -1710.663, -84.6521, 942.0873, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", -850.8957, 899.1375, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", -850.8957, -127.1469, 899.1375, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", 79.24045, 771.936, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", 79.24045, -124.5372, 771.936, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", -181.4924, 1274.76, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", -181.4924, -88.68411, 1274.76, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", 895.1053, 1229.339, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", 895.1053, -79.76692, 1229.339, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", 1529.926, 730.9582, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", 1529.926, -121.0907, 730.9582, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", 675.3809, 531.8547, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", 675.3809, -122.3717, 531.8547, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", 956.6894, -339.7596, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", 956.6894, -112.5489, -339.7596, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", 1801.146, -1182.038, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", 1801.146, -122.6177, -1182.038, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", 978.2456, -1197.39, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", 978.2456, -96.07759, -1197.39, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", 117.9563, -1226.548, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", 117.9563, -122.0254, -1226.548, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", -740.0256, -1278.491, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", -740.0256, -35.15621, -1278.491, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "f_3cmlake_26_1", 144.1131, -1725.559, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ");
+		AddNpc(64, 20025, " ", "f_3cmlake_26_1", 144.1131, -124.7414, -1725.559, 90, "F_3CMLAKE_26_1_COLLECTION_OBJ", "F_3CMLAKE_26_1_COLLECTION_OBJ", "");
+		AddNpc(65, 160034, "Transportation Device", "f_3cmlake_26_1", 953.1359, -117.9686, 443.9205, 90, "", "", "");
+		AddNpc(66, 160034, "Transportation Device", "f_3cmlake_26_1", 952.8382, -112.5701, -79.10928, 90, "", "", "");
 	}
 }

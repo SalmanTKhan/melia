@@ -14,142 +14,148 @@ public class FSiauliai462NpcScript : GeneralScript
 	{
 		// Spring Light Woods
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Spring Light Woods", "f_siauliai_46_2", 1378, 4293, 90, "", "SIAULIAI46_2_SIAULIAI46_1", "");
+		AddNpc(1, 40001, "Spring Light Woods", "f_siauliai_46_2", 1378, 0, 4293, 90, "", "SIAULIAI46_2_SIAULIAI46_1", "");
 		
 		// Vilna Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Vilna Forest", "f_siauliai_46_2", -2410.364, 3233.48, -80, "", "SIAULIAI46_2_SIAULIAI46_3", "");
+		AddNpc(2, 40001, "Vilna Forest", "f_siauliai_46_2", -2410.364, 165.5682, 3233.48, -80, "", "SIAULIAI46_2_SIAULIAI46_3", "");
 		
 		// Dina Bee Farm
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Dina Bee Farm", "f_siauliai_46_2", -1148.54, 3224.894, 70, "", "SIAULIAI46_2_SIAULIAI46_4", "");
+		AddNpc(3, 40001, "Dina Bee Farm", "f_siauliai_46_2", -1148.54, 165.5682, 3224.894, 70, "", "SIAULIAI46_2_SIAULIAI46_4", "");
 		
 		// Priest Raeli
 		//-------------------------------------------------------------------------
-		AddNpc(147491, "Priest Raeli", "f_siauliai_46_2", -1220.556, 4364.196, 0, "SIAULIAI_46_2_MQ01_NPC");
+		AddNpc(6, 147491, "Priest Raeli", "f_siauliai_46_2", -1220.556, 121.9254, 4364.196, 0, "SIAULIAI_46_2_MQ01_NPC", "", "");
 		
 		// Goddess Austeja
 		//-------------------------------------------------------------------------
-		AddNpc(151041, "Goddess Austeja", "f_siauliai_46_2", 1070, 4905, 0, "SIAULIAI_46_2_AUSTEJA");
+		AddNpc(7, 151041, "Goddess Austeja", "f_siauliai_46_2", 1070, -73, 4905, 0, "SIAULIAI_46_2_AUSTEJA", "", "", 1);
 		
 		// Seal Tower
 		//-------------------------------------------------------------------------
-		AddNpc(147414, "Seal Tower", "f_siauliai_46_2", 1079, 4705, 0, "SIAULIAI_46_2_SEAL");
+		AddNpc(8, 147414, "Seal Tower", "f_siauliai_46_2", 1079, -73, 4705, 0, "SIAULIAI_46_2_SEAL", "", "");
 		
 		// Farmer Druva
 		//-------------------------------------------------------------------------
-		AddNpc(20139, "Farmer Druva", "f_siauliai_46_2", -1152.332, 4832.516, 90, "SIAULIAI_46_2_SQ_03_NPC");
+		AddNpc(9, 20139, "Farmer Druva", "f_siauliai_46_2", -1152.332, 165.5682, 4832.516, 90, "SIAULIAI_46_2_SQ_03_NPC", "", "");
 		
 		// Ruined Bee Farmer Logen
 		//-------------------------------------------------------------------------
-		AddNpc(147478, "Ruined Bee Farmer Logen", "f_siauliai_46_2", -1507.17, 4216.36, 91, "SIAULIAI_46_2_SQ_05_NPC");
+		AddNpc(10, 147478, "Ruined Bee Farmer Logen", "f_siauliai_46_2", -1507.17, 121.9254, 4216.36, 91, "SIAULIAI_46_2_SQ_05_NPC", "", "");
 		
 		// Giant Mutated Plant
 		//-------------------------------------------------------------------------
-		AddNpc(47203, "Giant Mutated Plant", "f_siauliai_46_2", 1075, 5290, 91, "SIAULIAI_46_2_SQ_01_NPC");
+		AddNpc(11, 47203, "Giant Mutated Plant", "f_siauliai_46_2", 1075, 6, 5290, 91, "SIAULIAI_46_2_SQ_01_NPC", "", "", 0);
 		
 		// Bee Tree Branch
 		//-------------------------------------------------------------------------
-		AddNpc(151023, "Bee Tree Branch", "f_siauliai_46_2", -1638.03, 3754.249, 120, "SIAULIAI_46_2_BEETREE");
+		AddNpc(12, 151023, "Bee Tree Branch", "f_siauliai_46_2", -1638.03, 165.5682, 3754.249, 120, "SIAULIAI_46_2_BEETREE", "", "");
 		
 		// Bee Tree Branch
 		//-------------------------------------------------------------------------
-		AddNpc(151023, "Bee Tree Branch", "f_siauliai_46_2", -1587.202, 3779.216, 45, "SIAULIAI_46_2_BEETREE");
+		AddNpc(12, 151023, "Bee Tree Branch", "f_siauliai_46_2", -1587.202, 165.5682, 3779.216, 45, "SIAULIAI_46_2_BEETREE", "", "");
 		
 		// Bee Tree Branch
 		//-------------------------------------------------------------------------
-		AddNpc(151023, "Bee Tree Branch", "f_siauliai_46_2", -1484.865, 3875.62, -30, "SIAULIAI_46_2_BEETREE");
+		AddNpc(12, 151023, "Bee Tree Branch", "f_siauliai_46_2", -1484.865, 165.5682, 3875.62, -30, "SIAULIAI_46_2_BEETREE", "", "");
 		
 		// Bee Tree Branch
 		//-------------------------------------------------------------------------
-		AddNpc(151023, "Bee Tree Branch", "f_siauliai_46_2", -2264.281, 3238.183, 30, "SIAULIAI_46_2_BEETREE");
+		AddNpc(12, 151023, "Bee Tree Branch", "f_siauliai_46_2", -2264.281, 165.5682, 3238.183, 30, "SIAULIAI_46_2_BEETREE", "", "");
 		
 		// Bee Tree Branch
 		//-------------------------------------------------------------------------
-		AddNpc(151023, "Bee Tree Branch", "f_siauliai_46_2", -2157.314, 3290.182, 90, "SIAULIAI_46_2_BEETREE");
+		AddNpc(12, 151023, "Bee Tree Branch", "f_siauliai_46_2", -2157.314, 165.5682, 3290.182, 90, "SIAULIAI_46_2_BEETREE", "", "");
 		
 		// SIAULIAI_46_2_MQ_03_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "SIAULIAI_46_2_MQ_03_TRIGGER", "f_siauliai_46_2", -676, 3692, 0, "", "SIAULIAI_46_2_MQ_03_TRIGGER", "");
+		AddNpc(13, 20026, "SIAULIAI_46_2_MQ_03_TRIGGER", "f_siauliai_46_2", -676, 224, 3692, 0, "", "SIAULIAI_46_2_MQ_03_TRIGGER", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(40095, "", "f_siauliai_46_2", 470, 5734, 90, "SIAULIAI_46_2_SQ_04_01");
+		AddNpc(14, 40095, "", "f_siauliai_46_2", 470, 39, 5734, 90, "SIAULIAI_46_2_SQ_04_01", "", "", 0);
 		
 		// Scarecrow
 		//-------------------------------------------------------------------------
-		AddNpc(151032, "Scarecrow", "f_siauliai_46_2", 470, 5734, 91, "", "SIAULIAI_46_2_SQ_04_01_AFTER", "");
+		AddNpc(15, 151032, "Scarecrow", "f_siauliai_46_2", 470, 39, 5734, 91, "", "SIAULIAI_46_2_SQ_04_01_AFTER", "");
 		
 		// Guardian Stone
 		//-------------------------------------------------------------------------
-		AddNpc(147413, "Guardian Stone", "f_siauliai_46_2", -1954, 3248, 0, "SIAULIAI_46_2_GUARDIAN");
+		AddNpc(16, 147413, "Guardian Stone", "f_siauliai_46_2", -1954, 166, 3248, 0, "SIAULIAI_46_2_GUARDIAN", "", "");
+		AddNpc(17, 151024, "Austeja Altar", "f_siauliai_46_2", -676, 224, 3692, 0, "", "", "");
 		
 		// Pile of wood
 		//-------------------------------------------------------------------------
-		AddNpc(151031, "Pile of wood", "f_siauliai_46_2", -1526.563, 3599.98, 100, "SIAULIAI_46_2_WOODPIECE");
+		AddNpc(18, 151031, "Pile of wood", "f_siauliai_46_2", -1526.563, 165.5682, 3599.98, 100, "SIAULIAI_46_2_WOODPIECE", "", "");
 		
 		// Pile of wood
 		//-------------------------------------------------------------------------
-		AddNpc(151031, "Pile of wood", "f_siauliai_46_2", -1304.13, 3588.928, 60, "SIAULIAI_46_2_WOODPIECE");
+		AddNpc(18, 151031, "Pile of wood", "f_siauliai_46_2", -1304.13, 165.5682, 3588.928, 60, "SIAULIAI_46_2_WOODPIECE", "", "");
 		
 		// Pile of wood
 		//-------------------------------------------------------------------------
-		AddNpc(151031, "Pile of wood", "f_siauliai_46_2", -1757.105, 3125.289, 120, "SIAULIAI_46_2_WOODPIECE");
+		AddNpc(18, 151031, "Pile of wood", "f_siauliai_46_2", -1757.105, 165.5682, 3125.289, 120, "SIAULIAI_46_2_WOODPIECE", "", "");
 		
 		// Pile of wood
 		//-------------------------------------------------------------------------
-		AddNpc(151031, "Pile of wood", "f_siauliai_46_2", -1980.488, 3057.132, 40, "SIAULIAI_46_2_WOODPIECE");
+		AddNpc(18, 151031, "Pile of wood", "f_siauliai_46_2", -1980.488, 165.5682, 3057.132, 40, "SIAULIAI_46_2_WOODPIECE", "", "");
 		
 		// Pile of wood
 		//-------------------------------------------------------------------------
-		AddNpc(151031, "Pile of wood", "f_siauliai_46_2", -1217.576, 3778.556, 190, "SIAULIAI_46_2_WOODPIECE");
+		AddNpc(18, 151031, "Pile of wood", "f_siauliai_46_2", -1217.576, 165.5682, 3778.556, 190, "SIAULIAI_46_2_WOODPIECE", "", "");
+		AddNpc(25, 147366, "Gate Entrance x", "f_siauliai_46_2", -1332.378, 121.9254, 4264.566, 90, "", "", "");
+		AddNpc(25, 147366, "Gate Entrance x", "f_siauliai_46_2", -1288.877, 165.5682, 4734.742, 90, "", "", "");
+		AddNpc(25, 147366, "Gate Entrance x", "f_siauliai_46_2", 1091.029, -73.2291, 4793.573, 90, "", "", "");
+		AddNpc(25, 147366, "Gate Entrance x", "f_siauliai_46_2", -2003.963, 165.5682, 3194.504, 90, "", "", "");
+		AddNpc(25, 147366, "Gate Entrance x", "f_siauliai_46_2", 1292.84, -35.2955, 7393.591, 90, "", "", "");
 		
 		// Laukyme Swamp
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Laukyme Swamp", "f_siauliai_46_2", 1197.621, 7571.161, 220, "", "SIAULIAI46_2_THORN39_3", "");
+		AddNpc(26, 40001, "Laukyme Swamp", "f_siauliai_46_2", 1197.621, -35.2955, 7571.161, 220, "", "SIAULIAI46_2_THORN39_3", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_siauliai_46_2", 920.99, 5094.94, 90, "TREASUREBOX_LV_F_SIAULIAI_46_227");
+		AddNpc(27, 147392, "Lv1 Treasure Chest", "f_siauliai_46_2", 920.99, 5.56, 5094.94, 90, "TREASUREBOX_LV_F_SIAULIAI_46_227", "", "");
 		
 		// Fragrant Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Fragrant Herbs", "f_siauliai_46_2", 834.3019, 4385.114, 56, "SIAULIAI462_HIDDENQ1_PLANT1");
+		AddNpc(28, 47200, "Fragrant Herbs", "f_siauliai_46_2", 834.3019, 0.72, 4385.114, 56, "SIAULIAI462_HIDDENQ1_PLANT1", "", "");
 		
 		// Fragrant Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Fragrant Herbs", "f_siauliai_46_2", 922.6717, 4149.369, 56, "SIAULIAI462_HIDDENQ1_PLANT1");
+		AddNpc(28, 47200, "Fragrant Herbs", "f_siauliai_46_2", 922.6717, 0.72, 4149.369, 56, "SIAULIAI462_HIDDENQ1_PLANT1", "", "");
 		
 		// Fragrant Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Fragrant Herbs", "f_siauliai_46_2", 1185.238, 4218.521, 61, "SIAULIAI462_HIDDENQ1_PLANT1");
+		AddNpc(28, 47200, "Fragrant Herbs", "f_siauliai_46_2", 1185.238, 0.72, 4218.521, 61, "SIAULIAI462_HIDDENQ1_PLANT1", "", "");
 		
 		// Beaj Flower
 		//-------------------------------------------------------------------------
-		AddNpc(153067, "Beaj Flower", "f_siauliai_46_2", -659.98, 3470.44, 90, "SIAULIAI462_HIDDENQ1_PLANT2");
+		AddNpc(29, 153067, "Beaj Flower", "f_siauliai_46_2", -659.98, 223.15, 3470.44, 90, "SIAULIAI462_HIDDENQ1_PLANT2", "", "");
 		
 		// Beaj Flower
 		//-------------------------------------------------------------------------
-		AddNpc(153067, "Beaj Flower", "f_siauliai_46_2", -462.5407, 3770.363, 90, "SIAULIAI462_HIDDENQ1_PLANT2");
+		AddNpc(29, 153067, "Beaj Flower", "f_siauliai_46_2", -462.5407, 223.15, 3770.363, 90, "SIAULIAI462_HIDDENQ1_PLANT2", "", "");
 		
 		// Beaj Flower
 		//-------------------------------------------------------------------------
-		AddNpc(153067, "Beaj Flower", "f_siauliai_46_2", -424.2608, 3576.099, 90, "SIAULIAI462_HIDDENQ1_PLANT2");
+		AddNpc(29, 153067, "Beaj Flower", "f_siauliai_46_2", -424.2608, 223.15, 3576.099, 90, "SIAULIAI462_HIDDENQ1_PLANT2", "", "");
 		
 		// Beaj Flower
 		//-------------------------------------------------------------------------
-		AddNpc(153067, "Beaj Flower", "f_siauliai_46_2", -798.6, 3508.41, 90, "SIAULIAI462_HIDDENQ1_PLANT2");
+		AddNpc(29, 153067, "Beaj Flower", "f_siauliai_46_2", -798.6, 223.15, 3508.41, 90, "SIAULIAI462_HIDDENQ1_PLANT2", "", "");
 		
 		// Fragrant Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Fragrant Herbs", "f_siauliai_46_2", 1148.79, 4387.85, 90, "SIAULIAI462_HIDDENQ1_PLANT1");
+		AddNpc(28, 47200, "Fragrant Herbs", "f_siauliai_46_2", 1148.79, 3.15, 4387.85, 90, "SIAULIAI462_HIDDENQ1_PLANT1", "", "");
 		
 		// Fragrant Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Fragrant Herbs", "f_siauliai_46_2", 1031.329, 4276.248, 90, "SIAULIAI462_HIDDENQ1_PLANT1");
+		AddNpc(28, 47200, "Fragrant Herbs", "f_siauliai_46_2", 1031.329, 1.03, 4276.248, 90, "SIAULIAI462_HIDDENQ1_PLANT1", "", "");
 		
 		// Fragrant Herbs
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Fragrant Herbs", "f_siauliai_46_2", 700.49, 4287.63, 90, "SIAULIAI462_HIDDENQ1_PLANT1");
+		AddNpc(28, 47200, "Fragrant Herbs", "f_siauliai_46_2", 700.49, 1.51, 4287.63, 90, "SIAULIAI462_HIDDENQ1_PLANT1", "", "");
 	}
 }

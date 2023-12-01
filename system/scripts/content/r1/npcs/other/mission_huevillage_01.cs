@@ -14,6 +14,6 @@ public class MissionHuevillage01NpcScript : GeneralScript
 	{
 		// Innocent Spirit
 		//-------------------------------------------------------------------------
-		AddNpc(147407, "Innocent Spirit", "mission_huevillage_01", 0.4355431, 1172.895, 90, "HUEVILLAGE_58_3_HQ01_NPC03");
+		AddNpc(1, 147407, "Innocent Spirit", "mission_huevillage_01", 0.4355431, 2.6372, 1172.895, 90, "HUEVILLAGE_58_3_HQ01_NPC03", "", "", 1);
 	}
 }

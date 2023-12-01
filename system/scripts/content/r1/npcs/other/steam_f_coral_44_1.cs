@@ -14,18 +14,19 @@ public class SteamFCoral441NpcScript : GeneralScript
 	{
 		// Dispatched Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Dispatched Soldier", "Steam_f_coral_44_1", 84.77685, -322.8113, 5, "EVENT_CURSED_COAST");
+		AddNpc(10, 15000, "Dispatched Soldier", "Steam_f_coral_44_1", 84.77685, 83.45169, -322.8113, 5, "EVENT_CURSED_COAST", "", "");
 		
 		// Dispatched Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(15000, "Dispatched Soldier", "Steam_f_coral_44_1", 190.41, 467.01, 120, "EVENT_CURSED_COAST2");
+		AddNpc(11, 15000, "Dispatched Soldier", "Steam_f_coral_44_1", 190.41, 85.75, 467.01, 120, "EVENT_CURSED_COAST2", "", "");
 		
 		// Cursed Altar
 		//-------------------------------------------------------------------------
-		AddNpc(155106, "Cursed Altar", "Steam_f_coral_44_1", 185, 753, 90, "CREATE_CURSED_WHALE");
+		AddNpc(12, 155106, "Cursed Altar", "Steam_f_coral_44_1", 185, 83, 753, 90, "CREATE_CURSED_WHALE", "", "");
+		AddNpc(13, 12082, "Eery Waterfall", "Steam_f_coral_44_1", -1780, 150, 820, 270, "", "", "");
 		
 		// Eery Waterfall
 		//-------------------------------------------------------------------------
-		AddNpc(12082, "Eery Waterfall", "Steam_f_coral_44_1", -1690, 885, 90, "EVENT_CURSED_COAST_WARP2");
+		AddNpc(14, 12082, "Eery Waterfall", "Steam_f_coral_44_1", -1690, 82, 885, 90, "EVENT_CURSED_COAST_WARP2", "", "");
 	}
 }

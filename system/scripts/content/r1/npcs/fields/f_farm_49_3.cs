@@ -14,274 +14,278 @@ public class FFarm493NpcScript : GeneralScript
 	{
 		// Shaton Farm
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Shaton Farm", "f_farm_49_3", 829.432, -948.9832, 4, "", "FARM493_TO_FARM492", "");
+		AddNpc(1, 40001, "Shaton Farm", "f_farm_49_3", 829.432, 245.457, -948.9832, 4, "", "FARM493_TO_FARM492", "");
 		
 		// Druid Martinek
 		//-------------------------------------------------------------------------
-		AddNpc(155018, "Druid Martinek", "f_farm_49_3", 573.4592, -103.4292, 71, "FARM493_MQ_01");
+		AddNpc(14, 155018, "Druid Martinek", "f_farm_49_3", 573.4592, 293.2046, -103.4292, 71, "FARM493_MQ_01", "", "", 1);
 		
 		// Gord Shaton
 		//-------------------------------------------------------------------------
-		AddNpc(155016, "Gord Shaton", "f_farm_49_3", 629.939, 2.383118, 37, "FARM493_MQ_03");
+		AddNpc(15, 155016, "Gord Shaton", "f_farm_49_3", 629.939, 293.2046, 2.383118, 37, "FARM493_MQ_03", "", "");
 		
 		// Vanessa Shaton
 		//-------------------------------------------------------------------------
-		AddNpc(155021, "Vanessa Shaton", "f_farm_49_3", 648.0612, 53.52522, 46, "FARM493_MQ_02");
+		AddNpc(16, 155021, "Vanessa Shaton", "f_farm_49_3", 648.0612, 293.2046, 53.52522, 46, "FARM493_MQ_02", "", "");
 		
 		// General Buros
 		//-------------------------------------------------------------------------
-		AddNpc(20125, "General Buros", "f_farm_49_3", 769.0428, 117.1465, 21, "FARM493_SQ_03");
+		AddNpc(17, 20125, "General Buros", "f_farm_49_3", 769.0428, 293.2046, 117.1465, 21, "FARM493_SQ_03", "", "");
 		
 		// Steward Valen
 		//-------------------------------------------------------------------------
-		AddNpc(20154, "Steward Valen", "f_farm_49_3", -38.35822, 90.90472, 22, "FARM493_SQ_01");
+		AddNpc(19, 20154, "Steward Valen", "f_farm_49_3", -38.35822, 293.2046, 90.90472, 22, "FARM493_SQ_01", "", "");
 		
 		// Farm Soldier Upham
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Farm Soldier Upham", "f_farm_49_3", -1652.884, -190.777, 90, "FARM493_SQ_06");
+		AddNpc(20, 20016, "Farm Soldier Upham", "f_farm_49_3", -1652.884, 274.9668, -190.777, 90, "FARM493_SQ_06", "", "", 0);
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", -561.8223, -585.3654, 90, "FARM493_CAVEWARP01", "HT2_FARM493_CAVEWARP01");
+		AddNpc(21, 155010, "Underground Tunnel Entrance", "f_farm_49_3", -561.8223, 245.457, -585.3654, 90, "FARM493_CAVEWARP01", "HT2_FARM493_CAVEWARP01", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", -650.295, -104.1056, 90, "FARM493_CAVEWARP02", "HT2_FARM493_CAVEWARP02");
+		AddNpc(22, 155010, "Underground Tunnel Entrance", "f_farm_49_3", -650.295, 293.2046, -104.1056, 90, "FARM493_CAVEWARP02", "HT2_FARM493_CAVEWARP02", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", -806.6474, 592.3996, 190, "FARM493_CAVEWARP03", "HT2_FARM493_CAVEWARP03");
+		AddNpc(23, 155010, "Underground Tunnel Entrance", "f_farm_49_3", -806.6474, 258.7858, 592.3996, 190, "FARM493_CAVEWARP03", "HT2_FARM493_CAVEWARP03", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", -1972.423, -203.886, 90, "FARM493_CAVEWARP04", "HT2_FARM493_CAVEWARP04");
+		AddNpc(24, 155010, "Underground Tunnel Entrance", "f_farm_49_3", -1972.423, 274.9668, -203.886, 90, "FARM493_CAVEWARP04", "HT2_FARM493_CAVEWARP04", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", -721.0234, 1785.661, 90, "FARM493_CAVEWARP05", "HT2_FARM493_CAVEWARP05");
+		AddNpc(25, 155010, "Underground Tunnel Entrance", "f_farm_49_3", -721.0234, 221.6003, 1785.661, 90, "FARM493_CAVEWARP05", "HT2_FARM493_CAVEWARP05", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", 1045.902, 1025.956, 171, "FARM493_CAVEWARP06", "HT2_FARM493_CAVEWARP06");
+		AddNpc(26, 155010, "Underground Tunnel Entrance", "f_farm_49_3", 1045.902, 238.2126, 1025.956, 171, "FARM493_CAVEWARP06", "HT2_FARM493_CAVEWARP06", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", 1213.885, 1313.535, -26, "FARM493_CAVEWARP07", "HT2_FARM493_CAVEWARP07");
+		AddNpc(27, 155010, "Underground Tunnel Entrance", "f_farm_49_3", 1213.885, 238.2126, 1313.535, -26, "FARM493_CAVEWARP07", "HT2_FARM493_CAVEWARP07", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", -1623.952, -1275.189, 91, "FARM493_CAVEWARP08", "HT2_FARM493_CAVEWARP08");
+		AddNpc(28, 155010, "Underground Tunnel Entrance", "f_farm_49_3", -1623.952, 273.5265, -1275.189, 91, "FARM493_CAVEWARP08", "HT2_FARM493_CAVEWARP08", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", -1285.847, 156.3683, 13, "FARM493_CAVEWARP09", "HT2_FARM493_CAVEWARP09");
+		AddNpc(29, 155010, "Underground Tunnel Entrance", "f_farm_49_3", -1285.847, 309.2148, 156.3683, 13, "FARM493_CAVEWARP09", "HT2_FARM493_CAVEWARP09", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", -1230.52, 1089.141, -81, "FARM493_CAVEWARP10", "HT2_FARM493_CAVEWARP10");
+		AddNpc(30, 155010, "Underground Tunnel Entrance", "f_farm_49_3", -1230.52, 245.7409, 1089.141, -81, "FARM493_CAVEWARP10", "HT2_FARM493_CAVEWARP10", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", -1709.014, -661.4246, 90, "FARM493_CAVEWARP11", "HT2_FARM493_CAVEWARP11");
+		AddNpc(32, 155010, "Underground Tunnel Entrance", "f_farm_49_3", -1709.014, 245.5957, -661.4246, 90, "FARM493_CAVEWARP11", "HT2_FARM493_CAVEWARP11", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", -1109.164, -783.4154, 90, "FARM493_CAVEEXIT");
+		AddNpc(33, 155011, "Underground Tunnel Exit", "f_farm_49_3", -1109.164, 273.5265, -783.4154, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", -1026.321, 715.7587, 90, "FARM493_CAVEEXIT");
+		AddNpc(34, 155011, "Underground Tunnel Exit", "f_farm_49_3", -1026.321, 258.7858, 715.7587, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", -1248.57, -116.8788, 90, "FARM493_CAVEEXIT");
+		AddNpc(35, 155011, "Underground Tunnel Exit", "f_farm_49_3", -1248.57, 274.9668, -116.8788, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", 91.384, 1898.225, 90, "FARM493_CAVEEXIT");
+		AddNpc(36, 155011, "Underground Tunnel Exit", "f_farm_49_3", 91.384, 248.8447, 1898.225, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", 661.5018, 1191.391, 90, "FARM493_CAVEEXIT");
+		AddNpc(37, 155011, "Underground Tunnel Exit", "f_farm_49_3", 661.5018, 238.2126, 1191.391, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", 1718.073, 423.0154, 90, "FARM493_CAVEEXIT");
+		AddNpc(38, 155011, "Underground Tunnel Exit", "f_farm_49_3", 1718.073, 197.9638, 423.0154, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", -1262.505, -1461.825, 90, "FARM493_CAVEEXIT");
+		AddNpc(39, 155011, "Underground Tunnel Exit", "f_farm_49_3", -1262.505, 273.5265, -1461.825, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", 922.3622, 600.922, 90, "FARM493_CAVEEXIT");
+		AddNpc(40, 155011, "Underground Tunnel Exit", "f_farm_49_3", 922.3622, 293.2046, 600.922, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", -1478.354, 468.2224, 90, "FARM493_CAVEEXIT");
+		AddNpc(41, 155011, "Underground Tunnel Exit", "f_farm_49_3", -1478.354, 245.7409, 468.2224, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", -710.6141, 926.0353, 90, "FARM493_CAVEEXIT");
+		AddNpc(42, 155011, "Underground Tunnel Exit", "f_farm_49_3", -710.6141, 258.7858, 926.0353, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", 1139.205, -707.2848, 90, "FARM493_CAVEEXIT");
+		AddNpc(44, 155011, "Underground Tunnel Exit", "f_farm_49_3", 1139.205, 245.457, -707.2848, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", -106.9535, -552.7454, 0, "FARM493_SQ_02");
+		AddNpc(45, 155005, "Dropped Bag", "f_farm_49_3", -106.9535, 245.457, -552.7454, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", -96.14848, -735.603, 0, "FARM493_SQ_02");
+		AddNpc(45, 155005, "Dropped Bag", "f_farm_49_3", -96.14848, 245.457, -735.603, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 72.34953, -773.9922, 0, "FARM493_SQ_02");
+		AddNpc(45, 155005, "Dropped Bag", "f_farm_49_3", 72.34953, 245.457, -773.9922, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 206.9244, -713.9991, 0, "FARM493_SQ_02");
+		AddNpc(46, 155005, "Dropped Bag", "f_farm_49_3", 206.9244, 245.457, -713.9991, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 89.12965, -546.1431, 0, "FARM493_SQ_02");
+		AddNpc(46, 155005, "Dropped Bag", "f_farm_49_3", 89.12965, 245.457, -546.1431, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 27.52405, -259.9178, 0, "FARM493_SQ_02");
+		AddNpc(47, 155005, "Dropped Bag", "f_farm_49_3", 27.52405, 293.2046, -259.9178, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 134.2464, -82.36248, 0, "FARM493_SQ_02");
+		AddNpc(47, 155005, "Dropped Bag", "f_farm_49_3", 134.2464, 293.2046, -82.36248, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", -156.1066, -121.7846, 0, "FARM493_SQ_02");
+		AddNpc(48, 155005, "Dropped Bag", "f_farm_49_3", -156.1066, 293.2046, -121.7846, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", -3.703314, -252.8793, 0, "FARM493_SQ_02");
+		AddNpc(48, 155005, "Dropped Bag", "f_farm_49_3", -3.703314, 293.2046, -252.8793, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 1424.265, 6.652178, 0, "FARM493_SQ_02");
+		AddNpc(49, 155005, "Dropped Bag", "f_farm_49_3", 1424.265, 293.2046, 6.652178, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 1546.494, 131.2027, 0, "FARM493_SQ_02");
+		AddNpc(49, 155005, "Dropped Bag", "f_farm_49_3", 1546.494, 293.2046, 131.2027, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 1674.59, -55.09055, 0, "FARM493_SQ_02");
+		AddNpc(49, 155005, "Dropped Bag", "f_farm_49_3", 1674.59, 293.2046, -55.09055, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 1613.747, -210.2769, 0, "FARM493_SQ_02");
+		AddNpc(50, 155005, "Dropped Bag", "f_farm_49_3", 1613.747, 293.2046, -210.2769, 0, "FARM493_SQ_02", "", "");
 		
 		// Dropped Bag
 		//-------------------------------------------------------------------------
-		AddNpc(155005, "Dropped Bag", "f_farm_49_3", 1478.45, -189.1063, 0, "FARM493_SQ_02");
+		AddNpc(50, 155005, "Dropped Bag", "f_farm_49_3", 1478.45, 293.2046, -189.1063, 0, "FARM493_SQ_02", "", "");
 		
 		// Boss Trigger
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Boss Trigger", "f_farm_49_3", -346.9366, 1778.264, 90, "", "FARM493_SQ_04", "");
+		AddNpc(51, 20026, "Boss Trigger", "f_farm_49_3", -346.9366, 248.8447, 1778.264, 90, "", "FARM493_SQ_04", "");
 		
 		// Safety Zone Trigger
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "Safety Zone Trigger", "f_farm_49_3", 814.0458, -72.04294, 90, "", "FARM493_SQ_06_1", "");
+		AddNpc(52, 20026, "Safety Zone Trigger", "f_farm_49_3", 814.0458, 293.2046, -72.04294, 90, "", "FARM493_SQ_06_1", "");
 		
 		// Second Demon Prison
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Second Demon Prison", "f_farm_49_3", -1735.096, 1752.767, 90, "FARM49_3_TO_VELNIASP54_1");
+		AddNpc(55, 147469, "Second Demon Prison", "f_farm_49_3", -1735.096, 285.5876, 1752.767, 90, "FARM49_3_TO_VELNIASP54_1", "", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_farm_49_3", 941.8351, 12.10072, 0, "WARP_F_FARM_49_3", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(7, 40120, "Statue of Goddess Vakarine", "f_farm_49_3", 941.8351, 293.2046, 12.10072, 0, "WARP_F_FARM_49_3", "STOUP_CAMP", "STOUP_CAMP");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_farm_49_3", 823.5577, -56.96614, 90, "", "FARM493_MQ_05", "");
+		AddNpc(59, 20026, "", "f_farm_49_3", 823.5577, 293.2046, -56.96614, 90, "", "FARM493_MQ_05", "");
 		
 		// Lv2 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(40030, "Lv2 Treasure Chest", "f_farm_49_3", 241.22, -120.41, 90, "TREASUREBOX_LV_F_FARM_49_360");
+		AddNpc(60, 40030, "Lv2 Treasure Chest", "f_farm_49_3", 241.22, 293.3, -120.41, 90, "TREASUREBOX_LV_F_FARM_49_360", "", "");
+		AddNpc(61, 147366, "Gate Entrance x", "f_farm_49_3", 787.8402, 293.2046, -67.16559, 90, "", "", "");
+		AddNpc(62, 147362, "Gate Entrance x", "f_farm_49_3", 829, 245, -882, 90, "", "", "");
+		AddNpc(62, 147362, "Gate Entrance x", "f_farm_49_3", -1649, 285, 1674, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_farm_49_3", 691, 192, 315, "TREASUREBOX_LV_F_FARM_49_363");
+		AddNpc(63, 147392, "Lv1 Treasure Chest", "f_farm_49_3", 691, 388, 192, 315, "TREASUREBOX_LV_F_FARM_49_363", "", "");
 		
 		// Edward
 		//-------------------------------------------------------------------------
-		AddNpc(20153, "Edward", "f_farm_49_3", 95.41, 32.97, 13, "FARM493_SQ_07");
+		AddNpc(64, 20153, "Edward", "f_farm_49_3", 95.41, 293.2, 32.97, 13, "FARM493_SQ_07", "", "", 1);
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", 924.9033, 1041.195, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", 924.9033, 238.21, 1041.195, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", 1212.068, 1085.829, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", 1212.068, 238.21, 1085.829, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", 985.2916, 1298.423, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", 985.2916, 238.21, 1298.423, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", 618.1249, 1233.551, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", 618.1249, 238.21, 1233.551, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", 787.5119, 1435.889, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", 787.5119, 238.21, 1435.889, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", 1176.254, 1373.391, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", 1176.254, 238.21, 1373.391, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", -956.494, -802.1596, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", -956.494, 273.53, -802.1596, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", -1271.367, -1564.514, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", -1271.367, 273.53, -1564.514, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", -1513.248, -1118.392, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", -1513.248, 273.53, -1118.392, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", -1250.987, -764.5195, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", -1250.987, 273.53, -764.5195, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", -1087.134, -1354.025, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", -1087.134, 273.53, -1354.025, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", -1571.279, -1468.954, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", -1571.279, 273.53, -1468.954, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", -1279.235, -1060.143, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", -1279.235, 273.53, -1060.143, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Melbania Herb
 		//-------------------------------------------------------------------------
-		AddNpc(153054, "Melbania Herb", "f_farm_49_3", -916.4952, -1033.899, 90, "FARM493_SQ_07_OBJ");
+		AddNpc(65, 153054, "Melbania Herb", "f_farm_49_3", -916.4952, 273.53, -1033.899, 90, "FARM493_SQ_07_OBJ", "", "");
 		
 		// Rare Flower
 		//-------------------------------------------------------------------------
-		AddNpc(153067, "Rare Flower", "f_farm_49_3", -1178.881, 1266.857, -23, "FARM493_SQ_08_OBJ1");
+		AddNpc(66, 153067, "Rare Flower", "f_farm_49_3", -1178.881, 245.74, 1266.857, -23, "FARM493_SQ_08_OBJ1", "", "", 0);
+		AddNpc(72, 20026, " ", "f_farm_49_3", -93.60002, 293.2046, -26.389, 90, "", "", "");
 		
 		// Underground Tunnel Exit
 		//-------------------------------------------------------------------------
-		AddNpc(155011, "Underground Tunnel Exit", "f_farm_49_3", -1887.234, -951.394, 90, "FARM493_CAVEEXIT");
+		AddNpc(43, 155011, "Underground Tunnel Exit", "f_farm_49_3", -1887.234, 245.1021, -951.394, 90, "FARM493_CAVEEXIT", "", "");
 		
 		// Underground Tunnel Entrance
 		//-------------------------------------------------------------------------
-		AddNpc(155010, "Underground Tunnel Entrance", "f_farm_49_3", 1002.196, -419.7514, 48, "FARM493_CAVEWARP12", "HT2_FARM493_CAVEWARP12");
+		AddNpc(31, 155010, "Underground Tunnel Entrance", "f_farm_49_3", 1002.196, 245.457, -419.7514, 48, "FARM493_CAVEWARP12", "HT2_FARM493_CAVEWARP12", "");
 	}
 }

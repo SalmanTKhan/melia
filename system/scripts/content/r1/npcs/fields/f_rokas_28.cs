@@ -14,110 +14,119 @@ public class FRokas28NpcScript : GeneralScript
 	{
 		// Broken device
 		//-------------------------------------------------------------------------
-		AddNpc(147336, "Broken device", "f_rokas_28", -337, 299, 225, "", "ROKAS28_BLOCK", "");
+		AddNpc(10, 147336, "Broken device", "f_rokas_28", -337, 1187, 299, 225, "", "ROKAS28_BLOCK", "");
 		
 		// Akmens Ridge
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Akmens Ridge", "f_rokas_28", -717, -1692, -85, "", "ROKAS28_ROKAS27", "");
+		AddNpc(48, 40001, "Akmens Ridge", "f_rokas_28", -717, 1121, -1692, -85, "", "ROKAS28_ROKAS27", "");
 		
 		// Rukas Plateau
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Rukas Plateau", "f_rokas_28", -1892, -545, 259, "", "ROKAS28_ROKAS29", "");
+		AddNpc(49, 40001, "Rukas Plateau", "f_rokas_28", -1892, 1298, -545, 259, "", "ROKAS28_ROKAS29", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_rokas_28", -445, 70, 90, "", "ROKAS28_ODEL_TRIGGER", "");
+		AddNpc(602, 20025, "", "f_rokas_28", -445, 1297, 70, 90, "", "ROKAS28_ODEL_TRIGGER", "");
 		
 		// Trap-setting Area
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Trap-setting Area", "f_rokas_28", 651, 466, 90, "ROKAS28_TRAP");
+		AddNpc(603, 20025, "Trap-setting Area", "f_rokas_28", 651, 1241, 466, 90, "ROKAS28_TRAP", "", "");
 		
 		// Stone Pillar
 		//-------------------------------------------------------------------------
-		AddNpc(47107, "Stone Pillar", "f_rokas_28", 1422, 772, 90, "ROKAS28_ENTICE");
+		AddNpc(606, 47107, "Stone Pillar", "f_rokas_28", 1422, 1159, 772, 90, "ROKAS28_ENTICE", "", "");
 		
 		// Liaison Officer Nian
 		//-------------------------------------------------------------------------
-		AddNpc(20125, "Liaison Officer Nian", "f_rokas_28", -544, -1500, 45, "ROKAS28_MQ1_1", "ROKAS28_MQ1_2");
+		AddNpc(1000, 20125, "Liaison Officer Nian", "f_rokas_28", -544, 1121, -1500, 45, "ROKAS28_MQ1_1", "ROKAS28_MQ1_2", "");
 		
 		// Trap-setting Area
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Trap-setting Area", "f_rokas_28", 556, 553, 90, "", "ROKAS28_TRAP_2", "");
+		AddNpc(1001, 20025, "Trap-setting Area", "f_rokas_28", 556, 1241, 553, 90, "", "ROKAS28_TRAP_2", "");
 		
 		// Historian Adelle
 		//-------------------------------------------------------------------------
-		AddNpc(153040, "Historian Adelle", "f_rokas_28", 1616, 1791, 90, "ROKAS28_ODEL_MQ4_DLG");
+		AddNpc(1003, 153040, "Historian Adelle", "f_rokas_28", 1616, 1161, 1791, 90, "ROKAS28_ODEL_MQ4_DLG", "", "", 1);
 		
 		// Mural
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Mural", "f_rokas_28", 1263.86, 1974.244, 90, "ROKAS28_MQ5_NPC");
+		AddNpc(1004, 20025, "Mural", "f_rokas_28", 1263.86, 1271.993, 1974.244, 90, "ROKAS28_MQ5_NPC", "", "");
 		
 		// Historian Adelle
 		//-------------------------------------------------------------------------
-		AddNpc(153040, "Historian Adelle", "f_rokas_28", -475, -506, 90, "ROKAS28_ODEL_MQ6");
+		AddNpc(1005, 153040, "Historian Adelle", "f_rokas_28", -475, 1183, -506, 90, "ROKAS28_ODEL_MQ6", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_rokas_28", -1318, -480, 90, "", "ROKAS28_MQ7_NPC", "");
+		AddNpc(1006, 20025, "", "f_rokas_28", -1318, 1298, -480, 90, "", "ROKAS28_MQ7_NPC", "");
 		
 		// Seal Device
 		//-------------------------------------------------------------------------
-		AddNpc(47106, "Seal Device", "f_rokas_28", -216, -69, 90, "ROKAS28_SEAL_FAKE1");
+		AddNpc(1011, 47106, "Seal Device", "f_rokas_28", -216, 1187, -69, 90, "ROKAS28_SEAL_FAKE1", "", "");
 		
 		// Seal Device
 		//-------------------------------------------------------------------------
-		AddNpc(47106, "Seal Device", "f_rokas_28", -638, -617, 90, "ROKAS28_SEAL_FAKE2");
+		AddNpc(1041, 47106, "Seal Device", "f_rokas_28", -638, 1184, -617, 90, "ROKAS28_SEAL_FAKE2", "", "");
 		
 		// Seal Device
 		//-------------------------------------------------------------------------
-		AddNpc(47106, "Seal Device", "f_rokas_28", -42, -1502, 90, "ROKAS28_SEAL_FAKE3");
+		AddNpc(1042, 47106, "Seal Device", "f_rokas_28", -42, 1121, -1502, 90, "ROKAS28_SEAL_FAKE3", "", "");
 		
 		// Seal Device
 		//-------------------------------------------------------------------------
-		AddNpc(47106, "Seal Device", "f_rokas_28", 733, -446, 90, "ROKAS28_SEAL_FAKE4");
+		AddNpc(1043, 47106, "Seal Device", "f_rokas_28", 733, 1159, -446, 90, "ROKAS28_SEAL_FAKE4", "", "");
 		
 		// Seal Device
 		//-------------------------------------------------------------------------
-		AddNpc(47106, "Seal Device", "f_rokas_28", 777, 724, 90, "ROKAS28_SEAL_FAKE5");
+		AddNpc(1044, 47106, "Seal Device", "f_rokas_28", 777, 1241, 724, 90, "ROKAS28_SEAL_FAKE5", "", "");
 		
 		// Seal Device
 		//-------------------------------------------------------------------------
-		AddNpc(47106, "Seal Device", "f_rokas_28", 1156, 1125, 90, "ROKAS28_SEAL_FAKE6");
+		AddNpc(1045, 47106, "Seal Device", "f_rokas_28", 1156, 1159, 1125, 90, "ROKAS28_SEAL_FAKE6", "", "");
 		
 		// Seal Device
 		//-------------------------------------------------------------------------
-		AddNpc(47106, "Seal Device", "f_rokas_28", -616, 14, 90, "ROKAS28_SEAL_TRUE2");
+		AddNpc(1013, 47106, "Seal Device", "f_rokas_28", -616, 1297, 14, 90, "ROKAS28_SEAL_TRUE2", "", "");
 		
 		// Seal Device
 		//-------------------------------------------------------------------------
-		AddNpc(47106, "Seal Device", "f_rokas_28", 371, 646, 90, "ROKAS28_SEAL_TRUE3");
+		AddNpc(1014, 47106, "Seal Device", "f_rokas_28", 371, 1349, 646, 90, "ROKAS28_SEAL_TRUE3", "", "");
 		
 		// Seal Device
 		//-------------------------------------------------------------------------
-		AddNpc(47106, "Seal Device", "f_rokas_28", 1650, 1715, 90, "ROKAS28_SEAL_TRUE1");
+		AddNpc(1012, 47106, "Seal Device", "f_rokas_28", 1650, 1161, 1715, 90, "ROKAS28_SEAL_TRUE1", "", "");
 		
 		// Archaeologist Friedka
 		//-------------------------------------------------------------------------
-		AddNpc(20150, "Archaeologist Friedka", "f_rokas_28", 251, -346, 90, "ROKAS28_FRIDKA");
+		AddNpc(1015, 20150, "Archaeologist Friedka", "f_rokas_28", 251, 1158, -346, 90, "ROKAS28_FRIDKA", "", "");
 		
 		// Technician Orion
 		//-------------------------------------------------------------------------
-		AddNpc(20102, "Technician Orion", "f_rokas_28", 501, -177, 90, "ROKAS28_ORION");
+		AddNpc(1016, 20102, "Technician Orion", "f_rokas_28", 501, 1157, -177, 90, "ROKAS28_ORION", "", "", 0);
 		
 		// Historian Adelle
 		//-------------------------------------------------------------------------
-		AddNpc(153040, "Historian Adelle", "f_rokas_28", 16, -571, 90, "ROKAS28_ODEL");
+		AddNpc(1023, 153040, "Historian Adelle", "f_rokas_28", 16, 1158, -571, 90, "ROKAS28_ODEL", "", "", 0);
 		
 		// Royal Mausoleum Workers Lodge
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Royal Mausoleum Workers Lodge", "f_rokas_28", 1191.129, 2320.436, 252, "", "ROKAS28_TO_UNDERF591", "");
+		AddNpc(1030, 40001, "Royal Mausoleum Workers Lodge", "f_rokas_28", 1191.129, 1007.385, 2320.436, 252, "", "ROKAS28_TO_UNDERF591", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_rokas_28", 1647.958, 2088.266, 90, "ROKAS28_SECRET_PORTAL");
+		AddNpc(1032, 147469, " ", "f_rokas_28", 1647.958, 1160.872, 2088.266, 90, "ROKAS28_SECRET_PORTAL", "", "", 1);
+		AddNpc(1033, 147362, "", "f_rokas_28", -537.4849, 1121.151, -1497.944, 90, "", "", "");
+		AddNpc(1033, 147362, "", "f_rokas_28", -1758.01, 1298.247, -518.6101, 90, "", "", "");
+		AddNpc(1034, 147362, "", "f_rokas_28", 512.0376, 1157.761, -182.6945, 90, "", "", "");
+		AddNpc(1035, 147362, "", "f_rokas_28", 256.6459, 1158.627, -341.0005, 90, "", "", "");
+		AddNpc(1036, 147362, "", "f_rokas_28", 9.427124, 1158.632, -587.5671, 90, "", "", "");
+		AddNpc(1037, 147362, "", "f_rokas_28", -715.0161, 1121.151, -1697.672, 90, "", "", "");
+		AddNpc(1038, 147362, "", "f_rokas_28", -1891.839, 1298.247, -552.3225, 90, "", "", "");
+		AddNpc(1038, 147362, "", "f_rokas_28", -1907.521, 1298.247, -523.2842, 90, "", "", "");
+		AddNpc(1039, 147362, "", "f_rokas_28", 1207.559, 1011.138, 2319.337, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_rokas_28", 630.55, -159.62, 270, "TREASUREBOX_LV_F_ROKAS_281040");
+		AddNpc(1040, 147392, "Lv1 Treasure Chest", "f_rokas_28", 630.55, 1156.98, -159.62, 270, "TREASUREBOX_LV_F_ROKAS_281040", "", "");
 	}
 }

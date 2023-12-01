@@ -14,58 +14,58 @@ public class Ep141FCastle1NpcScript : GeneralScript
 	{
 		// [Centurion Master] Krajicek
 		//-------------------------------------------------------------------------
-		AddNpc(147326, "[Centurion Master] Krajicek", "ep14_1_f_castle_1", 980.5783, -614.608, 90, "EP14_1_F_CASTLE_1_NPC1");
+		AddNpc(1, 147326, "[Centurion Master] Krajicek", "ep14_1_f_castle_1", 980.5783, 0.4795074, -614.608, 90, "EP14_1_F_CASTLE_1_NPC1", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_1", 1171.715, -641.6, 90, "", "EP14_1_F_CASTLE_1_NPC2", "");
+		AddNpc(2, 147469, " ", "ep14_1_f_castle_1", 1171.715, 0.4795026, -641.6, 90, "", "EP14_1_F_CASTLE_1_NPC2", "");
 		
 		// Royal Army Guard
 		//-------------------------------------------------------------------------
-		AddNpc(150290, "Royal Army Guard", "ep14_1_f_castle_1", 1048.73, 491.3686, 90, "EP14_1_FCASTLE1_MQ_2_SOLDIER");
+		AddNpc(9, 150290, "Royal Army Guard", "ep14_1_f_castle_1", 1048.73, 90.62885, 491.3686, 90, "EP14_1_FCASTLE1_MQ_2_SOLDIER", "", "");
 		
 		// Royal Army Guard
 		//-------------------------------------------------------------------------
-		AddNpc(150290, "Royal Army Guard", "ep14_1_f_castle_1", 976.4153, 712.3425, 90, "EP14_1_FCASTLE1_MQ_2_SOLDIER");
+		AddNpc(10, 150290, "Royal Army Guard", "ep14_1_f_castle_1", 976.4153, 90.62885, 712.3425, 90, "EP14_1_FCASTLE1_MQ_2_SOLDIER", "", "");
 		
 		// Royal Army Guard
 		//-------------------------------------------------------------------------
-		AddNpc(150290, "Royal Army Guard", "ep14_1_f_castle_1", 898.5609, 542.6355, 90, "EP14_1_FCASTLE1_MQ_2_SOLDIER");
+		AddNpc(11, 150290, "Royal Army Guard", "ep14_1_f_castle_1", 898.5609, 90.62885, 542.6355, 90, "EP14_1_FCASTLE1_MQ_2_SOLDIER", "", "");
 		
 		// Hidden Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(150294, "Hidden Soldier", "ep14_1_f_castle_1", 1191.024, 1464.596, 27, "EP14_1_FCASTLE1_MQ_3_SOLDIER");
+		AddNpc(19, 150294, "Hidden Soldier", "ep14_1_f_castle_1", 1191.024, 0.562027, 1464.596, 27, "EP14_1_FCASTLE1_MQ_3_SOLDIER", "", "", 1);
 		
 		// Hidden Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(150294, "Hidden Soldier", "ep14_1_f_castle_1", 1364.573, 1263.767, -46, "EP14_1_FCASTLE1_MQ_3_SOLDIER");
+		AddNpc(20, 150294, "Hidden Soldier", "ep14_1_f_castle_1", 1364.573, 0.5620269, 1263.767, -46, "EP14_1_FCASTLE1_MQ_3_SOLDIER", "", "", 1);
 		
 		// Hidden Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(150294, "Hidden Soldier", "ep14_1_f_castle_1", 1079.712, 1521.753, -29, "EP14_1_FCASTLE1_MQ_3_SOLDIER");
+		AddNpc(21, 150294, "Hidden Soldier", "ep14_1_f_castle_1", 1079.712, 0.562027, 1521.753, -29, "EP14_1_FCASTLE1_MQ_3_SOLDIER", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_1", -604.4221, 794.1345, 90, "", "EP14_1_FCASTLE1_MQ_6_HIDDEN", "");
+		AddNpc(39, 147469, " ", "ep14_1_f_castle_1", -604.4221, 0.5281982, 794.1345, 90, "", "EP14_1_FCASTLE1_MQ_6_HIDDEN", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_1", -267.147, -610.9994, 90, "", "EP14_1_FCASTLE1_MQ_7_HIDDEN", "");
+		AddNpc(40, 147469, " ", "ep14_1_f_castle_1", -267.147, 90.81676, -610.9994, 90, "", "EP14_1_FCASTLE1_MQ_7_HIDDEN", "");
 		
 		// [Centurion Master] Krajicek
 		//-------------------------------------------------------------------------
-		AddNpc(147326, "[Centurion Master] Krajicek", "ep14_1_f_castle_1", -597.3381, -524.8023, 78, "EP14_1_F_CASTLE_1_NPC3");
+		AddNpc(41, 147326, "[Centurion Master] Krajicek", "ep14_1_f_castle_1", -597.3381, 90.81677, -524.8023, 78, "EP14_1_F_CASTLE_1_NPC3", "", "", 1);
 		
 		// Delmore Manor
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Delmore Manor", "ep14_1_f_castle_1", -709.1204, -426.1506, 249, "", "WARP_EP14_1_F_CASTLE_1_TO_EP14_1_F_CASTLE_2", "");
+		AddNpc(42, 40001, "Delmore Manor", "ep14_1_f_castle_1", -709.1204, 90.81677, -426.1506, 249, "", "WARP_EP14_1_F_CASTLE_1_TO_EP14_1_F_CASTLE_2", "");
 		
 		// Kirtimas Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Kirtimas Forest", "ep14_1_f_castle_1", 1584.229, -762.3168, 90, "", "WARP_EP14_1_F_CASTLE_1_TO_EP13_F_SIAULIAI_5", "");
+		AddNpc(43, 40001, "Kirtimas Forest", "ep14_1_f_castle_1", 1584.229, 0.4795036, -762.3168, 90, "", "WARP_EP14_1_F_CASTLE_1_TO_EP13_F_SIAULIAI_5", "");
 		
 		// Sage Envoy
 		//-------------------------------------------------------------------------
-		AddNpc(157100, "Sage Envoy", "ep14_1_f_castle_1", 886.2971, -439.1505, 48, "D_CASTLE_19_1_PORTAL_NPC_01", "D_CASTLE_19_1_PORTAL_NPC_01");
+		AddNpc(44, 157100, "Sage Envoy", "ep14_1_f_castle_1", 886.2971, 0.4795127, -439.1505, 48, "D_CASTLE_19_1_PORTAL_NPC_01", "D_CASTLE_19_1_PORTAL_NPC_01", "");
 	}
 }

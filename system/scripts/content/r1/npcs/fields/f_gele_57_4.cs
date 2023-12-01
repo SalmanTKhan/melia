@@ -14,134 +14,145 @@ public class FGele574NpcScript : GeneralScript
 	{
 		// Nefritas Cliff
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Nefritas Cliff", "f_gele_57_4", -841, -155, 6, "", "GELE574_TO_GELE573", "");
+		AddNpc(1, 40001, "Nefritas Cliff", "f_gele_57_4", -841, -80, -155, 6, "", "GELE574_TO_GELE573", "");
 		
 		// Tenet Church First Floor
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Tenet Church First Floor", "f_gele_57_4", 1296.24, 2145.48, 183, "", "GELE574_TO_CHAPEL576", "");
+		AddNpc(3, 40001, "Tenet Church First Floor", "f_gele_57_4", 1296.24, -79.46, 2145.48, 183, "", "GELE574_TO_CHAPEL576", "");
 		
 		// Tenet Church B1
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Tenet Church B1", "f_gele_57_4", 1072.8, 2046.17, 181, "", "GELE574_TO_CHAPEL575_1", "");
+		AddNpc(4, 40001, "Tenet Church B1", "f_gele_57_4", 1072.8, -79.46, 2046.17, 181, "", "GELE574_TO_CHAPEL575_1", "");
 		
 		// Follower Alfonsas
 		//-------------------------------------------------------------------------
-		AddNpc(147400, "Follower Alfonsas", "f_gele_57_4", -611.6, 558.61, 13, "GELE574_ADRIJA");
+		AddNpc(5, 147400, "Follower Alfonsas", "f_gele_57_4", -611.6, -80.05, 558.61, 13, "GELE574_ADRIJA", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147454, "", "f_gele_57_4", 2314, -722, -43, "GELE574_MQ_04");
+		AddNpc(9, 147454, "", "f_gele_57_4", 2314, 102, -722, -43, "GELE574_MQ_04", "", "", 0);
 		
 		// Namott Altar
 		//-------------------------------------------------------------------------
-		AddNpc(147413, "Namott Altar", "f_gele_57_4", -1626, -712, 90, "GELE574_MQ_07_SHRINE");
+		AddNpc(10, 147413, "Namott Altar", "f_gele_57_4", -1626, 7, -712, 90, "GELE574_MQ_07_SHRINE", "", "", 1);
 		
 		// Follower Algis
 		//-------------------------------------------------------------------------
-		AddNpc(147390, "Follower Algis", "f_gele_57_4", 1305.2, 2032.66, 189, "GELE574_ARUNE_1");
+		AddNpc(12, 147390, "Follower Algis", "f_gele_57_4", 1305.2, -79.46, 2032.66, 189, "GELE574_ARUNE_1", "", "", 1);
 		
 		// Namott Altar Post
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Namott Altar Post", "f_gele_57_4", -1626.407, -711.4702, 90, "GELE574_MQ_07_PLACE");
+		AddNpc(15, 147372, "Namott Altar Post", "f_gele_57_4", -1626.407, 7.181813, -711.4702, 90, "GELE574_MQ_07_PLACE", "", "", 1);
 		
 		// Summoning Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147380, "Summoning Magic Circle", "f_gele_57_4", 158.74, 796.25, 90, "GELE574_MQ_08");
+		AddNpc(17, 147380, "Summoning Magic Circle", "f_gele_57_4", 158.74, -80.05, 796.25, 90, "GELE574_MQ_08", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40069, " ", "f_gele_57_4", 1283.872, 2150.58, 2, "", "GELE574_ARUNE_1", "");
+		AddNpc(18, 40069, " ", "f_gele_57_4", 1283.872, -78.33717, 2150.58, 2, "", "GELE574_ARUNE_1", "");
 		
 		// Entrance of Kateen Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Entrance of Kateen Forest", "f_gele_57_4", -912.23, 2474.32, 180, "", "GELE574_KATYN_7", "");
+		AddNpc(23, 40001, "Entrance of Kateen Forest", "f_gele_57_4", -912.23, -80.05, 2474.32, 180, "", "GELE574_KATYN_7", "");
 		
 		// Follower Rikke
 		//-------------------------------------------------------------------------
-		AddNpc(147422, "Follower Rikke", "f_gele_57_4", -1349.54, 388.84, 90, "GELE574_REIKE");
+		AddNpc(40, 147422, "Follower Rikke", "f_gele_57_4", -1349.54, -79.19, 388.84, 90, "GELE574_REIKE", "", "");
 		
 		// Watcher Erra
 		//-------------------------------------------------------------------------
-		AddNpc(147403, "Watcher Erra", "f_gele_57_4", 174.45, -266.38, -8, "GELE574_ERRA");
+		AddNpc(41, 147403, "Watcher Erra", "f_gele_57_4", 174.45, -6.64, -266.38, -8, "GELE574_ERRA", "", "");
 		
 		// Follower Algis
 		//-------------------------------------------------------------------------
-		AddNpc(147390, "Follower Algis", "f_gele_57_4", 946.97, 1188.66, 68, "GELE574_ALLGES");
+		AddNpc(42, 147390, "Follower Algis", "f_gele_57_4", 946.97, -80.05, 1188.66, 68, "GELE574_ALLGES", "", "", 1);
+		AddNpc(44, 147364, "Field Gen x", "f_gele_57_4", 97.66, -6.64, -282.09, 90, "", "", "");
+		AddNpc(44, 147364, "Field Gen x", "f_gele_57_4", -879.6711, -80.049, 24.26067, 90, "", "", "");
+		AddNpc(44, 147364, "Field Gen x", "f_gele_57_4", -1352.53, -75.77, 348.57, 90, "", "", "");
+		AddNpc(44, 147364, "Field Gen x", "f_gele_57_4", -632.0333, -80.049, 482.132, 90, "", "", "");
+		AddNpc(44, 147364, "Field Gen x", "f_gele_57_4", -917.38, -80.05, 2388.21, 90, "", "", "");
+		AddNpc(45, 147366, "Field Gen x", "f_gele_57_4", 1295.691, -79.6485, 1997.747, 90, "", "", "");
 		
 		// Small Hive
 		//-------------------------------------------------------------------------
-		AddNpc(400121, "Small Hive", "f_gele_57_4", -1017.13, 2085.21, 90, "GELE574_MQ_01");
+		AddNpc(47, 400121, "Small Hive", "f_gele_57_4", -1017.13, -80.05, 2085.21, 90, "GELE574_MQ_01", "", "", 0);
 		
 		// Summoning Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147380, "Summoning Magic Circle", "f_gele_57_4", 302.01, 828.44, 90, "GELE574_MQ_08");
+		AddNpc(17, 147380, "Summoning Magic Circle", "f_gele_57_4", 302.01, -80.05, 828.44, 90, "GELE574_MQ_08", "", "");
 		
 		// Summoning Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147380, "Summoning Magic Circle", "f_gele_57_4", 786.42, 1072.77, 90, "GELE574_MQ_08");
+		AddNpc(17, 147380, "Summoning Magic Circle", "f_gele_57_4", 786.42, -80.05, 1072.77, 90, "GELE574_MQ_08", "", "");
 		
 		// Summoning Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147380, "Summoning Magic Circle", "f_gele_57_4", 751.3, 929.61, 90, "GELE574_MQ_08");
+		AddNpc(17, 147380, "Summoning Magic Circle", "f_gele_57_4", 751.3, -80.05, 929.61, 90, "GELE574_MQ_08", "", "");
 		
 		// Summoning Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147380, "Summoning Magic Circle", "f_gele_57_4", 596.12, 948.71, 90, "GELE574_MQ_08");
+		AddNpc(17, 147380, "Summoning Magic Circle", "f_gele_57_4", 596.12, -80.05, 948.71, 90, "GELE574_MQ_08", "", "");
 		
 		// Summoning Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147380, "Summoning Magic Circle", "f_gele_57_4", 602.56, 1083.52, 90, "GELE574_MQ_08");
+		AddNpc(17, 147380, "Summoning Magic Circle", "f_gele_57_4", 602.56, -80.05, 1083.52, 90, "GELE574_MQ_08", "", "");
 		
 		// Summoning Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147380, "Summoning Magic Circle", "f_gele_57_4", 394.23, 625.6, 90, "GELE574_MQ_08");
+		AddNpc(17, 147380, "Summoning Magic Circle", "f_gele_57_4", 394.23, -80.05, 625.6, 90, "GELE574_MQ_08", "", "");
 		
 		// Summoning Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147380, "Summoning Magic Circle", "f_gele_57_4", 203.8, 574.98, 90, "GELE574_MQ_08");
+		AddNpc(17, 147380, "Summoning Magic Circle", "f_gele_57_4", 203.8, -80.05, 574.98, 90, "GELE574_MQ_08", "", "");
 		
 		// Summoning Magic Circle
 		//-------------------------------------------------------------------------
-		AddNpc(147380, "Summoning Magic Circle", "f_gele_57_4", 81.38, 673.67, 90, "GELE574_MQ_08");
+		AddNpc(17, 147380, "Summoning Magic Circle", "f_gele_57_4", 81.38, -80.05, 673.67, 90, "GELE574_MQ_08", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147356, "", "f_gele_57_4", -1563, -792, 72, "GELE574_MQ_06");
+		AddNpc(49, 147356, "", "f_gele_57_4", -1563, 8, -792, 72, "GELE574_MQ_06", "", "", 0);
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_gele_57_4", -755, 491, 35, "WARP_F_GELE_57_4", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(50, 40120, "Statue of Goddess Vakarine", "f_gele_57_4", -755, -80, 491, 35, "WARP_F_GELE_57_4", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(44, 147364, "Field Gen x", "f_gele_57_4", -816.2982, -80.049, 292.259, 90, "", "", "");
+		AddNpc(44, 147364, "Field Gen x", "f_gele_57_4", -1069.628, -80.04899, 504.5056, 90, "", "", "");
+		AddNpc(44, 147364, "Field Gen x", "f_gele_57_4", -838.9695, -80.049, 530.6249, 90, "", "", "");
 		
 		// Lv2 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(40030, "Lv2 Treasure Chest", "f_gele_57_4", -1823, -728, 180, "TREASUREBOX_LV_F_GELE_57_451");
+		AddNpc(51, 40030, "Lv2 Treasure Chest", "f_gele_57_4", -1823, 7.31, -728, 180, "TREASUREBOX_LV_F_GELE_57_451", "", "");
 		
 		// Warning
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Warning", "f_gele_57_4", -978.6831, 2391.295, 0, "UPPER_WARNING_F_GELE_57_4");
+		AddNpc(52, 40070, "Warning", "f_gele_57_4", -978.6831, -80.049, 2391.295, 0, "UPPER_WARNING_F_GELE_57_4", "", "");
+		AddNpc(45, 147366, "Field Gen x", "f_gele_57_4", 1286.358, -79.6485, 1676.349, 90, "", "", "");
 		
 		// Guards Graveyard
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Guards Graveyard", "f_gele_57_4", -442.254, 2141.916, 180, "", "GELE_57_4_TO_CATACOMB_01", "");
+		AddNpc(56, 40001, "Guards Graveyard", "f_gele_57_4", -442.254, -80.049, 2141.916, 180, "", "GELE_57_4_TO_CATACOMB_01", "");
+		AddNpc(44, 147364, "Field Gen x", "f_gele_57_4", -515.8626, -80.049, 2060.869, 90, "", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_gele_57_4", 1443.182, -990.0667, 90, "", "PARTY_Q_2_TRIGGER", "");
+		AddNpc(58, 20026, "", "f_gele_57_4", 1443.182, 62.97926, -990.0667, 90, "", "PARTY_Q_2_TRIGGER", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_gele_57_4", -1854.78, 158.67, 0, "TREASUREBOX_LV_F_GELE_57_460");
+		AddNpc(60, 147392, "Lv1 Treasure Chest", "f_gele_57_4", -1854.78, -29.81, 158.67, 0, "TREASUREBOX_LV_F_GELE_57_460", "", "");
 		
 		// Gele Plateau Mission
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Gele Plateau Mission", "f_gele_57_4", -250.5392, -814.403, -53, "", "GELE574_TO_GUILDMISSION", "");
+		AddNpc(61, 40001, "Gele Plateau Mission", "f_gele_57_4", -250.5392, -5.33, -814.403, -53, "", "GELE574_TO_GUILDMISSION", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_gele_57_4", -1433.552, -1021.377, 90, "", "EXPLORER_MISLE5", "");
+		AddNpc(62, 40095, " ", "f_gele_57_4", -1433.552, 8.892964, -1021.377, 90, "", "EXPLORER_MISLE5", "");
 		
 		// [Nak Muay Master]{nl}Khanom Caolaw
 		//-------------------------------------------------------------------------
-		AddNpc(153202, "[Nak Muay Master]{nl}Khanom Caolaw", "f_gele_57_4", -594.8482, 2099.973, 10, "CHAR120_MASTER");
+		AddNpc(64, 153202, "[Nak Muay Master]{nl}Khanom Caolaw", "f_gele_57_4", -594.8482, -78.73763, 2099.973, 10, "CHAR120_MASTER", "", "", 1);
 	}
 }

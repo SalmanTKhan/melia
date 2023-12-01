@@ -14,182 +14,189 @@ public class DCathedral53NpcScript : GeneralScript
 	{
 		// Apsimesti Crossroads
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Apsimesti Crossroads", "d_cathedral_53", 17, -1133, 360, "", "CATHEDRAL53_PILGRIM52", "");
+		AddNpc(4, 40001, "Apsimesti Crossroads", "d_cathedral_53", 17, -1, -1133, 360, "", "CATHEDRAL53_PILGRIM52", "");
 		
 		// Grand Corridor
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Grand Corridor", "d_cathedral_53", 1166.146, -285.1666, 94, "", "CATHEDRAL53_CATHEDRAL54", "");
+		AddNpc(5, 40001, "Grand Corridor", "d_cathedral_53", 1166.146, 83.5826, -285.1666, 94, "", "CATHEDRAL53_CATHEDRAL54", "");
 		
 		// Bishop Aurelius' Spirit
 		//-------------------------------------------------------------------------
-		AddNpc(151033, "Bishop Aurelius' Spirit", "d_cathedral_53", 82.87282, -1004.596, -25, "CHATHEDRAL53_MQ_BISHOP");
+		AddNpc(6, 151033, "Bishop Aurelius' Spirit", "d_cathedral_53", 82.87282, 0, -1004.596, -25, "CHATHEDRAL53_MQ_BISHOP", "", "", 0);
 		
 		// Spirit Essence
 		//-------------------------------------------------------------------------
-		AddNpc(46221, "Spirit Essence", "d_cathedral_53", 61.8795, -740.8611, 90, "CHATHEDRAL53_MQ01");
+		AddNpc(7, 46221, "Spirit Essence", "d_cathedral_53", 61.8795, 0, -740.8611, 90, "CHATHEDRAL53_MQ01", "", "", 1);
 		
 		// Spirit Essence
 		//-------------------------------------------------------------------------
-		AddNpc(46221, "Spirit Essence", "d_cathedral_53", 368.0624, -766.2977, 90, "CHATHEDRAL53_MQ01");
+		AddNpc(7, 46221, "Spirit Essence", "d_cathedral_53", 368.0624, 0.0002706635, -766.2977, 90, "CHATHEDRAL53_MQ01", "", "", 1);
 		
 		// Spirit Essence
 		//-------------------------------------------------------------------------
-		AddNpc(46221, "Spirit Essence", "d_cathedral_53", -53.5996, -468.625, 90, "CHATHEDRAL53_MQ01");
+		AddNpc(7, 46221, "Spirit Essence", "d_cathedral_53", -53.5996, 0.0002708435, -468.625, 90, "CHATHEDRAL53_MQ01", "", "", 1);
 		
 		// Spirit Essence
 		//-------------------------------------------------------------------------
-		AddNpc(46221, "Spirit Essence", "d_cathedral_53", -242.6262, -836.4297, 90, "CHATHEDRAL53_MQ01");
+		AddNpc(7, 46221, "Spirit Essence", "d_cathedral_53", -242.6262, 0.0002708435, -836.4297, 90, "CHATHEDRAL53_MQ01", "", "", 1);
 		
 		// Spirit Essence
 		//-------------------------------------------------------------------------
-		AddNpc(46221, "Spirit Essence", "d_cathedral_53", 360.4245, -477.793, 90, "CHATHEDRAL53_MQ01");
+		AddNpc(7, 46221, "Spirit Essence", "d_cathedral_53", 360.4245, 0.0002708435, -477.793, 90, "CHATHEDRAL53_MQ01", "", "", 1);
 		
 		// Scripture of Prediction
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Scripture of Prediction", "d_cathedral_53", -769.1999, 223.0016, 44, "CHATHEDRAL53_MQ02_BOOK1");
+		AddNpc(9, 147311, "Scripture of Prediction", "d_cathedral_53", -769.1999, 0, 223.0016, 44, "CHATHEDRAL53_MQ02_BOOK1", "", "", 0);
 		
 		// Scripture of Earth
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Scripture of Earth", "d_cathedral_53", -662.3479, -53.83437, 150, "CHATHEDRAL53_MQ02_BOOK2");
+		AddNpc(28, 147311, "Scripture of Earth", "d_cathedral_53", -662.3479, 0, -53.83437, 150, "CHATHEDRAL53_MQ02_BOOK2", "", "", 0);
 		
 		// Scripture of Rest
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Scripture of Rest", "d_cathedral_53", -995.4547, 21.41773, 91, "CHATHEDRAL53_MQ02_BOOK3");
+		AddNpc(29, 147311, "Scripture of Rest", "d_cathedral_53", -995.4547, 0, 21.41773, 91, "CHATHEDRAL53_MQ02_BOOK3", "", "", 0);
 		
 		// Scripture of Eternity
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Scripture of Eternity", "d_cathedral_53", -572.8502, -326.4702, 44, "CHATHEDRAL53_MQ02_BOOK4");
+		AddNpc(30, 147311, "Scripture of Eternity", "d_cathedral_53", -572.8502, 0, -326.4702, 44, "CHATHEDRAL53_MQ02_BOOK4", "", "", 0);
 		
 		// Scripture of Purification
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Scripture of Purification", "d_cathedral_53", -913.9128, -359.4333, 7, "CHATHEDRAL53_MQ02_BOOK5");
+		AddNpc(31, 147311, "Scripture of Purification", "d_cathedral_53", -913.9128, 0, -359.4333, 7, "CHATHEDRAL53_MQ02_BOOK5", "", "", 0);
 		
 		// Scripture of Praise
 		//-------------------------------------------------------------------------
-		AddNpc(147311, "Scripture of Praise", "d_cathedral_53", -456.1964, 174.3625, -10, "CHATHEDRAL53_MQ02_BOOK6");
+		AddNpc(32, 147311, "Scripture of Praise", "d_cathedral_53", -456.1964, 0, 174.3625, -10, "CHATHEDRAL53_MQ02_BOOK6", "", "", 0);
 		
 		// Altar of Stability
 		//-------------------------------------------------------------------------
-		AddNpc(147417, "Altar of Stability", "d_cathedral_53", -546.3629, -49.55093, 89, "CHATHEDRAL53_MQ03");
+		AddNpc(10, 147417, "Altar of Stability", "d_cathedral_53", -546.3629, 0, -49.55093, 89, "CHATHEDRAL53_MQ03", "", "");
 		
 		// Meile Oratorium Platform
 		//-------------------------------------------------------------------------
-		AddNpc(153023, "Meile Oratorium Platform", "d_cathedral_53", -2363.942, -51.85835, 47, "CHATHEDRAL53_MQ04_HINT");
+		AddNpc(12, 153023, "Meile Oratorium Platform", "d_cathedral_53", -2363.942, 29.52139, -51.85835, 47, "CHATHEDRAL53_MQ04_HINT", "", "");
+		AddNpc(13, 147358, " ", "d_cathedral_53", -1986.439, 0, -171.9583, 49, "", "", "");
+		AddNpc(14, 147358, " ", "d_cathedral_53", -2120.429, 0, -171.2799, 44, "", "", "");
+		AddNpc(15, 147358, " ", "d_cathedral_53", -2042.063, 0, 67.65801, 54, "", "", "");
+		AddNpc(16, 147358, " ", "d_cathedral_53", -2183.39, 0, 72.93077, 50, "", "", "");
 		
 		// Priest Inea
 		//-------------------------------------------------------------------------
-		AddNpc(147386, "Priest Inea", "d_cathedral_53", 212.4825, -128.7916, 146, "CHATHEDRAL53_SQ01");
+		AddNpc(17, 147386, "Priest Inea", "d_cathedral_53", 212.4825, 0.0003, -128.7916, 146, "CHATHEDRAL53_SQ01", "", "");
 		
 		// Priest Benedict
 		//-------------------------------------------------------------------------
-		AddNpc(147389, "Priest Benedict", "d_cathedral_53", 813.6576, -487.3752, 148, "CHATHEDRAL53_SQ02");
+		AddNpc(18, 147389, "Priest Benedict", "d_cathedral_53", 813.6576, 0.0003, -487.3752, 148, "CHATHEDRAL53_SQ02", "", "");
 		
 		// Priest Aden
 		//-------------------------------------------------------------------------
-		AddNpc(147398, "Priest Aden", "d_cathedral_53", 106.2804, -109.5158, 128, "CHATHEDRAL53_SQ03");
+		AddNpc(19, 147398, "Priest Aden", "d_cathedral_53", 106.2804, 0.0003, -109.5158, 128, "CHATHEDRAL53_SQ03", "", "");
 		
 		// Old Altar
 		//-------------------------------------------------------------------------
-		AddNpc(147417, "Old Altar", "d_cathedral_53", 862.7397, -1444.777, 88, "CHATHEDRAL53_MQ06_HINT01");
+		AddNpc(21, 147417, "Old Altar", "d_cathedral_53", 862.7397, 0.0003, -1444.777, 88, "CHATHEDRAL53_MQ06_HINT01", "", "");
 		
 		// Old Altar
 		//-------------------------------------------------------------------------
-		AddNpc(147417, "Old Altar", "d_cathedral_53", 863.639, -1351.712, 88, "CHATHEDRAL53_MQ06_HINT02");
+		AddNpc(22, 147417, "Old Altar", "d_cathedral_53", 863.639, 0.0003, -1351.712, 88, "CHATHEDRAL53_MQ06_HINT02", "", "");
 		
 		// Spirit Essence
 		//-------------------------------------------------------------------------
-		AddNpc(46221, "Spirit Essence", "d_cathedral_53", -326.9953, -584.5303, 90, "CHATHEDRAL53_MQ01");
+		AddNpc(7, 46221, "Spirit Essence", "d_cathedral_53", -326.9953, 0.0002708435, -584.5303, 90, "CHATHEDRAL53_MQ01", "", "", 1);
 		
 		// Priest
 		//-------------------------------------------------------------------------
-		AddNpc(147398, "Priest", "d_cathedral_53", 295.437, -199.0134, -51, "CHATHEDRAL53_SQ03_AFTER");
+		AddNpc(25, 147398, "Priest", "d_cathedral_53", 295.437, 0.0003, -199.0134, -51, "CHATHEDRAL53_SQ03_AFTER", "", "", 1);
 		
 		// Cleric
 		//-------------------------------------------------------------------------
-		AddNpc(147389, "Cleric", "d_cathedral_53", 230.0677, -218.0089, 106, "CHATHEDRAL53_SQ02_AFTER");
+		AddNpc(26, 147389, "Cleric", "d_cathedral_53", 230.0677, 0.0003, -218.0089, 106, "CHATHEDRAL53_SQ02_AFTER", "", "", 1);
 		
 		// Scriptural Relic
 		//-------------------------------------------------------------------------
-		AddNpc(151022, "Scriptural Relic", "d_cathedral_53", 100.4462, 632.2907, 90, "CHATHEDRAL53_SQ01_OBJECT01");
+		AddNpc(35, 151022, "Scriptural Relic", "d_cathedral_53", 100.4462, 0.0003, 632.2907, 90, "CHATHEDRAL53_SQ01_OBJECT01", "", "", 1);
 		
 		// Scriptural Relic
 		//-------------------------------------------------------------------------
-		AddNpc(151022, "Scriptural Relic", "d_cathedral_53", -192.5715, 788.0222, 90, "CHATHEDRAL53_SQ01_OBJECT02");
+		AddNpc(36, 151022, "Scriptural Relic", "d_cathedral_53", -192.5715, 0.0003, 788.0222, 90, "CHATHEDRAL53_SQ01_OBJECT02", "", "", 1);
 		
 		// Scriptural Relic
 		//-------------------------------------------------------------------------
-		AddNpc(151022, "Scriptural Relic", "d_cathedral_53", -221.0829, 403.595, 90, "CHATHEDRAL53_SQ01_OBJECT03");
+		AddNpc(37, 151022, "Scriptural Relic", "d_cathedral_53", -221.0829, 0.0003, 403.595, 90, "CHATHEDRAL53_SQ01_OBJECT03", "", "", 1);
 		
 		// Scriptural Relic
 		//-------------------------------------------------------------------------
-		AddNpc(151022, "Scriptural Relic", "d_cathedral_53", -376.2142, 907.5596, 90, "CHATHEDRAL53_SQ01_OBJECT04");
+		AddNpc(38, 151022, "Scriptural Relic", "d_cathedral_53", -376.2142, 0.0003, 907.5596, 90, "CHATHEDRAL53_SQ01_OBJECT04", "", "", 1);
 		
 		// Scriptural Relic
 		//-------------------------------------------------------------------------
-		AddNpc(151022, "Scriptural Relic", "d_cathedral_53", 444.7666, 890.6524, 90, "CHATHEDRAL53_SQ01_OBJECT05");
+		AddNpc(39, 151022, "Scriptural Relic", "d_cathedral_53", 444.7666, 0.0003, 890.6524, 90, "CHATHEDRAL53_SQ01_OBJECT05", "", "", 1);
 		
 		// Scriptural Relic
 		//-------------------------------------------------------------------------
-		AddNpc(151022, "Scriptural Relic", "d_cathedral_53", 150.1819, 1039.969, 90, "CHATHEDRAL53_SQ01_OBJECT06");
+		AddNpc(40, 151022, "Scriptural Relic", "d_cathedral_53", 150.1819, 0.0003, 1039.969, 90, "CHATHEDRAL53_SQ01_OBJECT06", "", "", 1);
 		
 		// Scriptural Relic
 		//-------------------------------------------------------------------------
-		AddNpc(151022, "Scriptural Relic", "d_cathedral_53", 126.7563, 338.1761, 90, "CHATHEDRAL53_SQ01_OBJECT07");
+		AddNpc(41, 151022, "Scriptural Relic", "d_cathedral_53", 126.7563, 0.0003, 338.1761, 90, "CHATHEDRAL53_SQ01_OBJECT07", "", "", 1);
 		
 		// Scriptural Relic
 		//-------------------------------------------------------------------------
-		AddNpc(151022, "Scriptural Relic", "d_cathedral_53", 381.3983, 464.0242, 90, "CHATHEDRAL53_SQ01_OBJECT08");
+		AddNpc(42, 151022, "Scriptural Relic", "d_cathedral_53", 381.3983, 0.0003, 464.0242, 90, "CHATHEDRAL53_SQ01_OBJECT08", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_cathedral_53", 753.9304, -88.16985, 90, "", "CATHEDRAL_SQ_OBJECT01", "");
+		AddNpc(43, 20026, "", "d_cathedral_53", 753.9304, -1.936639, -88.16985, 90, "", "CATHEDRAL_SQ_OBJECT01", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_cathedral_53", 786.1846, -181.8004, 90, "", "CATHEDRAL_SQ_OBJECT02", "");
+		AddNpc(44, 20026, "", "d_cathedral_53", 786.1846, -0.6935604, -181.8004, 90, "", "CATHEDRAL_SQ_OBJECT02", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_cathedral_53", 705.1093, 210.4976, 90, "", "CATHEDRAL_SQ_OBJECT03", "");
+		AddNpc(45, 20026, "", "d_cathedral_53", 705.1093, -0.4221442, 210.4976, 90, "", "CATHEDRAL_SQ_OBJECT03", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_cathedral_53", 1027.64, -165.8798, 90, "", "CATHEDRAL_SQ_OBJECT04", "");
+		AddNpc(46, 20026, "", "d_cathedral_53", 1027.64, 0.0003, -165.8798, 90, "", "CATHEDRAL_SQ_OBJECT04", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_cathedral_53", 990.3927, 181.3318, 90, "", "CATHEDRAL_SQ_OBJECT05", "");
+		AddNpc(47, 20026, "", "d_cathedral_53", 990.3927, 0.0003, 181.3318, 90, "", "CATHEDRAL_SQ_OBJECT05", "");
+		AddNpc(49, 40095, "", "d_cathedral_53", 873, 0, 40, 90, "", "", "");
 		
 		// Reading Desk
 		//-------------------------------------------------------------------------
-		AddNpc(47254, "Reading Desk", "d_cathedral_53", -140, -862.37, 250, "CHATHEDRAL54_BOOK");
+		AddNpc(50, 47254, "Reading Desk", "d_cathedral_53", -140, 0.1, -862.37, 250, "CHATHEDRAL54_BOOK", "", "");
 		
 		// Dusty Book
 		//-------------------------------------------------------------------------
-		AddNpc(153014, "Dusty Book", "d_cathedral_53", -136, -914.51, 180, "CHATHEDRAL54_BOOK02");
+		AddNpc(51, 153014, "Dusty Book", "d_cathedral_53", -136, 8.14, -914.51, 180, "CHATHEDRAL54_BOOK02", "", "");
 		
 		// Badge Signature
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Badge Signature", "d_cathedral_53", -70, -856, 250, "CHATHEDRAL54_BOOK03");
+		AddNpc(52, 20025, "Badge Signature", "d_cathedral_53", -70, 0.1, -856, 250, "CHATHEDRAL54_BOOK03", "", "");
 		
 		// Secret of Maven
 		//-------------------------------------------------------------------------
-		AddNpc(153018, "Secret of Maven", "d_cathedral_53", 830.8347, -1398.16, 90, "CHATHEDRAL53_MQ06_PUZZLE");
+		AddNpc(54, 153018, "Secret of Maven", "d_cathedral_53", 830.8347, 0.0003, -1398.16, 90, "CHATHEDRAL53_MQ06_PUZZLE", "", "");
+		AddNpc(61, 147362, "Field Gen x", "d_cathedral_53", 20.88951, 0.0002708435, -1032.563, 90, "", "", "");
+		AddNpc(61, 147362, "Field Gen x", "d_cathedral_53", 1053.292, 0.0002708435, -275.9832, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_cathedral_53", 228.81, -313.9, 180, "TREASUREBOX_LV_D_CATHEDRAL_5363");
+		AddNpc(63, 147392, "Lv1 Treasure Chest", "d_cathedral_53", 228.81, 0.1, -313.9, 180, "TREASUREBOX_LV_D_CATHEDRAL_5363", "", "");
 		
 		// Wand Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Wand Fragment", "d_cathedral_53", -1632.259, 48.67518, 90, "CHATHEDRAL53_SQ07_OBJ1");
+		AddNpc(64, 147469, "Wand Fragment", "d_cathedral_53", -1632.259, 0, 48.67518, 90, "CHATHEDRAL53_SQ07_OBJ1", "", "", 0);
 		
 		// Spirit Essence
 		//-------------------------------------------------------------------------
-		AddNpc(46221, "Spirit Essence", "d_cathedral_53", 365.9435, -1052.492, 90, "CHATHEDRAL53_MQ01");
+		AddNpc(7, 46221, "Spirit Essence", "d_cathedral_53", 365.9435, 0.0002708435, -1052.492, 90, "CHATHEDRAL53_MQ01", "", "", 1);
 		
 		// Spirit Essence
 		//-------------------------------------------------------------------------
-		AddNpc(46221, "Spirit Essence", "d_cathedral_53", -339.6342, -1013.18, 90, "CHATHEDRAL53_MQ01");
+		AddNpc(7, 46221, "Spirit Essence", "d_cathedral_53", -339.6342, 0.0002708435, -1013.18, 90, "CHATHEDRAL53_MQ01", "", "", 1);
 	}
 }

@@ -14,146 +14,160 @@ public class FSiauliai464NpcScript : GeneralScript
 	{
 		// Uskis Arable Land
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Uskis Arable Land", "f_siauliai_46_4", 1478, 343, 91, "", "SIAULIAI46_4_SIAULIAI46_2", "");
+		AddNpc(3, 40001, "Uskis Arable Land", "f_siauliai_46_4", 1478, 225, 343, 91, "", "SIAULIAI46_4_SIAULIAI46_2", "");
 		
 		// Septyni Glen
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Septyni Glen", "f_siauliai_46_4", 303, -1135, 360, "", "SIAULIAI46_4_HUEVILLAGE58_4", "");
+		AddNpc(4, 40001, "Septyni Glen", "f_siauliai_46_4", 303, 147, -1135, 360, "", "SIAULIAI46_4_HUEVILLAGE58_4", "");
 		
 		// Vilna Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Vilna Forest", "f_siauliai_46_4", -282, 1041, 180, "", "SIAULIAI46_4_SIAULIAI46_3", "");
+		AddNpc(5, 40001, "Vilna Forest", "f_siauliai_46_4", -282, 225, 1041, 180, "", "SIAULIAI46_4_SIAULIAI46_3", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_siauliai_46_4", -435.1169, -1247.06, 91, "WARP_F_SIAULIAI_46_4", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(6, 40120, "Statue of Goddess Vakarine", "f_siauliai_46_4", -435.1169, 148.2241, -1247.06, 91, "WARP_F_SIAULIAI_46_4", "STOUP_CAMP", "STOUP_CAMP");
 		
 		// Villager Darren
 		//-------------------------------------------------------------------------
-		AddNpc(147407, "Villager Darren", "f_siauliai_46_4", -227.36, -960.28, 0, "SIAULIAI_46_4_MQ01_NPC");
+		AddNpc(9, 147407, "Villager Darren", "f_siauliai_46_4", -227.36, 148.22, -960.28, 0, "SIAULIAI_46_4_MQ01_NPC", "", "");
 		
 		// Kirina
 		//-------------------------------------------------------------------------
-		AddNpc(147418, "Kirina", "f_siauliai_46_4", -260.58, -979.75, 60, "SIAULIAI_46_4_SQ03_NPC");
+		AddNpc(10, 147418, "Kirina", "f_siauliai_46_4", -260.58, 148.22, -979.75, 60, "SIAULIAI_46_4_SQ03_NPC", "", "");
 		
 		// Honeycomb
 		//-------------------------------------------------------------------------
-		AddNpc(151025, "Honeycomb", "f_siauliai_46_4", 1370, -695, 30, "SIAULIAI_46_4_BEEHIVE01");
+		AddNpc(11, 151025, "Honeycomb", "f_siauliai_46_4", 1370, 149, -695, 30, "SIAULIAI_46_4_BEEHIVE01", "", "");
 		
 		// Oil Barrel
 		//-------------------------------------------------------------------------
-		AddNpc(147459, "Oil Barrel", "f_siauliai_46_4", 351.82, 32.09, 90, "SIAULIAI_46_4_MEADBARREL");
+		AddNpc(12, 147459, "Oil Barrel", "f_siauliai_46_4", 351.82, 188.56, 32.09, 90, "SIAULIAI_46_4_MEADBARREL", "", "", 0);
 		
 		// Oil Barrel
 		//-------------------------------------------------------------------------
-		AddNpc(147459, "Oil Barrel", "f_siauliai_46_4", 108.0322, 56.71275, 90, "SIAULIAI_46_4_MEADBARREL");
+		AddNpc(12, 147459, "Oil Barrel", "f_siauliai_46_4", 108.0322, 188.559, 56.71275, 90, "SIAULIAI_46_4_MEADBARREL", "", "", 0);
 		
 		// Oil Barrel
 		//-------------------------------------------------------------------------
-		AddNpc(147459, "Oil Barrel", "f_siauliai_46_4", 19.90478, -153.5118, 90, "SIAULIAI_46_4_MEADBARREL");
+		AddNpc(12, 147459, "Oil Barrel", "f_siauliai_46_4", 19.90478, 188.559, -153.5118, 90, "SIAULIAI_46_4_MEADBARREL", "", "", 0);
 		
 		// Oil Barrel
 		//-------------------------------------------------------------------------
-		AddNpc(147459, "Oil Barrel", "f_siauliai_46_4", 588.3405, -214.4943, 90, "SIAULIAI_46_4_MEADBARREL");
+		AddNpc(12, 147459, "Oil Barrel", "f_siauliai_46_4", 588.3405, 188.559, -214.4943, 90, "SIAULIAI_46_4_MEADBARREL", "", "", 0);
 		
 		// Oil Barrel
 		//-------------------------------------------------------------------------
-		AddNpc(147459, "Oil Barrel", "f_siauliai_46_4", 286.49, -414.2645, 90, "SIAULIAI_46_4_MEADBARREL");
+		AddNpc(12, 147459, "Oil Barrel", "f_siauliai_46_4", 286.49, 188.559, -414.2645, 90, "SIAULIAI_46_4_MEADBARREL", "", "", 0);
 		
 		// Oil Barrel
 		//-------------------------------------------------------------------------
-		AddNpc(147459, "Oil Barrel", "f_siauliai_46_4", 991.855, -351.3919, 90, "SIAULIAI_46_4_MEADBARREL");
+		AddNpc(12, 147459, "Oil Barrel", "f_siauliai_46_4", 991.855, 188.559, -351.3919, 90, "SIAULIAI_46_4_MEADBARREL", "", "", 0);
 		
 		// Mead Storage Box
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Mead Storage Box", "f_siauliai_46_4", 1172.813, 2575.272, 180, "SIAULIAI_46_4_MEADBOX");
+		AddNpc(13, 46212, "Mead Storage Box", "f_siauliai_46_4", 1172.813, 121.3709, 2575.272, 180, "SIAULIAI_46_4_MEADBOX", "", "");
 		
 		// Brewer Dorjen
 		//-------------------------------------------------------------------------
-		AddNpc(147476, "Brewer Dorjen", "f_siauliai_46_4", 1074.29, 482.62, 45, "SIAULIAI_46_4_MQ04_NPC");
+		AddNpc(14, 147476, "Brewer Dorjen", "f_siauliai_46_4", 1074.29, 224.98, 482.62, 45, "SIAULIAI_46_4_MQ04_NPC", "", "");
 		
 		// Cleopas
 		//-------------------------------------------------------------------------
-		AddNpc(147483, "Cleopas", "f_siauliai_46_4", 1343.83, 388.26, 0, "SIAULIAI_46_4_SQ04_NPC01");
+		AddNpc(15, 147483, "Cleopas", "f_siauliai_46_4", 1343.83, 224.98, 388.26, 0, "SIAULIAI_46_4_SQ04_NPC01", "", "");
 		
 		// Mikolas
 		//-------------------------------------------------------------------------
-		AddNpc(147485, "Mikolas", "f_siauliai_46_4", 1093.22, 791.72, 91, "SIAULIAI_46_4_SQ04_NPC02");
+		AddNpc(16, 147485, "Mikolas", "f_siauliai_46_4", 1093.22, 224.98, 791.72, 91, "SIAULIAI_46_4_SQ04_NPC02", "", "");
 		
 		// SIAULIAI_46_4_MQ02_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 507.69, -684.62, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
+		AddNpc(18, 20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 507.69, 148.22, -684.62, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
 		
 		// SIAULIAI_46_4_MQ02_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 24.27, -950.84, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
+		AddNpc(18, 20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 24.27, 148.22, -950.84, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
 		
 		// SIAULIAI_46_4_MQ02_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 276.21, -750.16, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
+		AddNpc(18, 20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 276.21, 148.22, -750.16, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
 		
 		// SIAULIAI_46_4_MQ02_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 347.26, -398.46, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
+		AddNpc(18, 20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 347.26, 188.56, -398.46, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
 		
 		// SIAULIAI_46_4_MQ02_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 295, -1026.14, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
+		AddNpc(18, 20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 295, 148.22, -1026.14, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
 		
 		// SIAULIAI_46_4_MQ02_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 764.5, -720.29, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
+		AddNpc(18, 20026, "SIAULIAI_46_4_MQ02_TRIGGER", "f_siauliai_46_4", 764.5, 148.22, -720.29, 90, "", "SIAULIAI_46_4_MQ02_TRIGGER", "");
+		AddNpc(19, 151029, " ", "f_siauliai_46_4", 1137.611, 121.3709, 2579.11, 135, "", "", "");
+		AddNpc(19, 151029, " ", "f_siauliai_46_4", 1105.373, 121.3709, 2578.74, 180, "", "", "");
+		AddNpc(19, 151029, " ", "f_siauliai_46_4", 1165.283, 121.3709, 2611.716, 100, "", "", "");
+		AddNpc(20, 151025, " ", "f_siauliai_46_4", 1416.844, 148.2241, -573.2632, 15, "", "", "");
+		AddNpc(20, 151025, " ", "f_siauliai_46_4", 1385.862, 148.2241, -635.2919, 30, "", "", "");
+		AddNpc(20, 151025, " ", "f_siauliai_46_4", 1424.089, 148.2241, -645.3268, 60, "", "", "");
+		AddNpc(20, 151025, " ", "f_siauliai_46_4", 1405.524, 148.2241, -670.5164, 0, "", "", "");
+		AddNpc(20, 151025, " ", "f_siauliai_46_4", 1431.852, 148.2241, -717.307, 45, "", "", "");
+		AddNpc(20, 151025, " ", "f_siauliai_46_4", 1438.725, 148.2241, -754.6938, 105, "", "", "");
+		AddNpc(20, 151025, " ", "f_siauliai_46_4", 1434.111, 148.224, -794.0563, 60, "", "", "");
+		AddNpc(20, 151025, " ", "f_siauliai_46_4", 1416.727, 148.224, -762.2665, 90, "", "", "");
 		
 		// Shaton Farm
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Shaton Farm", "f_siauliai_46_4", -555.3397, -1059.353, 270, "", "SIAULIAI46_4_FARM492", "");
+		AddNpc(2, 40001, "Shaton Farm", "f_siauliai_46_4", -555.3397, 148.2241, -1059.353, 270, "", "SIAULIAI46_4_FARM492", "");
+		AddNpc(32, 147366, "Gate Entrance x", "f_siauliai_46_4", -309.7088, 148.2241, -1095.844, 90, "", "", "");
+		AddNpc(32, 147366, "Gate Entrance x", "f_siauliai_46_4", 1302.075, 224.9785, 897.4899, 90, "", "", "");
+		AddNpc(32, 147366, "Gate Entrance x", "f_siauliai_46_4", 1273.276, 224.9785, 462.8257, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_siauliai_46_4", 1459.06, -121.23, 90, "TREASUREBOX_LV_F_SIAULIAI_46_434");
+		AddNpc(34, 147392, "Lv1 Treasure Chest", "f_siauliai_46_4", 1459.06, 188.66, -121.23, 90, "TREASUREBOX_LV_F_SIAULIAI_46_434", "", "");
 		
 		// Natarh Watchtower
 		//-------------------------------------------------------------------------
-		AddNpc(147507, "Natarh Watchtower", "f_siauliai_46_4", 1312, -221, 90, "SIAULIAI_46_4_TO_STARTOWER_76_1");
+		AddNpc(38, 147507, "Natarh Watchtower", "f_siauliai_46_4", 1312, 188, -221, 90, "SIAULIAI_46_4_TO_STARTOWER_76_1", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_siauliai_46_4", 290.49, -797.58, 90, "", "SIAULIAI462_HIDDENQ1_IN", "");
+		AddNpc(39, 20026, "", "f_siauliai_46_4", 290.49, 148.22, -797.58, 90, "", "SIAULIAI462_HIDDENQ1_IN", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20024, "", "f_siauliai_46_4", 933.91, -898.12, 90, "SIAULIAI462_HIDDENQ2_CANDLE1");
+		AddNpc(40, 20024, "", "f_siauliai_46_4", 933.91, 148.22, -898.12, 90, "SIAULIAI462_HIDDENQ2_CANDLE1", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20024, "", "f_siauliai_46_4", 1111.57, -535.89, 90, "SIAULIAI462_HIDDENQ2_CANDLE2");
+		AddNpc(41, 20024, "", "f_siauliai_46_4", 1111.57, 148.22, -535.89, 90, "SIAULIAI462_HIDDENQ2_CANDLE2", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20024, "", "f_siauliai_46_4", 1403.897, -987.4063, 90, "SIAULIAI462_HIDDENQ2_CANDLE3");
+		AddNpc(42, 20024, "", "f_siauliai_46_4", 1403.897, 148.22, -987.4063, 90, "SIAULIAI462_HIDDENQ2_CANDLE3", "", "", 0);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(153178, "", "f_siauliai_46_4", 935.07, -896.68, 90, "", "SIAULIAI462_CANDLE1", "");
+		AddNpc(43, 153178, "", "f_siauliai_46_4", 935.07, 148.22, -896.68, 90, "", "SIAULIAI462_CANDLE1", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(153178, "", "f_siauliai_46_4", 1112.263, -534.4903, 90, "", "SIAULIAI462_CANDLE2", "");
+		AddNpc(44, 153178, "", "f_siauliai_46_4", 1112.263, 148.22, -534.4903, 90, "", "SIAULIAI462_CANDLE2", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(153178, "", "f_siauliai_46_4", 1404.134, -988.2618, 90, "", "SIAULIAI462_CANDLE3", "");
+		AddNpc(45, 153178, "", "f_siauliai_46_4", 1404.134, 148.22, -988.2618, 90, "", "SIAULIAI462_CANDLE3", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147459, " ", "f_siauliai_46_4", 1101.22, 2704.67, 90, "HT3_SIAULIAI_46_4_DRUM");
+		AddNpc(46, 147459, " ", "f_siauliai_46_4", 1101.22, 121.37, 2704.67, 90, "HT3_SIAULIAI_46_4_DRUM", "", "");
 		
 		// Warning
 		//-------------------------------------------------------------------------
-		AddNpc(40080, "Warning", "f_siauliai_46_4", 1145.089, -225.9817, 230, "FREE_DUNGEON_SIGN2");
+		AddNpc(47, 40080, "Warning", "f_siauliai_46_4", 1145.089, 188.58, -225.9817, 230, "FREE_DUNGEON_SIGN2", "", "");
 		
 		// Iona
 		//-------------------------------------------------------------------------
-		AddNpc(20147, "Iona", "f_siauliai_46_4", 1134.695, 909.6771, 90, "CHAR120_MSTEP5_5_NPC1");
+		AddNpc(48, 20147, "Iona", "f_siauliai_46_4", 1134.695, 224.9785, 909.6771, 90, "CHAR120_MSTEP5_5_NPC1", "", "", 1);
 	}
 }

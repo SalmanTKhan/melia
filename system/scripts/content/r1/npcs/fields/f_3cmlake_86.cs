@@ -14,422 +14,436 @@ public class F3Cmlake86NpcScript : GeneralScript
 	{
 		// Barynwell 85 Waters
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Barynwell 85 Waters", "f_3cmlake_86", -145.4085, -1696.083, 16, "", "F_3CMLAKE_86_TO_F_3CMLAKE_85", "");
+		AddNpc(1, 40001, "Barynwell 85 Waters", "f_3cmlake_86", -145.4085, 118.2772, -1696.083, 16, "", "F_3CMLAKE_86_TO_F_3CMLAKE_85", "");
 		
 		// Barynwell 87 Waters
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Barynwell 87 Waters", "f_3cmlake_86", 1725.697, 964.7784, 145, "", "F_3CMLAKE_86_TO_F_3CMLAKE_87", "");
+		AddNpc(2, 40001, "Barynwell 87 Waters", "f_3cmlake_86", 1725.697, 60.73369, 964.7784, 145, "", "F_3CMLAKE_86_TO_F_3CMLAKE_87", "");
 		
 		// Resistance Soldier Rett
 		//-------------------------------------------------------------------------
-		AddNpc(156125, "Resistance Soldier Rett", "f_3cmlake_86", -96.32523, -851.6267, 16, "F_3CMLAKE_86_MQ_01_NPC_1");
+		AddNpc(3, 156125, "Resistance Soldier Rett", "f_3cmlake_86", -96.32523, 40.89014, -851.6267, 16, "F_3CMLAKE_86_MQ_01_NPC_1", "", "");
 		
 		// Elder Ramunas
 		//-------------------------------------------------------------------------
-		AddNpc(156118, "Elder Ramunas", "f_3cmlake_86", -387.5485, -258.2558, 90, "F_3CMLAKE_86_MQ_01_NPC_2");
+		AddNpc(4, 156118, "Elder Ramunas", "f_3cmlake_86", -387.5485, 40.89014, -258.2558, 90, "F_3CMLAKE_86_MQ_01_NPC_2", "", "", 0);
 		
 		// Resistance Adjutant Taylor
 		//-------------------------------------------------------------------------
-		AddNpc(156117, "Resistance Adjutant Taylor", "f_3cmlake_86", -368.7169, -108.4361, 90, "F_3CMLAKE_86_MQ_02_NPC");
+		AddNpc(5, 156117, "Resistance Adjutant Taylor", "f_3cmlake_86", -368.7169, 40.89014, -108.4361, 90, "F_3CMLAKE_86_MQ_02_NPC", "", "", 0);
 		
 		// Resistance Adjutant Lehon
 		//-------------------------------------------------------------------------
-		AddNpc(156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 250.0723, 680.2613, 37, "F_3CMLAKE_86_MQ_03_NPC");
+		AddNpc(6, 156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 250.0723, 41.15479, 680.2613, 37, "F_3CMLAKE_86_MQ_03_NPC", "", "", 0);
 		
 		// Resistance Commander Byle
 		//-------------------------------------------------------------------------
-		AddNpc(156120, "Resistance Commander Byle", "f_3cmlake_86", -358.5172, -171.717, 90, "F_3CMLAKE_86_MQ_16_NPC");
+		AddNpc(7, 156120, "Resistance Commander Byle", "f_3cmlake_86", -358.5172, 40.89014, -171.717, 90, "F_3CMLAKE_86_MQ_16_NPC", "", "", 1);
 		
 		// Resistance Commander Byle
 		//-------------------------------------------------------------------------
-		AddNpc(156120, "Resistance Commander Byle", "f_3cmlake_86", -254.6721, 1297.951, 73, "F_3CMLAKE_86_MQ_18_NPC");
+		AddNpc(8, 156120, "Resistance Commander Byle", "f_3cmlake_86", -254.6721, 40.28915, 1297.951, 73, "F_3CMLAKE_86_MQ_18_NPC", "", "", 0);
 		
 		// Resistance Adjutant Lehon
 		//-------------------------------------------------------------------------
-		AddNpc(156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 2091.128, -450.8337, 90, "F_3CMLAKE_86_MQ_15_NPC");
+		AddNpc(9, 156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 2091.128, 46.15265, -450.8337, 90, "F_3CMLAKE_86_MQ_15_NPC", "", "", 1);
 		
 		// Resistance Adjutant Taylor
 		//-------------------------------------------------------------------------
-		AddNpc(156117, "Resistance Adjutant Taylor", "f_3cmlake_86", -311.3194, 1289.176, 49, "F_3CMLAKE_86_SQ_04_NPC");
+		AddNpc(10, 156117, "Resistance Adjutant Taylor", "f_3cmlake_86", -311.3194, 40.43494, 1289.176, 49, "F_3CMLAKE_86_SQ_04_NPC", "", "", 1);
 		
 		// Strange Mound
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Strange Mound", "f_3cmlake_86", -366.6944, 660.6513, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
+		AddNpc(11, 155026, "Strange Mound", "f_3cmlake_86", -366.6944, 39.26233, 660.6513, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
 		
 		// Strange Mound
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Strange Mound", "f_3cmlake_86", -504.0371, 568.5696, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
+		AddNpc(11, 155026, "Strange Mound", "f_3cmlake_86", -504.0371, 39.74182, 568.5696, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
 		
 		// Strange Mound
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Strange Mound", "f_3cmlake_86", -439.6151, 312.7309, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
+		AddNpc(11, 155026, "Strange Mound", "f_3cmlake_86", -439.6151, 51.81079, 312.7309, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
 		
 		// Strange Mound
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Strange Mound", "f_3cmlake_86", -302.2029, 239.2263, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
+		AddNpc(11, 155026, "Strange Mound", "f_3cmlake_86", -302.2029, 62.67944, 239.2263, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
 		
 		// Strange Mound
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Strange Mound", "f_3cmlake_86", -355.0703, 486.1817, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
+		AddNpc(11, 155026, "Strange Mound", "f_3cmlake_86", -355.0703, 39.53186, 486.1817, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
 		
 		// Strange Mound
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Strange Mound", "f_3cmlake_86", -162.4715, 421.4286, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
+		AddNpc(11, 155026, "Strange Mound", "f_3cmlake_86", -162.4715, 39.95911, 421.4286, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
 		
 		// Strange Mound
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Strange Mound", "f_3cmlake_86", -217.65, 575.4874, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
+		AddNpc(11, 155026, "Strange Mound", "f_3cmlake_86", -217.65, 39.95911, 575.4874, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
 		
 		// Strange Mound
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Strange Mound", "f_3cmlake_86", -100.6328, 645.9418, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
+		AddNpc(11, 155026, "Strange Mound", "f_3cmlake_86", -100.6328, 39.46082, 645.9418, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
 		
 		// Strange Mound
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Strange Mound", "f_3cmlake_86", 3.275425, 588.4786, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
+		AddNpc(11, 155026, "Strange Mound", "f_3cmlake_86", 3.275425, 39.46082, 588.4786, 90, "", "F_3CMLAKE_86_MQ_02_OBJ", "");
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156127, "Schaffenstar Member", "f_3cmlake_86", 451.802, 1546.856, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC");
+		AddNpc(12, 156127, "Schaffenstar Member", "f_3cmlake_86", 451.802, 39.31152, 1546.856, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC", "", "", 0);
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156124, "Schaffenstar Member", "f_3cmlake_86", 1001.109, 1874.673, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC");
+		AddNpc(13, 156124, "Schaffenstar Member", "f_3cmlake_86", 1001.109, 41.15479, 1874.673, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC", "", "", 0);
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156123, "Schaffenstar Member", "f_3cmlake_86", 1373.083, 1928.533, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC");
+		AddNpc(14, 156123, "Schaffenstar Member", "f_3cmlake_86", 1373.083, 41.15474, 1928.533, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC", "", "", 0);
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156127, "Schaffenstar Member", "f_3cmlake_86", 1182.775, 1727.163, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC");
+		AddNpc(12, 156127, "Schaffenstar Member", "f_3cmlake_86", 1182.775, 41.15481, 1727.163, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC", "", "", 0);
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156124, "Schaffenstar Member", "f_3cmlake_86", 708.5422, 1459.624, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC");
+		AddNpc(13, 156124, "Schaffenstar Member", "f_3cmlake_86", 708.5422, 39.30711, 1459.624, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC", "", "", 0);
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156123, "Schaffenstar Member", "f_3cmlake_86", 1318.957, 1516.986, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC");
+		AddNpc(14, 156123, "Schaffenstar Member", "f_3cmlake_86", 1318.957, 41.15479, 1516.986, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC", "", "", 0);
 		
 		// Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156124, "Schaffenstar Member", "f_3cmlake_86", 1246.525, 1275.682, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC");
+		AddNpc(13, 156124, "Schaffenstar Member", "f_3cmlake_86", 1246.525, 41.15479, 1275.682, 90, "F_3CMLAKE_86_MQ_03_NEUTRAL_NPC", "", "", 0);
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1417.082, 1151.947, 0, "F_3CMLAKE_86_MQ_04_OBJ1");
+		AddNpc(15, 155008, "Supplies", "f_3cmlake_86", 1417.082, 41.15479, 1151.947, 0, "F_3CMLAKE_86_MQ_04_OBJ1", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1445.699, 1147.162, 268, "F_3CMLAKE_86_MQ_04_OBJ1");
+		AddNpc(15, 155008, "Supplies", "f_3cmlake_86", 1445.699, 41.15479, 1147.162, 268, "F_3CMLAKE_86_MQ_04_OBJ1", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1460.482, 1271.874, 234, "F_3CMLAKE_86_MQ_04_OBJ2");
+		AddNpc(16, 155008, "Supplies", "f_3cmlake_86", 1460.482, 41.15479, 1271.874, 234, "F_3CMLAKE_86_MQ_04_OBJ2", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1425.03, 1278.53, -84, "F_3CMLAKE_86_MQ_04_OBJ2");
+		AddNpc(16, 155008, "Supplies", "f_3cmlake_86", 1425.03, 41.15479, 1278.53, -84, "F_3CMLAKE_86_MQ_04_OBJ2", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1505.507, 1444.549, 265, "F_3CMLAKE_86_MQ_04_OBJ3");
+		AddNpc(17, 155008, "Supplies", "f_3cmlake_86", 1505.507, 41.15479, 1444.549, 265, "F_3CMLAKE_86_MQ_04_OBJ3", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1476.146, 1450.039, -6, "F_3CMLAKE_86_MQ_04_OBJ3");
+		AddNpc(17, 155008, "Supplies", "f_3cmlake_86", 1476.146, 41.15479, 1450.039, -6, "F_3CMLAKE_86_MQ_04_OBJ3", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1510.26, 1503.115, 18, "F_3CMLAKE_86_MQ_04_OBJ3");
+		AddNpc(17, 155008, "Supplies", "f_3cmlake_86", 1510.26, 41.15479, 1503.115, 18, "F_3CMLAKE_86_MQ_04_OBJ3", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1513.169, 1854.027, -1, "F_3CMLAKE_86_MQ_04_OBJ4");
+		AddNpc(18, 155008, "Supplies", "f_3cmlake_86", 1513.169, 41.15479, 1854.027, -1, "F_3CMLAKE_86_MQ_04_OBJ4", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1471.155, 1895.034, 90, "F_3CMLAKE_86_MQ_04_OBJ4");
+		AddNpc(18, 155008, "Supplies", "f_3cmlake_86", 1471.155, 41.15479, 1895.034, 90, "F_3CMLAKE_86_MQ_04_OBJ4", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1506.165, 1892.167, 39, "F_3CMLAKE_86_MQ_04_OBJ4");
+		AddNpc(18, 155008, "Supplies", "f_3cmlake_86", 1506.165, 41.15479, 1892.167, 39, "F_3CMLAKE_86_MQ_04_OBJ4", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1200.438, 1618.381, 90, "F_3CMLAKE_86_MQ_04_OBJ5");
+		AddNpc(19, 155008, "Supplies", "f_3cmlake_86", 1200.438, 43.73415, 1618.381, 90, "F_3CMLAKE_86_MQ_04_OBJ5", "", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 1232.671, 1641.484, -33, "F_3CMLAKE_86_MQ_04_OBJ5");
+		AddNpc(19, 155008, "Supplies", "f_3cmlake_86", 1232.671, 41.15479, 1641.484, -33, "F_3CMLAKE_86_MQ_04_OBJ5", "", "");
 		
 		// Schaffenstar Scout
 		//-------------------------------------------------------------------------
-		AddNpc(156114, "Schaffenstar Scout", "f_3cmlake_86", 1349.665, 1163.086, 90, "F_3CMLAKE_86_MQ_04_SCOUT_NPC");
+		AddNpc(20, 156114, "Schaffenstar Scout", "f_3cmlake_86", 1349.665, 41.15479, 1163.086, 90, "F_3CMLAKE_86_MQ_04_SCOUT_NPC", "", "", 0);
 		
 		// Schaffenstar Scout
 		//-------------------------------------------------------------------------
-		AddNpc(156115, "Schaffenstar Scout", "f_3cmlake_86", 1409.201, 1546.729, 90, "F_3CMLAKE_86_MQ_04_SCOUT_NPC");
+		AddNpc(21, 156115, "Schaffenstar Scout", "f_3cmlake_86", 1409.201, 41.15479, 1546.729, 90, "F_3CMLAKE_86_MQ_04_SCOUT_NPC", "", "", 0);
 		
 		// Schaffenstar Scout
 		//-------------------------------------------------------------------------
-		AddNpc(156132, "Schaffenstar Scout", "f_3cmlake_86", 1132.031, 1651.705, 90, "F_3CMLAKE_86_MQ_04_SCOUT_NPC");
+		AddNpc(22, 156132, "Schaffenstar Scout", "f_3cmlake_86", 1132.031, 45.04034, 1651.705, 90, "F_3CMLAKE_86_MQ_04_SCOUT_NPC", "", "", 0);
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", -341.8253, -1190.288, -33, "", "F_3CMLAKE_86_MQ_07_OBJ", "");
+		AddNpc(23, 155008, "Supplies", "f_3cmlake_86", -341.8253, 40.89014, -1190.288, -33, "", "F_3CMLAKE_86_MQ_07_OBJ", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", -352.9627, -1225.995, 214, "", "F_3CMLAKE_86_MQ_07_OBJ", "");
+		AddNpc(23, 155008, "Supplies", "f_3cmlake_86", -352.9627, 40.89014, -1225.995, 214, "", "F_3CMLAKE_86_MQ_07_OBJ", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 128.2536, -1179.043, 23, "", "F_3CMLAKE_86_MQ_07_OBJ", "");
+		AddNpc(23, 155008, "Supplies", "f_3cmlake_86", 128.2536, 40.89014, -1179.043, 23, "", "F_3CMLAKE_86_MQ_07_OBJ", "");
 		
 		// Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(155008, "Supplies", "f_3cmlake_86", 108.34, -1214.546, 157, "", "F_3CMLAKE_86_MQ_07_OBJ", "");
+		AddNpc(23, 155008, "Supplies", "f_3cmlake_86", 108.34, 40.89014, -1214.546, 157, "", "F_3CMLAKE_86_MQ_07_OBJ", "");
+		AddNpc(24, 155008, "Supplies", "f_3cmlake_86", -365.5609, 40.89014, -990.496, -33, "", "", "");
+		AddNpc(24, 155008, "Supplies", "f_3cmlake_86", -345.4116, 40.89014, -1029.661, -10, "", "", "");
+		AddNpc(24, 155008, "Supplies", "f_3cmlake_86", 107.7756, 40.89014, -899.3177, -85, "", "", "");
+		AddNpc(24, 155008, "Supplies", "f_3cmlake_86", 104.189, 40.89014, -941.3552, 215, "", "", "");
+		AddNpc(26, 156103, "Old Tombstone", "f_3cmlake_86", 380.1359, 217.7039, -980.2907, 179, "", "", "");
+		AddNpc(28, 156104, "Altar Controls", "f_3cmlake_86", 539.9135, 85.32338, 445.578, 90, "", "", "");
+		AddNpc(29, 156104, "Altar Controls", "f_3cmlake_86", 579.5359, 85.46369, 451.193, 90, "", "", "");
+		AddNpc(30, 156104, "Altar Controls", "f_3cmlake_86", 578.2527, 86.66209, 407.4837, 90, "", "", "");
+		AddNpc(31, 156104, "Altar Controls", "f_3cmlake_86", 536.4825, 85.78419, 407.5095, 90, "", "", "");
 		
 		// F_3CMLAKE_86_MQ_11_TRRIGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "F_3CMLAKE_86_MQ_11_TRRIGER", "f_3cmlake_86", 551.4263, 417.7688, 90, "", "F_3CMLAKE_86_MQ_11_TRRIGER", "");
+		AddNpc(32, 20026, "F_3CMLAKE_86_MQ_11_TRRIGER", "f_3cmlake_86", 551.4263, 81.96378, 417.7688, 90, "", "F_3CMLAKE_86_MQ_11_TRRIGER", "");
 		
 		// Mysterious Altar
 		//-------------------------------------------------------------------------
-		AddNpc(156102, "Mysterious Altar", "f_3cmlake_86", 2111.923, -422.7598, 90, "F_3CMLAKE_86_MQ_13_OBJ");
+		AddNpc(33, 156102, "Mysterious Altar", "f_3cmlake_86", 2111.923, 46.75625, -422.7598, 90, "F_3CMLAKE_86_MQ_13_OBJ", "", "");
 		
 		// F_3CMLAKE_86_MQ_12_TRRIGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "F_3CMLAKE_86_MQ_12_TRRIGER", "f_3cmlake_86", 1719.563, -1015, 90, "", "F_3CMLAKE_86_MQ_12_TRRIGER", "");
+		AddNpc(34, 20026, "F_3CMLAKE_86_MQ_12_TRRIGER", "f_3cmlake_86", 1719.563, 39.67716, -1015, 90, "", "F_3CMLAKE_86_MQ_12_TRRIGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155026, " ", "f_3cmlake_86", 154.9613, 1583.794, 90, "", "F_3CMLAKE_86_MQ_16_CHECK1", "");
+		AddNpc(36, 155026, " ", "f_3cmlake_86", 154.9613, 39.31152, 1583.794, 90, "", "F_3CMLAKE_86_MQ_16_CHECK1", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155026, " ", "f_3cmlake_86", 154.306, 1382.78, 90, "", "F_3CMLAKE_86_MQ_16_CHECK2", "");
+		AddNpc(37, 155026, " ", "f_3cmlake_86", 154.306, 39.31152, 1382.78, 90, "", "F_3CMLAKE_86_MQ_16_CHECK2", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(155026, " ", "f_3cmlake_86", 143.0928, 1247.087, 90, "", "F_3CMLAKE_86_MQ_16_CHECK3", "");
+		AddNpc(38, 155026, " ", "f_3cmlake_86", 143.0928, 39.31152, 1247.087, 90, "", "F_3CMLAKE_86_MQ_16_CHECK3", "");
+		AddNpc(39, 20026, "F_3CMLAKE_86_MQ_17_TRRIGER", "f_3cmlake_86", -550.7982, 39.9302, 729.3887, 90, "", "", "");
 		
 		// Stone with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(156031, "Stone with Lake Energy", "f_3cmlake_86", -1160.026, 6.828548, 90, "F_3CMLAKE_86_SQ_01_OBJ");
+		AddNpc(40, 156031, "Stone with Lake Energy", "f_3cmlake_86", -1160.026, 62.41443, 6.828548, 90, "F_3CMLAKE_86_SQ_01_OBJ", "", "");
 		
 		// Stone with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(156031, "Stone with Lake Energy", "f_3cmlake_86", -1319.461, 153.8958, 90, "F_3CMLAKE_86_SQ_01_OBJ");
+		AddNpc(40, 156031, "Stone with Lake Energy", "f_3cmlake_86", -1319.461, 62.41443, 153.8958, 90, "F_3CMLAKE_86_SQ_01_OBJ", "", "");
 		
 		// Stone with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(156031, "Stone with Lake Energy", "f_3cmlake_86", -1114.415, 167.5313, 90, "F_3CMLAKE_86_SQ_01_OBJ");
+		AddNpc(40, 156031, "Stone with Lake Energy", "f_3cmlake_86", -1114.415, 62.41443, 167.5313, 90, "F_3CMLAKE_86_SQ_01_OBJ", "", "");
 		
 		// Stone with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(156031, "Stone with Lake Energy", "f_3cmlake_86", -1120.773, 374.7174, 90, "F_3CMLAKE_86_SQ_01_OBJ");
+		AddNpc(40, 156031, "Stone with Lake Energy", "f_3cmlake_86", -1120.773, 62.41443, 374.7174, 90, "F_3CMLAKE_86_SQ_01_OBJ", "", "");
 		
 		// Stone with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(156031, "Stone with Lake Energy", "f_3cmlake_86", -922.736, 269.453, 90, "F_3CMLAKE_86_SQ_01_OBJ");
+		AddNpc(40, 156031, "Stone with Lake Energy", "f_3cmlake_86", -922.736, 62.41443, 269.453, 90, "F_3CMLAKE_86_SQ_01_OBJ", "", "");
 		
 		// Stone with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(156031, "Stone with Lake Energy", "f_3cmlake_86", -941.1072, 90.20217, 90, "F_3CMLAKE_86_SQ_01_OBJ");
+		AddNpc(40, 156031, "Stone with Lake Energy", "f_3cmlake_86", -941.1072, 62.41443, 90.20217, 90, "F_3CMLAKE_86_SQ_01_OBJ", "", "");
 		
 		// Stone with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(156031, "Stone with Lake Energy", "f_3cmlake_86", -1300.704, -69.11006, 90, "F_3CMLAKE_86_SQ_01_OBJ");
+		AddNpc(40, 156031, "Stone with Lake Energy", "f_3cmlake_86", -1300.704, 62.41443, -69.11006, 90, "F_3CMLAKE_86_SQ_01_OBJ", "", "");
 		
 		// Stone with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(156031, "Stone with Lake Energy", "f_3cmlake_86", -1015.528, -95.69592, 90, "F_3CMLAKE_86_SQ_01_OBJ");
+		AddNpc(40, 156031, "Stone with Lake Energy", "f_3cmlake_86", -1015.528, 62.41443, -95.69592, 90, "F_3CMLAKE_86_SQ_01_OBJ", "", "");
 		
 		// Stone with Lake Energy
 		//-------------------------------------------------------------------------
-		AddNpc(156031, "Stone with Lake Energy", "f_3cmlake_86", -1298.322, 335.7054, 90, "F_3CMLAKE_86_SQ_01_OBJ");
+		AddNpc(40, 156031, "Stone with Lake Energy", "f_3cmlake_86", -1298.322, 62.41443, 335.7054, 90, "F_3CMLAKE_86_SQ_01_OBJ", "", "");
 		
 		// Divine Water Point
 		//-------------------------------------------------------------------------
-		AddNpc(156100, "Divine Water Point", "f_3cmlake_86", -1205.343, -732.4054, 59, "F_3CMLAKE_86_SQ_03_OBJ");
+		AddNpc(41, 156100, "Divine Water Point", "f_3cmlake_86", -1205.343, 40.17743, -732.4054, 59, "F_3CMLAKE_86_SQ_03_OBJ", "", "");
 		
 		// Water Glass Suppressor
 		//-------------------------------------------------------------------------
-		AddNpc(156102, "Water Glass Suppressor", "f_3cmlake_86", -1121.946, -729.0566, 90, "F_3CMLAKE_86_SQ_02_OBJ_1");
+		AddNpc(42, 156102, "Water Glass Suppressor", "f_3cmlake_86", -1121.946, 40.17743, -729.0566, 90, "F_3CMLAKE_86_SQ_02_OBJ_1", "", "");
 		
 		// Agitated Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156127, "Agitated Schaffenstar Member", "f_3cmlake_86", 1291.414, 1519.786, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC");
+		AddNpc(44, 156127, "Agitated Schaffenstar Member", "f_3cmlake_86", 1291.414, 41.15479, 1519.786, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC", "", "", 1);
 		
 		// Agitated Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156124, "Agitated Schaffenstar Member", "f_3cmlake_86", 821.1893, 658.5358, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC");
+		AddNpc(45, 156124, "Agitated Schaffenstar Member", "f_3cmlake_86", 821.1893, 41.15479, 658.5358, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC", "", "", 1);
 		
 		// Agitated Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156124, "Agitated Schaffenstar Member", "f_3cmlake_86", 1044.596, 1834.492, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC");
+		AddNpc(45, 156124, "Agitated Schaffenstar Member", "f_3cmlake_86", 1044.596, 41.15479, 1834.492, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC", "", "", 1);
 		
 		// Agitated Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156124, "Agitated Schaffenstar Member", "f_3cmlake_86", 1310.952, 1290.818, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC");
+		AddNpc(45, 156124, "Agitated Schaffenstar Member", "f_3cmlake_86", 1310.952, 41.15479, 1290.818, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", -87.62273, 1117.114, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", -87.62273, 39.96592, 1117.114, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", -56.11921, 1159.748, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", -56.11921, 39.76033, 1159.748, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", -97.62851, 1360.207, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", -97.62851, 39.31152, 1360.207, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", -70.5884, 1400.706, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", -70.5884, 39.31152, 1400.706, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", 53.07285, 1617.339, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", 53.07285, 39.31152, 1617.339, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", 29.50288, 1658.64, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", 29.50288, 39.31152, 1658.64, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", 346.6449, 1554.283, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", 346.6449, 39.31152, 1554.283, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", 371.222, 1514.837, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", 371.222, 39.31152, 1514.837, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", 651.8329, 1103.2, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", 651.8329, 41.15479, 1103.2, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", 627.7818, 1143.662, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", 627.7818, 40.6823, 1143.662, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", 218.5636, 1255.606, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", 218.5636, 39.31152, 1255.606, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156106, " ", "f_3cmlake_86", 192.9074, 1212.463, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
+		AddNpc(46, 156106, " ", "f_3cmlake_86", 192.9074, 39.31152, 1212.463, 90, "", "F_3CMLAKE_86_WOODENWALL", "");
 		
 		// Water Glass Suppressor
 		//-------------------------------------------------------------------------
-		AddNpc(156102, "Water Glass Suppressor", "f_3cmlake_86", -1120.935, -817.3894, 90, "F_3CMLAKE_86_SQ_02_OBJ_2");
+		AddNpc(47, 156102, "Water Glass Suppressor", "f_3cmlake_86", -1120.935, 40.17744, -817.3894, 90, "F_3CMLAKE_86_SQ_02_OBJ_2", "", "");
 		
 		// Water Glass Suppressor
 		//-------------------------------------------------------------------------
-		AddNpc(156102, "Water Glass Suppressor", "f_3cmlake_86", -1205.561, -817.4218, 90, "F_3CMLAKE_86_SQ_02_OBJ_3");
+		AddNpc(48, 156102, "Water Glass Suppressor", "f_3cmlake_86", -1205.561, 40.17743, -817.4218, 90, "F_3CMLAKE_86_SQ_02_OBJ_3", "", "");
 		
 		// F_3CMLAKE_86_MQ_06_TRRIGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "F_3CMLAKE_86_MQ_06_TRRIGER", "f_3cmlake_86", -156.4417, -782.7221, 90, "", "F_3CMLAKE_86_MQ_06_TRRIGER", "");
+		AddNpc(49, 20026, "F_3CMLAKE_86_MQ_06_TRRIGER", "f_3cmlake_86", -156.4417, 40.89017, -782.7221, 90, "", "F_3CMLAKE_86_MQ_06_TRRIGER", "");
 		
 		// Resistance Adjutant Taylor
 		//-------------------------------------------------------------------------
-		AddNpc(156117, "Resistance Adjutant Taylor", "f_3cmlake_86", -126.3545, -859.6423, 90, "F_3CMLAKE_86_MQ_07_NPC");
+		AddNpc(50, 156117, "Resistance Adjutant Taylor", "f_3cmlake_86", -126.3545, 40.89014, -859.6423, 90, "F_3CMLAKE_86_MQ_07_NPC", "", "", 1);
 		
 		// F_3CMLAKE_86_MQ_10_TRRIGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "F_3CMLAKE_86_MQ_10_TRRIGER", "f_3cmlake_86", 381.0735, -862.8076, 139, "", "F_3CMLAKE_86_MQ_10_TRRIGER", "");
+		AddNpc(51, 20026, "F_3CMLAKE_86_MQ_10_TRRIGER", "f_3cmlake_86", 381.0735, 217.7039, -862.8076, 139, "", "F_3CMLAKE_86_MQ_10_TRRIGER", "");
 		
 		// Resistance Adjutant Lehon
 		//-------------------------------------------------------------------------
-		AddNpc(156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 328.5308, -839.1938, 83, "F_3CMLAKE_86_MQ_10_NPC");
+		AddNpc(54, 156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 328.5308, 217.7039, -839.1938, 83, "F_3CMLAKE_86_MQ_10_NPC", "", "", 1);
 		
 		// Resistance Adjutant Lehon
 		//-------------------------------------------------------------------------
-		AddNpc(156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 644.4733, 552.3413, 2, "F_3CMLAKE_86_MQ_11_NPC");
+		AddNpc(55, 156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 644.4733, 41.15479, 552.3413, 2, "F_3CMLAKE_86_MQ_11_NPC", "", "", 1);
 		
 		// Resistance Adjutant Lehon
 		//-------------------------------------------------------------------------
-		AddNpc(156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 1718.22, -950.4369, 90, "F_3CMLAKE_86_MQ_12_NPC");
+		AddNpc(56, 156116, "Resistance Adjutant Lehon", "f_3cmlake_86", 1718.22, 39.01083, -950.4369, 90, "F_3CMLAKE_86_MQ_12_NPC", "", "", 1);
 		
 		// Resistance Deputy Commander Kron
 		//-------------------------------------------------------------------------
-		AddNpc(156119, "Resistance Deputy Commander Kron", "f_3cmlake_86", -202.4574, 1381.75, 27, "F_3CMLAKE_86_MQ_18_NPC_2");
+		AddNpc(57, 156119, "Resistance Deputy Commander Kron", "f_3cmlake_86", -202.4574, 39.6717, 1381.75, 27, "F_3CMLAKE_86_MQ_18_NPC_2", "", "", 1);
+		AddNpc(60, 20024, " ", "f_3cmlake_86", 145.9208, 39.31152, 1245.265, 90, "", "", "");
+		AddNpc(60, 20024, " ", "f_3cmlake_86", 155.3216, 39.31152, 1384.696, 90, "", "", "");
+		AddNpc(60, 20024, " ", "f_3cmlake_86", 155.2794, 39.31152, 1583.878, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "f_3cmlake_86", -1188.852, -742.749, 90, "", "F_3CMLAKE_86_SQ_02_AFTER_EFFECT", "");
+		AddNpc(61, 147469, " ", "f_3cmlake_86", -1188.852, 40.17744, -742.749, 90, "", "F_3CMLAKE_86_SQ_02_AFTER_EFFECT", "");
 		
 		// Resistance Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(155163, "Resistance Soldier", "f_3cmlake_86", -244.1088, 1351.874, 35, "F_3CMLAKE_86_MQ_18_NPC_3");
+		AddNpc(62, 155163, "Resistance Soldier", "f_3cmlake_86", -244.1088, 40.16424, 1351.874, 35, "F_3CMLAKE_86_MQ_18_NPC_3", "", "", 0);
 		
 		// Agitated Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156127, "Agitated Schaffenstar Member", "f_3cmlake_86", 736.1732, 884.2678, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC");
+		AddNpc(44, 156127, "Agitated Schaffenstar Member", "f_3cmlake_86", 736.1732, 41.15479, 884.2678, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", -87.62273, 1117.114, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", -87.62273, 39.96592, 1117.114, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", -56.11921, 1159.748, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", -56.11921, 39.76033, 1159.748, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", -97.62851, 1360.207, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", -97.62851, 39.31152, 1360.207, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", -70.5884, 1400.706, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", -70.5884, 39.31152, 1400.706, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", 53.07285, 1617.339, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", 53.07285, 39.31152, 1617.339, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", 29.50288, 1658.64, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", 29.50288, 39.31152, 1658.64, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", 346.6449, 1554.283, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", 346.6449, 39.31152, 1554.283, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", 371.222, 1514.837, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", 371.222, 39.31152, 1514.837, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", 651.8329, 1103.2, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", 651.8329, 41.15479, 1103.2, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", 627.7818, 1143.662, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", 627.7818, 40.6823, 1143.662, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", 218.5636, 1255.606, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", 218.5636, 39.31152, 1255.606, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156107, " ", "f_3cmlake_86", 192.9074, 1212.463, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
+		AddNpc(63, 156107, " ", "f_3cmlake_86", 192.9074, 39.31152, 1212.463, 90, "", "F_3CMLAKE_86_WOODENWALL_DESTROY", "");
 		
 		// Statue of Goddess Zemyna
 		//-------------------------------------------------------------------------
-		AddNpc(40110, "Statue of Goddess Zemyna", "f_3cmlake_86", -403.3236, 1682.504, 90, "F_3CMLAKE_86_EV_55_001", "F_3CMLAKE_86_EV_55_001", "F_3CMLAKE_86_EV_55_001");
+		AddNpc(74, 40110, "Statue of Goddess Zemyna", "f_3cmlake_86", -403.3236, 39.31152, 1682.504, 90, "F_3CMLAKE_86_EV_55_001", "F_3CMLAKE_86_EV_55_001", "F_3CMLAKE_86_EV_55_001");
+		AddNpc(75, 147364, "Gate Entrance x", "f_3cmlake_86", -298.3258, 39.31152, 1679.154, 90, "", "", "");
 		
 		// Agitated Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156123, "Agitated Schaffenstar Member", "f_3cmlake_86", 1403.661, 1891.836, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC");
+		AddNpc(76, 156123, "Agitated Schaffenstar Member", "f_3cmlake_86", 1403.661, 41.15479, 1891.836, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC", "", "", 1);
 		
 		// Agitated Schaffenstar Member
 		//-------------------------------------------------------------------------
-		AddNpc(156123, "Agitated Schaffenstar Member", "f_3cmlake_86", 629.2263, 1064.82, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC");
+		AddNpc(76, 156123, "Agitated Schaffenstar Member", "f_3cmlake_86", 629.2263, 41.15479, 1064.82, 90, "F_3CMLAKE_86_SQ_04_CONFUSE_NPC", "", "", 1);
 	}
 }

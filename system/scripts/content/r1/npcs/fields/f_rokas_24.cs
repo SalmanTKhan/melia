@@ -14,486 +14,500 @@ public class FRokas24NpcScript : GeneralScript
 	{
 		// Sunset Flag Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Sunset Flag Forest", "f_rokas_24", 930, -3045, 0, "", "ROKAS24_THORN23", "");
+		AddNpc(1, 40001, "Sunset Flag Forest", "f_rokas_24", 930, 123, -3045, 0, "", "ROKAS24_THORN23", "");
 		
 		// Ramstis Ridge
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Ramstis Ridge", "f_rokas_24", 904, 1240, 176, "", "ROKAS24_ROKAS25", "");
+		AddNpc(2, 40001, "Ramstis Ridge", "f_rokas_24", 904, 261, 1240, 176, "", "ROKAS24_ROKAS25", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_rokas_24", 913, -1882, 0, "WARP_F_ROKAS_24", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(3, 40120, "Statue of Goddess Vakarine", "f_rokas_24", 913, 123, -1882, 0, "WARP_F_ROKAS_24", "STOUP_CAMP", "STOUP_CAMP");
 		
 		// Liaison Officer Niels
 		//-------------------------------------------------------------------------
-		AddNpc(20108, "Liaison Officer Niels", "f_rokas_24", 476, -2042, 0, "ROKAS_24_NEALS");
+		AddNpc(4, 20108, "Liaison Officer Niels", "f_rokas_24", 476, 163, -2042, 0, "ROKAS_24_NEALS", "", "");
 		
 		// Historian Viode
 		//-------------------------------------------------------------------------
-		AddNpc(20158, "Historian Viode", "f_rokas_24", 1598, -185, 90, "ROKAS_24_BEARD");
+		AddNpc(5, 20158, "Historian Viode", "f_rokas_24", 1598, 16, -185, 90, "ROKAS_24_BEARD", "", "", 0);
 		
 		// Historian Kepeck
 		//-------------------------------------------------------------------------
-		AddNpc(147422, "Historian Kepeck", "f_rokas_24", -1041, 1647, 90, "ROKAS_24_KEFEK");
+		AddNpc(6, 147422, "Historian Kepeck", "f_rokas_24", -1041, 804, 1647, 90, "ROKAS_24_KEFEK", "", "");
 		
 		// Beacon
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Beacon", "f_rokas_24", -2908.686, -579.5308, 90, "ROKAS_24_BEACON_TRIGGER");
+		AddNpc(8, 147469, "Beacon", "f_rokas_24", -2908.686, 1341.924, -579.5308, 90, "ROKAS_24_BEACON_TRIGGER", "", "");
 		
 		// Royal Mausoleum Artifact
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Royal Mausoleum Artifact", "f_rokas_24", -168, 2207, 90, "ROKAS_24_RELIC_TRIGGERGO");
+		AddNpc(9, 147372, "Royal Mausoleum Artifact", "f_rokas_24", -168, 687, 2207, 90, "ROKAS_24_RELIC_TRIGGERGO", "", "");
 		
 		// Mercenary Mirta
 		//-------------------------------------------------------------------------
-		AddNpc(147415, "Mercenary Mirta", "f_rokas_24", 1138, 998, 106, "ROKAS24_MIRTA");
+		AddNpc(10, 147415, "Mercenary Mirta", "f_rokas_24", 1138, 201, 998, 106, "ROKAS24_MIRTA", "", "");
 		
 		// Archivist Jonas
 		//-------------------------------------------------------------------------
-		AddNpc(147425, "Archivist Jonas", "f_rokas_24", -985, -3361, 90, "ROKAS_24_FLORIJONAS");
+		AddNpc(11, 147425, "Archivist Jonas", "f_rokas_24", -985, 782, -3361, 90, "ROKAS_24_FLORIJONAS", "", "", 0);
 		
 		// Archivist Jonas
 		//-------------------------------------------------------------------------
-		AddNpc(147425, "Archivist Jonas", "f_rokas_24", -484, -1777, 0, "ROKAS_24_FLORIJONAS2");
+		AddNpc(12, 147425, "Archivist Jonas", "f_rokas_24", -484, 725, -1777, 0, "ROKAS_24_FLORIJONAS2", "", "", 1);
 		
 		// Archivist Jonas
 		//-------------------------------------------------------------------------
-		AddNpc(147425, "Archivist Jonas", "f_rokas_24", -745, 216, 90, "ROKAS_24_FLORIJONAS3");
+		AddNpc(13, 147425, "Archivist Jonas", "f_rokas_24", -745, 1125, 216, 90, "ROKAS_24_FLORIJONAS3", "", "", 1);
 		
 		// Eyes of the Great King
 		//-------------------------------------------------------------------------
-		AddNpc(147475, "Eyes of the Great King", "f_rokas_24", -695, 264, 14, "ROKAS24_DEVICE_1");
+		AddNpc(14, 147475, "Eyes of the Great King", "f_rokas_24", -695, 1125, 264, 14, "ROKAS24_DEVICE_1", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "", "f_rokas_24", 832, -1235, 90, "", "ROKAS24_QB_10_TRIGGER", "");
+		AddNpc(15, 20041, "", "f_rokas_24", 832, 124, -1235, 90, "", "ROKAS24_QB_10_TRIGGER", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "", "f_rokas_24", -710, -2104, 90, "", "ROKAS24_QB_11_TRIGGER", "");
+		AddNpc(16, 20041, "", "f_rokas_24", -710, 724, -2104, 90, "", "ROKAS24_QB_11_TRIGGER", "");
 		
 		// Gorge Area Device
 		//-------------------------------------------------------------------------
-		AddNpc(47102, "Gorge Area Device", "f_rokas_24", 1188, 1014, 90, "ROKAS24_DEVICE_2");
+		AddNpc(17, 47102, "Gorge Area Device", "f_rokas_24", 1188, 201, 1014, 90, "ROKAS24_DEVICE_2", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_rokas_24", -469, -1806, 90, "", "ROKAS24_QB_4_TRIGGER", "");
+		AddNpc(19, 20026, "", "f_rokas_24", -469, 724, -1806, 90, "", "ROKAS24_QB_4_TRIGGER", "");
 		
 		// Security Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Security Guard", "f_rokas_24", 883, -1505, 0, "ROKAS24_SOLDIER");
+		AddNpc(23, 10033, "Security Guard", "f_rokas_24", 883, 123, -1505, 0, "ROKAS24_SOLDIER", "", "");
 		
 		// Security Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Security Guard", "f_rokas_24", 665, -2449, 0, "ROKAS24_SOLDIER");
+		AddNpc(23, 10033, "Security Guard", "f_rokas_24", 665, 123, -2449, 0, "ROKAS24_SOLDIER", "", "");
 		
 		// Security Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Security Guard", "f_rokas_24", 811, -1499, 0, "ROKAS24_SOLDIER");
+		AddNpc(23, 10033, "Security Guard", "f_rokas_24", 811, 123, -1499, 0, "ROKAS24_SOLDIER", "", "");
 		
 		// Security Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Security Guard", "f_rokas_24", 584, -2449, 0, "ROKAS24_SOLDIER");
+		AddNpc(23, 10033, "Security Guard", "f_rokas_24", 584, 123, -2449, 0, "ROKAS24_SOLDIER", "", "");
 		
 		// Merchant Davio
 		//-------------------------------------------------------------------------
-		AddNpc(20154, "Merchant Davio", "f_rokas_24", 955, -1829, 0, "ROKAS24_DABIO");
+		AddNpc(24, 20154, "Merchant Davio", "f_rokas_24", 955, 124, -1829, 0, "ROKAS24_DABIO", "", "", 0);
 		
 		// Archivist Jonas
 		//-------------------------------------------------------------------------
-		AddNpc(147425, "Archivist Jonas", "f_rokas_24", 603, -1883, 0, "ROKAS_24_FLORIJONAS4");
+		AddNpc(25, 147425, "Archivist Jonas", "f_rokas_24", 603, 238, -1883, 0, "ROKAS_24_FLORIJONAS4", "", "", 1);
 		
 		// ROKAS24_QB_9
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "ROKAS24_QB_9", "f_rokas_24", -1290, -1310, 0, "", "ROKAS24_QB_9", "");
+		AddNpc(28, 20026, "ROKAS24_QB_9", "f_rokas_24", -1290, 895, -1310, 0, "", "ROKAS24_QB_9", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1775.79, -336.79, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1775.79, 16.67, -336.79, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1587.53, -426.76, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1587.53, 16.7, -426.76, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1702.65, -401.12, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1702.65, 16.7, -401.12, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1709.78, -213.83, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1709.78, 16.64, -213.83, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1687.29, -308.76, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1687.29, 16.63, -308.76, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1277.19, -867.33, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1277.19, 123.93, -867.33, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1136.53, -659.54, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1136.53, 123.93, -659.54, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1647.2, -53.8, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1647.2, 16.31, -53.8, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1233.74, -986.46, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1233.74, 123.93, -986.46, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1049.49, -480.05, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1049.49, 123.93, -480.05, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1723.83, -19.84, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1723.83, 15.44, -19.84, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1666.55, -132.6, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1666.55, 16.21, -132.6, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Canyon Metos
 		//-------------------------------------------------------------------------
-		AddNpc(47201, "Canyon Metos", "f_rokas_24", 1548.73, -301.85, 90, "ROKAS24_FORSYTHIA");
+		AddNpc(26, 47201, "Canyon Metos", "f_rokas_24", 1548.73, 16.66, -301.85, 90, "ROKAS24_FORSYTHIA", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 739, 881, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 739, 261, 881, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 777, 1037, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 777, 261, 1037, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 796, 1093, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 796, 261, 1093, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 853.698, 252.7712, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 853.698, 201.9529, 252.7712, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 994.8904, 13.50939, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 994.8904, 178.8618, 13.50939, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 840.7217, 681.4985, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 840.7217, 261.2164, 681.4985, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 485.9294, 722.2385, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 485.9294, 261.2166, 722.2385, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 461.0642, 453.5773, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 461.0642, 261.2129, 453.5773, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 931.0499, 532.4849, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 931.0499, 201.9555, 532.4849, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 1002.021, 373.6307, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 1002.021, 201.9547, 373.6307, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 1093.193, 138.4593, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 1093.193, 194.2028, 138.4593, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 714.9556, 328.4807, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 714.9556, 261.2126, 328.4807, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 782.8176, 81.28053, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 782.8176, 189.7128, 81.28053, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Research Aid Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47160, "Research Aid Supplies", "f_rokas_24", 1216.049, 428.8997, 90, "ROKAS24_SUPP_01");
+		AddNpc(27, 47160, "Research Aid Supplies", "f_rokas_24", 1216.049, 201.9566, 428.8997, 90, "ROKAS24_SUPP_01", "", "");
 		
 		// Medicine Dealer
 		//-------------------------------------------------------------------------
-		AddNpc(20109, "Medicine Dealer", "f_rokas_24", 443.74, -604.91, 0, "ROKAS_24_PHARMACIST");
+		AddNpc(603, 20109, "Medicine Dealer", "f_rokas_24", 443.74, 123.93, -604.91, 0, "ROKAS_24_PHARMACIST", "", "");
 		
 		// New Researcher
 		//-------------------------------------------------------------------------
-		AddNpc(20109, "New Researcher", "f_rokas_24", 596, -2326, 0, "ROKAS_24_NEWCOMER");
+		AddNpc(602, 20109, "New Researcher", "f_rokas_24", 596, 123, -2326, 0, "ROKAS_24_NEWCOMER", "", "");
 		
 		// Historian Gorath
 		//-------------------------------------------------------------------------
-		AddNpc(20117, "Historian Gorath", "f_rokas_24", -1468, -1328, 90, "ROKAS_24_GORATH");
+		AddNpc(605, 20117, "Historian Gorath", "f_rokas_24", -1468, 895, -1328, 90, "ROKAS_24_GORATH", "", "", 0);
 		
 		// Historian Badat
 		//-------------------------------------------------------------------------
-		AddNpc(20109, "Historian Badat", "f_rokas_24", -574, -770, 0, "ROKAS_24_ARCHAEOLOGIST");
+		AddNpc(614, 20109, "Historian Badat", "f_rokas_24", -574, 886, -770, 0, "ROKAS_24_ARCHAEOLOGIST", "", "", 0);
 		
 		// Stonemason Pipoti
 		//-------------------------------------------------------------------------
-		AddNpc(20109, "Stonemason Pipoti", "f_rokas_24", 478, -2085, 90, "ROKAS24_PIPOTI");
+		AddNpc(619, 20109, "Stonemason Pipoti", "f_rokas_24", 478, 163, -2085, 90, "ROKAS24_PIPOTI", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20042, "", "f_rokas_24", -491, 1973, 90, "", "ROKAS_24_RELIC_TRIGGERGO", "");
+		AddNpc(618, 20042, "", "f_rokas_24", -491, 687, 1973, 90, "", "ROKAS_24_RELIC_TRIGGERGO", "");
 		
 		// Ahylas Jonas
 		//-------------------------------------------------------------------------
-		AddNpc(20125, "Ahylas Jonas", "f_rokas_24", 640, -2123, 90, "ROKAS24_ALCHEMIST");
+		AddNpc(620, 20125, "Ahylas Jonas", "f_rokas_24", 640, 123, -2123, 90, "ROKAS24_ALCHEMIST", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20041, "", "f_rokas_24", 230, 1365, 90, "", "ROKAS24_MQ_2TRACK", "");
+		AddNpc(622, 20041, "", "f_rokas_24", 230, 590, 1365, 90, "", "ROKAS24_MQ_2TRACK", "");
 		
 		// Tree Sap Pot
 		//-------------------------------------------------------------------------
-		AddNpc(47258, "Tree Sap Pot", "f_rokas_24", -1520, -1531, 179, "ROKAS24_BOX1");
+		AddNpc(621, 47258, "Tree Sap Pot", "f_rokas_24", -1520, 895, -1531, 179, "ROKAS24_BOX1", "", "");
 		
 		// Tree Sap Pot
 		//-------------------------------------------------------------------------
-		AddNpc(47258, "Tree Sap Pot", "f_rokas_24", -1221, -1522, 179, "ROKAS24_BOX1");
+		AddNpc(621, 47258, "Tree Sap Pot", "f_rokas_24", -1221, 895, -1522, 179, "ROKAS24_BOX1", "", "");
 		
 		// Tree Sap Pot
 		//-------------------------------------------------------------------------
-		AddNpc(47258, "Tree Sap Pot", "f_rokas_24", -1699, -1201, 179, "ROKAS24_BOX1");
+		AddNpc(621, 47258, "Tree Sap Pot", "f_rokas_24", -1699, 895, -1201, 179, "ROKAS24_BOX1", "", "");
 		
 		// Tree Sap Pot
 		//-------------------------------------------------------------------------
-		AddNpc(47258, "Tree Sap Pot", "f_rokas_24", -1515, -994, 179, "ROKAS24_BOX1");
+		AddNpc(621, 47258, "Tree Sap Pot", "f_rokas_24", -1515, 895, -994, 179, "ROKAS24_BOX1", "", "");
 		
 		// Tree Sap Pot
 		//-------------------------------------------------------------------------
-		AddNpc(47258, "Tree Sap Pot", "f_rokas_24", -1398, -1079, 179, "ROKAS24_BOX1");
+		AddNpc(621, 47258, "Tree Sap Pot", "f_rokas_24", -1398, 895, -1079, 179, "ROKAS24_BOX1", "", "");
 		
 		// Portal
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Portal", "f_rokas_24", 1155, -1979, 45, "ROKAS_24_PORTAL");
+		AddNpc(626, 147469, "Portal", "f_rokas_24", 1155, 123, -1979, 45, "ROKAS_24_PORTAL", "", "");
 		
 		// Bulletin Board
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Bulletin Board", "f_rokas_24", 754, -2075, 45, "ROKAS24_BOARD");
+		AddNpc(703, 40070, "Bulletin Board", "f_rokas_24", 754, 124, -2075, 45, "ROKAS24_BOARD", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20042, "", "f_rokas_24", -2731.852, -427.3023, 90, "", "ROKAS_24_BEACON_TRIGGERGO", "");
+		AddNpc(702, 20042, "", "f_rokas_24", -2731.852, 1341.924, -427.3023, 90, "", "ROKAS_24_BEACON_TRIGGERGO", "");
 		
 		// Canyon Amalas
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Canyon Amalas", "f_rokas_24", -146.105, 1559.776, 90, "ROKAS24_MQFLOWER");
+		AddNpc(707, 47200, "Canyon Amalas", "f_rokas_24", -146.105, 594.2194, 1559.776, 90, "ROKAS24_MQFLOWER", "", "");
 		
 		// Canyon Amalas
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Canyon Amalas", "f_rokas_24", -398.4764, 1199.003, 90, "ROKAS24_MQFLOWER");
+		AddNpc(707, 47200, "Canyon Amalas", "f_rokas_24", -398.4764, 594.2194, 1199.003, 90, "ROKAS24_MQFLOWER", "", "");
 		
 		// Canyon Amalas
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Canyon Amalas", "f_rokas_24", -130.4322, 1105.329, 90, "ROKAS24_MQFLOWER");
+		AddNpc(707, 47200, "Canyon Amalas", "f_rokas_24", -130.4322, 594.2073, 1105.329, 90, "ROKAS24_MQFLOWER", "", "");
 		
 		// Canyon Amalas
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Canyon Amalas", "f_rokas_24", -459.3198, 1448.075, 90, "ROKAS24_MQFLOWER");
+		AddNpc(707, 47200, "Canyon Amalas", "f_rokas_24", -459.3198, 601.6253, 1448.075, 90, "ROKAS24_MQFLOWER", "", "");
 		
 		// Canyon Amalas
 		//-------------------------------------------------------------------------
-		AddNpc(47200, "Canyon Amalas", "f_rokas_24", 140.0401, 1243.412, 90, "ROKAS24_MQFLOWER");
+		AddNpc(707, 47200, "Canyon Amalas", "f_rokas_24", 140.0401, 591.7532, 1243.412, 90, "ROKAS24_MQFLOWER", "", "");
 		
 		// Beacon
 		//-------------------------------------------------------------------------
-		AddNpc(147468, "Beacon", "f_rokas_24", -2958.149, -565.7328, 0, "", "ROKAS_24_BEACON_REAL", "");
+		AddNpc(708, 147468, "Beacon", "f_rokas_24", -2958.149, 1341.999, -565.7328, 0, "", "ROKAS_24_BEACON_REAL", "");
 		
 		// Historian Viode
 		//-------------------------------------------------------------------------
-		AddNpc(20158, "Historian Viode", "f_rokas_24", 1550.67, -87.88715, 90, "ROKAS_24_BEARD_AFTER");
+		AddNpc(709, 20158, "Historian Viode", "f_rokas_24", 1550.67, 16.63921, -87.88715, 90, "ROKAS_24_BEARD_AFTER", "", "", 1);
 		
 		// Warning
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Warning", "f_rokas_24", 821.3983, -2989.329, 90, "UPPER_WARNING_F_ROKAS_24");
+		AddNpc(710, 40070, "Warning", "f_rokas_24", 821.3983, 123.8668, -2989.329, 90, "UPPER_WARNING_F_ROKAS_24", "", "");
 		
 		// [Rodelero Submaster]{nl}Trogen
 		//-------------------------------------------------------------------------
-		AddNpc(155067, "[Rodelero Submaster]{nl}Trogen", "f_rokas_24", 1088.881, -1882.805, 0, "JOB_RODELERO3_1_NPC");
+		AddNpc(29, 155067, "[Rodelero Submaster]{nl}Trogen", "f_rokas_24", 1088.881, 123.9268, -1882.805, 0, "JOB_RODELERO3_1_NPC", "", "");
 		
 		// [Cataphract Submaster]{nl}Dirk Drigg
 		//-------------------------------------------------------------------------
-		AddNpc(155068, "[Cataphract Submaster]{nl}Dirk Drigg", "f_rokas_24", 487.1851, -2265.154, 90, "MASTER_CATAPHRACT");
+		AddNpc(30, 155068, "[Cataphract Submaster]{nl}Dirk Drigg", "f_rokas_24", 487.1851, 123.9266, -2265.154, 90, "MASTER_CATAPHRACT", "", "");
 		
 		// [Thaumaturge Master]{nl}Larisa
 		//-------------------------------------------------------------------------
-		AddNpc(147435, "[Thaumaturge Master]{nl}Larisa", "f_rokas_24", 520.5836, -2178.955, 90, "JOB_THAUMATURGE3_1_NPC");
+		AddNpc(31, 147435, "[Thaumaturge Master]{nl}Larisa", "f_rokas_24", 520.5836, 123.9266, -2178.955, 90, "JOB_THAUMATURGE3_1_NPC", "", "");
 		
 		// [Wugushi Submaster]{nl}May Pat
 		//-------------------------------------------------------------------------
-		AddNpc(155081, "[Wugushi Submaster]{nl}May Pat", "f_rokas_24", 480.5107, -1726.219, 90, "JOB_WUGU3_1_NPC");
+		AddNpc(33, 155081, "[Wugushi Submaster]{nl}May Pat", "f_rokas_24", 480.5107, 238.9312, -1726.219, 90, "JOB_WUGU3_1_NPC", "", "");
 		
 		// ROKAS_24_JOB_SPARRING_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "ROKAS_24_JOB_SPARRING_TRIGGER", "f_rokas_24", 778.7238, -1217.161, 90, "", "ROKAS_24_JOB_SPARRING_TRIGGER", "");
+		AddNpc(711, 20026, "ROKAS_24_JOB_SPARRING_TRIGGER", "f_rokas_24", 778.7238, 123.9267, -1217.161, 90, "", "ROKAS_24_JOB_SPARRING_TRIGGER", "");
+		AddNpc(712, 147366, "", "f_rokas_24", 596.9555, 133.731, -2111.013, 90, "", "", "");
+		AddNpc(713, 147366, "", "f_rokas_24", 836.4625, 123.9267, -1651.159, 90, "", "", "");
+		AddNpc(714, 147366, "", "f_rokas_24", 643.6019, 238.9311, -1816.757, 90, "", "", "");
+		AddNpc(714, 147366, "", "f_rokas_24", -1147.34, 782.0984, -1921.729, 90, "", "", "");
+		AddNpc(715, 147362, "", "f_rokas_24", 1579.317, 16.57909, -179.1393, 90, "", "", "");
+		AddNpc(716, 147362, "", "f_rokas_24", -1054.982, 804.0764, 1648.915, 90, "", "", "");
+		AddNpc(717, 147362, "", "f_rokas_24", -970.8545, 782.8701, -3341.911, 90, "", "", "");
+		AddNpc(718, 147362, "", "f_rokas_24", -516.1625, 724.0477, -1719.688, 90, "", "", "");
+		AddNpc(719, 147362, "", "f_rokas_24", -693.1893, 1125.39, 202.3699, 90, "", "", "");
+		AddNpc(720, 147362, "", "f_rokas_24", 516.832, 123.9259, -660.7307, 90, "", "", "");
+		AddNpc(721, 147362, "", "f_rokas_24", -1459.088, 895.2841, -1320.844, 90, "", "", "");
+		AddNpc(722, 147362, "", "f_rokas_24", -581.2313, 886.6881, -745.922, 90, "", "", "");
+		AddNpc(723, 147362, "", "f_rokas_24", 941.3275, 123.9269, -3034.862, 90, "", "", "");
+		AddNpc(724, 147362, "", "f_rokas_24", 910.7731, 261.2225, 1253.345, 90, "", "", "");
 		
 		// Canyon Guild Mission
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Canyon Guild Mission", "f_rokas_24", -1884.987, 2120.469, 270, "", "ROKAS24_TO_GUILDMISSION", "");
+		AddNpc(726, 40001, "Canyon Guild Mission", "f_rokas_24", -1884.987, 892.9741, 2120.469, 270, "", "ROKAS24_TO_GUILDMISSION", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_rokas_24", -677.85, -2528, 90, "TREASUREBOX_LV_F_ROKAS_24727");
+		AddNpc(727, 147392, "Lv1 Treasure Chest", "f_rokas_24", -677.85, 724.39, -2528, 90, "TREASUREBOX_LV_F_ROKAS_24727", "", "");
 		
 		// Letas Stream
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Letas Stream", "f_rokas_24", 1652.514, -1050.812, 90, "", "ROKAS24_KATYN12", "");
+		AddNpc(728, 40001, "Letas Stream", "f_rokas_24", 1652.514, 123.9272, -1050.812, 90, "", "ROKAS24_KATYN12", "");
 		
 		// Historian Grenus
 		//-------------------------------------------------------------------------
-		AddNpc(20139, "Historian Grenus", "f_rokas_24", -1592.778, 53.1868, -19, "ROKAS24_RP_2_NPC");
+		AddNpc(729, 20139, "Historian Grenus", "f_rokas_24", -1592.778, 1334.012, 53.1868, -19, "ROKAS24_RP_2_NPC", "", "");
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -2114.674, -266.3214, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -2114.674, 1334.028, -266.3214, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -1701.33, -197.8739, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -1701.33, 1334.028, -197.8739, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -1989.249, 108.0278, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -1989.249, 1334.028, 108.0278, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -2166.124, -30.55168, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -2166.124, 1334.028, -30.55168, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -2291.87, -244.5067, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -2291.87, 1334.028, -244.5067, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -3057.812, -548.2903, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -3057.812, 1341.924, -548.2903, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -2856.678, -615.9852, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -2856.678, 1341.934, -615.9852, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -954.3198, -318.3118, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -954.3198, 1125.39, -318.3118, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -676.2686, -573.4998, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -676.2686, 1125.39, -573.4998, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -346.7755, -488.8585, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -346.7755, 1125.39, -488.8585, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -731.9576, 163.6929, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -731.9576, 1125.39, 163.6929, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -889.7312, 9.140024, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -889.7312, 1125.39, 9.140024, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -354.7265, 181.0275, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -354.7265, 1125.39, 181.0275, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -492.7345, -170.5854, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -492.7345, 1125.39, -170.5854, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -704.1367, -271.1846, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -704.1367, 1125.39, -271.1846, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -170.3177, 37.31058, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -170.3177, 1125.39, 37.31058, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", 125.5263, -9.773265, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", 125.5263, 1125.39, -9.773265, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", 55.09503, -204.5904, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", 55.09503, 1125.39, -204.5904, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -108.3296, -157.0428, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -108.3296, 1125.39, -157.0428, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -483.3802, 68.81656, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -483.3802, 1125.39, 68.81656, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -1807.342, 177.3881, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -1807.342, 1334.021, 177.3881, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -1822.939, 50.62574, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -1822.939, 1334.028, 50.62574, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -1708.908, 6.836369, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -1708.908, 1334.028, 6.836369, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -2279.535, 42.23286, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -2279.535, 1334.028, 42.23286, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		// Exploration Site
 		//-------------------------------------------------------------------------
-		AddNpc(155026, "Exploration Site", "f_rokas_24", -2172.895, -176.6066, 90, "ROKAS24_RP_2_OBJ");
+		AddNpc(730, 155026, "Exploration Site", "f_rokas_24", -2172.895, 1334.495, -176.6066, 90, "ROKAS24_RP_2_OBJ", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152078, " ", "f_rokas_24", 948.94, -2356.21, 90, "HT2_MOVING_DEVICES01");
+		AddNpc(731, 152078, " ", "f_rokas_24", 948.94, 123.93, -2356.21, 90, "HT2_MOVING_DEVICES01", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152078, " ", "f_rokas_24", -889.8, -2614.56, 90, "HT2_MOVING_DEVICES02");
+		AddNpc(732, 152078, " ", "f_rokas_24", -889.8, 724.29, -2614.56, 90, "HT2_MOVING_DEVICES02", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152078, " ", "f_rokas_24", 276.23, -136.35, 90, "HT2_MOVING_DEVICES03");
+		AddNpc(733, 152078, " ", "f_rokas_24", 276.23, 1125.39, -136.35, 90, "HT2_MOVING_DEVICES03", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152078, " ", "f_rokas_24", -2312.19, -94.53, 90, "HT2_MOVING_DEVICES04");
+		AddNpc(734, 152078, " ", "f_rokas_24", -2312.19, 1334.6, -94.53, 90, "HT2_MOVING_DEVICES04", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152078, " ", "f_rokas_24", 1057.825, -46.41605, 90, "HT2_MOVING_DEVICES05");
+		AddNpc(735, 152078, " ", "f_rokas_24", 1057.825, 172.88, -46.41605, 90, "HT2_MOVING_DEVICES05", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152078, " ", "f_rokas_24", -743.08, 1397.97, 90, "HT2_MOVING_DEVICES06");
+		AddNpc(736, 152078, " ", "f_rokas_24", -743.08, 689.44, 1397.97, 90, "HT2_MOVING_DEVICES06", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152078, " ", "f_rokas_24", -1547.16, 2258.58, 90, "HT2_MOVING_DEVICES07");
+		AddNpc(737, 152078, " ", "f_rokas_24", -1547.16, 892.97, 2258.58, 90, "HT2_MOVING_DEVICES07", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_rokas_24", -1877.992, 1867.003, 90, "", "EXPLORER_MISLE26", "");
+		AddNpc(738, 40095, " ", "f_rokas_24", -1877.992, 933.1929, 1867.003, 90, "", "EXPLORER_MISLE26", "");
 		
 		// [Assassin Master]{nl}Rashid Zabanya
 		//-------------------------------------------------------------------------
-		AddNpc(156155, "[Assassin Master]{nl}Rashid Zabanya", "f_rokas_24", 457.6657, -2357.491, 90, "ASSASSIN_MASTER");
+		AddNpc(739, 156155, "[Assassin Master]{nl}Rashid Zabanya", "f_rokas_24", 457.6657, 123.9265, -2357.491, 90, "ASSASSIN_MASTER", "", "");
 		
 		// Gailas Jonas
 		//-------------------------------------------------------------------------
-		AddNpc(156169, "Gailas Jonas", "f_rokas_24", 672.3063, -2109.433, 13, "ROKAS24_ALCHEMIST_OTHER");
+		AddNpc(740, 156169, "Gailas Jonas", "f_rokas_24", 672.3063, 123.9266, -2109.433, 13, "ROKAS24_ALCHEMIST_OTHER", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "f_rokas_24", 869.9922, -128.0314, 90, "", "JOB_2_HOPLITE4_TRIGGER", "");
+		AddNpc(741, 20026, " ", "f_rokas_24", 869.9922, 146.9023, -128.0314, 90, "", "JOB_2_HOPLITE4_TRIGGER", "");
 		
 		// Researcher Nijole
 		//-------------------------------------------------------------------------
-		AddNpc(152062, "Researcher Nijole", "f_rokas_24", 574.6219, -2276.318, -40, "EP14_F_CORAL_RAID_3_NPC_1");
+		AddNpc(742, 152062, "Researcher Nijole", "f_rokas_24", 574.6219, 123.9266, -2276.318, -40, "EP14_F_CORAL_RAID_3_NPC_1", "", "", 1);
 	}
 }

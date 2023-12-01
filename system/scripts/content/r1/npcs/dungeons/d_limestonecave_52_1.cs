@@ -14,162 +14,165 @@ public class DLimestonecave521NpcScript : GeneralScript
 	{
 		// LIMESTONE_52_1_MQ_8_TRIG
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "LIMESTONE_52_1_MQ_8_TRIG", "d_limestonecave_52_1", 554.1194, 1729.819, 90, "", "LIMESTONE_52_1_MQ_8_PROG", "");
+		AddNpc(18, 20026, "LIMESTONE_52_1_MQ_8_TRIG", "d_limestonecave_52_1", 554.1194, -307.3018, 1729.819, 90, "", "LIMESTONE_52_1_MQ_8_PROG", "");
 		
 		// Khonot Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Khonot Forest", "d_limestonecave_52_1", 343.801, -1128.652, 90, "", "LIMESTONECAVE52_1_BRACKEN42_1", "");
+		AddNpc(1, 40001, "Khonot Forest", "d_limestonecave_52_1", 343.801, -30.21206, -1128.652, 90, "", "LIMESTONECAVE52_1_BRACKEN42_1", "");
 		
 		// Tevhrin Stalactite Cave Section 2
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Tevhrin Stalactite Cave Section 2", "d_limestonecave_52_1", 532.2103, 2104.772, 227, "", "LIMESTONECAVE_52_1_LIMESTONECAVE_52_2", "");
+		AddNpc(2, 40001, "Tevhrin Stalactite Cave Section 2", "d_limestonecave_52_1", 532.2103, -307.3018, 2104.772, 227, "", "LIMESTONECAVE_52_1_LIMESTONECAVE_52_2", "");
 		
 		// Kupole Medena
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Kupole Medena", "d_limestonecave_52_1", -713.4623, -621.8837, 3, "LIMESTONECAVE_52_1_MEDENA");
+		AddNpc(5, 154014, "Kupole Medena", "d_limestonecave_52_1", -713.4623, 0, -621.8837, 3, "LIMESTONECAVE_52_1_MEDENA", "", "", 0);
 		
 		// Kupole Trija
 		//-------------------------------------------------------------------------
-		AddNpc(154011, "Kupole Trija", "d_limestonecave_52_1", -512.1534, -218.4509, 90, "LIMESTONECAVE_52_1_TRIA");
+		AddNpc(6, 154011, "Kupole Trija", "d_limestonecave_52_1", -512.1534, -229.3001, -218.4509, 90, "LIMESTONECAVE_52_1_TRIA", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147500, " ", "d_limestonecave_52_1", -571.1774, -257.5954, 45, "", "LIMESTONE_52_1_MAGIC", "");
+		AddNpc(13, 147500, " ", "d_limestonecave_52_1", -571.1774, -229.3001, -257.5954, 45, "", "LIMESTONE_52_1_MAGIC", "");
 		
 		// LIMESTONE_52_1_MQ_3_TRIG
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "LIMESTONE_52_1_MQ_3_TRIG", "d_limestonecave_52_1", -473.8105, -307.4013, 90, "", "LIMESTONE_52_1_MQ_3_PROG", "");
+		AddNpc(14, 20026, "LIMESTONE_52_1_MQ_3_TRIG", "d_limestonecave_52_1", -473.8105, -229.3001, -307.4013, 90, "", "LIMESTONE_52_1_MQ_3_PROG", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", 52.41779, 247.1753, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", 52.41779, -229.3001, 247.1753, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", 228.9298, 191.8319, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", 228.9298, -229.3001, 191.8319, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", -127.0242, -20.14024, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", -127.0242, -229.3001, -20.14024, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", 195.4012, 82.82261, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", 195.4012, -229.3001, 82.82261, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", -251.3761, 86.442, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", -251.3761, -229.3001, 86.442, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", -304.037, 194.5618, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", -304.037, -229.3001, 194.5618, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(156033, " ", "d_limestonecave_52_1", -571.3223, -257.4456, 90, "", "LIMSTONE_52_1_CRYSTAL", "");
+		AddNpc(16, 156033, " ", "d_limestonecave_52_1", -571.3223, -229.3001, -257.4456, 90, "", "LIMSTONE_52_1_CRYSTAL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47230, " ", "d_limestonecave_52_1", 536.0496, 1809.043, 130, "", "LIMSTONE_52_1_CART", "");
+		AddNpc(17, 47230, " ", "d_limestonecave_52_1", 536.0496, -307.3018, 1809.043, 130, "", "LIMSTONE_52_1_CART", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47230, " ", "d_limestonecave_52_1", 614.0151, 1761.773, 41, "", "LIMSTONE_52_1_CART", "");
+		AddNpc(17, 47230, " ", "d_limestonecave_52_1", 614.0151, -307.3018, 1761.773, 41, "", "LIMSTONE_52_1_CART", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147500, " ", "d_limestonecave_52_1", -571.4072, -257.3099, 45, "", "LIMESTONE_52_1_MAGIC_ON", "");
+		AddNpc(19, 147500, " ", "d_limestonecave_52_1", -571.4072, -229.3001, -257.3099, 45, "", "LIMESTONE_52_1_MAGIC_ON", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147358, " ", "d_limestonecave_52_1", -1032.485, 1435.685, 50, "LIMESTONE_52_1_ANTIEVIL");
+		AddNpc(20, 147358, " ", "d_limestonecave_52_1", -1032.485, -394.8392, 1435.685, 50, "LIMESTONE_52_1_ANTIEVIL", "", "");
 		
 		// Altar of Purification
 		//-------------------------------------------------------------------------
-		AddNpc(147357, "Altar of Purification", "d_limestonecave_52_1", 658.3173, 703.0247, 90, "LIMESTONE_52_1_MQ_6_CLEAR");
+		AddNpc(7, 147357, "Altar of Purification", "d_limestonecave_52_1", 658.3173, -404.91, 703.0247, 90, "LIMESTONE_52_1_MQ_6_CLEAR", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", -144.167, 310.3964, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", -144.167, -229.3001, 310.3964, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", -20.54367, 36.05502, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", -20.54367, -229.3001, 36.05502, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", -35.3297, 281.7874, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", -35.3297, -229.3001, 281.7874, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", -235.4782, 235.6954, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", -235.4782, -229.3001, 235.6954, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20025, " ", "d_limestonecave_52_1", 116.677, 21.93335, 90, "LIMSTONE_52_1_CRYSTAL_PIECE");
+		AddNpc(15, 20025, " ", "d_limestonecave_52_1", 116.677, -229.3001, 21.93335, 90, "LIMSTONE_52_1_CRYSTAL_PIECE", "", "", 0);
 		
 		// Kupole Medena
 		//-------------------------------------------------------------------------
-		AddNpc(154014, "Kupole Medena", "d_limestonecave_52_1", -502.4049, -263.1854, 90, "LIMESTONECAVE_52_1_MEDENA_2");
+		AddNpc(21, 154014, "Kupole Medena", "d_limestonecave_52_1", -502.4049, -229.3001, -263.1854, 90, "LIMESTONECAVE_52_1_MEDENA_2", "", "", 1);
+		AddNpc(22, 157023, " ", "d_limestonecave_52_1", 367.5, -459.08, 703.7, 20, "", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "", "d_limestonecave_52_1", 504.84, 788.64, 45, "LIMESTONE_52_1_BOAT");
+		AddNpc(24, 40070, "", "d_limestonecave_52_1", 504.84, -404.91, 788.64, 45, "LIMESTONE_52_1_BOAT", "", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "d_limestonecave_52_1", -514.34, -617.36, -13, "WARP_D_LIMESTONE_52_1", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(25, 40120, "Statue of Goddess Vakarine", "d_limestonecave_52_1", -514.34, 0, -617.36, -13, "WARP_D_LIMESTONE_52_1", "STOUP_CAMP", "STOUP_CAMP");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_limestonecave_52_1", -318.91, -990.9, 90, "TREASUREBOX_LV_D_LIMESTONECAVE_52_11000");
+		AddNpc(1000, 147392, "Lv1 Treasure Chest", "d_limestonecave_52_1", -318.91, -9.75, -990.9, 90, "TREASUREBOX_LV_D_LIMESTONECAVE_52_11000", "", "");
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", -995.24, -915.34, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", -995.24, 0, -915.34, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", -1284.28, -51.84, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", -1284.28, -104.91, -51.84, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", -1143.9, 447.25, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", -1143.9, -61.63, 447.25, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", -1403.71, 1204.19, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", -1403.71, -394.84, 1204.19, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", 13.93, 1417.09, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", 13.93, -18.99, 1417.09, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", 508.23, 1350.99, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", 508.23, -307.3, 1350.99, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", 1494.87, 1553.56, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", 1494.87, -261.76, 1553.56, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", 1509.3, 934.23, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", 1509.3, -365.68, 934.23, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", 1234.22, -373.41, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", 1234.22, -229.3, -373.41, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", 473.25, 25.43, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", 473.25, -229.3, 25.43, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// Collector
 		//-------------------------------------------------------------------------
-		AddNpc(154100, "Collector", "d_limestonecave_52_1", -342.9, 28.5, 90, "LSCAVE521_RMG_NPC_1");
+		AddNpc(1002, 154100, "Collector", "d_limestonecave_52_1", -342.9, -229.3, 28.5, 90, "LSCAVE521_RMG_NPC_1", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_limestonecave_52_1", 592.8311, 1618.706, 90, "", "LIMESTONE_52_1_MQ_10_PROG_TRG", "");
+		AddNpc(1003, 20026, "", "d_limestonecave_52_1", 592.8311, -307.3018, 1618.706, 90, "", "LIMESTONE_52_1_MQ_10_PROG_TRG", "");
+		AddNpc(1004, 160034, "Raft", "d_limestonecave_52_1", 505.3112, -404.91, 788.423, 90, "", "", "");
+		AddNpc(1005, 160034, "Raft Arriving Point", "d_limestonecave_52_1", -991.7761, -392.1228, 1232.755, 90, "", "", "");
 	}
 }

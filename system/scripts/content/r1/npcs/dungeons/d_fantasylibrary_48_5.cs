@@ -14,62 +14,82 @@ public class DFantasylibrary485NpcScript : GeneralScript
 	{
 		// Valandis Room 3
 		//-------------------------------------------------------------------------
-		AddNpc(154069, "Valandis Room 3", "d_fantasylibrary_48_5", -2031.81, -973.6965, 90, "FLIBRARY485_TO_FLIBRARY484");
+		AddNpc(1, 154069, "Valandis Room 3", "d_fantasylibrary_48_5", -2031.81, 11.06937, -973.6965, 90, "FLIBRARY485_TO_FLIBRARY484", "", "");
 		
 		// Neringa
 		//-------------------------------------------------------------------------
-		AddNpc(154102, "Neringa", "d_fantasylibrary_48_5", -2079.023, -994.3223, 90, "FLIBRARY485_NERINGA_FLLW_NPC");
+		AddNpc(2, 154102, "Neringa", "d_fantasylibrary_48_5", -2079.023, 11.07987, -994.3223, 90, "FLIBRARY485_NERINGA_FLLW_NPC", "", "", 1);
 		
 		// Neringa
 		//-------------------------------------------------------------------------
-		AddNpc(154102, "Neringa", "d_fantasylibrary_48_5", 875.9861, -383.5553, 181, "FLIBRARY485_NERINGA_NPC_1");
+		AddNpc(3, 154102, "Neringa", "d_fantasylibrary_48_5", 875.9861, -107.8744, -383.5553, 181, "FLIBRARY485_NERINGA_NPC_1", "", "", 1);
 		
 		// Neringa
 		//-------------------------------------------------------------------------
-		AddNpc(154102, "Neringa", "d_fantasylibrary_48_5", 926.457, 717.7445, 90, "FLIBRARY485_NERINGA_NPC_2");
+		AddNpc(4, 154102, "Neringa", "d_fantasylibrary_48_5", 926.457, -102.3549, 717.7445, 90, "FLIBRARY485_NERINGA_NPC_2", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_fantasylibrary_48_5", -1457.461, -766.5001, 90, "", "FANTASYLIB485_MQ_1_NPC", "");
+		AddNpc(7, 20026, " ", "d_fantasylibrary_48_5", -1457.461, -0.02269745, -766.5001, 90, "", "FANTASYLIB485_MQ_1_NPC", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_fantasylibrary_48_5", -1455.624, -24.64447, 90, "", "FANTASYLIB485_MQ_2_NPC", "");
+		AddNpc(8, 20026, " ", "d_fantasylibrary_48_5", -1455.624, -0.02269745, -24.64447, 90, "", "FANTASYLIB485_MQ_2_NPC", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_fantasylibrary_48_5", 57.47133, 225.7426, 90, "", "FANTASYLIB485_MQ_4_NPC", "");
+		AddNpc(9, 20026, " ", "d_fantasylibrary_48_5", 57.47133, -107.1681, 225.7426, 90, "", "FANTASYLIB485_MQ_4_NPC", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -689.1077, -107.732, -148.2337, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -823.2802, -107.732, 180.9859, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -571.4979, -107.7319, 245.0157, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -497.0042, -107.732, -79.17668, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -391.7411, -107.732, 132.3939, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -582.2136, -62.93802, 499.3521, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -737.1017, -28.47523, 770.2813, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -505.3049, -29.75949, 844.9514, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -506.3108, -29.75949, 723.7009, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -620.8152, -107.732, 38.85227, 90, "", "", "");
+		AddNpc(10, 154065, " ", "d_fantasylibrary_48_5", -753.4347, -103.5432, -133.1736, 90, "", "", "");
+		AddNpc(11, 154103, " ", "d_fantasylibrary_48_5", 1044.293, -107.8744, 12.86244, 236, "", "", "");
+		AddNpc(11, 154103, " ", "d_fantasylibrary_48_5", 998.561, -107.8744, 237.5646, -19, "", "", "");
+		AddNpc(11, 154103, " ", "d_fantasylibrary_48_5", 1035.411, -107.8744, 212.1364, -46, "", "", "");
+		AddNpc(11, 154103, " ", "d_fantasylibrary_48_5", 738.9473, -107.8731, 269.1356, 90, "", "", "");
+		AddNpc(11, 154103, " ", "d_fantasylibrary_48_5", 753.7968, -107.8744, 308.8538, 47, "", "", "");
+		AddNpc(11, 154103, " ", "d_fantasylibrary_48_5", 770.8432, -107.8744, 445.1581, 47, "", "", "");
+		AddNpc(11, 154103, " ", "d_fantasylibrary_48_5", 778.6438, -107.8744, 564.2733, 64, "", "", "");
+		AddNpc(11, 154103, " ", "d_fantasylibrary_48_5", 1033.485, -107.8744, 600.9628, -29, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154103, " ", "d_fantasylibrary_48_5", 891.34, 1485.698, 47, "", "FANTASYLIB485_MQ_6_BOOKS", "");
+		AddNpc(12, 154103, " ", "d_fantasylibrary_48_5", 891.34, 1.559494, 1485.698, 47, "", "FANTASYLIB485_MQ_6_BOOKS", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154103, " ", "d_fantasylibrary_48_5", 928.7161, 1503.457, 3, "", "FANTASYLIB485_MQ_6_BOOKS", "");
+		AddNpc(12, 154103, " ", "d_fantasylibrary_48_5", 928.7161, 1.559494, 1503.457, 3, "", "FANTASYLIB485_MQ_6_BOOKS", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(154103, " ", "d_fantasylibrary_48_5", 969.5424, 1496.473, -26, "", "FANTASYLIB485_MQ_6_BOOKS", "");
+		AddNpc(12, 154103, " ", "d_fantasylibrary_48_5", 969.5424, 1.559494, 1496.473, -26, "", "FANTASYLIB485_MQ_6_BOOKS", "");
 		
 		// Abandoned Book
 		//-------------------------------------------------------------------------
-		AddNpc(151131, "Abandoned Book", "d_fantasylibrary_48_5", -1606.857, -222.3498, 90, "FLIBRARY485_BOOKLIST_1_NPC");
+		AddNpc(13, 151131, "Abandoned Book", "d_fantasylibrary_48_5", -1606.857, -0.02269745, -222.3498, 90, "FLIBRARY485_BOOKLIST_1_NPC", "", "");
 		
 		// Abandoned Book
 		//-------------------------------------------------------------------------
-		AddNpc(151131, "Abandoned Book", "d_fantasylibrary_48_5", -817.4594, -821.2012, 90, "FLIBRARY485_BOOKLIST_2_NPC");
+		AddNpc(14, 151131, "Abandoned Book", "d_fantasylibrary_48_5", -817.4594, -199.2866, -821.2012, 90, "FLIBRARY485_BOOKLIST_2_NPC", "", "");
 		
 		// Abandoned Book
 		//-------------------------------------------------------------------------
-		AddNpc(151132, "Abandoned Book", "d_fantasylibrary_48_5", 526.7537, 1344.767, 90, "FLIBRARY485_BOOKLIST_3_NPC");
+		AddNpc(15, 151132, "Abandoned Book", "d_fantasylibrary_48_5", 526.7537, 1.559494, 1344.767, 90, "FLIBRARY485_BOOKLIST_3_NPC", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_fantasylibrary_48_5", 924.7238, 1096.633, 90, "", "FANTASYLIB485_MQ_6_NPC", "");
+		AddNpc(16, 20026, " ", "d_fantasylibrary_48_5", 924.7238, 1.559494, 1096.633, 90, "", "FANTASYLIB485_MQ_6_NPC", "");
+		AddNpc(23, 152003, " ", "d_fantasylibrary_48_5", -770.7902, -102.4672, -188.8215, 90, "", "", "");
 		
 		// Central Corridor of Scriptorium
 		//-------------------------------------------------------------------------
-		AddNpc(154069, "Central Corridor of Scriptorium", "d_fantasylibrary_48_5", -863.3888, -498.364, 90, "SECRET_ROOM_TO_FL485");
+		AddNpc(24, 154069, "Central Corridor of Scriptorium", "d_fantasylibrary_48_5", -863.3888, -104.1435, -498.364, 90, "SECRET_ROOM_TO_FL485", "", "");
 	}
 }

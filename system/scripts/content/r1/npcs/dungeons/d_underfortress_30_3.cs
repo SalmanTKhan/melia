@@ -14,106 +14,112 @@ public class DUnderfortress303NpcScript : GeneralScript
 	{
 		// Extension
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Extension", "d_underfortress_30_3", 2002.301, -850.6414, 92, "", "UNDERFORTRESS30_3_UNDERFORTRESS30_2", "");
+		AddNpc(4, 40001, "Extension", "d_underfortress_30_3", 2002.301, 227.991, -850.6414, 92, "", "UNDERFORTRESS30_3_UNDERFORTRESS30_2", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47106, " ", "d_underfortress_30_3", 73.73312, -797.3583, 90, "UNDER30_3_EVENT1_OBJ1");
+		AddNpc(7, 47106, " ", "d_underfortress_30_3", 73.73312, -8.429749, -797.3583, 90, "UNDER30_3_EVENT1_OBJ1", "", "");
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", -1159.183, -691.525, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", -1159.183, -12.17613, -691.525, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", -826.46, -922.8577, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", -826.46, -12.33887, -922.8577, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", -529.7514, -883.996, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", -529.7514, -8.429749, -883.996, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", 746.2924, -903.8622, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", 746.2924, -7.938114, -903.8622, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", 790.2224, -606.313, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", 790.2224, -8.429749, -606.313, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", 1122.101, -950.5449, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", 1122.101, -6.315292, -950.5449, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", -210.3729, -275.5148, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", -210.3729, -8.429749, -275.5148, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", 313.7128, -207.9225, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", 313.7128, 11.58675, -207.9225, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", 169.6301, -26.19598, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", 169.6301, -6.324041, -26.19598, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", -175.0121, 145.8802, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", -175.0121, 9.23955, 145.8802, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", 410.1271, 316.7431, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", 410.1271, -6.496033, 316.7431, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", 119.3174, 586.6188, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", 119.3174, -56.2809, 586.6188, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", -221.8806, 824.5059, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", -221.8806, -57.12021, 824.5059, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", 154.8733, -383.2528, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", 154.8733, -8.060679, -383.2528, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		// Orb Fragment
 		//-------------------------------------------------------------------------
-		AddNpc(153105, "Orb Fragment", "d_underfortress_30_3", -593.2808, 365.7958, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE");
+		AddNpc(8, 153105, "Orb Fragment", "d_underfortress_30_3", -593.2808, 107.325, 365.7958, 98, "UNDER30_3_EVENT1_OBJ2", "UNDER30_3_EVENT1_OBJ2_UNHIDE", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(153059, " ", "d_underfortress_30_3", 34.58619, 154.9378, 90, "DELIVERY_CHARGES_GAME");
+		AddNpc(9, 153059, " ", "d_underfortress_30_3", 34.58619, -6.496062, 154.9378, 90, "DELIVERY_CHARGES_GAME", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152027, " ", "d_underfortress_30_3", 85.71805, 1887.837, 83, "UNDER30_3_NUMBER_MIXING");
+		AddNpc(10, 152027, " ", "d_underfortress_30_3", 85.71805, -57.03796, 1887.837, 83, "UNDER30_3_NUMBER_MIXING", "", "");
+		AddNpc(11, 154005, "", "d_underfortress_30_3", 1102.012, 111.5117, 339.5, 90, "", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_underfortress_30_3", 1106.082, 65.93469, 90, "", "UNDER30_3_EVENT2_SUB1_CONTROL", "");
+		AddNpc(12, 20026, "", "d_underfortress_30_3", 1106.082, 107.3477, 65.93469, 90, "", "UNDER30_3_EVENT2_SUB1_CONTROL", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_underfortress_30_3", 1099.094, 654.282, 90, "", "UNDER30_3_EVENT2_SUB2_CONTROL", "");
+		AddNpc(13, 20026, "", "d_underfortress_30_3", 1099.094, 107.9523, 654.282, 90, "", "UNDER30_3_EVENT2_SUB2_CONTROL", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151029, " ", "d_underfortress_30_3", 833.1255, 120.4914, -7, "UNDER30_3_EVENT2_BOX");
+		AddNpc(15, 151029, " ", "d_underfortress_30_3", 833.1255, 107.7319, 120.4914, -7, "UNDER30_3_EVENT2_BOX", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151029, " ", "d_underfortress_30_3", 1252.4, -68.82491, 90, "UNDER30_3_EVENT2_BOX");
+		AddNpc(15, 151029, " ", "d_underfortress_30_3", 1252.4, 107.3094, -68.82491, 90, "UNDER30_3_EVENT2_BOX", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151029, " ", "d_underfortress_30_3", 893.9771, 527.5894, 90, "UNDER30_3_EVENT2_BOX");
+		AddNpc(15, 151029, " ", "d_underfortress_30_3", 893.9771, 108.157, 527.5894, 90, "UNDER30_3_EVENT2_BOX", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151029, " ", "d_underfortress_30_3", 1271.896, 245.7165, 90, "UNDER30_3_EVENT2_BOX");
+		AddNpc(15, 151029, " ", "d_underfortress_30_3", 1271.896, 107.5713, 245.7165, 90, "UNDER30_3_EVENT2_BOX", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(151029, " ", "d_underfortress_30_3", 1007.946, 887.3666, 90, "UNDER30_3_EVENT2_BOX");
+		AddNpc(15, 151029, " ", "d_underfortress_30_3", 1007.946, 107.3141, 887.3666, 90, "UNDER30_3_EVENT2_BOX", "", "");
+		AddNpc(16, 20024, "", "d_underfortress_30_3", 1022.331, 107.6942, -22.052, 90, "", "", "");
+		AddNpc(16, 20024, "", "d_underfortress_30_3", 1023.946, 107.4687, 110.7257, 90, "", "", "");
+		AddNpc(16, 20024, "", "d_underfortress_30_3", 1223.99, 107.4188, 119.7118, 90, "", "", "");
+		AddNpc(16, 20024, "", "d_underfortress_30_3", 1179.358, 107.3086, -81.87292, 90, "", "", "");
+		AddNpc(16, 20024, "", "d_underfortress_30_3", 1135.256, 107.4186, 155.0591, 90, "", "", "");
 	}
 }

@@ -14,134 +14,145 @@ public class DCmine02NpcScript : GeneralScript
 	{
 		// Crystal Mine 1F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Crystal Mine 1F", "d_cmine_02", -2419.326, -882.054, 250, "", "WS_ACT4_2_ACT4_1", "");
+		AddNpc(10, 40001, "Crystal Mine 1F", "d_cmine_02", -2419.326, 73.4874, -882.054, 250, "", "WS_ACT4_2_ACT4_1", "");
 		
 		// Crystal Mine 3F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Crystal Mine 3F", "d_cmine_02", 1821, 1924, 167, "", "WS_ACT4_2_ACT4_3", "");
+		AddNpc(11, 40001, "Crystal Mine 3F", "d_cmine_02", 1821, 157, 1924, 167, "", "WS_ACT4_2_ACT4_3", "");
 		
 		// Circulation Purifier
 		//-------------------------------------------------------------------------
-		AddNpc(151006, "Circulation Purifier", "d_cmine_02", -1615.406, 122.4234, 30, "MINE_2_PURIFY_1");
+		AddNpc(102, 151006, "Circulation Purifier", "d_cmine_02", -1615.406, 72.0209, 122.4234, 30, "MINE_2_PURIFY_1", "", "");
 		
 		// Auxiliary Purifier
 		//-------------------------------------------------------------------------
-		AddNpc(151006, "Auxiliary Purifier", "d_cmine_02", -573.3664, 495.0785, 90, "MINE_2_PURIFY_3");
+		AddNpc(104, 151006, "Auxiliary Purifier", "d_cmine_02", -573.3664, -9.275711, 495.0785, 90, "MINE_2_PURIFY_3", "", "");
 		
 		// Main Purifier
 		//-------------------------------------------------------------------------
-		AddNpc(151006, "Main Purifier", "d_cmine_02", 524.1791, 364.3578, 60, "MINE_2_PURIFY_7");
+		AddNpc(108, 151006, "Main Purifier", "d_cmine_02", 524.1791, -23.38343, 364.3578, 60, "MINE_2_PURIFY_7", "", "");
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "d_cmine_02", 1822, 321, 390, "WARP_D_CMINE_02", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(1, 40120, "Statue of Goddess Vakarine", "d_cmine_02", 1822, -10, 321, 390, "WARP_D_CMINE_02", "STOUP_CAMP", "STOUP_CAMP");
 		
 		// Book Shelf
 		//-------------------------------------------------------------------------
-		AddNpc(147372, "Book Shelf", "d_cmine_02", 1732, 145, 90, "BOOKSHELF_02");
+		AddNpc(5, 147372, "Book Shelf", "d_cmine_02", 1732, -10, 145, 90, "BOOKSHELF_02", "", "");
 		
 		// Man in Hiding
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Man in Hiding", "d_cmine_02", 1860, 580, 90, "CMINE_02_HIDEMAN");
+		AddNpc(520, 20025, "Man in Hiding", "d_cmine_02", 1860, -10, 580, 90, "CMINE_02_HIDEMAN", "", "");
 		
 		// Foods left
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Foods left", "d_cmine_02", 1808, 430, 90, "CMINE_FOOD_01");
+		AddNpc(521, 20025, "Foods left", "d_cmine_02", 1808, -11, 430, 90, "CMINE_FOOD_01", "", "");
 		
 		// Wine Cask 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Wine Cask ", "d_cmine_02", 1822, 89, 90, "CMINE_FOOD_04");
+		AddNpc(522, 20025, "Wine Cask ", "d_cmine_02", 1822, -10, 89, 90, "CMINE_FOOD_04", "", "");
 		
 		// Preserved food
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "Preserved food", "d_cmine_02", 1926, 384, 90, "CMINE_FOOD_03");
+		AddNpc(523, 20025, "Preserved food", "d_cmine_02", 1926, -10, 384, 90, "CMINE_FOOD_03", "", "");
 		
 		// JOB_SWORDMAN1
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "JOB_SWORDMAN1", "d_cmine_02", 1023, 1181, 90, "", "JOB_SWORDMAN1", "");
+		AddNpc(150, 20026, "JOB_SWORDMAN1", "d_cmine_02", 1023, -91, 1181, 90, "", "JOB_SWORDMAN1", "");
 		
 		// Business Guide
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Business Guide", "d_cmine_02", 1537, 417, 360, "D_CMINE_02_BOARD01");
+		AddNpc(529, 40070, "Business Guide", "d_cmine_02", 1537, 79, 417, 360, "D_CMINE_02_BOARD01", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", -2354.144, 73.4874, -826.3164, 90, "", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", 1824.37, -10.6245, 453.9159, 90, "", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", 1774.89, -10.6245, 196.6832, 90, "", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", 1531.141, 78.78223, 323.647, 90, "", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "d_cmine_02", 1876.55, -1519.923, 90, "", "JOB_DIEVDIRBYS2_TRIGGER", "");
+		AddNpc(539, 20026, "", "d_cmine_02", 1876.55, 140.4492, -1519.923, 90, "", "JOB_DIEVDIRBYS2_TRIGGER", "");
 		
 		// District 3 Purifier Pipe
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "District 3 Purifier Pipe", "d_cmine_02", -1309.593, -737.3552, 90, "MINE_2_CRYSTAL_2_PIPE");
+		AddNpc(540, 147469, "District 3 Purifier Pipe", "d_cmine_02", -1309.593, 80.8234, -737.3552, 90, "MINE_2_CRYSTAL_2_PIPE", "", "", 1);
 		
 		// District 2 Purifier Pipe
 		//-------------------------------------------------------------------------
-		AddNpc(151020, "District 2 Purifier Pipe", "d_cmine_02", -1814.553, 939.6089, 90, "MINE_2_CRYSTAL_3_PIPE");
+		AddNpc(541, 151020, "District 2 Purifier Pipe", "d_cmine_02", -1814.553, 140.9554, 939.6089, 90, "MINE_2_CRYSTAL_3_PIPE", "", "", 1);
 		
 		// MINE_2_CRYSTAL_3_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "MINE_2_CRYSTAL_3_TRIGGER", "d_cmine_02", -1555.327, 894.7687, 90, "", "MINE_2_CRYSTAL_3_TRIGGER", "");
+		AddNpc(542, 20026, "MINE_2_CRYSTAL_3_TRIGGER", "d_cmine_02", -1555.327, 140.9554, 894.7687, 90, "", "MINE_2_CRYSTAL_3_TRIGGER", "");
 		
 		// Magic Supply Device
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Magic Supply Device", "d_cmine_02", -789.3679, 1148.01, 90, "MINE_2_CRYSTAL_7_ENERGY");
+		AddNpc(543, 147469, "Magic Supply Device", "d_cmine_02", -789.3679, -10, 1148.01, 90, "MINE_2_CRYSTAL_7_ENERGY", "", "");
 		
 		// MINE_2_CRYSTAL_10_TRIGGER1
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "MINE_2_CRYSTAL_10_TRIGGER1", "d_cmine_02", -87.92126, 942.1158, 93, "", "MINE_2_CRYSTAL_10_TRIGGER1", "");
+		AddNpc(544, 20026, "MINE_2_CRYSTAL_10_TRIGGER1", "d_cmine_02", -87.92126, -28.30437, 942.1158, 93, "", "MINE_2_CRYSTAL_10_TRIGGER1", "");
 		
 		// MINE_2_CRYSTAL_10_TRIGGER2
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "MINE_2_CRYSTAL_10_TRIGGER2", "d_cmine_02", 643.9673, 674.8793, 90, "", "MINE_2_CRYSTAL_10_TRIGGER2", "");
+		AddNpc(545, 20026, "MINE_2_CRYSTAL_10_TRIGGER2", "d_cmine_02", 643.9673, -83.30215, 674.8793, 90, "", "MINE_2_CRYSTAL_10_TRIGGER2", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "d_cmine_02", 338.033, 1095.11, 90, "MINE_2_CRYSTAL_10_OIL");
+		AddNpc(546, 147469, " ", "d_cmine_02", 338.033, -98.2769, 1095.11, 90, "MINE_2_CRYSTAL_10_OIL", "", "");
 		
 		// Torn-out Purifier Pipe
 		//-------------------------------------------------------------------------
-		AddNpc(151017, "Torn-out Purifier Pipe", "d_cmine_02", 1208.371, -1067.293, 90, "MINE_2_CRYSTAL_16_PART");
+		AddNpc(547, 151017, "Torn-out Purifier Pipe", "d_cmine_02", 1208.371, -36.46835, -1067.293, 90, "MINE_2_CRYSTAL_16_PART", "", "", 1);
 		
 		// Torn-out Purifier Pipe
 		//-------------------------------------------------------------------------
-		AddNpc(151017, "Torn-out Purifier Pipe", "d_cmine_02", 1144.433, -1485.567, 180, "MINE_2_CRYSTAL_16_PART");
+		AddNpc(547, 151017, "Torn-out Purifier Pipe", "d_cmine_02", 1144.433, 36.50195, -1485.567, 180, "MINE_2_CRYSTAL_16_PART", "", "", 1);
 		
 		// Torn-out Purifier Pipe
 		//-------------------------------------------------------------------------
-		AddNpc(151017, "Torn-out Purifier Pipe", "d_cmine_02", 2012.121, -1657.709, 270, "MINE_2_CRYSTAL_16_PART");
+		AddNpc(547, 151017, "Torn-out Purifier Pipe", "d_cmine_02", 2012.121, 139.4972, -1657.709, 270, "MINE_2_CRYSTAL_16_PART", "", "", 1);
 		
 		// Torn-out Purifier Pipe
 		//-------------------------------------------------------------------------
-		AddNpc(151017, "Torn-out Purifier Pipe", "d_cmine_02", 2066.269, -982.6493, 360, "MINE_2_CRYSTAL_16_PART");
+		AddNpc(547, 151017, "Torn-out Purifier Pipe", "d_cmine_02", 2066.269, 140.4312, -982.6493, 360, "MINE_2_CRYSTAL_16_PART", "", "", 1);
 		
 		// Main Purifier Parts
 		//-------------------------------------------------------------------------
-		AddNpc(151016, "Main Purifier Parts", "d_cmine_02", 1558.729, -468.1057, 90, "MINE_2_CRYSTAL_20_PART");
+		AddNpc(548, 151016, "Main Purifier Parts", "d_cmine_02", 1558.729, -29.5969, -468.1057, 90, "MINE_2_CRYSTAL_20_PART", "", "", 1);
 		
 		// MINE_2_CRYSTAL_20_TRIGGER
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "MINE_2_CRYSTAL_20_TRIGGER", "d_cmine_02", 1654.14, -802.7938, 90, "", "MINE_2_CRYSTAL_20_TRIGGER", "");
+		AddNpc(549, 20026, "MINE_2_CRYSTAL_20_TRIGGER", "d_cmine_02", 1654.14, -28.95855, -802.7938, 90, "", "MINE_2_CRYSTAL_20_TRIGGER", "");
 		
 		// MINE_2_CRYSTAL_10_TRIGGER1
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "MINE_2_CRYSTAL_10_TRIGGER1", "d_cmine_02", -156.4412, 1019.16, 90, "", "MINE_2_CRYSTAL_10_TRIGGER1", "");
+		AddNpc(544, 20026, "MINE_2_CRYSTAL_10_TRIGGER1", "d_cmine_02", -156.4412, -27.37204, 1019.16, 90, "", "MINE_2_CRYSTAL_10_TRIGGER1", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_cmine_02", 1509.99, 853.82, 90, "TREASUREBOX_LV_D_CMINE_02550");
+		AddNpc(550, 147392, "Lv1 Treasure Chest", "d_cmine_02", 1509.99, 80.69, 853.82, 90, "TREASUREBOX_LV_D_CMINE_02550", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_cmine_02", -349.39, 1235.15, 90, "TREASUREBOX_LV_D_CMINE_02551");
+		AddNpc(551, 147392, "Lv1 Treasure Chest", "d_cmine_02", -349.39, -27.2, 1235.15, 90, "TREASUREBOX_LV_D_CMINE_02551", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", -1814.961, 140.9554, 939.2086, 90, "", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", -569.6202, -8.926736, 491.7698, 90, "", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", -792.2648, -21.4888, 1154.234, 90, "", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", 538.5278, -19.37944, 350.0461, 90, "", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", 1817.58, 157.0175, 1888.407, 90, "", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", -1376.324, 57.8234, -811.4565, 90, "", "", "");
+		AddNpc(536, 147364, "Field Gen x", "d_cmine_02", -1630.5, 71.99332, 108.8248, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "d_cmine_02", 142.58, 189.01, 90, "TREASUREBOX_LV_D_CMINE_02553");
+		AddNpc(553, 147392, "Lv1 Treasure Chest", "d_cmine_02", 142.58, 8.91, 189.01, 90, "TREASUREBOX_LV_D_CMINE_02553", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20042, "", "d_cmine_02", 754.1545, 1028.048, 90, "", "MASTER_HIGHLANDER2_3_TRIGGER", "");
+		AddNpc(554, 20042, "", "d_cmine_02", 754.1545, -104.1961, 1028.048, 90, "", "MASTER_HIGHLANDER2_3_TRIGGER", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20026, " ", "d_cmine_02", 1730.303, 784.8629, 90, "", "MASTER_CRYOMANCER2_2_TRIGGER", "");
+		AddNpc(555, 20026, " ", "d_cmine_02", 1730.303, 80.5898, 784.8629, 90, "", "MASTER_CRYOMANCER2_2_TRIGGER", "");
 	}
 }

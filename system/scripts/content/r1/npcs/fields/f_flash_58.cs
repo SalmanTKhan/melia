@@ -14,214 +14,216 @@ public class FFlash58NpcScript : GeneralScript
 	{
 		// Coastal Fortress
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Coastal Fortress", "f_flash_58", -159.4244, -2051.354, 3, "", "FLASH_58_TO_FLASH_29_1", "");
+		AddNpc(1, 40001, "Coastal Fortress", "f_flash_58", -159.4244, 407.6, -2051.354, 3, "", "FLASH_58_TO_FLASH_29_1", "");
 		
 		// Inner Enceinte District
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Inner Enceinte District", "f_flash_58", 2241.041, -1197.672, 90, "", "FLASH_58_TO_FLASH_64", "");
+		AddNpc(2, 40001, "Inner Enceinte District", "f_flash_58", 2241.041, 410.9541, -1197.672, 90, "", "FLASH_58_TO_FLASH_64", "");
 		
 		// Svitrigaila
 		//-------------------------------------------------------------------------
-		AddNpc(156023, "Svitrigaila", "f_flash_58", -231.9707, -954.7818, 12, "FLASH_58_SVTRIGAILA");
+		AddNpc(4, 156023, "Svitrigaila", "f_flash_58", -231.9707, 407.5999, -954.7818, 12, "FLASH_58_SVTRIGAILA", "", "", 0);
+		AddNpc(5, 147364, "There is no regeneration of monsters", "f_flash_58", -248.9047, 407.1871, -935.7498, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152056, " ", "f_flash_58", -100.3036, -1454.956, 203, "FLASH_SOUL_COLLECTOR_S1_D", "FLASH_SOUL_COLLECTOR_S1_E");
+		AddNpc(6, 152056, " ", "f_flash_58", -100.3036, 407.6, -1454.956, 203, "FLASH_SOUL_COLLECTOR_S1_D", "FLASH_SOUL_COLLECTOR_S1_E", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152056, " ", "f_flash_58", -730.5693, 838.3125, 39, "FLASH_SOUL_COLLECTOR_S2_D", "FLASH_SOUL_COLLECTOR_S2_E");
+		AddNpc(7, 152056, " ", "f_flash_58", -730.5693, 246.9634, 838.3125, 39, "FLASH_SOUL_COLLECTOR_S2_D", "FLASH_SOUL_COLLECTOR_S2_E", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152056, " ", "f_flash_58", 2335.307, 193.641, 180, "FLASH_SOUL_COLLECTOR_S3_D", "FLASH_SOUL_COLLECTOR_S3_E");
+		AddNpc(8, 152056, " ", "f_flash_58", 2335.307, 234.4149, 193.641, 180, "FLASH_SOUL_COLLECTOR_S3_D", "FLASH_SOUL_COLLECTOR_S3_E", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152055, " ", "f_flash_58", 841.31, 444.9, 42, "FLASH_SOUL_COLLECTOR");
+		AddNpc(9, 152055, " ", "f_flash_58", 841.31, 382.4338, 444.9, 42, "FLASH_SOUL_COLLECTOR", "", "", 0);
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_58", -0.2210999, -585.1302, 2, "FLASH_58_PETRIFACTION");
+		AddNpc(12, 154023, "Petrified Soldier", "f_flash_58", -0.2210999, 285.162, -585.1302, 2, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154027, "Petrified Soldier", "f_flash_58", -36.78524, 958.9805, 254, "FLASH_58_PETRIFACTION");
+		AddNpc(14, 154027, "Petrified Soldier", "f_flash_58", -36.78524, 204.8384, 958.9805, 254, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154031, "Petrified Grave Robber", "f_flash_58", -855.1399, 122.8793, 90, "FLASH_58_PETRIFACTION");
+		AddNpc(15, 154031, "Petrified Grave Robber", "f_flash_58", -855.1399, 249.8441, 122.8793, 90, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Box
 		//-------------------------------------------------------------------------
-		AddNpc(154035, "Petrified Box", "f_flash_58", -248.2362, -130.5176, 143, "FLASH_58_PETRIFACTION");
+		AddNpc(16, 154035, "Petrified Box", "f_flash_58", -248.2362, 285.162, -130.5176, 143, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Box
 		//-------------------------------------------------------------------------
-		AddNpc(154035, "Petrified Box", "f_flash_58", -213.7281, 610.89, 173, "FLASH_58_PETRIFACTION");
+		AddNpc(16, 154035, "Petrified Box", "f_flash_58", -213.7281, 223.6598, 610.89, 173, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Box
 		//-------------------------------------------------------------------------
-		AddNpc(154035, "Petrified Box", "f_flash_58", -139.1798, 1341.125, 174, "FLASH_58_PETRIFACTION");
+		AddNpc(16, 154035, "Petrified Box", "f_flash_58", -139.1798, 204.6379, 1341.125, 174, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 2107.799, 244.0753, 90, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 2107.799, 234.4149, 244.0753, 90, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 2175.326, -472.3681, 182, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 2175.326, 314.7893, -472.3681, 182, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 2393.364, -423.1028, 153, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 2393.364, 314.7893, -423.1028, 153, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 2148.512, -242.434, -46, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 2148.512, 314.7893, -242.434, -46, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 1820.089, -34.40541, -18, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 1820.089, 274.4157, -34.40541, -18, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 1834.97, 262.5416, 189, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 1834.97, 261.1196, 262.5416, 189, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 1825.777, -179.0226, 90, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 1825.777, 274.6332, -179.0226, 90, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 2270.444, -22.73453, 196, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 2270.444, 234.2144, -22.73453, 196, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 1162.266, 312.5594, 90, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 1162.266, 374.9737, 312.5594, 90, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// Petrified Monster
 		//-------------------------------------------------------------------------
-		AddNpc(152074, "Petrified Monster", "f_flash_58", 1908.865, 382.2201, -64, "FLASH_58_PETRIFICATION_MON");
+		AddNpc(17, 152074, "Petrified Monster", "f_flash_58", 1908.865, 247.0956, 382.2201, -64, "FLASH_58_PETRIFICATION_MON", "", "", 1);
 		
 		// HIddenTrigger
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "HIddenTrigger", "f_flash_58", 2339.401, 192.2699, 90, "FLASH_58_SQ_060_D");
+		AddNpc(18, 20026, "HIddenTrigger", "f_flash_58", 2339.401, 234.4149, 192.2699, 90, "FLASH_58_SQ_060_D", "", "");
 		
 		// Petrified Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(154023, "Petrified Soldier", "f_flash_58", 28.87658, -408.3541, 90, "FLASH_58_PETRIFACTION");
+		AddNpc(12, 154023, "Petrified Soldier", "f_flash_58", 28.87658, 284.9615, -408.3541, 90, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154031, "Petrified Grave Robber", "f_flash_58", -227.2038, 597.5536, 90, "FLASH_58_PETRIFACTION");
+		AddNpc(15, 154031, "Petrified Grave Robber", "f_flash_58", -227.2038, 223.6598, 597.5536, 90, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154031, "Petrified Grave Robber", "f_flash_58", -136.3342, 1379.469, 90, "FLASH_58_PETRIFACTION");
+		AddNpc(15, 154031, "Petrified Grave Robber", "f_flash_58", -136.3342, 204.6379, 1379.469, 90, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154031, "Petrified Grave Robber", "f_flash_58", -545.3301, 626.7958, 90, "FLASH_58_PETRIFACTION");
+		AddNpc(15, 154031, "Petrified Grave Robber", "f_flash_58", -545.3301, 223.6598, 626.7958, 90, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154024, "Petrified Grave Robber", "f_flash_58", -1302.627, 210.8961, 90, "FLASH_58_PETRIFACTION");
+		AddNpc(13, 154024, "Petrified Grave Robber", "f_flash_58", -1302.627, 249.6436, 210.8961, 90, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154024, "Petrified Grave Robber", "f_flash_58", 111.7691, -115.1703, 90, "FLASH_58_PETRIFACTION");
+		AddNpc(13, 154024, "Petrified Grave Robber", "f_flash_58", 111.7691, 284.9615, -115.1703, 90, "FLASH_58_PETRIFACTION", "", "");
 		
 		// Petrified Grave Robber
 		//-------------------------------------------------------------------------
-		AddNpc(154024, "Petrified Grave Robber", "f_flash_58", -280.0058, 958.2896, 90, "FLASH_58_PETRIFACTION");
+		AddNpc(13, 154024, "Petrified Grave Robber", "f_flash_58", -280.0058, 204.6379, 958.2896, 90, "FLASH_58_PETRIFACTION", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47201, " ", "f_flash_58", -1040.058, -640.5891, 90, "FLASH_58_GRASS");
+		AddNpc(11, 47201, " ", "f_flash_58", -1040.058, 323.0115, -640.5891, 90, "FLASH_58_GRASS", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47201, " ", "f_flash_58", -795.5212, -511.0936, 90, "FLASH_58_GRASS");
+		AddNpc(11, 47201, " ", "f_flash_58", -795.5212, 306.8801, -511.0936, 90, "FLASH_58_GRASS", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47201, " ", "f_flash_58", -926.6478, -356.5558, 90, "FLASH_58_GRASS");
+		AddNpc(11, 47201, " ", "f_flash_58", -926.6478, 306.8801, -356.5558, 90, "FLASH_58_GRASS", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47201, " ", "f_flash_58", -1050.605, -100.4761, 90, "FLASH_58_GRASS");
+		AddNpc(11, 47201, " ", "f_flash_58", -1050.605, 249.8996, -100.4761, 90, "FLASH_58_GRASS", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47201, " ", "f_flash_58", -1286.655, 162.551, 90, "FLASH_58_GRASS");
+		AddNpc(11, 47201, " ", "f_flash_58", -1286.655, 249.6436, 162.551, 90, "FLASH_58_GRASS", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47201, " ", "f_flash_58", -978.2576, 314.0236, 90, "FLASH_58_GRASS");
+		AddNpc(11, 47201, " ", "f_flash_58", -978.2576, 249.6436, 314.0236, 90, "FLASH_58_GRASS", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47201, " ", "f_flash_58", -615.7664, 541.3718, 90, "FLASH_58_GRASS");
+		AddNpc(11, 47201, " ", "f_flash_58", -615.7664, 223.6598, 541.3718, 90, "FLASH_58_GRASS", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47201, " ", "f_flash_58", -511.0788, 453.6942, 90, "FLASH_58_GRASS");
+		AddNpc(11, 47201, " ", "f_flash_58", -511.0788, 223.6598, 453.6942, 90, "FLASH_58_GRASS", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47201, " ", "f_flash_58", -859.7701, 182.8293, 90, "FLASH_58_GRASS");
+		AddNpc(11, 47201, " ", "f_flash_58", -859.7701, 249.6436, 182.8293, 90, "FLASH_58_GRASS", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152072, " ", "f_flash_58", 2335.307, 193.641, 90, "FLASH_SOUL_COLLECTOR_S3_1_D");
+		AddNpc(19, 152072, " ", "f_flash_58", 2335.307, 234.4149, 193.641, 90, "FLASH_SOUL_COLLECTOR_S3_1_D", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152073, " ", "f_flash_58", 2335.307, 193.641, 90, "FLASH_SOUL_COLLECTOR_S3_2_D");
+		AddNpc(20, 152073, " ", "f_flash_58", 2335.307, 234.4149, 193.641, 90, "FLASH_SOUL_COLLECTOR_S3_2_D", "", "", 1);
 		
 		// Statue of Goddess Vakarine
 		//-------------------------------------------------------------------------
-		AddNpc(40120, "Statue of Goddess Vakarine", "f_flash_58", -694.7843, -1093.407, 45, "WARP_F_FLASH_58", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(24, 40120, "Statue of Goddess Vakarine", "f_flash_58", -694.7843, 407.5999, -1093.407, 45, "WARP_F_FLASH_58", "STOUP_CAMP", "STOUP_CAMP");
+		AddNpc(5, 147364, "There is no regeneration of monsters", "f_flash_58", -694.7843, 407.5999, -1093.407, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_flash_58", -994.79, -1058.82, -45, "TREASUREBOX_LV_F_FLASH_581000");
+		AddNpc(1000, 147392, "Lv1 Treasure Chest", "f_flash_58", -994.79, 323.13, -1058.82, -45, "TREASUREBOX_LV_F_FLASH_581000", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_flash_58", 2080.09, 6.08, 90, "FLASH58_HIDDEN_OBJ4");
+		AddNpc(1001, 20025, "", "f_flash_58", 2080.09, 234.21, 6.08, 90, "FLASH58_HIDDEN_OBJ4", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_flash_58", -392.92, 492.94, 90, "FLASH29_1_HIDDENQ1_OBJ1");
+		AddNpc(1002, 20025, "", "f_flash_58", -392.92, 223.66, 492.94, 90, "FLASH29_1_HIDDENQ1_OBJ1", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_flash_58", 140.04, -316.45, 90, "FLASH29_1_HIDDENQ1_OBJ2");
+		AddNpc(1003, 20025, "", "f_flash_58", 140.04, 284.96, -316.45, 90, "FLASH29_1_HIDDENQ1_OBJ2", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_flash_58", -1037.22, 172.5, 90, "FLASH29_1_HIDDENQ1_OBJ3");
+		AddNpc(1004, 20025, "", "f_flash_58", -1037.22, 249.64, 172.5, 90, "FLASH29_1_HIDDENQ1_OBJ3", "", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_flash_58", -176.75, 1099.89, 90, "FLASH29_1_HIDDENQ1_OBJ4");
+		AddNpc(1005, 20025, "", "f_flash_58", -176.75, 204.64, 1099.89, 90, "FLASH29_1_HIDDENQ1_OBJ4", "", "", 1);
 		
 		// Singing Sphere
 		//-------------------------------------------------------------------------
-		AddNpc(155097, "Singing Sphere", "f_flash_58", -390.58, 491.69, 90, "", "FLASH29_1_HIDDENQ1_ORB1", "");
+		AddNpc(1006, 155097, "Singing Sphere", "f_flash_58", -390.58, 223.66, 491.69, 90, "", "FLASH29_1_HIDDENQ1_ORB1", "");
 		
 		// Singing Sphere
 		//-------------------------------------------------------------------------
-		AddNpc(155097, "Singing Sphere", "f_flash_58", 141.6, -317.33, 90, "", "FLASH29_1_HIDDENQ1_ORB2", "");
+		AddNpc(1007, 155097, "Singing Sphere", "f_flash_58", 141.6, 284.96, -317.33, 90, "", "FLASH29_1_HIDDENQ1_ORB2", "");
 		
 		// Singing Sphere
 		//-------------------------------------------------------------------------
-		AddNpc(155097, "Singing Sphere", "f_flash_58", -1036.61, 172.1551, 90, "", "FLASH29_1_HIDDENQ1_ORB3", "");
+		AddNpc(1008, 155097, "Singing Sphere", "f_flash_58", -1036.61, 249.64, 172.1551, 90, "", "FLASH29_1_HIDDENQ1_ORB3", "");
 		
 		// Singing Sphere
 		//-------------------------------------------------------------------------
-		AddNpc(155097, "Singing Sphere", "f_flash_58", -175.5614, 1099.336, 90, "", "FLASH29_1_HIDDENQ1_ORB4", "");
+		AddNpc(1009, 155097, "Singing Sphere", "f_flash_58", -175.5614, 204.64, 1099.336, 90, "", "FLASH29_1_HIDDENQ1_ORB4", "");
 	}
 }

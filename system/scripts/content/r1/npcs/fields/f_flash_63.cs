@@ -14,282 +14,294 @@ public class FFlash63NpcScript : GeneralScript
 	{
 		// Verkti Square
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Verkti Square", "f_flash_63", -582, -2292, 315, "", "FLASH63_FLASH59", "");
+		AddNpc(1, 40001, "Verkti Square", "f_flash_63", -582, 122, -2292, 315, "", "FLASH63_FLASH59", "");
 		
 		// Inner Enceinte District
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Inner Enceinte District", "f_flash_63", -140, 1456, 200, "", "FLASH63_FLASH64", "");
+		AddNpc(2, 40001, "Inner Enceinte District", "f_flash_63", -140, 224, 1456, 200, "", "FLASH63_FLASH64", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147427, " ", "f_flash_63", 900, 658, 360, "", "FLASH_63_ELT_PART1", "");
+		AddNpc(13, 147427, " ", "f_flash_63", 900, 234, 658, 360, "", "FLASH_63_ELT_PART1", "");
 		
 		// [Royal Army]{nl}Rofdel
 		//-------------------------------------------------------------------------
-		AddNpc(20141, "[Royal Army]{nl}Rofdel", "f_flash_63", 936.071, 920.2468, 3, "FLASH63_ROFHDEL");
+		AddNpc(20, 20141, "[Royal Army]{nl}Rofdel", "f_flash_63", 936.071, 584.0526, 920.2468, 3, "FLASH63_ROFHDEL", "", "");
 		
 		// [Knights of Kaliss]{nl}Adjutant General Hans
 		//-------------------------------------------------------------------------
-		AddNpc(20128, "[Knights of Kaliss]{nl}Adjutant General Hans", "f_flash_63", 180.1075, -1735.031, 88, "FLASH63_HANS");
+		AddNpc(22, 20128, "[Knights of Kaliss]{nl}Adjutant General Hans", "f_flash_63", 180.1075, 122.5515, -1735.031, 88, "FLASH63_HANS", "", "");
 		
 		// [Amanda Grave Robbers]{nl}Stephonas
 		//-------------------------------------------------------------------------
-		AddNpc(20103, "[Amanda Grave Robbers]{nl}Stephonas", "f_flash_63", -539.7473, 226.9091, 73, "FLASH63_STEPONAS");
+		AddNpc(23, 20103, "[Amanda Grave Robbers]{nl}Stephonas", "f_flash_63", -539.7473, 207.2736, 226.9091, 73, "FLASH63_STEPONAS", "", "");
+		AddNpc(24, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 770.4009, 40.3981, -1287.794, 73, "", "", "");
+		AddNpc(25, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 764.1756, 40.3981, -1305.293, 43, "", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 893.1987, 1018.037, 162, "FLASH63_SOLDIER03");
+		AddNpc(26, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 893.1987, 584.0526, 1018.037, 162, "FLASH63_SOLDIER03", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 915.0889, 1054.992, 90, "FLASH63_SOLDIER03");
+		AddNpc(26, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 915.0889, 584.0526, 1054.992, 90, "FLASH63_SOLDIER03", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 1040.353, 1180.275, 76, "FLASH63_SOLDIER03");
+		AddNpc(26, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 1040.353, 583.4082, 1180.275, 76, "FLASH63_SOLDIER03", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 1077.393, 1119.077, 166, "FLASH63_SOLDIER03");
+		AddNpc(26, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 1077.393, 583.9056, 1119.077, 166, "FLASH63_SOLDIER03", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 835.463, 859.7575, 36, "FLASH63_SOLDIER03");
+		AddNpc(26, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 835.463, 584.0526, 859.7575, 36, "FLASH63_SOLDIER03", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 922.4845, 767.9374, 5, "FLASH63_SOLDIER03");
+		AddNpc(26, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 922.4845, 584.0526, 767.9374, 5, "FLASH63_SOLDIER03", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(147495, "", "f_flash_63", -573.2405, 1123.12, 39, "FLASH63_SQ_08_NPC");
+		AddNpc(27, 147495, "", "f_flash_63", -573.2405, 265.6861, 1123.12, 39, "FLASH63_SQ_08_NPC", "", "", 0);
 		
 		// Floating Petrified Records
 		//-------------------------------------------------------------------------
-		AddNpc(147464, "Floating Petrified Records", "f_flash_63", 1670.39, 2212.521, 90, "FLASH63_SQ_10_NPC");
+		AddNpc(28, 147464, "Floating Petrified Records", "f_flash_63", 1670.39, 40.3981, 2212.521, 90, "FLASH63_SQ_10_NPC", "", "", 0);
 		
 		// Floating Petrified Records
 		//-------------------------------------------------------------------------
-		AddNpc(147464, "Floating Petrified Records", "f_flash_63", 1677.261, 1884.034, 90, "FLASH63_SQ_10_NPC");
+		AddNpc(28, 147464, "Floating Petrified Records", "f_flash_63", 1677.261, 40.3981, 1884.034, 90, "FLASH63_SQ_10_NPC", "", "", 0);
 		
 		// Floating Petrified Records
 		//-------------------------------------------------------------------------
-		AddNpc(147464, "Floating Petrified Records", "f_flash_63", 1484.55, 2107.142, 90, "FLASH63_SQ_10_NPC");
+		AddNpc(28, 147464, "Floating Petrified Records", "f_flash_63", 1484.55, 40.3981, 2107.142, 90, "FLASH63_SQ_10_NPC", "", "", 0);
 		
 		// Floating Petrified Records
 		//-------------------------------------------------------------------------
-		AddNpc(147464, "Floating Petrified Records", "f_flash_63", 1768.003, 2001.516, 90, "FLASH63_SQ_10_NPC");
+		AddNpc(28, 147464, "Floating Petrified Records", "f_flash_63", 1768.003, 40.3981, 2001.516, 90, "FLASH63_SQ_10_NPC", "", "", 0);
 		
 		// Floating Petrified Records
 		//-------------------------------------------------------------------------
-		AddNpc(147464, "Floating Petrified Records", "f_flash_63", 1460.052, 2346.67, 90, "FLASH63_SQ_10_NPC");
+		AddNpc(28, 147464, "Floating Petrified Records", "f_flash_63", 1460.052, 40.3981, 2346.67, 90, "FLASH63_SQ_10_NPC", "", "", 0);
 		
 		// Floating Petrified Records
 		//-------------------------------------------------------------------------
-		AddNpc(147464, "Floating Petrified Records", "f_flash_63", 1614.711, 2340.857, 90, "FLASH63_SQ_10_NPC");
+		AddNpc(28, 147464, "Floating Petrified Records", "f_flash_63", 1614.711, 40.3981, 2340.857, 90, "FLASH63_SQ_10_NPC", "", "", 0);
 		
 		// Floating Petrified Records
 		//-------------------------------------------------------------------------
-		AddNpc(147464, "Floating Petrified Records", "f_flash_63", 1452.546, 2152.976, 90, "FLASH63_SQ_10_NPC");
+		AddNpc(28, 147464, "Floating Petrified Records", "f_flash_63", 1452.546, 40.3981, 2152.976, 90, "FLASH63_SQ_10_NPC", "", "", 0);
 		
 		// Floating Petrified Records
 		//-------------------------------------------------------------------------
-		AddNpc(147464, "Floating Petrified Records", "f_flash_63", 1526.229, 2046.308, 90, "FLASH63_SQ_10_NPC");
+		AddNpc(28, 147464, "Floating Petrified Records", "f_flash_63", 1526.229, 40.3981, 2046.308, 90, "FLASH63_SQ_10_NPC", "", "", 0);
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", -317.8907, 625.213, -7, "FLASH63_SOLDIER04");
+		AddNpc(31, 10033, "[Royal Army]{nl}Guard", "f_flash_63", -317.8907, 165.6656, 625.213, -7, "FLASH63_SOLDIER04", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", -341.8607, 592.2758, 138, "FLASH63_SOLDIER04");
+		AddNpc(31, 10033, "[Royal Army]{nl}Guard", "f_flash_63", -341.8607, 165.6656, 592.2758, 138, "FLASH63_SOLDIER04", "", "");
 		
 		// Royal Army Propoganda
 		//-------------------------------------------------------------------------
-		AddNpc(154038, "Royal Army Propoganda", "f_flash_63", 459.9386, -550.6895, 90, "FLASH63_SQ_04_NPC");
+		AddNpc(30, 154038, "Royal Army Propoganda", "f_flash_63", 459.9386, 171.975, -550.6895, 90, "FLASH63_SQ_04_NPC", "", "", 0);
 		
 		// Royal Army Propoganda
 		//-------------------------------------------------------------------------
-		AddNpc(154038, "Royal Army Propoganda", "f_flash_63", 337.873, -522.7061, 90, "FLASH63_SQ_04_NPC");
+		AddNpc(30, 154038, "Royal Army Propoganda", "f_flash_63", 337.873, 171.975, -522.7061, 90, "FLASH63_SQ_04_NPC", "", "", 0);
 		
 		// Royal Army Propoganda
 		//-------------------------------------------------------------------------
-		AddNpc(154038, "Royal Army Propoganda", "f_flash_63", 293.7678, -594.7085, 90, "FLASH63_SQ_04_NPC");
+		AddNpc(30, 154038, "Royal Army Propoganda", "f_flash_63", 293.7678, 171.975, -594.7085, 90, "FLASH63_SQ_04_NPC", "", "", 0);
 		
 		// Royal Army Propoganda
 		//-------------------------------------------------------------------------
-		AddNpc(154038, "Royal Army Propoganda", "f_flash_63", 299.7356, -928.2861, 90, "FLASH63_SQ_04_NPC");
+		AddNpc(30, 154038, "Royal Army Propoganda", "f_flash_63", 299.7356, 132.2945, -928.2861, 90, "FLASH63_SQ_04_NPC", "", "", 0);
 		
 		// Royal Army Propoganda
 		//-------------------------------------------------------------------------
-		AddNpc(154038, "Royal Army Propoganda", "f_flash_63", 157.4787, -776.3956, 90, "FLASH63_SQ_04_NPC");
+		AddNpc(30, 154038, "Royal Army Propoganda", "f_flash_63", 157.4787, 140.9713, -776.3956, 90, "FLASH63_SQ_04_NPC", "", "", 0);
 		
 		// Royal Army Propoganda
 		//-------------------------------------------------------------------------
-		AddNpc(154038, "Royal Army Propoganda", "f_flash_63", -471.7918, -730.7011, 90, "FLASH63_SQ_04_NPC");
+		AddNpc(30, 154038, "Royal Army Propoganda", "f_flash_63", -471.7918, 197.0041, -730.7011, 90, "FLASH63_SQ_04_NPC", "", "", 0);
 		
 		// Royal Army Propoganda
 		//-------------------------------------------------------------------------
-		AddNpc(154038, "Royal Army Propoganda", "f_flash_63", -218.7813, -634.436, -11, "FLASH63_SQ_04_NPC");
+		AddNpc(30, 154038, "Royal Army Propoganda", "f_flash_63", -218.7813, 197.0041, -634.436, -11, "FLASH63_SQ_04_NPC", "", "", 0);
 		
 		// Royal Army Propoganda
 		//-------------------------------------------------------------------------
-		AddNpc(154038, "Royal Army Propoganda", "f_flash_63", -295.7634, -506.0117, 90, "FLASH63_SQ_04_NPC");
+		AddNpc(30, 154038, "Royal Army Propoganda", "f_flash_63", -295.7634, 197.0041, -506.0117, 90, "FLASH63_SQ_04_NPC", "", "", 0);
 		
 		// Royal Army Propoganda
 		//-------------------------------------------------------------------------
-		AddNpc(154038, "Royal Army Propoganda", "f_flash_63", 355.4945, -1052.731, 90, "FLASH63_SQ_04_NPC");
+		AddNpc(30, 154038, "Royal Army Propoganda", "f_flash_63", 355.4945, 132.2945, -1052.731, 90, "FLASH63_SQ_04_NPC", "", "", 0);
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 321.4395, -1054.209, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 321.4395, 132.2945, -1054.209, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 303.4334, -1016.475, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 303.4334, 132.2945, -1016.475, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 339.8505, -836.7756, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 339.8505, 132.2945, -836.7756, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 360.832, -867.6617, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 360.832, 132.2945, -867.6617, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 67.10105, -712.0497, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 67.10105, 147.0454, -712.0497, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 92.05774, -707.6588, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 92.05774, 146.6516, -707.6588, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 248.2476, -655.3961, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 248.2476, 171.975, -655.3961, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 253.1772, -542.5119, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 253.1772, 171.975, -542.5119, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 159.6217, -1096.825, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 159.6217, 168.0081, -1096.825, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 107.4721, -1045.503, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 107.4721, 171.975, -1045.503, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 439.1314, -490.3757, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 439.1314, 171.975, -490.3757, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// [Royal Army]{nl}Guard
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "[Royal Army]{nl}Guard", "f_flash_63", 483.9467, -597.3036, 90, "FLASH63_SQ_03_NPC");
+		AddNpc(33, 10033, "[Royal Army]{nl}Guard", "f_flash_63", 483.9467, 171.975, -597.3036, 90, "FLASH63_SQ_03_NPC", "", "");
 		
 		// Royal Army Notice Board
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Royal Army Notice Board", "f_flash_63", 266.673, -1212.052, 75, "FLASH63_SQ_12_01_NPC");
+		AddNpc(29, 40070, "Royal Army Notice Board", "f_flash_63", 266.673, 91.5508, -1212.052, 75, "FLASH63_SQ_12_01_NPC", "", "");
 		
 		// Royal Army Notice Board
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Royal Army Notice Board", "f_flash_63", 1067.846, -74.42194, 4, "FLASH63_SQ_12_02_NPC");
+		AddNpc(34, 40070, "Royal Army Notice Board", "f_flash_63", 1067.846, 41.7918, -74.42194, 4, "FLASH63_SQ_12_02_NPC", "", "");
 		
 		// Royal Army Notice Board
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Royal Army Notice Board", "f_flash_63", 1220.831, 2176.016, 59, "FLASH63_SQ_12_03_NPC");
+		AddNpc(35, 40070, "Royal Army Notice Board", "f_flash_63", 1220.831, 69.7814, 2176.016, 59, "FLASH63_SQ_12_03_NPC", "", "");
 		
 		// Royal Army Notice Board
 		//-------------------------------------------------------------------------
-		AddNpc(40070, "Royal Army Notice Board", "f_flash_63", 202.5879, 961.5613, 70, "FLASH63_SQ_12_04_NPC");
+		AddNpc(36, 40070, "Royal Army Notice Board", "f_flash_63", 202.5879, 196.8027, 961.5613, 70, "FLASH63_SQ_12_04_NPC", "", "");
+		AddNpc(39, 147365, "Gate Entrance x", "f_flash_63", -564.5791, 122.5515, -2349.814, 90, "", "", "");
+		AddNpc(39, 147365, "Gate Entrance x", "f_flash_63", -113.206, 224.5553, 1406.652, 90, "", "", "");
+		AddNpc(39, 147365, "Gate Entrance x", "f_flash_63", 973.6042, 584.0526, 870.4208, 90, "", "", "");
+		AddNpc(39, 147365, "Gate Entrance x", "f_flash_63", 1052.729, 584.0526, 1083.894, 90, "", "", "");
+		AddNpc(39, 147365, "Gate Entrance x", "f_flash_63", 934.8163, 234.1703, 574.6116, 90, "", "", "");
+		AddNpc(40, 147362, "Gate Entrance x", "f_flash_63", -478.8237, 212.4824, 210.8385, 90, "", "", "");
+		AddNpc(40, 147362, "Gate Entrance x", "f_flash_63", 238.2178, 121.2492, -1760.192, 90, "", "", "");
+		AddNpc(44, 147364, "FieldCantGen", "f_flash_63", 1769.993, 45.52155, 1017.971, 90, "", "", "");
 		
 		// Coastal Fortress
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Coastal Fortress", "f_flash_63", 1774.543, 1000.815, 126, "", "FLASH63_FLASH29_1", "");
+		AddNpc(43, 40001, "Coastal Fortress", "f_flash_63", 1774.543, 45.52155, 1000.815, 126, "", "FLASH63_FLASH29_1", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_flash_63", 1208.05, 1317.05, 45, "TREASUREBOX_LV_F_FLASH_631000");
+		AddNpc(1000, 147392, "Lv1 Treasure Chest", "f_flash_63", 1208.05, 424.94, 1317.05, 45, "TREASUREBOX_LV_F_FLASH_631000", "", "");
+		AddNpc(1001, 20025, "", "f_flash_63", 764.74, 100.51, 35.4, 90, "", "", "");
 		
 		// Guard Horton
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Guard Horton", "f_flash_63", 1034.462, 846.6659, -39, "FLASH63_SQ13");
+		AddNpc(1002, 10033, "Guard Horton", "f_flash_63", 1034.462, 584.05, 846.6659, -39, "FLASH63_SQ13", "", "");
 		
 		// Guard Manderson
 		//-------------------------------------------------------------------------
-		AddNpc(10033, "Guard Manderson", "f_flash_63", 1107.484, 1024.492, -52, "FLASH29_1_SQ_090");
+		AddNpc(1003, 10033, "Guard Manderson", "f_flash_63", 1107.484, 584.05, 1024.492, -52, "FLASH29_1_SQ_090", "", "");
 		
 		// Shiny Object
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Shiny Object", "f_flash_63", -13.39204, 469.5651, 90, "FLASH63_SQ13_OBJ1");
+		AddNpc(1004, 147469, "Shiny Object", "f_flash_63", -13.39204, 54.67, 469.5651, 90, "FLASH63_SQ13_OBJ1", "", "");
 		
 		// Shiny Object
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Shiny Object", "f_flash_63", -245.0632, 280.6084, 90, "FLASH63_SQ13_OBJ1");
+		AddNpc(1004, 147469, "Shiny Object", "f_flash_63", -245.0632, 54.77, 280.6084, 90, "FLASH63_SQ13_OBJ1", "", "");
 		
 		// Shiny Object
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Shiny Object", "f_flash_63", -253.4374, 13.94665, 90, "FLASH63_SQ13_OBJ1");
+		AddNpc(1004, 147469, "Shiny Object", "f_flash_63", -253.4374, 41.63, 13.94665, 90, "FLASH63_SQ13_OBJ1", "", "");
 		
 		// Shiny Object
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Shiny Object", "f_flash_63", 541.686, 247.7196, 90, "FLASH63_SQ13_OBJ1");
+		AddNpc(1004, 147469, "Shiny Object", "f_flash_63", 541.686, 41.63, 247.7196, 90, "FLASH63_SQ13_OBJ1", "", "");
 		
 		// Shiny Object
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Shiny Object", "f_flash_63", 282.4432, 426.3477, 90, "FLASH63_SQ13_OBJ1");
+		AddNpc(1004, 147469, "Shiny Object", "f_flash_63", 282.4432, 41.63, 426.3477, 90, "FLASH63_SQ13_OBJ1", "", "");
 		
 		// Shiny Object
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Shiny Object", "f_flash_63", 97.61593, -129.6475, 90, "FLASH63_SQ13_OBJ1");
+		AddNpc(1004, 147469, "Shiny Object", "f_flash_63", 97.61593, 41.63, -129.6475, 90, "FLASH63_SQ13_OBJ1", "", "");
 		
 		// Shiny Object
 		//-------------------------------------------------------------------------
-		AddNpc(147469, "Shiny Object", "f_flash_63", 136.04, 128.06, 90, "FLASH63_SQ13_OBJ1", "FLASH63_SQ13_OBJ2");
+		AddNpc(1005, 147469, "Shiny Object", "f_flash_63", 136.04, 55.94, 128.06, 90, "FLASH63_SQ13_OBJ1", "FLASH63_SQ13_OBJ2", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 467.8001, 2019.863, 90, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 467.8001, 142.51, 2019.863, 90, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 447.3084, 1803.525, 11, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 447.3084, 142.51, 1803.525, 11, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 780.8521, 1628.166, 193, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 780.8521, 142.51, 1628.166, 193, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 529.3438, 1537.62, 159, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 529.3438, 142.51, 1537.62, 159, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 211.7845, 1018.784, 151, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 211.7845, 196.8, 1018.784, 151, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 196.9241, 743.7415, 194, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 196.9241, 196.8, 743.7415, 194, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 621.8922, 865.069, 157, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 621.8922, 196.8, 865.069, 157, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 410.1506, 1167.965, 163, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 410.1506, 196.8, 1167.965, 163, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 632.7371, 1101.23, 227, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 632.7371, 196.8, 1101.23, 227, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 564.6517, 637.6407, 206, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 564.6517, 196.8, 637.6407, 206, "FLASH63_SQ14_OBJ", "", "");
 		
 		// Abandoned Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151067, "Abandoned Chest", "f_flash_63", 704.076, 1970.642, 90, "FLASH63_SQ14_OBJ");
+		AddNpc(1021, 151067, "Abandoned Chest", "f_flash_63", 704.076, 142.51, 1970.642, 90, "FLASH63_SQ14_OBJ", "", "");
+		AddNpc(1022, 160034, "Transportation Device", "f_flash_63", 909.8501, 234.1703, 669.9064, 90, "", "", "");
 	}
 }

@@ -14,218 +14,232 @@ public class FKatyn14NpcScript : GeneralScript
 	{
 		// Officer Danus
 		//-------------------------------------------------------------------------
-		AddNpc(20107, "Officer Danus", "f_katyn_14", 2598.086, -881.2695, 127, "KATYN14_LAIMUNAS");
+		AddNpc(1, 20107, "Officer Danus", "f_katyn_14", 2598.086, 81.8948, -881.2695, 127, "KATYN14_LAIMUNAS", "", "");
 		
 		// Rearguard Unit Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(20012, "Rearguard Unit Soldier", "f_katyn_14", 2579.814, -913.5851, 181, "KATYN14_LAIMUNAS_SOL", "KATYN14_LAIMUNAS_SOL");
+		AddNpc(2, 20012, "Rearguard Unit Soldier", "f_katyn_14", 2579.814, 81.8948, -913.5851, 181, "KATYN14_LAIMUNAS_SOL", "KATYN14_LAIMUNAS_SOL", "");
 		
 		// Rearguard Unit Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(20012, "Rearguard Unit Soldier", "f_katyn_14", 2637.587, -935.3638, 192, "KATYN14_LAIMUNAS_SOL", "KATYN14_LAIMUNAS_SOL");
+		AddNpc(2, 20012, "Rearguard Unit Soldier", "f_katyn_14", 2637.587, 81.8948, -935.3638, 192, "KATYN14_LAIMUNAS_SOL", "KATYN14_LAIMUNAS_SOL", "");
 		
 		// Senior Officer Philipas
 		//-------------------------------------------------------------------------
-		AddNpc(20125, "Senior Officer Philipas", "f_katyn_14", -61, -526, 80, "KATYN14_VACENIN");
+		AddNpc(3, 20125, "Senior Officer Philipas", "f_katyn_14", -61, 176, -526, 80, "KATYN14_VACENIN", "", "", 0);
 		
 		// Supplies Officer
 		//-------------------------------------------------------------------------
-		AddNpc(20107, "Supplies Officer", "f_katyn_14", 2630, -1979, 0, "KATYN14_SUPP", "KATYN14_GOBACK");
+		AddNpc(5, 20107, "Supplies Officer", "f_katyn_14", 2630, 81, -1979, 0, "KATYN14_SUPP", "KATYN14_GOBACK", "");
 		
 		// Supply Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10037, "Supply Soldier", "f_katyn_14", 2574.158, -2059.491, 258, "KATYN14_SUPP_SOL", "KATYN14_GOBACK");
+		AddNpc(6, 10037, "Supply Soldier", "f_katyn_14", 2574.158, 81.26158, -2059.491, 258, "KATYN14_SUPP_SOL", "KATYN14_GOBACK", "");
 		
 		// Supply Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10037, "Supply Soldier", "f_katyn_14", 2578.118, -1994.417, 268, "KATYN14_SUPP_SOL", "KATYN14_GOBACK");
+		AddNpc(6, 10037, "Supply Soldier", "f_katyn_14", 2578.118, 81.15304, -1994.417, 268, "KATYN14_SUPP_SOL", "KATYN14_GOBACK", "");
 		
 		// Supply Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10037, "Supply Soldier", "f_katyn_14", 2674.929, -2088.55, 73, "KATYN14_SUPP_SOL", "KATYN14_GOBACK");
+		AddNpc(6, 10037, "Supply Soldier", "f_katyn_14", 2674.929, 81.05309, -2088.55, 73, "KATYN14_SUPP_SOL", "KATYN14_GOBACK", "");
 		
 		// Supply Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(10037, "Supply Soldier", "f_katyn_14", 2704, -2021, 58, "KATYN14_SUPP_SOL", "KATYN14_GOBACK");
+		AddNpc(6, 10037, "Supply Soldier", "f_katyn_14", 2704, 80, -2021, 58, "KATYN14_SUPP_SOL", "KATYN14_GOBACK", "");
 		
 		// Soldier Roy
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Soldier Roy", "f_katyn_14", 1134, -1070, 0, "KATYN14_ROY");
+		AddNpc(7, 20016, "Soldier Roy", "f_katyn_14", 1134, 83, -1070, 0, "KATYN14_ROY", "", "", 0);
 		
 		// Squad Commander Johan
 		//-------------------------------------------------------------------------
-		AddNpc(20015, "Squad Commander Johan", "f_katyn_14", -1118.956, 1101.809, 0, "KATYN14_JOHN");
+		AddNpc(10, 20015, "Squad Commander Johan", "f_katyn_14", -1118.956, 321.3051, 1101.809, 0, "KATYN14_JOHN", "", "");
 		
 		// Dead Corpsman
 		//-------------------------------------------------------------------------
-		AddNpc(20020, "Dead Corpsman", "f_katyn_14", -1619.95, 888.5685, 0, "KATYN14_JOHN_SOL");
+		AddNpc(11, 20020, "Dead Corpsman", "f_katyn_14", -1619.95, 420.1405, 888.5685, 0, "KATYN14_JOHN_SOL", "", "");
 		
 		// Dead Corpsman
 		//-------------------------------------------------------------------------
-		AddNpc(20020, "Dead Corpsman", "f_katyn_14", -1890.823, 1107.384, 45, "KATYN14_JOHN_SOL");
+		AddNpc(11, 20020, "Dead Corpsman", "f_katyn_14", -1890.823, 464.3897, 1107.384, 45, "KATYN14_JOHN_SOL", "", "");
 		
 		// Dead Corpsman
 		//-------------------------------------------------------------------------
-		AddNpc(20020, "Dead Corpsman", "f_katyn_14", -2032.245, 869.3539, 90, "KATYN14_JOHN_SOL");
+		AddNpc(11, 20020, "Dead Corpsman", "f_katyn_14", -2032.245, 466.3713, 869.3539, 90, "KATYN14_JOHN_SOL", "", "");
 		
 		// Dead Corpsman
 		//-------------------------------------------------------------------------
-		AddNpc(20020, "Dead Corpsman", "f_katyn_14", -1576.653, 1210.507, 90, "KATYN14_JOHN_SOL");
+		AddNpc(11, 20020, "Dead Corpsman", "f_katyn_14", -1576.653, 466.32, 1210.507, 90, "KATYN14_JOHN_SOL", "", "");
 		
 		// Dead Corpsman
 		//-------------------------------------------------------------------------
-		AddNpc(20020, "Dead Corpsman", "f_katyn_14", -1822.629, 665.4973, 135, "KATYN14_JOHN_SOL");
+		AddNpc(11, 20020, "Dead Corpsman", "f_katyn_14", -1822.629, 420.1088, 665.4973, 135, "KATYN14_JOHN_SOL", "", "");
 		
 		// Senior Officer Philipas
 		//-------------------------------------------------------------------------
-		AddNpc(20125, "Senior Officer Philipas", "f_katyn_14", -964.79, -1107.69, 0, "KATYN14_VACENIN_AFTER");
+		AddNpc(15, 20125, "Senior Officer Philipas", "f_katyn_14", -964.79, 227.87, -1107.69, 0, "KATYN14_VACENIN_AFTER", "", "", 1);
 		
 		// KATYN14_PREBOSS
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_PREBOSS", "f_katyn_14", 989, -64, 0, "", "KATYN14_PREBOSS", "");
+		AddNpc(16, 20026, "KATYN14_PREBOSS", "f_katyn_14", 989, 83, -64, 0, "", "KATYN14_PREBOSS", "");
 		
 		// KATYN14_BOSS
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_BOSS", "f_katyn_14", -1442, -1178, 0, "", "KATYN14_BOSS", "");
+		AddNpc(17, 20026, "KATYN14_BOSS", "f_katyn_14", -1442, 228, -1178, 0, "", "KATYN14_BOSS", "");
+		AddNpc(18, 20026, "KATYN14_BOSS_PRE", "f_katyn_14", -1127, 227, -1163, 0, "", "", "");
 		
 		// KATYN14_SUB_01
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_SUB_01", "f_katyn_14", 2367, -37, 0, "", "KATYN14_SUB_01", "");
+		AddNpc(21, 20026, "KATYN14_SUB_01", "f_katyn_14", 2367, 83, -37, 0, "", "KATYN14_SUB_01", "");
 		
 		// KATYN14_SUB_02
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_SUB_02", "f_katyn_14", 2067, -1920, 0, "", "KATYN14_SUB_02", "");
+		AddNpc(22, 20026, "KATYN14_SUB_02", "f_katyn_14", 2067, 82, -1920, 0, "", "KATYN14_SUB_02", "");
 		
 		// KATYN14_SUB_03
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_SUB_03", "f_katyn_14", 1663, -1058, 0, "", "KATYN14_SUB_03", "");
+		AddNpc(23, 20026, "KATYN14_SUB_03", "f_katyn_14", 1663, 83, -1058, 0, "", "KATYN14_SUB_03", "");
 		
 		// KATYN14_SUB_04
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_SUB_04", "f_katyn_14", 698, -1238, 0, "", "KATYN14_SUB_04", "");
+		AddNpc(24, 20026, "KATYN14_SUB_04", "f_katyn_14", 698, 130, -1238, 0, "", "KATYN14_SUB_04", "");
 		
 		// KATYN14_SUB_05
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_SUB_05", "f_katyn_14", -311, -82, 0, "", "KATYN14_SUB_05", "");
+		AddNpc(25, 20026, "KATYN14_SUB_05", "f_katyn_14", -311, 322, -82, 0, "", "KATYN14_SUB_05", "");
 		
 		// KATYN14_SUB_06
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_SUB_06", "f_katyn_14", -887, 314, 0, "", "KATYN14_SUB_06", "");
+		AddNpc(26, 20026, "KATYN14_SUB_06", "f_katyn_14", -887, 323, 314, 0, "", "KATYN14_SUB_06", "");
 		
 		// KATYN14_SUB_07
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_SUB_07", "f_katyn_14", -1967, 498, 0, "", "KATYN14_SUB_07", "");
+		AddNpc(27, 20026, "KATYN14_SUB_07", "f_katyn_14", -1967, 421, 498, 0, "", "KATYN14_SUB_07", "");
 		
 		// KATYN14_SUB_08
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "KATYN14_SUB_08", "f_katyn_14", -2999, 1321, 0, "", "KATYN14_SUB_08", "");
+		AddNpc(28, 20026, "KATYN14_SUB_08", "f_katyn_14", -2999, 422, 1321, 0, "", "KATYN14_SUB_08", "");
 		
 		// Scout Danus
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Scout Danus", "f_katyn_14", 2199.021, 476.9974, -9, "KATYN14_VACENIN_CHASE");
+		AddNpc(29, 20016, "Scout Danus", "f_katyn_14", 2199.021, 81.35182, 476.9974, -9, "KATYN14_VACENIN_CHASE", "", "", 0);
 		
 		// Scattered Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47161, "Scattered Supplies", "f_katyn_14", 2836, -1994, 0, "KATYN14_MQ_05_ITEM");
+		AddNpc(30, 47161, "Scattered Supplies", "f_katyn_14", 2836, 80, -1994, 0, "KATYN14_MQ_05_ITEM", "", "");
 		
 		// Scattered Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47161, "Scattered Supplies", "f_katyn_14", 2958, -1987, 0, "KATYN14_MQ_05_ITEM");
+		AddNpc(30, 47161, "Scattered Supplies", "f_katyn_14", 2958, 80, -1987, 0, "KATYN14_MQ_05_ITEM", "", "");
 		
 		// Scattered Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47161, "Scattered Supplies", "f_katyn_14", 3045, -2227, 0, "KATYN14_MQ_05_ITEM");
+		AddNpc(30, 47161, "Scattered Supplies", "f_katyn_14", 3045, 80, -2227, 0, "KATYN14_MQ_05_ITEM", "", "");
 		
 		// Scattered Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47161, "Scattered Supplies", "f_katyn_14", 3013, -2319, 0, "KATYN14_MQ_05_ITEM");
+		AddNpc(30, 47161, "Scattered Supplies", "f_katyn_14", 3013, 81, -2319, 0, "KATYN14_MQ_05_ITEM", "", "");
 		
 		// Scattered Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47161, "Scattered Supplies", "f_katyn_14", 3017, -2116, 0, "KATYN14_MQ_05_ITEM");
+		AddNpc(30, 47161, "Scattered Supplies", "f_katyn_14", 3017, 80, -2116, 0, "KATYN14_MQ_05_ITEM", "", "");
 		
 		// Scattered Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47161, "Scattered Supplies", "f_katyn_14", 2848, -2283, 0, "KATYN14_MQ_05_ITEM");
+		AddNpc(30, 47161, "Scattered Supplies", "f_katyn_14", 2848, 81, -2283, 0, "KATYN14_MQ_05_ITEM", "", "");
 		
 		// Scattered Supplies
 		//-------------------------------------------------------------------------
-		AddNpc(47161, "Scattered Supplies", "f_katyn_14", 2833, -2193, 0, "KATYN14_MQ_05_ITEM");
+		AddNpc(30, 47161, "Scattered Supplies", "f_katyn_14", 2833, 81, -2193, 0, "KATYN14_MQ_05_ITEM", "", "");
 		
 		// Poslinkis Forest
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Poslinkis Forest", "f_katyn_14", 3516, -887, 93, "", "WS_KATYN14_TO_KATYN13", "");
+		AddNpc(100, 40001, "Poslinkis Forest", "f_katyn_14", 3516, 82, -887, 93, "", "WS_KATYN14_TO_KATYN13", "");
 		
 		// Dvasia Peak
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Dvasia Peak", "f_katyn_14", -3213, -1446, -79, "", "KATYN14_THORN22", "");
+		AddNpc(101, 40001, "Dvasia Peak", "f_katyn_14", -3213, 306, -1446, -79, "", "KATYN14_THORN22", "");
+		AddNpc(201, 20026, "For summon an owl", "f_katyn_14", -2964, 420, 450, 90, "", "", "");
 		
 		// Philipas' Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Philipas' Soldier", "f_katyn_14", -28, -453, 45, "KATYN14_PIL_SOL");
+		AddNpc(509, 20016, "Philipas' Soldier", "f_katyn_14", -28, 177, -453, 45, "KATYN14_PIL_SOL", "", "", 0);
 		
 		// Philipas' Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Philipas' Soldier", "f_katyn_14", -97, -394, 90, "KATYN14_PIL_SOL");
+		AddNpc(509, 20016, "Philipas' Soldier", "f_katyn_14", -97, 177, -394, 90, "KATYN14_PIL_SOL", "", "", 0);
 		
 		// Philipas' Soldier
 		//-------------------------------------------------------------------------
-		AddNpc(20016, "Philipas' Soldier", "f_katyn_14", -47, -370, 0, "KATYN14_PIL_SOL");
+		AddNpc(509, 20016, "Philipas' Soldier", "f_katyn_14", -47, 177, -370, 0, "KATYN14_PIL_SOL", "", "", 0);
 		
 		// Unknown Soldier's Memento
 		//-------------------------------------------------------------------------
-		AddNpc(47170, "Unknown Soldier's Memento", "f_katyn_14", -2724.933, 1381.92, 110, "KATYN14_SUB_WOLF", "KATYN14_SUB_08");
+		AddNpc(584, 47170, "Unknown Soldier's Memento", "f_katyn_14", -2724.933, 422.1701, 1381.92, 110, "KATYN14_SUB_WOLF", "KATYN14_SUB_08", "", 0);
 		
 		// Brush
 		//-------------------------------------------------------------------------
-		AddNpc(10001, "Brush", "f_katyn_14", -2421.509, 330.2979, 90, "KATYN14_SUB_08_STONE");
+		AddNpc(585, 10001, "Brush", "f_katyn_14", -2421.509, 420.8725, 330.2979, 90, "KATYN14_SUB_08_STONE", "", "", 0);
 		
 		// Small Griba
 		//-------------------------------------------------------------------------
-		AddNpc(147461, "Small Griba", "f_katyn_14", 1879.084, -1287.696, 55, "KATYN14_SUB_02_MUSH");
+		AddNpc(586, 147461, "Small Griba", "f_katyn_14", 1879.084, 81.89495, -1287.696, 55, "KATYN14_SUB_02_MUSH", "", "", 0);
 		
 		// Small Griba
 		//-------------------------------------------------------------------------
-		AddNpc(147461, "Small Griba", "f_katyn_14", 1877.882, -1275.426, 11, "KATYN14_SUB_02_MUSH");
+		AddNpc(586, 147461, "Small Griba", "f_katyn_14", 1877.882, 81.89491, -1275.426, 11, "KATYN14_SUB_02_MUSH", "", "", 0);
 		
 		// Small Griba
 		//-------------------------------------------------------------------------
-		AddNpc(147461, "Small Griba", "f_katyn_14", 1884.231, -1301.561, 90, "KATYN14_SUB_02_MUSH");
+		AddNpc(586, 147461, "Small Griba", "f_katyn_14", 1884.231, 81.89503, -1301.561, 90, "KATYN14_SUB_02_MUSH", "", "", 0);
 		
 		// Small Griba
 		//-------------------------------------------------------------------------
-		AddNpc(147461, "Small Griba", "f_katyn_14", 1883.368, -1271.413, 90, "KATYN14_SUB_02_MUSH");
+		AddNpc(586, 147461, "Small Griba", "f_katyn_14", 1883.368, 81.89494, -1271.413, 90, "KATYN14_SUB_02_MUSH", "", "", 0);
 		
 		// Small Griba
 		//-------------------------------------------------------------------------
-		AddNpc(147461, "Small Griba", "f_katyn_14", 1891.089, -1263.639, 90, "KATYN14_SUB_02_MUSH");
+		AddNpc(586, 147461, "Small Griba", "f_katyn_14", 1891.089, 81.89497, -1263.639, 90, "KATYN14_SUB_02_MUSH", "", "", 0);
 		
 		// Small Griba
 		//-------------------------------------------------------------------------
-		AddNpc(147461, "Small Griba", "f_katyn_14", 1890.191, -1289.268, 90, "KATYN14_SUB_02_MUSH");
+		AddNpc(586, 147461, "Small Griba", "f_katyn_14", 1890.191, 81.89503, -1289.268, 90, "KATYN14_SUB_02_MUSH", "", "", 0);
 		
 		// Small Griba
 		//-------------------------------------------------------------------------
-		AddNpc(147461, "Small Griba", "f_katyn_14", 1902.489, -1274.451, 90, "KATYN14_SUB_02_MUSH");
+		AddNpc(586, 147461, "Small Griba", "f_katyn_14", 1902.489, 81.89504, -1274.451, 90, "KATYN14_SUB_02_MUSH", "", "", 0);
 		
 		// Small Griba
 		//-------------------------------------------------------------------------
-		AddNpc(147461, "Small Griba", "f_katyn_14", 1908.021, -1297.113, 90, "KATYN14_SUB_02_MUSH");
+		AddNpc(586, 147461, "Small Griba", "f_katyn_14", 1908.021, 81.89512, -1297.113, 90, "KATYN14_SUB_02_MUSH", "", "", 0);
 		
 		// Small Griba
 		//-------------------------------------------------------------------------
-		AddNpc(147461, "Small Griba", "f_katyn_14", 1897.696, -1301.853, 90, "KATYN14_SUB_02_MUSH");
+		AddNpc(586, 147461, "Small Griba", "f_katyn_14", 1897.696, 81.8951, -1301.853, 90, "KATYN14_SUB_02_MUSH", "", "", 0);
 		
 		// Statue of Goddess Zemyna
 		//-------------------------------------------------------------------------
-		AddNpc(40110, "Statue of Goddess Zemyna", "f_katyn_14", -2765, -1058, 40, "F_KATYN_14_EV_55_001", "F_KATYN_14_EV_55_001", "F_KATYN_14_EV_55_001");
+		AddNpc(587, 40110, "Statue of Goddess Zemyna", "f_katyn_14", -2765, 306, -1058, 40, "F_KATYN_14_EV_55_001", "F_KATYN_14_EV_55_001", "F_KATYN_14_EV_55_001");
+		AddNpc(588, 147366, "Field Gen", "f_katyn_14", 143.2113, 177.4512, -444.9777, 90, "", "", "");
+		AddNpc(589, 151051, " ", "f_katyn_14", 2147.652, 81.89515, -908.135, 90, "", "", "");
+		AddNpc(590, 147362, "", "f_katyn_14", 2617.429, 81.8948, -928.0688, 90, "", "", "");
+		AddNpc(591, 147362, "", "f_katyn_14", -81.71831, 177.4512, -481.8351, 90, "", "", "");
+		AddNpc(591, 147362, "", "f_katyn_14", -142.5987, 228.7235, -388.3726, 90, "", "", "");
+		AddNpc(592, 147362, "", "f_katyn_14", 2624.424, 80.8749, -1980.039, 90, "", "", "");
+		AddNpc(593, 147362, "", "f_katyn_14", 1126.488, 82.22137, -1074.456, 90, "", "", "");
+		AddNpc(594, 147362, "", "f_katyn_14", -1123.95, 321.3051, 1107.058, 90, "", "", "");
+		AddNpc(595, 147361, "", "f_katyn_14", -959.6446, 227.8706, -1095.353, 90, "", "", "");
+		AddNpc(596, 147361, "", "f_katyn_14", 2194.402, 81.36158, 473.6752, 90, "", "", "");
+		AddNpc(597, 147362, "", "f_katyn_14", 3508.631, 82.22095, -889.1273, 90, "", "", "");
+		AddNpc(598, 147362, "", "f_katyn_14", -3224.004, 306.9628, -1463.739, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_katyn_14", -379.14, -1016.75, 90, "TREASUREBOX_LV_F_KATYN_14601");
+		AddNpc(601, 147392, "Lv1 Treasure Chest", "f_katyn_14", -379.14, 248.79, -1016.75, 90, "TREASUREBOX_LV_F_KATYN_14601", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(20135, " ", "f_katyn_14", -3166.664, 1573.606, 8, "HTA_KATYN_14_OWL");
+		AddNpc(602, 20135, " ", "f_katyn_14", -3166.664, 422.17, 1573.606, 8, "HTA_KATYN_14_OWL", "", "");
 	}
 }

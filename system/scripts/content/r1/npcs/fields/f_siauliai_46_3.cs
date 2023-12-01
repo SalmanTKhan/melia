@@ -14,86 +14,91 @@ public class FSiauliai463NpcScript : GeneralScript
 	{
 		// Uskis Arable Land
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Uskis Arable Land", "f_siauliai_46_3", 2224, 1573, 180, "", "SIAULIAI46_3_SIAULIAI46_2", "");
+		AddNpc(1, 40001, "Uskis Arable Land", "f_siauliai_46_3", 2224, 133, 1573, 180, "", "SIAULIAI46_3_SIAULIAI46_2", "");
 		
 		// Dina Bee Farm
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Dina Bee Farm", "f_siauliai_46_3", -1358, -1360, 91, "", "SIAULIAI46_3_SIAULIAI46_4", "");
+		AddNpc(3, 40001, "Dina Bee Farm", "f_siauliai_46_3", -1358, -5, -1360, 91, "", "SIAULIAI46_3_SIAULIAI46_4", "");
 		
 		// Maras
 		//-------------------------------------------------------------------------
-		AddNpc(147477, "Maras", "f_siauliai_46_3", -568.3981, 488.6133, 0, "SIAULIAI_46_3_MQ01_NPC");
+		AddNpc(7, 147477, "Maras", "f_siauliai_46_3", -568.3981, 134.3088, 488.6133, 0, "SIAULIAI_46_3_MQ01_NPC", "", "");
 		
 		// Valda
 		//-------------------------------------------------------------------------
-		AddNpc(147482, "Valda", "f_siauliai_46_3", -651.4182, 478.4246, 45, "SIAULIAI_46_3_SQ_03_NPC");
+		AddNpc(8, 147482, "Valda", "f_siauliai_46_3", -651.4182, 134.3088, 478.4246, 45, "SIAULIAI_46_3_SQ_03_NPC", "", "");
 		
 		// Bichiu Altar
 		//-------------------------------------------------------------------------
-		AddNpc(151024, "Bichiu Altar", "f_siauliai_46_3", 777.2422, -647.75, 270, "SIAULIAI_46_3_AUSTEJA_ALTAR_01", "SIAULIAI_46_3_AUSTEJA_ALTAR_01");
+		AddNpc(9, 151024, "Bichiu Altar", "f_siauliai_46_3", 777.2422, 54.1763, -647.75, 270, "SIAULIAI_46_3_AUSTEJA_ALTAR_01", "SIAULIAI_46_3_AUSTEJA_ALTAR_01", "", 0);
 		
 		// Gaudeji Altar 
 		//-------------------------------------------------------------------------
-		AddNpc(151024, "Gaudeji Altar ", "f_siauliai_46_3", 358, 1513, 91, "SIAULIAI_46_3_AUSTEJA_ALTAR_02");
+		AddNpc(10, 151024, "Gaudeji Altar ", "f_siauliai_46_3", 358, 25, 1513, 91, "SIAULIAI_46_3_AUSTEJA_ALTAR_02", "", "");
 		
 		// Lamar
 		//-------------------------------------------------------------------------
-		AddNpc(147499, "Lamar", "f_siauliai_46_3", 1878.782, 856.3567, 91, "SIAULIAI_46_3_MQ05_NPC");
+		AddNpc(11, 147499, "Lamar", "f_siauliai_46_3", 1878.782, 134.3088, 856.3567, 91, "SIAULIAI_46_3_MQ05_NPC", "", "");
 		
 		// Riesz
 		//-------------------------------------------------------------------------
-		AddNpc(147484, "Riesz", "f_siauliai_46_3", 1902.068, 604.4552, 91, "SIAULIAI_46_3_SQ_02_NPC");
+		AddNpc(12, 147484, "Riesz", "f_siauliai_46_3", 1902.068, 134.3088, 604.4552, 91, "SIAULIAI_46_3_SQ_02_NPC", "", "");
 		
 		// Farm
 		//-------------------------------------------------------------------------
-		AddNpc(40095, "Farm", "f_siauliai_46_3", 1502.153, 1573.558, 90, "SIAULIAI_46_3_SQ_04_FARM");
+		AddNpc(13, 40095, "Farm", "f_siauliai_46_3", 1502.153, 24.3135, 1573.558, 90, "SIAULIAI_46_3_SQ_04_FARM", "", "", 0);
 		
 		// Farm
 		//-------------------------------------------------------------------------
-		AddNpc(40095, "Farm", "f_siauliai_46_3", 1520.337, 1502.058, 90, "SIAULIAI_46_3_SQ_04_FARM");
+		AddNpc(13, 40095, "Farm", "f_siauliai_46_3", 1520.337, 24.3135, 1502.058, 90, "SIAULIAI_46_3_SQ_04_FARM", "", "", 0);
 		
 		// Farm
 		//-------------------------------------------------------------------------
-		AddNpc(40095, "Farm", "f_siauliai_46_3", 1691.747, 1474.498, 90, "SIAULIAI_46_3_SQ_04_FARM");
+		AddNpc(13, 40095, "Farm", "f_siauliai_46_3", 1691.747, 24.3135, 1474.498, 90, "SIAULIAI_46_3_SQ_04_FARM", "", "", 0);
 		
 		// Farm
 		//-------------------------------------------------------------------------
-		AddNpc(40095, "Farm", "f_siauliai_46_3", 1686.255, 1547.95, 90, "SIAULIAI_46_3_SQ_04_FARM");
+		AddNpc(13, 40095, "Farm", "f_siauliai_46_3", 1686.255, 24.3135, 1547.95, 90, "SIAULIAI_46_3_SQ_04_FARM", "", "", 0);
 		
 		// Sweet-smelling Beehive
 		//-------------------------------------------------------------------------
-		AddNpc(151025, "Sweet-smelling Beehive", "f_siauliai_46_3", -409.0077, 1778.232, 0, "SIAULIAI_46_3_BEEHIVE");
+		AddNpc(14, 151025, "Sweet-smelling Beehive", "f_siauliai_46_3", -409.0077, 196.7332, 1778.232, 0, "SIAULIAI_46_3_BEEHIVE", "", "");
 		
 		// Sweet-smelling Beehive
 		//-------------------------------------------------------------------------
-		AddNpc(151025, "Sweet-smelling Beehive", "f_siauliai_46_3", -601.8929, 1483.208, 45, "SIAULIAI_46_3_BEEHIVE");
+		AddNpc(14, 151025, "Sweet-smelling Beehive", "f_siauliai_46_3", -601.8929, 196.7332, 1483.208, 45, "SIAULIAI_46_3_BEEHIVE", "", "");
 		
 		// Sweet-smelling Beehive
 		//-------------------------------------------------------------------------
-		AddNpc(151025, "Sweet-smelling Beehive", "f_siauliai_46_3", -99.31992, 1636.911, -35, "SIAULIAI_46_3_BEEHIVE");
+		AddNpc(14, 151025, "Sweet-smelling Beehive", "f_siauliai_46_3", -99.31992, 196.7332, 1636.911, -35, "SIAULIAI_46_3_BEEHIVE", "", "");
 		
 		// Sweet-smelling Beehive
 		//-------------------------------------------------------------------------
-		AddNpc(151025, "Sweet-smelling Beehive", "f_siauliai_46_3", -243.5327, 1387.974, 180, "SIAULIAI_46_3_BEEHIVE");
+		AddNpc(14, 151025, "Sweet-smelling Beehive", "f_siauliai_46_3", -243.5327, 196.7332, 1387.974, 180, "SIAULIAI_46_3_BEEHIVE", "", "");
 		
 		// Bag of Farming Tools
 		//-------------------------------------------------------------------------
-		AddNpc(47161, "Bag of Farming Tools", "f_siauliai_46_3", 3588, 1212, 91, "SIAULIAI_46_3_SQ_02_KIT");
+		AddNpc(15, 47161, "Bag of Farming Tools", "f_siauliai_46_3", 3588, 211, 1212, 91, "SIAULIAI_46_3_SQ_02_KIT", "", "", 0);
 		
 		// Den
 		//-------------------------------------------------------------------------
-		AddNpc(20156, "Den", "f_siauliai_46_3", -654.2441, 330.7104, 91, "SIAULIAI_46_3_INV_NPC_01");
+		AddNpc(16, 20156, "Den", "f_siauliai_46_3", -654.2441, 134.3088, 330.7104, 91, "SIAULIAI_46_3_INV_NPC_01", "", "");
 		
 		// Renzo
 		//-------------------------------------------------------------------------
-		AddNpc(20157, "Renzo", "f_siauliai_46_3", -420.9798, 409.58, 270, "SIAULIAI_46_3_INV_NPC_02");
+		AddNpc(17, 20157, "Renzo", "f_siauliai_46_3", -420.9798, 134.3088, 409.58, 270, "SIAULIAI_46_3_INV_NPC_02", "", "");
+		AddNpc(21, 147366, "Gate Entrance x", "f_siauliai_46_3", -512.5961, 134.3088, 369.826, 90, "", "", "");
+		AddNpc(21, 147366, "Gate Entrance x", "f_siauliai_46_3", 2085.867, 134.3088, 662.6268, 90, "", "", "");
+		AddNpc(21, 147366, "Gate Entrance x", "f_siauliai_46_3", 2014.311, 134.3088, 1064.02, 90, "", "", "");
+		AddNpc(21, 147366, "Gate Entrance x", "f_siauliai_46_3", 2379.178, 134.3088, 932.3711, 90, "", "", "");
+		AddNpc(21, 147366, "Gate Entrance x", "f_siauliai_46_3", 2233.442, 134.3088, 1357.707, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_siauliai_46_3", 2357.72, -360.43, 90, "TREASUREBOX_LV_F_SIAULIAI_46_323");
+		AddNpc(23, 147392, "Lv1 Treasure Chest", "f_siauliai_46_3", 2357.72, 202.21, -360.43, 90, "TREASUREBOX_LV_F_SIAULIAI_46_323", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "", "f_siauliai_46_3", 2151.731, 1103.346, 90, "", "CHAR312_MSTEP1_GEN_INIT", "");
+		AddNpc(1002, 20026, "", "f_siauliai_46_3", 2151.731, 134.3088, 1103.346, 90, "", "CHAR312_MSTEP1_GEN_INIT", "");
 	}
 }

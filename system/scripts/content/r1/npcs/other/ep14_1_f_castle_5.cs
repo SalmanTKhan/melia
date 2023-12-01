@@ -14,78 +14,78 @@ public class Ep141FCastle5NpcScript : GeneralScript
 	{
 		// Delmore Citadel
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Delmore Citadel", "ep14_1_f_castle_5", 2204.829, 62.27546, 90, "", "WARP_EP14_1_F_CASTLE_5_TO_EP14_1_F_CASTLE_4", "");
+		AddNpc(1, 40001, "Delmore Citadel", "ep14_1_f_castle_5", 2204.829, 135.0044, 62.27546, 90, "", "WARP_EP14_1_F_CASTLE_5_TO_EP14_1_F_CASTLE_4", "");
 		
 		// [Great Royal General]{nl}Ramin
 		//-------------------------------------------------------------------------
-		AddNpc(150287, "[Great Royal General]{nl}Ramin", "ep14_1_f_castle_5", 1943.49, -71.94622, -74, "EP14_1_FCASTLE5_MQ_1_NPC1");
+		AddNpc(2, 150287, "[Great Royal General]{nl}Ramin", "ep14_1_f_castle_5", 1943.49, 135.0049, -71.94622, -74, "EP14_1_FCASTLE5_MQ_1_NPC1", "", "", 1);
 		
 		// Pajauta
 		//-------------------------------------------------------------------------
-		AddNpc(154120, "Pajauta", "ep14_1_f_castle_5", 1947.618, -139.2887, 265, "EP14_1_FCASTLE5_MQ_1_NPC2");
+		AddNpc(3, 154120, "Pajauta", "ep14_1_f_castle_5", 1947.618, 135.0053, -139.2887, 265, "EP14_1_FCASTLE5_MQ_1_NPC2", "", "", 1);
 		
 		// Abandoned Supply Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(150297, "Abandoned Supply Wagon", "ep14_1_f_castle_5", 1891.328, -512.8896, 257, "EP14_1_FCASTLE5_MQ_1_CART1");
+		AddNpc(4, 150297, "Abandoned Supply Wagon", "ep14_1_f_castle_5", 1891.328, 135.0075, -512.8896, 257, "EP14_1_FCASTLE5_MQ_1_CART1", "", "", 0);
 		
 		// Abandoned Supply Wagon
 		//-------------------------------------------------------------------------
-		AddNpc(150297, "Abandoned Supply Wagon", "ep14_1_f_castle_5", 1852.864, -579.1082, 9, "EP14_1_FCASTLE5_MQ_1_CART2");
+		AddNpc(5, 150297, "Abandoned Supply Wagon", "ep14_1_f_castle_5", 1852.864, 135.0079, -579.1082, 9, "EP14_1_FCASTLE5_MQ_1_CART2", "", "", 0);
 		
 		// Broken Orsha Flag
 		//-------------------------------------------------------------------------
-		AddNpc(150277, "Broken Orsha Flag", "ep14_1_f_castle_5", 1777.64, -560.6398, 151, "EP14_1_FCASTLE5_MQ_1_FLAG1");
+		AddNpc(6, 150277, "Broken Orsha Flag", "ep14_1_f_castle_5", 1777.64, 135.0075, -560.6398, 151, "EP14_1_FCASTLE5_MQ_1_FLAG1", "", "", 0);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_5", 1370.443, 54.47826, 90, "", "EP14_1_FCASTLE5_MQ_2_HIDDEN", "");
+		AddNpc(7, 147469, " ", "ep14_1_f_castle_5", 1370.443, 134.9982, 54.47826, 90, "", "EP14_1_FCASTLE5_MQ_2_HIDDEN", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_5", 955.2351, -1446.614, 90, "", "EP14_1_FCASTLE5_MQ_3_HIDDEN", "");
+		AddNpc(8, 147469, " ", "ep14_1_f_castle_5", 955.2351, 193.564, -1446.614, 90, "", "EP14_1_FCASTLE5_MQ_3_HIDDEN", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_5", 59.3497, -1553.615, 90, "", "EP14_1_FCASTLE5_MQ_4_HIDDEN", "");
+		AddNpc(9, 147469, " ", "ep14_1_f_castle_5", 59.3497, 155.247, -1553.615, 90, "", "EP14_1_FCASTLE5_MQ_4_HIDDEN", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_5", 268.729, 48.14304, 90, "", "EP14_1_FCASTLE5_MQ_5_HIDDEN", "");
+		AddNpc(10, 147469, " ", "ep14_1_f_castle_5", 268.729, 3.300003, 48.14304, 90, "", "EP14_1_FCASTLE5_MQ_5_HIDDEN", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_5", 163.0611, 1220.593, 90, "", "EP14_1_FCASTLE5_MQ_6_HIDDEN", "");
+		AddNpc(11, 147469, " ", "ep14_1_f_castle_5", 163.0611, 65.33099, 1220.593, 90, "", "EP14_1_FCASTLE5_MQ_6_HIDDEN", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_5", -753.8661, 1174.313, 90, "", "EP14_1_FCASTLE5_MQ_7_HIDDEN", "");
+		AddNpc(12, 147469, " ", "ep14_1_f_castle_5", -753.8661, 190.3, 1174.313, 90, "", "EP14_1_FCASTLE5_MQ_7_HIDDEN", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(147469, " ", "ep14_1_f_castle_5", -1185.299, 1.531448, 90, "", "EP14_1_FCASTLE5_MQ_8_HIDDEN", "");
+		AddNpc(13, 147469, " ", "ep14_1_f_castle_5", -1185.299, 180.745, 1.531448, 90, "", "EP14_1_FCASTLE5_MQ_8_HIDDEN", "");
 		
 		// [Great Royal General]{nl}Ramin
 		//-------------------------------------------------------------------------
-		AddNpc(150287, "[Great Royal General]{nl}Ramin", "ep14_1_f_castle_5", -1401.21, 115.2922, 13, "EP14_1_FCASTLE5_MQ_8_NPC1");
+		AddNpc(14, 150287, "[Great Royal General]{nl}Ramin", "ep14_1_f_castle_5", -1401.21, 180.745, 115.2922, 13, "EP14_1_FCASTLE5_MQ_8_NPC1", "", "", 1);
 		
 		// Pajauta
 		//-------------------------------------------------------------------------
-		AddNpc(154120, "Pajauta", "ep14_1_f_castle_5", -1358.643, 119.1506, 0, "EP14_1_FCASTLE5_MQ_8_NPC2");
+		AddNpc(15, 154120, "Pajauta", "ep14_1_f_castle_5", -1358.643, 180.745, 119.1506, 0, "EP14_1_FCASTLE5_MQ_8_NPC2", "", "", 1);
 		
 		// Delmore Battlefield
 		//-------------------------------------------------------------------------
-		AddNpc(154065, "Delmore Battlefield", "ep14_1_f_castle_5", -1669.678, -44.98972, 90, "GODDESS_RAID_DELMORE_PORTAL");
+		AddNpc(17, 154065, "Delmore Battlefield", "ep14_1_f_castle_5", -1669.678, 180.7452, -44.98972, 90, "GODDESS_RAID_DELMORE_PORTAL", "", "", 1);
 		
 		// Go to the other side
 		//-------------------------------------------------------------------------
-		AddNpc(154065, "Go to the other side", "ep14_1_f_castle_5", -2199.952, 15.6484, 90, "EP14_2_PORTAL2");
+		AddNpc(1252, 154065, "Go to the other side", "ep14_1_f_castle_5", -2199.952, 181.0452, 15.6484, 90, "EP14_2_PORTAL2", "", "", 1);
 		
 		// Go to the other side
 		//-------------------------------------------------------------------------
-		AddNpc(154065, "Go to the other side", "ep14_1_f_castle_5", -1656.659, 6.767586, 90, "EP14_2_PORTAL1");
+		AddNpc(1251, 154065, "Go to the other side", "ep14_1_f_castle_5", -1656.659, 180.7452, 6.767586, 90, "EP14_2_PORTAL1", "", "", 1);
 		
 		// Delmore Waiting Area
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Delmore Waiting Area", "ep14_1_f_castle_5", -2754.581, -23.21078, -82, "", "WARP_EP14_1_F_CASTLE_5_TO_EP14_2_D_CASTLE_1", "");
+		AddNpc(1253, 40001, "Delmore Waiting Area", "ep14_1_f_castle_5", -2754.581, 181.0452, -23.21078, -82, "", "WARP_EP14_1_F_CASTLE_5_TO_EP14_2_D_CASTLE_1", "");
 	}
 }

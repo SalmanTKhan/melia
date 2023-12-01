@@ -14,6 +14,6 @@ public class MissionTestNpcScript : GeneralScript
 	{
 		// Royal Mausoleum 3F
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Royal Mausoleum 3F", "mission_test", -796, 99, 90, "", "ZACHARIEL35_1_ZACHARIEL34_1", "");
+		AddNpc(1, 40001, "Royal Mausoleum 3F", "mission_test", -796, 447, 99, 90, "", "ZACHARIEL35_1_ZACHARIEL34_1", "");
 	}
 }

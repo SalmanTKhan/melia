@@ -14,194 +14,205 @@ public class FRemains40NpcScript : GeneralScript
 	{
 		// Coben
 		//-------------------------------------------------------------------------
-		AddNpc(20118, "Coben", "f_remains_40", -502, -2059, 90, "REMAINS_40_DRUNK_01");
+		AddNpc(103, 20118, "Coben", "f_remains_40", -502, 304, -2059, 90, "REMAINS_40_DRUNK_01", "", "", 0);
 		
 		// Tara Miles
 		//-------------------------------------------------------------------------
-		AddNpc(147473, "Tara Miles", "f_remains_40", -242, -1931, 8, "REMAINS_40_TARA_01");
+		AddNpc(107, 147473, "Tara Miles", "f_remains_40", -242, 311, -1931, 8, "REMAINS_40_TARA_01", "", "", 0);
 		
 		// Stonemason Canolyn
 		//-------------------------------------------------------------------------
-		AddNpc(20156, "Stonemason Canolyn", "f_remains_40", -645, -1898, 96, "REMAINS_40_CANOLIN_01");
+		AddNpc(106, 20156, "Stonemason Canolyn", "f_remains_40", -645, 304, -1898, 96, "REMAINS_40_CANOLIN_01", "", "");
 		
 		// Escanciu Village
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Escanciu Village", "f_remains_40", 111, -2598, 45, "", "WS_REMAINS40_TO_REMAINS39", "");
+		AddNpc(100, 40001, "Escanciu Village", "f_remains_40", 111, 304, -2598, 45, "", "WS_REMAINS40_TO_REMAINS39", "");
 		
 		// Fedimian
 		//-------------------------------------------------------------------------
-		AddNpc(40001, "Fedimian", "f_remains_40", -2393, -1377, 205, "", "WS_REMAINS40_TO_FEDMIAN", "");
+		AddNpc(101, 40001, "Fedimian", "f_remains_40", -2393, 315, -1377, 205, "", "WS_REMAINS40_TO_FEDMIAN", "");
 		
 		// Mage Tower 1F
 		//-------------------------------------------------------------------------
-		AddNpc(147500, "Mage Tower 1F", "f_remains_40", 3541, 2726, 90, "", "WS_REMAINS40_TO_FIRETOWER41", "");
+		AddNpc(102, 147500, "Mage Tower 1F", "f_remains_40", 3541, 645, 2726, 90, "", "WS_REMAINS40_TO_FIRETOWER41", "");
 		
 		// Forgotten Thief's Monument
 		//-------------------------------------------------------------------------
-		AddNpc(47191, "Forgotten Thief's Monument", "f_remains_40", -121, -17, 43, "REMAINS_40_MQ_02");
+		AddNpc(200, 47191, "Forgotten Thief's Monument", "f_remains_40", -121, 642, -17, 43, "REMAINS_40_MQ_02", "", "");
 		
 		// Forgotten Thief's Monument
 		//-------------------------------------------------------------------------
-		AddNpc(47191, "Forgotten Thief's Monument", "f_remains_40", 867, -273, 92, "REMAINS_40_MQ_03");
+		AddNpc(201, 47191, "Forgotten Thief's Monument", "f_remains_40", 867, 596, -273, 92, "REMAINS_40_MQ_03", "", "");
 		
 		// Forgotten Thief's Monument
 		//-------------------------------------------------------------------------
-		AddNpc(47191, "Forgotten Thief's Monument", "f_remains_40", 884, 784, 77, "REMAINS_40_MQ_04");
+		AddNpc(202, 47191, "Forgotten Thief's Monument", "f_remains_40", 884, 459, 784, 77, "REMAINS_40_MQ_04", "", "");
 		
 		// Forgotten Thief's Monument
 		//-------------------------------------------------------------------------
-		AddNpc(47191, "Forgotten Thief's Monument", "f_remains_40", 2168, 1372, 176, "REMAINS_40_MQ_05");
+		AddNpc(203, 47191, "Forgotten Thief's Monument", "f_remains_40", 2168, 515, 1372, 176, "REMAINS_40_MQ_05", "", "");
 		
 		// Forgotten Thief's Monument
 		//-------------------------------------------------------------------------
-		AddNpc(47191, "Forgotten Thief's Monument", "f_remains_40", 2419, 3792, 47, "REMAINS_40_MQ_06");
+		AddNpc(204, 47191, "Forgotten Thief's Monument", "f_remains_40", 2419, 640, 3792, 47, "REMAINS_40_MQ_06", "", "");
 		
 		// Commanding Monument
 		//-------------------------------------------------------------------------
-		AddNpc(47191, "Commanding Monument", "f_remains_40", 3660, 2624, 102, "REMAINS_40_MQ_07");
+		AddNpc(205, 47191, "Commanding Monument", "f_remains_40", 3660, 645, 2624, 102, "REMAINS_40_MQ_07", "", "");
 		
 		// Tara Miles
 		//-------------------------------------------------------------------------
-		AddNpc(147473, "Tara Miles", "f_remains_40", 1723, 1564, 12, "REMAINS_40_TARA_02");
+		AddNpc(108, 147473, "Tara Miles", "f_remains_40", 1723, 515, 1564, 12, "REMAINS_40_TARA_02", "", "", 1);
 		
 		// Coben
 		//-------------------------------------------------------------------------
-		AddNpc(20118, "Coben", "f_remains_40", 1791, 1195, 90, "REMAINS_40_DRUNK_02");
+		AddNpc(104, 20118, "Coben", "f_remains_40", 1791, 515, 1195, 90, "REMAINS_40_DRUNK_02", "", "", 1);
 		
 		// Coben
 		//-------------------------------------------------------------------------
-		AddNpc(20118, "Coben", "f_remains_40", 3016, 2916, 90, "REMAINS_40_DRUNK_03");
+		AddNpc(105, 20118, "Coben", "f_remains_40", 3016, 645, 2916, 90, "REMAINS_40_DRUNK_03", "", "", 1);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -1716, -800, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -1716, 340, -800, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -1723, -590, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -1723, 340, -590, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -1719, -482, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -1719, 340, -482, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -1414, -517, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -1414, 340, -517, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -1415, -1087, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -1415, 303, -1087, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -1288, -924, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -1288, 303, -924, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -1495, -577, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -1495, 340, -577, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -1042, -768, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -1042, 340, -768, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -2036, -55, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -2036, 368, -55, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// Old Chest
 		//-------------------------------------------------------------------------
-		AddNpc(46212, "Old Chest", "f_remains_40", -1847, -164, 179, "REMAINS_40_MQ_01");
+		AddNpc(207, 46212, "Old Chest", "f_remains_40", -1847, 368, -164, 179, "REMAINS_40_MQ_01", "", "", 0);
 		
 		// REMAINS40_SQ_02
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "REMAINS40_SQ_02", "f_remains_40", -1744, -3502, 90, "", "REMAINS40_SQ_02", "");
+		AddNpc(208, 20026, "REMAINS40_SQ_02", "f_remains_40", -1744, 315, -3502, 90, "", "REMAINS40_SQ_02", "");
 		
 		// Grita
 		//-------------------------------------------------------------------------
-		AddNpc(147449, "Grita", "f_remains_40", 3510, 2864, 21, "REMAINS40_GRITA");
+		AddNpc(400, 147449, "Grita", "f_remains_40", 3510, 645, 2864, 21, "REMAINS40_GRITA", "", "", 1);
+		AddNpc(404, 147366, "Field Gen x", "f_remains_40", -750.5983, 304.5279, -1727.427, 90, "", "", "");
+		AddNpc(404, 147366, "Field Gen x", "f_remains_40", -433.93, 304.53, -1933.04, 90, "", "", "");
+		AddNpc(404, 147366, "Field Gen x", "f_remains_40", -346.583, 304.5279, -2236.488, 90, "", "", "");
 		
 		// JOB_PELTASTA4_3
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "JOB_PELTASTA4_3", "f_remains_40", -1704.87, -3474.18, 90, "", "JOB_PELTASTA4_3", "");
+		AddNpc(405, 20026, "JOB_PELTASTA4_3", "f_remains_40", -1704.87, 315.34, -3474.18, 90, "", "JOB_PELTASTA4_3", "");
 		
 		// For the 4th Pardoner Advancement
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "For the 4th Pardoner Advancement", "f_remains_40", 1051.11, 594.89, 90, "", "JOB_PARDONER4_2_TRIGGER", "");
+		AddNpc(406, 20026, "For the 4th Pardoner Advancement", "f_remains_40", 1051.11, 459.46, 594.89, 90, "", "JOB_PARDONER4_2_TRIGGER", "");
 		
 		// For the 4th Sorcerer Advancement
 		//-------------------------------------------------------------------------
-		AddNpc(20026, "For the 4th Sorcerer Advancement", "f_remains_40", 2531.29, 3537.32, 90, "", "JOB_JOB_SORCERER4_1_TRIGGER", "");
+		AddNpc(407, 20026, "For the 4th Sorcerer Advancement", "f_remains_40", 2531.29, 640.27, 3537.32, 90, "", "JOB_JOB_SORCERER4_1_TRIGGER", "");
 		
 		// Secret Box
 		//-------------------------------------------------------------------------
-		AddNpc(40030, "Secret Box", "f_remains_40", -466, 139, 90, "REMAINS_40_HQ_01_TB");
+		AddNpc(408, 40030, "Secret Box", "f_remains_40", -466, 557, 139, 90, "REMAINS_40_HQ_01_TB", "", "");
 		
 		// Notice
 		//-------------------------------------------------------------------------
-		AddNpc(40080, "Notice", "f_remains_40", -2412.68, -1452.84, 106, "REMAINS40_BOARD01");
+		AddNpc(412, 40080, "Notice", "f_remains_40", -2412.68, 315.34, -1452.84, 106, "REMAINS40_BOARD01", "", "");
+		AddNpc(403, 147363, "Field Gen x", "f_remains_40", 1803.6, 515.57, 1196.19, 90, "", "", "");
+		AddNpc(403, 147363, "Field Gen x", "f_remains_40", 1707.659, 515.5719, 1609.589, 90, "", "", "");
+		AddNpc(403, 147363, "Field Gen x", "f_remains_40", 3002.19, 645.74, 2945.29, 90, "", "", "");
+		AddNpc(403, 147363, "Field Gen x", "f_remains_40", 3566.42, 645.74, 2757.88, 90, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_remains_40", 1419.225, 3288.158, 90, "HIDDEN_TRESURE01");
+		AddNpc(417, 40095, " ", "f_remains_40", 1419.225, 643.3027, 3288.158, 90, "HIDDEN_TRESURE01", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_remains_40", 2201.091, 1223.319, 90, "HIDDEN_TRESURE02");
+		AddNpc(418, 40095, " ", "f_remains_40", 2201.091, 515.572, 1223.319, 90, "HIDDEN_TRESURE02", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_remains_40", -286.1683, -38.63295, 90, "HIDDEN_TRESURE03");
+		AddNpc(419, 40095, " ", "f_remains_40", -286.1683, 642.7355, -38.63295, 90, "HIDDEN_TRESURE03", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_remains_40", -2108.473, -3445.792, 90, "HIDDEN_TRESURE04");
+		AddNpc(420, 40095, " ", "f_remains_40", -2108.473, 315.3375, -3445.792, 90, "HIDDEN_TRESURE04", "", "");
 		
 		// Zubeck's Box
 		//-------------------------------------------------------------------------
-		AddNpc(40034, "Zubeck's Box", "f_remains_40", 1420.628, 3287.514, 90, "TRESURE01_BOX");
+		AddNpc(421, 40034, "Zubeck's Box", "f_remains_40", 1420.628, 643.3027, 3287.514, 90, "TRESURE01_BOX", "", "", 1);
 		
 		// Zubeck's Box
 		//-------------------------------------------------------------------------
-		AddNpc(40034, "Zubeck's Box", "f_remains_40", 2203.432, 1219.976, 90, "TRESURE01_BOX");
+		AddNpc(422, 40034, "Zubeck's Box", "f_remains_40", 2203.432, 515.572, 1219.976, 90, "TRESURE01_BOX", "", "", 1);
 		
 		// Zubeck's Box
 		//-------------------------------------------------------------------------
-		AddNpc(40034, "Zubeck's Box", "f_remains_40", -282.4553, -47.10638, 90, "TRESURE01_BOX");
+		AddNpc(423, 40034, "Zubeck's Box", "f_remains_40", -282.4553, 642.7355, -47.10638, 90, "TRESURE01_BOX", "", "", 1);
 		
 		// Zubeck's Box
 		//-------------------------------------------------------------------------
-		AddNpc(40034, "Zubeck's Box", "f_remains_40", -2105.21, -3446.359, 90, "TRESURE01_BOX");
+		AddNpc(424, 40034, "Zubeck's Box", "f_remains_40", -2105.21, 315.3375, -3446.359, 90, "TRESURE01_BOX", "", "", 1);
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(47192, " ", "f_remains_40", 1572.495, 890.3813, 66, "REMAINS40_HIDDEN_EVENT");
+		AddNpc(425, 47192, " ", "f_remains_40", 1572.495, 460.8833, 890.3813, 66, "REMAINS40_HIDDEN_EVENT", "", "");
+		AddNpc(403, 147363, "Field Gen x", "f_remains_40", 95.11674, 304.5279, -2591.31, 90, "", "", "");
+		AddNpc(403, 147363, "Field Gen x", "f_remains_40", -2405.159, 315.3375, -1360.366, 90, "", "", "");
+		AddNpc(403, 147363, "Field Gen x", "f_remains_40", -60.88457, 304.5279, -2433.459, 90, "", "", "");
 		
 		// Lv1 Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(147392, "Lv1 Treasure Chest", "f_remains_40", -1601.49, -3954.92, 90, "TREASUREBOX_LV_F_REMAINS_40427");
+		AddNpc(427, 147392, "Lv1 Treasure Chest", "f_remains_40", -1601.49, 315.44, -3954.92, 90, "TREASUREBOX_LV_F_REMAINS_40427", "", "");
 		
 		// Judge Rymis
 		//-------------------------------------------------------------------------
-		AddNpc(155043, "Judge Rymis", "f_remains_40", -601.0385, -1757.154, 7, "CATACOMB_25_4_LAIMIS");
+		AddNpc(429, 155043, "Judge Rymis", "f_remains_40", -601.0385, 304.5279, -1757.154, 7, "CATACOMB_25_4_LAIMIS", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_remains_40", -1181.34, -1134.37, 90, "HTA_REMAINS_40_WATERPOT");
+		AddNpc(430, 152057, " ", "f_remains_40", -1181.34, 304.02, -1134.37, 90, "HTA_REMAINS_40_WATERPOT", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(152057, " ", "f_remains_40", -2129.305, -3577.367, 90, "HTA_REMAINS_40_SMOKE");
+		AddNpc(431, 152057, " ", "f_remains_40", -2129.305, 315.34, -3577.367, 90, "HTA_REMAINS_40_SMOKE", "", "");
+		AddNpc(444, 20026, " ", "f_remains_40", -428.3069, 304.5279, -1814.344, 0, "", "", "");
 		
 		//  
 		//-------------------------------------------------------------------------
-		AddNpc(40095, " ", "f_remains_40", -1913.318, -2708.284, 90, "", "MASTER_PELTASTA2_3_TRACK", "");
+		AddNpc(445, 40095, " ", "f_remains_40", -1913.318, 315.4777, -2708.284, 90, "", "MASTER_PELTASTA2_3_TRACK", "");
 		
 		// Ominous Orb
 		//-------------------------------------------------------------------------
-		AddNpc(153159, "Ominous Orb", "f_remains_40", -1979.486, 69.63271, 90, "EXORCIST_MASTER_STEP33_NPC1", "EXORCIST_MASTER_STEP33_NPC1_IN");
+		AddNpc(446, 153159, "Ominous Orb", "f_remains_40", -1979.486, 368.9205, 69.63271, 90, "EXORCIST_MASTER_STEP33_NPC1", "EXORCIST_MASTER_STEP33_NPC1_IN", "", 1);
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(20025, "", "f_remains_40", -1964.657, 63.33947, 90, "EXORCIST_MASTER_STEP33_NPC2");
+		AddNpc(447, 20025, "", "f_remains_40", -1964.657, 368.9205, 63.33947, 90, "EXORCIST_MASTER_STEP33_NPC2", "", "", 1);
 	}
 }
