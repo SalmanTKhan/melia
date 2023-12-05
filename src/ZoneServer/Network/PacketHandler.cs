@@ -175,6 +175,8 @@ namespace Melia.Zone.Network
 			Send.ZC_MOVE_SPEED(character);
 			Send.ZC_STAMINA(character, character.Stamina);
 			Send.ZC_UPDATE_SP(character, character.Sp, false);
+			Send.ZC_RES_DAMAGEFONT_SKIN(conn, character);
+			Send.ZC_RES_DAMAGEEFFECT_SKIN(conn, character);
 			Send.ZC_LOGIN_TIME(conn, DateTime.Now);
 			Send.ZC_MYPC_ENTER(character);
 
@@ -207,9 +209,7 @@ namespace Melia.Zone.Network
 			Send.ZC_ADDITIONAL_SKILL_POINT(character);
 			Send.ZC_SET_DAYLIGHT_INFO(character);
 			//Send.ZC_DAYLIGHT_FIXED(character);
-
 			Send.ZC_SEND_APPLY_HUD_SKIN_MYSELF(character);
-			Send.ZC_SEND_APPLY_HUD_SKIN_OTHER(conn, character);
 
 			Send.ZC_NORMAL.AccountProperties(character);
 
@@ -4683,7 +4683,7 @@ namespace Melia.Zone.Network
 		}
 
 		/// <summary>
-		/// Request to apply HUD skin.
+		/// Request to apply a certain HUD skin.
 		/// </summary>
 		/// <param name="conn"></param>
 		/// <param name="packet"></param>

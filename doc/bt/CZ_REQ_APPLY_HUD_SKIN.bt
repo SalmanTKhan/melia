@@ -10,8 +10,10 @@
 //  ID Bytes: 
 //   History: 
 //------------------------------------------------
+
 #include "inc/common.bt"
 
 ClientHeaderFixed header;
 
+int skinId;
 int skinId;

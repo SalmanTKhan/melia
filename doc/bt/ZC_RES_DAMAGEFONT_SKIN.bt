@@ -9,14 +9,14 @@
 // File Mask: 
 //  ID Bytes: 
 //   History: 
-//   - i377055: Added
 //------------------------------------------------
 
 #include "inc/common.bt"
 
 ServerHeaderFixed header;
 
-int64 l1; // 0
-int i1; // 0
-int handle; // handle?
-int i3; // 1
+int i1;
+int i2;
+int i3;
+int handle;
+int i4;

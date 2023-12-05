@@ -25591,7 +25591,7 @@
 { itemId: 11201102, monsterId: 824313, className: "High_Enchantchip_low", name: "Advanced Enchant Scroll" },
 { itemId: 11201103, monsterId: 824314, className: "High_Enchantchip_low_recipe", name: "Recipe - Advanced Enchant Scroll" },
 { itemId: 11201104, monsterId: 824315, className: "BridgeWailing_Dimension_recipe", name: "Recipe - Wailing Graveyard OD One Entry Voucher (Untradable)" },
-{ itemId: 11201105, monsterId: 824316, className: "BridgeWailing_Dimension_recipe_NoTrade", name: "Recipe - Wailing Graveyard OD One Entry Voucher (Both Untradable)" },
+{ itemId: 11201105, monsterId: 824316, className: "BridgeWailing_Dimension_recipe_NoTrade", name: "Recipe - Wailing Graveyard OD One Entry Voucher (Untradable)" },
 { itemId: 11201106, monsterId: 824317, className: "misc_reinforce_percentUp_500_NoTrade_10ea_achieve", name: "[Lv.500] Enhance Aid (Untradable) x10" },
 { itemId: 11201107, monsterId: 824318, className: "misc_reinforce_percentUp_500_NoTrade_15ea_achieve", name: "[Lv.500] Enhance Aid (Untradable) x15" },
 { itemId: 11201108, monsterId: 824319, className: "misc_reinforce_percentUp_500_NoTrade_30ea_achieve", name: "[Lv.500] Enhance Aid (Untradable) x30" },

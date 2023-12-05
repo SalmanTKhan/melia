@@ -1057,7 +1057,10 @@ namespace Melia.Zone.World.Actors.Characters
 				{
 					Send.ZC_ENTER_PC(this.Connection, character);
 
-					if (!character.AttachableEffects.IsEmpty)
+					Send.ZC_SEND_APPLY_HUD_SKIN_OTHER(this.Connection, character);
+					//Send.ZC_SEND_MODE_HUD_SKIN(this.Connection, character);
+
+					if (character.AttachableEffects.Count != 0)
 					{
 						foreach (var effect in character.AttachableEffects)
 							Send.ZC_NORMAL.AttachEffect(this.Connection, character, effect.PacketString, effect.Scale);

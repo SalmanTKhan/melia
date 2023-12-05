@@ -16,4 +16,4 @@
 ServerHeaderFixed header;
 
 int handle;
-byte b1; // 1
+byte mode;
