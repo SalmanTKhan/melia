@@ -428,17 +428,12 @@ namespace Melia.Zone.World.Actors.Characters
 		/// <summary>
 		/// Character's class change reset points
 		/// </summary>
-		public int ResetPoints { get; private set; }
+		public int ResetPoints { get; set; }
 
 		/// <summary>
 		/// Character's Balloon Id
 		/// </summary>
 		public int BalloonId { get; set; }
-
-		/// <summary>
-		/// Character's HUD Skin Id
-		/// </summary>
-		public int HUDSkin { get; private set; }
 
 		/// <summary>
 		/// Animation Pairing
@@ -647,11 +642,6 @@ namespace Melia.Zone.World.Actors.Characters
 		public void SetHeadDirection(Direction dir)
 		{
 			this.HeadDirection = dir;
-		}
-
-		public void SetHUDSkin(int skinId)
-		{
-			this.HUDSkin = skinId;
 		}
 
 		/// <summary>

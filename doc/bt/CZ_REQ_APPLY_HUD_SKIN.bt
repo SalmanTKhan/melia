@@ -16,4 +16,3 @@
 ClientHeaderFixed header;
 
 int skinId;
-int skinId;

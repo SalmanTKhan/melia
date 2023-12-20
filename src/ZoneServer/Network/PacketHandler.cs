@@ -170,8 +170,6 @@ namespace Melia.Zone.Network
 			Send.ZC_START_GAME(conn);
 			Send.ZC_UPDATE_ALL_STATUS(character, 0);
 			Send.ZC_SET_WEBSERVICE_URL(conn);
-			Send.ZC_RES_DAMAGEFONT_SKIN(character);
-			Send.ZC_RES_DAMAGEEFFECT_SKIN(character);
 			Send.ZC_MOVE_SPEED(character);
 			Send.ZC_STAMINA(character, character.Stamina);
 			Send.ZC_UPDATE_SP(character, character.Sp, false);
@@ -209,7 +207,7 @@ namespace Melia.Zone.Network
 			Send.ZC_ADDITIONAL_SKILL_POINT(character);
 			Send.ZC_SET_DAYLIGHT_INFO(character);
 			//Send.ZC_DAYLIGHT_FIXED(character);
-			Send.ZC_SEND_APPLY_HUD_SKIN_MYSELF(character);
+			Send.ZC_SEND_APPLY_HUD_SKIN_MYSELF(conn, character);
 
 			Send.ZC_NORMAL.AccountProperties(character);
 
@@ -892,16 +890,14 @@ namespace Melia.Zone.Network
 				}
 
 				// Remove consumeable items on success
-				if (item.Data.Type == ItemType.Consume)
-				{
-					if (result != ItemUseResult.OkayNotConsumed)
-						character.Inventory.Remove(item, 1, InventoryItemRemoveMsg.Used);
-				}
+				if (item.Data.Type == ItemType.Consume && result != ItemUseResult.OkayNotConsumed)
+					character.Inventory.Remove(item, 1, InventoryItemRemoveMsg.Used);
 
 				if (item.Data.HasCooldown && item.CooldownData != null)
 					character.Components.Get<CooldownComponent>().Start(item.CooldownData.Id, item.CooldownData.OverheatResetTime);
 
-				Send.ZC_ITEM_USE(character, item.Id);
+				if (result == ItemUseResult.Okay)
+					Send.ZC_ITEM_USE(character, item.Id);
 			}
 			catch (BuffNotImplementedException ex)
 			{
@@ -4701,8 +4697,9 @@ namespace Melia.Zone.Network
 			}
 
 			// TODO: Check if player owns the HUD skin?
-			character.SetHUDSkin(skinId);
-			Send.ZC_SEND_APPLY_HUD_SKIN_MYSELF(character);
+			character.Variables.Perm.SetInt("Melia.HudSkin", skinId);
+
+			Send.ZC_SEND_APPLY_HUD_SKIN_MYSELF(conn, character);
 			if (conn.Party != null)
 				Send.ZC_SEND_APPLY_HUD_SKIN_PARTY(conn, character, conn.Party);
 			Send.ZC_SEND_APPLY_HUD_SKIN_OTHER(conn, character);

@@ -120,7 +120,7 @@ namespace Melia.Zone.Network
 		{
 			if (!ZoneServer.Instance.Data.PacketStringDb.TryFind(packetString1, out var packetStringData1))
 			{
-				Log.Warning("ZC_NORMAL_AttachEffect: Unable to find packetString1: {0}", packetString1);
+				Log.Warning("ZC_ATTACH_TO_OBJ: Unable to find packetString1: {0}", packetString1);
 				return;
 			}
 			var animation2Id = 0;
@@ -4094,35 +4094,43 @@ namespace Melia.Zone.Network
 		}
 
 		/// <summary>
-		/// Sends Damage Font Skin?
+		/// Updates the character's damage font skin (?) on the client.
 		/// </summary>
+		/// <param name="conn"></param>
 		/// <param name="character"></param>
-		public static void ZC_RES_DAMAGEFONT_SKIN(Character character)
+		public static void ZC_RES_DAMAGEFONT_SKIN(IZoneConnection conn, Character character)
 		{
+			var skinId = character.Variables.Perm.GetInt("Melia.DamageFontSkin", 1);
+
 			var packet = new Packet(Op.ZC_RES_DAMAGEFONT_SKIN);
 
-			packet.PutLong(0);
+			packet.PutInt(0);
+			packet.PutInt(0);
 			packet.PutInt(0);
 			packet.PutInt(character.Handle);
-			packet.PutInt(0);
+			packet.PutInt(skinId);
 
-			character.Connection.Send(packet);
+			conn.Send(packet);
 		}
 
 		/// <summary>
-		/// Sends Damage Effect Skin?
+		/// Updates the character's damage effect skin (?) on the client.
 		/// </summary>
+		/// <param name="conn"></param>
 		/// <param name="character"></param>
-		public static void ZC_RES_DAMAGEEFFECT_SKIN(Character character)
+		public static void ZC_RES_DAMAGEEFFECT_SKIN(IZoneConnection conn, Character character)
 		{
+			var skinId = character.Variables.Perm.GetInt("Melia.DamageEffectSkin", 1);
+
 			var packet = new Packet(Op.ZC_RES_DAMAGEEFFECT_SKIN);
 
-			packet.PutLong(0);
+			packet.PutInt(0);
+			packet.PutInt(0);
 			packet.PutInt(0);
 			packet.PutInt(character.Handle);
-			packet.PutInt(1);
+			packet.PutInt(skinId);
 
-			character.Connection.Send(packet);
+			conn.Send(packet);
 		}
 
 		/// <summary>
@@ -5733,6 +5741,47 @@ namespace Melia.Zone.Network
 		}
 
 		/// <summary>
+		/// Attach to Slot
+		/// </summary>
+		/// <param name="actor"></param>
+		/// <param name="slot"></param>
+		/// <param name="packetStringName1"></param>
+		/// <param name="packetStringName2"></param>
+		public static void ZC_ATTACH_TO_SLOT(Actor actor, int slot, string packetStringName1 = null, string packetStringName2 = null)
+		{
+			var packetStringId1 = 0;
+			var packetStringId2 = 0;
+
+			if (packetStringName1 != null &&
+				ZoneServer.Instance.Data.PacketStringDb.TryFind(packetStringName1, out var packetString1))
+				packetStringId1 = packetString1.Id;
+			if (packetStringName2 != null &&
+				ZoneServer.Instance.Data.PacketStringDb.TryFind(packetStringName2, out var packetString2))
+				packetStringId2 = packetString2.Id;
+
+			ZC_ATTACH_TO_SLOT(actor, slot, packetStringId1, packetStringId2);
+		}
+
+		/// <summary>
+		/// Attach to Slot
+		/// </summary>
+		/// <param name="actor"></param>
+		/// <param name="slot"></param>
+		/// <param name="packetString1"></param>
+		/// <param name="packetString2"></param>
+		public static void ZC_ATTACH_TO_SLOT(Actor actor, int slot, int packetString1, int packetString2)
+		{
+			var packet = new Packet(Op.ZC_ATTACH_TO_SLOT);
+
+			packet.PutInt(actor.Handle);
+			packet.PutInt(slot);
+			packet.PutInt(packetString1);
+			packet.PutInt(packetString2);
+
+			actor.Map.Broadcast(packet);
+		}
+
+		/// <summary>
 		/// Plays item pick up animation for the character and item monster.
 		/// </summary>
 		/// <param name="character"></param>
@@ -5951,14 +6000,16 @@ namespace Melia.Zone.Network
 		/// Apply HUD Skin for "Myself"
 		/// </summary>
 		/// <param name="character"></param>
-		public static void ZC_SEND_APPLY_HUD_SKIN_MYSELF(Character character)
+		public static void ZC_SEND_APPLY_HUD_SKIN_MYSELF(IZoneConnection conn, Character character)
 		{
+			var skinId = character.Variables.Perm.GetInt("Melia.HudSkin", 0);
+
 			var packet = new Packet(Op.ZC_SEND_APPLY_HUD_SKIN_MYSELF);
 
 			packet.PutInt(character.Handle);
-			packet.PutInt(character.HUDSkin);
+			packet.PutInt(skinId);
 
-			character.Connection.Send(packet);
+			conn.Send(packet);
 		}
 
 		/// <summary>
@@ -5967,10 +6018,12 @@ namespace Melia.Zone.Network
 		/// <param name="character"></param>
 		public static void ZC_SEND_APPLY_HUD_SKIN_OTHER(IZoneConnection conn, Character character)
 		{
+			var skinId = character.Variables.Perm.GetInt("Melia.HudSkin", 0);
+
 			var packet = new Packet(Op.ZC_SEND_APPLY_HUD_SKIN_OTHER);
 
 			packet.PutInt(character.Handle);
-			packet.PutInt(character.HUDSkin);
+			packet.PutInt(skinId);
 
 			conn.Send(packet);
 		}
@@ -5983,16 +6036,23 @@ namespace Melia.Zone.Network
 		/// <param name="party"></param>
 		public static void ZC_SEND_APPLY_HUD_SKIN_PARTY(IZoneConnection conn, Character character, Party party)
 		{
+			var skinId = character.Variables.Perm.GetInt("Melia.HudSkin", 0);
+
 			var packet = new Packet(Op.ZC_SEND_APPLY_HUD_SKIN_PARTY);
 
 			packet.PutInt(character.Handle);
-			packet.PutInt(character.HUDSkin);
+			packet.PutInt(skinId);
 			packet.PutLong(party.ObjectId);
 
 			conn.Send(packet);
 		}
 
-		public static void ZC_SEND_MODE_HUD_SKIN(Character character, byte b1 = 0)
+		/// <summary>
+		/// Updates the character's HUD mode (?) on the client.
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="character"></param>
+		public static void ZC_SEND_MODE_HUD_SKIN(IZoneConnection conn, Character character, byte b1 = 0)
 		{
 			var packet = new Packet(Op.ZC_SEND_MODE_HUD_SKIN);
 

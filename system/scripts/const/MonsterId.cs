@@ -3293,6 +3293,7 @@ public static class MonsterId
 	public const int Pet_Jpn3th_Fox = 60058;
 	public const int Pet_Sled_Green = 60059;
 	public const int Pet_Nightrabbit = 60060;
+	public const int Pet_Snigo = 60061;
 	public const int RidePet_Test = 65000;
 	public const int RidePet_HelioGriffin_1 = 65001;
 	public const int RidePet_KogiBird_1 = 65002;
@@ -3315,6 +3316,7 @@ public static class MonsterId
 	public const int RidePet_Explorer = 65019;
 	public const int RidePet_Elf = 65020;
 	public const int RidePet_Zebra = 65021;
+	public const int RidePet_Shape_Memory_Snigo = 65023;
 	public const int Gtower_StoneWhale = 90001;
 	public const int Gtower_Chapparition = 90002;
 	public const int Gtower_TombLord = 90003;
@@ -3524,6 +3526,12 @@ public static class MonsterId
 	public const int TEST_Hauberk = 101009;
 	public const int Event_LuckyBreak_Moru = 101010;
 	public const int Event_Boss_Lucy = 101012;
+	public const int Event_Boss_Snigo = 101013;
+	public const int Event_Snigo_Crobasia = 101014;
+	public const int Event_Snigo_Luna_Angel = 101015;
+	public const int Event_Snigo_Yak_Magician = 101016;
+	public const int Event_Snigo_Yak_Druid = 101017;
+	public const int Event_Boss_Pbeta = 101018;
 	public const int BW_Boss_Kerberos = 102000;
 	public const int BW_Boss_Lapedame = 102001;
 	public const int BW_Boss_Foculus = 102002;
@@ -4014,6 +4022,7 @@ public static class MonsterId
 	public const int Boss_Golem = 450221;
 	public const int Boss_Golem_Gray = 450222;
 	public const int Golem_NoTex = 450225;
+	public const int Doll_Little_Glacier = 600012;
 	public const int GRB_SAMPLE_1 = 700000;
 	public const int GFB_Boss_Hauberk = 700001;
 	public const int GFB_Boss_Woodspirit = 700002;
@@ -4276,6 +4285,8 @@ public static class MonsterId
 	public const int Pc_Summon_Legend_Card_Giltine = 800093;
 	public const int Pc_Summon_Legend_Card_Avataras = 800094;
 	public const int Pc_Summon_LCD_Master = 800095;
+	public const int Pc_Summon_Legend_Card_Slogutis = 800096;
+	public const int Pc_Summon_Boss_Upinis = 800097;
 	public const int Gtower_GoblinMiners = 910001;
 	public const int Gtower_Bat = 910002;
 	public const int Gtower_Shredded = 910003;
@@ -7607,6 +7618,8 @@ public static class MonsterId
 	public const int Bridge_Wailing_Dimension_Step2_Npc = 160190;
 	public const int Bridge_Wailing_Dimension_Step3_Npc = 160191;
 	public const int Bridge_Wailing_Dimension_Reward_Multiple_Npc = 160192;
+	public const int Npc_Event_Glacier = 160193;
+	public const int Npc_Pontifex = 160194;
 	public const int E_Statue_Zemina = 161000;
 	public const int Npc_Kupole_Velcoffer = 161001;
 	public const int Npc_Teliavelis = 161002;
