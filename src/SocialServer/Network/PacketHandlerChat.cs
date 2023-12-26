@@ -1,4 +1,5 @@
 ﻿using Melia.Shared.Network;
+using Melia.Shared.Tos.Const;
 using Melia.Social.Database;
 using Yggdrasil.Logging;
 using Yggdrasil.Security.Hashing;
@@ -320,6 +321,35 @@ namespace Melia.Social.Network
 			var jobName = packet.GetString(16);
 
 			// What to do with this? Perhaps it's a job update of some sort?
+		}
+
+		[PacketHandler(Op.CS_PARTY_CLIENT_INFO_SEND)]
+		public void CS_PARTY_CLIENT_INFO_SEND(ISocialConnection conn, Packet packet)
+		{
+			var partyType = (PartyType)packet.GetByte();
+			var partyId = packet.GetLong();
+			var b1 = packet.GetByte();
+			var accountId = packet.GetLong();
+			var l1 = packet.GetLong();
+			var sessionObjectId = packet.GetInt(); // Main Session Object (90000)
+			var propertySize = packet.GetInt();
+
+			switch (b1)
+			{
+				case 1:
+					break;
+				case 2:
+					for (var i = 0; i < propertySize; i++)
+					{
+						var propId = packet.GetInt();
+						var propValue = packet.GetInt();
+					}
+					break;
+				case 3:
+					break;
+			}
+
+			// What to do with this?
 		}
 	}
 }

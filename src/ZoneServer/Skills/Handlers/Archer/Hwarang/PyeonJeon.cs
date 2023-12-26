@@ -25,7 +25,7 @@ namespace Melia.Zone.Skills.Handlers.Hwarang
 		{
 			if (caster is Character character)
 			{
-				Send.ZC_NORMAL.Unknown_110(character);
+				Send.ZC_NORMAL.CancelDynamicCast(character);
 				Send.ZC_ENABLE_CONTROL(character.Connection, "", true);
 				Send.ZC_LOCK_KEY(character, "", false);
 				caster.Properties.SetFloat(PropertyName.FIXMSPD_BM, 0);

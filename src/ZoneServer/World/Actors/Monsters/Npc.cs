@@ -52,6 +52,8 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// </summary>
 		public IShapeF Area { get; private set; }
 
+		public bool UpdateArea { get; private set; }
+
 		/// <summary>
 		/// Returns the NPC's variables.
 		/// </summary>
@@ -138,9 +140,10 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// Sets the trigger area for the NPC's enter and leave triggers.
 		/// </summary>
 		/// <param name="area"></param>
-		public void SetTriggerArea(IShapeF area)
+		public void SetTriggerArea(IShapeF area, bool updateArea = false)
 		{
 			this.Area = area;
+			this.UpdateArea = updateArea;
 		}
 	}
 

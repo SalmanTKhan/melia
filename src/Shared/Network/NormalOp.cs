@@ -162,7 +162,7 @@
 			public const int RemoveBuff = 0x10C;
 			public const int Skill_10B = 0x10D;
 			public const int Unknown_10F = 0x112;
-			public const int Unknown_110 = 0x113;
+			public const int CancelDynamicCast = 0x113;
 			public const int Unknown_11A = 0x11C;
 			public const int Shop_Unknown11C = 0x11E;
 			public const int Skill_125 = 0x125;

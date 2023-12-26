@@ -8,6 +8,7 @@ using Melia.Shared.World;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
+using Melia.Zone.World.Actors.Components;
 using Melia.Zone.World.Actors.Monsters;
 using Yggdrasil.Composition;
 using Yggdrasil.Scheduling;
@@ -234,6 +235,8 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 			this.MoveTarget = MoveTargetType.Direction;
 
 			Send.ZC_MOVE_DIR(this.Entity, pos, dir, unkFloat);
+
+			this.Entity.Components.Get<ActorPositionUpdaterComponent>()?.UpdatePosition();
 		}
 
 		/// <summary>

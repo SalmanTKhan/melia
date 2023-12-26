@@ -2521,15 +2521,17 @@ namespace Melia.Zone.Network
 
 			/// <summary>
 			/// Sent for unknown purpose related to skill (Hwarang PyeonJeon)
+			/// Might be related to canceling dynamic cast.
 			/// </summary>
-			/// <param name="character"></param>
-			public static void Unknown_110(Character character)
+			/// <param name="actor"></param>
+			public static void CancelDynamicCast(IActor actor)
 			{
 				var packet = new Packet(Op.ZC_NORMAL);
 
-				packet.PutInt(NormalOp.Zone.Unknown_110);
+				packet.PutInt(NormalOp.Zone.CancelDynamicCast);
+				packet.PutInt(actor.Handle);
 
-				character.Connection.Send(packet);
+				actor.Map.Broadcast(packet);
 			}
 
 			/// <summary>
