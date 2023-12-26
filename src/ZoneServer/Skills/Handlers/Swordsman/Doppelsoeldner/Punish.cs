@@ -55,16 +55,17 @@ namespace Melia.Zone.Skills.Handlers.Doppelsoeldner
 			Send.ZC_ROTATE(caster);
 			Send.ZC_SYNC_END(caster, skillHandle, 0);
 			Send.ZC_SYNC_EXEC_BY_SKILL_TIME(caster, skillHandle, TimeSpan.FromMilliseconds(200));
-			Send.ZC_SKILL_MELEE_GROUND(caster, skill, farPos, null);
+			Send.ZC_SKILL_MELEE_GROUND(caster, skill, farPos);
 
-			target.Components.Get<BuffComponent>()?.AddOrUpdate(new Buff(BuffId.DecreaseHeal_Debuff, 0, 0, TimeSpan.FromSeconds(5), target, caster));
+			target.StartBuff(BuffId.DecreaseHeal_Debuff, 0, 0, TimeSpan.FromSeconds(5), caster);
 
-			var forceId = ForceId.GetNew();
 			var skillHitResult = SCR_SkillHit(caster, target, skill);
 			target.TakeDamage(skillHitResult.Damage, caster);
 
+			var forceId = ForceId.GetNew();
 			var hitInfo = new HitInfo(caster, target, skill, skillHitResult.Damage, skillHitResult.Result);
 			hitInfo.ForceId = forceId;
+
 			Send.ZC_HIT_INFO(caster, target, hitInfo);
 		}
 	}

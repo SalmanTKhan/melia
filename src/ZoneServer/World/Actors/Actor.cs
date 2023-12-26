@@ -1,4 +1,5 @@
-﻿using System.Collections.Concurrent;
+﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using Melia.Shared.World;
 using Melia.Zone.Network;
@@ -225,9 +226,9 @@ namespace Melia.Zone.World.Actors
 		/// Plays effect for the character.
 		/// </summary>
 		/// <param name="packetString"></param>
-		public void PlayEffect(string packetString, float scale = 1, byte b1 = 1, string heightOffset = "BOT", byte b2 = 0)
+		public void PlayEffect(string packetString, float scale = 1, byte b1 = 1, string heightOffset = "BOT", byte b2 = 0, int associatedHandle = 0)
 		{
-			Send.ZC_NORMAL.PlayEffect(this, b1, heightOffset, b2, scale, packetString, 0, 0);
+			Send.ZC_NORMAL.PlayEffect(this, b1, heightOffset, b2, scale, packetString, 0, associatedHandle);
 		}
 
 		/// <summary>

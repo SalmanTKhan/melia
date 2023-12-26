@@ -169,14 +169,14 @@ public class CombatCalculationsScript : GeneralScript
 
 		var rnd = RandomProvider.Get();
 
-		if ((skill.Id == SkillId.Common_DaggerAries || skill.Id == SkillId.Pistol_Attack) && attacker.Components.Get<BuffComponent>().Has(BuffId.DoubleAttack_Buff))
+		if ((skill.Id == SkillId.Common_DaggerAries || skill.Id == SkillId.Pistol_Attack) && attacker.IsBuffActive(BuffId.DoubleAttack_Buff))
 		{
 			var rate = 40;
 
 			if (rnd.Next(100) < rate)
 				return 2;
 		}
-		else if (skill.Id == SkillId.Wizard_EarthQuake && target.Components.Get<BuffComponent>().Has(BuffId.Lethargy_Debuff))
+		else if (skill.Id == SkillId.Wizard_EarthQuake && target.IsBuffActive(BuffId.Lethargy_Debuff))
 		{
 			return 2;
 		}

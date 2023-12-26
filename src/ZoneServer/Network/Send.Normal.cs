@@ -1354,14 +1354,14 @@ namespace Melia.Zone.Network
 			/// </summary>
 			/// <param name="caster"></param>
 			/// <param name="skill"></param>
-			/// <param name="animationId"></param>
+			/// <param name="packetStringId"></param>
 			/// <param name="position"></param>
 			/// <param name="direction"></param>
 			/// <param name="f1"></param>
 			/// <param name="f2"></param>
 			/// <param name="skillHandle"></param>
 			/// <param name="f3"></param>
-			public static void SkillPad(ICombatEntity caster, Skill skill, int animationId,
+			public static void SkillPad(ICombatEntity caster, Skill skill, int packetStringId,
 				Position position, Direction direction, float f1, float f2, int skillHandle,
 				float f3, bool isVisible = true)
 			{
@@ -1369,7 +1369,7 @@ namespace Melia.Zone.Network
 				packet.PutInt(NormalOp.Zone.SkillRunScript);
 
 				packet.PutInt(caster.Handle);
-				packet.PutInt(animationId);
+				packet.PutInt(packetStringId);
 				packet.PutInt((int)skill.Id);
 				packet.PutInt(skill.Level); // Skill Level ?
 				packet.PutPosition(position);

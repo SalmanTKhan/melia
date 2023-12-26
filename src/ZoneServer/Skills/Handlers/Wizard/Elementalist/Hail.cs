@@ -138,7 +138,7 @@ namespace Melia.Zone.Skills.Handlers.Elementalist
 			var caster = trigger.Vars.Get<ICombatEntity>("Melia.HailCaster");
 			var skill = trigger.Vars.Get<Skill>("Melia.HailSkill");
 
-			if (initiator.Faction != caster.Faction && !initiator.IsDead)
+			if (caster.IsHostileFaction(initiator) && !initiator.IsDead)
 				this.TakeDamage(caster, initiator, skill);
 
 			return Task.CompletedTask;

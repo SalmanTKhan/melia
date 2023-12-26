@@ -176,7 +176,7 @@ namespace Melia.Zone.Skills.Handlers.Cleric
 			// if they're already active, someone walking over multiple
 			// pads would only get healed once, but they could still
 			// trigger the pads. This check will prevent that.
-			if (initiator.Components.Get<BuffComponent>().Has(BuffId.Heal_Buff))
+			if (initiator.IsBuffActive(BuffId.Heal_Buff))
 				return Task.CompletedTask;
 
 			var trigger = dialog.Npc;

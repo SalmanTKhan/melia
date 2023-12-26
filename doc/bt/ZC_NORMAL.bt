@@ -343,6 +343,12 @@ switch (type)
         byte b1; // 0
         break;
 
+    case 0x35:
+        int handle;
+        int i1; // 6945 (ZC_SYNC_START / ZC_SYNC_END id)
+        byte b1; // 2 or 3
+        break;
+
     // Fades out monster
     case 0x3A:
         int mapId;
@@ -854,16 +860,14 @@ switch (type)
         float f5;
         break;
 
-    // Leap Jump
-    case 0xC2:
-        int handle;
+    // Monster related? Summoned?
+    case 0xC4:
+        int casterHandle;
+        int targetHandle;
         position targetPos;
-        float jumpHeight;
-        float f2;
-        float f3;
-        float f4;
-        float f5;
-        float f6;
+        float f1;
+        int i1;
+        float gameTimeOffSet;
         break;
 
     // Seen with Corpse Tower Skill (Sent After SetInvisible 0x99)
@@ -1084,6 +1088,12 @@ switch (type)
         float duration; // 3 / 10
         break;
 
+    case 0xF1:
+        int handle;
+        float f1; // 3
+        float f2; // 0.3
+        break;
+
     // Looks like a count of classes?
     // How many total characters there are of each class?
     case 0xF2:
@@ -1182,6 +1192,7 @@ switch (type)
         break;
 
     // Update Party/Quest Property
+    // Guild Property 8907 Val: 11254#1#-35#68#507#202312522175736 (New Guild Tower Hidden Passage on Channel 1)
     case 0xF9:
         PartyType type;
         int64 partyId;
@@ -1596,6 +1607,12 @@ switch (type)
         float f1;
         break;
 
+    // Seen after ZC_ENTER_PC
+    case 0x15E:
+        int handle;
+        byte b1; // 0
+        break;
+
     // Unknown purpose sent with 0x6D -> 0x165 (now 0x6E -> 0x166 -> 0x168)
     case 0x168:
         int64 l1; // 0
@@ -1916,6 +1933,14 @@ switch (type)
     case 0x1AC:
         int handle;
         byte wigVisibility;
+        break;
+
+    // Party Buffs?
+    case 0x1AD:
+        int64 characterId;
+        int i1; // 432, 4531, -1
+        int64 l1; // 0 or -1
+        byte b1; // 0 or 1
         break;
 
     // ?

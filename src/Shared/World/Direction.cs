@@ -278,7 +278,7 @@ namespace Melia.Shared.World
 
 		public override string ToString()
 		{
-			return $"Cos: {Cos} Sin: {Sin} Angle: {DegreeAngle}";
+			return $"Cos: {Cos} Sin: {Sin} Angle: {DegreeAngle} Radian Angle: {RadianAngle} Normal Degree Angle: {NormalDegreeAngle}";
 		}
 	}
 }

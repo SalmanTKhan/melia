@@ -4,6 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using g3;
 using Melia.Shared.Data.Database;
 using Melia.Shared.L10N;
 using Melia.Shared.Network;
@@ -143,6 +144,33 @@ namespace Melia.Zone.Commands
 				Log.Debug("Testing {0}", args.Get(0));
 				switch (args.Get(0))
 				{
+					case "knockback":
+					{
+						var distance = 200;
+						var dirAngle = 21;
+						var i3 = 10; // Force? 0 - 10?
+						var i4 = 0;
+						var f1 = 1f;
+						var f2 = 1f;
+						if (args.Count > 1)
+							int.TryParse(args.Get(1), out distance);
+						if (args.Count > 2)
+							int.TryParse(args.Get(2), out dirAngle);
+						if (args.Count > 3)
+							int.TryParse(args.Get(3), out i3);
+						if (args.Count > 4)
+							int.TryParse(args.Get(4), out i4);
+						if (args.Count > 5)
+							float.TryParse(args.Get(5), out f1);
+						if (args.Count > 6)
+							float.TryParse(args.Get(6), out f2);
+						Send.ZC_KNOCKBACK_INFO(sender,
+							sender.Position, sender.Position.GetRandomInRange2D(75, 200),
+							distance, dirAngle, i3, i4, (byte)42, (byte)1, (byte)40, (byte)64, f1,
+							f2, 0, (byte)0, (byte)1, 0xE7, 0x54
+							);
+					}
+					break;
 					case "world":
 						Send.ZC_WORLD_MSG(sender, 101226, 411, 300);
 						break;

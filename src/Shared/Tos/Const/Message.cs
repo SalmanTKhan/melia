@@ -239,6 +239,14 @@
 		/// Parameter: Boss's Handle
 		/// </summary>
 		public const string BOSS_BATTLE_START = "BOSS_BATTLE_START"; // param: 232560, monster's handle
+		/// <summary>
+		/// Boss Cleared
+		/// </summary>
+		/// <remarks>
+		/// Int Parameter: Boss's Monster Id,
+		/// Str Parameter: Boss's Handle
+		/// </remarks>
+		public const string BOSS_CLEAR = "BOSS_CLEAR";
 
 		/// <summary>
 		/// Instance Dungeon Related Addons
@@ -473,6 +481,18 @@
 		/// An effect played when you unlock Legendary Card Slot?
 		/// </summary>
 		public const string MSG_PLAY_LEGENDCARD_OPEN_EFFECT = "MSG_PLAY_LEGENDCARD_OPEN_EFFECT";
+
+		/// <summary>
+		/// Update raid timer text gauge?
+		/// StrArg: RemainTime;Yellow
+		/// </summary>
+		public const string RAID_TIMER_TEXT_GAUGE_UPDATE = "RAID_TIMER_TEXT_GAUGE_UPDATE";
+
+		/// <summary>
+		/// Update Black Market Item
+		/// StrArg: 2023-12-22 06:00:00;2023-12-23 00:00:00;High_Enchantchip_low_box1000_black;12000000;0;0;4
+		/// </summary>
+		public const string UPDATE_BLACK_MARKET_ITEM = "UPDATE_BLACK_MARKET_ITEM";
 	}
 
 	/// <summary>
@@ -686,6 +706,19 @@
 		/// Magnum Opus
 		/// </summary>
 		public const string PUZZLE_COMPLETE = "PUZZLE_COMPLETE()";
+
+		/// <summary>
+		/// Raid Timer Update
+		/// </summary>
+		/// <example>
+		/// RAID_TIMER_UPDATE(1800, 1212)
+		/// </example>
+		public const string RAID_TIMER_UPDATE = "RAID_TIMER_UPDATE({0}, {1})";
+
+		/// <summary>
+		/// Update "Follower" List
+		/// </summary>
+		public const string UPDATE_PC_FOLLOWER_LIST = @"UPDATE_PC_FOLLOWER_LIST("")";
 	}
 
 	public static class CustomDialog

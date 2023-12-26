@@ -76,7 +76,7 @@ namespace Melia.Zone.Skills.Handlers.Cryomancer
 			Send.ZC_NORMAL.Skill_CallLuaFunc(snowball, AnimationName.MissileDead, 2, 4, 0, 3, 1);
 			Send.ZC_MOVE_ANIM(snowball, FixedAnimation.WLK, 0);
 			Send.ZC_STD_ANIM(snowball, FixedAnimation.WLK);
-			Send.ZC_NORMAL.SetScale(snowball, "F_wizard_snowrolling_ground", 0.65f);
+			Send.ZC_NORMAL.SetScale(snowball, AnimationName.SnowRolling, 0.65f);
 			Send.ZC_NORMAL.SetInvisible(snowball);
 			Send.ZC_NORMAL.Skill_Unknown_C6(snowball);
 			Send.ZC_NORMAL.Skill_OffsetY(snowball, 10.4f);
@@ -90,7 +90,7 @@ namespace Melia.Zone.Skills.Handlers.Cryomancer
 			Send.ZC_SYNC_END(caster, skillHandle, 0);
 			Send.ZC_SYNC_EXEC_BY_SKILL_TIME(caster, skillHandle, TimeSpan.FromMilliseconds(300));
 
-			Send.ZC_SKILL_MELEE_GROUND(caster, skill, farPos, null);
+			Send.ZC_SKILL_MELEE_GROUND(caster, skill, farPos);
 		}
 
 		private void Snowball_Died(ICombatEntity killer, ICombatEntity killed)
@@ -111,7 +111,7 @@ namespace Melia.Zone.Skills.Handlers.Cryomancer
 						owner.Buffs.Remove(BuffId.SnowRolling_Buff);
 						Send.ZC_NORMAL.SetSkill_7B(owner, SkillId.Cryomancer_SnowRolling);
 						Send.ZC_NORMAL.ClearEffects(snowball);
-						Send.ZC_EXEC_CLIENT_SCP(owner.Connection, @"UPDATE_PC_FOLLOWER_LIST("")");
+						Send.ZC_EXEC_CLIENT_SCP(owner.Connection, ClientScripts.UPDATE_PC_FOLLOWER_LIST);
 					});
 				}
 			}

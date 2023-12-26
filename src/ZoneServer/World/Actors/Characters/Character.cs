@@ -1030,7 +1030,7 @@ namespace Melia.Zone.World.Actors.Characters
 					{
 						Send.ZC_FACTION(this.Connection, monster, entity.Faction);
 
-						if (entity.Components.Get<BuffComponent>()?.Count != 0)
+						if (entity.HasBuffs())
 							Send.ZC_BUFF_LIST(this.Connection, entity);
 					}
 				}

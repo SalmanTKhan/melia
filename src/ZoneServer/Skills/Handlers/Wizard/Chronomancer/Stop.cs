@@ -85,7 +85,7 @@ namespace Melia.Zone.Skills.Handlers.Chronomancer
 			if (dialog.Initiator is not ICombatEntity initiator)
 				return Task.CompletedTask;
 
-			if (initiator.Components.Get<BuffComponent>().Has(BuffId.Stop_Debuff))
+			if (initiator.IsBuffActive(BuffId.Stop_Debuff))
 				return Task.CompletedTask;
 
 			var trigger = dialog.Npc;
@@ -93,7 +93,7 @@ namespace Melia.Zone.Skills.Handlers.Chronomancer
 			var caster = trigger.Vars.Get<ICombatEntity>("Melia.StopCaster");
 			var skill = trigger.Vars.Get<Skill>("Melia.StopSkill");
 
-			if (initiator.Faction != caster.Faction)
+			if (caster.IsHostileFaction(initiator))
 				this.BuffStop(caster, initiator, skill);
 
 			return Task.CompletedTask;

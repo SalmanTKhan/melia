@@ -353,7 +353,7 @@ namespace Melia.Zone.World.Houses
 				}
 				Send.ZC_PLAY_SOUND(character, 2628);
 				Send.ZC_HOUSING_MOVE_BG_FURNITURE(furniture);
-				Send.ZC_GROUND_EFFECT(character, "F_ground068_smoke_white", furniture.Position, 4.5f, 3f, 0, 0, 0, 0, -14968, 0);
+				Send.ZC_GROUND_EFFECT(character, AnimationName.WhiteSmoke, furniture.Position, 4.5f, 3f, 0, 0, 0, 0, -14968, 0);
 			}
 		}
 

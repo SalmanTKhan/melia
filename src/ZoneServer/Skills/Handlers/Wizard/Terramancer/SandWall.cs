@@ -14,13 +14,13 @@ using Melia.Zone.World.Actors.Monsters;
 using Yggdrasil.Geometry.Shapes;
 using static Melia.Zone.Skills.SkillUseFunctions;
 
-namespace Melia.Zone.Skills.Handlers.Pyromancer
+namespace Melia.Zone.Skills.Handlers.TerraMancer
 {
 	/// <summary>
-	/// Handler for the Pyromancer skill Fire Pillar.
+	/// Handler for the TerraMancer skill Sand Wall.
 	/// </summary>
-	[SkillHandler(SkillId.Pyromancer_FirePillar)]
-	public class FirePillar : IDynamicGroundSkillHandler
+	[SkillHandler(SkillId.TerraMancer_SandWall)]
+	public class SandWall : IDynamicGroundSkillHandler
 	{
 		public void StartDynamicCast(Skill skill, ICombatEntity caster, float maxCastTime)
 		{
@@ -60,83 +60,73 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 			Send.ZC_SKILL_READY(caster, skill, skillHandle, caster.Position, targetPos);
 			Send.ZC_NORMAL.UpdateSkillEffect(caster, caster.Handle, caster.Position, caster.Direction, caster.Position);
 
-			var targets = caster.Map.GetAttackableEntitiesInRange(caster, targetPos, (int)skill.Data.SplashRange * 4);
-			var damageDelay = TimeSpan.FromMilliseconds(200);
+			Send.ZC_SKILL_MELEE_GROUND(caster, skill, targetPos);
 
-			var hits = new List<SkillHitInfo>();
-
-			foreach (var currentTarget in targets.LimitBySDR(caster, skill))
-			{
-				var skillHitResult = SCR_SkillHit(caster, currentTarget, skill);
-				currentTarget.TakeDamage(skillHitResult.Damage, caster);
-
-				var skillHit = new SkillHitInfo(caster, currentTarget, skill, skillHitResult, damageDelay, TimeSpan.Zero);
-				hits.Add(skillHit);
-			}
-
-			Send.ZC_SKILL_MELEE_GROUND(caster, skill, targetPos, hits);
-
-			this.ExecuteFirePillar(caster, designatedTarget, skill);
+			this.ExecuteSandWall(caster, designatedTarget, skill);
 		}
 
 		/// <summary>
-		/// Execute Fire Pillar
+		/// Execute Sand Wall
 		/// </summary>
 		/// <param name="caster"></param>
 		/// <param name="target"></param>
 		/// <param name="skill"></param>
-		private void ExecuteFirePillar(ICombatEntity caster, ICombatEntity target, Skill skill)
+		private void ExecuteSandWall(ICombatEntity caster, ICombatEntity target, Skill skill)
 		{
 			var position = caster.Position;
 			var direction = caster.Direction;
 			var effectHandle = ZoneServer.Instance.World.CreateEffectHandle();
-			Send.ZC_NORMAL.SkillPad(caster, skill, "Wizard_New_FirePillar10", caster.Position, caster.Direction, -0.2594702f, 62.63292f, effectHandle, 50);
+			var packetStringId = "TerraMancer_SandWall";
+			var duration = 5;
+			Send.ZC_NORMAL.SkillPad(caster, skill, packetStringId, position, direction, -0.2594702f, 62.63292f, effectHandle, 50);
 
 			var area = new CircleF(position, 50);
 
 			var trigger = new Npc(12082, "", new Location(caster.Map.Id, caster.Position), caster.Direction);
-			trigger.Vars.Set("Melia.FirePillarCaster", caster);
-			trigger.Vars.Set("Melia.FirePillarSkill", skill);
+			trigger.Vars.Set("Melia.SandWallCaster", caster);
+			trigger.Vars.Set("Melia.SandWallSkill", skill);
 			trigger.SetTriggerArea(area);
-			trigger.SetEnterTrigger("PYROMANCER_FIRE_PILLAR_ENTER", this.OnEnterFirePillarPad);
+			trigger.SetEnterTrigger("TERRAMANCER_SAND_WALL_ENTER", this.OnEnterSandWallPad);
 
-			trigger.DisappearTime = DateTime.Now.AddSeconds(10);
+			trigger.DisappearTime = DateTime.Now.AddSeconds(duration);
 			caster.Map.AddMonster(trigger);
 
-			Task.Delay(TimeSpan.FromSeconds(10)).ContinueWith(_ => Send.ZC_NORMAL.SkillPad(caster, skill, "Wizard_New_FirePillar10", caster.Position, caster.Direction, -0.2594702f, 62.63292f, effectHandle, 50, false));
+			Task.Delay(TimeSpan.FromSeconds(duration))
+				.ContinueWith(_ =>
+				Send.ZC_NORMAL.SkillPad(caster, skill, packetStringId, position, direction, -0.2594702f, 62.63292f, effectHandle, 50, false));
 		}
 
 		/// <summary>
-		/// Burns a target directly with a buff.
+		/// Slows a target directly with a buff.
 		/// </summary>
 		/// <param name="caster"></param>
 		/// <param name="target"></param>
 		/// <param name="skill"></param>
-		private void BuffFirePillar(ICombatEntity caster, ICombatEntity target, Skill skill)
+		private void BuffSandWall(ICombatEntity caster, ICombatEntity target, Skill skill)
 		{
-			target.StartBuff(BuffId.FirePillar_Debuff, 0, 0, TimeSpan.FromSeconds(10), caster);
+			target.StartBuff(BuffId.SandWall_Debuff, skill.Level, 0, TimeSpan.FromSeconds(3), caster);
 		}
 
 		/// <summary>
-		/// Called when a target enters a fire pillar pad.
+		/// Called when a target enters a sand wall pad.
 		/// </summary>
 		/// <param name="dialog"></param>
 		/// <returns></returns>
-		private Task OnEnterFirePillarPad(Dialog dialog)
+		private Task OnEnterSandWallPad(Dialog dialog)
 		{
 			if (dialog.Initiator is not ICombatEntity initiator)
 				return Task.CompletedTask;
 
-			if (initiator.IsBuffActive(BuffId.FirePillar_Debuff))
+			if (initiator.IsBuffActive(BuffId.SandWall_Debuff))
 				return Task.CompletedTask;
 
 			var trigger = dialog.Npc;
 
-			var caster = trigger.Vars.Get<ICombatEntity>("Melia.FirePillarCaster");
-			var skill = trigger.Vars.Get<Skill>("Melia.FirePillarSkill");
+			var caster = trigger.Vars.Get<ICombatEntity>("Melia.SandWallCaster");
+			var skill = trigger.Vars.Get<Skill>("Melia.SandWallSkill");
 
 			if (caster.IsHostileFaction(initiator))
-				this.BuffFirePillar(caster, initiator, skill);
+				this.BuffSandWall(caster, initiator, skill);
 
 			return Task.CompletedTask;
 		}

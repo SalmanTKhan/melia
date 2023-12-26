@@ -43,11 +43,8 @@ namespace Melia.Zone
 				}
 			}
 
-			if (rangePreview)
-			{
-				if (shape is ISplashArea splashArea)
-					Send.ZC_START_RANGE_PREVIEW(map, 0, null, (TimeSpan)duration, splashArea);
-			}
+			if (rangePreview && shape is ISplashArea splashArea)
+				Send.ZC_START_RANGE_PREVIEW(map, 0, null, (TimeSpan)duration, splashArea);
 		}
 
 		/// <summary>

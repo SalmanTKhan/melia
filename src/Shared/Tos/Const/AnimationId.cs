@@ -36,6 +36,11 @@
 		public const string Fire = "F_bg_fire003";
 
 		/// <summary>
+		/// White Smoke used in placing furniture
+		/// </summary>
+		public const string WhiteSmoke = "F_ground068_smoke_white";
+
+		/// <summary>
 		/// Used in skills that apply buff via chance?
 		/// </summary>
 		public static readonly string ShowBuffText = "SHOW_BUFF_TEXT";
@@ -47,6 +52,9 @@
 		/// </summary>
 		public static readonly string DummyTop = "Dummy_top";
 		public static readonly string MissileDead = "MSL_DEAD_C";
+		public const string SnowRolling = "F_wizard_snowrolling_ground";
+
+		public const string StoneShower = "E_Cleric_StoneShower";
 
 		/// <summary>
 		/// Used in pairing animation for player to sit.

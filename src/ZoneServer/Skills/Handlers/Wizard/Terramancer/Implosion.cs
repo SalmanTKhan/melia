@@ -8,19 +8,19 @@ using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Actors;
 using static Melia.Zone.Skills.SkillUseFunctions;
 
-namespace Melia.Zone.Skills.Handlers.Alchemist
+namespace Melia.Zone.Skills.Handlers.TerraMancer
 {
 	/// <summary>
-	/// Handler for the Alchemist skill Alchemistic Missile.
+	/// Handler for the TerraMancer skill Implosion.
 	/// </summary>
-	[SkillHandler(SkillId.Alchemist_AlchemisticMissile)]
-	public class AlchemisticMissile : IDynamicTargetSkillHandler
+	[SkillHandler(SkillId.TerraMancer_Implosion)]
+	public class Implosion : IDynamicTargetSkillHandler
 	{
 		public void StartDynamicCast(Skill skill, ICombatEntity caster, float maxCastTime)
 		{
 			if (caster is Character character)
 			{
-				Send.ZC_PLAY_SOUND(character, character.Gender == Gender.Male ? "voice_wiz_m_alchemisticmissile_shot" : "voice_wiz_f_alchemisticmissile_shot");
+				Send.ZC_PLAY_SOUND(character, character.Gender == Gender.Male ? "voice_wiz_m_implosion_shot" : "voice_wiz_f_implosion_shot");
 				Send.ZC_NORMAL.Skill_DynamicCastStart(character, skill.Id);
 			}
 		}
@@ -29,8 +29,7 @@ namespace Melia.Zone.Skills.Handlers.Alchemist
 		{
 			if (caster is Character character)
 			{
-				Send.ZC_NORMAL.TextEffect(caster, "I_SYS_Text_Effect_None", "LV 1");
-				Send.ZC_STOP_SOUND(character, character.Gender == Gender.Male ? "voice_wiz_m_alchemisticmissile_shot" : "voice_wiz_f_alchemisticmissile_shot");
+				Send.ZC_STOP_SOUND(character, character.Gender == Gender.Male ? "voice_wiz_m_implosion_shot" : "voice_wiz_f_implosion_shot");
 				Send.ZC_NORMAL.Skill_DynamicCastEnd(character, skill.Id, maxCastTime);
 			}
 		}
@@ -47,9 +46,12 @@ namespace Melia.Zone.Skills.Handlers.Alchemist
 			caster.TurnTowards(target);
 			caster.SetAttackState(true);
 
+			// Salman: Is this required? Clear's previous skill effect?
+			Send.ZC_NORMAL.UpdateSkillEffect(caster, caster.Handle, caster.Position, caster.Direction, caster.Position);
+
 			if (target == null)
 			{
-				Send.ZC_NORMAL.Skill_40(caster, skill, caster.Direction, 2, 500, 1, 0, 0, 1, 0, 0, 512, 0);
+				Send.ZC_NORMAL.Skill_40(caster, skill, caster.Direction, 1, 500, 1, 1, 0, 1, 0, 0, 512, 0);
 				Send.ZC_SKILL_FORCE_TARGET(caster, null, skill);
 				return;
 			}
@@ -58,16 +60,20 @@ namespace Melia.Zone.Skills.Handlers.Alchemist
 			var skillHitDelay = TimeSpan.Zero;
 
 			var skillHitResult = SCR_SkillHit(caster, target, skill);
+			target.StartBuff(BuffId.DecreaseHeal_Debuff, skill.Level, 0, TimeSpan.FromSeconds(4), caster);
 			target.TakeDamage(skillHitResult.Damage, caster);
 
 			var skillHit = new SkillHitInfo(caster, target, skill, skillHitResult, damageDelay, skillHitDelay);
 			skillHit.ForceId = ForceId.GetNew();
 
-			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill, skillHit);
+			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill);
 
-			Send.ZC_NORMAL.Skill_45(caster);
-			Send.ZC_NORMAL.SkillCancel(caster, skill.Id);
-			Send.ZC_NORMAL.SetSkill_7B(caster, skill.Id);
+			var forceId = ForceId.GetNew();
+			var hitInfo = new HitInfo(caster, target, skill, skillHitResult.Damage, skillHitResult.Result);
+			hitInfo.ForceId = forceId;
+			hitInfo.HitCount = 4;
+
+			Send.ZC_HIT_INFO(caster, target, hitInfo);
 		}
 	}
 }
