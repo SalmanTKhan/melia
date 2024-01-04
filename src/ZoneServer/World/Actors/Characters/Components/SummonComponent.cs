@@ -101,6 +101,11 @@ namespace Melia.Zone.World.Actors.Characters.Components
 			{
 				summon.Components.Remove<AiComponent>();
 				summon.Components.Remove<MovementComponent>();
+				if (summon.HasBuffs())
+				{
+					summon.Buffs.RemoveAll();
+					summon.Components.Remove<BuffComponent>();
+				}
 				this.RemoveSummon(summon);
 			}
 		}

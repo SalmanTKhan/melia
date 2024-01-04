@@ -895,6 +895,11 @@ switch (type)
         int casterHandle; // 21548
         int targetHandle; // 20939
         break;
+        
+    // Seen when using Bokor's Zombify
+    case 0xD4:
+        int casterHandle;
+        break;
 
     // ?
     case 0xD6:

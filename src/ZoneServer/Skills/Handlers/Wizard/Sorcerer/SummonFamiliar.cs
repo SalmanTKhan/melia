@@ -54,6 +54,7 @@ namespace Melia.Zone.Skills.Handlers.Sorcerer
 				for (var i = 0; i < 5; i++)
 				{
 					var summon = new Summon(character, MonsterId.Familiar, MonsterType.Friendly);
+					character.Summons.AddSummon(summon);
 					summon.Map = caster.Map;
 					summon.Direction = caster.Direction;
 					summon.Faction = FactionType.Law;

@@ -19,18 +19,19 @@ ServerHeaderDynamic header;
 int skillId;
 int characterHandle;
 direction dir;
+int i1;
+float shootTime;
+float f1;
+int i2;
+int forceId;
+float f2;
+int i3;
+int mainTargetHandle;
+position pos;
 int i4;
 float f3;
-float f4;
 int i5;
-int forceId;
-float f5;
-int i8;
-int mainTargetHandle;
-int i10;
-float f6; // 512?
-int i11;
 byte hitCount;
 
-if (hitCount  > 0)
-    SkillHitInfo hits[hitCount];
+//if (hitCount  > 0)
+//    SkillHitInfo hits[hitCount];

@@ -8,6 +8,7 @@ namespace Melia.Shared.Tos.Const
 {
 	public static class MonsterId
 	{
+		public const int Zombie = 57006;
 		public const int Familiar = 57432;
 		public const int SkeletonArcher = 58534;
 		public const int Velheider = 60001;

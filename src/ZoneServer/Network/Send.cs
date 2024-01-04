@@ -556,6 +556,60 @@ namespace Melia.Zone.Network
 		/// <param name="entity"></param>
 		/// <param name="skill"></param>
 		/// <param name="targetPos"></param>
+		/// <param name="forceId"></param>
+		/// <param name="hits"></param>
+		public static void ZC_SKILL_FORCE_GROUND(ICombatEntity entity, Skill skill, Position targetPos, int forceId, IEnumerable<SkillHitInfo> hits)
+		{
+			var shootTime = skill.Properties.GetFloat(PropertyName.ShootTime);
+			var sklSpdRate = skill.Properties.GetFloat(PropertyName.SklSpdRate);
+
+			var packet = new Packet(Op.ZC_SKILL_FORCE_GROUND);
+
+			packet.PutInt((int)skill.Id);
+			packet.PutInt(entity.Handle);
+			packet.PutFloat(entity.Direction.Cos);
+			packet.PutFloat(entity.Direction.Sin);
+			packet.PutInt(1);
+			packet.PutFloat(shootTime);
+			packet.PutFloat(1);
+			packet.PutInt(0);
+			packet.PutInt(forceId);
+			packet.PutFloat(sklSpdRate);
+
+			// This does _not_ look like a handle to me... And sending a
+			// single target handle for an AoE skill packet doesn't make
+			// sense either. Let's send 0 for now.
+			//if (targets != null && targetCount == 1)
+			//	packet.PutInt(targets.First().Handle);
+			//else
+			packet.PutInt(0);
+			packet.PutInt(0);
+
+			packet.PutPosition(targetPos);
+
+			packet.PutInt(0);
+			packet.PutFloat(512);
+			packet.PutInt(0);
+
+			// Not too sure if this packet does hits, since it looks a lot
+			// like the ZC_SKILL_MELEE_GROUND
+			packet.PutByte(0);
+			//packet.PutByte((byte)(hits?.Count() ?? 0));
+			//if (hits != null)
+			//{
+			//foreach (var hit in hits)
+			//packet.AddSkillHitInfo(hit);
+			//}
+
+			entity.Map.Broadcast(packet, entity);
+		}
+
+		/// <summary>
+		/// Shows entity using the skill.
+		/// </summary>
+		/// <param name="entity"></param>
+		/// <param name="skill"></param>
+		/// <param name="targetPos"></param>
 		/// <param name="hits"></param>
 		public static void ZC_SKILL_MELEE_GROUND(ICombatEntity entity, Skill skill, Position targetPos, params SkillHitInfo[] hits)
 			=> ZC_SKILL_MELEE_GROUND(entity, skill, targetPos, (IEnumerable<SkillHitInfo>)hits);

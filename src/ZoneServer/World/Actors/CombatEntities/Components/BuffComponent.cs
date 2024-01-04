@@ -194,7 +194,7 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// Returns buff with given class name, or null if it didn't
 		/// exist.
 		/// </summary>
-		/// <param name="buffId"></param>
+		/// <param name="buffClassName"></param>
 		/// <returns></returns>
 		public Buff Get(string buffClassName)
 		{

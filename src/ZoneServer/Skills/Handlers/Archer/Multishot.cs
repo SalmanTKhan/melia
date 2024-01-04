@@ -75,7 +75,7 @@ namespace Melia.Zone.Skills.Handlers.Archer
 			caster.SetAttackState(true);
 
 			Send.ZC_SKILL_READY(caster, skill, 0, originPos, farPos);
-			Send.ZC_SKILL_MELEE_GROUND(caster, skill, farPos, null);
+			Send.ZC_SKILL_MELEE_GROUND(caster, skill, farPos);
 
 			var splashArea = new Circle(farPos, SplashRadius);
 			this.Attack(skill, caster, splashArea);

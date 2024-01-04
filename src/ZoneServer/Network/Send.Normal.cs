@@ -3461,7 +3461,11 @@ namespace Melia.Zone.Network
 				character.Map.Broadcast(packet);
 			}
 
-			//
+			/// <summary>
+			/// Play gathering corpse parts from an actor
+			/// </summary>
+			/// <param name="caster"></param>
+			/// <param name="corpse"></param>
 			public static void PlayGatherCorpseParts(IActor caster, IActor corpse)
 			{
 				var packet = new Packet(Op.ZC_NORMAL);
@@ -3471,6 +3475,20 @@ namespace Melia.Zone.Network
 				packet.PutInt(corpse.Handle);
 
 				caster.Map.Broadcast(packet, caster);
+			}
+
+			/// <summary>
+			/// Related to casting Zombify
+			/// </summary>
+			/// <param name="caster"></param>
+			public static void Skill_Unknown_D4(IActor caster)
+			{
+				var packet = new Packet(Op.ZC_NORMAL);
+				packet.PutInt(NormalOp.Zone.Skill_Unknown_D4);
+
+				packet.PutInt(caster.Handle);
+
+				caster.Map.Broadcast(packet);
 			}
 
 			/// <summary>

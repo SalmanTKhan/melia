@@ -135,6 +135,7 @@
 			public const int Skill_Unknown_C6 = 0xC8;
 			public const int Skill_Unknown_C7 = 0xC9;
 			public const int PlayGatherCorpseParts = 0xCC;
+			public const int Skill_Unknown_D4 = 0xD4;
 			public const int PlayCorpsePartsRing = 0xD8;
 			public const int RemoveEffect = 0xDA;
 			public const int DropCorpseParts = 0xDB;
