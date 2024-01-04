@@ -18490,6 +18490,7 @@
 { classId: 5651106, className: "EVENT_2312_8TH_ANI_DLG3" },
 { classId: 5651107, className: "EVENT_2312_8TH_ANI_LITTLE" },
 { classId: 5651201, className: "W_SNIGO_START_NPC_MSG" },
+{ classId: 5651301, className: "W_2024_NEW_YEAR_START_NPC_MSG" },
 { classId: 6000001, className: "REPUTATION_NO_BASIC" },
 { classId: 6000002, className: "REPUTATION_POSSIBLEQUEST" },
 { classId: 6000003, className: "REPUTATION_QUEST_BOARD_DLG1" },
