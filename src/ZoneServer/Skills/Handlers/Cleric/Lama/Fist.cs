@@ -45,9 +45,7 @@ namespace Melia.Zone.Skills.Handlers.Lama
 			Send.ZC_NORMAL.UpdateSkillEffect(caster, 0, caster.Position, caster.Direction, Position.Zero);
 			Send.ZC_SKILL_MELEE_GROUND(caster, skill, farPos);
 
-			var buff = new Buff(BuffId.Lamafist_Buff, 0, 0, TimeSpan.FromSeconds(10), caster, caster);
-			//buff.Skill = skill;
-			caster.Components.Get<BuffComponent>()?.AddOrUpdate(buff);
+			caster.StartBuff(BuffId.Lamafist_Buff, TimeSpan.FromSeconds(10));
 
 			var radius = (int)skill.Data.SplashRange * 2;
 			var targets = caster.Map.GetAttackableEntitiesInRange(caster, farPos, radius);

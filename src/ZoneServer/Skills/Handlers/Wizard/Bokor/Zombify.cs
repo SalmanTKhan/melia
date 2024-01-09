@@ -49,7 +49,7 @@ namespace Melia.Zone.Skills.Handlers.Bokor
 				summon.Properties.SetFloat(PropertyName.FIXMSPD_BM, 80f);
 				summon.FromGround = true;
 				summon.Components.Add(new LifeTimeComponent(summon, TimeSpan.FromSeconds(10 + 2 * skill.Level)));
-				summon.SetState(true);
+				summon.SetState(true, false, false);
 
 				var skillHandle = ZoneServer.Instance.World.CreateSkillHandle();
 				Send.ZC_SYNC_START(caster, skillHandle, 1);
@@ -57,7 +57,6 @@ namespace Melia.Zone.Skills.Handlers.Bokor
 				Send.ZC_SYNC_END(caster, skillHandle, 0);
 				Send.ZC_SYNC_EXEC_BY_SKILL_TIME(caster, skillHandle, skill.Data.DefaultHitDelay);
 			}
-			caster.StartBuff(BuffId.Ability_buff_PC_Zombie, 0, 0, TimeSpan.Zero, caster);
 
 			var forceId = ForceId.GetNew();
 

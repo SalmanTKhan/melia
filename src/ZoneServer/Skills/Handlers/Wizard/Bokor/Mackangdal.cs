@@ -1,22 +1,19 @@
 using System;
-using Melia.Shared.L10N;
 using Melia.Shared.Tos.Const;
 using Melia.Shared.World;
-using Melia.Zone.Buffs;
 using Melia.Zone.Network;
-using Melia.Zone.Skills.Combat;
-using Melia.Zone.Skills.Handlers.Base;
 using Melia.Zone.World.Actors;
+using Melia.Zone.Skills.Handlers.Base;
 using Melia.Zone.World.Actors.CombatEntities.Components;
-using Yggdrasil.Logging;
+using Melia.Shared.L10N;
 
 namespace Melia.Zone.Skills.Handlers.Bokor
 {
 	/// <summary>
-	/// Handler for the Bokor skill Effigy.
+	/// Handler for the Bokor skill Mackangdal.
 	/// </summary>
-	[SkillHandler(SkillId.Bokor_Effigy)]
-	public class Effigy : IGroundSkillHandler
+	[SkillHandler(SkillId.Bokor_Mackangdal)]
+	public class Mackangdal : IGroundSkillHandler
 	{
 		/// <summary>
 		/// Handle Skill Behavior
@@ -33,21 +30,24 @@ namespace Melia.Zone.Skills.Handlers.Bokor
 				caster.ServerMessage(Localization.Get("Not enough SP."));
 				return;
 			}
+			if (!caster.Components.Get<BuffComponent>().TryGet(BuffId.PowerOfDarkness_Buff, out var darkForceBuff))
+			{
+				caster.ServerMessage(Localization.Get("Requires Dark Force."));
+				return;
+			}
 
 			skill.IncreaseOverheat();
-			caster.TurnTowards(designatedTarget);
-			caster.SetAttackState(true);
 
 			var skillHandle = ZoneServer.Instance.World.CreateSkillHandle();
 
 			Send.ZC_SKILL_READY(caster, skill, skillHandle, caster.Position, farPos);
 			Send.ZC_NORMAL.UpdateSkillEffect(caster, caster.Handle, caster.Position, caster.Direction, caster.Position);
 
+			var duration = Math.Min(darkForceBuff.OverbuffCounter * 500, 10000);
 			Send.ZC_SYNC_START(caster, skillHandle, 1);
-			if (designatedTarget != null && designatedTarget.IsBuffActive(BuffId.CurseOfWeakness_Damage_Debuff))
-				designatedTarget.StartBuff(BuffId.Pollution_Debuff, TimeSpan.FromSeconds(30), caster);
+			caster.StartBuff(BuffId.Mackangdal_Buff, skill.Level, 0, TimeSpan.FromMilliseconds(duration), caster);
 			Send.ZC_SYNC_END(caster, skillHandle, 0);
-			Send.ZC_SYNC_EXEC_BY_SKILL_TIME(caster, skillHandle, TimeSpan.FromMilliseconds(250));
+			Send.ZC_SYNC_EXEC_BY_SKILL_TIME(caster, skillHandle, TimeSpan.FromMilliseconds(300));
 
 			Send.ZC_SKILL_MELEE_GROUND(caster, skill, farPos);
 		}

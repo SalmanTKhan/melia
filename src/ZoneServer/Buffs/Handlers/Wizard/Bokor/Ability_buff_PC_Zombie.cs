@@ -12,22 +12,15 @@ namespace Melia.Zone.Buffs.Handlers
 	[BuffHandler(BuffId.Ability_buff_PC_Zombie)]
 	public class Ability_buff_PC_Zombie : BuffHandler
 	{
-		private bool _applyPowerOfDarknessBuff;
 		public override void OnStart(Buff buff)
 		{
-			if (buff.Caster is Summon summon)
-			{
-				_applyPowerOfDarknessBuff = summon.Owner.IsBuffActive(BuffId.Ability_buff_PC_Zombie);
-				summon.Owner.StopBuff(BuffId.Ability_buff_PC_Zombie);
-			}
+			if (buff.Target is Summon summon)
+				summon.Owner.StartBuff(BuffId.PowerOfDarkness_Buff, TimeSpan.FromMinutes(1), summon.Owner);
 		}
-
 		public override void WhileActive(Buff buff)
 		{
-			if (buff.Caster is Summon summon && _applyPowerOfDarknessBuff)
-			{
+			if (buff.Target is Summon summon)
 				summon.Owner.StartBuff(BuffId.PowerOfDarkness_Buff, TimeSpan.FromMinutes(1), summon.Owner);
-			}
 		}
 	}
 }

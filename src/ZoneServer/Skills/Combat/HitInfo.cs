@@ -25,6 +25,11 @@ namespace Melia.Zone.Skills.Combat
 		public float Damage { get; set; }
 
 		/// <summary>
+		/// Returns the damage delay.
+		/// </summary>
+		public int Delay { get; set; }
+
+		/// <summary>
 		/// Returns the target's current HP after the hit.
 		/// </summary>
 		public float Hp { get; }

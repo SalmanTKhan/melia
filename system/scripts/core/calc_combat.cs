@@ -70,6 +70,7 @@ public class CombatCalculationsScript : GeneralScript
 		var SCR_AttributeMultiplier = ScriptableFunctions.Combat.Get("SCR_AttributeMultiplier");
 		var SCR_AttackTypeMultiplier = ScriptableFunctions.Combat.Get("SCR_AttackTypeMultiplier");
 		var SCR_RaceMultiplier = ScriptableFunctions.Combat.Get("SCR_RaceMultiplier");
+		var SCR_BuffMultiplier = ScriptableFunctions.Combat.Get("SCR_BuffMultiplier");
 
 		var rnd = RandomProvider.Get();
 
@@ -148,6 +149,12 @@ public class CombatCalculationsScript : GeneralScript
 		{
 			damage *= hitCountMultiplier;
 			skillHitResult.HitCount = (int)Math.Round(skillHitResult.HitCount * hitCountMultiplier);
+		}
+
+		var buffModifier = SCR_BuffMultiplier(attacker, target, skill, skillHitResult);
+		if (buffModifier != 1)
+		{
+			damage *= buffModifier;
 		}
 
 		return (int)damage;
@@ -508,5 +515,27 @@ public class CombatCalculationsScript : GeneralScript
 		var dodgeChance = Math2.Clamp(0, 80, Math.Pow(Math.Max(0, dr - hr), 0.65f));
 
 		return (float)dodgeChance;
+	}
+
+	/// <summary>
+	/// Returns a damage multiplier based on the given buffs.
+	/// </summary>
+	/// <param name="attacker"></param>
+	/// <param name="target"></param>
+	/// <param name="skill"></param>
+	/// <param name="skillHitResult"></param>
+	/// <returns></returns>
+	[ScriptableFunction]
+	public float SCR_BuffMultiplier(ICombatEntity attacker, ICombatEntity target, Skill skill, SkillHitResult skillHitResult)
+	{
+		var damageModifier = 1f;
+
+		if (target.TryGetBuff(BuffId.Mackangdal_Buff, out var buff))
+		{
+			var skillLevel = buff.NumArg1;
+			damageModifier -= skillLevel * 0.05f;
+		}
+
+		return damageModifier;
 	}
 }

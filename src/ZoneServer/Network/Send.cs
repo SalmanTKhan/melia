@@ -2549,10 +2549,11 @@ namespace Melia.Zone.Network
 			packet.PutByte(0);
 			packet.PutByte(0);
 			packet.PutFloat(0);
-			packet.PutInt(0);
+			packet.PutFloat(0);
 			packet.PutInt(hitInfo.HitCount);
-			packet.PutLong((long)hitInfo.Damage / hitInfo.HitCount);
-			packet.PutByte(0);
+			packet.PutByte(1);
+			packet.PutInt(0);
+			packet.PutInt(hitInfo.Delay);
 
 			target.Map.Broadcast(packet, target);
 		}

@@ -8,6 +8,7 @@ using Melia.Zone.Network;
 using Melia.Zone.Skills;
 using Melia.Zone.Skills.Combat;
 using Melia.Zone.World.Actors.Characters;
+using Melia.Zone.World.Actors.Characters.Components;
 using Melia.Zone.World.Actors.CombatEntities.Components;
 using Melia.Zone.World.Actors.Monsters;
 using Yggdrasil.Composition;
@@ -112,6 +113,33 @@ namespace Melia.Zone.World.Actors
 		void Kill(ICombatEntity killer);
 	}
 
+	public static class IActorExtensions
+	{
+		/// <summary>
+		/// Plays effect for the actor.
+		/// </summary>
+		/// <param name="actor"></param>
+		/// <param name="packetString"></param>
+		/// <param name="scale"></param>
+		/// <param name="b1"></param>
+		/// <param name="heightOffset"></param>
+		/// <param name="b2"></param>
+		/// <param name="associatedHandle"></param>
+		public static void PlayEffect(this IActor actor, string packetString, float scale = 1, byte b1 = 1, string heightOffset = "BOT", byte b2 = 0, int associatedHandle = 0)
+		{
+			Send.ZC_NORMAL.PlayEffect(actor, b1, heightOffset, b2, scale, packetString, 0, associatedHandle);
+		}
+
+		/// <summary>
+		/// Plays effect for the actor on a specific connection.
+		/// </summary>
+		/// <param name="packetString"></param>
+		public static void PlayEffectLocal(this IActor actor, IZoneConnection conn, string packetString, float scale = 1, string heightOffset = "BOT", byte b1 = 0)
+		{
+			Send.ZC_NORMAL.PlayEffect(conn, actor, b1, heightOffset, 1, scale, packetString, 0, 0);
+		}
+	}
+
 	/// <summary>
 	/// Extensions for working with combat entities.
 	/// </summary>
@@ -130,6 +158,17 @@ namespace Melia.Zone.World.Actors
 		{
 			var isHostileFaction = ZoneServer.Instance.Data.FactionDb.CheckHostility(entity.Faction, otherEntity.Faction);
 			return isHostileFaction;
+		}
+
+		/// <summary>
+		/// Returns true if the a faction can be hit by a pad.
+		/// </summary>
+		/// <param name="entity"></param>
+		/// <returns></returns>
+		public static bool IsHitByPad(this ICombatEntity entity)
+		{
+			var isHitByPad = ZoneServer.Instance.Data.FactionDb.IsHitByPad(entity.Faction);
+			return isHitByPad;
 		}
 
 		/// <summary>
@@ -293,6 +332,32 @@ namespace Melia.Zone.World.Actors
 		/// <returns></returns>
 		public static bool HasBuffs(this ICombatEntity entity)
 			=> entity.Components.Get<BuffComponent>()?.Count > 0;
+
+		/// <summary>
+		/// Returns true if the buff with the given id is found.
+		/// </summary>
+		/// <param name="entity"></param>
+		/// <param name="buffId"></param>
+		/// <returns></returns>
+		public static bool TryGetBuff(this ICombatEntity entity, BuffId buffId, out Buff buff)
+		{
+			buff = null;
+			entity.Components.Get<BuffComponent>()?.TryGet(buffId, out buff);
+			return buff != null;
+		}
+
+		/// <summary>
+		/// Returns true if the skill with the given id is found.
+		/// </summary>
+		/// <param name="entity"></param>
+		/// <param name="skillId"></param>
+		/// <returns></returns>
+		public static bool TryGetSkill(this ICombatEntity entity, SkillId skillId, out Skill skill)
+		{
+			skill = null;
+			entity.Components.Get<SkillComponent>()?.TryGet(skillId, out skill);
+			return skill != null;
+		}
 
 		/// <summary>
 		/// Returns true if the distance between the caster and the target

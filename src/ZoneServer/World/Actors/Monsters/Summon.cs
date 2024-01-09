@@ -25,15 +25,17 @@ namespace Melia.Zone.World.Actors.Monsters
 			this.Owner = owner;
 		}
 
-		public void SetState(bool isActive)
+		public void SetState(bool isActive, bool canMove = true, bool hasAi = true)
 		{
 			if (isActive)
 			{
 				this.Map = this.Owner.Map;
 				this.OwnerHandle = this.Owner.Handle;
 				this.AssociatedHandle = this.Owner.Handle;
-				this.Components.Add(new MovementComponent(this));
-				this.Components.Add(new AiComponent(this, "BasicMonster", this.Owner));
+				if (canMove)
+					this.Components.Add(new MovementComponent(this));
+				if (hasAi)
+					this.Components.Add(new AiComponent(this, "BasicMonster", this.Owner));
 				this.Position = this.Owner.Position.GetRandomInRange2D(15, RandomProvider.Get());
 				Send.ZC_SET_POS(this);
 				this.Map.AddMonster(this);
@@ -47,6 +49,7 @@ namespace Melia.Zone.World.Actors.Monsters
 				this.AssociatedHandle = 0;
 				// Clear Buffs
 				this.Map.RemoveMonster(this);
+				this.Components.Remove<BuffComponent>();
 				this.Components.Remove<AiComponent>();
 				this.Components.Remove<MovementComponent>();
 			}

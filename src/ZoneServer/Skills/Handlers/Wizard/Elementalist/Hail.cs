@@ -71,7 +71,7 @@ namespace Melia.Zone.Skills.Handlers.Elementalist
 		/// 
 		/// </summary>
 		/// <param name="caster"></param>
-		/// <param name="target"></param>
+		/// <param name="position"></param>
 		/// <param name="skill"></param>
 		private void ExecuteHail(ICombatEntity caster, Position position, Skill skill)
 		{
@@ -131,6 +131,8 @@ namespace Melia.Zone.Skills.Handlers.Elementalist
 		private Task OnEnterHailPad(Dialog dialog)
 		{
 			if (dialog.Initiator is not ICombatEntity initiator)
+				return Task.CompletedTask;
+			if (!initiator.IsHitByPad())
 				return Task.CompletedTask;
 
 			var trigger = dialog.Npc;

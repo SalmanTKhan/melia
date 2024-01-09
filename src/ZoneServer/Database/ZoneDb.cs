@@ -584,10 +584,8 @@ namespace Melia.Zone.Database
 				cmd.Set("equipVisibility", character.VisibleEquip);
 				cmd.Set("stamina", character.Properties.Stamina);
 				cmd.Set("silver", character.Inventory.CountItem(ItemId.Silver));
-				if (character.Connection.Party != null)
-					cmd.Set("partyId", character.Connection.Party?.DbId ?? 0);
-				if (character.Connection.Guild != null)
-					cmd.Set("guildId", character.Connection.Guild?.DbId ?? 0);
+				cmd.Set("partyId", character.Connection.Party?.DbId ?? 0);
+				cmd.Set("guildId", character.Connection.Guild?.DbId ?? 0);
 
 				cmd.Execute();
 			}

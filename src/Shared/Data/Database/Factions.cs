@@ -13,6 +13,7 @@ namespace Melia.Shared.Data.Database
 		public FactionType Id { get; set; }
 		public string Name { get; set; }
 		public HashSet<FactionType> Hostile { get; set; } = new HashSet<FactionType>();
+		public bool IsHitByPad { get; set; }
 	}
 
 	/// <summary>
@@ -47,6 +48,19 @@ namespace Melia.Shared.Data.Database
 		}
 
 		/// <summary>
+		/// Returns true if faction can be hit by pad.
+		/// </summary>
+		/// <param name="faction"></param>
+		/// <returns></returns>
+		public bool IsHitByPad(FactionType faction)
+		{
+			if (!this.TryFind(faction, out var data))
+				return false;
+
+			return data.IsHitByPad;
+		}
+
+		/// <summary>
 		/// Reads given entry and adds it to the database.
 		/// </summary>
 		/// <param name="entry"></param>
@@ -58,6 +72,7 @@ namespace Melia.Shared.Data.Database
 
 			data.Id = entry.ReadEnum<FactionType>("id");
 			data.Name = entry.ReadString("name");
+			data.IsHitByPad = entry.ReadBool("hitByPad");
 
 			if (entry.ContainsKey("hostile"))
 			{

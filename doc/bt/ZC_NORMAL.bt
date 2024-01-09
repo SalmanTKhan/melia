@@ -226,7 +226,7 @@ switch (type)
     case 0x16:
         int handle;
         byte b1;
-        int i1;
+        int heightOffset;
         byte b2;
         float effectSize;
         int packetStringId;
