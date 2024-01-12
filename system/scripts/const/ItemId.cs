@@ -16010,6 +16010,8 @@ public static class ItemId
 	public const int Premium_AbillityArts_Sadhu35_1d = 2021226;
 	public const int Premium_AbillityArts_Char4_23 = 2021227;
 	public const int Premium_AbillityArts_Char4_23_1d = 2021228;
+	public const int Premium_AbillityArts_Char2_25 = 2021231;
+	public const int Premium_AbillityArts_Char2_25_1d = 2021232;
 	public const int GLOBAL_Steam_Lucky_Shard_Package = 2500000;
 	public const int GLOBAL_Steam_Feeling_Lucky_Package = 2500001;
 	public const int GLOBAL_Steam_Lucky_Sub_Box = 2500002;

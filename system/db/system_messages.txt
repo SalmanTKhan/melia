@@ -18366,6 +18366,7 @@
 { classId: 1106097, className: "QuarrelShooter" },
 { classId: 1106098, className: "Engineer" },
 { classId: 1106099, className: "Pontifex" },
+{ classId: 1106100, className: "Illusionist" },
 { classId: 1107001, className: "archeology" },
 { classId: 1107002, className: "fishing" },
 { classId: 1108000, className: "popoboostparticipate" },
