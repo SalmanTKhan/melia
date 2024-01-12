@@ -28670,7 +28670,7 @@
 	{ namespace: "Skill", name: "Frame", type: "Number", id: 112068 },
 	{ namespace: "Skill", name: "CaptionRatio4", type: "Calculated", id: 113846 },
 	{ namespace: "Skill", name: "maxChargeTime", type: "Number", id: 114012 },
-	{ namespace: "Skill", name: "EngNamAe", type: "Number", id: 114532 },
+	{ namespace: "Skill", name: "EngNamAe", type: "String", id: 114532 },
 ]},
 { namespace: "ZoneObject", properties: [
 	{ namespace: "ZoneObject", name: "UNDERF593_TYPED_2", type: "Number", id: 69 },

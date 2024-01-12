@@ -172,8 +172,9 @@ switch (type)
 
     // ?
     // Jaguar Skill
+    /**
     case 0x0D:
-        int i1; // 80148
+        int handle; // 80148
         byte b1; // 0
         short s1; // 1
         short s2; // 1
@@ -183,7 +184,39 @@ switch (type)
         int i3; // 2
         int i4; // 0
         byte b2; // 0
+        if (b2 > 0)
+        {
+            switch(b2)
+            {
+                case 8:
+                    short s4;
+                    byte b3;
+                    int i1;
+                    int i2;
+                break;
+            }
+        }
         break;
+     **/
+     
+     // Illusionist skill
+    case 0x0D:
+    {
+        typedef struct
+        {
+            int itemId;
+            int equipSlot; // 0
+        } EquipInfo <optimize=false>;
+        
+        int handle; // 80148
+        byte b1; // 0
+        short s1; // 1
+        int count;
+        EquipInfo equip[count];
+        int i1;
+        byte b2;
+        break;
+    }
 
     case 0x0F:
         int packetString;
@@ -643,6 +676,14 @@ switch (type)
         int handle;
         break;
 
+    case 0x80:
+        byte b1;
+        int i1;
+        int i2;
+        float f1;
+        int handle;
+        break;
+        
     case 0x81:
         int i1;
         int packetString;

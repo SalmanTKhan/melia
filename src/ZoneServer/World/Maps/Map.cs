@@ -222,6 +222,7 @@ namespace Melia.Zone.World.Maps
 
 			foreach (var monster in toDisappear)
 			{
+				monster.OnDisappear?.Invoke();
 				ZoneServer.Instance.ServerEvents.OnMonsterDisappears(monster);
 				this.RemoveMonster(monster);
 			}

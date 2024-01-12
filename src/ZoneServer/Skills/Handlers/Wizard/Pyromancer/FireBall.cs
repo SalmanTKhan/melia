@@ -35,15 +35,6 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 		/// </summary>
 		public void Handle(Skill skill, ICombatEntity caster, ICombatEntity target)
 		{
-			Send.ZC_NORMAL.TextEffect(caster, "I_SYS_Text_Effect_None", "LV 1");
-
-			var maxRange = skill.Properties.GetFloat(PropertyName.MaxR);
-			if (!caster.Position.InRange2D(target.Position, maxRange))
-			{
-				caster.ServerMessage(Localization.Get("Too far away."));
-				return;
-			}
-
 			if (!caster.TrySpendSp(skill))
 			{
 				caster.ServerMessage(Localization.Get("Not enough SP."));
@@ -64,18 +55,17 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 			Send.ZC_SKILL_READY(caster, skill, 1, caster.Position, target.Position);
 			Send.ZC_NORMAL.UpdateSkillEffect(caster, target?.Handle ?? 0, caster.Position, caster.Position.GetDirection(target.Position), target?.Position ?? Position.Zero);
 
-			var unkForceId = skillHandle;
-			var damageDelay = TimeSpan.FromMilliseconds(0);
-			var skillHitDelay = skill.Properties.HitDelay;
+			var damageDelay = TimeSpan.FromMilliseconds(45);
+			var skillHitDelay = TimeSpan.Zero;
 
 			var skillHitResult = SCR_SkillHit(caster, target, skill);
 			target.TakeDamage(skillHitResult.Damage, caster);
 
-			var hit = new SkillHitInfo(caster, target, skill, skillHitResult, damageDelay, TimeSpan.Zero);
-			hit.ForceId = unkForceId;
+			var skillHit = new SkillHitInfo(caster, target, skill, skillHitResult, damageDelay, skillHitDelay);
+			skillHit.ForceId = ForceId.GetNew();
 
 			Send.ZC_SKILL_RANGE_CIRCLE(caster, target.Position, skill.Data.SplashRange);
-			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill, hit);
+			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill, skillHit);
 		}
 	}
 }

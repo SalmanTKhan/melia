@@ -76,7 +76,7 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 
 			Send.ZC_SKILL_MELEE_GROUND(caster, skill, targetPos, hits);
 
-			this.ExecuteFirePillar(caster, designatedTarget, skill);
+			this.ExecuteFirePillar(caster, targetPos, skill);
 		}
 
 		/// <summary>
@@ -85,16 +85,16 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 		/// <param name="caster"></param>
 		/// <param name="target"></param>
 		/// <param name="skill"></param>
-		private void ExecuteFirePillar(ICombatEntity caster, ICombatEntity target, Skill skill)
+		private void ExecuteFirePillar(ICombatEntity caster, Position targetPos, Skill skill)
 		{
-			var position = caster.Position;
+			var position = targetPos;
 			var direction = caster.Direction;
 			var effectHandle = ZoneServer.Instance.World.CreateEffectHandle();
-			Send.ZC_NORMAL.SkillPad(caster, skill, "Wizard_New_FirePillar10", caster.Position, caster.Direction, -0.2594702f, 62.63292f, effectHandle, 50);
+			Send.ZC_NORMAL.SkillPad(caster, skill, "Wizard_New_FirePillar10", position, direction, -0.2594702f, 62.63292f, effectHandle, 50);
 
 			var area = new CircleF(position, 50);
 
-			var trigger = new Npc(12082, "", new Location(caster.Map.Id, caster.Position), caster.Direction);
+			var trigger = new Npc(12082, "", new Location(caster.Map.Id, position), direction);
 			trigger.Vars.Set("Melia.FirePillarCaster", caster);
 			trigger.Vars.Set("Melia.FirePillarSkill", skill);
 			trigger.SetTriggerArea(area);
@@ -103,7 +103,7 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 			trigger.DisappearTime = DateTime.Now.AddSeconds(10);
 			caster.Map.AddMonster(trigger);
 
-			Task.Delay(TimeSpan.FromSeconds(10)).ContinueWith(_ => Send.ZC_NORMAL.SkillPad(caster, skill, "Wizard_New_FirePillar10", caster.Position, caster.Direction, -0.2594702f, 62.63292f, effectHandle, 50, false));
+			Task.Delay(TimeSpan.FromSeconds(10)).ContinueWith(_ => Send.ZC_NORMAL.SkillPad(caster, skill, "Wizard_New_FirePillar10", position, direction, -0.2594702f, 62.63292f, effectHandle, 50, false));
 		}
 
 		/// <summary>

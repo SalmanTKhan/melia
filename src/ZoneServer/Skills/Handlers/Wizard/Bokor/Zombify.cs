@@ -39,17 +39,20 @@ namespace Melia.Zone.Skills.Handlers.Bokor
 			caster.SetAttackState(true);
 			Send.ZC_NORMAL.Skill_Unknown_D4(caster);
 
+
+			var forceId = ForceId.GetNew();
+			Send.ZC_SKILL_FORCE_GROUND(caster, skill, farPos, forceId, null);
+
 			if (caster is Character character)
 			{
 				var summon = new Summon(character, MonsterId.Zombie, MonsterType.Friendly);
 				character.Summons.AddSummon(summon);
 				summon.Map = caster.Map;
-				summon.Direction = caster.Direction;
 				summon.Faction = FactionType.Neutral;
-				summon.Properties.SetFloat(PropertyName.FIXMSPD_BM, 80f);
 				summon.FromGround = true;
 				summon.Components.Add(new LifeTimeComponent(summon, TimeSpan.FromSeconds(10 + 2 * skill.Level)));
 				summon.SetState(true, false, false);
+				summon.TurnTowards(caster);
 
 				var skillHandle = ZoneServer.Instance.World.CreateSkillHandle();
 				Send.ZC_SYNC_START(caster, skillHandle, 1);
@@ -57,10 +60,6 @@ namespace Melia.Zone.Skills.Handlers.Bokor
 				Send.ZC_SYNC_END(caster, skillHandle, 0);
 				Send.ZC_SYNC_EXEC_BY_SKILL_TIME(caster, skillHandle, skill.Data.DefaultHitDelay);
 			}
-
-			var forceId = ForceId.GetNew();
-
-			Send.ZC_SKILL_FORCE_GROUND(caster, skill, farPos, forceId, null);
 		}
 	}
 }

@@ -269,6 +269,7 @@ namespace Melia.Zone.Network
 			packet.PutInt(0);
 			packet.PutFloat(405494.3f);
 			packet.PutByte(0);
+			packet.PutByte(0); // [i381165 (2024-01-09)]
 
 			conn.Send(packet);
 		}
@@ -6151,6 +6152,67 @@ namespace Melia.Zone.Network
 			packet.PutByte(b1);
 
 			character.Connection.Send(packet);
+		}
+
+		/// <summary>
+		/// New Particle Effect "System"
+		/// </summary>
+		/// <param name="actor"></param>
+		/// <param name="packetStringId"></param>
+		/// <param name="scale"></param>
+		/// <param name="position"></param>
+		/// <param name="direction"></param>
+		/// <param name="b1"></param>
+		public static void ZC_UNITY_GROUND_EFFECT(IActor actor, int packetStringId, float scale, Position position, Direction direction, byte b1)
+		{
+			var packet = new Packet(Op.ZC_UNITY_GROUND_EFFECT);
+
+			packet.PutInt(actor.Handle);
+			packet.PutInt(0);
+			packet.PutInt(packetStringId);
+			packet.PutFloat(scale);
+			packet.PutPosition(position);
+			packet.PutInt(0);
+			packet.PutInt(0);
+			packet.PutInt(0);
+			packet.PutDirection(direction);
+			packet.PutByte(b1);
+
+			actor.Map.Broadcast(packet);
+		}
+
+		/// <summary>
+		/// New Particle Effect "System"
+		/// </summary>
+		/// <param name="actor"></param>
+		/// <param name="packetStringId"></param>
+		/// <param name="scale"></param>
+		/// <param name="position"></param>
+		/// <param name="f1"></param>
+		/// <param name="f2"></param>
+		/// <param name="f3"></param>
+		/// <param name="direction"></param>
+		/// <param name="b1"></param>
+		public static void ZC_UNITY_GROUND_EFFECT(IActor actor, int packetStringId, float scale, Position position,
+			float f1,
+			float f2,
+			float f3,
+			Direction direction, byte b1 = 0)
+		{
+			var packet = new Packet(Op.ZC_UNITY_GROUND_EFFECT);
+
+			packet.PutInt(actor.Handle);
+			packet.PutInt(0);
+			packet.PutInt(packetStringId);
+			packet.PutFloat(scale);
+			packet.PutPosition(position);
+			packet.PutFloat(f1);
+			packet.PutFloat(f2);
+			packet.PutFloat(f3);
+			packet.PutDirection(direction);
+			packet.PutByte(b1);
+
+			actor.Map.Broadcast(packet);
 		}
 
 		/// <summary>

@@ -15,6 +15,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// map it's on.
 		/// </summary>
 		DateTime DisappearTime { get; }
+		Action OnDisappear { get; }
 	}
 
 	public interface IMonsterBase : ISubActor, IMonsterAppearance, IMonsterAppearanceBase, ISpawn

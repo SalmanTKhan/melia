@@ -3532,6 +3532,12 @@ public static class MonsterId
 	public const int Event_Snigo_Yak_Magician = 101016;
 	public const int Event_Snigo_Yak_Druid = 101017;
 	public const int Event_Boss_Pbeta = 101018;
+	public const int Event_2024_Newyear_Boss_Snigo = 101019;
+	public const int Event_2024_Newyear_Boss_Pbeta = 101020;
+	public const int Event_2024_Newyear_Crobasia = 101021;
+	public const int Event_2024_Newyear_Luna_Angel = 101022;
+	public const int Event_2024_Newyear_Yak_Magician = 101023;
+	public const int Event_2024_Newyear_Yak_Druid = 101024;
 	public const int BW_Boss_Kerberos = 102000;
 	public const int BW_Boss_Lapedame = 102001;
 	public const int BW_Boss_Foculus = 102002;
@@ -3822,6 +3828,10 @@ public static class MonsterId
 	public const int Pcskill_LightningTurret_Punishment = 300049;
 	public const int Pcskill_KingMechaV_Frozen = 300050;
 	public const int Pcskill_KingMechaV_Circle = 300051;
+	public const int Pcskill_Illusion_M_Basic = 300052;
+	public const int Pcskill_Illusion_F_Basic = 300053;
+	public const int Pcskill_Illusion_M_Magical = 300054;
+	public const int Pcskill_Illusion_F_Magical = 300055;
 	public const int Onion = 400001;
 	public const int Onion_Big = 400002;
 	public const int Onion_Red = 400003;
@@ -7620,6 +7630,7 @@ public static class MonsterId
 	public const int Bridge_Wailing_Dimension_Reward_Multiple_Npc = 160192;
 	public const int Npc_Event_Glacier = 160193;
 	public const int Npc_Pontifex = 160194;
+	public const int Npc_Illusionist = 160195;
 	public const int E_Statue_Zemina = 161000;
 	public const int Npc_Kupole_Velcoffer = 161001;
 	public const int Npc_Teliavelis = 161002;

@@ -1710,6 +1710,8 @@
 { classId: 5267, className: "rada_speedup" },
 { classId: 5270, className: "tooltip_OriginalSin" },
 { classId: 5271, className: "tooltip_OriginalSin_Lv4" },
+{ classId: 5272, className: "tooltip_Dream" },
+{ classId: 5273, className: "tooltip_Dream_Lv4" },
 { classId: 6001, className: "TournamentChampion" },
 { classId: 6002, className: "TournamentFinalRanker" },
 { classId: 6003, className: "TournamentTop{Auto_1}Ranker" },

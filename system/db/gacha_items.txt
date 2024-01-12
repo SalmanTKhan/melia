@@ -4,7 +4,7 @@
 
 [
 { id: 1, name: "Gacha_TP_001", price: 999, count: 1, itemName: "Gacha_TP_001", group: "CUBE", gachaType: "rbox", rewardGroup: "GACHA_TP_001", gachaLog: "HAIR_GACHA", consumeType: "CUBE", openCountAllow: false },
-{ id: 2, name: "Gacha_TP_010", price: 999, count: 11, itemName: "Gacha_TP_010", group: "CUBE", gachaType: "rbox", rewardGroup: "GACHA_TP_001", gachaLog: "HAIR_GACHA", consumeType: "CUBE", openCountAllow: false },
+{ id: 2, name: "Gacha_TP_010", price: 999, count: 11, itemName: "Gacha_TP_010", group: "CUBE", gachaType: "rbox", rewardGroup: "Gacha_TP2_001", gachaLog: "HAIR_GACHA", consumeType: "CUBE", openCountAllow: false },
 { id: 3, name: "Gacha_TP_100", price: 999, count: 1, itemName: "Gacha_TP_100", group: "CUBE", gachaType: "rbox", rewardGroup: "GACHA_TP_001", gachaLog: "HAIR_GACHA", consumeType: "CUBE", openCountAllow: false },
 { id: 4, name: "Gacha_HairAcc_001_event14d", price: 999, count: 1, itemName: "Gacha_HairAcc_001_event14d", group: "CUBE", gachaType: "hair", rewardGroup: "GACHA_HAIRACC_001", gachaLog: "HAIR_GACHA", consumeType: "CUBE", openCountAllow: false },
 { id: 5, name: "Gacha_HairAcc_001", price: 999, count: 1, itemName: "Gacha_HairAcc_001", group: "CUBE", gachaType: "hair", rewardGroup: "GACHA_HAIRACC_001", gachaLog: "RANDOM_BOX", consumeType: "CUBE", openCountAllow: false },

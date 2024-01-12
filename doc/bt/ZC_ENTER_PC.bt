@@ -16,6 +16,7 @@
 //   - i174236: b3 was added
 //   - i197611: b3 was removed
 //   - i373230: i6 was added
+//   - i381165: b4 was added
 //------------------------------------------------
 
 #include "inc/common.bt"
@@ -47,3 +48,4 @@ APPEARANCE_PC appearancePc;
 int i5;
 float f2;
 byte b3;
+byte b4;

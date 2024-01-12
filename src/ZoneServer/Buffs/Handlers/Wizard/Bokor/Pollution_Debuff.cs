@@ -19,15 +19,13 @@ namespace Melia.Zone.Buffs.Handlers
 	{
 		public override void WhileActive(Buff buff)
 		{
-			if (buff.Caster is ICombatEntity caster)
+			if (buff.Caster is ICombatEntity caster && caster.TryGetSkill(SkillId.Bokor_Effigy, out var skill))
 			{
-				var skill = caster.Components?.Get<SkillComponent>()?.Get(SkillId.Bokor_Effigy);
 				var target = buff.Target;
-
 				var skillHitResult = SCR_SkillHit(caster, target, skill);
-				target.TakeDamage(skillHitResult.Damage, caster);
-
 				var hitInfo = new HitInfo(caster, target, skill, skillHitResult.Damage, skillHitResult.Result);
+
+				target.TakeDamage(skillHitResult.Damage, caster);
 
 				Send.ZC_HIT_INFO(caster, target, hitInfo);
 			}

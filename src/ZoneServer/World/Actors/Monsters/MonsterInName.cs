@@ -71,6 +71,8 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// </summary>
 		public DateTime DisappearTime { get; set; } = DateTime.MaxValue;
 
+		public Action OnDisappear { get; set; }
+
 		/// <summary>
 		/// Returns the monster's gen type.
 		/// </summary>
