@@ -141,6 +141,27 @@ namespace Melia.Social.Network
 			}
 
 			/// <summary>
+			/// Sends a shout message to a specific connection.
+			/// </summary>
+			/// <param name="conn"></param>
+			/// <param name="sender"></param>
+			/// <param name="accountId"></param>
+			/// <param name="message"></param>
+			/// <param name="serverType"></param>
+			public static void Shout(ISocialConnection conn, string sender, long accountId, string message, string serverType = "GLOBAL")
+			{
+				var packet = new Packet(Op.SC_NORMAL);
+				packet.PutInt(NormalOp.Social.Shout);
+
+				packet.PutLpString(sender);
+				packet.PutLong(accountId);
+				packet.PutLpString(message);
+				packet.PutLpString(serverType);
+
+				conn.Send(packet);
+			}
+
+			/// <summary>
 			/// Sends a message to client using client message ids.
 			/// </summary>
 			/// <param name="conn"></param>

@@ -41,8 +41,7 @@ namespace Melia.Zone.Skills.Handlers.Archer
 			Send.ZC_SKILL_READY(caster, skill, skillHandle, caster.Position, farPos);
 			Send.ZC_SYNC_START(caster, skillHandle, 1);
 			Send.ZC_MOVE_SPEED(caster, 2.1f);
-			var buff = new Buff(BuffId.Skill_NoDamage_Buff, 0, 0, TimeSpan.FromSeconds(1), caster, caster, skill.Id);
-			caster.Components.Get<BuffComponent>().AddOrUpdate(buff);
+			caster.StartBuff(BuffId.Skill_NoDamage_Buff, 0, 0, TimeSpan.FromSeconds(1), caster, skill.Id);
 			Send.ZC_SYNC_END(caster, skillHandle, 0);
 			Send.ZC_SYNC_EXEC_BY_SKILL_TIME(caster, skillHandle);
 

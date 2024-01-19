@@ -69,7 +69,7 @@ namespace Melia.Zone.Skills.Handlers
 			if (!_handlers.TryGetValue(skillId, out var handler))
 				return default;
 
-			if (!(handler is TSkillHandler tHandler))
+			if (handler is not TSkillHandler tHandler)
 				throw new ArgumentException($"The skill handler for '{skillId}' is not of type '{typeof(TSkillHandler).Name}'.");
 
 			return tHandler;
@@ -91,6 +91,27 @@ namespace Melia.Zone.Skills.Handlers
 		{
 			handler = this.GetHandler<TSkillHandler>(skillId);
 			return handler != null;
+		}
+
+		/// <summary>
+		/// Returns the handler for the given skill via out. Returns false
+		/// if no handler was set up for the skill.
+		/// </summary>
+		/// <typeparam name="TSkillHandler"></typeparam>
+		/// <param name="skillId"></param>
+		/// <param name="handler"></param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">
+		/// Thrown if the handler for the given skill doesn't match the
+		/// requested type argument.
+		/// </exception>
+		public bool TryGetPassiveSkillHandler<TSkillHandler>(SkillId skillId, out TSkillHandler handler) where TSkillHandler : ISkillHandler
+		{
+			if (!_handlers.TryGetValue(skillId, out var iHandler) || iHandler is not TSkillHandler tHandler)
+				tHandler = default;
+			handler = tHandler;
+
+			return tHandler != null;
 		}
 	}
 }

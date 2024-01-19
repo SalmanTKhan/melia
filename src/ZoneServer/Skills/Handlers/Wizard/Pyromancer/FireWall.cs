@@ -133,9 +133,11 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 				return Task.CompletedTask;
 
 			var trigger = dialog.Npc;
-
 			var caster = trigger.Vars.Get<ICombatEntity>("Melia.FireWallCaster");
 			var skill = trigger.Vars.Get<Skill>("Melia.FireWallSkill");
+
+			if (trigger.DisappearTime < DateTime.Now)
+				return Task.CompletedTask;
 
 			if (caster.IsHostileFaction(initiator))
 			{

@@ -32,7 +32,7 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// </summary>
 		/// <param name="cooldownId"></param>
 		/// <param name="duration"></param>
-		public void Start(CooldownId cooldownId, TimeSpan duration)
+		public Cooldown Start(CooldownId cooldownId, TimeSpan duration)
 		{
 			var cooldown = new Cooldown(cooldownId, duration);
 
@@ -51,6 +51,8 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 
 			if (this.Entity is Character character)
 				Send.ZC_COOLDOWN_CHANGED(character, cooldown);
+
+			return cooldown;
 		}
 
 		/// <summary>
@@ -58,7 +60,7 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// existing cooldowns.
 		/// </summary>
 		/// <param name="cooldown"></param>
-		internal void Restore(Cooldown cooldown)
+		public void Restore(Cooldown cooldown)
 		{
 			lock (_syncLock)
 				_cooldowns[cooldown.Id] = cooldown;
@@ -126,7 +128,10 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 				}
 
 				foreach (var cooldown in _over)
+				{
 					_cooldowns.Remove(cooldown.Id);
+					cooldown.OnCooldownChanged?.Invoke();
+				}
 			}
 		}
 	}
@@ -157,6 +162,11 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// Returns the time when the cooldown will be over.
 		/// </summary>
 		public DateTime EndTime => this.StartTime + this.Duration;
+
+		/// <summary>
+		/// Returns an event on cooldown finishing.
+		/// </summary>
+		public Action OnCooldownChanged { get; set; }
 
 		/// <summary>
 		/// Creates new cooldown.

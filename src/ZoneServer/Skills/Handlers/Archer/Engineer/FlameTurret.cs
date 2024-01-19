@@ -62,10 +62,9 @@ namespace Melia.Zone.Skills.Handlers.Archer.Engineer
 			caster.Map.AddMonster(turret);
 
 			var key = ZoneServer.Instance.World.CreateSkillHandle();
-			var buff = new Buff(BuffId.Cryomancer_Object_Buff, 0, 0, TimeSpan.FromSeconds(0), turret, caster);
 
 			Send.ZC_SYNC_START(caster, key, 1);
-			caster.Components.Get<BuffComponent>()?.AddOrUpdate(buff);
+			caster.StartBuff(BuffId.Cryomancer_Object_Buff, 0, 0, TimeSpan.FromSeconds(0), turret);
 			Send.ZC_SYNC_END(caster, key, 0);
 			Send.ZC_SYNC_EXEC_BY_SKILL_TIME(caster, key, TimeSpan.FromMilliseconds(400));
 		}

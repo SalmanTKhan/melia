@@ -87,6 +87,11 @@ namespace Melia.Zone.Skills.Combat
 		public bool IsKnockBack => this.KnockBackInfo != null;
 
 		/// <summary>
+		/// Unknown float.
+		/// </summary>
+		public float UnkFloat { get; set; } = 0f;
+
+		/// <summary>
 		/// Creates new skill hit.
 		/// </summary>
 		/// <param name="attacker"></param>

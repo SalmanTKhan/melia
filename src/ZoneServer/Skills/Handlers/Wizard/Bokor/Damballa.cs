@@ -72,7 +72,7 @@ namespace Melia.Zone.Skills.Handlers.Bokor
 				designatedTarget.TakeDamage(skillHitResult.Damage, caster);
 
 				var hitInfo = new HitInfo(caster, designatedTarget, skill, skillHitResult.Damage, skillHitResult.Result);
-				hitInfo.HitCount = 6;
+				hitInfo.AdditionalHitCount = 6;
 				hitInfo.Delay = 100;
 
 				Send.ZC_HIT_INFO(caster, designatedTarget, hitInfo);

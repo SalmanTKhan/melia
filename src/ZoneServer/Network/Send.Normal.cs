@@ -152,17 +152,20 @@ namespace Melia.Zone.Network
 			/// <param name="duration1"></param>
 			/// <param name="animationName2"></param>
 			/// <param name="duration2"></param>
-			/// <param name="size"></param>
+			/// <param name="count"></param>
 			/// <param name="scale"></param>
-			public static void Skill_MissileThrow(IActor actor, Position position, string animationName1, float duration1, string animationName2, float duration2, float size, float scale)
+			public static void SkillProjectile(IActor actor, Position position,
+				string animationName1, TimeSpan duration1,
+				string animationName2, TimeSpan duration2,
+				float count, float scale, float f1 = 0, float f2 = 0, float f3 = 1)
 			{
 				if (!ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName1, out var packetString1) ||
 					!ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName2, out var packetString2))
 				{
-					Log.Warning("Skill_MissileThrow: Unable to find packet string {0} or {1}", animationName1, animationName2);
+					Log.Warning("SkillProjectile: Unable to find packet string {0} or {1}", animationName1, animationName2);
 					return;
 				}
-				Skill_MissileThrow(actor, position, packetString1.Id, duration1, packetString2.Id, duration2, size, scale);
+				SkillProjectile(actor, position, packetString1.Id, (float)duration1.TotalSeconds, packetString2.Id, (float)duration2.TotalSeconds, count, scale, f1, f2, f3);
 			}
 
 			/// <summary>
@@ -178,7 +181,10 @@ namespace Melia.Zone.Network
 			/// <param name="duration2"></param>
 			/// <param name="count"></param>
 			/// <param name="scale"></param>
-			public static void Skill_MissileThrow(IActor actor, Position position, int animationId1, float duration1, int animationId2, float duration2, float count, float scale)
+			public static void SkillProjectile(IActor actor, Position position,
+				int animationId1, float duration1,
+				int animationId2, float duration2,
+				float count, float scale, float f1 = 0, float f2 = 0, float f3 = 1)
 			{
 				var packet = new Packet(Op.ZC_NORMAL);
 				packet.PutInt(NormalOp.Zone.Skill_MissileThrow);
@@ -188,14 +194,12 @@ namespace Melia.Zone.Network
 				packet.PutFloat(duration1);
 				packet.PutInt(animationId2);
 				packet.PutFloat(duration2);
-				packet.PutFloat(position.X);
-				packet.PutFloat(position.Y);
-				packet.PutFloat(position.Z);
+				packet.PutPosition(position);
 				packet.PutFloat(count);
 				packet.PutFloat(scale);
-				packet.PutFloat(0);
-				packet.PutFloat(0);
-				packet.PutFloat(1);
+				packet.PutFloat(f1);
+				packet.PutFloat(f2);
+				packet.PutFloat(f3);
 				packet.PutLong(0);
 				packet.PutLpString("None");
 
@@ -621,23 +625,39 @@ namespace Melia.Zone.Network
 			/// <summary>
 			/// Skill effect
 			/// </summary>
-			/// <param name="character"></param>
+			/// <param name="actor"></param>
 			/// <param name="packetString"></param>
 			/// <param name="time"></param>
 			/// <param name="str1"></param>
 			/// <param name="str2"></param>
-			public static void SkillEffect_14(Character character, int packetString, float time, string str1, string str2)
+			public static void SkillEffect_14(IActor actor, string packetString, float time, string str1, string str2)
+			{
+				if (!ZoneServer.Instance.Data.PacketStringDb.TryFind(packetString, out var packetStringData1))
+					throw new ArgumentException($"Packet string '{packetString}' not found.");
+
+				SkillEffect_14(actor, packetStringData1.Id, time, str1, str2);
+			}
+
+			/// <summary>
+			/// Skill effect
+			/// </summary>
+			/// <param name="actor"></param>
+			/// <param name="packetString"></param>
+			/// <param name="time"></param>
+			/// <param name="str1"></param>
+			/// <param name="str2"></param>
+			public static void SkillEffect_14(IActor actor, int packetString, float time, string str1, string str2)
 			{
 				var packet = new Packet(Op.ZC_NORMAL);
 				packet.PutInt(NormalOp.Zone.SkillEffect_14);
 
-				packet.PutInt(character.Handle);
+				packet.PutInt(actor.Handle);
 				packet.PutInt(packetString);
 				packet.PutFloat(time);
 				packet.PutLpString(str1);
 				packet.PutLpString(str2);
 
-				character.Connection.Send(packet);
+				actor.Map.Broadcast(packet);
 			}
 
 			/// <summary>
@@ -712,20 +732,20 @@ namespace Melia.Zone.Network
 			/// <param name="target1"></param>
 			/// <param name="target2"></param>
 			/// <param name="animationName1"></param>
-			/// <param name="f1"></param>
+			/// <param name="scale1"></param>
 			/// <param name="animationName2"></param>
 			/// <param name="animationName3"></param>
-			/// <param name="f2"></param>
+			/// <param name="scale2"></param>
 			/// <param name="animationName4"></param>
 			/// <param name="animationName5"></param>
-			/// <param name="f3"></param>
+			/// <param name="speed"></param>
+			/// <param name="f1"></param>
 			/// <param name="f4"></param>
 			/// <param name="f5"></param>
 			/// <param name="f6"></param>
-			/// <param name="f7"></param>
 			public static void SkillEffectSplash(IActor character, IActor target1, IActor target2,
-			int effectHandle, string animationName1, float f1, string animationName2, string animationName3, float f2,
-			string animationName4, string animationName5, float f3, float f4, float f5, float f6, float f7)
+			int effectHandle, string animationName1, float scale1, string animationName2, string animationName3, float scale2,
+			string animationName4, string animationName5, float speed, float f1, float f4, float f5, float f6)
 			{
 				var animationId1 = 0;
 				var animationId2 = 0;
@@ -734,67 +754,67 @@ namespace Melia.Zone.Network
 				var animationId5 = 0;
 				if (animationName1 != null && ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName1, out var packetString1))
 					animationId1 = packetString1.Id;
-				if (animationName2 != null && ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName1, out var packetString2))
+				if (animationName2 != null && ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName2, out var packetString2))
 					animationId2 = packetString2.Id;
-				if (animationName3 != null && ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName1, out var packetString3))
+				if (animationName3 != null && ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName3, out var packetString3))
 					animationId3 = packetString3.Id;
-				if (animationName4 != null && ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName1, out var packetString4))
+				if (animationName4 != null && ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName4, out var packetString4))
 					animationId4 = packetString4.Id;
-				if (animationName5 != null && ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName1, out var packetString5))
+				if (animationName5 != null && ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName5, out var packetString5))
 					animationId5 = packetString5.Id;
 				// Check for null values and replace with 0
 				{
 					//Log.Warning("SkillEffectSplash: Unable to find packet string id from name: {0}, {1}, {2}, {3}, {4}", animationName1, animationName2, animationName3, animationName4, animationName5);
 				}
-				SkillEffectSplash(character, target1, target2, effectHandle, animationId1, f1, animationId2,
-					animationId3, f2, animationId4, animationId5, f3, f4, f5, f6, f7);
+				SkillEffectSplash(character, target1, target2, effectHandle, animationId1, scale1, animationId2,
+					animationId3, scale2, animationId4, animationId5, speed, f1, f4, f5, f6);
 			}
 
 			/// <summary>
 			/// Skill splash effects
 			/// </summary>
-			/// <param name="caster"></param>
+			/// <param name="actor"></param>
 			/// <param name="target1"></param>
 			/// <param name="target2"></param>
 			/// <param name="animationId1"></param>
-			/// <param name="f1"></param>
+			/// <param name="scale1"></param>
 			/// <param name="animationId2"></param>
 			/// <param name="animationId3"></param>
-			/// <param name="f2"></param>
+			/// <param name="scale2"></param>
 			/// <param name="animationId4"></param>
 			/// <param name="animationId5"></param>
-			/// <param name="f3"></param>
+			/// <param name="speed"></param>
+			/// <param name="f1"></param>
 			/// <param name="f4"></param>
 			/// <param name="f5"></param>
-			/// <param name="f6"></param>
-			/// <param name="f7"></param>
-			public static void SkillEffectSplash(IActor caster, IActor target1, IActor target2,
-			int effectHandle, int animationId1, float f1, int animationId2, int animationId3, float f2,
-			int animationId4, int animationId5, float f3, float f4, float f5, float f6, float f7)
+			/// <param name="f4"></param>
+			public static void SkillEffectSplash(IActor actor, IActor target1, IActor target2,
+			int effectHandle, int animationId1, float scale1, int animationId2, int animationId3, float scale2,
+			int animationId4, int animationId5, float speed, float f1, float f4, float f5, float f6)
 			{
 				var packet = new Packet(Op.ZC_NORMAL);
 				packet.PutInt(NormalOp.Zone.PlayForceEffect);
 
 				packet.PutInt(effectHandle);
-				packet.PutInt(caster.Handle);
+				packet.PutInt(actor.Handle);
 				packet.PutInt(target1.Handle);
 				packet.PutInt(target2.Handle);
 				packet.PutInt(animationId1);
-				packet.PutFloat(f1);
+				packet.PutFloat(scale1);
 				packet.PutInt(animationId2);
 				packet.PutInt(animationId3);
-				packet.PutFloat(f2);
+				packet.PutFloat(scale2);
 				packet.PutInt(animationId4);
 				packet.PutInt(animationId5);
-				packet.PutFloat(f3);
-				packet.PutFloat(f4);
+				packet.PutFloat(speed);
+				packet.PutFloat(f1);
 				packet.PutEmptyBin(12);
+				packet.PutFloat(f4);
 				packet.PutFloat(f5);
 				packet.PutFloat(f6);
-				packet.PutFloat(f7);
 				packet.PutInt(0);
 
-				caster.Map.Broadcast(packet, caster);
+				actor.Map.Broadcast(packet, actor);
 			}
 
 			/// <summary>

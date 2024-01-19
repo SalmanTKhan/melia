@@ -8,6 +8,7 @@ using System;
 using Melia.Shared.Data.Database;
 using Melia.Shared.Tos.Const;
 using Melia.Zone;
+using Melia.Zone.Network;
 using Melia.Zone.Scripting;
 using Melia.Zone.Skills;
 using Melia.Zone.Skills.Combat;
@@ -95,6 +96,7 @@ public class CombatCalculationsScript : GeneralScript
 			damage += crtAtk;
 
 			skillHitResult.Result = HitResultType.Crit;
+			Send.ZC_NORMAL.PlayTextEffect(target, attacker, "SHOW_DMG_CRI", 0, "");
 		}
 
 		var defPropertyName = skill.Data.ClassType != SkillClassType.Magic ? PropertyName.DEF : PropertyName.MDEF;
@@ -108,7 +110,7 @@ public class CombatCalculationsScript : GeneralScript
 		// Though this is neither elegant nor efficient, and we won't be
 		// able to easily customize it either. It should probably be a
 		// scriptable function in itself... TODO.
-		if (target.Components.Get<BuffComponent>().TryGet(BuffId.ReflectShield_Buff, out var buff))
+		if (target.TryGetBuff(BuffId.ReflectShield_Buff, out var buff))
 		{
 			var skillLevel = buff.NumArg1;
 			var byBuffRate = (skillLevel * 3 / 100f);
@@ -535,6 +537,9 @@ public class CombatCalculationsScript : GeneralScript
 			var skillLevel = buff.NumArg1;
 			damageModifier -= skillLevel * 0.05f;
 		}
+
+		if (target.IsBuffActive(BuffId.Skill_NoDamage_Buff))
+			damageModifier = 0f;
 
 		return damageModifier;
 	}

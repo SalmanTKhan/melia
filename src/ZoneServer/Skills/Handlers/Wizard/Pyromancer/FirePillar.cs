@@ -90,9 +90,11 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 			var position = targetPos;
 			var direction = caster.Direction;
 			var effectHandle = ZoneServer.Instance.World.CreateEffectHandle();
-			Send.ZC_NORMAL.SkillPad(caster, skill, "Wizard_New_FirePillar10", position, direction, -0.2594702f, 62.63292f, effectHandle, 50);
+			var packetStringId = "Wizard_New_FirePillar10";
+			var size = 50f;
+			Send.ZC_NORMAL.SkillPad(caster, skill, packetStringId, position, direction, 1f, 62.63292f, effectHandle, size);
 
-			var area = new CircleF(position, 50);
+			var area = new CircleF(position, size);
 
 			var trigger = new Npc(12082, "", new Location(caster.Map.Id, position), direction);
 			trigger.Vars.Set("Melia.FirePillarCaster", caster);
@@ -103,7 +105,7 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 			trigger.DisappearTime = DateTime.Now.AddSeconds(10);
 			caster.Map.AddMonster(trigger);
 
-			Task.Delay(TimeSpan.FromSeconds(10)).ContinueWith(_ => Send.ZC_NORMAL.SkillPad(caster, skill, "Wizard_New_FirePillar10", position, direction, -0.2594702f, 62.63292f, effectHandle, 50, false));
+			trigger.OnDisappear += () => Send.ZC_NORMAL.SkillPad(caster, skill, packetStringId, position, direction, 1f, 62.63292f, effectHandle, size, false);
 		}
 
 		/// <summary>

@@ -4,6 +4,7 @@ using System.Linq;
 using Melia.Shared.Tos.Const;
 using Melia.Zone.Network;
 using Melia.Zone.Skills;
+using Melia.Zone.Skills.Handlers.Base;
 using Yggdrasil.Scheduling;
 
 namespace Melia.Zone.World.Actors.Characters.Components
@@ -94,6 +95,18 @@ namespace Melia.Zone.World.Actors.Characters.Components
 		}
 
 		/// <summary>
+		/// Returns skill with given class name, or null if it didn't
+		/// exist.
+		/// </summary>
+		/// <param name="skillClassName"></param>
+		/// <returns></returns>
+		public Skill Get(string skillClassName)
+		{
+			lock (_skills)
+				return _skills.Values.FirstOrDefault(a => a.Data.ClassName == skillClassName);
+		}
+
+		/// <summary>
 		/// Returns skill with given id via out, returns false if the
 		/// skill wasn't found.
 		/// </summary>
@@ -107,18 +120,6 @@ namespace Melia.Zone.World.Actors.Characters.Components
 		}
 
 		/// <summary>
-		/// Returns skill with given class name, or null if it didn't
-		/// exist.
-		/// </summary>
-		/// <param name="skillId"></param>
-		/// <returns></returns>
-		public Skill Get(string skillClassName)
-		{
-			lock (_skills)
-				return _skills.Values.FirstOrDefault(a => a.Data.ClassName == skillClassName);
-		}
-
-		/// <summary>
 		/// Returns a list with all skills.
 		/// </summary>
 		/// <returns></returns>
@@ -129,7 +130,7 @@ namespace Melia.Zone.World.Actors.Characters.Components
 		}
 
 		/// <summary>
-		/// Returna a list of all skills that match the given predicate.
+		/// Returns a list of all skills that match the given predicate.
 		/// </summary>
 		/// <param name="predicate"></param>
 		/// <returns></returns>

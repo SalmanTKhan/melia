@@ -2700,7 +2700,7 @@ namespace Melia.Zone.Commands
 		/// <summary>
 		/// Official slash command, for shouting.
 		/// </summary>
-		/// <param name="character"></param>
+		/// <param name="sender"></param>
 		/// <param name="target"></param>
 		/// <param name="message"></param>
 		/// <param name="command"></param>
@@ -2711,9 +2711,11 @@ namespace Melia.Zone.Commands
 			// Command is sent when the inventory is opened, purpose unknown,
 			// officials don't seem to send anything back.
 
-			if (sender.Inventory.Remove(ItemId.Megaphone, 1) == InventoryResult.Success)
+			if (sender.Inventory.Remove(ItemId.Megaphone, 1, InventoryItemRemoveMsg.Used) == 1)
 			{
-				// TODO: Send shout packets to Chat (Social) Server?
+				var text = string.Join(" ", args.GetAll());
+				var commMessage = new ShoutMessage(sender.TeamName, sender.AccountObjectId, text);
+				ZoneServer.Instance.Communicator.Send("Coordinator", commMessage.BroadcastTo("Chat"));
 			}
 
 			return CommandResult.Okay;

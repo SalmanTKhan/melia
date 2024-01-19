@@ -795,85 +795,91 @@ namespace Melia.Zone.Database
 			}
 		}
 
+		private readonly object _syncLock = new object();
 		/// <summary>
 		/// Returns items for given character.
 		/// </summary>
-		/// <param name="characterId"></param>
+		/// <param name="character"></param>
 		/// <returns></returns>
 		public void SaveCharacterItems(Character character)
 		{
-			using (var conn = this.GetConnection())
-			using (var trans = conn.BeginTransaction())
+			lock (_syncLock)
 			{
-				using (var mc = new MySqlCommand("DELETE FROM `inventory` WHERE `characterId` = @characterId", conn, trans))
+				using (var conn = this.GetConnection())
+				using (var trans = conn.BeginTransaction())
 				{
-					mc.Parameters.AddWithValue("@characterId", character.DbId);
-					mc.ExecuteNonQuery();
+					using (var mc = new MySqlCommand("DELETE FROM `inventory` WHERE `characterId` = @characterId", conn, trans))
+					{
+						mc.Parameters.AddWithValue("@characterId", character.DbId);
+						mc.ExecuteNonQuery();
+					}
+
+					var i = 0;
+					foreach (var item in character.Inventory.GetItems().OrderBy(a => a.Key))
+					{
+						var newId = 0L;
+
+						// Save the actual items into the items table and the
+						// inventory-exclusive values into the inventory table,
+						// while linking to the items.
+						// TODO: Add generic item load and save methods, for
+						//   other item collections to use, such as warehouse.
+
+						using (var cmd = new InsertCommand("INSERT INTO `items` {0}", conn, trans))
+						{
+							cmd.Set("itemId", item.Value.Id);
+							cmd.Set("amount", item.Value.Amount);
+
+							cmd.Execute();
+
+							newId = cmd.LastId;
+						}
+
+						using (var cmd = new InsertCommand("INSERT INTO `inventory` {0}", conn, trans))
+						{
+							cmd.Set("characterId", character.DbId);
+							cmd.Set("itemId", newId);
+							cmd.Set("sort", i++);
+							cmd.Set("equipSlot", 0x7F);
+
+							cmd.Execute();
+						}
+					}
+
+					// Save only non-dummy equip to the database, and make sure
+					// that dummy equip that was loaded into the character as a
+					// normal item wrongfully isn't saved again.
+					foreach (var item in character.Inventory.GetEquip().Where(a => !(a.Value is DummyEquipItem) && !InventoryDefaults.EquipItems.Contains(a.Value.Id)))
+					{
+						var newId = 0L;
+
+						using (var cmd = new InsertCommand("INSERT INTO `items` {0}", conn, trans))
+						{
+							cmd.Set("itemId", item.Value.Id);
+							cmd.Set("amount", item.Value.Amount);
+
+							cmd.Execute();
+
+							newId = cmd.LastId;
+							item.Value.DbId = newId;
+						}
+
+						using (var cmd = new InsertCommand("INSERT INTO `inventory` {0}", conn, trans))
+						{
+							cmd.Set("characterId", character.DbId);
+							cmd.Set("itemId", newId);
+							cmd.Set("sort", 0);
+							cmd.Set("equipSlot", (byte)item.Key);
+
+							cmd.Execute();
+						}
+					}
+
+					trans.Commit();
 				}
 
-				var i = 0;
-				foreach (var item in character.Inventory.GetItems().OrderBy(a => a.Key))
-				{
-					var newId = 0L;
-
-					// Save the actual items into the items table and the
-					// inventory-exclusive values into the inventory table,
-					// while linking to the items.
-					// TODO: Add generic item load and save methods, for
-					//   other item collections to use, such as warehouse.
-
-					using (var cmd = new InsertCommand("INSERT INTO `items` {0}", conn, trans))
-					{
-						cmd.Set("itemId", item.Value.Id);
-						cmd.Set("amount", item.Value.Amount);
-
-						cmd.Execute();
-
-						newId = cmd.LastId;
-					}
-
-					using (var cmd = new InsertCommand("INSERT INTO `inventory` {0}", conn, trans))
-					{
-						cmd.Set("characterId", character.DbId);
-						cmd.Set("itemId", newId);
-						cmd.Set("sort", i++);
-						cmd.Set("equipSlot", 0x7F);
-
-						cmd.Execute();
-					}
-				}
-
-				// Save only non-dummy equip to the database, and make sure
-				// that dummy equip that was loaded into the character as a
-				// normal item wrongfully isn't saved again.
-				foreach (var item in character.Inventory.GetEquip().Where(a => !(a.Value is DummyEquipItem) && !InventoryDefaults.EquipItems.Contains(a.Value.Id)))
-				{
-					var newId = 0L;
-
-					using (var cmd = new InsertCommand("INSERT INTO `items` {0}", conn, trans))
-					{
-						cmd.Set("itemId", item.Value.Id);
-						cmd.Set("amount", item.Value.Amount);
-
-						cmd.Execute();
-
-						newId = cmd.LastId;
-					}
-
-					using (var cmd = new InsertCommand("INSERT INTO `inventory` {0}", conn, trans))
-					{
-						cmd.Set("characterId", character.DbId);
-						cmd.Set("itemId", newId);
-						cmd.Set("sort", 0);
-						cmd.Set("equipSlot", (byte)item.Key);
-
-						cmd.Execute();
-					}
-
-					this.SaveProperties("item_properties", "itemId", newId, item.Value.Properties, conn, trans);
-				}
-
-				trans.Commit();
+				foreach (var item in character.Inventory.GetEquip().Where(a => a.Value is not DummyEquipItem && !InventoryDefaults.EquipItems.Contains(a.Value.Id)))
+					this.SaveProperties("item_properties", "itemId", item.Value.DbId, item.Value.Properties);
 			}
 		}
 
@@ -1310,7 +1316,7 @@ namespace Melia.Zone.Database
 		}
 
 		/// <summary>
-		/// Inserts companion in database.
+		/// Saves character's buffs.
 		/// </summary>
 		/// <param name="character"></param>
 		private void SaveBuffs(Character character)

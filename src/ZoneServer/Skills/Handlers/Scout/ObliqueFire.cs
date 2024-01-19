@@ -90,8 +90,8 @@ namespace Melia.Zone.Skills.Handlers.Scout
 				var skillHitResultPost = SCR_SkillHit(caster, bounceTarget, skill);
 				bounceTarget.TakeDamage(skillHitResultPost.Damage, caster);
 
-				var skillHitPost = new SkillHitInfo(caster, bounceTarget, skill, skillHitResultPost, damageDelay, skillHitDelay);
-				var hit = new HitInfo(caster, bounceTarget, skill, skillHitResult.Damage, skillHitResult.Result);
+				//var skillHitPost = new SkillHitInfo(caster, bounceTarget, skill, skillHitResultPost, damageDelay, skillHitDelay);
+				var hit = new HitInfo(caster, bounceTarget, skill, skillHitResultPost.Damage, skillHitResultPost.Result);
 
 				Send.ZC_HIT_INFO(caster, bounceTarget, hit);
 

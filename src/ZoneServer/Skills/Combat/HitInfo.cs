@@ -54,7 +54,20 @@ namespace Melia.Zone.Skills.Combat
 		/// </summary>
 		public int ForceId { get; set; }
 
-		public int HitCount { get; set; } = 1;
+		/// <summary>
+		/// Gets or sets the hit's attack count.
+		/// </summary>
+		public int AdditionalHitCount { get; set; } = 0;
+
+		/// <summary>
+		/// Gets or sets the hit's unknown float 1.
+		/// </summary>
+		public float UnkFloat1 { get; set; } = 0f;
+
+		/// <summary>
+		/// Gets or sets the hit's unknown float 2.
+		/// </summary>
+		public float UnkFloat2 { get; set; } = 0f;
 
 		/// <summary>
 		/// Skill associated with the Attack.

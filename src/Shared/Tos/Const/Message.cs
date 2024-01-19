@@ -75,8 +75,10 @@
 		/// Used for ability point update
 		/// </summary>
 		public const string UPDATE_ABILITY_POINT = "UPDATE_ABILITY_POINT";
+
 		/// <summary>
 		/// Used for experience rate changes due to events
+		/// StrArg: GoldenFishEvent
 		/// </summary>
 		/// <remarks>Parameter: 
 		/// Event</remarks>

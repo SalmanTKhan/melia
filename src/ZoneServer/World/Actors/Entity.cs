@@ -221,7 +221,7 @@ namespace Melia.Zone.World.Actors
 		/// <returns></returns>
 		public static bool TrySpendSp(this ICombatEntity entity, float amount)
 		{
-			if (!(entity is Character character))
+			if (entity is not Character character)
 				return true;
 
 			if (amount == 0)
@@ -274,6 +274,25 @@ namespace Melia.Zone.World.Actors
 			=> entity.Components.Get<CombatComponent>()?.SetAttackState(inAttackState);
 
 		/// <summary>
+		/// Checks if a given cooldown exists.
+		/// </summary>
+		/// <param name="entity"></param>
+		/// <param name="cooldownId"></param>
+		/// <returns></returns>
+		public static bool IsOnCooldown(this ICombatEntity entity, CooldownId cooldownId) =>
+			entity.Components.Get<CooldownComponent>()?.IsOnCooldown(cooldownId) ?? false;
+
+		/// <summary>
+		/// Starts the cooldown with a given id and duration.
+		/// </summary>
+		/// <param name="entity"></param>
+		/// <param name="cooldownId"></param>
+		/// <param name="duration"></param>
+		/// <returns></returns>
+		public static Cooldown StartCooldown(this ICombatEntity entity, CooldownId cooldownId, TimeSpan duration)
+			=> entity.Components.Get<CooldownComponent>()?.Start(cooldownId, duration);
+
+		/// <summary>
 		/// Starts the buff with the given id. If the buff is already active,
 		/// it gets overbuffed. Returns the created or modified buff.
 		/// </summary>
@@ -282,8 +301,8 @@ namespace Melia.Zone.World.Actors
 		/// <param name="duration"></param>
 		/// <param name="caster"></param>
 		/// <returns></returns>
-		public static Buff StartBuff(this ICombatEntity entity, BuffId buffId, TimeSpan duration, ICombatEntity caster)
-			=> entity.Components.Get<BuffComponent>()?.Start(buffId, 0, 0, duration, caster);
+		public static Buff StartBuff(this ICombatEntity entity, BuffId buffId, TimeSpan duration, ICombatEntity caster, SkillId skillId = SkillId.Normal_Attack)
+			=> entity.Components.Get<BuffComponent>()?.Start(buffId, 0, 0, duration, caster, skillId);
 
 		/// <summary>
 		/// Starts the buff with the given id. If the buff is already active,
@@ -305,8 +324,8 @@ namespace Melia.Zone.World.Actors
 		/// <param name="duration"></param>
 		/// <param name="caster"></param>
 		/// <returns></returns>
-		public static Buff StartBuff(this ICombatEntity entity, BuffId buffId, float numArg1, float numArg2, TimeSpan duration, ICombatEntity caster)
-			=> entity.Components.Get<BuffComponent>()?.Start(buffId, numArg1, numArg2, duration, caster);
+		public static Buff StartBuff(this ICombatEntity entity, BuffId buffId, float numArg1, float numArg2, TimeSpan duration, ICombatEntity caster, SkillId skillId = SkillId.Normal_Attack)
+			=> entity.Components.Get<BuffComponent>()?.Start(buffId, numArg1, numArg2, duration, caster, skillId);
 
 		/// <summary>
 		/// Stops the buff with the given id.

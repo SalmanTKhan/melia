@@ -9,8 +9,6 @@ using Melia.Zone.Skills.SplashAreas;
 using Melia.Zone.World.Actors;
 using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Actors.CombatEntities.Components;
-using Melia.Zone.World.Actors.Monsters;
-using Yggdrasil.Geometry;
 using Yggdrasil.Scheduling;
 using Yggdrasil.Util;
 
@@ -67,7 +65,7 @@ namespace Melia.Zone.Skills
 		/// <summary>
 		/// Returns the skill's cooldown.
 		/// </summary>
-		public TimeSpan Cooldown { get; set; } = TimeSpan.Zero;
+		public Cooldown Cooldown { get; set; }
 
 		/// <summary>
 		/// Returns the skill's overheat count. If this value reaches the
@@ -79,6 +77,11 @@ namespace Melia.Zone.Skills
 		/// Returns the time until the skill's overheat counter is reset.
 		/// </summary>
 		public TimeSpan OverheatTimeRemaining { get; private set; }
+
+		/// <summary>
+		/// Returns the when the skill is off cooldown.
+		/// </summary>
+		public Action OnCooldownChanged { get; set; }
 
 		/// <summary>
 		/// Returns reference to the skill's data from the file database.
@@ -115,7 +118,7 @@ namespace Melia.Zone.Skills
 		/// <summary>
 		/// Returns true if the skill is currently on cooldown.
 		/// </summary>
-		public bool IsOnCooldown => this.Owner.Components.Get<CooldownComponent>().IsOnCooldown(this.Data.CooldownGroup);
+		public bool IsOnCooldown => this.Owner.IsOnCooldown(this.Data.CooldownGroup);
 
 		/// <summary>
 		/// Get the Hit Time based off skill level
@@ -124,16 +127,39 @@ namespace Melia.Zone.Skills
 		public TimeSpan HitTime => (this.Level < this.Data.HitTime.Count) ? this.Data.HitTime[this.Level] : this.Data.HitTime[0];
 
 		/// <summary>
+		/// Used to denote common skills
+		/// </summary>
+		public bool IsCommon { get; set; }
+		/// <summary>
+		/// Used to denote passive skills
+		/// </summary>
+		public bool IsPassive { get; set; }
+
+		/// <summary>
 		/// Creates a new instance.
 		/// </summary>
 		/// <param name="owner"></param>
 		/// <param name="skillId"></param>
 		/// <param name="level"></param>
-		public Skill(ICombatEntity owner, SkillId skillId, int level)
+		public Skill(ICombatEntity owner, SkillId skillId, int level, bool isCommon = false)
 		{
 			this.Owner = owner;
 			this.Id = skillId;
 			this.Level = level;
+			this.IsCommon = isCommon;
+
+			switch (this.Id)
+			{
+				case SkillId.Fletcher_BodkinPoint:
+				case SkillId.Fletcher_BarbedArrow:
+				case SkillId.Fletcher_CrossFire:
+				case SkillId.Fletcher_Singijeon:
+					this.IsPassive = true;
+					break;
+				default:
+					this.IsPassive = false;
+					break;
+			}
 
 			this.Data = ZoneServer.Instance.Data.SkillDb.Find(skillId) ?? throw new ArgumentException($"Unknown skill '{skillId}'.");
 			this.CooldownData = ZoneServer.Instance.Data.CooldownDb.Find(this.Data.CooldownGroup) ?? throw new ArgumentException($"Unknown skill '{skillId}' cooldown group '{this.Data.CooldownGroup}'.");
@@ -176,7 +202,8 @@ namespace Melia.Zone.Skills
 				this.OverheatTimeRemaining = TimeSpan.Zero;
 				overheated = false;
 
-				this.Owner.Components.Get<CooldownComponent>().Start(this.Data.CooldownGroup, this.Data.CooldownTime);
+				var cooldown = this.Owner.StartCooldown(this.Data.CooldownGroup, this.Data.CooldownTime);
+				cooldown.OnCooldownChanged += this.OnCooldownChanged;
 			}
 
 			// Update the overheat after the max was checked so we reset it
@@ -220,7 +247,9 @@ namespace Melia.Zone.Skills
 				// overheat counter automatically after the overheat reset
 				// time passed
 				if (this.OverheatTimeRemaining == TimeSpan.Zero)
+				{
 					this.OverheatCounter = 0;
+				}
 			}
 		}
 

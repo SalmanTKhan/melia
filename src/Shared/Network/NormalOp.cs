@@ -218,6 +218,7 @@
 			public const int AddMessage = 0x03;
 			public const int MessageList = 0x04;
 			public const int CreateRoom = 0x05;
+			public const int Shout = 0x06;
 			public const int SystemMessage = 0x07;
 			public const int FriendInfo = 0x08;
 			public const int FriendResponse = 0x09;

@@ -40,6 +40,11 @@ namespace Melia.Zone.Skills.Handlers.Base
 		void Handle(Skill skill, ICombatEntity caster, Position originPos, Direction dir);
 	}
 
+	public interface IPassiveSkillHandler : ISkillHandler
+	{
+		void Handle(Skill skill, ICombatEntity caster);
+	}
+
 	/// <summary>
 	/// A skill handler interface when the client provides a target
 	/// </summary>

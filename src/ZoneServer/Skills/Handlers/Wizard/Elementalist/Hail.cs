@@ -75,12 +75,16 @@ namespace Melia.Zone.Skills.Handlers.Elementalist
 		/// <param name="skill"></param>
 		private void ExecuteHail(ICombatEntity caster, Position position, Skill skill)
 		{
+			var direction = caster.Direction;
+			var packetStringId = "Elementalist_Hail";
+			var duration = 10f;
+			var size = 50f;
 			var effectHandle = ZoneServer.Instance.World.CreateEffectHandle();
-			Send.ZC_NORMAL.SkillPad(caster, skill, "Elementalist_Hail", position, caster.Direction, -0.1532966f, 105.4346f, effectHandle, 10);
+			Send.ZC_NORMAL.SkillPad(caster, skill, packetStringId, position, direction, -0.1532966f, 105.4346f, effectHandle, 10);
 
-			var area = new CircleF(position, 50);
+			var area = new CircleF(position, size);
 
-			var trigger = new Npc(12082, "", new Location(caster.Map.Id, position), caster.Direction);
+			var trigger = new Npc(12082, "", new Location(caster.Map.Id, position), direction);
 			trigger.Vars.Set("Melia.HailCaster", caster);
 			trigger.Vars.Set("Melia.HailSkill", skill);
 			trigger.SetTriggerArea(area);
@@ -92,7 +96,7 @@ namespace Melia.Zone.Skills.Handlers.Elementalist
 			this.ShowHail(caster, position, TimeSpan.Zero);
 			//this.ShowHail(caster, position, TimeSpan.FromSeconds(0.2));
 
-			Task.Delay(TimeSpan.FromSeconds(10)).ContinueWith(_ => Send.ZC_NORMAL.SkillPad(caster, skill, "Elementalist_Hail", position, caster.Direction, -0.1532966f, 105.4346f, effectHandle, 10, false));
+			trigger.OnDisappear += () => Send.ZC_NORMAL.SkillPad(caster, skill, packetStringId, position, direction, -0.1532966f, 105.4346f, effectHandle, 10, false);
 		}
 
 		private async Task ShowHail(ICombatEntity caster, Position position, TimeSpan delay)

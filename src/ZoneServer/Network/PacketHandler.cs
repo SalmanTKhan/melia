@@ -894,7 +894,7 @@ namespace Melia.Zone.Network
 					character.Inventory.Remove(item, 1, InventoryItemRemoveMsg.Used);
 
 				if (item.Data.HasCooldown && item.CooldownData != null)
-					character.Components.Get<CooldownComponent>().Start(item.CooldownData.Id, item.CooldownData.OverheatResetTime);
+					character.StartCooldown(item.CooldownData.Id, item.CooldownData.OverheatResetTime);
 
 				if (result == ItemUseResult.Okay)
 					Send.ZC_ITEM_USE(character, item.Id);
@@ -2165,7 +2165,7 @@ namespace Melia.Zone.Network
 				}
 
 				if (item.Data.HasCooldown && item.CooldownData != null)
-					character.Components.Get<CooldownComponent>().Start(item.CooldownData.Id, item.CooldownData.OverheatResetTime);
+					character.StartCooldown(item.CooldownData.Id, item.CooldownData.OverheatResetTime);
 
 				Send.ZC_ITEM_USE(character, item.Id);
 			}
@@ -2216,6 +2216,12 @@ namespace Melia.Zone.Network
 				if (!quest.InProgress || quest.SessionObjectStaticData == null)
 					continue;
 				character.AddSessionObject(quest.SessionObjectStaticData.Id);
+			}
+
+			foreach (var skill in character.Skills.GetList(s => s.IsPassive))
+			{
+				if (ZoneServer.Instance.SkillHandlers.TryGetPassiveSkillHandler<IPassiveSkillHandler>(skill.Id, out var handler))
+					handler.Handle(skill, skill.Owner);
 			}
 		}
 
@@ -2752,7 +2758,9 @@ namespace Melia.Zone.Network
 		[PacketHandler(Op.CZ_REQ_COMMON_SKILL_LIST)]
 		public void CZ_REQ_COMMON_SKILL_LIST(IZoneConnection conn, Packet packet)
 		{
-			Send.ZC_COMMON_SKILL_LIST(conn);
+			var character = conn.SelectedCharacter;
+
+			Send.ZC_COMMON_SKILL_LIST(character);
 		}
 
 		/// <summary>
@@ -3028,7 +3036,8 @@ namespace Melia.Zone.Network
 			{
 				var character = conn.SelectedCharacter;
 				//TODO Send poses and rotate?
-				Send.ZC_NORMAL.Skill_MissileThrow(character, character.Position.GetRandomInRange2D(50, 100), "I_like_force#Dummy_bufficon", 1, null, 1, 3.5f, 100f);
+				Send.ZC_NORMAL.SkillProjectile(character, character.Position.GetRandomInRange2D(50, 100),
+					"I_like_force#Dummy_bufficon", TimeSpan.FromSeconds(1), null, TimeSpan.FromSeconds(1), 3.5f, 100f);
 				character.PlayEffect("F_sys_like3#Bip01 Pelvis", 2);
 				character.SystemMessage("{Name}Like{Who}", new MsgParameter("Name", character.TeamName), new MsgParameter("Who", targetCharacter.TeamName));
 			}

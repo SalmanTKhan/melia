@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Melia.Social.Database;
 
@@ -43,6 +44,18 @@ namespace Melia.Social.World
 		{
 			lock (_users)
 				_users.Remove(accountId);
+		}
+
+		public IList<SocialUser> GetUsers()
+		{
+			lock (_users)
+				return _users.Values.ToList();
+		}
+
+		public IList<SocialUser> GetUsers(Func<SocialUser, bool> predicate)
+		{
+			lock (_users)
+				return _users.Values.Where(predicate).ToList();
 		}
 
 		/// <summary>

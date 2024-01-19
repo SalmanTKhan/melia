@@ -130,7 +130,7 @@ namespace Melia.Zone.Skills.Handlers.TerraMancer
 				initiator.TakeDamage(skillHitResult.Damage, caster);
 
 				var hitInfo = new HitInfo(caster, initiator, skill, skillHitResult.Damage, skillHitResult.Result);
-				hitInfo.HitCount = 6;
+				hitInfo.AdditionalHitCount = 6;
 
 				Send.ZC_HIT_INFO(caster, initiator, hitInfo);
 			}

@@ -94,6 +94,11 @@ namespace Melia.Zone.Buffs
 		public bool IsFullyOverbuffed => _overbuffCounter >= this.MaxOverbuffCount;
 
 		/// <summary>
+		/// Returns the time at which the buff is started.
+		/// </summary>
+		public DateTime StartTime { get; private set; }
+
+		/// <summary>
 		/// Returns the time at which the buff is removed.
 		/// </summary>
 		public DateTime RemovalTime { get; private set; }
@@ -202,6 +207,7 @@ namespace Melia.Zone.Buffs
 		/// </summary>
 		public void Start()
 		{
+			this.StartTime = DateTime.Now;
 			if (this.HasDuration)
 				this.RemovalTime = DateTime.Now.Add(this.Duration);
 

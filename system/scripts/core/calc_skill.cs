@@ -117,6 +117,11 @@ public class SkillCalculationsScript : GeneralScript
 	[ScriptableFunction]
 	public float SCR_Get_SpendSP(Skill skill)
 	{
+		// TODO: Figure out if there's a better way of handling
+		// special skills that don't use basic sp.
+		if (skill.Id == SkillId.Common_MovingForward)
+			return SCR_Get_SpendSP_Common_MovingForward(skill);
+
 		var baseValue = skill.Data.BasicSp;
 		if (baseValue == 0)
 			return 0;
@@ -138,6 +143,12 @@ public class SkillCalculationsScript : GeneralScript
 		value += value * (byAbilityRate / 100f);
 
 		return (int)Math.Max(0, value);
+	}
+
+	public float SCR_Get_SpendSP_Common_MovingForward(Skill skill)
+	{
+		var baseValue = .07f * skill.Owner.Properties.GetFloat(PropertyName.MSP);
+		return (int)Math.Max(0, baseValue);
 	}
 
 	/// <summary>

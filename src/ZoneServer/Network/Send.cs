@@ -539,7 +539,7 @@ namespace Melia.Zone.Network
 			packet.PutInt(target?.Handle ?? 0);
 			packet.PutInt(0);
 			packet.PutFloat(512f);
-			packet.PutInt(0);
+			packet.PutFloat(hits?.FirstOrDefault()?.UnkFloat ?? 0);
 
 			packet.PutByte((byte)(hits?.Count() ?? 0));
 			if (hits != null)
@@ -2549,9 +2549,9 @@ namespace Melia.Zone.Network
 			packet.PutInt(hitInfo.ForceId);
 			packet.PutByte(0);
 			packet.PutByte(0);
-			packet.PutFloat(0);
-			packet.PutFloat(0);
-			packet.PutInt(hitInfo.HitCount);
+			packet.PutFloat(hitInfo.UnkFloat1);
+			packet.PutFloat(hitInfo.UnkFloat2);
+			packet.PutInt(hitInfo.AdditionalHitCount);
 			packet.PutByte(1);
 			packet.PutInt(0);
 			packet.PutInt(hitInfo.Delay);
@@ -3664,7 +3664,7 @@ namespace Melia.Zone.Network
 			var packet = new Packet(Op.ZC_RESPONSE_GUILD_INDEX);
 
 			packet.PutInt(character.Handle);
-			packet.PutLong(guild?.ObjectId ?? 1); // Guild Id
+			packet.PutLong(guild?.ObjectId ?? 0); // Guild Id
 			packet.PutShort(1001);
 
 			character.Connection.Send(packet);
@@ -4514,20 +4514,24 @@ namespace Melia.Zone.Network
 		}
 
 		/// <summary>
-		/// Sends ZC_COMMON_SKILL_LIST to character (dummy).
+		/// Sends a list of common skills.
 		/// </summary>
-		/// <param name="conn"></param>
-		public static void ZC_COMMON_SKILL_LIST(IZoneConnection conn)
+		/// <param name="character"></param>
+		public static void ZC_COMMON_SKILL_LIST(Character character)
 		{
+			var skills = character.Skills.GetList(s => s.IsCommon);
+
 			var packet = new Packet(Op.ZC_COMMON_SKILL_LIST);
 
-			// TODO: Update compressed section. Seems like the packet
-			//   is shorter now by default?
+			packet.PutInt(skills?.Length ?? 0);
+			packet.Zlib(true, zpacket =>
+			{
+				foreach (var skill in skills)
+					zpacket.PutInt((int)skill.Id);
+				zpacket.PutEmptyBin(16);
+			});
 
-			//packet.Zlib(true, zpacket => { zpacket.PutEmptyBin(18); });
-			packet.PutBinFromHex("000000008DFA02000000030000000000000000000000000000000000");
-
-			conn.Send(packet);
+			character.Connection.Send(packet);
 		}
 
 		/// <summary>
@@ -4536,7 +4540,7 @@ namespace Melia.Zone.Network
 		/// <param name="conn"></param>
 		public static void ZC_PCBANG_POINT(IZoneConnection conn)
 		{
-			var packet = new Packet(Op.ZC_COMMON_SKILL_LIST);
+			var packet = new Packet(Op.ZC_PCBANG_POINT);
 
 			packet.PutInt(-1);
 			packet.PutInt(980); //Increasing Value each time this packet is sent
@@ -5960,17 +5964,25 @@ namespace Melia.Zone.Network
 			character.Connection.Send(packet);
 		}
 
+
 		/// <summary>
 		/// Set "ex"-property
 		/// </summary>
 		/// <param name="character"></param>
-		public static void ZC_SEND_PC_EXPROP(Character character)
+		/// <param name="msgParams"></param>
+		public static void ZC_SEND_PC_EXPROP(Character character, params MsgParameter[] msgParams)
 		{
 			var packet = new Packet(Op.ZC_SEND_PC_EXPROP);
 
-			packet.PutInt(1);
-			packet.PutLpString("sraidC_Total_Level_boss");
-			packet.PutFloat(7);
+			packet.PutInt(msgParams?.Length ?? 0);
+			if (msgParams != null)
+			{
+				foreach (var param in msgParams)
+				{
+					packet.PutLpString(param.Key);
+					packet.PutFloat(float.Parse(param.Value));
+				}
+			}
 
 			character.Connection.Send(packet);
 		}
@@ -6236,6 +6248,44 @@ namespace Melia.Zone.Network
 			}
 
 			character.Connection.Send(packet);
+		}
+
+		/// <summary>
+		/// Enable after image on actor.
+		/// </summary>
+		/// <param name="actor"></param>
+		/// <param name="f1"></param>
+		/// <param name="f2"></param>
+		/// <param name="f3"></param>
+		/// <param name="f4"></param>
+		/// <param name="f5"></param>
+		/// <param name="f6"></param>
+		public static void ZC_ON_AFTER_IMAGE(IActor actor, float f1, float f2, float f3, float f4, float f5, float f6)
+		{
+			var packet = new Packet(Op.ZC_ON_AFTER_IMAGE);
+
+			packet.PutInt(actor.Handle);
+			packet.PutFloat(f1);
+			packet.PutFloat(f2);
+			packet.PutFloat(f3);
+			packet.PutFloat(f4);
+			packet.PutFloat(f5);
+			packet.PutFloat(f6);
+
+			actor.Map.Broadcast(packet);
+		}
+
+		/// <summary>
+		/// Disable after image on an actor.
+		/// </summary>
+		/// <param name="actor"></param>
+		public static void ZC_OFF_AFTER_IMAGE(IActor actor)
+		{
+			var packet = new Packet(Op.ZC_OFF_AFTER_IMAGE);
+
+			packet.PutInt(actor.Handle);
+
+			actor.Map.Broadcast(packet);
 		}
 
 		/// <summary>

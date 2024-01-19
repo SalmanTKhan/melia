@@ -71,7 +71,7 @@ namespace Melia.Zone.Skills.Handlers.TerraMancer
 			var forceId = ForceId.GetNew();
 			var hitInfo = new HitInfo(caster, target, skill, skillHitResult.Damage, skillHitResult.Result);
 			hitInfo.ForceId = forceId;
-			hitInfo.HitCount = 4;
+			hitInfo.AdditionalHitCount = 4;
 
 			Send.ZC_HIT_INFO(caster, target, hitInfo);
 		}

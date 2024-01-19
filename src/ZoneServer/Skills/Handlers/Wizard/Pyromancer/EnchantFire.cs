@@ -42,9 +42,8 @@ namespace Melia.Zone.Skills.Handlers.Pyromancer
 			Send.ZC_SKILL_READY(caster, skill, skillHandle, caster.Position, farPos);
 			Send.ZC_NORMAL.UpdateSkillEffect(caster, caster.Handle, caster.Position, caster.Direction, caster.Position);
 
-			var buff = new Buff(BuffId.EnchantFire_Buff, 0, 0, TimeSpan.FromMilliseconds(180000), caster, caster);
 			Send.ZC_SYNC_START(caster, skillHandle, 1);
-			caster.Components.Get<BuffComponent>()?.AddOrUpdate(buff);
+			caster.StartBuff(BuffId.EnchantFire_Buff, 0, 0, TimeSpan.FromMilliseconds(180000), caster);
 			Send.ZC_SYNC_END(caster, skillHandle, 0);
 			Send.ZC_SYNC_EXEC_BY_SKILL_TIME(caster, skillHandle, TimeSpan.FromMilliseconds(200));
 

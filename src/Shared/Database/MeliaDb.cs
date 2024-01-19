@@ -271,21 +271,19 @@ namespace Melia.Shared.Database
 					var typeStr = property is FloatProperty ? "f" : "s";
 					var valueStr = property.Serialize();
 
-					using (var cmd = new InsertCommand($"INSERT INTO `{databaseName}` {{0}}", conn, trans))
-					{
-						cmd.Set(idName, id);
-						cmd.Set("name", property.Ident);
-						cmd.Set("type", typeStr);
-						cmd.Set("value", valueStr);
+					using var cmd = new InsertCommand($"INSERT INTO `{databaseName}` {{0}}", conn, trans);
+					cmd.Set(idName, id);
+					cmd.Set("name", property.Ident);
+					cmd.Set("type", typeStr);
+					cmd.Set("value", valueStr);
 
-						cmd.Execute();
-					}
+					cmd.Execute();
 				}
 
 				trans.Commit();
 			}
 		}
-		
+
 		/// <summary>
 		/// Saves properties to the given database, with the id.
 		/// </summary>
@@ -295,7 +293,7 @@ namespace Melia.Shared.Database
 		/// <param name="properties"></param>
 		protected void SaveProperties(string databaseName, string idName, long id, Properties properties, MySqlConnection conn, MySqlTransaction trans)
 		{
-			using (var cmd = new MySqlCommand($"DELETE FROM `{databaseName}` WHERE `{idName}` = @id", conn))
+			using (var cmd = new MySqlCommand($"DELETE FROM `{databaseName}` WHERE `{idName}` = @id", conn, trans))
 			{
 				cmd.Parameters.AddWithValue("@id", id);
 				cmd.ExecuteNonQuery();
@@ -306,7 +304,7 @@ namespace Melia.Shared.Database
 				var typeStr = property is FloatProperty ? "f" : "s";
 				var valueStr = property.Serialize();
 
-				using (var cmd = new InsertCommand($"INSERT INTO `{databaseName}` {{0}}", conn))
+				using (var cmd = new InsertCommand($"INSERT INTO `{databaseName}` {{0}}", conn, trans))
 				{
 					cmd.Set(idName, id);
 					cmd.Set("name", property.Ident);
