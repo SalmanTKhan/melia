@@ -89,7 +89,7 @@ namespace Melia.Zone.Network.Helpers
 			packet.PutByte(0);
 			packet.PutByte(0);
 			packet.PutByte(0);
-			packet.PutByte(0);
+			packet.PutByte((byte)hitInfo.AttackType);
 
 			packet.PutShort((short)hitInfo.ResultType);
 

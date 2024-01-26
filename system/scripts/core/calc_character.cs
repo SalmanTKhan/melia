@@ -1420,4 +1420,19 @@ public class CharacterCalculationsScript : GeneralScript
 		var value = byItem + byBuff;
 		return value;
 	}
+
+	/// <summary>
+	/// Returns character's looting chance, which adds potentially to
+	/// increase drops?
+	/// </summary>
+	/// <param name="character"></param>
+	/// <returns></returns>
+	public float SCR_Get_LootingChance(Character character)
+	{
+		var byItem = character.Inventory.GetEquipProperties(PropertyName.LootingChance);
+		var byBuff = character.Properties.GetFloat(PropertyName.LootingChance_BM);
+
+		var value = byItem + byBuff;
+		return value;
+	}
 }

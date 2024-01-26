@@ -169,9 +169,9 @@ public class CustomCommandFunctionsScript : GeneralScript
 	{
 		if (character.HasCompanions)
 		{
-			var companions = character.GetCompanions();
+			var companions = character.Companions.GetList();
 			var companion = companions[0];
-			if (numArg2 == 3014)
+			if ((JobId)numArg2 == JobId.Falconer)
 				companion = companions[1];
 
 			companion.SetCompanionState(!companion.IsActivated);

@@ -28,6 +28,18 @@ public class ItemEtcScripts : GeneralScript
 		return ItemUseResult.Okay;
 	}
 
+	[ScriptableFunction]
+	public ItemUseResult SCR_USE_ITEM_ADD_CHAT_EMOTICON(Character character, Item item, string strArg, float numArg1, float numArg2)
+	{
+		if (!ZoneServer.Instance.Data.ChatEmoticonDb.TryFind(strArg, out var data))
+			return ItemUseResult.Fail;
+
+		character.SetAccountProperty($"HaveEmoticon_{data.Id}", 1);
+		character.AddonMessage(AddonMessage.ADD_CHAT_EMOTICON);
+
+		return ItemUseResult.Okay;
+	}
+
 	/// <summary>
 	/// Increase an entry count for Challenge Mode: Division Singularity?
 	/// </summary>

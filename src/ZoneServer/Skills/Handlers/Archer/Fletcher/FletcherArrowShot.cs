@@ -86,45 +86,40 @@ namespace Melia.Zone.Skills.Handlers.Fletcher
 
 			// Probably should get the respective handler (though)
 			if (buffSkill.Id == SkillId.Fletcher_BarbedArrow)
-				this.HandleBarbedArrow(buffSkill, caster, target);
+				this.HandleBarbedArrow(skill, buffSkill, caster, target);
 			else if (buffSkill.Id == SkillId.Fletcher_BodkinPoint)
-				this.HandleBodkinPoint(buffSkill, caster, target);
+				this.HandleBodkinPoint(skill, buffSkill, caster, target);
 			else if (buffSkill.Id == SkillId.Fletcher_CrossFire)
-				this.HandleCrossFire(buffSkill, caster, target);
+				this.HandleCrossFire(skill, buffSkill, caster, target);
 			else if (buffSkill.Id == SkillId.Fletcher_Singijeon)
-				this.HandleDivineMachineArrow(buffSkill, caster, target);
+				this.HandleDivineMachineArrow(skill, buffSkill, caster, target);
 		}
 
-		private void HandleBarbedArrow(Skill skill, ICombatEntity caster, ICombatEntity target)
+		private void HandleBarbedArrow(Skill fletcherSkill, Skill buffSkill, ICombatEntity caster, ICombatEntity target)
 		{
-			var damageDelay = TimeSpan.FromMilliseconds(200);
-			var skillHitDelay = TimeSpan.Zero;
+			Send.ZC_SKILL_FORCE_TARGET(caster, target, fletcherSkill, ForceId.GetNew(), null);
 
-			var skillHitResult = SCR_SkillHit(caster, target, skill);
+			var skillHitResult = SCR_SkillHit(caster, target, buffSkill);
 			target.TakeDamage(skillHitResult.Damage, caster);
 
-			var skillHit = new SkillHitInfo(caster, target, skill, skillHitResult, damageDelay, skillHitDelay);
-			skillHit.ForceId = ForceId.GetNew();
-
-			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill, skillHit.ForceId, null);
-
-			var hit = new HitInfo(caster, target, skill, skillHitResult);
-			hit.AdditionalHitCount = 5;
+			var hit = new HitInfo(caster, target, buffSkill, skillHitResult);
+			hit.HitCount = 5;
+			hit.UnkFloat1 = -1;
 			hit.ForceId = ForceId.GetNew();
 			Send.ZC_HIT_INFO(caster, target, hit);
 
 			// Bounce shot
-			if (this.TryGetBounceTarget(caster, target, skill, out var bounceTarget))
+			if (this.TryGetBounceTarget(caster, target, buffSkill, out var bounceTarget))
 			{
-				skillHitResult = SCR_SkillHit(caster, bounceTarget, skill);
+				skillHitResult = SCR_SkillHit(caster, bounceTarget, buffSkill);
 				bounceTarget.TakeDamage(skillHitResult.Damage, caster);
 
-				hit = new HitInfo(caster, bounceTarget, skill, skillHitResult);
+				hit = new HitInfo(caster, bounceTarget, buffSkill, skillHitResult);
 				Send.ZC_HIT_INFO(caster, bounceTarget, hit);
 			}
 		}
 
-		private void HandleBodkinPoint(Skill skill, ICombatEntity caster, ICombatEntity target)
+		private void HandleBodkinPoint(Skill fletcherSkill, Skill buffSkill, ICombatEntity caster, ICombatEntity target)
 		{
 			var forceId = ForceId.GetNew();
 			var splashEffect1 = "I_arrow009_red#Dummy_arrow";
@@ -141,27 +136,27 @@ namespace Melia.Zone.Skills.Handlers.Fletcher
 			var str1 = "Dummy_arrow_effect";
 			var str2 = "None";
 			Send.ZC_NORMAL.SkillEffect_14(caster, skillEffect, skillScale, str1, str2);
-			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill, forceId, null);
+			Send.ZC_SKILL_FORCE_TARGET(caster, target, fletcherSkill, forceId, null);
 
-			var skillHitResult = SCR_SkillHit(caster, target, skill);
+			var skillHitResult = SCR_SkillHit(caster, target, buffSkill);
 			target.TakeDamage(skillHitResult.Damage, caster);
 
-			var hit = new HitInfo(caster, target, skill, skillHitResult);
+			var hit = new HitInfo(caster, target, buffSkill, skillHitResult);
 			hit.ForceId = ForceId.GetNew();
 			Send.ZC_HIT_INFO(caster, target, hit);
 
 			// Bounce shot
-			if (this.TryGetBounceTarget(caster, target, skill, out var bounceTarget))
+			if (this.TryGetBounceTarget(caster, target, buffSkill, out var bounceTarget))
 			{
-				skillHitResult = SCR_SkillHit(caster, bounceTarget, skill);
+				skillHitResult = SCR_SkillHit(caster, bounceTarget, buffSkill);
 				bounceTarget.TakeDamage(skillHitResult.Damage, caster);
 
-				hit = new HitInfo(caster, bounceTarget, skill, skillHitResult);
+				hit = new HitInfo(caster, bounceTarget, buffSkill, skillHitResult);
 				Send.ZC_HIT_INFO(caster, bounceTarget, hit);
 			}
 		}
 
-		private void HandleCrossFire(Skill skill, ICombatEntity caster, ICombatEntity target)
+		private void HandleCrossFire(Skill fletcherSkill, Skill buffSkill, ICombatEntity caster, ICombatEntity target)
 		{
 			var forceId = ForceId.GetNew();
 			var splashEffect1 = "I_arrow009_yellow#Dummy_arrow";
@@ -177,26 +172,26 @@ namespace Melia.Zone.Skills.Handlers.Fletcher
 
 			Send.ZC_GROUND_EFFECT(caster, groundEffect, target.Position, groundEffectScale, 0, 0.2f);
 
-			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill, forceId, null);
+			Send.ZC_SKILL_FORCE_TARGET(caster, target, fletcherSkill, forceId, null);
 
-			var skillHitResult = SCR_SkillHit(caster, target, skill);
+			var skillHitResult = SCR_SkillHit(caster, target, buffSkill);
 			target.TakeDamage(skillHitResult.Damage, caster);
 
-			var hit = new HitInfo(caster, target, skill, skillHitResult);
+			var hit = new HitInfo(caster, target, buffSkill, skillHitResult);
 			Send.ZC_HIT_INFO(caster, target, hit);
 
 			// Bounce shot
-			if (this.TryGetBounceTarget(caster, target, skill, out var bounceTarget))
+			if (this.TryGetBounceTarget(caster, target, buffSkill, out var bounceTarget))
 			{
-				skillHitResult = SCR_SkillHit(caster, bounceTarget, skill);
+				skillHitResult = SCR_SkillHit(caster, bounceTarget, buffSkill);
 				bounceTarget.TakeDamage(skillHitResult.Damage, caster);
 
-				hit = new HitInfo(caster, bounceTarget, skill, skillHitResult);
+				hit = new HitInfo(caster, bounceTarget, buffSkill, skillHitResult);
 				Send.ZC_HIT_INFO(caster, bounceTarget, hit);
 			}
 		}
 
-		private void HandleDivineMachineArrow(Skill skill, ICombatEntity caster, ICombatEntity target)
+		private void HandleDivineMachineArrow(Skill fletcherSkill, Skill buffSkill, ICombatEntity caster, ICombatEntity target)
 		{
 			var forceId = ForceId.GetNew();
 			var splashEffect1 = "E_archer_Flareshot_arrow_violet#Dummy_arrow";
@@ -215,21 +210,21 @@ namespace Melia.Zone.Skills.Handlers.Fletcher
 			groundEffectScale = 1f;
 			Send.ZC_GROUND_EFFECT(caster, groundEffect, target.Position, groundEffectScale, 0, 0.1f);
 
-			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill, forceId, null);
+			Send.ZC_SKILL_FORCE_TARGET(caster, target, fletcherSkill, forceId, null);
 
-			var skillHitResult = SCR_SkillHit(caster, target, skill);
+			var skillHitResult = SCR_SkillHit(caster, target, buffSkill);
 			target.TakeDamage(skillHitResult.Damage, caster);
 
-			var hit = new HitInfo(caster, target, skill, skillHitResult);
+			var hit = new HitInfo(caster, target, buffSkill, skillHitResult);
 			Send.ZC_HIT_INFO(caster, target, hit);
 
 			// Bounce shot
-			if (this.TryGetBounceTarget(caster, target, skill, out var bounceTarget))
+			if (this.TryGetBounceTarget(caster, target, buffSkill, out var bounceTarget))
 			{
-				skillHitResult = SCR_SkillHit(caster, bounceTarget, skill);
+				skillHitResult = SCR_SkillHit(caster, bounceTarget, buffSkill);
 				bounceTarget.TakeDamage(skillHitResult.Damage, caster);
 
-				hit = new HitInfo(caster, bounceTarget, skill, skillHitResult);
+				hit = new HitInfo(caster, bounceTarget, buffSkill, skillHitResult);
 				Send.ZC_HIT_INFO(caster, bounceTarget, hit);
 			}
 		}
@@ -248,7 +243,7 @@ namespace Melia.Zone.Skills.Handlers.Fletcher
 			var splashPos = caster.Position;
 			var splashParam = skill.GetSplashParameters(caster, splashPos, mainTarget.Position, length: 130, width: 60, angle: 0);
 			var splashArea = skill.GetSplashArea(SplashType.Square, splashParam);
-			Debug.ShowShape(caster.Map, splashArea, TimeSpan.FromSeconds(5));
+			Debug.ShowShape(caster.Map, splashArea, TimeSpan.FromMilliseconds(250));
 
 			var targets = caster.Map.GetAttackableEntitiesIn(caster, splashArea);
 			if (!targets.Any())

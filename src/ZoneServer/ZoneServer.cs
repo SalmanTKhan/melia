@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
@@ -15,7 +14,6 @@ using Melia.Zone.Database;
 using Melia.Zone.Events;
 using Melia.Zone.Network;
 using Melia.Zone.Skills.Handlers;
-using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Shared;
 using Melia.Zone.World;
 using Melia.Zone.World.Actors.Characters;
@@ -75,6 +73,11 @@ namespace Melia.Zone
 		/// Returns a reference to the server's event manager.
 		/// </summary>
 		public ServerEvents ServerEvents { get; } = new ServerEvents();
+
+		/// <summary>
+		/// Returns a reference to the server's game event manager.
+		/// </summary>
+		public GameEventManager GameEvents { get; } = new GameEventManager();
 
 		/// <summary>
 		/// Returns the dialog function handlers.
@@ -280,12 +283,13 @@ namespace Melia.Zone
 		}
 
 		/// <summary>
-		/// Loads maps ad initializes them.
+		/// Loads maps and initializes them.
 		/// </summary>
 		private void InitWorld()
 		{
 			Log.Info("Initializing world...");
 			this.World.Initialize();
+			this.GameEvents.Initialize();
 			Log.Info("  done loading {0} maps.", this.World.Count);
 		}
 

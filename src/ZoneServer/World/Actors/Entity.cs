@@ -409,5 +409,17 @@ namespace Melia.Zone.World.Actors
 
 			return caster.Position.InRange2D(pos, maxRange);
 		}
+
+		/// <summary>
+		/// Returns true if the buff with the given id is found.
+		/// </summary>
+		/// <param name="entity"></param>
+		/// <param name="buffId"></param>
+		/// <returns></returns>
+		public static bool TryGetActiveCompanion(this ICombatEntity entity, out Companion companion)
+		{
+			companion = entity.Components.Get<CompanionComponent>()?.ActiveCompanion ?? null;
+			return companion != null;
+		}
 	}
 }

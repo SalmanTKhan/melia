@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Melia.Shared.Configuration.Files;
 using Melia.Shared.Data.Database;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Tos.Const;
@@ -12,7 +11,6 @@ using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Actors.CombatEntities.Components;
 using Melia.Zone.World.Actors.Components;
 using Melia.Zone.World.Items;
-using Yggdrasil.Composition;
 using Yggdrasil.Logging;
 using Yggdrasil.Scheduling;
 using Yggdrasil.Util;
@@ -171,12 +169,21 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// </summary>
 		public DateTime DisappearTime { get; set; } = DateTime.MaxValue;
 
+		/// <summary>
+		/// Raised when the monster has disappeared.
+		/// </summary>
 		public Action OnDisappear { get; set; }
 
 		/// <summary>
 		/// Data entry for this monster.
 		/// </summary>
 		public MonsterData Data { get; private set; }
+
+		private readonly List<Item> _staticDrops;
+		/// <summary>
+		/// List of unique items that are dropped once.
+		/// </summary>
+		public IList<Item> StaticDrops { get { lock (_staticDrops) return _staticDrops.ToArray(); } }
 
 		/// <summary>
 		/// Returns whether the monster is dead.
@@ -216,8 +223,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// <summary>
 		/// If set, an owner exists
 		/// </summary>
-		public int OwnerHandle
-		{ get; set; }
+		public int OwnerHandle { get; set; }
 
 		/// <summary>
 		/// If set, a handle is associated on ZC_ENTER_MONSTER
@@ -362,8 +368,8 @@ namespace Melia.Zone.World.Actors.Monsters
 
 				this.DropItems(beneficiary);
 
-				var SCR_Get_MON_ExpPenalty = ScriptableFunctions.MonsterCharacter.Get("SCR_Get_MON_ExpPenalty");
-				var SCR_Get_MON_ClassExpPenalty = ScriptableFunctions.MonsterCharacter.Get("SCR_Get_MON_ClassExpPenalty");
+				var SCR_Get_MON_ExpPenalty = ScriptableFunctions.MonsterCharacter.Get("GET_EXP_RATIO");
+				var SCR_Get_MON_ClassExpPenalty = ScriptableFunctions.MonsterCharacter.Get("GET_EXP_RATIO");
 
 				exp = (long)(exp * SCR_Get_MON_ExpPenalty(this, beneficiary));
 				classExp = (long)(classExp * SCR_Get_MON_ClassExpPenalty(this, beneficiary));
@@ -375,6 +381,8 @@ namespace Melia.Zone.World.Actors.Monsters
 			ZoneServer.Instance.ServerEvents.OnEntityKilled(this, killer);
 
 			Send.ZC_DEAD(this);
+			// TODO: Check if it's possible to cancel casted skill from AiScript.
+			Send.ZC_SKILL_CAST_CANCEL(this);
 
 			if (beneficiary != null && this.Data != null && this.Journal)
 			{
@@ -543,8 +551,35 @@ namespace Melia.Zone.World.Actors.Monsters
 			if (this.Data.Drops == null)
 				return;
 
-			var dropStacks = this.GenerateDropStacks(killer);
-			this.DropStacks(killer, dropStacks);
+			// Normal
+			var drops = this.GenerateDropStacks(killer);
+			this.DropStacks(killer, drops);
+
+			// Event
+			var eventDrops = this.GenerateDropStacks(
+				killer,
+				ZoneServer.Instance.GameEvents.GlobalBonuses.GetDrops(this, killer));
+			if (eventDrops.Count != 0)
+			{
+				this.DropStacks(killer, eventDrops);
+			}
+
+			// Static
+			if (this._staticDrops != null)
+			{
+				var rnd = RandomProvider.Get();
+				foreach (var item in this.StaticDrops)
+				{
+					var direction = new Direction(rnd.Next(0, 360));
+					var dropRadius = ZoneServer.Instance.Conf.World.DropRadius;
+					var distance = rnd.Next(dropRadius / 2, dropRadius + 1);
+
+					item.SetLootProtection(killer, TimeSpan.FromSeconds(ZoneServer.Instance.Conf.World.LootPrectionSeconds));
+					item.Drop(this.Map, this.Position, direction, distance);
+				}
+
+				_staticDrops.Clear();
+			}
 		}
 
 		/// <summary>
@@ -555,15 +590,22 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// <returns></returns>
 		private List<DropStack> GenerateDropStacks(Character killer)
 		{
+			return GenerateDropStacks(killer, this.Data.Drops);
+		}
+
+		/// <summary>
+		/// Generates a list of random items to drop from the monster's
+		/// drop table.
+		/// </summary>
+		/// <param name="killer"></param>
+		/// <returns></returns>
+		private List<DropStack> GenerateDropStacks(Character killer, List<DropData> drops)
+		{
 			var result = new List<DropStack>();
-
 			var rnd = RandomProvider.Get();
-			var autolootChance = killer?.Variables.Temp.Get("Autoloot", 0) ?? 0;
-			var worldConf = ZoneServer.Instance.Conf.World;
-
 			var superDropLevel = this.GetSuperDropLevel();
 
-			foreach (var dropItemData in this.Data.Drops)
+			foreach (var dropItemData in drops)
 			{
 				if (!ZoneServer.Instance.Data.ItemDb.TryFind(dropItemData.ItemId, out var itemData))
 				{

@@ -1855,13 +1855,13 @@ namespace Melia.Zone.Network
 			/// <param name="character"></param>
 			public static void PetInfo(Character character)
 			{
-				var companions = character.GetCompanions();
+				var companions = character.Companions.GetList();
 
 				var packet = new Packet(Op.ZC_NORMAL);
 
 				packet.PutInt(NormalOp.Zone.PetInfo);
 				packet.PutInt(4); // 3 or 4
-				packet.PutInt(companions.Length);
+				packet.PutInt(companions.Count);
 				foreach (var companion in companions)
 					packet.AddCompanion(companion);
 

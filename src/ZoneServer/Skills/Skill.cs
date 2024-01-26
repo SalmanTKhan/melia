@@ -130,10 +130,24 @@ namespace Melia.Zone.Skills
 		/// Used to denote common skills
 		/// </summary>
 		public bool IsCommon { get; set; }
+
 		/// <summary>
 		/// Used to denote passive skills
 		/// </summary>
 		public bool IsPassive { get; set; }
+
+		/// <summary>
+		/// Used to check if character's have required stance to cast skill.
+		/// </summary>
+		public bool HasRequiredStance
+		{
+			get
+			{
+				if (this.Owner is Character character)
+					return this.Data.RequiredStance?.Contains(character.Stance) ?? true;
+				return true;
+			}
+		}
 
 		/// <summary>
 		/// Creates a new instance.

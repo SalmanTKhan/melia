@@ -704,15 +704,6 @@ switch (type)
         int skillId;
         break;
 
-    case 0x8A:
-        int handle;
-        float f1; // 0
-        //float f2; // -1
-        int i1; // 5
-        float f3; // 0.2
-        float f4; // 0
-        break;
-
     // Sent during Barbarian Stomping Kick
     // SKL_COLL_TO_GROUND
     case 0x89:
@@ -723,6 +714,28 @@ switch (type)
         int i1; // 963
         int i2; // 0
         float f3; // 0.5
+        break;
+        
+    case 0x8A:
+        int handle;
+        float f1; // 0
+        //float f2; // -1
+        int i1; // 5
+        float f3; // 0.2
+        float f4; // 0
+        break;
+        
+    // Companion Skill Related?
+    case 0x8C:
+        int handle;
+        int targetHandle;
+        int64 l1;
+        float f1;
+        float f2;
+        float f3;
+        float f4;
+        float f5;
+        byte b1;
         break;
 
     case 0x8F:
@@ -2069,5 +2082,18 @@ switch (type)
     case 0x1C5:
         int handle;
         byte isOn;
+        break;
+    
+    // Illusionist Skill?
+    case 0x1C9:
+        int handle;
+        int i1; // 53
+        float f1; // 1.2
+        float f2; // 60
+        float f3; // 0
+        float f4; // -90
+        lpString str1; // bip01
+        lpString str2; // None
+        int i2; // 0
         break;
 }

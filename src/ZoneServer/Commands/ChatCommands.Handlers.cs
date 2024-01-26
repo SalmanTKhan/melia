@@ -4,7 +4,6 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
-using g3;
 using Melia.Shared.Data.Database;
 using Melia.Shared.L10N;
 using Melia.Shared.Network;
@@ -139,264 +138,6 @@ namespace Melia.Zone.Commands
 		/// <returns></returns>
 		private CommandResult HandleTest(Character sender, Character target, string message, string command, Arguments args)
 		{
-			if (args.Count > 0)
-			{
-				Log.Debug("Testing {0}", args.Get(0));
-				switch (args.Get(0))
-				{
-					case "knockback":
-					{
-						var distance = 200;
-						var dirAngle = 21;
-						var i3 = 10; // Force? 0 - 10?
-						var i4 = 0;
-						var f1 = 1f;
-						var f2 = 1f;
-						if (args.Count > 1)
-							int.TryParse(args.Get(1), out distance);
-						if (args.Count > 2)
-							int.TryParse(args.Get(2), out dirAngle);
-						if (args.Count > 3)
-							int.TryParse(args.Get(3), out i3);
-						if (args.Count > 4)
-							int.TryParse(args.Get(4), out i4);
-						if (args.Count > 5)
-							float.TryParse(args.Get(5), out f1);
-						if (args.Count > 6)
-							float.TryParse(args.Get(6), out f2);
-						Send.ZC_KNOCKBACK_INFO(sender,
-							sender.Position, sender.Position.GetRandomInRange2D(75, 200),
-							distance, dirAngle, i3, i4, (byte)42, (byte)1, (byte)40, (byte)64, f1,
-							f2, 0, (byte)0, (byte)1, 0xE7, 0x54
-							);
-					}
-					break;
-					case "world":
-						Send.ZC_WORLD_MSG(sender, 101226, 411, 300);
-						break;
-					case "7":
-					{
-						var effectId1 = 6836;
-						var effectId2 = 15113;
-						var effectSize1 = 0.5f;
-						var effectSize2 = 0.5f;
-						var f1 = 60f;
-						var f2 = 0f;
-						var f3 = 0.6f;
-						var f4 = 200f;
-						var f5 = 2f;
-						var f6 = 0f;
-						if (args.Count > 1)
-							int.TryParse(args.Get(1), out effectId1);
-						if (args.Count > 2)
-							float.TryParse(args.Get(2), out effectSize1);
-						if (args.Count > 3)
-							int.TryParse(args.Get(3), out effectId2);
-						if (args.Count > 4)
-							float.TryParse(args.Get(4), out effectSize2);
-						if (args.Count > 5)
-							float.TryParse(args.Get(5), out f1);
-						if (args.Count > 6)
-							float.TryParse(args.Get(6), out f2);
-						if (args.Count > 7)
-							float.TryParse(args.Get(7), out f3);
-						if (args.Count > 8)
-							float.TryParse(args.Get(8), out f4);
-						if (args.Count > 9)
-							float.TryParse(args.Get(9), out f5);
-						if (args.Count > 10)
-							float.TryParse(args.Get(10), out f6);
-						Send.ZC_NORMAL.SkillFallingProjectile(sender, "Elementalist_Hail", effectId1, effectSize1, effectId2, effectSize2, sender.Position.GetRandomInRange2D(20, 40), f1, TimeSpan.FromSeconds(f2), f3, f4, f5, f6);
-						break;
-					}
-					case "e3":
-					{
-						var i1 = 0;
-						if (args.Count > 1)
-							int.TryParse(args.Get(1), out i1);
-						var argStr = "";
-						if (args.Count > 2)
-							argStr = args.Get(2);
-
-						Send.ZC_NORMAL.PlayTextEffect(sender, sender, AnimationName.ShowCriticalDamage, i1, argStr);
-						break;
-					}
-					case "d8":
-					{
-						var monsterIds = new int[] { 400981, 400981, 400981, 400981, 400981, 400981, 400981, 400981, 400981, 400981 };
-						var animationExpansionDuration = 0.25f;
-						var animationRadius = 20f;
-						var animationRotationSpeed = 15f;
-						var i1 = 9;
-						if (args.Count > 1)
-							float.TryParse(args.Get(1), out animationExpansionDuration);
-						if (args.Count > 2)
-							float.TryParse(args.Get(2), out animationRadius);
-						if (args.Count > 3)
-							float.TryParse(args.Get(3), out animationRotationSpeed);
-						if (args.Count > 4)
-							int.TryParse(args.Get(4), out i1);
-						Send.ZC_NORMAL.PlayCorpsePartsRing(sender, 1, animationExpansionDuration, animationRadius, animationRotationSpeed, i1, monsterIds);
-						break;
-					}
-					case "da":
-						Send.ZC_NORMAL.RemoveEffect(sender, 1);
-						break;
-					case "db":
-					{
-						byte b1 = 1;
-						byte b2 = 0;
-						var i3 = 1;
-						var i4 = 2;
-						if (args.Count > 1)
-							byte.TryParse(args.Get(1), out b1);
-						if (args.Count > 2)
-							byte.TryParse(args.Get(2), out b2);
-						if (args.Count > 3)
-							int.TryParse(args.Get(3), out i3);
-						if (args.Count > 4)
-							int.TryParse(args.Get(4), out i4);
-						Send.ZC_NORMAL.Skill_DB(sender, 1, b1, 400981, b2, i3, i4);
-						break;
-					}
-					case "dc":
-					{
-						var particleSpread = 30f;
-						var startDelay = 0.6f;
-						var particleSpeed = 0.2407438f;
-						var f4 = 2f;
-						var animationDuration = 1f;
-						var i1 = 1;
-						var i2 = 13277;
-						if (args.Count > 1)
-							float.TryParse(args.Get(1), out particleSpread);
-						if (args.Count > 2)
-							float.TryParse(args.Get(2), out startDelay);
-						if (args.Count > 3)
-							float.TryParse(args.Get(3), out particleSpeed);
-						if (args.Count > 4)
-							float.TryParse(args.Get(4), out f4);
-						if (args.Count > 5)
-							float.TryParse(args.Get(5), out animationDuration);
-						if (args.Count > 6)
-							int.TryParse(args.Get(6), out i1);
-						if (args.Count > 7)
-							int.TryParse(args.Get(7), out i2);
-						Send.ZC_NORMAL.PlayThrowCorpseParts(sender, i1, sender.Position.GetRandomInRange2D(30, 30), particleSpread, startDelay, particleSpeed, f4, animationDuration, i2);
-						break;
-					}
-					case "path":
-					{
-						if (!sender.Variables.Temp.Has("startPathX"))
-						{
-							sender.Variables.Temp.SetFloat("startPathX", sender.Position.X);
-							sender.Variables.Temp.SetFloat("startPathZ", sender.Position.Y);
-						}
-						else if (!sender.Variables.Temp.Has("endPathX"))
-						{
-							sender.Variables.Temp.SetFloat("endPathX", sender.Position.X);
-							sender.Variables.Temp.SetFloat("endPathZ", sender.Position.Y);
-						}
-						else
-						{
-							var monster = new Mob(400001, MonsterType.Mob);
-							var pos = sender.Position;
-							var dir = sender.Direction;
-
-							monster.Position = pos;
-							monster.Direction = dir;
-							monster.Tendency = TendencyType.Peaceful;
-							var movement = new MovementComponent(monster);
-							movement.SetPath(new Position(sender.Variables.Temp.GetFloat("startPathX"), 0, sender.Variables.Temp.GetFloat("startPathZ"))
-								, new Position(sender.Variables.Temp.GetFloat("endPathX"), 0, sender.Variables.Temp.GetFloat("endPathZ")));
-							monster.Components.Add(movement);
-
-							monster.Components.Add(new AiComponent(monster, "BasicMonster"));
-
-							sender.Map.AddMonster(monster);
-						}
-						break;
-					}
-					case "addbuff":
-					{
-						var buffId = (int)BuffId.SoPowerful;
-						if (args.Count > 1)
-							int.TryParse(args.Get(1), out buffId);
-						sender.Buffs.Start((BuffId)buffId);
-						break;
-					}
-					case "removebuff":
-					{
-						var buffId = (int)BuffId.SoPowerful;
-						if (args.Count > 1)
-							int.TryParse(args.Get(1), out buffId);
-						sender.Buffs.Remove((BuffId)buffId);
-						break;
-					}
-					case "exprop":
-						Send.ZC_SEND_PC_EXPROP(sender);
-						break;
-					case "1B":
-					{
-						byte b1 = 1;
-						if (args.Count > 1)
-							byte.TryParse(args.Get(1), out b1);
-						var i1 = 2268;
-						if (args.Count > 2)
-							int.TryParse(args.Get(2), out i1);
-						Send.ZC_NORMAL.Unknown_1B(sender, b1, i1);
-						break;
-					}
-					case "5F":
-					{
-						var i1 = 72110;
-						if (args.Count > 1)
-							int.TryParse(args.Get(1), out i1);
-						var f1 = 0.99f;
-						if (args.Count > 2)
-							float.TryParse(args.Get(2), out f1);
-						Send.ZC_NORMAL.Skill_5F(sender, i1, f1);
-						break;
-					}
-					case "125":
-					{
-						var f1 = 30f;
-						var f2 = 0.6f;
-						if (args.Count > 1)
-							float.TryParse(args.Get(1), out f1);
-						if (args.Count > 2)
-							float.TryParse(args.Get(2), out f2);
-						var packetId = "I_laser005_blue#Dummy_effect_electrocute";
-						if (args.Count > 3)
-							packetId = args.Get(3);
-						Send.ZC_NORMAL.Skill_125(sender, packetId, f1, f2, (sender.Handle, ZoneServer.Instance.World.CreateSkillHandle()));
-						break;
-					}
-					case "emoticon":
-					{
-						var packetId = "I_emo_immobilize";
-						if (args.Count > 1)
-							packetId = args.Get(1);
-						var duration = 1f;
-						if (args.Count > 2)
-							float.TryParse(args.Get(2), out duration);
-						Send.ZC_EMOTICON(sender, packetId, TimeSpan.FromSeconds(duration));
-						break;
-					}
-					case "showemoticon":
-					{
-						var packetId = "I_emo_immobilize";
-						if (args.Count > 1)
-							packetId = args.Get(1);
-						var duration = 1f;
-						if (args.Count > 2)
-							float.TryParse(args.Get(2), out duration);
-						Send.ZC_SHOW_EMOTICON(sender, packetId, TimeSpan.FromSeconds(duration));
-						break;
-					}
-				}
-			}
-
 			return CommandResult.Okay;
 		}
 
@@ -2641,7 +2382,7 @@ namespace Melia.Zone.Commands
 			if (args.Count > 1)
 				companion.Name = args.Get(1);
 
-			sender.CreateCompanion(companion);
+			sender.Companions.CreateCompanion(companion);
 
 			return CommandResult.Okay;
 		}
@@ -2672,7 +2413,7 @@ namespace Melia.Zone.Commands
 
 			if (long.TryParse(args.Get(0), out var companionObjectId))
 			{
-				var companion = sender.GetCompanion(companionObjectId);
+				var companion = sender.Companions.GetCompanion(companionObjectId);
 				var propertyName = "Monster_Stat_" + args.Get(1);
 
 				if (companion != null && PropertyTable.Exists("Monster", propertyName)

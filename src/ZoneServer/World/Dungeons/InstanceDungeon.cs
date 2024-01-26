@@ -30,7 +30,6 @@ namespace Melia.Zone.World.Dungeons
 				throw new NullReferenceException("No instance dungeon data found for '" + this.Id + "'.");
 
 			this.Data = data;
-
 		}
 	}
 }

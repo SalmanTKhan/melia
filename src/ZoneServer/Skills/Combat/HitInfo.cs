@@ -1,4 +1,5 @@
-﻿using Melia.Shared.Tos.Const;
+﻿using Melia.Shared.Data.Database;
+using Melia.Shared.Tos.Const;
 using Melia.Zone.World.Actors;
 using Melia.Zone.World.Actors.Characters;
 
@@ -27,7 +28,7 @@ namespace Melia.Zone.Skills.Combat
 		/// <summary>
 		/// Returns the damage delay.
 		/// </summary>
-		public int Delay { get; set; }
+		public int DamageDelay { get; set; }
 
 		/// <summary>
 		/// Returns the target's current HP after the hit.
@@ -57,7 +58,9 @@ namespace Melia.Zone.Skills.Combat
 		/// <summary>
 		/// Gets or sets the hit's attack count.
 		/// </summary>
-		public int AdditionalHitCount { get; set; } = 0;
+		public int HitCount { get; set; } = 0;
+
+		public HitAttackType AttackType { get; set; } = HitAttackType.None;
 
 		/// <summary>
 		/// Gets or sets the hit's unknown float 1.
@@ -103,6 +106,7 @@ namespace Melia.Zone.Skills.Combat
 			this.Damage = damage;
 			this.ResultType = resultType;
 			this.Type = HitType.Normal;
+			this.AttackType = skill.Data.HitAttackType;
 
 			this.Hp = target.Hp;
 			this.HpPriority = target.HpChangeCounter;

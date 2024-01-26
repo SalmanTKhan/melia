@@ -65,15 +65,9 @@ namespace Melia.Zone.Skills.Handlers.Ranger
 			var skillHit = new SkillHitInfo(caster, target, skill, skillHitResult, damageDelay, skillHitDelay);
 			skillHit.ForceId = ForceId.GetNew();
 			skillHit.UnkFloat = 8;
+			skillHit.HitCount = 3;
 
 			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill, skillHit);
-
-			var skillHitResultPost = SCR_SkillHit(caster, target, skill);
-			target.TakeDamage(skillHitResultPost.Damage, caster);
-
-			var hit = new HitInfo(caster, target, skill, skillHitResultPost.Damage, skillHitResultPost.Result);
-			hit.UnkFloat2 = 0.5f;
-			Send.ZC_HIT_INFO(caster, target, hit);
 
 			// Splash shot
 			if (this.TryGetBounceTarget(caster, target, skill, out var bounceTarget))
@@ -98,9 +92,16 @@ namespace Melia.Zone.Skills.Handlers.Ranger
 				skillHitResult = SCR_SkillHit(caster, bounceTarget, skill);
 				bounceTarget.TakeDamage(skillHitResult.Damage, caster);
 
-				hit = new HitInfo(caster, bounceTarget, skill, skillHitResult);
+				var hit = new HitInfo(caster, bounceTarget, skill, skillHitResult);
 				hit.UnkFloat1 = -1f;
 				Send.ZC_HIT_INFO(caster, bounceTarget, hit);
+
+				var skillHitResultPost = SCR_SkillHit(caster, target, skill);
+				target.TakeDamage(skillHitResultPost.Damage, caster);
+
+				hit = new HitInfo(caster, target, skill, skillHitResultPost.Damage, skillHitResultPost.Result);
+				hit.UnkFloat2 = 0.5f;
+				Send.ZC_HIT_INFO(caster, target, hit);
 			}
 		}
 
@@ -117,7 +118,7 @@ namespace Melia.Zone.Skills.Handlers.Ranger
 		{
 			var splashPos = caster.Position;
 			var splashParam = skill.GetSplashParameters(caster, splashPos, mainTarget.Position, length: 130, width: 60, angle: 0);
-			var splashArea = skill.GetSplashArea(SplashType.Square, splashParam);
+			var splashArea = skill.GetSplashArea(SplashType.Circle, splashParam);
 			Debug.ShowShape(caster.Map, splashArea, TimeSpan.FromSeconds(5));
 
 			var targets = caster.Map.GetAttackableEntitiesIn(caster, splashArea);

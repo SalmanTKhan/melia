@@ -1805,7 +1805,7 @@ namespace Melia.Zone.Database
 					companion.Position = Position.Zero;
 					companion.Direction = new Direction(0);
 
-					character.AddCompanion(companion, true);
+					character.Companions.AddCompanion(companion, true);
 				}
 			}
 		}
@@ -1819,7 +1819,7 @@ namespace Melia.Zone.Database
 			using (var conn = this.GetConnection())
 			using (var trans = conn.BeginTransaction())
 			{
-				foreach (var companion in character.GetCompanions())
+				foreach (var companion in character.Companions.GetList())
 				{
 					using (var cmd = new UpdateCommand("UPDATE `companions` SET {0} WHERE `companionId` = @companionId", conn))
 					{

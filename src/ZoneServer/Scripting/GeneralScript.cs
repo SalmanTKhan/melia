@@ -13,7 +13,7 @@ namespace Melia.Zone.Scripting
 		/// Initializes script.
 		/// </summary>
 		/// <returns></returns>
-		public bool Init()
+		public virtual bool Init()
 		{
 			this.Load();
 
@@ -26,7 +26,7 @@ namespace Melia.Zone.Scripting
 		/// <summary>
 		/// Called when the script is being removed before a reload.
 		/// </summary>
-		public void Dispose()
+		public virtual void Dispose()
 		{
 			OnAttribute.Unload(this, ZoneServer.Instance.ServerEvents);
 		}

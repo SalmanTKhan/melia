@@ -86,7 +86,7 @@ namespace Melia.Zone.Skills.Handlers.Hunter
 
 							var hitInfo = new HitInfo(companion, target, skill, skillHitResult.Damage, skillHitResult.Result);
 							hitInfo.ForceId = forceId;
-							hitInfo.AdditionalHitCount = 5;
+							hitInfo.HitCount = 5;
 
 							Send.ZC_HIT_INFO(companion, target, hitInfo);
 						});

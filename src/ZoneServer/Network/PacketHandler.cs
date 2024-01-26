@@ -230,7 +230,7 @@ namespace Melia.Zone.Network
 
 			if (character.HasCompanions)
 			{
-				foreach (var companion in character.GetCompanions())
+				foreach (var companion in character.Companions.GetList())
 				{
 					Send.ZC_NORMAL.Pet_AssociateHandleWorldId(character, companion);
 					Send.ZC_OBJECT_PROPERTY(conn, companion);
@@ -380,6 +380,9 @@ namespace Melia.Zone.Network
 			var unkByte2 = packet.GetByte();
 
 			var character = conn.SelectedCharacter;
+
+			if (character.IsDead)
+				return;
 
 			character.Movement.NotifyJump(position, direction, unkFloat, unkByte2);
 		}
@@ -790,19 +793,16 @@ namespace Melia.Zone.Network
 		public void CZ_POSE(IZoneConnection conn, Packet packet)
 		{
 			var pose = packet.GetInt();
-			var x = packet.GetFloat();
-			var y = packet.GetFloat();
-			var z = packet.GetFloat();
-			var unkFloat = packet.GetFloat();
-			var unkShort = packet.GetShort();
-			var unkByte1 = packet.GetByte();
-			var unkByte2 = packet.GetByte();
+			var position = packet.GetPosition();
+			var direction = packet.GetDirection();
 
 			var character = conn.SelectedCharacter;
 
 			// TODO: Sanity checks.
-
-			Log.Debug("CZ_POSE: {0}; {1}; {2}; {3}", pose, x, y, z);
+			if (character.IsDead)
+				return;
+			if (character.IsSitting)
+				character.ToggleSitting();
 
 			Send.ZC_POSE(character, pose);
 		}
@@ -943,7 +943,7 @@ namespace Melia.Zone.Network
 				return;
 			}
 
-			if (!(monster is Npc npc))
+			if (monster is not Npc npc)
 			{
 				Log.Warning("CZ_CLICK_TRIGGER: User '{0}' tried to talk to a monster that's not an NPC.", conn.Account.Name);
 				return;
@@ -1331,6 +1331,10 @@ namespace Melia.Zone.Network
 				character.ServerMessage(Localization.Get("You may not use this yet."));
 				return;
 			}
+
+			// Probably just a sanity check since the client doesn't allow this.
+			if (!skill.HasRequiredStance)
+				return;
 
 			// Check target
 			ICombatEntity target = null;
@@ -3822,7 +3826,7 @@ namespace Melia.Zone.Network
 			if (companionId != 0)
 			{
 				var character = conn.SelectedCharacter;
-				var companion = character.GetCompanion(companionId);
+				var companion = character.Companions.GetCompanion(companionId);
 
 				if (companion != null && companion.ObjectId == companionId)
 					companion.SetCompanionState(!companion.IsActivated);

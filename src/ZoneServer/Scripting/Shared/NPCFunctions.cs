@@ -1089,7 +1089,7 @@ namespace Melia.Zone.Scripting.Shared
 					var monsterId = MonsterId.Velheider;
 					var companion = new Companion(character, monsterId, MonsterType.Friendly);
 					companion.Name = name;
-					character.CreateCompanion(companion);
+					character.Companions.CreateCompanion(companion);
 					await dialog.ExecuteScript(ClientScripts.PET_ADOPT_SUCCESS);
 					companion.SetCompanionState(true);
 					break;

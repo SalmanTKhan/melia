@@ -4,12 +4,14 @@
 // Grants default items, skills, and abilities to newly created characters.
 //---------------------------------------------------------------------------
 
+using System;
 using Melia.Shared.Scripting;
 using Melia.Shared.Tos.Const;
 using Melia.Zone;
 using Melia.Zone.Events;
 using Melia.Zone.Scripting;
 using Melia.Zone.Skills;
+using Melia.Zone.World.Actors;
 using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Items;
 
@@ -28,6 +30,15 @@ public class CharacterInitializationScript : GeneralScript
 		}
 	}
 
+	[On("PlayerReady")]
+	public void OnPlayerReady(object sender, PlayerEventArgs args)
+	{
+		var character = args.Character;
+		foreach (var buff in ZoneServer.Instance.GameEvents.GlobalBonuses.GetBuffs(character))
+		{
+			character.StartBuff(buff.Buff, buff.NumArg1, buff.NumArg2, TimeSpan.Zero, character);
+		}
+	}
 	private static void InitCharacter(Character character)
 	{
 		InitCommon(character);

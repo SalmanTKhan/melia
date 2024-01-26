@@ -4,7 +4,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Melia.Shared.Configuration.Files;
-using Melia.Shared.Data.Database;
 using Melia.Shared.L10N;
 using Melia.Shared.Tos.Const;
 using Melia.Shared.World;
@@ -12,10 +11,7 @@ using Melia.Zone.Commands;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
-using Melia.Zone.World.Actors.Components;
 using Melia.Zone.World.Actors.Monsters;
-using Melia.Zone.World.Maps;
-using Melia.Zone.World.Spawning;
 using Yggdrasil.Geometry;
 using Yggdrasil.Geometry.Shapes;
 using Yggdrasil.Logging;
@@ -112,6 +108,16 @@ namespace Melia.Zone.Scripting
 			result.Append(suffix);
 
 			return result.ToString();
+		}
+
+		/// <summary>
+		/// Returns true if the given event is active.
+		/// </summary>
+		/// <param name="gameEventId"></param>
+		/// <returns></returns>
+		public static bool IsEventActive(string gameEventId)
+		{
+			return ZoneServer.Instance.GameEvents.IsActive(gameEventId);
 		}
 
 		/// <summary>

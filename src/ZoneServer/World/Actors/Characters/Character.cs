@@ -39,7 +39,6 @@ namespace Melia.Zone.World.Actors.Characters
 
 		private readonly static TimeSpan ResurrectDialogDelay = TimeSpan.FromSeconds(2);
 		private TimeSpan _resurrectDialogTimer = ResurrectDialogDelay;
-		private readonly List<Companion> _companions = new List<Companion>();
 
 		/// <summary>
 		/// Returns true if the character was just saved before a warp.
@@ -344,6 +343,11 @@ namespace Melia.Zone.World.Actors.Characters
 		public MovementComponent Movement { get; }
 
 		/// <summary>
+		/// Returns the character's companion component.
+		/// </summary>
+		public CompanionComponent Companions { get; }
+
+		/// <summary>
 		/// Returns the character's summoned monsters.
 		/// </summary>
 		public SummonComponent Summons { get; }
@@ -398,12 +402,12 @@ namespace Melia.Zone.World.Actors.Characters
 		/// <summary>
 		/// Has Companion(s)
 		/// </summary>
-		public bool HasCompanions => _companions != null && _companions.Count > 0;
+		public bool HasCompanions => this.Components.Get<CompanionComponent>()?.HasCompanions ?? false;
 
 		/// <summary>
 		/// Active Companion
 		/// </summary>
-		public Companion ActiveCompanion => _companions?.FirstOrDefault(companion => companion.IsActivated) ?? null;
+		public Companion ActiveCompanion => this.Components.Get<CompanionComponent>()?.ActiveCompanion ?? null;
 
 		/// <summary>
 		/// Character's online status.
@@ -469,6 +473,8 @@ namespace Melia.Zone.World.Actors.Characters
 			this.Components.Add(this.Tracks = new TrackComponent(this));
 			this.Components.Add(this.Triggers = new Triggers(this));
 			this.Components.Add(this.Achievements = new AchievementComponent(this));
+			// These two are class specific components should they go somewhere else?
+			this.Components.Add(this.Companions = new CompanionComponent(this));
 			this.Components.Add(this.Summons = new SummonComponent(this));
 			this.Properties = new CharacterProperties(this);
 
@@ -915,10 +921,11 @@ namespace Melia.Zone.World.Actors.Characters
 		{
 			if (this.HasCompanions)
 			{
-				lock (_companions)
-					foreach (var companion in _companions)
-						companion.GiveExp(exp, monster);
+				foreach (var companion in this.Companions.GetList())
+					companion.GiveExp(exp, monster);
 			}
+
+			this.ServerMessage("{0} Exp Gained and {1} Class Exp Gained", exp, classExp);
 
 			// Base EXP
 			this.Exp += exp;
@@ -1485,38 +1492,6 @@ namespace Melia.Zone.World.Actors.Characters
 			Send.ZC_STAMINA(this, stamina);
 		}
 
-		/// Add companion
-		/// </summary>
-		/// <param name="companion"></param>
-		/// <param name="silently"></param>
-		public void AddCompanion(Companion companion, bool silently = false)
-		{
-			lock (_companions)
-				this._companions.Add(companion);
-			if (!silently)
-				Send.ZC_NORMAL.PetInfo(this);
-		}
-
-		/// <summary>
-		/// Get Companions
-		/// </summary>
-		/// <returns></returns>
-		public Companion[] GetCompanions()
-		{
-			lock (_companions)
-				return _companions.ToArray();
-		}
-
-		/// <summary>
-		/// Adds companion to character and the database.
-		/// </summary>
-		/// <param name="companion"></param>
-		public void CreateCompanion(Companion companion)
-		{
-			ZoneServer.Instance.Database.CreateCompanion(this.AccountDbId, this.DbId, companion);
-			this.AddCompanion(companion);
-		}
-
 		/// <summary>
 		/// Add a session object
 		/// </summary>
@@ -1617,17 +1592,6 @@ namespace Melia.Zone.World.Actors.Characters
 		public void AddItem(int itemId, int amount = 1)
 		{
 			this.Inventory.Add(itemId, amount);
-		}
-
-		/// <summary>
-		/// Returns companion or null with a given id.
-		/// </summary>
-		/// <param name="companionId"></param>
-		/// <returns></returns>
-		public Companion GetCompanion(long companionId)
-		{
-			lock (_companions)
-				return _companions.Find(c => c.ObjectId == companionId);
 		}
 
 		/// <summary>

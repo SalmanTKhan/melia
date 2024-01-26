@@ -66,6 +66,10 @@ namespace Melia.Shared.Data.Database
 		public CooldownId OverheatGroup { get; set; }
 		public int OverheatCount { get; set; }
 		public TimeSpan OverHeatDelay { get; set; }
+		// Ask exec what's the custom SkillAttackType he's using.
+		// This Attack Type is the client defined values.
+		public HitAttackType HitAttackType { get; set; }
+		public List<int> RequiredStance { get; internal set; }
 	}
 
 	public enum SplashType
@@ -135,9 +139,11 @@ namespace Melia.Shared.Data.Database
 		TrueDamage,
 	}
 
-	public enum AttackType
+	public enum HitAttackType
 	{
 		None = 0,
+		Magic = 0,
+		Pad = 0,
 		Fire = 1,
 		Ice = 2,
 		Lightning = 3,
@@ -224,6 +230,7 @@ namespace Melia.Shared.Data.Database
 
 			data.UseType = entry.ReadEnum<SkillUseType>("useType");
 			data.AttackType = entry.ReadEnum<SkillAttackType>("attackType");
+			data.HitAttackType = entry.ReadEnum<HitAttackType>("attackType");
 			data.Attribute = entry.ReadEnum<SkillAttribute>("attribute");
 			data.ClassType = entry.ReadEnum<SkillClassType>("classType");
 
@@ -274,6 +281,8 @@ namespace Melia.Shared.Data.Database
 			data.OverheatGroup = entry.ReadEnum<CooldownId>("overheatGroup", CooldownId.Default);
 			data.OverheatCount = entry.ReadInt("overheatCount", 0);
 			data.OverHeatDelay = entry.ReadTimeSpan("overheatDelay", TimeSpan.Zero);
+
+			data.RequiredStance = entry.ReadList<int>("requiredStance");
 
 			this.AddOrReplace(data.Id, data);
 		}

@@ -2551,10 +2551,10 @@ namespace Melia.Zone.Network
 			packet.PutByte(0);
 			packet.PutFloat(hitInfo.UnkFloat1);
 			packet.PutFloat(hitInfo.UnkFloat2);
-			packet.PutInt(hitInfo.AdditionalHitCount);
+			packet.PutInt(hitInfo.HitCount);
 			packet.PutByte(1);
 			packet.PutInt(0);
-			packet.PutInt(hitInfo.Delay);
+			packet.PutInt(hitInfo.DamageDelay);
 
 			target.Map.Broadcast(packet, target);
 		}
@@ -2955,7 +2955,7 @@ namespace Melia.Zone.Network
 		/// Broadcasts ZC_POSE in range of character, putting them into the
 		/// given pose.
 		/// </summary>
-		/// <param name="conn"></param>
+		/// <param name="character"></param>
 		/// <param name="pose"></param>
 		public static void ZC_POSE(Character character, int pose)
 		{
@@ -6397,6 +6397,22 @@ namespace Melia.Zone.Network
 			packet.PutString(text);
 
 			ZoneServer.Instance.World.Broadcast(packet);
+		}
+
+		/// <summary>
+		/// Sends text to a specific player.
+		/// </summary>
+		/// <param name="type"></param>
+		/// <param name="text"></param>
+		public static void ZC_TEXT(Character character, NoticeTextType type, string text)
+		{
+			var packet = new Packet(Op.ZC_TEXT);
+
+			packet.PutByte((byte)type);
+			packet.PutByte(0);
+			packet.PutString(text);
+
+			character.Connection.Send(packet);
 		}
 
 		/// <summary>
