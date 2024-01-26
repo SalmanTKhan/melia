@@ -40,7 +40,7 @@ public class ExpCalculationsFunctionsScript : GeneralScript
 			value *= lvRatio;
 		}
 
-		return Math.Min(0, value);
+		return Math.Max(0, value);
 	}
 
 	/// <summary>
