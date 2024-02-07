@@ -148,7 +148,7 @@ public class EP132DPRISON3MQ7TRACK1 : TrackScript
 				break;
 			case 89:
 				//TRACK_SETTENDENCY();
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				break;
 			default:
 				Log.Warning("OnProgress: Unsupported frame {0} called from {1}.", frame, this.TrackId);

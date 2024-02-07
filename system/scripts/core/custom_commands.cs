@@ -5,6 +5,8 @@
 //---------------------------------------------------------------------------
 
 using System;
+using System.Threading.Tasks;
+using Melia.Shared.Network;
 using Melia.Shared.Tos.Const;
 using Melia.Shared.World;
 using Melia.Zone;
@@ -12,9 +14,11 @@ using Melia.Zone.Buffs;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
+using Melia.Zone.World.Actors;
 using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Actors.Characters.Components;
 using Melia.Zone.World.Actors.Monsters;
+using Melia.Zone.World.Items;
 using Yggdrasil.Geometry.Shapes;
 using Yggdrasil.Logging;
 
@@ -139,7 +143,7 @@ public class CustomCommandFunctionsScript : GeneralScript
 		return CustomCommandResult.Okay;
 	}
 
-	[ScriptableFunction("SCR_PUT_CAMPFIRE")]
+	[ScriptableFunction]
 	public CustomCommandResult SCR_PUT_CAMPFIRE(Character character, int numArg1, int numArg2, int numArg3)
 	{
 		if (character != null && character.Inventory.Remove(ItemId.Misc_CampfireKit) == InventoryResult.Success)
@@ -164,7 +168,7 @@ public class CustomCommandFunctionsScript : GeneralScript
 		return CustomCommandResult.Okay;
 	}
 
-	[ScriptableFunction("SCR_PET_ACTIVATE")]
+	[ScriptableFunction]
 	public CustomCommandResult SCR_PET_ACTIVATE(Character character, int numArg1, int numArg2, int numArg3)
 	{
 		if (character.HasCompanions)
@@ -180,17 +184,72 @@ public class CustomCommandFunctionsScript : GeneralScript
 		return CustomCommandResult.Okay;
 	}
 
-	[ScriptableFunction("SCR_GUILDEVENT_JOIN")]
+	[ScriptableFunction]
+	public CustomCommandResult SCR_COMPANION_STROKE(Character character, int petHandle, int numArg2, int numArg3)
+	{
+		character.Properties.SetFloat(PropertyName.FIXMSPD_BM, 80);
+		Send.ZC_OBJECT_PROPERTY(character, PropertyName.FIXMSPD_BM, PropertyName.MSPD);
+
+		character.EnableControl("PlaySumAni", false);
+		Send.ZC_NORMAL.AttackCancelBow(character);
+
+		return CustomCommandResult.Okay;
+	}
+
+	[ScriptableFunction]
+	public CustomCommandResult SCR_COMPANION_GIVE_FEED(Character character, int petHandle, int itemIndex, int numArg3)
+	{
+		if (!character.Companions.TryGetCompanion(a => a.Handle == petHandle, out var companion))
+			return CustomCommandResult.Fail;
+
+		if (!character.Inventory.TryGetItemByIndex(itemIndex, out var item))
+			return CustomCommandResult.Fail;
+
+		if (item.Data.Type != ItemType.Consume)
+			return CustomCommandResult.Fail;
+
+		if (character.IsOnCooldown(item.CooldownData.Id))
+			return CustomCommandResult.Fail;
+
+		if (companion.CompanionData.FoodGroup != item.Data.Script.NumArg2)
+		{
+			character.SystemMessage("ThisCompanionDoesNotEatThisFood");
+			return CustomCommandResult.Fail;
+		}
+
+		Send.ZC_HOLD_MOVE_PATH(character, true);
+		Send.ZC_NORMAL.PlayEquipItem(character, EquipSlot.RightHand, companion.CompanionData.FeedAnimation, true);
+		character.Inventory.Remove(item, 1, InventoryItemRemoveMsg.Given);
+
+		PET_FOOD_SHOW_EMOTION(companion);
+		Task.Delay(companion.CompanionData.FeedSleep).ContinueWith(_ =>
+		{
+			Send.ZC_HOLD_MOVE_PATH(character, false);
+		});
+
+		return CustomCommandResult.Okay;
+	}
+
+	private static async void PET_FOOD_SHOW_EMOTION(Companion companion)
+	{
+		Send.ZC_NORMAL.AttachEffect(companion, "I_emo_exclamation", 3.0f, HeightOffset.TOP);
+		await Task.Delay(500);
+		Send.ZC_NORMAL.StopAnimation(companion);
+		await Task.Delay(500);
+		Send.ZC_NORMAL.DetachEffect(companion, "I_emo_exclamation");
+	}
+
+	[ScriptableFunction]
 	public CustomCommandResult SCR_GUILDEVENT_JOIN(Character character, int numArg1, int numArg2, int numArg3)
 	{
-		Send.ZC_ADDON_MSG(character, AddonMessage.GUILD_EVENT_RECRUITING_IN);
+		character.AddonMessage(AddonMessage.GUILD_EVENT_RECRUITING_IN);
 		Send.ZC_TO_CLIENT.MessageParameter(character, AddonMessage.GUILD_EVENT_RECRUITING_ADD, character.Connection.Account.Id.ToString());
 
 		return CustomCommandResult.Okay;
 	}
 
 
-	[ScriptableFunction("SCR_PERSONAL_HOUSING_PAGE_SHOP")]
+	[ScriptableFunction]
 	public CustomCommandResult SCR_PERSONAL_HOUSING_PAGE_SHOP(Character character, int numArg1, int numArg2, int numArg3)
 	{
 		var dialog = new Dialog(character, null);

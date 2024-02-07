@@ -75,7 +75,7 @@ public class EP142DCASTLE1MQ2TRACK : TrackScript
 			case 18:
 				break;
 			case 39:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_PLAY_MGAME("EP14_2_DCASTLE1_MQ_2_MINI");
 				break;
 			default:

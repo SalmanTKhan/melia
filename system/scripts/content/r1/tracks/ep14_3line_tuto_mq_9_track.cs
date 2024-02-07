@@ -25,7 +25,35 @@ public class EP143LINETUTOMQ9TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(-275.6064f, -143.9128f, -306.5325f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 153223, "", "c_klaipe_castle", 1177.734, -139.9178, 338.4683, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 150285, "", "c_klaipe_castle", 1115.912, 3.082153, 754.566, 0);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 150212, "", "c_klaipe_castle", -659.748, -134.6223, -87.86461, 0);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 150230, "", "c_klaipe_castle", -651.078, -134.6223, -60.24415, 0);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

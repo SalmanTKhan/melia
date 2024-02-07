@@ -25,7 +25,35 @@ public class EP151FABBEY18TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(-819.5021f, 48.09713f, 1128.585f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 160144, "", "ep15_1_f_abbey_1", -852.525, 48.09713, 1081.631, 34.44445);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 153119, "", "ep15_1_f_abbey_1", -790.3921, 48.09713, 1082.771, 28.33333);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 59781, "", "ep15_1_f_abbey_1", -779.4423, 48.09714, 1600.247, 127.5);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 12082, "", "ep15_1_f_abbey_1", -780.7422, 48.09714, 1406.533, 300);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)
@@ -40,7 +68,7 @@ public class EP151FABBEY18TRACK : TrackScript
 				break;
 			case 63:
 				//DRT_PLAY_MGAME("EP15_1_F_ABBEY1_8_MINI");
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				break;
 			default:
 				Log.Warning("OnProgress: Unsupported frame {0} called from {1}.", frame, this.TrackId);

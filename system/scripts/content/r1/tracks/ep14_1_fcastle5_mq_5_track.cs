@@ -190,7 +190,7 @@ public class EP141FCASTLE5MQ5TRACK : TrackScript
 				await track.Dialog.Msg("EP14_1_FCASTLE5_MQ_5_TRACK_DLG1");
 				break;
 			case 34:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_PLAY_MGAME("EP14_1_FCASTLE5_MQ_5_MGAME");
 				//DRT_RUN_FUNCTION("SCR_EP14_1_FCASTLE5_PainBarrier_Buff");
 				break;

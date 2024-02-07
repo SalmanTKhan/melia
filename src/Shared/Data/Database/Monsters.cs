@@ -31,6 +31,12 @@ namespace Melia.Shared.Data.Database
 		public int Hp { get; set; }
 		public int Sp { get; set; }
 
+		public int STR { get; set; }
+		public int DEX { get; set; }
+		public int CON { get; set; }
+		public int INT { get; set; }
+		public int MNA { get; set; }
+
 		public int PhysicalAttackMin { get; set; }
 		public int PhysicalAttackMax { get; set; }
 		public int MagicalAttackMin { get; set; }
@@ -47,6 +53,7 @@ namespace Melia.Shared.Data.Database
 
 		public string Ai { get; set; }
 		public string Dialog { get; set; }
+		public string Journal { get; set; }
 
 		public List<DropData> Drops { get; set; } = new List<DropData>();
 		public List<MonsterSkillData> Skills { get; set; } = new List<MonsterSkillData>();
@@ -158,6 +165,12 @@ namespace Melia.Shared.Data.Database
 			data.Hp = entry.ReadInt("hp");
 			data.Sp = entry.ReadInt("sp");
 
+			data.STR = entry.ReadInt("str");
+			data.DEX = entry.ReadInt("dex");
+			data.CON = entry.ReadInt("con");
+			data.INT = entry.ReadInt("int");
+			data.MNA = entry.ReadInt("mna");
+
 			data.PhysicalAttackMin = entry.ReadInt("pAttackMin");
 			data.PhysicalAttackMax = entry.ReadInt("pAttackMax");
 			data.MagicalAttackMin = entry.ReadInt("mAttackMin");
@@ -174,6 +187,7 @@ namespace Melia.Shared.Data.Database
 
 			data.Ai = entry.ReadString("ai");
 			data.Dialog = entry.ReadString("dialog");
+			data.Journal = entry.ReadString("journal");
 
 			if (entry.ContainsKey("skills"))
 			{

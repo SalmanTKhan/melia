@@ -173,7 +173,7 @@ public class EP141FCASTLE5MQ7TRACK : TrackScript
 				//DRT_SETPOS();
 				break;
 			case 24:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_PLAY_MGAME("EP14_1_FCASTLE5_MQ_7_MGAME");
 				break;
 			default:

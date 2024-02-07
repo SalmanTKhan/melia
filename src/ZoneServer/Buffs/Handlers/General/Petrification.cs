@@ -22,18 +22,18 @@ namespace Melia.Zone.Buffs.Handlers
 
 			//LeaveEffect(self, GetBuffRemainTime(buff), 'Stonize', buff.ClassName);
 
-			if (buff.Target is Character character)
-				character.SetProperty(PropertyName.Jumpable, 0);
+			if (target is Character character)
+				character.ModifyProperty(PropertyName.Jumpable, -1);
 		}
 
 		public override void OnEnd(Buff buff)
 		{
 			var target = buff.Target;
 
-			Send.ZC_SHOW_EMOTICON(target, "I_emo_petrify", System.TimeSpan.Zero);
+			//Send.ZC_SHOW_EMOTICON(target, "I_emo_petrify", System.TimeSpan.Zero);
 
-			if (buff.Target is Character character)
-				character.SetProperty(PropertyName.Jumpable, 1);
+			if (target is Character character)
+				character.ModifyProperty(PropertyName.Jumpable, 1);
 		}
 	}
 }

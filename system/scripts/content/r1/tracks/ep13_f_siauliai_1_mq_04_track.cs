@@ -124,7 +124,7 @@ public class EP13FSIAULIAI1MQ04TRACK : TrackScript
 				await track.Dialog.Msg("EP13_F_SIAULIAI_1_MQ_04_DLG_T1");
 				break;
 			case 49:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_PLAY_MGAME("EP13_F_SIAULIAI_1_MQ_04_MINI");
 				break;
 			default:

@@ -5,7 +5,7 @@ namespace Melia.Zone.Buffs.Handlers
 {
 	/// <summary>
 	/// Handle for the Defense Shock, Blocked by enemy becomes afflicted with [Shock]. 
-	/// Increases the chance of a critical hit from fenemy attacks by 100%..
+	/// Increases the chance of a critical hit from enemy attacks by 100%..
 	/// </summary>
 	[BuffHandler(BuffId.GuardImpact)]
 	public class GuardImpact : BuffHandler

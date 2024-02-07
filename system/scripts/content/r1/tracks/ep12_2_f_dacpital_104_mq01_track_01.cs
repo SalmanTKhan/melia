@@ -25,7 +25,17 @@ public class EP122FDACPITAL104MQ01TRACK01 : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		var mob0 = Shortcuts.AddMonster(0, 154040, "", "f_dcapital_104", 624.004, 159.3028, 1983.544, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		character.Movement.MoveTo(new Position(635.048f, 161.1363f, 1946.443f));
+		actors.Add(character);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

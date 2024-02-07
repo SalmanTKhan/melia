@@ -1,9 +1,11 @@
 ﻿using System;
+using Melia.Shared.Data.Database;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Tos.Const;
 using Melia.Shared.Util;
 using Melia.Shared.World;
 using Melia.Zone.Network;
+using Melia.Zone.Scripting;
 using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Actors.CombatEntities.Components;
 using Yggdrasil.Scheduling;
@@ -42,54 +44,106 @@ namespace Melia.Zone.World.Actors.Monsters
 			}
 		}
 
+		/// <summary>
+		/// Current stamina.
+		/// </summary>
 		public int Stamina { get; set; }
-		public long Experience { get; set; }
+		/// <summary>
+		/// Current experience points.
+		/// </summary>
+		public long Exp { get; set; }
+
+		/// <summary>
+		/// Current maximum experience points.
+		/// </summary>
+		public long MaxExp { get; set; }
+
+		/// <summary>
+		/// Total number of accumulated experience points.
+		/// </summary>
+		public long TotalExp { get; set; }
 		public DateTime AdoptTime { get; set; }
 		public bool IsRiding { get; set; } = false;
+
+		public CompanionData CompanionData { get; private set; }
 
 		public Companion(Character owner, int id, MonsterType type) : base(id, type)
 		{
 			this.Owner = owner;
 
-			this.Properties.Create(new FloatProperty(PropertyName.Range, 0f));
-			this.Properties.Create(new FloatProperty(PropertyName.Scale, 0f));
+			if (!ZoneServer.Instance.Data.CompanionDb.TryFindByClassName(this.Data.ClassName, out var companionData))
+				throw new NullReferenceException("No companion data found for '" + this.Data.ClassName + "'.");
+			this.CompanionData = companionData;
 
-			this.Properties.Create(new StringProperty(PropertyName.AdoptTime, this.AdoptTime.ToSPropertyDateTime()));
-			this.Properties.Create(new FloatProperty(PropertyName.SDR, 1.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.ATK, 47.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.CRTDR, 4.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MHP, 1437.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.DEX, 2.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MountDEF, 2.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MDEF, 21.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MountDR, 3.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.CON, 4.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.BLK, 25.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.STR, 4.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.DEF, 21.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.DR, 45.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.INT, 2.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.SR, 16.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MountMHP, 359.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MAXPATK, 47.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MountMSPD, 0.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MountPATK, 0.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.BLK_BREAK, 23.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.CRTATK, 4.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MNA, 2.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.HR, 45.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.CRTHR, 2.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.RHPTIME, 10000.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.IsActivated, this.IsActivated ? 1 : 0));
-			this.Properties.Create(new FloatProperty(PropertyName.MHR, 0.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MAXMATK, 47.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MINPATK, 47.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MountMATK, 0.00f));
-			this.Properties.Create(new FloatProperty(PropertyName.MINMATK, 47.00f));
+			this.InitProperties();
+		}
 
-			this.Properties.Create(new FloatProperty(PropertyName.WlkMSPD, this.Data.WalkSpeed));
-			this.Properties.Create(new FloatProperty(PropertyName.RunMSPD, this.Data.RunSpeed));
-			this.Properties.Create(new FloatProperty(PropertyName.FIXMSPD_BM, 90f));
+		/// <summary>
+		/// Initializes companion's properties.
+		/// </summary>
+		private void InitProperties()
+		{
+			this.CreateProperty(PropertyName.STR, "SCR_Get_Companion_STR");
+			this.CreateProperty(PropertyName.DEX, "SCR_Get_Companion_DEX");
+			this.CreateProperty(PropertyName.CON, "SCR_Get_Companion_CON");
+			this.CreateProperty(PropertyName.INT, "SCR_Get_Companion_INT");
+			this.CreateProperty(PropertyName.MNA, "SCR_Get_Companion_MNA");
+			this.CreateProperty(PropertyName.DEF, "SCR_Get_Companion_DEF");
+			this.CreateProperty(PropertyName.MDEF, "SCR_Get_Companion_MDEF");
+			this.CreateProperty(PropertyName.MHP, "SCR_Get_Companion_MHP");
+
+			this.CreateProperty(PropertyName.MAXPATK, "SCR_Get_Companion_MAXPATK");
+			this.CreateProperty(PropertyName.MINPATK, "SCR_Get_Companion_MINPATK");
+			this.CreateProperty(PropertyName.MAXMATK, "SCR_Get_Companion_MAXMATK");
+			this.CreateProperty(PropertyName.MINMATK, "SCR_Get_Companion_MINMATK");
+			this.CreateProperty(PropertyName.ATK, "SCR_Get_Companion_ATK");
+
+			this.CreateProperty(PropertyName.MountDEF, "SCR_Get_Companion_MOUNTDEF");
+			this.CreateProperty(PropertyName.MountDR, "SCR_Get_Companion_MOUNTDR");
+			this.CreateProperty(PropertyName.MountMHP, "SCR_Get_Companion_MOUNTMHP");
+
+			this.Properties.InitAutoUpdates();
+			this.Properties.AutoUpdate(PropertyName.MHP, new[] { PropertyName.Lv, PropertyName.Level, PropertyName.MHP_BM });
+			this.Properties.AutoUpdate(PropertyName.MINPATK, new[] { PropertyName.Lv, PropertyName.Level, PropertyName.PATK_BM });
+			this.Properties.AutoUpdate(PropertyName.MAXPATK, new[] { PropertyName.Lv, PropertyName.Level, PropertyName.PATK_BM });
+			this.Properties.AutoUpdate(PropertyName.MINMATK, new[] { PropertyName.Lv, PropertyName.Level, PropertyName.MATK_BM });
+			this.Properties.AutoUpdate(PropertyName.MAXMATK, new[] { PropertyName.Lv, PropertyName.Level, PropertyName.MATK_BM });
+			this.Properties.AutoUpdate(PropertyName.ATK, new[] { PropertyName.Lv, PropertyName.Level });
+			this.Properties.AutoUpdate(PropertyName.DEF, new[] { PropertyName.Lv, PropertyName.Level, PropertyName.DEF_BM });
+			this.Properties.AutoUpdate(PropertyName.MDEF, new[] { PropertyName.Lv, PropertyName.Level, PropertyName.MDEF_BM });
+
+			this.Properties.InvalidateAll();
+
+			this.Properties.SetFloat(PropertyName.HP, this.Properties.GetFloat(PropertyName.MHP));
+			this.Properties.SetFloat(PropertyName.SP, this.Properties.GetFloat(PropertyName.MSP));
+		}
+
+		/// <summary>
+		/// Creates a new calculated float property that uses the given
+		/// function.
+		/// </summary>
+		/// <param name="propertyName"></param>
+		/// <param name="calcFuncName"></param>
+		private void CreateProperty(string propertyName, string calcFuncName)
+		{
+			this.Properties.Create(new CFloatProperty(propertyName, () => this.CalculateProperty(calcFuncName)));
+		}
+
+		/// <summary>
+		/// Calls the calculation function with the given name and returns
+		/// the result.
+		/// </summary>
+		/// <param name="calcFuncName"></param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">
+		/// Thrown if the function doesn't exist.
+		/// </exception>
+		private float CalculateProperty(string calcFuncName)
+		{
+			if (!ScriptableFunctions.Companion.TryGet(calcFuncName, out var func))
+				throw new ArgumentException($"Scriptable character function '{calcFuncName}' not found.");
+
+			return func(this);
 		}
 
 		public void SetCompanionState(bool isActive)
@@ -100,11 +154,10 @@ namespace Melia.Zone.World.Actors.Monsters
 			{
 				this.Map = this.Owner.Map;
 				this.OwnerHandle = this.Owner.Handle;
+				this.Position = this.Owner.Position.GetRandomInRange2D(15, new Random());
 				this.Components.Add(new MovementComponent(this));
 				this.Components.Add(new AiComponent(this, "BasicMonster", this.Owner));
 				Send.ZC_NORMAL.PetIsInactive(this.Owner.Connection, this);
-				this.Position = this.Owner.Position.GetRandomInRange2D(15, new Random());
-				Send.ZC_SET_POS(this);
 				this.Map.AddMonster(this);
 				Send.ZC_NORMAL.PetPlayAnimation(this.Owner.Connection, this);
 				// Probably speed is not a fixed 90f value
@@ -112,12 +165,12 @@ namespace Melia.Zone.World.Actors.Monsters
 			}
 			else
 			{
+				this.Components.Remove<AiComponent>();
+				this.Components.Remove<MovementComponent>();
 				this.Position = Position.Zero;
 				this.OwnerHandle = 0;
 				// Clear Buffs
 				this.Map.RemoveMonster(this);
-				this.Components.Remove<AiComponent>();
-				this.Components.Remove<MovementComponent>();
 			}
 		}
 
@@ -129,9 +182,48 @@ namespace Melia.Zone.World.Actors.Monsters
 		public void GiveExp(long exp, IMonster monster)
 		{
 			// Base EXP
-			this.Experience += exp;
+			this.Exp += exp;
+			this.TotalExp += exp;
 
 			Send.ZC_NORMAL.PetExpUpdate(this.Owner, this);
+
+			var level = this.Level;
+			var levelUps = 0;
+			var maxExp = this.MaxExp;
+			var maxLevel = ZoneServer.Instance.Data.ExpDb.GetMaxLevel();
+
+			// Consume EXP as many times as possible to reach new levels
+			while (this.Exp >= maxExp && level < maxLevel)
+			{
+				this.Exp -= maxExp;
+
+				level++;
+				levelUps++;
+				maxExp = ZoneServer.Instance.Data.ExpDb.GetNextExp(level);
+			}
+
+			// Execute level up only once to avoid client lag on multiple
+			// level ups. Leveling up a thousand times in a loop is not
+			// fun for the client =D"
+			if (levelUps > 0)
+				this.LevelUp(levelUps);
+		}
+
+		/// <summary>
+		/// Increases companion's level by the given amount.
+		/// </summary>
+		/// <param name="amount"></param>
+		public void LevelUp(int amount = 1)
+		{
+			if (amount < 1)
+				throw new ArgumentException("Amount can't be lower than 1.");
+
+			var newLevel = this.Properties.Modify(PropertyName.Lv, amount);
+
+			this.MaxExp = ZoneServer.Instance.Data.ExpDb.GetNextExp((int)newLevel);
+			this.Heal(this.MaxHp, 0);
+
+			this.PlayEffect("F_companion_level_up", 3);
 		}
 	}
 }

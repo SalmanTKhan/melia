@@ -143,13 +143,6 @@ namespace Melia.Zone.World.Actors.Characters
 			//   other potential factors.
 			this.Create(new RFloatProperty(PropertyName.Attribute, () => (int)SkillAttribute.None));
 			this.Create(new RFloatProperty(PropertyName.ArmorMaterial, () => (int)ArmorMaterialType.None));
-
-			// TODO: These were probably added for testing purposes or to
-			// reproduce logged packets. Can they be removed?
-			this.Create(new FloatProperty(PropertyName.HPDrain, 2));
-			this.Create(new FloatProperty(PropertyName.BOOST, 1));
-			this.Create(new FloatProperty(PropertyName.Const, 1.909859f));
-			this.Create(new FloatProperty(PropertyName.CAST, 1));
 		}
 
 		/// <summary>

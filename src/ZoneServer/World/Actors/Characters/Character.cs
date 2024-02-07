@@ -337,6 +337,8 @@ namespace Melia.Zone.World.Actors.Characters
 		/// </summary>
 		public AchievementComponent Achievements { get; }
 
+		public AdventureBookComponent AdventureBook { get; }
+
 		/// <summary>
 		/// Returns the character's movement component.
 		/// </summary>
@@ -473,6 +475,7 @@ namespace Melia.Zone.World.Actors.Characters
 			this.Components.Add(this.Tracks = new TrackComponent(this));
 			this.Components.Add(this.Triggers = new Triggers(this));
 			this.Components.Add(this.Achievements = new AchievementComponent(this));
+			this.Components.Add(this.AdventureBook = new AdventureBookComponent(this));
 			// These two are class specific components should they go somewhere else?
 			this.Components.Add(this.Companions = new CompanionComponent(this));
 			this.Components.Add(this.Summons = new SummonComponent(this));
@@ -496,9 +499,10 @@ namespace Melia.Zone.World.Actors.Characters
 			//   look at session objects. Curiously, I don't get the
 			//   aformentioned tooltip anymore right now, even if this
 			//   object is missing.
+			// Update2: Client doesn't even have this idspace anymore.
+			// [ERROR_IES_COULDNT_FIND_CLASS] idspace:[SessionObject] classID:[770001]
 			//this.SessionObjects.Add(new SessionObject(SessionObjectId.Jansori));
 
-			this.SessionObjects.Add(new SessionObject(SessionObjectId.Jansori));
 			this.SessionObjects.Add(new SessionObject(SessionObjectId.Drop));
 			this.SessionObjects.Add(new SessionObject(SessionObjectId.MapEventReward));
 			this.SessionObjects.Add(new SessionObject(SessionObjectId.SmartGen));
@@ -760,7 +764,8 @@ namespace Melia.Zone.World.Actors.Characters
 			Send.ZC_MAX_EXP_CHANGED(this, 0);
 			Send.ZC_PC_LEVELUP(this);
 			Send.ZC_OBJECT_PROPERTY(this);
-			Send.ZC_ADDON_MSG(this, "NOTICE_Dm_levelup_base", 3, "!@#$Auto_KaeLigTeo_LeBeli_SangSeungHayeossSeupNiDa#@!");
+
+			this.AddonMessage("NOTICE_Dm_levelup_base", "!@#$Auto_KaeLigTeo_LeBeli_SangSeungHayeossSeupNiDa#@!", 3);
 			this.PlayEffect("F_pc_level_up", 3);
 		}
 
@@ -799,7 +804,7 @@ namespace Melia.Zone.World.Actors.Characters
 			this.Heal();
 
 			Send.ZC_OBJECT_PROPERTY(this);
-			Send.ZC_ADDON_MSG(this, "NOTICE_Dm_levelup_skill", 3, "!@#$Auto_KeulLeSeu_LeBeli_SangSeungHayeossSeupNiDa#@!");
+			this.AddonMessage("NOTICE_Dm_levelup_skill", "!@#$Auto_KeulLeSeu_LeBeli_SangSeungHayeossSeupNiDa#@!", 3);
 			this.PlayEffect("F_pc_joblevel_up", 3);
 		}
 
@@ -919,14 +924,6 @@ namespace Melia.Zone.World.Actors.Characters
 		/// <param name="monster"></param>
 		public void GiveExp(long exp, long classExp, IMonster monster)
 		{
-			if (this.HasCompanions)
-			{
-				foreach (var companion in this.Companions.GetList())
-					companion.GiveExp(exp, monster);
-			}
-
-			this.ServerMessage("{0} Exp Gained and {1} Class Exp Gained", exp, classExp);
-
 			// Base EXP
 			this.Exp += exp;
 			this.TotalExp += exp;
@@ -973,6 +970,12 @@ namespace Melia.Zone.World.Actors.Characters
 
 			if (classLevelsGained > 0)
 				this.ClassLevelUp(classLevelsGained);
+
+			if (this.HasCompanions)
+			{
+				foreach (var companion in this.Companions.GetList())
+					companion.GiveExp(exp, monster);
+			}
 		}
 
 		/// <summary>
@@ -1455,6 +1458,16 @@ namespace Melia.Zone.World.Actors.Characters
 			// Add the item to the inventory
 			this.Inventory.Add(itemMonster.Item, InventoryAddType.PickUp);
 
+			if (itemMonster.Item.Data.Journal)
+			{
+				if (itemMonster.MonsterId != 0)
+					this.AdventureBook.AddMonsterDrop(itemMonster.MonsterId, itemMonster.Item.Id, itemMonster.Item.Amount);
+				if (this.AdventureBook.IsNewEntry(AdventureBookType.ItemObtained, itemMonster.Item.Id))
+					this.AddonMessage("ADVENTURE_BOOK_NEW", itemMonster.Item.Data.Name);
+
+				this.AdventureBook.AddItemObtained(itemMonster.Item.Id, itemMonster.Item.Amount);
+			}
+
 			// Remove it from the map, so it can't be picked up again.
 			this.Map.RemoveMonster(itemMonster);
 		}
@@ -1652,6 +1665,17 @@ namespace Melia.Zone.World.Actors.Characters
 		}
 
 		/// <summary>
+		/// Modify a Property and send it to the client
+		/// </summary>
+		/// <param name="propertyName"></param>
+		/// <param name="value"></param>
+		public void ModifyProperty(string propertyName, float value)
+		{
+			this.Properties.Modify(propertyName, value);
+			Send.ZC_OBJECT_PROPERTY(this, propertyName);
+		}
+
+		/// <summary>
 		/// Set an account property and update the client.
 		/// </summary>
 		/// <param name="propertyName"></param>
@@ -1745,6 +1769,16 @@ namespace Melia.Zone.World.Actors.Characters
 		{
 			this.EtcProperties.Modify(propertyName, amount);
 			Send.ZC_OBJECT_PROPERTY(this, this.SocialUserId, this.EtcProperties.GetSelect(propertyName));
+		}
+
+		/// <summary>
+		/// Enable or disable character control.
+		/// </summary>
+		/// <param name="controlScript"></param>
+		/// <param name="enabled"></param>
+		public void EnableControl(string controlScript, bool enabled)
+		{
+			Send.ZC_ENABLE_CONTROL(this.Connection, controlScript, enabled);
 		}
 	}
 }

@@ -25,7 +25,41 @@ public class EP151FABBEY31TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		var mob0 = Shortcuts.AddMonster(0, 160144, "", "None", -26.28292, 186.4333, -909.5435, 62.89474);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		character.Movement.MoveTo(new Position(5.291643f, 186.4333f, -1237.926f));
+		actors.Add(character);
+
+		var mob1 = Shortcuts.AddMonster(0, 59780, "", "None", -11.11656, 186.4333, -665.4872, 74);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 59780, "", "None", 80.53139, 186.4333, -765.8478, 19.16667);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 59778, "", "None", -6.471698, 186.4333, -590.8987, 29.46429);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		var mob4 = Shortcuts.AddMonster(0, 59778, "", "None", 52.94665, 186.4333, -542.7155, 55.25);
+		mob4.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob4.AddEffect(new ScriptInvisibleEffect());
+		mob4.Layer = character.Layer;
+		actors.Add(mob4);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)
@@ -39,7 +73,7 @@ public class EP151FABBEY31TRACK : TrackScript
 			case 17:
 				break;
 			case 31:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_PLAY_MGAME("EP15_1_F_ABBEY3_1_MINI");
 				break;
 			case 34:

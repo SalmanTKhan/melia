@@ -66,6 +66,7 @@ namespace Melia.Zone.Skills.Handlers.Ranger
 			skillHit.ForceId = ForceId.GetNew();
 			skillHit.UnkFloat = 8;
 			skillHit.HitCount = 3;
+			skillHit.VarInfoCount = 1;
 
 			Send.ZC_SKILL_FORCE_TARGET(caster, target, skill, skillHit);
 
@@ -119,7 +120,6 @@ namespace Melia.Zone.Skills.Handlers.Ranger
 			var splashPos = caster.Position;
 			var splashParam = skill.GetSplashParameters(caster, splashPos, mainTarget.Position, length: 130, width: 60, angle: 0);
 			var splashArea = skill.GetSplashArea(SplashType.Circle, splashParam);
-			Debug.ShowShape(caster.Map, splashArea, TimeSpan.FromSeconds(5));
 
 			var targets = caster.Map.GetAttackableEntitiesIn(caster, splashArea);
 			if (!targets.Any())

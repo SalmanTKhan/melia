@@ -25,7 +25,23 @@ public class EP152DNICOPOLIS1MQ4TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(734.9772f, -16.0284f, -1309.202f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 157101, "", "None", 760.1633, -16.0284, -1333.899, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 12082, "", "None", 763.1826, -16.0284, -1337.501, 390);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

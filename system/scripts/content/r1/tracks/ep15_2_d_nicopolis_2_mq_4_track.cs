@@ -25,7 +25,47 @@ public class EP152DNICOPOLIS2MQ4TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(949.1956f, 1f, -556.688f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 59784, "", "ep15_2_d_nicopolis_2", 926.0654, 1, -288.673, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 59809, "", "ep15_2_d_nicopolis_2", 818.8952, 1, -373.4162, 0);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 59809, "", "ep15_2_d_nicopolis_2", 786.8181, 1, -201.5379, 23.18182);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 59809, "", "ep15_2_d_nicopolis_2", 973.1266, 1, -434.3727, 0);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		var mob4 = Shortcuts.AddMonster(0, 59809, "", "ep15_2_d_nicopolis_2", 1064.837, 1, -321.3067, 0);
+		mob4.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob4.AddEffect(new ScriptInvisibleEffect());
+		mob4.Layer = character.Layer;
+		actors.Add(mob4);
+
+		var mob5 = Shortcuts.AddMonster(0, 59809, "", "ep15_2_d_nicopolis_2", 957.1022, 1, -167.0789, 0);
+		mob5.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob5.AddEffect(new ScriptInvisibleEffect());
+		mob5.Layer = character.Layer;
+		actors.Add(mob5);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)
@@ -44,7 +84,7 @@ public class EP152DNICOPOLIS2MQ4TRACK : TrackScript
 				break;
 			case 25:
 				//DRT_PLAY_MGAME("EP15_2_D_NICOPOLIS_2_MQ_4_MINI");
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				break;
 			default:
 				Log.Warning("OnProgress: Unsupported frame {0} called from {1}.", frame, this.TrackId);

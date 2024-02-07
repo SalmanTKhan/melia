@@ -80,7 +80,7 @@ public class EXORCISTUNLOCKTRACK : TrackScript
 			case 10:
 				break;
 			case 11:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//TRACK_SETTENDENCY();
 				break;
 			default:

@@ -773,7 +773,7 @@ namespace Melia.Zone.World.Maps
 			{
 				foreach (var character in _characters.Values)
 				{
-					if (character.Connection.LoggedIn)
+					if (character.Connection.GameReady)
 						character.Connection.Send(packet);
 				}
 			}
@@ -790,7 +790,9 @@ namespace Melia.Zone.World.Maps
 		{
 			lock (_characters)
 			{
-				foreach (var character in _characters.Values.Where(a => (includeSource || a != source) && a.Position.InRange2D(source.Position, VisibleRange)))
+				foreach (var character in _characters.Values.Where(a => (includeSource || a != source)
+				&& a.Connection.GameReady
+				&& a.Position.InRange2D(source.Position, VisibleRange)))
 					character.Connection.Send(packet);
 			}
 		}

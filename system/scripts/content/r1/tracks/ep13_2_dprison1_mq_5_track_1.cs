@@ -64,7 +64,7 @@ public class EP132DPRISON1MQ5TRACK1 : TrackScript
 			case 99:
 				//TRACK_SETTENDENCY();
 				//DRT_PLAY_MGAME("EP13_2_DPRISON1_MQ_5_MGAME_1");
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				break;
 			default:
 				Log.Warning("OnProgress: Unsupported frame {0} called from {1}.", frame, this.TrackId);

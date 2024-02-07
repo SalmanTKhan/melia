@@ -1071,7 +1071,7 @@ namespace Melia.Zone.Network
 		/// <summary>
 		/// Send Achievement Points Update to client
 		/// </summary>
-		/// <param name="conn"></param>
+		/// <param name="character"></param>
 		/// <param name="achievementPointId"></param>
 		/// <param name="achievementPoints"></param>
 		public static void ZC_ACHIEVE_POINT(Character character, int achievementPointId, int achievementPoints, int achievementId)
@@ -1163,13 +1163,13 @@ namespace Melia.Zone.Network
 		/// </summary>
 		/// <param name="character"></param>
 		/// <param name="npc"></param>
-		public static void ZC_SET_NPC_STATE(Character character, Npc npc)
+		public static void ZC_SET_NPC_STATE(Character character, Npc npc, short state)
 		{
 			var packet = new Packet(Op.ZC_SET_NPC_STATE);
 
 			packet.PutInt(npc.Map.Id);
 			packet.PutInt(npc.GenType);
-			packet.PutShort((short)npc.State);
+			packet.PutShort(state);
 			packet.PutEmptyBin(2);
 
 			character.Connection.Send(packet);
@@ -2882,6 +2882,22 @@ namespace Melia.Zone.Network
 			packet.PutInt(actor.Handle);
 			packet.PutInt(packetStringData.Id);
 			packet.PutInt((int)duration.TotalMilliseconds);
+
+			actor.Map.Broadcast(packet, actor);
+		}
+
+
+		/// <summary>
+		/// Hold move path?
+		/// </summary>
+		/// <param name="actor"></param>
+		/// <param name="b1"></param>
+		public static void ZC_HOLD_MOVE_PATH(IActor actor, bool b1)
+		{
+			var packet = new Packet(Op.ZC_HOLD_MOVE_PATH);
+
+			packet.PutInt(actor.Handle);
+			packet.PutByte(b1);
 
 			actor.Map.Broadcast(packet, actor);
 		}
@@ -5875,6 +5891,97 @@ namespace Melia.Zone.Network
 			packet.PutInt(packetString2);
 
 			actor.Map.Broadcast(packet);
+		}
+
+		/// <summary>
+		/// Send adventure book info
+		/// </summary>
+		/// <param name="character"></param>
+		/// <param name="type"></param>
+		/// <param name="infoList"></param>
+		public static void ZC_ADVENTURE_BOOK_INFO(Character character, AdventureBookType type, SortedList<int, int> infoList)
+		{
+			var packet = new Packet(Op.ZC_ADVENTURE_BOOK_INFO);
+
+			packet.PutInt(infoList.Count);
+			packet.PutShort((short)type);
+			packet.PutByte(1);
+			packet.PutByte(1);
+			packet.PutShort(1);
+
+			packet.Zlib(true, zpacket =>
+			{
+				foreach (var info in infoList)
+				{
+					zpacket.PutInt(info.Key);
+					zpacket.PutInt(info.Value);
+				}
+			});
+
+			character.Connection.Send(packet);
+		}
+
+		/// <summary>
+		/// Send adventure book info
+		/// </summary>
+		/// <param name="character"></param>
+		/// <param name="type"></param>
+		/// <param name="itemList"></param>
+		public static void ZC_ADVENTURE_BOOK_INFO(Character character, AdventureBookType type, SortedList<int, AdventureBookItemEntry> itemList)
+		{
+			var packet = new Packet(Op.ZC_ADVENTURE_BOOK_INFO);
+
+			packet.PutInt(itemList.Count);
+			packet.PutShort((short)type);
+			packet.PutByte(1);
+			packet.PutByte(1);
+			packet.PutShort(1);
+
+			packet.Zlib(true, zpacket =>
+			{
+				foreach (var info in itemList)
+				{
+					zpacket.PutInt(info.Key);
+					zpacket.PutInt(info.Value.CraftedCount);
+					zpacket.PutInt(info.Value.ObtainedCount);
+					zpacket.PutInt(info.Value.UsedCount);
+				}
+			});
+
+			character.Connection.Send(packet);
+		}
+
+		/// <summary>
+		/// Send adventure book info
+		/// </summary>
+		/// <param name="character"></param>
+		/// <param name="type"></param>
+		/// <param name="infoList"></param>
+		public static void ZC_ADVENTURE_BOOK_INFO(Character character, AdventureBookType type, SortedList<int, SortedList<int, int>> infoList)
+		{
+			var packet = new Packet(Op.ZC_ADVENTURE_BOOK_INFO);
+
+			packet.PutInt(infoList.Count);
+			packet.PutShort((short)type);
+			packet.PutByte(1);
+			packet.PutByte(1);
+			packet.PutShort(1);
+
+			packet.Zlib(true, zpacket =>
+			{
+				foreach (var info in infoList)
+				{
+					zpacket.PutInt(info.Key);
+					zpacket.PutInt(info.Value.Count);
+					foreach (var subInfo in info.Value)
+					{
+						zpacket.PutInt(subInfo.Key);
+						zpacket.PutInt(subInfo.Value);
+					}
+				}
+			});
+
+			character.Connection.Send(packet);
 		}
 
 		/// <summary>

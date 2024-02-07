@@ -171,6 +171,8 @@
 { id: 163, className: "emoticonItem_2312_popo_163", engName: "popolionbow", checkServer: true },
 { id: 164, className: "emoticonItem_2312_164", engName: "snigotwinkle", checkServer: true },
 { id: 165, className: "emoticonItem_2312_165", engName: "snigoshakehead", checkServer: true },
+{ id: 166, className: "emoticonItem_2402_1", engName: "snigosigh", checkServer: true },
+{ id: 167, className: "emoticonItem_2402_2", engName: "snigocheer", checkServer: true },
 { id: 5001, className: "motion_medeina_emotion01", engName: "medeinashookmotion", checkServer: true },
 { id: 5002, className: "motion_medeina_emotion02", engName: "medeinayaymotion", checkServer: true },
 { id: 5003, className: "motion_kupole_emotion01", engName: "Kupole_Cheeky_Motion", checkServer: true },

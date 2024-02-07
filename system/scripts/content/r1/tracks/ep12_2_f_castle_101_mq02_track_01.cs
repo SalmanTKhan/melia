@@ -173,7 +173,7 @@ public class EP122FCASTLE101MQ02TRACK01 : TrackScript
 			case 74:
 				//TRACK_SETTENDENCY();
 				//DRT_PLAY_MGAME("EP12_2_F_CASTLE_101_MQ02_MINI");
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_RUN_FUNCTION("SCR_SUMMON_BARONG");
 				break;
 			default:

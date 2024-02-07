@@ -26,11 +26,11 @@ public class CKlaipeNpcScript : GeneralScript
 		
 		// [Templar Master]{nl}Knight Commander Uska
 		//-------------------------------------------------------------------------
-		AddNpc(4, 20113, "[Templar Master]{nl}Knight Commander Uska", "c_Klaipe", -474, 149, 82, 405, "KLAPEDA_USKA", "", "");
+		AddNpc(4, 20113, "[Templar Master]{nl}Knight Commander Uska", "c_Klaipe", -424.6251, 149.1097, 172.4264, 30, "KLAPEDA_USKA", "", "");
 		
 		// [Cleric Master]{nl}Rozalija
 		//-------------------------------------------------------------------------
-		AddNpc(113, 20112, "[Cleric Master]{nl}Rozalija", "c_Klaipe", -409, 149, 174, 405, "MASTER_CLERIC", "", "", 0);
+		AddNpc(113, 20112, "[Cleric Master]{nl}Rozalija", "c_Klaipe", -222.3671, 149.1097, 363.4704, 405, "MASTER_CLERIC", "", "", 0);
 		
 		// Klaipeda Resident
 		//-------------------------------------------------------------------------
@@ -42,7 +42,7 @@ public class CKlaipeNpcScript : GeneralScript
 		
 		// [Priest Master]{nl}Boruble
 		//-------------------------------------------------------------------------
-		AddNpc(114, 57229, "[Priest Master]{nl}Boruble", "c_Klaipe", -196.47, 148.83, 350.73, 0, "MASTER_PRIEST", "", "");
+		AddNpc(114, 57229, "[Priest Master]{nl}Boruble", "c_Klaipe", -180.3134, 149.1097, 382.513, 0, "MASTER_PRIEST", "", "");
 		
 		// Bulletin Board
 		//-------------------------------------------------------------------------
@@ -83,7 +83,7 @@ public class CKlaipeNpcScript : GeneralScript
 		
 		// [Ranger Master]{nl}Nemoken
 		//-------------------------------------------------------------------------
-		AddNpc(109, 147343, "[Ranger Master]{nl}Nemoken", "c_Klaipe", -488.78, 148.61, 27, 96, "MASTER_RANGER", "", "");
+		AddNpc(109, 147343, "[Ranger Master]{nl}Nemoken", "c_Klaipe", -516.443, 149.1097, 10.18389, 96, "MASTER_RANGER", "", "");
 		
 		// [Swordsman Master]{nl}Rashua
 		//-------------------------------------------------------------------------
@@ -95,7 +95,7 @@ public class CKlaipeNpcScript : GeneralScript
 		
 		// [Archer Master]{nl}Edmundas Tiller
 		//-------------------------------------------------------------------------
-		AddNpc(112, 147447, "[Archer Master]{nl}Edmundas Tiller", "c_Klaipe", -909.2549, 241.052, 300.0488, 405, "MASTER_ARCHER", "", "");
+		AddNpc(112, 147447, "[Archer Master]{nl}Edmundas Tiller", "c_Klaipe", -910, 241, 280, 390, "MASTER_ARCHER", "", "");
 		
 		// Bulletin Board
 		//-------------------------------------------------------------------------
@@ -159,7 +159,7 @@ public class CKlaipeNpcScript : GeneralScript
 		
 		// [Oracle Master]{nl}Apolonija Barbora
 		//-------------------------------------------------------------------------
-		AddNpc(117, 57224, "[Oracle Master]{nl}Apolonija Barbora", "c_Klaipe", -900.4363, 241.052, 233.7942, 74, "MASTER_ORACLE", "", "");
+		AddNpc(117, 57224, "[Oracle Master]{nl}Apolonija Barbora", "c_Klaipe", -1095.955, 243.7694, 272.9396, 90, "MASTER_ORACLE", "", "");
 		
 		// Statue of Goddess Ausrine
 		//-------------------------------------------------------------------------
@@ -172,11 +172,11 @@ public class CKlaipeNpcScript : GeneralScript
 		
 		// Mercenary Post Manager Rota
 		//-------------------------------------------------------------------------
-		AddNpc(302, 151037, "Mercenary Post Manager Rota", "c_Klaipe", -562.1796, 241.052, 872.9383, 405, "FEDIMIAN_ROTA_02", "", "");
+		AddNpc(302, 151037, "Mercenary Post Manager Rota", "c_Klaipe", -638, 240, 1017, 405, "FEDIMIAN_ROTA_02", "", "");
 		
 		// Receptionist Ramda
 		//-------------------------------------------------------------------------
-		AddNpc(303, 147484, "Receptionist Ramda", "c_Klaipe", -604.8451, 241.052, 851.9891, 77, "MISSIONSHOP_NPC_01", "", "");
+		AddNpc(303, 147484, "Receptionist Ramda", "c_Klaipe", -609, 241, 867, 405, "MISSIONSHOP_NPC_01", "", "");
 		
 		// Receptionist Liam
 		//-------------------------------------------------------------------------
@@ -184,7 +184,7 @@ public class CKlaipeNpcScript : GeneralScript
 		
 		// Receptionist Donnes
 		//-------------------------------------------------------------------------
-		AddNpc(305, 151039, "Receptionist Donnes", "c_Klaipe", -464.8736, 241.052, 885.3188, 12, "DROPITEM_REQUEST1_NPC", "", "");
+		AddNpc(305, 151039, "Receptionist Donnes", "c_Klaipe", -542, 241, 882, 405, "DROPITEM_REQUEST1_NPC", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
@@ -196,7 +196,7 @@ public class CKlaipeNpcScript : GeneralScript
 		
 		// Baron Munchausen
 		//-------------------------------------------------------------------------
-		AddNpc(10021, 155017, "Baron Munchausen", "c_Klaipe", -932.2205, 241.052, 363.2987, 405, "LOWLV_BOASTER_MUENCHHAUSEN", "", "", 0);
+		AddNpc(10021, 155017, "Baron Munchausen", "c_Klaipe", -949, 241, 365, 405, "LOWLV_BOASTER_MUENCHHAUSEN", "", "", 0);
 		AddNpc(10022, 20026, "", "c_Klaipe", 547.71, -1.33, 382.05, 90, "", "", "");
 		AddNpc(5002, 20025, " ", "c_Klaipe", 82.39, 149.19, 73.38, 270, "", "", "");
 		AddNpc(10023, 150004, "Fishing Spot", "c_Klaipe", -827.2349, 217.9105, 729.8553, 90, "", "", "");
@@ -320,5 +320,13 @@ public class CKlaipeNpcScript : GeneralScript
 		// [Popo Boost Care]{nl}Kupole
 		//-------------------------------------------------------------------------
 		AddNpc(10131, 160088, "[Popo Boost Care]{nl}Kupole", "c_Klaipe", -374, 149, -107, 90, "CARE_POPOBOOST_STATUS", "", "");
+		
+		// [Black Market]{nl}Auctioneer
+		//-------------------------------------------------------------------------
+		AddNpc(10132, 20140, "[Black Market]{nl}Auctioneer", "c_Klaipe", 439, 79, 74, 90, "BLACK_MARKET", "", "");
+		
+		// [Snigo's Memory]{nl}Little Glacia
+		//-------------------------------------------------------------------------
+		AddNpc(10133, 160193, "[Snigo's Memory]{nl}Little Glacia", "c_Klaipe", -602.16, 241.15, 628.5, 45, "LITTLE_GLACIER", "", "");
 	}
 }

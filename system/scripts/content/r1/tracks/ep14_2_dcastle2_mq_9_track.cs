@@ -25,7 +25,17 @@ public class EP142DCASTLE2MQ9TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		var mob0 = Shortcuts.AddMonster(0, 150032, "RP", "ep14_2_d_castle_2", -1467.873, -2.332764, -756.5397, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		character.Movement.MoveTo(new Position(-1390.594f, -2.332764f, -756.3989f));
+		actors.Add(character);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

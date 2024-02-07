@@ -18,7 +18,7 @@ namespace Melia.Zone.Scripting.Shared
 	public static partial class NPCFunctions
 	{
 
-		[DialogFunction("GUILD_HOUSE_OBJECT")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSE_OBJECT(Dialog dialog)
 		{
 			var guild = (dialog.Npc as IGuildMember)?.Guild;
@@ -44,7 +44,7 @@ namespace Melia.Zone.Scripting.Shared
 		/// </summary>
 		/// <param name="dialog"></param>
 		/// <returns></returns>
-		[DialogFunction("GUILD_TOWER")]
+		[DialogFunction]
 		public static async Task GUILD_TOWER(Dialog dialog)
 		{
 			var guild = (dialog.Npc as IGuildMember)?.Guild;
@@ -63,9 +63,9 @@ namespace Melia.Zone.Scripting.Shared
 			await Task.Yield();
 		}
 
+		[DialogFunction]
 		public static async Task EV_55_001(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
 		/// <summary>
@@ -125,7 +125,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_GRITA")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_GRITA(Dialog dialog)
 		{
 			await dialog.Msg("FEDIMIAN_GRITA_BASIC01");
@@ -134,7 +134,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("JOB_SQUIRE3_1_NPC")]
+		[DialogFunction]
 		public static async Task JOB_SQUIRE3_1_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_SQUIRE3_1_NPC_BASIC01");
@@ -143,11 +143,11 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("WARP_C_FEDIMIAN")]
+		[DialogFunction]
 		public static async Task WARP_C_FEDIMIAN(Dialog dialog)
 			=> await STATUE_WARP(dialog);
 
-		[DialogFunction("FEDIMIAN_DETECTIVE_GUARD")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_DETECTIVE_GUARD(Dialog dialog)
 		{
 			await dialog.Msg("FEDIMIAN_DETECTIVE_GUARD_basic01");
@@ -159,7 +159,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("CRIMINAL")]
+		[DialogFunction]
 		public static async Task CRIMINAL(Dialog dialog)
 		{
 			await dialog.Msg("CRIMINAL_basic01");
@@ -167,7 +167,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("REMAIN39_SQ03_GIRL")]
+		[DialogFunction]
 		public static async Task REMAIN39_SQ03_GIRL(Dialog dialog)
 		{
 			await dialog.Msg("REMAIN39_SQ03_GIRL_basic01");
@@ -176,7 +176,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("MASTER_ROGUE")]
+		[DialogFunction]
 		public static async Task MASTER_ROGUE(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_ROGUE_BASIC01");
@@ -184,7 +184,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FED_TOOL")]
+		[DialogFunction]
 		public static async Task FED_TOOL(Dialog dialog)
 		{
 			await dialog.Msg("FED_TOOL_BASIC01");
@@ -192,7 +192,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FED_EQUIP")]
+		[DialogFunction]
 		public static async Task FED_EQUIP(Dialog dialog)
 		{
 			await dialog.Msg("FED_EQUIP_BASIC01");
@@ -200,14 +200,14 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_SIGN1")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_SIGN1(Dialog dialog)
 		{
 			await dialog.HooksByDialogName("BeforeStart");
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_OLDMAN1")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_OLDMAN1(Dialog dialog)
 		{
 			await dialog.Msg("FEDIMIAN_OLDMAN1_BASIC01");
@@ -217,28 +217,28 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_SIGN2")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_SIGN2(Dialog dialog)
 		{
 			await dialog.HooksByDialogName("BeforeStart");
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_SIGN3")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_SIGN3(Dialog dialog)
 		{
 			await dialog.HooksByDialogName("BeforeStart");
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_SIGN4")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_SIGN4(Dialog dialog)
 		{
 			await dialog.HooksByDialogName("BeforeStart");
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("MASTER_HACKAPELL")]
+		[DialogFunction]
 		public static async Task MASTER_HACKAPELL(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_HACKAPELL_basic");
@@ -246,7 +246,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("JOB_DRUID3_1_NPC")]
+		[DialogFunction]
 		public static async Task JOB_DRUID3_1_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_DRUID3_1_NPC_basic01");
@@ -254,7 +254,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_NPC_11")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_NPC_11(Dialog dialog)
 		{
 			await dialog.Msg("FEDIMIAN_NPC_11_basic01");
@@ -264,7 +264,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_NPC_12")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_NPC_12(Dialog dialog)
 		{
 			await dialog.Msg("FEDIMIAN_NPC_12_basic01");
@@ -273,14 +273,14 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("PILGRIM_PRE_BOARD")]
+		[DialogFunction]
 		public static async Task PILGRIM_PRE_BOARD(Dialog dialog)
 		{
 			await dialog.HooksByDialogName("BeforeStart");
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("MASTER_DOPPELSOELDNER")]
+		[DialogFunction]
 		public static async Task MASTER_DOPPELSOELDNER(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_DOPPELSOELDNER_normal");
@@ -288,7 +288,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("BLACKSMITH_FEDIMIAN")]
+		[DialogFunction]
 		public static async Task BLACKSMITH_FEDIMIAN(Dialog dialog)
 		{
 			await dialog.HooksByDialogName("BeforeStart");
@@ -302,23 +302,40 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("MARKET_FEDIMIAN")]
+		[DialogFunction]
 		public static async Task MARKET_FEDIMIAN(Dialog dialog)
 		{
+			switch (await dialog.Select("FEDIMIAN_MARKET_SEL", "!@#$KLAPEDA_MARKET_OPEN#@!", "!@#$Auto_DaeHwa_JongLyo#@!"))
+			{
+				case 1:
+					await dialog.CustomDialog(CustomDialog.MARKET);
+					break;
+			}
 		}
 
-		[DialogFunction("WAREHOUSE_FEDIMIAN")]
+		[DialogFunction]
 		public static async Task WAREHOUSE_FEDIMIAN(Dialog dialog)
 		{
+			switch (await dialog.Select("WAREHOUSE_FEDIMIAN_DLG", "!@#$WareHouse#@!", "!@#$AccountWareHouse#@!", "!@#$Close#@!"))
+			{
+				case 1:
+					await dialog.CustomDialog(CustomDialog.WAREHOUSE);
+					break;
+				case 2:
+					await dialog.CustomDialog(CustomDialog.ACCOUNT_WAREHOUSE);
+					break;
+			}
 		}
 
-		[DialogFunction("FED_ACCESSORY")]
+		[DialogFunction]
 		public static async Task FED_ACCESSORY(Dialog dialog)
 		{
 			await dialog.Msg("FED_ACCESSORY_Select_1");
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("SHINOBI_POTTER")]
+		[DialogFunction]
 		public static async Task SHINOBI_POTTER(Dialog dialog)
 		{
 		}
@@ -333,7 +350,7 @@ namespace Melia.Zone.Scripting.Shared
 			dialog.AddonMessage("TP_SHOP_UI_OPEN");
 		}
 
-		[DialogFunction("FEDIMIAN_NPC_TEMPLE04")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_NPC_TEMPLE04(Dialog dialog)
 		{
 			await dialog.Msg("FEDIMIAN_NPC_TEMPLE04_basic01");
@@ -342,99 +359,109 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("HT_FEDIMIAN_NPC_TEMPLE04_BASIC04");
 		}
 
-		[DialogFunction("FEDIMIAN_APPRAISER")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_APPRAISER(Dialog dialog)
 		{
 			await dialog.Msg("FEDIMIAN_APPRAISER_DLG1");
 		}
 
-		[DialogFunction("AUTO_CAHLLENGE_ENTER")]
+		[DialogFunction]
 		public static async Task AUTO_CAHLLENGE_ENTER(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("FEDIMIAN_APPRAISER_NPC")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_APPRAISER_NPC(Dialog dialog)
 		{
 			await dialog.Msg("FEDIMIAN_APPRAISER_NPC_DLG1");
 		}
 
-		[DialogFunction("MATADOR_MASTER")]
+		[DialogFunction]
 		public static async Task MATADOR_MASTER(Dialog dialog)
 		{
 			await dialog.Msg("MATADOR_MASTER_basic1");
 			await dialog.Msg("MATADOR_MASTER_basic2");
 		}
 
-		[DialogFunction("EXPLORER_ANASTAZIJA")]
+		[DialogFunction]
 		public static async Task EXPLORER_ANASTAZIJA(Dialog dialog)
 		{
 		}
 
-		[DialogFunction("NPC_JUNK_SHOP_FEDIMIAN_ORSHA")]
+		[DialogFunction]
 		public static async Task NPC_JUNK_SHOP_FEDIMIAN_ORSHA(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_OFFICIAL_BOARD")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_OFFICIAL_BOARD(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EXORCIST_MASTER")]
+		[DialogFunction]
 		public static async Task EXORCIST_MASTER(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("CHAR420_STEP321_NPC")]
+		[DialogFunction]
 		public static async Task CHAR420_STEP321_NPC(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("CHAR420_STEP323_NPC1")]
+		[DialogFunction]
 		public static async Task CHAR420_STEP323_NPC1(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FEDIMIAN_TERIAVELIS")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_TERIAVELIS(Dialog dialog)
 		{
 			await dialog.Msg("NPC_TERIAVELIS_DLG1");
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("OUTLAW_MASTER_W_NPC")]
+		[DialogFunction]
 		public static async Task OUTLAW_MASTER_W_NPC(Dialog dialog)
 		{
 			await dialog.Msg("OUTLAW_MASTER_W_NPC_basic_1");
 			await dialog.Msg("OUTLAW_MASTER_W_NPC_basic_2");
 			await dialog.Msg("OUTLAW_MASTER_W_NPC_basic_3");
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("OUTLAW_MASTER_M_NPC")]
+		[DialogFunction]
 		public static async Task OUTLAW_MASTER_M_NPC(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("PAYAUTA_EP11_NPC_CITY_1")]
+		[DialogFunction]
 		public static async Task PAYAUTA_EP11_NPC_CITY_1(Dialog dialog)
 		{
 			await dialog.Msg("PAYAUTA_EP11_NPC_CITY_1_basic1");
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("INSTANCE_DUNGEON")]
+		[DialogFunction]
 		public static async Task INSTANCE_DUNGEON(Dialog dialog)
 		{
 			var player = dialog.Player;
+
 			switch (await dialog.Select("ID_ENDTER_DIALOG", "!@#$IndunSelectDialog$*$ID_NAME$*$@dicID_^*$ETC_20200129_044061$*^$*$ID_LV$*$400$*$ID_LIMIT_LV$*${img infinity_text 20 10}#@!", "!@#$IndunSelectDialog$*$ID_NAME$*$@dicID_^*$ETC_20151224_017833$*^$*$ID_LV$*$50$*$ID_LIMIT_LV$*$299#@!", "!@#$IndunSelectDialog$*$ID_NAME$*$@dicID_^*$ETC_20180827_035054$*^$*$ID_LV$*$300$*$ID_LIMIT_LV$*$399#@!", "!@#$Auto_JongLyo#@!"))
 			{
 				case 2:
@@ -443,7 +470,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("NPC_PERSONAL_HOUSING_MANAGER")]
+		[DialogFunction]
 		public static async Task NPC_PERSONAL_HOUSING_MANAGER(Dialog dialog)
 		{
 			var player = dialog.Player;
@@ -501,24 +528,17 @@ namespace Melia.Zone.Scripting.Shared
 			await Task.Yield();
 		}
 
-		public static async Task EVENT_2006_SUMMER_NPC(Dialog dialog)
-		{
-			await Task.Yield();
-		}
-
-		[DialogFunction("EVENT_GODDESS_ROULETTE_NPC")]
+		[DialogFunction]
 		public static async Task EVENT_GODDESS_ROULETTE_NPC(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
-		[DialogFunction("FEDIMIAN_NAUJOVES")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_NAUJOVES(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
-		[DialogFunction("SHOP_NPC_RAGANA_CITY_1")]
+		[DialogFunction]
 		public static async Task SHOP_NPC_RAGANA_CITY_1(Dialog dialog)
 		{
 			await dialog.Msg(RandomElement("SHOP_NPC_RAGANA_CITY_1_basic1",
@@ -527,41 +547,29 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.ExecuteScript(ClientScripts.REQ_SILVER_GACHA_SHOP_OPEN);
 		}
 
-		[DialogFunction("KLAPEDA_FISHING_BOARD")]
+		[DialogFunction]
 		public static async Task KLAPEDA_FISHING_BOARD(Dialog dialog)
 		{
 			await dialog.ExecuteScript(ClientScripts.FISHING_RANK_OPEN);
 		}
 
-		[DialogFunction("FISHING_SUB_NPC")]
+		[DialogFunction]
 		public static async Task FISHING_SUB_NPC(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
-		public static async Task EVENT_2006_SUMMER_CAT(Dialog dialog)
-		{
-			await Task.Yield();
-		}
-
-		public static async Task EVENT_2101_SUPPLY_NPC5(Dialog dialog)
-		{
-			await Task.Yield();
-		}
-
-		[DialogFunction("REPUTATION_QUEST_BOARD_01")]
+		[DialogFunction]
 		public static async Task REPUTATION_QUEST_BOARD_01(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
-		[DialogFunction("ALCHEIST_EXPERT_NPC_FEDIMIAN")]
+		[DialogFunction]
 		public static async Task ALCHEIST_EXPERT_NPC_FEDIMIAN(Dialog dialog)
 		{
 			await dialog.Msg("ALCHEIST_EXPERT_NPC_FEDIMIAN_basic");
 		}
 
-		[DialogFunction("UNKNOWN_SANTUARY_GATE_GUILD")]
+		[DialogFunction]
 		public static async Task UNKNOWN_SANTUARY_GATE_GUILD(Dialog dialog)
 		{
 			// TODO: Check if requirements are met, currently my character only sees this option.
@@ -574,17 +582,16 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.Msg("UNKNOWN_SANTUARY_GATE_INFO_CANT_1");
 					break;
 			}
-			await Task.Yield();
 		}
 
-		[DialogFunction("BOUNTY_HUNT_START")]
+		[DialogFunction]
 		public static async Task BOUNTY_HUNT_START(Dialog dialog)
 		{
 			dialog.ShowHelp("TUTO_BOUNTYHUNT_1");
 			dialog.AddonMessage(AddonMessage.BOUNTYHUNT_OPEN);
 		}
 
-		[DialogFunction("EP13CARE_TRADE")]
+		[DialogFunction]
 		public static async Task EP13CARE_TRADE(Dialog dialog)
 		{
 			switch (await dialog.Select("EP13CARE_TRADE_DLG1", "!@#$EP13CARE_TRADE1#@!", "!@#$EP13CARE_TRADE2#@!", "!@#$EP13CARE_TRADE3#@!", "!@#$EP13CARE_TRADE4#@!", "!@#$EP13CARE_TRADE5#@!", "!@#$EP13CARE_TRADE6#@!", "!@#$Auto_JongLyo#@!"))
@@ -610,13 +617,13 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("BLESSED_CUBE")]
+		[DialogFunction]
 		public static async Task BLESSED_CUBE(Dialog dialog)
 		{
 			await dialog.ExecuteScript(ClientScripts.BLESSED_CUBE_OPEN);
 		}
 
-		[DialogFunction("DUCTILITY_NPC")]
+		[DialogFunction]
 		public static async Task DUCTILITY_NPC(Dialog dialog)
 		{
 			switch (await dialog.Select("COMMON_SKILL_ENCHANT_DLG1", "!@#$COMMON_SKILL_ENCHANT_MSG1#@!", "!@#$Auto_JongLyo#@!"))
@@ -627,7 +634,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("EVENT_TOS_WHOLE_NPC")]
+		[DialogFunction]
 		public static async Task EVENT_TOS_WHOLE_NPC(Dialog dialog)
 		{
 			switch (await dialog.Select("EVENT_TOS_WHOLE_DLG1", "!@#$EVENT_COMMON_MSG1#@!", "!@#$EVENT_TOS_WHOLE_SHOP#@!", "!@#$Auto_JongLyo#@!"))
@@ -639,10 +646,9 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_TOS_WHOLE_SHOP");
 					break;
 			}
-			await Task.Yield();
 		}
 
-		[DialogFunction("TREEDAY_NPC")]
+		[DialogFunction]
 		public static async Task TREEDAY_NPC(Dialog dialog)
 		{
 			switch (await dialog.Select("EVENT_TREEDAY_SHOP_DLG1", "!@#$EVENT_2304_ARBOR_DAY_SHOP#@!", "!@#$Auto_JongLyo#@!"))
@@ -653,37 +659,72 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
+		[DialogFunction]
+		public static async Task PREVIOUS_COIN_SHOP(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task BLACK_MARKET(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EVENT_2006_SUMMER_NPC(Dialog dialog)
+		{
+		}
+
+		[DialogFunction]
+		public static async Task EVENT_2006_SUMMER_CAT(Dialog dialog)
+		{
+		}
+
+		[DialogFunction]
+		public static async Task EVENT_2101_SUPPLY_NPC5(Dialog dialog)
+		{
+		}
+
+		[DialogFunction]
 		public static async Task EVENT_2109_MOON_RABBIT_NPC(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
+		[DialogFunction]
+		public static async Task EVENT_NEWYEAR_ASSIST(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
 		public static async Task CITY_EVENT_2110_NPC(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
+		[DialogFunction]
 		public static async Task EVENT_2110_POT_NPC(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
+		[DialogFunction]
 		public static async Task CITY_EVENT_2110_NPC2(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
+		[DialogFunction]
 		public static async Task EVENT_2212_LAST_CHRISTMAS_NPC(Dialog dialog)
 		{
 			switch (await dialog.Select("EVENT_2212_LAST_CHRISTMAS_DLG1", "!@#$EVENT_COMMON_MSG1#@!", "!@#$EVENT_COMMON_MSG2#@!", "!@#$EVENT_COMMON_MSG3#@!", "!@#$Auto_JongLyo#@!"))
 			{
 				case 1:
 					await dialog.Msg("EVENT_2212_LAST_CHRISTMAS_DLG2");
-					await Task.Yield();
 					break;
 				case 2:
 					await dialog.Msg("EVENT_2212_LAST_CHRISTMAS_DLG3");
-					await Task.Yield();
 					break;
 				case 3:
 					await dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_2212_LAST_CHRISTMAS_SHOP");
@@ -691,11 +732,12 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
+		[DialogFunction]
 		public static async Task EVENT_2207_UNITY(Dialog dialog)
 		{
-			await Task.Yield();
 		}
 
+		[DialogFunction]
 		public static async Task EVENT_2301_HAPPY_NEW_YEAR_NPC(Dialog dialog)
 		{
 			switch (await dialog.Select("EVENT_2301_HAPPY_NEW_YEAR_DLG1", "!@#$EVENT_COMMON_MSG1#@!", "!@#$EVENT_COMMON_MSG2#@!", "!@#$EVENT_COMMON_MSG3#@!", "!@#$Auto_JongLyo#@!"))
@@ -711,20 +753,16 @@ namespace Melia.Zone.Scripting.Shared
 				case 3:
 					dialog.ExecuteScript(ClientScripts.REQ_EVENT_SHOP_OPEN_COMMON, "EVENT_2301_HAPPY_NEW_YEAR_SHOP");
 					break;
-				default:
-					await Task.Yield();
-					break;
 			}
 		}
 
-		[DialogFunction("STEAM_TREASURE_EVENT")]
+		[DialogFunction]
 		public static async Task STEAM_TREASURE_EVENT(Dialog dialog)
 		{
 			await dialog.Msg("GLOBAL_EVENT_BOARD_NO_EVENT");
-			await Task.Yield();
 		}
 
-		[DialogFunction("EMILIA")]
+		[DialogFunction]
 		public static async Task EMILIA(Dialog dialog)
 		{
 			await dialog.Msg("Emilia_Select_1");
@@ -735,10 +773,9 @@ namespace Melia.Zone.Scripting.Shared
 					break;
 			}
 			await dialog.Msg("KLAPEDA_Emilia_basic22");
-			await Task.Yield();
 		}
 
-		[DialogFunction("AKALABETH")]
+		[DialogFunction]
 		public static async Task AKALABETH(Dialog dialog)
 		{
 			await dialog.Msg("Akalabeth_Select_1");
@@ -753,7 +790,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("ALFONSO")]
+		[DialogFunction]
 		public static async Task ALFONSO(Dialog dialog)
 		{
 			switch (await dialog.Select("ALFONSO_DLG1", "!@#$ALFONSO_1#@!", "!@#$ALFONSO_2#@!", "!@#$Auto_JongLyo#@!"))
@@ -767,7 +804,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("KLAPEDA_USKA")]
+		[DialogFunction]
 		public static async Task KLAPEDA_USKA(Dialog dialog)
 		{
 
@@ -787,10 +824,9 @@ namespace Melia.Zone.Scripting.Shared
 						await dialog.ExecuteScript(ClientScripts.OPEN_GUILD_CREATE_UI);
 					break;
 			}
-			await Task.Yield();
 		}
 
-		[DialogFunction("MASTER_CLERIC")]
+		[DialogFunction]
 		public static async Task MASTER_CLERIC(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_CLERIC_basic01");
@@ -808,7 +844,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("ACT_VILLAGERS")]
+		[DialogFunction]
 		public static async Task ACT_VILLAGERS(Dialog dialog)
 		{
 			await dialog.Msg("KLAPEDA_Villagers_basic1");
@@ -833,10 +869,9 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("KLAPEDA_Villagers_basic20");
 			await dialog.Msg("KLAPEDA_Villagers_basic21");
 			await dialog.Msg("KLAPEDA_Villagers_basic22");
-			await Task.Yield();
 		}
 
-		[DialogFunction("ACT_SMOM")]
+		[DialogFunction]
 		public static async Task ACT_SMOM(Dialog dialog)
 		{
 			await dialog.Msg("KLAPEDA_Smom_basic1");
@@ -846,24 +881,22 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("KLAPEDA_Smom_basic5");
 			await dialog.Msg("KLAPEDA_Smom_basic6");
 			await dialog.Msg("KLAPEDA_Smom_basic7");
-			await Task.Yield();
 		}
 
-		[DialogFunction("MASTER_PRIEST")]
+		[DialogFunction]
 		public static async Task MASTER_PRIEST(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_PRIEST_basic1");
 			await dialog.Msg("MASTER_PRIEST_basic2");
-			await Task.Yield();
 		}
 
-		[DialogFunction("KLAPEDA_SIGN9")]
+		[DialogFunction]
 		public static async Task KLAPEDA_SIGN9(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.Msg("KLAPEDA_SIGN9");
 		}
 
-		[DialogFunction("BLACKSMITH")]
+		[DialogFunction]
 		public static async Task BLACKSMITH(Dialog dialog)
 		{
 			switch (await dialog.Select("KLAPEDA_Smith_basic1", "@dicID_^*$ETC_20150317_004808$*^", "@dicID_^*$ITEM_20150317_002801$*^", "@dicID_^*$ETC_20150317_006116$*^", "@dicID_^*$UI_20160811_002287$*^", "@dicID_^*$SKILL_20150317_001404$*^", "@dicID_^*$ETC_20171128_030158$*^", "@dicID_^*$ETC_20171128_030159$*^", "@dicID_^*$ETC_20180629_034259$*^", "!@#$Auto_JongLyo#@!"))
@@ -896,21 +929,23 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("MASTER_KRIWI")]
+		[DialogFunction]
 		public static async Task MASTER_KRIWI(Dialog dialog)
 		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 			await dialog.Msg("MASTER_KRIWI_basic1");
 			await dialog.OpenShop("Master_Kriwi");
 		}
 
-		[DialogFunction("TUTO_GIRL")]
+		[DialogFunction]
 		public static async Task TUTO_GIRL(Dialog dialog)
 		{
 			await dialog.Msg("TUTO_GIRL_basic_01");
 			await dialog.Msg("TUTO_GIRL_basic_02");
 		}
 
-		[DialogFunction("KLAPEDA_NPC_14")]
+		[DialogFunction]
 		public static async Task KLAPEDA_NPC_14(Dialog dialog)
 		{
 			await dialog.Msg("KLAPEDA_NPC_14_basic01");
@@ -918,7 +953,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("KLAPEDA_NPC_14_basic03");
 		}
 
-		[DialogFunction("KLAPEDA_MARKET")]
+		[DialogFunction]
 		public static async Task KLAPEDA_MARKET(Dialog dialog)
 		{
 			switch (await dialog.Select("KLAPEDA_MARKET_SEL", "!@#$KLAPEDA_MARKET_OPEN#@!", "!@#$Auto_DaeHwa_JongLyo#@!"))
@@ -929,38 +964,34 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("MASTER_PELTASTA")]
+		[DialogFunction]
 		public static async Task MASTER_PELTASTA(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_PELTASTA_basic1");
 			await dialog.Msg("MASTER_PELTASTA_basic2");
-			await Task.Yield();
 		}
 
-		[DialogFunction("MASTER_ICEMAGE")]
+		[DialogFunction]
 		public static async Task MASTER_ICEMAGE(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_ICEMAGE_basic1");
-			await Task.Yield();
 		}
 
-		[DialogFunction("MASTER_QU")]
+		[DialogFunction]
 		public static async Task MASTER_QU(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_QU_basic1");
 			await dialog.Msg("MASTER_QU_basic2");
-			await Task.Yield();
 		}
 
-		[DialogFunction("MASTER_RANGER")]
+		[DialogFunction]
 		public static async Task MASTER_RANGER(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_RANGER_basic1");
 			await dialog.Msg("MASTER_RANGER_basic2");
-			await Task.Yield();
 		}
 
-		[DialogFunction("MASTER_SWORDMAN")]
+		[DialogFunction]
 		public static async Task MASTER_SWORDMAN(Dialog dialog)
 		{
 			switch (await dialog.Select(RandomElement("MASTER_SWORDMAN_basic1", "MASTER_SWORDMAN_basic2"), "@dicID_^*$ETC_20190104_037026$*^", "@dicID_^*$ETC_20191024_043341$*^", "!@#$Auto_JongLyo#@!"))
@@ -969,21 +1000,19 @@ namespace Melia.Zone.Scripting.Shared
 					await dialog.OpenShop("Master_Swordman");
 					break;
 				case 2:
-					dialog.ExecuteScript(ClientScripts.HIDDENABILITY_DECOMPOSE_UI_OPEN);
+					await dialog.ExecuteScript(ClientScripts.HIDDENABILITY_DECOMPOSE_UI_OPEN);
 					break;
 			}
-			await Task.Yield();
 		}
 
-		[DialogFunction("MASTER_WIZARD")]
+		[DialogFunction]
 		public static async Task MASTER_WIZARD(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_WIZARD_basic1");
 			await dialog.Msg("MASTER_WIZARD_basic2");
-			await Task.Yield();
 		}
 
-		[DialogFunction("MASTER_ARCHER")]
+		[DialogFunction]
 		public static async Task MASTER_ARCHER(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_ARCHER_basic1");
@@ -1001,22 +1030,22 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("KLAPEDA_SIGN30")]
+		[DialogFunction]
 		public static async Task KLAPEDA_SIGN30(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.Msg("KLAPEDA_SIGN30");
 		}
 
-		[DialogFunction("KLAPEDA_SIGN31")]
+		[DialogFunction]
 		public static async Task KLAPEDA_SIGN31(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.Msg("KLAPEDA_SIGN31");
 		}
 
-		[DialogFunction("KLAPEDA_SIGN32")]
+		[DialogFunction]
 		public static async Task KLAPEDA_SIGN32(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.Msg("KLAPEDA_SIGN32");
 		}
 
 		[DialogFunction]
@@ -1096,16 +1125,16 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("PETSHOP_KLAIPE_PET")]
+		[DialogFunction]
 		public static async Task PETSHOP_KLAIPE_PET(Dialog dialog)
 		{
 			dialog.PlayAnimation("pet");
 		}
 
-		[DialogFunction("JOURNEY_SHOP")]
+		[DialogFunction]
 		public static async Task JOURNEY_SHOP(Dialog dialog)
 		{
-			var player = dialog.Player;
+			var character = dialog.Player;
 
 			switch (await dialog.Select("RENA_BASIC01", "@dicID_^*$ETC_20150317_002514$*^", "@dicID_^*$ETC_20160310_021033$*^", "@dicID_^*$ETC_20211217_065424$*^", "@dicID_^*$ETC_20190802_042398$*^", "@dicID_^*$ETC_20180418_032113$*^", "@dicID_^*$ETC_20190104_037030$*^", "@dicID_^*$ETC_20190223_040846$*^", "!@#$Auto_JongLyo#@!"))
 			{
@@ -1122,9 +1151,9 @@ namespace Melia.Zone.Scripting.Shared
 							case 1:
 								// Depending on which maps have been visited add reward item and reward property.
 								// Reference property: PropertyName.Reward_{mapname}
-								player.EtcProperties.SetFloat(PropertyName.Reward_f_siauliai_out, 1);
-								Send.ZC_OBJECT_PROPERTY(player, PropertyName.Reward_f_siauliai_out);
-								Send.ZC_PC_PROP_UPDATE(player, (short)PropertyTable.GetId("PCEtc", PropertyName.Reward_f_siauliai_out), 1);
+								character.EtcProperties.SetFloat(PropertyName.Reward_f_siauliai_out, 1);
+								Send.ZC_OBJECT_PROPERTY(character, PropertyName.Reward_f_siauliai_out);
+								Send.ZC_PC_PROP_UPDATE(character, (short)PropertyTable.GetId("PCEtc", PropertyName.Reward_f_siauliai_out), 1);
 								break;
 						}
 					}
@@ -1142,8 +1171,8 @@ namespace Melia.Zone.Scripting.Shared
 							switch (await dialog.Select("RENA_GET_KEDORA_SUPPORT_BOX_DLG_2", "!@#$GET_KEDORA_SUPPORT_BOX_MSG_4#@!", "!@#$Auto_JongLyo#@!"))
 							{
 								case 1:
-									player.AddItem(11030377);
-									Send.ZC_ADDON_MSG(player, AddonMessage.NOTICE_Dm_GetItem, 0, "!@#$GET_KEDORA_SUPPORT_BOX_MSG_1#@!");
+									character.AddItem(11030377);
+									character.AddonMessage(AddonMessage.NOTICE_Dm_GetItem, "!@#$GET_KEDORA_SUPPORT_BOX_MSG_1#@!");
 									break;
 							}
 							break;
@@ -1153,7 +1182,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("COLLECTION_SHOP")]
+		[DialogFunction]
 		public static async Task COLLECTION_SHOP(Dialog dialog)
 		{
 			await dialog.Msg("HENRIKA_BASIC01");
@@ -1190,7 +1219,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("WAREHOUSE")]
+		[DialogFunction]
 		public static async Task WAREHOUSE(Dialog dialog)
 		{
 			switch (await dialog.Select("WAREHOUSE_DLG", "!@#$WareHouse#@!", "!@#$AccountWareHouse#@!", "!@#$Close#@!"))
@@ -1204,7 +1233,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("MASTER_ORACLE")]
+		[DialogFunction]
 		public static async Task MASTER_ORACLE(Dialog dialog)
 		{
 			var player = dialog.Player;
@@ -1231,11 +1260,11 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("WARP_C_KLAIPE")]
+		[DialogFunction]
 		public static async Task WARP_C_KLAIPE(Dialog dialog)
 			=> await STATUE_WARP(dialog);
 
-		[DialogFunction("FEDIMIAN_ROTA_02")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_ROTA_02(Dialog dialog)
 		{
 			await dialog.Msg("FEDIMIAN_ROTA_02_basic01");
@@ -1251,7 +1280,7 @@ namespace Melia.Zone.Scripting.Shared
 			await Task.Yield();
 		}
 
-		[DialogFunction("MISSIONSHOP_NPC_01")]
+		[DialogFunction]
 		public static async Task MISSIONSHOP_NPC_01(Dialog dialog)
 		{
 			switch (await dialog.Select("MISSIONSHOP_NPC_01_DLG_1", "!@#$MISSIONSHOP_NPC_01_SELECT1_MSG7#@!", "!@#$MISSIONSHOP_NPC_01_SELECT1_MSG1#@!", "!@#$MISSIONSHOP_NPC_01_SELECT1_MSG2#@!", "!@#$MISSIONSHOP_NPC_01_SELECT1_MSG3#@!", "!@#$MISSIONSHOP_NPC_01_SELECT1_MSG4#@!", "!@#$MISSIONSHOP_NPC_01_SELECT1_MSG5#@!", "!@#$MISSIONSHOP_NPC_01_SELECT1_MSG6#@!", "!@#$Auto_JongLyo#@!"))
@@ -1261,7 +1290,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("PARTYQUEST_NPC_01")]
+		[DialogFunction]
 		public static async Task PARTYQUEST_NPC_01(Dialog dialog)
 		{
 			var party = dialog.Player.Connection.Party;
@@ -1285,32 +1314,36 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("DROPITEM_REQUEST1_NPC")]
+		[DialogFunction]
 		public static async Task DROPITEM_REQUEST1_NPC(Dialog dialog)
 		{
 			await dialog.Msg("DROPITEM_REQUEST1_NPC_basic1");
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("KLAPEDA_FISHING_CAT")]
+		[DialogFunction]
 		public static async Task KLAPEDA_FISHING_CAT(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("LOWLV_GREEN_SELPHUI")]
+		[DialogFunction]
 		public static async Task LOWLV_GREEN_SELPHUI(Dialog dialog)
 		{
 			await dialog.Msg("LOWLV_GREEN_SELPHUI_BASIC");
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("LOWLV_BOASTER_MUENCHHAUSEN")]
+		[DialogFunction]
 		public static async Task LOWLV_BOASTER_MUENCHHAUSEN(Dialog dialog)
 		{
 			await dialog.Msg(RandomElement<string>("MUENCHHAUSEN_BASIC1", "MUENCHHAUSEN_BASIC2"));
 		}
 
-		[DialogFunction("KLAPEDA_FISHING_MANAGER")]
+		[DialogFunction]
 		public static async Task KLAPEDA_FISHING_MANAGER(Dialog dialog)
 		{
 			if (await dialog.HooksByDialogName("BeforeStart"))
@@ -1336,21 +1369,21 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("WORLDPVP_START")]
+		[DialogFunction]
 		public static async Task WORLDPVP_START(Dialog dialog)
 		{
 			await dialog.Msg("WORLDPVP_SELECT_MSG1");
 			await dialog.Msg("WORLDPVP_SELECT_MSG2");
 		}
 
-		[DialogFunction("CHAR119_MSTEP3_4_NPC")]
+		[DialogFunction]
 		public static async Task CHAR119_MSTEP3_4_NPC(Dialog dialog)
 		{
 			await dialog.Msg("CHAR119_MSTEP3_4_NPC_basic1");
 			await dialog.Msg("CHAR119_MSTEP3_4_NPC_basic2");
 		}
 
-		[DialogFunction("ONMYOJI_MASTER")]
+		[DialogFunction]
 		public static async Task ONMYOJI_MASTER(Dialog dialog)
 		{
 			await dialog.Msg("ONMYOJI_MASTER_basic1");
@@ -1358,7 +1391,7 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.Msg("ONMYOJI_MASTER_basic3");
 		}
 
-		[DialogFunction("NPC_JUNK_SHOP_KLAPEDA")]
+		[DialogFunction]
 		public static async Task NPC_JUNK_SHOP_KLAPEDA(Dialog dialog)
 		{
 			var character = dialog.Player;
@@ -1401,12 +1434,12 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("BEAUTY_IN_MOVE")]
+		[DialogFunction]
 		public static async Task BEAUTY_IN_MOVE(Dialog dialog)
 		{
 		}
 
-		[DialogFunction("CTRLTYPE_RESET_NPC")]
+		[DialogFunction]
 		public static async Task CTRLTYPE_RESET_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_BALLENCE_REWARD_NPC_DLG_11_GLOBAL\\!@#$JOB_BALLENCE_REWARD_NPC_CM_11_GLOBAL#@!");
@@ -1423,7 +1456,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("JOB_SCOUT3_1_NPC")]
+		[DialogFunction]
 		public static async Task JOB_SCOUT3_1_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_SCOUT3_1_NPC_BASIC01");
@@ -1439,68 +1472,79 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("ALCHEIST_EXPERT_NPC_KLAPEDA")]
+		[DialogFunction]
 		public static async Task ALCHEIST_EXPERT_NPC_KLAPEDA(Dialog dialog)
 		{
 			await dialog.Msg("ALCHEIST_EXPERT_NPC_KLAPEDA_basic");
 		}
 
-		[DialogFunction("TOSHERO_TUTO_NPC_01")]
+		[DialogFunction]
 		public static async Task TOSHERO_TUTO_NPC_01(Dialog dialog)
 		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("MASTER_HIGHLANDER")]
+		[DialogFunction]
+		public static async Task CARE_POPOBOOST_STATUS(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
 		public static async Task MASTER_HIGHLANDER(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_HIGHLANDER_basic1");
 			await dialog.Msg("MASTER_HIGHLANDER_basic2");
 		}
 
-		[DialogFunction("MASTER_BOCORS")]
+		[DialogFunction]
 		public static async Task MASTER_BOCORS(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_BOCORS_basic2");
 			await dialog.Msg("MASTER_BOCORS_basic1");
 		}
 
-		[DialogFunction("MASTER_FIREMAGE")]
+		[DialogFunction]
 		public static async Task MASTER_FIREMAGE(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_FIREMAGE_basic1");
 			await dialog.Msg("MASTER_FIREMAGE_basic2");
 		}
 
-		[DialogFunction("MASTER_CHAR2_24_CITY")]
+		[DialogFunction]
 		public static async Task MASTER_CHAR2_24_CITY(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_CHAR2_24_1_basic1");
 		}
 
-		[DialogFunction("FEDIMIAN_BOARD_01")]
+		[DialogFunction]
 		public static async Task FEDIMIAN_BOARD_01(Dialog dialog)
 		{
 		}
 
-		[DialogFunction("C_REQUEST_1_NPC_01")]
+		[DialogFunction]
 		public static async Task C_REQUEST_1_NPC_01(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("C_REQUEST_1_NPC_02")]
+		[DialogFunction]
 		public static async Task C_REQUEST_1_NPC_02(Dialog dialog)
 		{
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("ORSHA_KEDORLA_BOARD01")]
+		[DialogFunction]
 		public static async Task ORSHA_KEDORLA_BOARD01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("ORSHA_BLACKSMITH")]
+		[DialogFunction]
 		public static async Task ORSHA_BLACKSMITH(Dialog dialog)
 		{
 			await dialog.Msg("ORSHA_BLACKSMITH_basic01");
@@ -1511,14 +1555,10 @@ namespace Melia.Zone.Scripting.Shared
 					// Appraisal
 					await dialog.CustomDialog(CustomDialog.APPRAISAL);
 					break;
-				default:
-					await Task.Yield();
-					break;
 			}
-			await Task.Yield();
 		}
 
-		[DialogFunction("ORSHA_EQUIPMENT_DEALER")]
+		[DialogFunction]
 		public static async Task ORSHA_EQUIPMENT_DEALER(Dialog dialog)
 		{
 			await dialog.Msg("ORSHA_EQUIPMENT_DEALER_basic01");
@@ -1526,107 +1566,95 @@ namespace Melia.Zone.Scripting.Shared
 			await Task.Yield();
 		}
 
-		[DialogFunction("ORSHA_KEDORLA_MEMBER01")]
+		[DialogFunction]
 		public static async Task ORSHA_KEDORLA_MEMBER01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("C_ORSHA_HAMONDAIL")]
+		[DialogFunction]
 		public static async Task C_ORSHA_HAMONDAIL(Dialog dialog)
 		{
 			await dialog.Msg("C_ORSHA_HAMONDAIL_basic_01");
-			await Task.Yield();
 		}
 
-		[DialogFunction("C_ORSHA_SOLDIER_02")]
+		[DialogFunction]
 		public static async Task C_ORSHA_SOLDIER_02(Dialog dialog)
 		{
 			await dialog.Msg("C_ORSHA_SOLDIER_02_basic_01");
-			await Task.Yield();
 		}
 
-		[DialogFunction("C_ORSHA_URBONAS")]
+		[DialogFunction]
 		public static async Task C_ORSHA_URBONAS(Dialog dialog)
 		{
 			await dialog.Msg("C_ORSHA_URBONAS_basic_01");
 			await dialog.Msg("C_ORSHA_URBONAS_basic_02");
-			await Task.Yield();
 		}
 
-		[DialogFunction("ORSHA_TOOL_NPC")]
+		[DialogFunction]
 		public static async Task ORSHA_TOOL_NPC(Dialog dialog)
 		{
 			await dialog.Msg("ORSHA_TOOL_NPC_basic01");
 			await dialog.Msg("ORSHA_TOOL_NPC_basic02");
-			await Task.Yield();
 		}
 
-		[DialogFunction("ORSHA_ACCESSARY_NPC")]
+		[DialogFunction]
 		public static async Task ORSHA_ACCESSARY_NPC(Dialog dialog)
 		{
 			await dialog.Msg("ORSHA_ACCESSARY_NPC_basic01");
 			await dialog.Msg("ORSHA_ACCESSARY_NPC_basic02");
-			await Task.Yield();
 		}
 
-		[DialogFunction("DAOSHI_MASTER")]
+		[DialogFunction]
 		public static async Task DAOSHI_MASTER(Dialog dialog)
 		{
 			await dialog.Msg("DAOSHI_MASTER_basic1");
 			await dialog.Msg("DAOSHI_MASTER_basic2");
-			await Task.Yield();
 		}
 
-		[DialogFunction("JOB_2_PELTASTA_NPC")]
+		[DialogFunction]
 		public static async Task JOB_2_PELTASTA_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_2_PELTASTA_basic01");
 			await dialog.Msg("JOB_2_PELTASTA_basic02");
-			await Task.Yield();
 		}
 
-		[DialogFunction("JOB_2_HOPLITE_NPC")]
+		[DialogFunction]
 		public static async Task JOB_2_HOPLITE_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_2_HOPLITE_basic01");
 			await dialog.Msg("JOB_2_HOPLITE_basic02");
-			await Task.Yield();
 		}
 
-		[DialogFunction("JOB_2_CLERIC_NPC")]
+		[DialogFunction]
 		public static async Task JOB_2_CLERIC_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_2_CLERIC_basic01");
 			await dialog.Msg("JOB_2_CLERIC_basic02");
-			await Task.Yield();
 		}
 
-		[DialogFunction("JOB_2_KRIVIS_NPC")]
+		[DialogFunction]
 		public static async Task JOB_2_KRIVIS_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_2_KRIVIS_basic01");
 			await dialog.Msg("JOB_2_KRIVIS_basic02");
-			await Task.Yield();
 		}
 
-		[DialogFunction("JOB_2_PRIEST_NPC")]
+		[DialogFunction]
 		public static async Task JOB_2_PRIEST_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_2_PRIEST_basic01");
 			await dialog.Msg("JOB_2_PRIEST_basic02");
-			await Task.Yield();
 		}
 
-		[DialogFunction("JOB_2_BOKOR_NPC")]
+		[DialogFunction]
 		public static async Task JOB_2_BOKOR_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_2_BOKOR_basic01");
 			await dialog.Msg("JOB_2_BOKOR_basic02");
-			await Task.Yield();
 		}
 
-		[DialogFunction("JOB_2_RODELERO_NPC")]
+		[DialogFunction]
 		public static async Task JOB_2_RODELERO_NPC(Dialog dialog)
 		{
 			await dialog.Msg("JOB_2_RODELERO_basic01");
@@ -2101,32 +2129,32 @@ namespace Melia.Zone.Scripting.Shared
 			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("MASTER_SPE_NPC")]
+		[DialogFunction]
 		public static async Task MASTER_SPE_NPC(Dialog dialog)
 		{
 			await dialog.Msg("MASTER_Char1_24_1_basic1");
 			await Task.Yield();
 		}
 
-		[DialogFunction("BEAUTY_HAIRSHOP_MOVE")]
+		[DialogFunction]
 		public static async Task BEAUTY_HAIRSHOP_MOVE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("BEAUTY_BOUTIQUE_MOVE")]
+		[DialogFunction]
 		public static async Task BEAUTY_BOUTIQUE_MOVE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("BEAUTY_OUT_MOVE")]
+		[DialogFunction]
 		public static async Task BEAUTY_OUT_MOVE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("BEAUTY_SHOP_HAIR_F")]
+		[DialogFunction]
 		public static async Task BEAUTY_SHOP_HAIR_F(Dialog dialog)
 		{
 			switch (await dialog.Select("BEAUTY_SHOP_HAIR_F1", "!@#$BEAUTY_SHOP_HAIR_F2#@!", "!@#$BEAUTY_SHOP_HAIR_F3#@!", "!@#$BEAUTY_SHOP_HAIR_F4#@!", "!@#$BEAUTY_SHOP_SKIN#@!", "!@#$BEAUTY_SHOP_HAIR_ETC#@!", "!@#$BEAUTY_SHOP_HAIR_COUPON#@!", "!@#$Close#@!"))
@@ -2153,7 +2181,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("BEAUTY_SHOP_HAIR_M")]
+		[DialogFunction]
 		public static async Task BEAUTY_SHOP_HAIR_M(Dialog dialog)
 		{
 			switch (await dialog.Select("BEAUTY_SHOP_HAIR_M1", "!@#$BEAUTY_SHOP_HAIR_M2#@!", "!@#$BEAUTY_SHOP_HAIR_M3#@!", "!@#$BEAUTY_SHOP_HAIR_M4#@!", "!@#$BEAUTY_SHOP_SKIN#@!", "!@#$BEAUTY_SHOP_HAIR_ETC#@!", "!@#$BEAUTY_SHOP_HAIR_COUPON#@!", "!@#$Close#@!"))
@@ -2180,7 +2208,7 @@ namespace Melia.Zone.Scripting.Shared
 			}
 		}
 
-		[DialogFunction("BEAUTY_SHOP_FASHION")]
+		[DialogFunction]
 		public static async Task BEAUTY_SHOP_FASHION(Dialog dialog)
 		{
 			switch (await dialog.Select("BEAUTY_SHOP_FASHION", "!@#$BEAUTY_SHOP_FASHION_1#@!", "!@#$BEAUTY_SHOP_FASHION_2#@!", "!@#$BEAUTY_SHOP_FASHION_4#@!", "!@#$PREVIEW_SILVERGACHA#@!", "!@#$Close#@!"))
@@ -24983,13 +25011,15 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction("FIRETOWER691_SQ_2_OBJ")]
 		public static async Task FIRETOWER691_SQ_2_OBJ(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("FIRETOWER691_SQ_3_OBJ")]
+		[DialogFunction]
 		public static async Task FIRETOWER691_SQ_3_OBJ(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("TREASUREBOX_LV_D_FIRETOWER_69_11000")]
@@ -24999,7 +25029,8 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction("FTOWER691_KQ_1_NPC")]
 		public static async Task FTOWER691_KQ_1_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
 		[DialogFunction("FIRETOWER_69_2_FIRETOWER_69_1")]
@@ -26345,53 +26376,54 @@ namespace Melia.Zone.Scripting.Shared
 			dialog.Close();
 		}
 
-		[DialogFunction("UNKNOWN_SANTUARY_GATE_NORMAL")]
+		[DialogFunction]
 		public static async Task UNKNOWN_SANTUARY_GATE_NORMAL(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON1_MQ_NPC_10")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON1_MQ_NPC_10(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("WARP_EP13_2_D_PRISON_1")]
+		[DialogFunction]
 		public static async Task WARP_EP13_2_D_PRISON_1(Dialog dialog)
 			=> await STATUE_WARP(dialog);
 
-		[DialogFunction("EP13_2_DPRISON2_MQ_NPC_2")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON2_MQ_NPC_2(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON2_MQ_NPC_BOOKSHELF")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON2_MQ_NPC_BOOKSHELF(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON2_MQ_NPC_3")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON2_MQ_NPC_3(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON2_MQ_NPC_LOSTARTICLE")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON2_MQ_NPC_LOSTARTICLE(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON2_MQ_NPC_4")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON2_MQ_NPC_4(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON2_MQ_STORAGEBOX")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON2_MQ_STORAGEBOX(Dialog dialog)
 		{
 			dialog.Close();
@@ -26592,13 +26624,11 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L7")]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L7(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
 		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L8")]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L8(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
 		[DialogFunction("EP13_2_DPRISON3_MQ_NPC_6")]
@@ -26641,7 +26671,6 @@ namespace Melia.Zone.Scripting.Shared
 		public static async Task D_CASTLE_19_1_PORTAL_NPC_01(Dialog dialog)
 		{
 			await dialog.Msg("D_CASTLE_19_1_PORTAL_NPC_basic1");
-			dialog.Close();
 		}
 
 		[DialogFunction("EP14_1_FCASTLE2_MQ_1_NPC1")]
@@ -26739,713 +26768,847 @@ namespace Melia.Zone.Scripting.Shared
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_4_TENT2")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_4_TENT2(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_4_TENT3")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_4_TENT3(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_4_TENT4")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_4_TENT4(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_7_TENT1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_7_TENT1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_7_TENT2")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_7_TENT2(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_7_TENT3")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_7_TENT3(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_7_TENT4")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_7_TENT4(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_7_TENT5")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_7_TENT5(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_7_TENT6")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_7_TENT6(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE4_MQ_2_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE4_MQ_2_NPC1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE4_MQ_3_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE4_MQ_3_NPC1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE4_MQ_3_NPC2")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE4_MQ_3_NPC2(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE4_PAJAUTA_1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE4_PAJAUTA_1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE4_MQ_6_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE4_MQ_6_NPC1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE4_MQ_7_BLACKCRYSTAL1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE4_MQ_7_BLACKCRYSTAL1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE4_MQ_7_BLACKCRACK")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE4_MQ_7_BLACKCRACK(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE4_MQ_8_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE4_MQ_8_NPC1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE4_MQ_8_NPC2")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE4_MQ_8_NPC2(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("WARP_EP14_1_F_CASTLE_4")]
+		[DialogFunction]
 		public static async Task WARP_EP14_1_F_CASTLE_4(Dialog dialog)
 			=> await STATUE_WARP(dialog);
 
-		[DialogFunction("EP14_1_FCASTLE5_MQ_1_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE5_MQ_1_NPC1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE5_MQ_1_NPC2")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE5_MQ_1_NPC2(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE5_MQ_1_CART1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE5_MQ_1_CART1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE5_MQ_1_CART2")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE5_MQ_1_CART2(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE5_MQ_1_FLAG1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE5_MQ_1_FLAG1(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE5_MQ_8_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE5_MQ_8_NPC1(Dialog dialog)
 		{
 			await dialog.Msg("EP14_1_FCASTLE5_MQ_8_NPC1_IDLE_DLG1");
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE5_MQ_8_NPC2")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE5_MQ_8_NPC2(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("GODDESS_RAID_DELMORE_PORTAL")]
+		[DialogFunction]
 		public static async Task GODDESS_RAID_DELMORE_PORTAL(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_2_PORTAL2")]
+		[DialogFunction]
 		public static async Task EP14_2_PORTAL2(Dialog dialog)
 		{
-			dialog.Close();
 		}
 
-		[DialogFunction("EP14_2_PORTAL1")]
+		[DialogFunction]
 		public static async Task EP14_2_PORTAL1(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_1_Lamin1")]
+		[DialogFunction]
 		public static async Task EP14_2_1_Lamin1(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_Lamin2_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_1_PAJAUTA1")]
+		[DialogFunction]
 		public static async Task EP14_2_1_PAJAUTA1(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_PAJAUTA1_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_1_Lamin2")]
+		[DialogFunction]
 		public static async Task EP14_2_1_Lamin2(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_Lamin2_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_1_PAJAUTA2")]
+		[DialogFunction]
 		public static async Task EP14_2_1_PAJAUTA2(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_PAJAUTA1_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("WARP_EP14_2_DCASTLE_1")]
+		[DialogFunction]
 		public static async Task WARP_EP14_2_DCASTLE_1(Dialog dialog)
 			=> await STATUE_WARP(dialog);
 
-		[DialogFunction("EP14_2_RED_CRYSTAL")]
+		[DialogFunction]
 		public static async Task EP14_2_RED_CRYSTAL(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE1_WALL")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE1_WALL(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE_EXIT")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE_EXIT(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE_EXIT2")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE_EXIT2(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("WARP_EP14_2_DCASTLE_2")]
+		[DialogFunction]
 		public static async Task WARP_EP14_2_DCASTLE_2(Dialog dialog)
 			=> await STATUE_WARP(dialog);
 
-		[DialogFunction("EP14_2_DCASLTE2_ZEMINA")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASLTE2_ZEMINA(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASLTE2_PORTAL")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASLTE2_PORTAL(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_2_LAMIN1")]
+		[DialogFunction]
 		public static async Task EP14_2_2_LAMIN1(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_Lamin2_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_2_PAJAUTA1")]
+		[DialogFunction]
 		public static async Task EP14_2_2_PAJAUTA1(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_PAJAUTA1_basic1");
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_2_DCASTLE2_MANA1")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE2_MANA1(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_2_DCASTLE2_MANA2")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE2_MANA2(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_2_DCASTLE2_MANA3")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE2_MANA3(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_2_2_PAJAUTA2")]
+		[DialogFunction]
 		public static async Task EP14_2_2_PAJAUTA2(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_PAJAUTA1_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_2_LAMIN2")]
+		[DialogFunction]
 		public static async Task EP14_2_2_LAMIN2(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_Lamin2_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE2_MANA4")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE2_MANA4(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_DCASTLE2_MANA4_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE2_EXIT2")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE2_EXIT2(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE2_EXIT")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE2_EXIT(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("BAUBAS_GO_GUILDMISSION")]
+		[DialogFunction]
 		public static async Task BAUBAS_GO_GUILDMISSION(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASLTE3_PORTAL")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASLTE3_PORTAL(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE3_PAJAUTA")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE3_PAJAUTA(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_PAJAUTA1_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE3_RAMIN")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE3_RAMIN(Dialog dialog)
 		{
 			await dialog.Msg("EP14_2_1_Lamin2_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_TRPLEHELIX1")]
+		[DialogFunction]
 		public static async Task EP14_2_TRPLEHELIX1(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_TRPLEHELIX2")]
+		[DialogFunction]
 		public static async Task EP14_2_TRPLEHELIX2(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_TRPLEHELIX3")]
+		[DialogFunction]
 		public static async Task EP14_2_TRPLEHELIX3(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE3_WALL")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE3_WALL(Dialog dialog)
 		{
-			dialog.Close();
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("RAID_CASTLE_EP14_2_PORTAL")]
+		[DialogFunction]
 		public static async Task RAID_CASTLE_EP14_2_PORTAL(Dialog dialog)
 		{
-			dialog.Close();
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("RAID_CASTLE_EP14_2_SOLD")]
+		[DialogFunction]
 		public static async Task RAID_CASTLE_EP14_2_SOLD(Dialog dialog)
 		{
-			dialog.Close();
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE3_RAMIN2")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE3_RAMIN2(Dialog dialog)
 		{
-			dialog.Close();
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE3_EXIT2")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE3_EXIT2(Dialog dialog)
 		{
-			dialog.Close();
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP14_2_DCASTLE3_EXIT")]
+		[DialogFunction]
 		public static async Task EP14_2_DCASTLE3_EXIT(Dialog dialog)
 		{
-			dialog.Close();
-			await Task.Yield();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("RAID_CASTLE_EP14_2_FSOLD")]
+		[DialogFunction]
 		public static async Task RAID_CASTLE_EP14_2_FSOLD(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY1_AD1")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY1_AD1(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_AD_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY1_ROZE1")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY1_ROZE1(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_Roze_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("WARP_EP15_1_F_ABBEY_1")]
+		[DialogFunction]
 		public static async Task WARP_EP15_1_F_ABBEY_1(Dialog dialog)
 			=> await STATUE_WARP(dialog);
 
-		[DialogFunction("EP15_1_RED_PLANET")]
+		[DialogFunction]
 		public static async Task EP15_1_RED_PLANET(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY1_ROZE2")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY1_ROZE2(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_Roze_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY1_AD2")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY1_AD2(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_AD_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY1_AD3")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY1_AD3(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_AD_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY1_ROZE3")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY1_ROZE3(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_Roze_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY1_ROZE4")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY1_ROZE4(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_Roze_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY1_AD4")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY1_AD4(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_AD_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_ABBEY1_SQ1_NPC")]
+		[DialogFunction]
 		public static async Task EP15_1_ABBEY1_SQ1_NPC(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_ABBEY1_SQ1_basic");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_GLOVECUPSULE")]
+		[DialogFunction]
 		public static async Task EP15_1_GLOVECUPSULE(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("WARP_EP15_1_F_ABBEY_2")]
+		[DialogFunction]
 		public static async Task WARP_EP15_1_F_ABBEY_2(Dialog dialog)
 			=> await STATUE_WARP(dialog);
 
-		[DialogFunction("EP15_1_FABBEY2_ZEMINA")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY2_ZEMINA(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY2_AD1")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY2_AD1(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_AD_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY2_ROZE1")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY2_ROZE1(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_Roze_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_F_ABBEY2_2_CART")]
+		[DialogFunction]
 		public static async Task EP15_1_F_ABBEY2_2_CART(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY2_MQ4_BOWER01")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY2_MQ4_BOWER01(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY2_MQ4_BOWER02")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY2_MQ4_BOWER02(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY2_MQ4_BOWER03")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY2_MQ4_BOWER03(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY2_MQ4_BOWER04")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY2_MQ4_BOWER04(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY2_ROZE2")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY2_ROZE2(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_Roze_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY2_AD2")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY2_AD2(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_F_ABBEY_AD_basic1");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_ABBEY2_SQ3_NPC")]
+		[DialogFunction]
 		public static async Task EP15_1_ABBEY2_SQ3_NPC(Dialog dialog)
 		{
 			await dialog.Msg("EP15_1_ABBEY2_SQ3_basic");
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_ABBEY2_SQ1_NPC")]
+		[DialogFunction]
 		public static async Task EP15_1_ABBEY2_SQ1_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("GODDESS_RAID_ROZE_PORTAL")]
+		[DialogFunction]
+		public static async Task EP15_2_D_NICOPOLIS_2_MQ_2_PIP(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
 		public static async Task GODDESS_RAID_ROZE_PORTAL(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_F_ABBEY3_AD1")]
+		[DialogFunction]
 		public static async Task EP15_1_F_ABBEY3_AD1(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_FABBEY3_BLOCK")]
+		[DialogFunction]
 		public static async Task EP15_1_FABBEY3_BLOCK(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_F_ABBEY3_3_STONE")]
+		[DialogFunction]
 		public static async Task EP15_1_F_ABBEY3_3_STONE(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_F_ABBEY3_4_STONE")]
+		[DialogFunction]
 		public static async Task EP15_1_F_ABBEY3_4_STONE(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_F_ABBEY3_AD2")]
+		[DialogFunction]
 		public static async Task EP15_1_F_ABBEY3_AD2(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("RAID_EP15_1_NPC")]
+		[DialogFunction]
 		public static async Task RAID_EP15_1_NPC(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_F_ABBEY_3_SQ1_BOOK1")]
+		[DialogFunction]
 		public static async Task EP15_1_F_ABBEY_3_SQ1_BOOK1(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_F_ABBEY_3_SQ1_BOOK2")]
+		[DialogFunction]
 		public static async Task EP15_1_F_ABBEY_3_SQ1_BOOK2(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("EP15_1_F_ABBEY_3_SQ2_BOOK1")]
+		[DialogFunction]
 		public static async Task EP15_1_F_ABBEY_3_SQ2_BOOK1(Dialog dialog)
 		{
-			dialog.Close();
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
 		}
 
-		[DialogFunction("MON_DUMMY")]
+		[DialogFunction]
+		public static async Task EP15_2_DNICOPOLIS_PORTAL(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EP15_2_D_NICO_AUSIRINE_1(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task WARP_EP15_2_D_NICOPOLIS_1(Dialog dialog)
+			=> await STATUE_WARP(dialog);
+
+		[DialogFunction]
+		public static async Task EP15_2_D_NICO_AUSIRINE_2(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EP15_2_D_NICOPOLIS_1_MQ_4_CRYSTAL(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EP15_2_D_NICO_AUSIRINE_3(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EP15_2_D_NICOPOLIS_1_MQ_6_CRYSTAL(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task GODDESS_EP15_2_RAID_PORTAL2(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EP15_2_DNICOPOLIS_2_PORTAL(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EP15_2_D_NICO_2_AUSIRINE_1(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EP15_2_D_NICO_2_PORTAL_1(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EP15_2_D_NICO_2_PORTAL_2(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task GODDESS_EP15_2_RAID_PORTAL(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
+		public static async Task EP15_2_D_NICOPOLIS_2_MQ_6_END(Dialog dialog)
+		{
+			await dialog.HooksByDialogName("BeforeStart");
+			await dialog.HooksByDialogName("BeforeEnd");
+		}
+
+		[DialogFunction]
 		public static async Task MON_DUMMY(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("NPC_HIDEMONBOX")]
+		[DialogFunction]
 		public static async Task NPC_HIDEMONBOX(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("NPC_FLAMEGOD1")]
+		[DialogFunction]
 		public static async Task NPC_FLAMEGOD1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("DIBSKILL_ZONEMOVE")]
+		[DialogFunction]
 		public static async Task DIBSKILL_ZONEMOVE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("MANDRAGORA")]
+		[DialogFunction]
 		public static async Task MANDRAGORA(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("UDUMBARA")]
+		[DialogFunction]
 		public static async Task UDUMBARA(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("APPRAISER_FORGERY")]
+		[DialogFunction]
 		public static async Task APPRAISER_FORGERY(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("Well_Of_Life")]
+		[DialogFunction]
 		public static async Task Well_Of_Life(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("BLANK_NPC")]
+		[DialogFunction]
 		public static async Task BLANK_NPC(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("RED_CRYSTAL")]
+		[DialogFunction]
 		public static async Task RED_CRYSTAL(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("VELCOFFER_ROOM_WARP_POTAL")]
+		[DialogFunction]
 		public static async Task VELCOFFER_ROOM_WARP_POTAL(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("UNIQ_STARTTOWER_STAGE_3_2_SETPOS")]
+		[DialogFunction]
 		public static async Task UNIQ_STARTTOWER_STAGE_3_2_SETPOS(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("UNIQ_STARTTOWER_STAGE_5_2_SETPOS")]
+		[DialogFunction]
 		public static async Task UNIQ_STARTTOWER_STAGE_5_2_SETPOS(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GLACIER_TUTO_RP_NPC_01")]
+		[DialogFunction]
 		public static async Task GLACIER_TUTO_RP_NPC_01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("TREEDAY_TREE1")]
+		[DialogFunction]
 		public static async Task TREEDAY_TREE1(Dialog dialog)
 		{
 			switch (await dialog.Select("EVENT_TREEDAY_TALK_DLG", "!@#$EVENT_COMMON_MSG1#@!", "!@#$EVENT_TREEDAY_GROW#@!", "!@#$EVENT_TREEDAY_CHECK_EXP#@!", "!@#$EVENT_TREEDAY_GUILD_RANK#@!", "!@#$Auto_JongLyo#@!"))
@@ -27464,55 +27627,55 @@ namespace Melia.Zone.Scripting.Shared
 			await Task.Yield();
 		}
 
-		[DialogFunction("TREEDAY_TREE2")]
+		[DialogFunction]
 		public static async Task TREEDAY_TREE2(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("TREEDAY_TREE3")]
+		[DialogFunction]
 		public static async Task TREEDAY_TREE3(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("TREEDAY_TREE4")]
+		[DialogFunction]
 		public static async Task TREEDAY_TREE4(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("TREEDAY_TREE5")]
+		[DialogFunction]
 		public static async Task TREEDAY_TREE5(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("TREEDAY_TREE6")]
+		[DialogFunction]
 		public static async Task TREEDAY_TREE6(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("TREEDAY_TREE7")]
+		[DialogFunction]
 		public static async Task TREEDAY_TREE7(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_PRODUCTION")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_PRODUCTION(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PVP_MINE_SHOP")]
+		[DialogFunction]
 		public static async Task PVP_MINE_SHOP(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GOLD_FISH_STATUE")]
+		[DialogFunction]
 		public static async Task GOLD_FISH_STATUE(Dialog dialog)
 		{
 			var character = dialog.Player;
@@ -27526,342 +27689,390 @@ namespace Melia.Zone.Scripting.Shared
 						character.SystemMessage("Auto_SilBeoKa_BuJogHapNiDa.");
 						return;
 					}
-					character.Buffs.AddOrUpdate(new Buff(BuffId.STATUE_LOOTINGCHANCE, 50, 0, TimeSpan.FromMinutes(30), character, npc));
+					character.StartBuff(BuffId.STATUE_LOOTINGCHANCE, 50, 0, TimeSpan.FromMinutes(30), npc);
 					break;
 			}
 		}
 
-		[DialogFunction("F_TABLELAND_28_2_RAID_07_NPC_01")]
+		[DialogFunction]
 		public static async Task F_TABLELAND_28_2_RAID_07_NPC_01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("DELMORECASTLEGATE_KRUVINABULLET")]
+		[DialogFunction]
 		public static async Task DELMORECASTLEGATE_KRUVINABULLET(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_FARMER_NORMAL")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_FARMER_NORMAL(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("EVENT_2001_NEWYEAR_POT")]
+		[DialogFunction]
 		public static async Task EVENT_2001_NEWYEAR_POT(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("NPC_CONTENTS_MULTIPLE")]
+		[DialogFunction]
 		public static async Task NPC_CONTENTS_MULTIPLE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("AUTO_CHALLENGE_END")]
+		[DialogFunction]
 		public static async Task AUTO_CHALLENGE_END(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("MULTIPLE_REWARD_BY_MGAME")]
+		[DialogFunction]
 		public static async Task MULTIPLE_REWARD_BY_MGAME(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("MGAME_END_PORTAL")]
+		[DialogFunction]
 		public static async Task MGAME_END_PORTAL(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("SOLO_DUNGEON_EXIT")]
+		[DialogFunction]
 		public static async Task SOLO_DUNGEON_EXIT(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("VASILISSA_SPEAR_GET_ENTER")]
+		[DialogFunction]
 		public static async Task VASILISSA_SPEAR_GET_ENTER(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("AETHER_GEM_REINFORCE")]
+		[DialogFunction]
 		public static async Task AETHER_GEM_REINFORCE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("EARRING_RAID_SET_READY")]
+		[DialogFunction]
 		public static async Task EARRING_RAID_SET_READY(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GODDESS_RAID_JELLYZELE_TWINKLE_OBJ")]
+		[DialogFunction]
 		public static async Task GODDESS_RAID_JELLYZELE_TWINKLE_OBJ(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("SPREADER_TRANSITION_CRYSTAL_FRAGMENT")]
+		[DialogFunction]
 		public static async Task SPREADER_TRANSITION_CRYSTAL_FRAGMENT(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GODDESS_RAID_SPREADER_START")]
+		[DialogFunction]
 		public static async Task GODDESS_RAID_SPREADER_START(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GODDESS_RAID_FALOUROS_START")]
+		[DialogFunction]
 		public static async Task GODDESS_RAID_FALOUROS_START(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_BAUBAS_RAID")]
+		[DialogFunction]
 		public static async Task GUILD_BAUBAS_RAID(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GODDESS_RAID_ROZE_KUPOLE_LIGHT")]
+		[DialogFunction]
 		public static async Task GODDESS_RAID_ROZE_KUPOLE_LIGHT(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GODDESS_RAID_ROZE_START")]
+		[DialogFunction]
 		public static async Task GODDESS_RAID_ROZE_START(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("BRIDGE_WAILING_FIRST_SECTION")]
+		[DialogFunction]
 		public static async Task BRIDGE_WAILING_FIRST_SECTION(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("BRIDGE_WAILING_SECOND_SECTION")]
+		[DialogFunction]
 		public static async Task BRIDGE_WAILING_SECOND_SECTION(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("BRIDGE_WAILING_THIRD_SECTION")]
+		[DialogFunction]
 		public static async Task BRIDGE_WAILING_THIRD_SECTION(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("UNIQUE_RAID_NICOPOLIS_STAGE_STAGE_03_OPEN_ANIM")]
+		[DialogFunction]
+		public static async Task GODDESS_RAID_UPINIS_START(Dialog dialog)
+		{
+			await Task.Yield();
+		}
+
+		[DialogFunction]
+		public static async Task GODDESS_RAID_SLOGUTIS_START(Dialog dialog)
+		{
+			await Task.Yield();
+		}
+
+		[DialogFunction]
+		public static async Task EVENT_MOON_RABBIT_START_NPC(Dialog dialog)
+		{
+			await Task.Yield();
+		}
+
+		[DialogFunction]
+		public static async Task BRIDGE_WAILING_DIMENSION_FIRST_STEP(Dialog dialog)
+		{
+			await Task.Yield();
+		}
+
+		[DialogFunction]
+		public static async Task BRIDGE_WAILING_DIMENSION_SECOND_STEP(Dialog dialog)
+		{
+			await Task.Yield();
+		}
+
+		[DialogFunction]
+		public static async Task BRIDGE_WAILING_DIMENSION_THIRD_STEP(Dialog dialog)
+		{
+			await Task.Yield();
+		}
+
+		[DialogFunction]
+		public static async Task GODDESS_RAID_MERREGINA_START(Dialog dialog)
+		{
+			await Task.Yield();
+		}
+
+		[DialogFunction]
+		public static async Task GODDESS_RAID_MERREGINA_MAP_PATTERN(Dialog dialog)
+		{
+			await Task.Yield();
+		}
+
+		[DialogFunction]
 		public static async Task UNIQUE_RAID_NICOPOLIS_STAGE_STAGE_03_OPEN_ANIM(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("UNIQUE_RAID_NICOPOLIS_STAGE_04_MANABALL")]
+		[DialogFunction]
 		public static async Task UNIQUE_RAID_NICOPOLIS_STAGE_04_MANABALL(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("UNIQUE_RAID_NICOPOLIS_STAGE_05_OBJ")]
+		[DialogFunction]
 		public static async Task UNIQUE_RAID_NICOPOLIS_STAGE_05_OBJ(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("UNIQUE_RAID_NICOPOLIS_BOSS_STAGE")]
+		[DialogFunction]
 		public static async Task UNIQUE_RAID_NICOPOLIS_BOSS_STAGE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("DesperateDefense")]
+		[DialogFunction]
 		public static async Task DesperateDefense(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("OBJ_TEST")]
+		[DialogFunction]
 		public static async Task OBJ_TEST(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("Interaction_orsha_catapult")]
+		[DialogFunction]
 		public static async Task Interaction_orsha_catapult(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("Interaction_ballista")]
+		[DialogFunction]
 		public static async Task Interaction_ballista(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("Interaction_ballista_extreme")]
+		[DialogFunction]
 		public static async Task Interaction_ballista_extreme(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("OBJ_RIDE_TEST")]
+		[DialogFunction]
 		public static async Task OBJ_RIDE_TEST(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("INTERACTION_RIDE_GRESMERAVEN")]
+		[DialogFunction]
 		public static async Task INTERACTION_RIDE_GRESMERAVEN(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("MYTHIC_PORTAL")]
+		[DialogFunction]
 		public static async Task MYTHIC_PORTAL(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("EXCHANGE_PVP_MINE")]
+		[DialogFunction]
 		public static async Task EXCHANGE_PVP_MINE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("EVENT_1910_FIREBALL")]
+		[DialogFunction]
 		public static async Task EVENT_1910_FIREBALL(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("EVENT_1910_SCARECROW")]
+		[DialogFunction]
 		public static async Task EVENT_1910_SCARECROW(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_BENCH")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_BENCH(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_LAMP")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_LAMP(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_LANTERN")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_LANTERN(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_BIG_TREE")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_BIG_TREE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_GRAMOPHONE")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_GRAMOPHONE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_PARASOL")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_PARASOL(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_FLOWER_TABLE_SET")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_FLOWER_TABLE_SET(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_ARMOR_LAB")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_ARMOR_LAB(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_ATTRIBUTE_LAB")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_ATTRIBUTE_LAB(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_WEAPON_LAB")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_WEAPON_LAB(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_BAKARINE_STATUS")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_BAKARINE_STATUS(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_FOREST_POND_01")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_FOREST_POND_01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_FOREST_BEAR_01")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_FOREST_BEAR_01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_FOREST_BENCH_01")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_FOREST_BENCH_01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_FOREST_BENCH_02")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_FOREST_BENCH_02(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_FOREST_HAMMOCK_01")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_FOREST_HAMMOCK_01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_FOREST_TABLE_01")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_FOREST_TABLE_01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("GUILD_HOUSING_OBJ_DUNGEON")]
+		[DialogFunction]
 		public static async Task GUILD_HOUSING_OBJ_DUNGEON(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_06_CHAIR_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_06_CHAIR_1(Dialog dialog)
 		{
 			var character = dialog.Player;
@@ -27878,160 +28089,161 @@ namespace Melia.Zone.Scripting.Shared
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_06_DESK_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_06_DESK_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_06_FISHTANK_01")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_06_FISHTANK_01(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_06_FISHTANK_01_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_06_FISHTANK_01_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_04_CHAIR_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_04_CHAIR_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_03_BEARTOY_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_03_BEARTOY_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERONAL_HOUSING_OBJ_CANDY_GACHA")]
+		[DialogFunction]
 		public static async Task PERONAL_HOUSING_OBJ_CANDY_GACHA(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_VILLAGE_CHAIR_01_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_VILLAGE_CHAIR_01_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_VILLAGE_SOFA_01_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_VILLAGE_SOFA_01_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_08_SOFA_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_08_SOFA_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_07_ALLIGATOR_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_07_ALLIGATOR_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_09_CHAIR_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_09_CHAIR_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_2")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_2(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_3")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_3(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_1_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_1_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_03_DESK_BOOK_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_03_DESK_BOOK_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_03_BEARTOYDESK_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_03_BEARTOYDESK_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_4")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_02_CHAIR_4(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_11_CHAIR_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_11_CHAIR_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_15_CHAIR_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_15_CHAIR_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_12_LAMP_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_12_LAMP_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_12_PHONE_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_12_PHONE_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("BARRACK_12_CLOCK_1")]
+		[DialogFunction]
 		public static async Task BARRACK_12_CLOCK_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_12_CHAIR_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_12_CHAIR_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_12_RECORD_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_12_RECORD_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_12_SANDGLASS_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_12_SANDGLASS_1(Dialog dialog)
 		{
 			var player = dialog.Player;
+			var npc = dialog.Npc;
 
 			switch (await dialog.Select("PERSONAL_hp_barrack_12_sandglass_1\\!@#$Personal_Housing_hp_barrack_12_sandglass_MSG_1$*$TGTNAME$*$@dicID_^*$ETC_20210809_060159$*^$*$STATE$*$!@#$Personal_Housing_Active_Off_2#@!#@!", "!@#$Personal_Housing_Active_On_1#@!", "!@#$Auto_JongLyo#@!"))
 			{
@@ -28050,32 +28262,28 @@ namespace Melia.Zone.Scripting.Shared
 					//Send.ZC_PLAY_ANI(player, 12720, false, 253);
 					Send.ZC_NORMAL.ClearEffects(dialog.Npc);
 					break;
-				default:
-					dialog.Close();
-					break;
 			}
-			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_12_DESK_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_12_DESK_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BARRACK_12_TABLELAMP_1")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BARRACK_12_TABLELAMP_1(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("PERSONAL_HOUSING_OBJ_BOSS_FIGURE")]
+		[DialogFunction]
 		public static async Task PERSONAL_HOUSING_OBJ_BOSS_FIGURE(Dialog dialog)
 		{
 			await Task.Yield();
 		}
 
-		[DialogFunction("BOUNTYHUNT_NPC")]
+		[DialogFunction]
 		public static async Task BOUNTYHUNT_NPC(Dialog dialog)
 		{
 			await Task.Yield();

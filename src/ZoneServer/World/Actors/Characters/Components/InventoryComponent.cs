@@ -290,36 +290,28 @@ namespace Melia.Zone.World.Actors.Characters.Components
 			return item;
 		}
 
-		// I don't remember what this method was used for, but it
-		// wouldn't work anymore, since inventory categories have
-		// gotte more complicated. I'm going to disable it for
-		// now.
-
 		/// <summary>
-		/// Returns item by inventory index, or null if it doesn't exist.
+		/// Returns an item by its inventory index (category+index).
+		/// Returns null if no item with the given index was found.
 		/// </summary>
-		/// <param name="worldId"></param>
+		/// <param name="inventoryIndex"></param>
 		/// <returns></returns>
-		//public Item GetItemByIndex(int index)
-		//{
-		//	if (index < 5001 || index > 1750000)
-		//		throw new ArgumentOutOfRangeException("index");
+		public Item GetItemByIndex(int inventoryIndex)
+		{
+			ZoneServer.Instance.Data.InvBaseIdDb.SplitCategoryIndex(inventoryIndex, out var category, out var index);
 
-		//	var category = (InventoryCategory)(index / 5000);
-		//	var subIndex = index - (int)category * 5000 - 1;
+			Item item;
+			lock (_syncLock)
+			{
+				var list = _items[category];
+				if (list.Count < index)
+					return null;
 
-		//	Item item;
-		//	lock (_syncLock)
-		//	{
-		//		var list = _items[category];
-		//		if (list.Count < subIndex)
-		//			return null;
+				item = list[index];
+			}
 
-		//		item = list[subIndex];
-		//	}
-
-		//	return item;
-		//}
+			return item;
+		}
 
 		/// <summary>
 		/// Returns item in given equip slot, or null if there is none.
@@ -1010,6 +1002,19 @@ namespace Melia.Zone.World.Actors.Characters.Components
 		public bool TryGetItem(long itemWorldId, out Item item)
 		{
 			item = this.GetItem(itemWorldId);
+			return item != null;
+		}
+
+		/// <summary>
+		/// Returns an item by its inventory index (category+index) via out.
+		/// Returns whether an item with the given index was found.
+		/// </summary>
+		/// <param name="inventoryIndex"></param>
+		/// <param name="item"></param>
+		/// <returns></returns>
+		public bool TryGetItemByIndex(int inventoryIndex, out Item item)
+		{
+			item = this.GetItemByIndex(inventoryIndex);
 			return item != null;
 		}
 	}

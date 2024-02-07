@@ -66,7 +66,7 @@ public class EP142DCASTLE2MQ2TRACK : TrackScript
 				break;
 			case 34:
 				//DRT_PLAY_MGAME("EP14_2_DCASTLE2_MQ_2_MINI");
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				break;
 			default:
 				Log.Warning("OnProgress: Unsupported frame {0} called from {1}.", frame, this.TrackId);

@@ -60,7 +60,7 @@ public class EP143LINETUTOMQ91TRACk : TrackScript
 				//DRT_ACTOR_PLAY_EFT("F_rize007", "BOT", 0);
 				break;
 			case 24:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				break;
 			default:
 				Log.Warning("OnProgress: Unsupported frame {0} called from {1}.", frame, this.TrackId);

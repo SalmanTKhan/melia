@@ -81,6 +81,22 @@ public class AbilityUnlockedFunctionsScript : GeneralScript
 	}
 
 	/// <summary>
+	/// Unlocks at a given base level.
+	/// </summary>
+	/// <param name="character"></param>
+	/// <param name="argStr"></param>
+	/// <param name="minLevel"></param>
+	/// <param name="data"></param>
+	/// <returns></returns>
+	[ScriptableFunction]
+	public static bool UNLOCK_BASE_LEVEL(Character character, string argStr, int minLevel, AbilityData data)
+	{
+		var level = character.Level;
+
+		return (level >= minLevel);
+	}
+
+	/// <summary>
 	/// Unlocks if given skill is at least at the minLevel and character
 	/// has the Priest job with circle 2 or above.
 	/// </summary>

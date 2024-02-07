@@ -76,7 +76,7 @@ public class F3CMLAKE261SQ03TRACK : TrackScript
 				break;
 			case 38:
 				//TRACK_MON_LOOKAT();
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//TRACK_SETTENDENCY();
 				break;
 			default:

@@ -4,12 +4,14 @@
 // Quest to Talk to Watcher Molly.
 //---------------------------------------------------------------------------
 
+using System;
 using System.Threading.Tasks;
 using Melia.Shared.Tos.Const;
 using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
+using Melia.Zone.World.Actors.Characters.Components;
 using Melia.Zone.World.Quests;
 using Melia.Zone.World.Quests.Objectives;
 using Melia.Zone.World.Quests.Prerequisites;
@@ -62,8 +64,14 @@ public class Quest60152Script : QuestScript
 		if (!character.Quests.IsCompletable(this.QuestId))
 			return HookResult.Skip;
 
-		await dialog.Msg("GELE572_RP_1_3");
-		character.Quests.Complete(this.QuestId);
+		var timedAction = await character.Components.Get<TimeActionComponent>().StartAsync("!@#$ItemCraftProcess#@!", "None", "TALK", TimeSpan.FromSeconds(1.2));
+
+		if (timedAction == TimeActionResult.Completed)
+		{
+			character.AddonMessage(AddonMessage.SHOW_QUEST_SEL_DLG, null, this.QuestId);
+			await dialog.Msg("GELE572_RP_1_3");
+			character.Quests.Complete(this.QuestId);
+		}
 
 		return HookResult.Break;
 	}

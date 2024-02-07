@@ -25,7 +25,59 @@ public class EP12FINALE05TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(416.048f, 129.0299f, 1156.668f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 154040, "", "f_dcapital_104", 664, 159, 2013, 35.83333);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 147383, "", "f_dcapital_104", 589.0731, 160.3115, 1845.454, 6.393443);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 154004, "UnvisibleName", "f_dcapital_104", 593.8442, 160.3839, 1883.115, 0);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 151020, "UnvisibleName", "f_dcapital_104", 639.3, 159.77, 1968.72, 2.752809);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		var mob4 = Shortcuts.AddMonster(0, 20042, "UnvisibleName", "f_dcapital_104", 603.17, 159.94, 1978.74, 0);
+		mob4.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob4.AddEffect(new ScriptInvisibleEffect());
+		mob4.Layer = character.Layer;
+		actors.Add(mob4);
+
+		var mob5 = Shortcuts.AddMonster(0, 154102, "", "f_dcapital_104", 603.1727, 159.9397, 1978.741, 0);
+		mob5.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob5.AddEffect(new ScriptInvisibleEffect());
+		mob5.Layer = character.Layer;
+		actors.Add(mob5);
+
+		var mob6 = Shortcuts.AddMonster(0, 150215, "", "f_dcapital_104", 696.277, 159.1491, 1941.761, 0);
+		mob6.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob6.AddEffect(new ScriptInvisibleEffect());
+		mob6.Layer = character.Layer;
+		actors.Add(mob6);
+
+		var mob7 = Shortcuts.AddMonster(0, 151020, "", "f_dcapital_104", 696.31, 159.15, 1979.22, 5);
+		mob7.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob7.AddEffect(new ScriptInvisibleEffect());
+		mob7.Layer = character.Layer;
+		actors.Add(mob7);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

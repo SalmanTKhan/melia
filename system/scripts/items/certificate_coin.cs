@@ -23,4 +23,15 @@ public class CertificateCoinItemScript : GeneralScript
 		character.SystemMessage("PointGet{name}{count}", new MsgParameter("name", item.Data.Name), new MsgParameter("count", coinAmount.ToString()));
 		return ItemUseResult.Okay;
 	}
+
+	[ScriptableFunction("SCR_USE_MISC_PVP_MINE2")]
+	public ItemUseResult SCR_USE_MISC_PVP_MINE2(Character character, Item item, string propertyName, float numArg1, float numArg2)
+	{
+		var previousValue = character.Connection.Account.Properties.GetFloat(PropertyName.MISC_PVP_MINE2);
+		character.ModifyAccountProperty(PropertyName.MISC_PVP_MINE2, item.Amount);
+		var newValue = character.Connection.Account.Properties.GetFloat(PropertyName.MISC_PVP_MINE2);
+		character.SystemMessage("GET_MISC_PVP_MINE2{count}", new MsgParameter("count", item.Amount.ToString()));
+		character.AddonMessage(AddonMessage.EARTHTOWERSHOP_BUY_ITEM_RESULT, $"{previousValue}/{newValue}");
+		return ItemUseResult.Okay;
+	}
 }

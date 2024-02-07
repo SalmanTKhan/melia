@@ -74,7 +74,9 @@ namespace Melia.Zone.Skills.Combat
 		/// Gets or sets the number of hits that are displayed. The damage
 		/// is split evenly between the hits.
 		/// </summary>
-		public int HitCount { get; set; } = 1;
+		public int HitCount { get; set; }
+
+		public byte VarInfoCount { get; set; } = 2;
 
 		/// <summary>
 		/// Gets or sets the knock back information. Leave empty for none.

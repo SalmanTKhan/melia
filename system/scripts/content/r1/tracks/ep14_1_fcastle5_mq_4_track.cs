@@ -132,7 +132,7 @@ public class EP141FCASTLE5MQ4TRACK : TrackScript
 				break;
 			case 59:
 				//TRACK_SETTENDENCY();
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_PLAY_MGAME("EP14_1_FCASTLE5_MQ_4_MGAME");
 				break;
 			default:

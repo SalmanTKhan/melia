@@ -111,7 +111,7 @@ public class EP141FCASTLE5MQ3TRACK : TrackScript
 				break;
 			case 18:
 				//DRT_PLAY_MGAME("EP14_1_FCASTLE5_MQ_3_MGAME");
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				break;
 			default:
 				Log.Warning("OnProgress: Unsupported frame {0} called from {1}.", frame, this.TrackId);

@@ -25,7 +25,23 @@ public class EP151FABBEY11TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(146.5932f, 176.0767f, 293.554f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 154102, "", "c_orsha", 238.9941, 175.9909, 313.8801, 181.5385);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 12082, "", "c_orsha", 241.9537, 175.9806, 309.9567, 0);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

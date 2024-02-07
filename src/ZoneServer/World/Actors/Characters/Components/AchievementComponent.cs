@@ -69,7 +69,7 @@ namespace Melia.Zone.World.Actors.Characters.Components
 
 			if (!silently)
 			{
-				Send.ZC_ACHIEVE_POINT(this.Character, points, -1, -1);
+				Send.ZC_ACHIEVE_POINT(this.Character, pointData.Id, _achievementPoints[pointData.Id], 0);
 				this.CheckAchievements(pointData);
 			}
 		}

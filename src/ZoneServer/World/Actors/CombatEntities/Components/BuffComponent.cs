@@ -299,7 +299,7 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// <param name="duration">Custom duration of the buff.</param>
 		/// <param name="caster">The entity that casted the buff.</param>
 		/// <returns></returns>
-		public Buff Start(BuffId buffId, float numArg1, float numArg2, TimeSpan duration, ICombatEntity caster, SkillId skillId = SkillId.Normal_Attack)
+		public Buff Start(BuffId buffId, float numArg1, float numArg2, TimeSpan duration, IActor caster, SkillId skillId = SkillId.Normal_Attack)
 		{
 			if (!this.TryGet(buffId, out var buff))
 			{

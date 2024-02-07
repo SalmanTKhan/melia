@@ -25,7 +25,35 @@ public class EP132DPRISON1MQ9TRACK1 : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(-1089.825f, 423.5771f, 1424.054f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 59657, "", "ep13_2_d_prison_1", -1375.785, 408.79, 1431.873, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 151021, "", "ep13_2_d_prison_1", -1463.745, 408.8365, 1415.176, 0.8333334);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 47273, "", "ep13_2_d_prison_1", -1470.926, 408.8402, 1422.711, 0);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 47273, "", "ep13_2_d_prison_1", -1471.051, 408.8403, 1422.774, 0);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)
@@ -119,7 +147,7 @@ public class EP132DPRISON1MQ9TRACK1 : TrackScript
 				await track.Dialog.Msg("EP13_2_DPRISON1_MQ_9_DLG6");
 				break;
 			case 109:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_PLAY_MGAME("EP13_2_DPRISON1_MQ_9_MGAME_1");
 				break;
 			default:

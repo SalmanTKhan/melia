@@ -25,7 +25,17 @@ public class EP12PRELUDE07TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(1425.21f, 89.99439f, 501.1702f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 154102, "", "f_dcapital_106", 1404, 89, 497, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

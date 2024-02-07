@@ -217,6 +217,14 @@ switch (type)
         byte b2;
         break;
     }
+    
+    // Sent after Companion Feed Request
+    case 0x0E:
+        int handle;
+        byte b1;
+        lpString str;
+        byte b2;
+        break;
 
     case 0x0F:
         int packetString;
@@ -442,6 +450,11 @@ switch (type)
    
     // Skill related? Cancel Attack
     case 0x43:
+        int handle;
+        break;
+        
+    // Pet Companion (Cancel Attack?)
+    case 0x44:
         int handle;
         break;
 
@@ -841,9 +854,8 @@ switch (type)
     case 0xA7:
         int handle;
         short s1;
-        short s2;
-        short s3;
-        int i2;
+        float f1;
+        int i1;
         byte b1;
         break;
 
@@ -1861,9 +1873,9 @@ switch (type)
     case 0x197:
         lpString str1; // AdventureBook
         lpString str2;
-        int i1;
+        int nextRank;
         int i2; // i1+2=id?
-        int i3;
+        int rankPoints;
         byte b1;
         break;
 
@@ -1886,13 +1898,14 @@ switch (type)
         int currentRank; // Current Rank
         int i2;
         int currentPoints; // Current Points
-        int i4;
-        AdventureBookRanker2 topRankers[i4];
+        int topRankerCount;
+        AdventureBookRanker2 topRankers[topRankerCount];
         AdventureBookNearestRanks nearestRanks[5];
-        int i[2];
-        int64 l1;
+        int currentPoints1;
         int i5;
+        int64 l1;
         int i6;
+        int i7;
         break;
         
     // Adventure Book Item Page
@@ -1920,12 +1933,16 @@ switch (type)
         FILETIME date;
         byte b1; // 1
         break;
-
-    // ?
+        
     case 0x19C:
-        byte b1; // 1
-        int64 l1; // 100
+        int i0;
         break;
+
+    // ? (Disabled, could be different SubOp now 0x19C is sent in response to CZ_REQ_QUEST_COMPLETE)
+    //case 0x19C:
+    //    byte b1; // 1
+    //    int64 l1; // 100
+    //    break;
 
     // ?
     case 0x19D:

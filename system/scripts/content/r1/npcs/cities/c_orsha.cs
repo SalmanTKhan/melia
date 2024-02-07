@@ -350,5 +350,13 @@ public class COrshaNpcScript : GeneralScript
 		// [Previous Goddess Token Shop]{nl}Kupole
 		//-------------------------------------------------------------------------
 		AddNpc(5503, 160178, "[Previous Goddess Token Shop]{nl}Kupole", "c_orsha", -41.21173, 175.9837, -8.236629, 101, "PREVIOUS_COIN_SHOP", "", "");
+		
+		// [Black Market]{nl}Auctioneer
+		//-------------------------------------------------------------------------
+		AddNpc(5504, 20140, "[Black Market]{nl}Auctioneer", "c_orsha", 38, 176, -187, 90, "BLACK_MARKET", "", "");
+		
+		// [Snigo's Memory]{nl}Little Glacia
+		//-------------------------------------------------------------------------
+		AddNpc(5505, 160193, "[Snigo's Memory]{nl}Little Glacia", "c_orsha", 190.03, 176.29, 413.03, 45, "LITTLE_GLACIER", "", "");
 	}
 }

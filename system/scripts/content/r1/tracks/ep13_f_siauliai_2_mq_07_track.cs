@@ -143,7 +143,7 @@ public class EP13FSIAULIAI2MQ07TRACK : TrackScript
 				//DRT_ACTOR_ATTACH_EFFECT("F_levitation006_loop", "TOP");
 				break;
 			case 79:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//TRACK_SETTENDENCY();
 				//DRT_PLAY_MGAME("EP13_F_SIAULIAI_2_MQ_07_MINI");
 				break;

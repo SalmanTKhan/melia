@@ -25,7 +25,53 @@ public class EP122FCASTLE101MQ042TRACK01 : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(-1440.625f, 52.92823f, -384.9875f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 150232, "", "None", -1541.696, 52.92822, -415.6457, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 150230, "", "None", -1465.403, 52.92824, -384.0672, 0);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 150212, "", "None", -1506.848, 52.92822, -335.6888, 0);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 59523, "", "None", -1578.468, 52.92822, -354.8346, 0);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		var mob4 = Shortcuts.AddMonster(0, 59524, "", "None", -1513.963, 52.92823, -359.7733, 0);
+		mob4.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob4.AddEffect(new ScriptInvisibleEffect());
+		mob4.Layer = character.Layer;
+		actors.Add(mob4);
+
+		var mob5 = Shortcuts.AddMonster(0, 59525, "", "None", -1476.819, 52.92824, -392.4684, 0);
+		mob5.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob5.AddEffect(new ScriptInvisibleEffect());
+		mob5.Layer = character.Layer;
+		actors.Add(mob5);
+
+		var mob6 = Shortcuts.AddMonster(0, 59526, "", "None", -1482.288, 52.92822, -432.9027, 0);
+		mob6.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob6.AddEffect(new ScriptInvisibleEffect());
+		mob6.Layer = character.Layer;
+		actors.Add(mob6);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

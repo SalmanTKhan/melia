@@ -25,7 +25,23 @@ public class EP142DCASTLE2MQ1TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		var mob0 = Shortcuts.AddMonster(0, 150287, "", "ep14_2_d_castle_2", 187.1366, 95.67754, -328.1352, 1.111111);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 154120, "", "ep14_2_d_castle_2", 208.6575, 95.67754, -400.3917, 1.111111);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		character.Movement.MoveTo(new Position(206.5677f, 95.67754f, -331.597f));
+		actors.Add(character);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)
@@ -34,7 +50,7 @@ public class EP142DCASTLE2MQ1TRACK : TrackScript
 		{
 			case 24:
 				//TRACK_BASICLAYER_MOVE();
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				break;
 			default:
 				Log.Warning("OnProgress: Unsupported frame {0} called from {1}.", frame, this.TrackId);

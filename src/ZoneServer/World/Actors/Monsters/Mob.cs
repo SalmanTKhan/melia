@@ -130,8 +130,8 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// </summary>
 		public int Level
 		{
-			get { return (int)this.Properties.GetFloat(PropertyName.Level); }
-			set { this.Properties.SetFloat(PropertyName.Level, value); }
+			get { return (int)this.Properties.GetFloat(PropertyName.Lv); }
+			set { this.Properties.SetFloat(PropertyName.Lv, value); }
 		}
 
 		/// <summary>
@@ -213,7 +213,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// <summary>
 		/// Show adventure book entry notification.
 		/// </summary>
-		public bool Journal { get; set; } = true;
+		public bool Journal { get; set; }
 
 		/// <summary>
 		/// Custom drop list
@@ -290,7 +290,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// <summary>
 		/// Loads data from data files.
 		/// </summary>
-		protected virtual void LoadData()
+		protected void LoadData()
 		{
 			if (this.Id == 0)
 				throw new InvalidOperationException("Id wasn't set before calling LoadData.");
@@ -302,6 +302,7 @@ namespace Melia.Zone.World.Actors.Monsters
 			this.Defense = this.Data.PhysicalDefense;
 			this.Faction = this.Data.Faction;
 			this.DialogName = this.Data.Dialog;
+			this.Journal = !string.IsNullOrEmpty(this.Data.Journal);
 
 			this.InitProperties();
 		}
@@ -313,6 +314,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		{
 			this.Properties = new MonsterProperties(this);
 
+			this.Properties.AddDefaultProperties();
 			this.Properties.InitAutoUpdates();
 			this.Properties.InvalidateAll();
 
@@ -386,8 +388,13 @@ namespace Melia.Zone.World.Actors.Monsters
 
 			if (beneficiary != null && this.Data != null && this.Journal)
 			{
-				beneficiary.AddonMessage(AddonMessage.ADVENTURE_BOOK_NEW, this.Data.Name);
-				//Send.ZC_ADDON_MSG(beneficiary, "ADVENTURE_BOOK_NEW", string.Format("@dicID_^*${0}$*^", this.Data.LocalKey));
+				beneficiary.AddAchievePoint("MonKill", 1);
+				if (ZoneServer.Instance.Data.MonsterDb.TryFind(this.Data.Journal, out var journalMonster))
+				{
+					if (beneficiary.AdventureBook.IsNewEntry(AdventureBookType.MonsterKilled, journalMonster.Id))
+						beneficiary.AddonMessage(AddonMessage.ADVENTURE_BOOK_NEW, journalMonster.Name);
+					beneficiary.AdventureBook.AddMonsterKill(journalMonster.Id, 1);
+				}
 			}
 		}
 
@@ -493,56 +500,6 @@ namespace Melia.Zone.World.Actors.Monsters
 		}
 
 		/// <summary>
-		/// Drops an item.
-		/// </summary>
-		public void DropItem(Character killer, int itemId, float dropChance, int dropMinAmount = 1, int dropMaxAmount = 1)
-		{
-			var rnd = RandomProvider.Get();
-			var autoloot = killer?.Variables.Temp.Get("Autoloot", 0) ?? 0;
-
-			var dropSuccess = rnd.NextDouble() < dropChance / 100f;
-			if (!dropSuccess)
-				return;
-
-			if (!ZoneServer.Instance.Data.ItemDb.TryFind(itemId, out var itemData))
-			{
-				Log.Warning("Monster.Kill: Drop item '{0}' not found.", itemId);
-				return;
-			}
-
-			var dropItem = new Item(itemData.Id);
-			var minAmount = dropMinAmount;
-			var maxAmount = dropMaxAmount;
-
-			if (itemId == ItemId.Silver || itemId == ItemId.Gold)
-			{
-				minAmount = Math.Max(1, (int)(minAmount * (ZoneServer.Instance.Conf.World.SilverDropAmount / 100f)));
-				maxAmount = Math.Max(minAmount, (int)(maxAmount * (ZoneServer.Instance.Conf.World.SilverDropAmount / 100f)));
-			}
-
-			dropItem.Amount = rnd.Next(minAmount, maxAmount + 1);
-
-			if (killer == null || dropChance > autoloot)
-			{
-				var direction = new Direction(rnd.Next(0, 360));
-				var dropRadius = ZoneServer.Instance.Conf.World.DropRadius;
-				var distance = rnd.Next(dropRadius / 2, dropRadius + 1);
-
-				dropItem.SetLootProtection(killer, TimeSpan.FromSeconds(ZoneServer.Instance.Conf.World.LootPrectionSeconds));
-				dropItem.Drop(this.Map, this.Position, direction, distance, killer?.Layer ?? 0);
-			}
-			else
-			{
-				var party = killer.Connection.Party;
-
-				if (party != null)
-					party.GiveItem(killer, dropItem, InventoryAddType.PickUp);
-				else
-					killer.Inventory.Add(dropItem, InventoryAddType.PickUp);
-			}
-		}
-
-		/// <summary>
 		/// Drops random items from the monster's drop table.
 		/// </summary>
 		/// <param name="killer"></param>
@@ -575,10 +532,63 @@ namespace Melia.Zone.World.Actors.Monsters
 					var distance = rnd.Next(dropRadius / 2, dropRadius + 1);
 
 					item.SetLootProtection(killer, TimeSpan.FromSeconds(ZoneServer.Instance.Conf.World.LootPrectionSeconds));
-					item.Drop(this.Map, this.Position, direction, distance);
+					var itemMonster = item.Drop(this.Map, this.Position, direction, distance);
+
+					if (this.Journal && ZoneServer.Instance.Data.MonsterDb.TryFind(this.Data.Journal, out var journalMonster))
+						itemMonster.MonsterId = journalMonster.Id;
 				}
 
 				_staticDrops.Clear();
+			}
+		}
+
+		/// <summary>
+		/// Drops an item.
+		/// </summary>
+		public void DropItem(Character killer, int itemId, float dropChance, int dropMinAmount = 1, int dropMaxAmount = 1)
+		{
+			var rnd = RandomProvider.Get();
+			var autoloot = killer?.Variables.Temp.Get("Autoloot", 0) ?? 0;
+
+			var dropSuccess = rnd.NextDouble() < dropChance / 100f;
+			if (!dropSuccess)
+				return;
+
+			if (!ZoneServer.Instance.Data.ItemDb.TryFind(itemId, out var itemData))
+			{
+				Log.Warning("Monster.DropItem: Item '{0}' not found.", itemId);
+				return;
+			}
+
+			var dropItem = new Item(itemData.Id);
+			var minAmount = dropMinAmount;
+			var maxAmount = dropMaxAmount;
+
+			if (itemId == ItemId.Silver || itemId == ItemId.Gold)
+			{
+				minAmount = Math.Max(1, (int)(minAmount * (ZoneServer.Instance.Conf.World.SilverDropAmount / 100f)));
+				maxAmount = Math.Max(minAmount, (int)(maxAmount * (ZoneServer.Instance.Conf.World.SilverDropAmount / 100f)));
+			}
+
+			dropItem.Amount = rnd.Next(minAmount, maxAmount + 1);
+
+			if (killer == null || dropChance > autoloot)
+			{
+				var direction = new Direction(rnd.Next(0, 360));
+				var dropRadius = ZoneServer.Instance.Conf.World.DropRadius;
+				var distance = rnd.Next(dropRadius / 2, dropRadius + 1);
+
+				dropItem.SetLootProtection(killer, TimeSpan.FromSeconds(ZoneServer.Instance.Conf.World.LootPrectionSeconds));
+				dropItem.Drop(this.Map, this.Position, direction, distance, killer?.Layer ?? 0);
+			}
+			else
+			{
+				var party = killer.Connection.Party;
+
+				if (party != null)
+					party.GiveItem(killer, dropItem, InventoryAddType.PickUp);
+				else
+					killer.Inventory.Add(dropItem, InventoryAddType.PickUp);
 			}
 		}
 
@@ -743,7 +753,10 @@ namespace Melia.Zone.World.Actors.Monsters
 				var distance = rnd.Next(dropRadius / 2, dropRadius + 1);
 
 				dropItem.SetLootProtection(killer, TimeSpan.FromSeconds(ZoneServer.Instance.Conf.World.LootPrectionSeconds));
-				dropItem.Drop(this.Map, this.Position, direction, distance);
+				var itemMonster = dropItem.Drop(this.Map, this.Position, direction, distance);
+
+				if (this.Journal && ZoneServer.Instance.Data.MonsterDb.TryFind(this.Data.Journal, out var journalMonster))
+					itemMonster.MonsterId = journalMonster.Id;
 			}
 		}
 

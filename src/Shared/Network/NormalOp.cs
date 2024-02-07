@@ -50,6 +50,7 @@
 			public const int Skill_MissileThrow = 0x06;
 			public const int SkillFallingProjectile = 0x07;
 			public const int Skill_ItemToss = 0x09;
+			public const int PlayEquipItem = 0x0E;
 			public const int PlayEffectAtPosition = 0x0F;
 			/// <summary>
 			/// DRT_ACTOR_ATTACH_EFFECT
@@ -77,6 +78,7 @@
 			public const int Skill_ModifyAttackStance = 0x40;
 			public const int Skill_40 = 0x42;
 			public const int AttackCancel = 0x43;
+			public const int AttackCancelBow = 0x44;
 			/// <summary>
 			/// Seen when cloaking skill is used
 			/// </summary>
@@ -192,6 +194,7 @@
 			public const int InstanceDungeonMatchMaking = 0x18E;
 			public const int FishingRankData = 0x190;
 			public const int AdventureBook = 0x197;
+			public const int AdventureBookRank = 0x198;
 			public const int Unknown_198 = 0x19A;
 			public const int Unknown_19B = 0x19E;
 			public const int Unknown_19D_SetTime = 0x19F;

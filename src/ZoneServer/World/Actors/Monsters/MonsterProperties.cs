@@ -1,11 +1,7 @@
 ﻿using System;
-using Melia.Shared.Data.Database;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Tos.Const;
-using Melia.Zone.Network;
 using Melia.Zone.Scripting;
-using Melia.Zone.World.Actors.CombatEntities.Components;
-using Yggdrasil.Logging;
 
 namespace Melia.Zone.World.Actors.Monsters
 {
@@ -36,17 +32,16 @@ namespace Melia.Zone.World.Actors.Monsters
 		public MonsterProperties(Mob monster) : base("Monster")
 		{
 			this.Monster = monster;
-			this.AddDefaultProperties();
 			this.InitEvents();
 		}
 
 		/// <summary>
 		/// Adds the monster's default properties.
 		/// </summary>
-		private void AddDefaultProperties()
+		public virtual void AddDefaultProperties()
 		{
-			this.Create(new FloatProperty(PropertyName.Level, this.Monster.Data.Level));
 			this.Create(new FloatProperty(PropertyName.Lv, this.Monster.Data.Level));
+			this.Create(new FloatProperty(PropertyName.Level, this.Monster.Data.Level));
 
 			this.Create(PropertyName.MHP, "SCR_Get_MON_MHP");
 			this.Create(new FloatProperty(PropertyName.HP, min: 0));
@@ -82,7 +77,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// <summary>
 		/// Initializes the auto-updates for the monster's properties.
 		/// </summary>
-		public void InitAutoUpdates()
+		public virtual void InitAutoUpdates()
 		{
 			this.AutoUpdate(PropertyName.MHP, new[] { PropertyName.MHP_BM });
 			this.AutoUpdate(PropertyName.MSP, new[] { PropertyName.MSP_BM });
@@ -109,10 +104,12 @@ namespace Melia.Zone.World.Actors.Monsters
 			this.Monster.CombatState.CombatStateChanged += this.CombatStateChanged;
 		}
 
+
 		/// <summary>
 		/// Recalculates and updates HP recovery time properties.
 		/// </summary>
-		/// <param name="mob"></param>
+		/// <param name="combatEntity"></param>
+		/// <param name="attackState"></param>
 		private void CombatStateChanged(ICombatEntity combatEntity, bool attackState)
 		{
 			this.Invalidate(PropertyName.RHPTIME);

@@ -25,7 +25,35 @@ public class EP13FSIAULIAI2MQ08TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(919.3356f, 256.3912f, 1212.887f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 150242, "", "ep13_f_siauliai_2", 609.3113, 256.1976, 1447.381, 0.7142857);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 151019, "", "ep13_f_siauliai_2", 612.3535, 256.1976, 1439.466, 17.14286);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 147382, "", "ep13_f_siauliai_2", 635.7756, 256.2551, 1510.088, 0);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 59595, "", "ep13_f_siauliai_2", 756.338, 256.3912, 1588.025, 0);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)
@@ -143,7 +171,7 @@ public class EP13FSIAULIAI2MQ08TRACK : TrackScript
 				//DRT_ACTOR_PLAY_EFT("F_spread_out026_violet", "BOT", 0);
 				break;
 			case 124:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				character.AddonMessage("NOTICE_Dm_scroll", "Go to Paupys Crossing after defeating Darbas Smasher", 3);
 				//TRACK_SETTENDENCY();
 				break;

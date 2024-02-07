@@ -17,7 +17,7 @@ namespace Melia.Zone.Network.Helpers
 			packet.PutInt(companion.Id);
 			packet.PutLong(companion.ObjectId);
 			packet.PutLong(companion.Owner.ObjectId);
-			packet.PutLong(companion.Experience);
+			packet.PutLong(companion.Exp);
 			packet.PutLpString(companion.Name);
 			packet.PutByte(0);
 			packet.PutPosition(companion.Position);

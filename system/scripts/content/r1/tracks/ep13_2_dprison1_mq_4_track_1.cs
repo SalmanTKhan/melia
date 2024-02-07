@@ -66,7 +66,7 @@ public class EP132DPRISON1MQ4TRACK1 : TrackScript
 			case 40:
 				Send.ZC_NORMAL.SetupCutscene(character, false, false, true);
 				//DRT_PLAY_MGAME("EP13_2_DPRISON1_MQ_4_MGAME_1");
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//TRACK_SETTENDENCY();
 				character.AddonMessage("NOTICE_Dm_scroll", "Stop the monsters and chase the Beholder!", 3);
 				break;

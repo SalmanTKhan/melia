@@ -25,7 +25,17 @@ public class EP152DNICOPOLIS2MQ5TRACK1 : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(200.9423f, 1f, -986.8313f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 160065, "", "ep15_2_d_nicopolis_2", -2.327799, 1, -918.7014, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

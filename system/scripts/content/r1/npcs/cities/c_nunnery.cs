@@ -84,5 +84,9 @@ public class CNunneryNpcScript : GeneralScript
 		// [Shenji Master] Dana
 		//-------------------------------------------------------------------------
 		AddNpc(32, 160156, "[Shenji Master] Dana", "c_nunnery", 186.9642, -75.84637, 194.7124, 19, "MASTER_SPE_NPC", "", "");
+		
+		// [Pontifex Master]{nl}Justina Von Grim
+		//-------------------------------------------------------------------------
+		AddNpc(33, 160194, "[Pontifex Master]{nl}Justina Von Grim", "c_nunnery", 139.4551, -93.49406, -446.0069, 90, "NPC_PONTIFEX", "", "");
 	}
 }

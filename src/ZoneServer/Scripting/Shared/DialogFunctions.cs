@@ -27,15 +27,6 @@ namespace Melia.Zone.Scripting.Shared
 						this.Add(method.Name, func);
 				}
 			}
-			foreach (var method in typeof(Triggers).GetMethods())
-			{
-				foreach (DialogFunctionAttribute attr in method.GetCustomAttributes(typeof(DialogFunctionAttribute), false))
-				{
-					var func = (DialogFunc)Delegate.CreateDelegate(typeof(DialogFunc), method);
-					foreach (var dialog in attr.DialogIds)
-						this.Add(dialog, func);
-				}
-			}
 		}
 
 		/// <summary>

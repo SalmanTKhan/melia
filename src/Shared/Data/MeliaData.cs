@@ -18,6 +18,7 @@ namespace Melia.Shared.Data
 		public ChatEmoticonDb ChatEmoticonDb { get; } = new ChatEmoticonDb();
 		public ChatMacroDb ChatMacroDb { get; } = new ChatMacroDb();
 		public CollectionDb CollectionDb { get; } = new CollectionDb();
+		public CompanionDb CompanionDb { get; } = new CompanionDb();
 		public CooldownDb CooldownDb { get; } = new CooldownDb();
 		public CustomCommandDb CustomCommandDb { get; } = new CustomCommandDb();
 		public DialogDb DialogDb { get; } = new DialogDb();

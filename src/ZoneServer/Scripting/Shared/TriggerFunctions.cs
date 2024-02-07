@@ -11,7 +11,7 @@ namespace Melia.Zone.Scripting.Shared
 		public int Count => _functions.Count;
 
 		/// <summary>
-		/// Loads methods with the DialogFunctionAttribute inside this class.
+		/// Loads methods with the TriggerFunctionAttribute inside this class.
 		/// </summary>
 		public void LoadMethods()
 		{
@@ -20,8 +20,11 @@ namespace Melia.Zone.Scripting.Shared
 				foreach (TriggerFunctionAttribute attr in method.GetCustomAttributes(typeof(TriggerFunctionAttribute), false))
 				{
 					var func = (DialogFunc)Delegate.CreateDelegate(typeof(DialogFunc), method);
-					foreach (var dialog in attr.DialogIds)
-						this.Add(dialog, func);
+					if (attr.DialogIds?.Length > 0)
+						foreach (var dialog in attr.DialogIds)
+							this.Add(dialog, func);
+					else
+						this.Add(method.Name, func);
 				}
 			}
 			foreach (var method in typeof(Triggers).GetMethods())
@@ -29,8 +32,11 @@ namespace Melia.Zone.Scripting.Shared
 				foreach (TriggerFunctionAttribute attr in method.GetCustomAttributes(typeof(TriggerFunctionAttribute), false))
 				{
 					var func = (DialogFunc)Delegate.CreateDelegate(typeof(DialogFunc), method);
-					foreach (var dialog in attr.DialogIds)
-						this.Add(dialog, func);
+					if (attr.DialogIds?.Length > 0)
+						foreach (var dialog in attr.DialogIds)
+							this.Add(dialog, func);
+					else
+						this.Add(method.Name, func);
 				}
 			}
 		}

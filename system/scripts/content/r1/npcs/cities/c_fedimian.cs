@@ -291,5 +291,13 @@ public class CFedimianNpcScript : GeneralScript
 		// [Previous Goddess Token Shop]{nl}Kupole
 		//-------------------------------------------------------------------------
 		AddNpc(5501, 160178, "[Previous Goddess Token Shop]{nl}Kupole", "c_fedimian", 209.5653, 160.5551, -452.2791, 90, "PREVIOUS_COIN_SHOP", "", "");
+		
+		// [Black Market]{nl}Auctioneer
+		//-------------------------------------------------------------------------
+		AddNpc(5502, 20140, "[Black Market]{nl}Auctioneer", "c_fedimian", -392, 178, -506, 90, "BLACK_MARKET", "", "");
+		
+		// [Snigo's Memory]{nl}Little Glacia
+		//-------------------------------------------------------------------------
+		AddNpc(5503, 160193, "[Snigo's Memory]{nl}Little Glacia", "c_fedimian", -484.44, 160.6, -426.36, 45, "LITTLE_GLACIER", "", "");
 	}
 }

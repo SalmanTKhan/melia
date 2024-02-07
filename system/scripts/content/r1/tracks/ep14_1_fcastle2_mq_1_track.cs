@@ -108,7 +108,7 @@ public class EP141FCASTLE2MQ1TRACK : TrackScript
 			case 44:
 				//DRT_PLAY_MGAME("EP14_1_FCASTLE2_MQ_1_MGAME");
 				//TRACK_SETTENDENCY();
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_RUN_FUNCTION("SCR_EP14_1_TRACKNPC_NODAMAGE");
 				break;
 			default:

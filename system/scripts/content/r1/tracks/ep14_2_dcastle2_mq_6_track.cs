@@ -93,7 +93,7 @@ public class EP142DCASTLE2MQ6TRACK : TrackScript
 			case 23:
 				break;
 			case 29:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//TRACK_SETTENDENCY();
 				//DRT_PLAY_MGAME("EP14_2_DCASTLE2_MQ_6_MINI");
 				break;

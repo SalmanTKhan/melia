@@ -146,7 +146,7 @@ public class EP141FCASTLE1MQ1TRACK : TrackScript
 		switch (frame)
 		{
 			case 19:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//TRACK_SETTENDENCY();
 				//DRT_RUN_FUNCTION("SCR_EP14_1_SOLDIER_BTREESET");
 				//DRT_RUN_FUNCTION("SCR_EP14_1_TRACKNPC_NODAMAGE");

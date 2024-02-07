@@ -210,7 +210,7 @@ public class EP141FCASTLE1MQ7TRACK : TrackScript
 				break;
 			case 49:
 				//DRT_PLAY_MGAME("EP14_1_FCASTLE1_MQ_7_MGAME");
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_RUN_FUNCTION("SCR_EP14_1_TRACKNPC_ADD_BUFF");
 				break;
 			default:

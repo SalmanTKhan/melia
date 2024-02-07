@@ -184,6 +184,9 @@ namespace Melia.Zone.Database
 			this.LoadHelp(character);
 			this.LoadAchievements(character);
 			this.LoadAchievementPoints(character);
+			this.LoadAdventureBook(character);
+			this.LoadAdventureBookMonsterDrop(character);
+			this.LoadAdventureBookItems(character);
 
 			// Initialize the properties to trigger calculated properties
 			// and to set some properties in case the character is new and
@@ -606,6 +609,9 @@ namespace Melia.Zone.Database
 				this.SaveCompanions(character);
 			this.SaveAchievements(character);
 			this.SaveAchievementPoints(character);
+			this.SaveAdventureBook(character);
+			this.SaveAdventureBookMonsterDrop(character);
+			this.SaveAdventureBookItems(character);
 
 			return false;
 		}
@@ -1614,7 +1620,7 @@ namespace Melia.Zone.Database
 					cmd.Set("name", companion.Name);
 					cmd.Set("monsterId", companion.Id);
 					cmd.Set("stamina", companion.Stamina);
-					cmd.Set("exp", companion.Experience);
+					cmd.Set("exp", companion.Exp);
 					cmd.Set("adoptTime", companion.AdoptTime);
 					cmd.Set("active", companion.IsActivated ? 1 : 0);
 
@@ -1768,7 +1774,7 @@ namespace Melia.Zone.Database
 					companion.DbId = reader.GetInt64("companionId");
 					companion.Name = reader.GetStringSafe("name");
 					companion.Stamina = reader.GetInt32("stamina");
-					companion.Experience = reader.GetInt32("exp");
+					companion.Exp = reader.GetInt32("exp");
 					companion.IsActivated = reader.GetByte("active") == 1;
 
 					companion.Position = Position.Zero;
@@ -1799,7 +1805,7 @@ namespace Melia.Zone.Database
 					companion.DbId = reader.GetInt64("companionId");
 					companion.Name = reader.GetStringSafe("name");
 					companion.Stamina = reader.GetInt32("stamina");
-					companion.Experience = reader.GetInt64("exp");
+					companion.Exp = reader.GetInt64("exp");
 					companion.IsActivated = reader.GetByte("active") == 1;
 
 					companion.Position = Position.Zero;
@@ -1828,7 +1834,7 @@ namespace Melia.Zone.Database
 						cmd.Set("characterId", character.DbId);
 						cmd.Set("name", companion.Name);
 						cmd.Set("stamina", companion.Stamina);
-						cmd.Set("exp", companion.Experience);
+						cmd.Set("exp", companion.Exp);
 						cmd.Set("active", companion.IsActivated ? 1 : 0);
 
 						cmd.Execute();
@@ -1839,6 +1845,10 @@ namespace Melia.Zone.Database
 			}
 		}
 
+		/// <summary>
+		/// Delete a party from the database.
+		/// </summary>
+		/// <param name="party"></param>
 		public void DeleteParty(Party party)
 		{
 			using (var conn = this.GetConnection())
@@ -1904,7 +1914,7 @@ namespace Melia.Zone.Database
 		}
 
 		/// <summary>
-		/// Loads party from database.
+		/// Loads a guild from database.
 		/// </summary>
 		/// <returns></returns>
 		public void LoadGuild(Character character)
@@ -1930,7 +1940,7 @@ namespace Melia.Zone.Database
 								guild.LeaderDbId = reader.GetInt64("leaderId");
 								guild.DateCreated = reader.GetDateTime("dateCreated");
 
-								this.LoadGuildMembers(character, guild);
+								this.LoadGuildMembers(guild);
 
 								ZoneServer.Instance.World.Guilds.Add(guild);
 							}
@@ -1948,7 +1958,12 @@ namespace Melia.Zone.Database
 
 		}
 
-		private void LoadGuildMembers(Character loadCharacter, Guild guild)
+		/// <summary>
+		/// Load guild members from database.
+		/// </summary>
+		/// <param name="loadCharacter"></param>
+		/// <param name="guild"></param>
+		private void LoadGuildMembers(Guild guild)
 		{
 			using (var conn = this.GetConnection())
 			{
@@ -1976,8 +1991,6 @@ namespace Melia.Zone.Database
 								var y = reader.GetFloat("y");
 								var z = reader.GetFloat("z");
 								member.Position = new Position(x, y, z);
-								if (member.DbId == character.DbId)
-									member.IsOnline = true;
 								guild.AddMember(member);
 							}
 							else
@@ -1989,7 +2002,7 @@ namespace Melia.Zone.Database
 		}
 
 		/// <summary>
-		/// Saves house to database.
+		/// Persists the character's personal house to the database.
 		/// </summary>
 		/// <param name="house"></param>
 		public void SaveHouse(PersonalHouse house)
@@ -2072,7 +2085,7 @@ namespace Melia.Zone.Database
 		}
 
 		/// <summary>
-		/// Save Item
+		/// Persists an item in the database.
 		/// </summary>
 		/// <param name="item"></param>
 		private long SaveItem(Item item)
@@ -2112,7 +2125,7 @@ namespace Melia.Zone.Database
 			return true;
 		}
 		/// <summary>
-		/// Get Market Items for a specific character
+		/// Get market items for a specific character
 		/// </summary>
 		/// <param name="character"></param>
 		/// <returns></returns>
@@ -2335,6 +2348,193 @@ namespace Melia.Zone.Database
 				cmd.Set("sessionKey", key);
 
 				return cmd.Execute() == 1;
+			}
+		}
+
+		/// <summary>
+		/// Loads the Adventure Book from the database.
+		/// </summary>
+		/// <param name="character"></param>
+		private void LoadAdventureBook(Character character)
+		{
+			using (var conn = this.GetConnection())
+			using (var cmd = new MySqlCommand("SELECT * FROM `adventure_book` WHERE `accountId` = @accountId", conn))
+			{
+				cmd.Parameters.AddWithValue("@accountId", character.AccountDbId);
+
+				using (var reader = cmd.ExecuteReader())
+				{
+					while (reader.Read())
+					{
+						var adventureBookType = (AdventureBookType)reader.GetByte("type");
+						var classId = reader.GetInt32("classId");
+						var count = reader.GetInt32("count");
+
+						switch (adventureBookType)
+						{
+							case AdventureBookType.MonsterKilled:
+								character.AdventureBook.AddMonsterKill(classId, count, true);
+								break;
+						}
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Saves the Adventure Book to the database.
+		/// </summary>
+		/// /// <param name="character"></param>
+		private void SaveAdventureBook(Character character)
+		{
+			var monsterKilled = character.AdventureBook.GetList(AdventureBookType.MonsterKilled);
+
+			using (var conn = this.GetConnection())
+			using (var trans = conn.BeginTransaction())
+			{
+				using (var cmd = new MySqlCommand("DELETE FROM `adventure_book` WHERE `accountId` = @accountId", conn, trans))
+				{
+					cmd.Parameters.AddWithValue("@accountId", character.AccountDbId);
+					cmd.ExecuteNonQuery();
+				}
+
+				foreach (var info in monsterKilled)
+				{
+					using (var cmd = new InsertCommand("INSERT INTO `adventure_book` {0}", conn, trans))
+					{
+						cmd.Set("accountId", character.AccountDbId);
+						cmd.Set("type", AdventureBookType.MonsterKilled);
+						cmd.Set("classId", info.Key);
+						cmd.Set("count", info.Value);
+
+						cmd.Execute();
+					}
+				}
+
+				trans.Commit();
+			}
+		}
+
+		/// <summary>
+		/// Load Adventure Book monster drops from the database.
+		/// </summary>
+		/// <param name="character"></param>
+		private void LoadAdventureBookMonsterDrop(Character character)
+		{
+			using (var conn = this.GetConnection())
+			using (var cmd = new MySqlCommand("SELECT * FROM `adventure_book_monster_drops` WHERE `accountId` = @accountId", conn))
+			{
+				cmd.Parameters.AddWithValue("@accountId", character.AccountDbId);
+
+				using (var reader = cmd.ExecuteReader())
+				{
+					while (reader.Read())
+					{
+						var monsterId = reader.GetInt32("monsterId");
+						var itemId = reader.GetInt32("itemId");
+						var count = reader.GetInt32("count");
+
+						character.AdventureBook.AddMonsterDrop(monsterId, itemId, count, true);
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Saves Adventure Book monster drops to the database.
+		/// </summary>
+		/// <param name="character"></param>
+		private void SaveAdventureBookMonsterDrop(Character character)
+		{
+			var monsterDrops = character.AdventureBook.GetMonsterDrops();
+
+			using (var conn = this.GetConnection())
+			using (var trans = conn.BeginTransaction())
+			{
+				using (var cmd = new MySqlCommand("DELETE FROM `adventure_book_monster_drops` WHERE `accountId` = @accountId", conn, trans))
+				{
+					cmd.Parameters.AddWithValue("@accountId", character.AccountDbId);
+					cmd.ExecuteNonQuery();
+				}
+
+				foreach (var info in monsterDrops)
+				{
+					foreach (var itemInfo in info.Value)
+					{
+						using (var cmd = new InsertCommand("INSERT INTO `adventure_book_monster_drops` {0}", conn, trans))
+						{
+							cmd.Set("accountId", character.AccountDbId);
+							cmd.Set("monsterId", info.Key);
+							cmd.Set("itemId", itemInfo.Key);
+							cmd.Set("count", itemInfo.Value);
+
+							cmd.Execute();
+						}
+					}
+				}
+
+				trans.Commit();
+			}
+		}
+
+		/// <summary>
+		/// Load Adventure Book monster drops from the database.
+		/// </summary>
+		/// <param name="character"></param>
+		private void LoadAdventureBookItems(Character character)
+		{
+			using (var conn = this.GetConnection())
+			using (var cmd = new MySqlCommand("SELECT * FROM `adventure_book_items` WHERE `accountId` = @accountId", conn))
+			{
+				cmd.Parameters.AddWithValue("@accountId", character.AccountDbId);
+
+				using (var reader = cmd.ExecuteReader())
+				{
+					while (reader.Read())
+					{
+						var itemId = reader.GetInt32("itemId");
+						var obtainCount = reader.GetInt32("obtainCount");
+						var craftCount = reader.GetInt32("craftCount");
+						var useCount = reader.GetInt32("useCount");
+
+						character.AdventureBook.AddItem(itemId, craftCount, obtainCount, useCount);
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Saves Adventure Book monster drops to the database.
+		/// </summary>
+		/// <param name="character"></param>
+		private void SaveAdventureBookItems(Character character)
+		{
+			var items = character.AdventureBook.GetItems();
+
+			using (var conn = this.GetConnection())
+			using (var trans = conn.BeginTransaction())
+			{
+				using (var cmd = new MySqlCommand("DELETE FROM `adventure_book_items` WHERE `accountId` = @accountId", conn, trans))
+				{
+					cmd.Parameters.AddWithValue("@accountId", character.AccountDbId);
+					cmd.ExecuteNonQuery();
+				}
+
+				foreach (var info in items)
+				{
+					using (var cmd = new InsertCommand("INSERT INTO `adventure_book_items` {0}", conn, trans))
+					{
+						cmd.Set("accountId", character.AccountDbId);
+						cmd.Set("itemId", info.Key);
+						cmd.Set("craftCount", info.Value.CraftedCount);
+						cmd.Set("obtainCount", info.Value.ObtainedCount);
+						cmd.Set("useCount", info.Value.UsedCount);
+
+						cmd.Execute();
+					}
+				}
+
+				trans.Commit();
 			}
 		}
 	}

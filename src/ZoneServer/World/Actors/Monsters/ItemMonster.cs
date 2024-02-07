@@ -19,6 +19,11 @@ namespace Melia.Zone.World.Actors.Monsters
 		public bool PickedUp { get; set; }
 
 		/// <summary>
+		/// Returns if the item's associated monster it was dropped from.
+		/// </summary>
+		public int MonsterId { get; set; }
+
+		/// <summary>
 		/// Creates new instance.
 		/// </summary>
 		/// <param name="monsterId"></param>

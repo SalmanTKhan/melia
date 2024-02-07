@@ -139,7 +139,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 0f;
 	}
 
-	[SkillHandler(SkillId.Mon_BW_boss_Lapedame_Skill_3, SkillId.Mon_RE_boss_zawra_Skill_3, SkillId.Mon_boss_stone_whale_Skill_1, SkillId.Mon_boss_Ironbaum_Skill_3, SkillId.Mon_Rodelin_Skill_3, SkillId.Mon_M_boss_Golem_gray_Skill_6, SkillId.Mon_M_boss_Golem_gray_Skill_4, SkillId.Mon_boss_stone_whale_Skill_6, SkillId.Mon_boss_Carapace_Skill_4, SkillId.Mon_boss_MagBurk_Skill_5, SkillId.Mon_boss_Drapeliun_Skill_4, SkillId.Mon_boss_Canceril_Skill_2, SkillId.Mon_boss_Golem_Q1_Skill_5, SkillId.Mon_Repusbunny_mage_Skill_2, SkillId.Mon_Elma_Skill_2, SkillId.Mon_PC_summon_Canceril_Skill_1, SkillId.Mon_boss_Rocksodon_Skill_2, SkillId.Mon_boss_Lapedame_Skill_3, SkillId.Mon_boss_Prisoncutter_Skill_4, SkillId.Mon_boss_stonefroster_Skill_2, SkillId.Mon_boss_Flammidus_Skill_3, SkillId.Mon_boss_Zawra_Skill_3, SkillId.Mon_pc_summon_Prisoncutter_Skill_2, SkillId.Mon_pc_summon_Flammidus_Skill_3, SkillId.Mon_ID_boss_Prisoncutter_Skill_4, SkillId.Mon_M_boss_GiantWoodGoblin_Skill_5, SkillId.Mon_M_boss_Ironbaum_Skill_3, SkillId.Mon_ET_Rocksodon_minimal_Skill_3, SkillId.Mon_ET_boss_Flammidus_Skill_3, SkillId.Mon_flamel_Skill_2, SkillId.Mon_ET_boss_Neop_Skill_5, SkillId.Mon_Boss_ebonypawn_Skill_3, SkillId.Mon_mythic_Elma_Skill_2, SkillId.Mon_mythic_boss_Prisoncutter_Skill_4, SkillId.Mon_Ancient_Canceril_Skill_3, SkillId.Mon_Ancient_Zawra_Skill_3)]
+	[SkillHandler(SkillId.Mon_BW_boss_Lapedame_Skill_3, SkillId.Mon_RE_boss_zawra_Skill_3, SkillId.Mon_ep16_1_leader_carapace_Skill_4, SkillId.Mon_ep16_1_leader_canceril_Skill_2, SkillId.Mon_boss_stone_whale_Skill_1, SkillId.Mon_boss_Ironbaum_Skill_3, SkillId.Mon_Rodelin_Skill_3, SkillId.Mon_M_boss_Golem_gray_Skill_6, SkillId.Mon_M_boss_Golem_gray_Skill_4, SkillId.Mon_boss_stone_whale_Skill_6, SkillId.Mon_boss_Carapace_Skill_4, SkillId.Mon_boss_MagBurk_Skill_5, SkillId.Mon_boss_Drapeliun_Skill_4, SkillId.Mon_boss_Canceril_Skill_2, SkillId.Mon_boss_Golem_Q1_Skill_5, SkillId.Mon_Repusbunny_mage_Skill_2, SkillId.Mon_Elma_Skill_2, SkillId.Mon_PC_summon_Canceril_Skill_1, SkillId.Mon_boss_Rocksodon_Skill_2, SkillId.Mon_boss_Lapedame_Skill_3, SkillId.Mon_boss_Prisoncutter_Skill_4, SkillId.Mon_boss_stonefroster_Skill_2, SkillId.Mon_boss_Flammidus_Skill_3, SkillId.Mon_boss_Zawra_Skill_3, SkillId.Mon_pc_summon_Prisoncutter_Skill_2, SkillId.Mon_pc_summon_Flammidus_Skill_3, SkillId.Mon_ID_boss_Prisoncutter_Skill_4, SkillId.Mon_M_boss_GiantWoodGoblin_Skill_5, SkillId.Mon_M_boss_Ironbaum_Skill_3, SkillId.Mon_ET_Rocksodon_minimal_Skill_3, SkillId.Mon_ET_boss_Flammidus_Skill_3, SkillId.Mon_flamel_Skill_2, SkillId.Mon_ET_boss_Neop_Skill_5, SkillId.Mon_Boss_ebonypawn_Skill_3, SkillId.Mon_mythic_Elma_Skill_2, SkillId.Mon_mythic_boss_Prisoncutter_Skill_4, SkillId.Mon_Ancient_Canceril_Skill_3, SkillId.Mon_Ancient_Zawra_Skill_3)]
 	public class Mon_BW_boss_Lapedame_Skill_3 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(10199);
@@ -478,6 +478,50 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Length { get; } = 90f;
 		protected override float Width { get; } = 100f;
 		protected override float Angle { get; } = 40f;
+	}
+
+	[SkillHandler(SkillId.Mon_ep16_1_leader_canceril_Skill_1, SkillId.Mon_boss_Canceril_Skill_1)]
+	public class Mon_ep16_1_leader_canceril_Skill_1 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(2300);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(2100);
+		protected override SplashType SplashType { get; } = SplashType.Fan;
+		protected override float Length { get; } = 70f;
+		protected override float Width { get; } = 30f;
+		protected override float Angle { get; } = 30f;
+	}
+
+	[SkillHandler(SkillId.Mon_ep16_1_leader_velniamonkey_Skill_1, SkillId.Mon_boss_Velniamonkey_Skill_1)]
+	public class Mon_ep16_1_leader_velniamonkey_Skill_1 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(1900);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(1700);
+		protected override SplashType SplashType { get; } = SplashType.Fan;
+		protected override float Length { get; } = 60f;
+		protected override float Width { get; } = 30f;
+		protected override float Angle { get; } = 35f;
+	}
+
+	[SkillHandler(SkillId.Mon_ep16_1_leader_durahan_Skill_1, SkillId.Mon_boss_durahan_Skill_1)]
+	public class Mon_ep16_1_leader_durahan_Skill_1 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(1800);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(1600);
+		protected override SplashType SplashType { get; } = SplashType.Fan;
+		protected override float Length { get; } = 60f;
+		protected override float Width { get; } = 30f;
+		protected override float Angle { get; } = 30f;
+	}
+
+	[SkillHandler(SkillId.Mon_ep16_1_leader_unicorn_Skill_2, SkillId.Mon_boss_unicorn_Skill_2)]
+	public class Mon_ep16_1_leader_unicorn_Skill_2 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(2200);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(2000);
+		protected override SplashType SplashType { get; } = SplashType.Circle;
+		protected override float Length { get; } = 60f;
+		protected override float Width { get; } = 30f;
+		protected override float Angle { get; } = 0f;
 	}
 
 	[SkillHandler(SkillId.Mon_Onion_Big_Attack1, SkillId.Mon_ep13_2_banshee_Skill_1)]
@@ -1272,7 +1316,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 40f;
 	}
 
-	[SkillHandler(SkillId.Mon_Sauga_s_Attack3)]
+	[SkillHandler(SkillId.Mon_Sauga_s_Attack3, SkillId.Mon_ep16_1_sauga_Skill_1)]
 	public class Mon_Sauga_s_Attack3 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(900);
@@ -1734,7 +1778,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 10f;
 	}
 
-	[SkillHandler(SkillId.Mon_Tombstone_golem_Skill_3)]
+	[SkillHandler(SkillId.Mon_Tombstone_golem_Skill_3, SkillId.Mon_ep16_1_gravegolem_Skill_3)]
 	public class Mon_Tombstone_golem_Skill_3 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(2000);
@@ -2053,7 +2097,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 10f;
 	}
 
-	[SkillHandler(SkillId.Mon_Zignuts_Skill_1, SkillId.Mon_belegg_Skill_1, SkillId.Mon_Npanto_baby_Skill_1, SkillId.Mon_Npanto_baby_Skill_2, SkillId.Mon_Npanto_sword_Skill_1, SkillId.Mon_Npanto_sword_Skill_2, SkillId.Mon_goblin2_hammer_Skill_1, SkillId.Mon_GlyphRing_Skill_1, SkillId.Mon_Rudasjack_Skill_1, SkillId.Mon_Deadbornscab_green_Skill_1, SkillId.Mon_piro_Skill_2, SkillId.Mon_pampen_Skill_1, SkillId.Mon_rodetad_Skill_1)]
+	[SkillHandler(SkillId.Mon_Zignuts_Skill_1, SkillId.Mon_belegg_Skill_1, SkillId.Mon_Npanto_baby_Skill_1, SkillId.Mon_Npanto_baby_Skill_2, SkillId.Mon_Npanto_sword_Skill_1, SkillId.Mon_Npanto_sword_Skill_2, SkillId.Mon_goblin2_hammer_Skill_1, SkillId.Mon_GlyphRing_Skill_1, SkillId.Mon_Rudasjack_Skill_1, SkillId.Mon_Deadbornscab_green_Skill_1, SkillId.Mon_piro_Skill_2, SkillId.Mon_pampen_Skill_1, SkillId.Mon_rodetad_Skill_1, SkillId.Mon_ep16_1_glyphring_Skill_1)]
 	public class Mon_Zignuts_Skill_1 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(900);
@@ -2185,7 +2229,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 40f;
 	}
 
-	[SkillHandler(SkillId.Mon_TerraNymph_Skill_1, SkillId.Mon_Panto_spear_Skill_1, SkillId.Mon_Panto_twinsword_Skill_1)]
+	[SkillHandler(SkillId.Mon_TerraNymph_Skill_1, SkillId.Mon_Panto_spear_Skill_1, SkillId.Mon_Panto_twinsword_Skill_1, SkillId.Mon_ep16_1_terranymph_blue_Skill_1)]
 	public class Mon_TerraNymph_Skill_1 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(1000);
@@ -2196,7 +2240,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 30f;
 	}
 
-	[SkillHandler(SkillId.Mon_TerraNymph_Skill_2)]
+	[SkillHandler(SkillId.Mon_TerraNymph_Skill_2, SkillId.Mon_ep16_1_terranymph_blue_Skill_2)]
 	public class Mon_TerraNymph_Skill_2 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(800);
@@ -2856,7 +2900,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 10f;
 	}
 
-	[SkillHandler(SkillId.Mon_raider_Skill_1, SkillId.Mon_Infroholder_bow_Skill_1, SkillId.Mon_Infroholder_bow_Skill_2, SkillId.Mon_Repusbunny_mage_Skill_1, SkillId.Mon_Socket_bow_Skill_1, SkillId.Mon_Colifly_bow_Skill_1, SkillId.Mon_TerraNymph_bow_Skill_1, SkillId.Mon_Rambear_bow_Skill_1, SkillId.Mon_Socket_bow_brown_Skill_1, SkillId.Mon_Wendigo_archer_Skill_1, SkillId.Mon_lapasape_mage_Skill_1, SkillId.Mon_velwriggler_mage_green_Skill_1)]
+	[SkillHandler(SkillId.Mon_raider_Skill_1, SkillId.Mon_Infroholder_bow_Skill_1, SkillId.Mon_Infroholder_bow_Skill_2, SkillId.Mon_Repusbunny_mage_Skill_1, SkillId.Mon_Socket_bow_Skill_1, SkillId.Mon_Colifly_bow_Skill_1, SkillId.Mon_TerraNymph_bow_Skill_1, SkillId.Mon_Rambear_bow_Skill_1, SkillId.Mon_Socket_bow_brown_Skill_1, SkillId.Mon_Wendigo_archer_Skill_1, SkillId.Mon_lapasape_mage_Skill_1, SkillId.Mon_velwriggler_mage_green_Skill_1, SkillId.Mon_ep16_1_lapasape_mage_blue_Skill_1)]
 	public class Mon_raider_Skill_1 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(500);
@@ -2999,7 +3043,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 10f;
 	}
 
-	[SkillHandler(SkillId.Mon_Stoulet_Skill_1, SkillId.Mon_Rajatadpole_Skill_1, SkillId.Mon_Greentoshell_Skill_1, SkillId.Mon_Goblin_Spear_red_Skill_1, SkillId.Mon_digo_Skill_1, SkillId.Mon_Wendigo_mage_Skill_1, SkillId.Mon_VelStool_Skill_1, SkillId.Mon_wood_lwa_Skill_1, SkillId.Mon_PagSawyer_Skill_1, SkillId.Mon_PagSawyer_Skill_2, SkillId.Mon_Flamag_Skill_1, SkillId.Mon_Flamag_Skill_2, SkillId.Mon_Ponpon_Skill_1, SkillId.Mon_Folibu_Skill_1, SkillId.Mon_Gosaru_Skill_1, SkillId.Mon_Ferrot_Skill_1, SkillId.Mon_Ghoul_Skill_1, SkillId.Mon_DevilLantren_Skill_1, SkillId.Mon_ET_PagSawyer_Skill_1, SkillId.Mon_ET_PagSawyer_Skill_2, SkillId.Mon_wis_Skill_1, SkillId.Mon_Rakon_Skill_1, SkillId.Mon_rockoff_Skill_1, SkillId.Mon_dorong_Skill_1, SkillId.Mon_dorong_Skill_2, SkillId.Mon_Toothrikon_Skill_1, SkillId.Mon_rompelnuka_Skill_1, SkillId.Mon_honeyspider_Skill_1, SkillId.Mon_pumpkin_dog_Skill_1, SkillId.Mon_nacorngbug_Skill_1, SkillId.Mon_nacorngfly_Skill_1, SkillId.Mon_aklastyke_Skill_1, SkillId.Mon_cloverin_Skill_1, SkillId.Mon_fragolin_Skill_1, SkillId.Mon_chesha_papa_Skill_1)]
+	[SkillHandler(SkillId.Mon_Stoulet_Skill_1, SkillId.Mon_Rajatadpole_Skill_1, SkillId.Mon_Greentoshell_Skill_1, SkillId.Mon_Goblin_Spear_red_Skill_1, SkillId.Mon_digo_Skill_1, SkillId.Mon_Wendigo_mage_Skill_1, SkillId.Mon_VelStool_Skill_1, SkillId.Mon_wood_lwa_Skill_1, SkillId.Mon_PagSawyer_Skill_1, SkillId.Mon_PagSawyer_Skill_2, SkillId.Mon_Flamag_Skill_1, SkillId.Mon_Flamag_Skill_2, SkillId.Mon_Ponpon_Skill_1, SkillId.Mon_Folibu_Skill_1, SkillId.Mon_Gosaru_Skill_1, SkillId.Mon_Ferrot_Skill_1, SkillId.Mon_Ghoul_Skill_1, SkillId.Mon_DevilLantren_Skill_1, SkillId.Mon_ET_PagSawyer_Skill_1, SkillId.Mon_ET_PagSawyer_Skill_2, SkillId.Mon_wis_Skill_1, SkillId.Mon_Rakon_Skill_1, SkillId.Mon_rockoff_Skill_1, SkillId.Mon_dorong_Skill_1, SkillId.Mon_dorong_Skill_2, SkillId.Mon_Toothrikon_Skill_1, SkillId.Mon_rompelnuka_Skill_1, SkillId.Mon_honeyspider_Skill_1, SkillId.Mon_pumpkin_dog_Skill_1, SkillId.Mon_nacorngbug_Skill_1, SkillId.Mon_nacorngfly_Skill_1, SkillId.Mon_aklastyke_Skill_1, SkillId.Mon_cloverin_Skill_1, SkillId.Mon_fragolin_Skill_1, SkillId.Mon_chesha_papa_Skill_1, SkillId.Mon_ep16_1_greentoshell_Skill_1)]
 	public class Mon_Stoulet_Skill_1 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(800);
@@ -3472,7 +3516,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 0f;
 	}
 
-	[SkillHandler(SkillId.Mon_hogma_sorcerer_Skill_1)]
+	[SkillHandler(SkillId.Mon_hogma_sorcerer_Skill_1, SkillId.Mon_ep16_1_hogma_sorcerer_Skill_1)]
 	public class Mon_hogma_sorcerer_Skill_1 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(900);
@@ -4286,17 +4330,6 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 0f;
 	}
 
-	[SkillHandler(SkillId.Mon_boss_unicorn_Skill_2)]
-	public class Mon_boss_unicorn_Skill_2 : ParametersOnlySkill
-	{
-		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(2200);
-		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(2000);
-		protected override SplashType SplashType { get; } = SplashType.Circle;
-		protected override float Length { get; } = 60f;
-		protected override float Width { get; } = 30f;
-		protected override float Angle { get; } = 0f;
-	}
-
 	[SkillHandler(SkillId.Mon_Velhider_Skill_1)]
 	public class Mon_Velhider_Skill_1 : ParametersOnlySkill
 	{
@@ -4385,7 +4418,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 30f;
 	}
 
-	[SkillHandler(SkillId.Mon_chupacabra_desert_Skill_2, SkillId.Mon_Beeteros_Skill_1, SkillId.Mon_Mentiwood_Skill_2, SkillId.Mon_Mentiwood_Skill_3, SkillId.Mon_event_Beeteros_Skill_1)]
+	[SkillHandler(SkillId.Mon_chupacabra_desert_Skill_2, SkillId.Mon_Beeteros_Skill_1, SkillId.Mon_Mentiwood_Skill_2, SkillId.Mon_Mentiwood_Skill_3, SkillId.Mon_ep16_1_chupacabra_desert_Skill_2, SkillId.Mon_event_Beeteros_Skill_1)]
 	public class Mon_chupacabra_desert_Skill_2 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(800);
@@ -4396,7 +4429,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 30f;
 	}
 
-	[SkillHandler(SkillId.Mon_boss_Unknocker_Skill_4, SkillId.Mon_boss_capria_Skill_4, SkillId.Mon_FD_boss_Chapparition_Skill_6)]
+	[SkillHandler(SkillId.Mon_boss_Unknocker_Skill_4, SkillId.Mon_boss_capria_Skill_4, SkillId.Mon_FD_boss_Chapparition_Skill_6, SkillId.Mon_boss_Grimreaper_Q2_Skill_5)]
 	public class Mon_boss_Unknocker_Skill_4 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(100199);
@@ -4715,7 +4748,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 0f;
 	}
 
-	[SkillHandler(SkillId.Mon_Lichenclops_Skill_1, SkillId.Mon_Dumaro_Skill_1, SkillId.Mon_ticen_Skill_1, SkillId.Mon_Pendinmire_Skill_1)]
+	[SkillHandler(SkillId.Mon_Lichenclops_Skill_1, SkillId.Mon_Dumaro_Skill_1, SkillId.Mon_ticen_Skill_1, SkillId.Mon_Pendinmire_Skill_1, SkillId.Mon_ep16_1_ticen_Skill_1)]
 	public class Mon_Lichenclops_Skill_1 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(800);
@@ -4726,7 +4759,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 30f;
 	}
 
-	[SkillHandler(SkillId.Mon_tucen_Skill_1, SkillId.Mon_mythic_tucen_Skill_1)]
+	[SkillHandler(SkillId.Mon_tucen_Skill_1, SkillId.Mon_mythic_tucen_Skill_1, SkillId.Mon_ep16_1_tucen_Skill_1)]
 	public class Mon_tucen_Skill_1 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(700);
@@ -5408,17 +5441,6 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 30f;
 	}
 
-	[SkillHandler(SkillId.Mon_boss_Canceril_Skill_1)]
-	public class Mon_boss_Canceril_Skill_1 : ParametersOnlySkill
-	{
-		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(2300);
-		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(2100);
-		protected override SplashType SplashType { get; } = SplashType.Fan;
-		protected override float Length { get; } = 70f;
-		protected override float Width { get; } = 30f;
-		protected override float Angle { get; } = 30f;
-	}
-
 	[SkillHandler(SkillId.Mon_Kepo_seed_Skill_1)]
 	public class Mon_Kepo_seed_Skill_1 : ParametersOnlySkill
 	{
@@ -5736,17 +5758,6 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Length { get; } = 80f;
 		protected override float Width { get; } = 60f;
 		protected override float Angle { get; } = 0f;
-	}
-
-	[SkillHandler(SkillId.Mon_boss_durahan_Skill_1)]
-	public class Mon_boss_durahan_Skill_1 : ParametersOnlySkill
-	{
-		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(1800);
-		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(1600);
-		protected override SplashType SplashType { get; } = SplashType.Fan;
-		protected override float Length { get; } = 60f;
-		protected override float Width { get; } = 30f;
-		protected override float Angle { get; } = 30f;
 	}
 
 	[SkillHandler(SkillId.Mon_boss_Blud_Skill_2, SkillId.Mon_pc_summon_boss_Blud_Skill_2, SkillId.Mon_Ancient_Blud_Skill_3)]
@@ -7102,17 +7113,6 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 10f;
 	}
 
-	[SkillHandler(SkillId.Mon_boss_Velniamonkey_Skill_1)]
-	public class Mon_boss_Velniamonkey_Skill_1 : ParametersOnlySkill
-	{
-		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(1900);
-		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(1700);
-		protected override SplashType SplashType { get; } = SplashType.Fan;
-		protected override float Length { get; } = 60f;
-		protected override float Width { get; } = 30f;
-		protected override float Angle { get; } = 35f;
-	}
-
 	[SkillHandler(SkillId.Mon_boss_Velniamonkey_Skill_6)]
 	public class Mon_boss_Velniamonkey_Skill_6 : ParametersOnlySkill
 	{
@@ -8378,7 +8378,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 0f;
 	}
 
-	[SkillHandler(SkillId.Mon_boss_Velmosquy_Skill_1)]
+	[SkillHandler(SkillId.Mon_boss_Velmosquy_Skill_1, SkillId.Mon_boss_Velmosquy_Q1_Skill_1)]
 	public class Mon_boss_Velmosquy_Skill_1 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(1900);
@@ -8389,7 +8389,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 70f;
 	}
 
-	[SkillHandler(SkillId.Mon_boss_Velmosquy_Skill_2)]
+	[SkillHandler(SkillId.Mon_boss_Velmosquy_Skill_2, SkillId.Mon_boss_Velmosquy_Q1_Skill_2)]
 	public class Mon_boss_Velmosquy_Skill_2 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(2900);
@@ -11491,7 +11491,7 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Angle { get; } = 10f;
 	}
 
-	[SkillHandler(SkillId.Mon_banterer_Skill_1)]
+	[SkillHandler(SkillId.Mon_banterer_Skill_1, SkillId.Mon_ep16_1_gravegolem_Skill_1)]
 	public class Mon_banterer_Skill_1 : ParametersOnlySkill
 	{
 		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(900);
@@ -13898,6 +13898,94 @@ namespace Melia.Zone.Skills.Handlers.Monsters
 		protected override float Length { get; } = 120f;
 		protected override float Width { get; } = 30f;
 		protected override float Angle { get; } = 45f;
+	}
+
+	[SkillHandler(SkillId.Mon_ep16_1_lapasape_mage_blue_Skill_2)]
+	public class Mon_ep16_1_lapasape_mage_blue_Skill_2 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(10199);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(9999);
+		protected override SplashType SplashType { get; } = SplashType.Square;
+		protected override float Length { get; } = 10f;
+		protected override float Width { get; } = 10f;
+		protected override float Angle { get; } = 10f;
+	}
+
+	[SkillHandler(SkillId.Mon_ep16_1_sauga_Skill_2)]
+	public class Mon_ep16_1_sauga_Skill_2 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(800);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(600);
+		protected override SplashType SplashType { get; } = SplashType.Circle;
+		protected override float Length { get; } = 0f;
+		protected override float Width { get; } = 35f;
+		protected override float Angle { get; } = 40f;
+	}
+
+	[SkillHandler(SkillId.Mon_ep16_1_glyphring_Skill_2, SkillId.Mon_boss_merregina_despair_Q1_Skill_2, SkillId.Mon_boss_merregina_despair_Q1_Skill_5)]
+	public class Mon_ep16_1_glyphring_Skill_2 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(10199);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(9999);
+		protected override SplashType SplashType { get; } = SplashType.Fan;
+		protected override float Length { get; } = 10f;
+		protected override float Width { get; } = 10f;
+		protected override float Angle { get; } = 30f;
+	}
+
+	[SkillHandler(SkillId.Mon_ep16_1_tucen_Skill_2, SkillId.Mon_ep16_1_ticen_Skill_2)]
+	public class Mon_ep16_1_tucen_Skill_2 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(10199);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(9999);
+		protected override SplashType SplashType { get; } = SplashType.Fan;
+		protected override float Length { get; } = 10f;
+		protected override float Width { get; } = 10f;
+		protected override float Angle { get; } = 30f;
+	}
+
+	[SkillHandler(SkillId.Mon_ep16_1_gravegolem_Skill_2)]
+	public class Mon_ep16_1_gravegolem_Skill_2 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(1000);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(800);
+		protected override SplashType SplashType { get; } = SplashType.Square;
+		protected override float Length { get; } = 50f;
+		protected override float Width { get; } = 15f;
+		protected override float Angle { get; } = 10f;
+	}
+
+	[SkillHandler(SkillId.Mon_boss_merregina_despair_Q1_Skill_1)]
+	public class Mon_boss_merregina_despair_Q1_Skill_1 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(700);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(500);
+		protected override SplashType SplashType { get; } = SplashType.Fan;
+		protected override float Length { get; } = 80f;
+		protected override float Width { get; } = 10f;
+		protected override float Angle { get; } = 30f;
+	}
+
+	[SkillHandler(SkillId.Mon_boss_merregina_despair_Q1_Skill_4)]
+	public class Mon_boss_merregina_despair_Q1_Skill_4 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(10199);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(9999);
+		protected override SplashType SplashType { get; } = SplashType.Square;
+		protected override float Length { get; } = 10f;
+		protected override float Width { get; } = 10f;
+		protected override float Angle { get; } = 30f;
+	}
+
+	[SkillHandler(SkillId.Mon_boss_Grimreaper_Q2_Skill_3)]
+	public class Mon_boss_Grimreaper_Q2_Skill_3 : ParametersOnlySkill
+	{
+		protected override TimeSpan DamageDelay { get; } = TimeSpan.FromMilliseconds(2000);
+		protected override TimeSpan HitDelay { get; } = TimeSpan.FromMilliseconds(1800);
+		protected override SplashType SplashType { get; } = SplashType.Circle;
+		protected override float Length { get; } = 0f;
+		protected override float Width { get; } = 110f;
+		protected override float Angle { get; } = 0f;
 	}
 
 	[SkillHandler(SkillId.Mon_Ancient_Escarot_Skill_1)]

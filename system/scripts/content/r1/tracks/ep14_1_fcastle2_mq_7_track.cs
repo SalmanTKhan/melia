@@ -173,7 +173,7 @@ public class EP141FCASTLE2MQ7TRACK : TrackScript
 			case 39:
 				Send.ZC_NORMAL.SetupCutscene(character, false, false, true);
 				//TRACK_SETTENDENCY();
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_PLAY_MGAME("EP14_1_FCASTLE2_MQ_7_MGAME");
 				break;
 			default:

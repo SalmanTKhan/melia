@@ -162,6 +162,7 @@ namespace Melia.Shared.Data.Database
 		public bool HasCooldown => !string.IsNullOrWhiteSpace(this.CooldownGroup);
 
 		public string EquipSkill { get; internal set; }
+		public bool Journal { get; set; }
 	}
 
 	[Serializable]
@@ -278,6 +279,7 @@ namespace Melia.Shared.Data.Database
 			data.MinLevel = entry.ReadInt("minLevel", 1);
 			data.Durability = entry.ReadInt("durability", 0);
 			data.MaxDurability = entry.ReadInt("maxDurability", 0);
+			data.Journal = entry.ReadBool("journal");
 
 			data.MinAtk = entry.ReadFloat("minAtk", 0);
 			data.MaxAtk = entry.ReadFloat("maxAtk", 0);
@@ -411,6 +413,9 @@ namespace Melia.Shared.Data.Database
 
 			if (entry.ContainsKey("cooldown"))
 				data.Cooldown = entry.ReadInt("cooldown");
+
+			if (entry.ContainsKey("cooldownGroup"))
+				data.CooldownGroup = entry.ReadString("cooldownGroup");
 
 			if (entry.ContainsKey("equipSkill"))
 				data.EquipSkill = entry.ReadString("equipSkill");

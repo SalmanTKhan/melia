@@ -82,7 +82,6 @@ namespace Melia.Zone.Skills.Handlers.Fletcher
 			this.ExecuteCatenaChainArrow(caster, skill, targetPos);
 		}
 
-
 		/// <summary>
 		/// Execute Catena Chain Arrow
 		/// </summary>

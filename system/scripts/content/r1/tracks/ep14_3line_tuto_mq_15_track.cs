@@ -25,7 +25,23 @@ public class EP143LINETUTOMQ15TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(1451.279f, 21.81653f, 343.2144f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 151078, "", "c_orsha", 1353.647, 21.81653, 332.1519, 1.515152);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 20065, "", "c_orsha", 87.28378, 176.2531, 735.735, 0);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

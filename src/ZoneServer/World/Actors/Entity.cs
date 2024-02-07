@@ -274,6 +274,15 @@ namespace Melia.Zone.World.Actors
 			=> entity.Components.Get<CombatComponent>()?.SetAttackState(inAttackState);
 
 		/// <summary>
+		/// Checks if an ability is active.
+		/// </summary>
+		/// <param name="entity"></param>
+		/// <param name="ability"></param>
+		/// <returns></returns>
+		public static bool IsAbilityActive(this ICombatEntity entity, AbilityId ability) =>
+			entity.Components.Get<AbilityComponent>()?.IsActive(ability) ?? false;
+
+		/// <summary>
 		/// Checks if a given cooldown exists.
 		/// </summary>
 		/// <param name="entity"></param>
@@ -301,7 +310,7 @@ namespace Melia.Zone.World.Actors
 		/// <param name="duration"></param>
 		/// <param name="caster"></param>
 		/// <returns></returns>
-		public static Buff StartBuff(this ICombatEntity entity, BuffId buffId, TimeSpan duration, ICombatEntity caster, SkillId skillId = SkillId.Normal_Attack)
+		public static Buff StartBuff(this ICombatEntity entity, BuffId buffId, TimeSpan duration, IActor caster, SkillId skillId = SkillId.Normal_Attack)
 			=> entity.Components.Get<BuffComponent>()?.Start(buffId, 0, 0, duration, caster, skillId);
 
 		/// <summary>
@@ -324,7 +333,7 @@ namespace Melia.Zone.World.Actors
 		/// <param name="duration"></param>
 		/// <param name="caster"></param>
 		/// <returns></returns>
-		public static Buff StartBuff(this ICombatEntity entity, BuffId buffId, float numArg1, float numArg2, TimeSpan duration, ICombatEntity caster, SkillId skillId = SkillId.Normal_Attack)
+		public static Buff StartBuff(this ICombatEntity entity, BuffId buffId, float numArg1, float numArg2, TimeSpan duration, IActor caster, SkillId skillId = SkillId.Normal_Attack)
 			=> entity.Components.Get<BuffComponent>()?.Start(buffId, numArg1, numArg2, duration, caster, skillId);
 
 		/// <summary>

@@ -138,6 +138,8 @@ namespace Melia.Zone.Network
 			if (gameReadyArgs.CancelHandling)
 				return;
 
+			conn.GameReady = true;
+
 			Send.ZC_STANCE_CHANGE(character);
 			Send.ZC_NORMAL.AdventureBook(conn);
 			Send.ZC_SET_CHATBALLOON_SKIN(character);
@@ -253,6 +255,8 @@ namespace Melia.Zone.Network
 
 			character.AddonMessage(AddonMessage.ENABLE_PCBANG_SHOP, null, 1);
 			Send.ZC_PCBANG_SHOP_RENTAL(conn);
+
+			character.AdventureBook.UpdateClient();
 
 			character.OpenEyes();
 
@@ -889,12 +893,13 @@ namespace Melia.Zone.Network
 					return;
 				}
 
+				// Send item on cooldown
+				if (item.Data.HasCooldown && item.CooldownData != null)
+					character.StartCooldown(item.CooldownData.Id, item.CooldownData.OverheatResetTime);
+
 				// Remove consumeable items on success
 				if (item.Data.Type == ItemType.Consume && result != ItemUseResult.OkayNotConsumed)
 					character.Inventory.Remove(item, 1, InventoryItemRemoveMsg.Used);
-
-				if (item.Data.HasCooldown && item.CooldownData != null)
-					character.StartCooldown(item.CooldownData.Id, item.CooldownData.OverheatResetTime);
 
 				if (result == ItemUseResult.Okay)
 					Send.ZC_ITEM_USE(character, item.Id);
@@ -1802,7 +1807,9 @@ namespace Melia.Zone.Network
 		{
 			var character = conn.SelectedCharacter;
 
-			Send.ZC_SYSTEM_MSG(character, 134089);
+			// TODO: Figure out which indun is requested, attach it to the connection?
+			if (character.Level > 0)
+				character.SystemMessage("YourLevelIsHighThenIndun");
 		}
 
 		/// <summary>
@@ -2375,6 +2382,7 @@ namespace Melia.Zone.Network
 			var i1 = packet.GetInt();
 
 			// TODO: Send.ZC_ADVENTURE_BOOK_INFO
+			Send.ZC_NORMAL.AdventureBookRank(conn);
 		}
 
 		/// <summary>

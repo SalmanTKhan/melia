@@ -25,7 +25,35 @@ public class EP142DCASTLE2MQ10TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(-352.6453f, 68.03178f, 635.6619f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 59657, "", "ep14_2_d_castle_2", 34.58098, 68.03178, 633.0087, 1.097561);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 157115, "", "ep14_2_d_castle_2", -404.5669, 68.03178, 662.9742, 98.66666);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 150287, "", "ep14_2_d_castle_2", -401.1383, 68.03178, 603.5173, 94);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 59755, "", "ep14_2_d_castle_2", 110.5414, 68.03178, 622.7532, 15.78947);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)
@@ -50,7 +78,7 @@ public class EP142DCASTLE2MQ10TRACK : TrackScript
 				break;
 			case 74:
 				//DRT_PLAY_MGAME("EP14_2_DCASTLE2_MQ_10_MINI");
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				break;
 			default:
 				Log.Warning("OnProgress: Unsupported frame {0} called from {1}.", frame, this.TrackId);

@@ -25,7 +25,29 @@ public class EP142DCASTLE1MQ7TRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(-353.7313f, 233.2691f, 3082.428f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 59742, "", "ep14_2_d_castle_1", -359.2883, 233.2691, 2996.725, 85);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 59743, "", "ep14_2_d_castle_1", -420.8564, 233.2691, 3108.696, 0);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 59742, "", "ep14_2_d_castle_1", -364.4536, 233.2691, 3180.433, 0);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)
@@ -40,7 +62,7 @@ public class EP142DCASTLE1MQ7TRACK : TrackScript
 				//TRACK_SETTENDENCY();
 				break;
 			case 34:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//DRT_PLAY_MGAME("EP14_2_DCASTLE1_MQ_7_MINI");
 				break;
 			default:

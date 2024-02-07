@@ -25,7 +25,23 @@ public class EVENT1705SCHWARZEREITERTRACK : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(64.85198f, 148.8296f, 364.3736f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 147510, "", "c_Klaipe", 83, 148, 383, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 57236, "", "c_Klaipe", 1.821192, 148.8461, 463.7768, 34.5);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)

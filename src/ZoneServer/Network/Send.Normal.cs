@@ -385,6 +385,26 @@ namespace Melia.Zone.Network
 			}
 
 			/// <summary>
+			/// Show's companion food in player's hand.
+			/// </summary>
+			/// <param name="actor"></param>
+			/// <param name="b1"></param>
+			/// <param name="animationId"></param>
+			/// <param name="isVisible"></param>
+			public static void PlayEquipItem(IActor actor, EquipSlot slot, string animationId, bool isVisible)
+			{
+				var packet = new Packet(Op.ZC_NORMAL);
+				packet.PutInt(NormalOp.Zone.PlayEquipItem);
+
+				packet.PutInt(actor.Handle);
+				packet.PutByte((byte)slot);
+				packet.PutLpString(animationId);
+				packet.PutByte(isVisible);
+
+				actor.Map.Broadcast(packet);
+			}
+
+			/// <summary>
 			/// Play an effect/animation at a position
 			/// </summary>
 			/// <param name="conn"></param>
@@ -818,18 +838,32 @@ namespace Melia.Zone.Network
 			}
 
 			/// <summary>
-			/// Seen with 
+			/// Detach an effect from an actor.
+			/// </summary>
+			/// <param name="actor"></param>
+			/// <param name="animationName"></param>
+			/// <exception cref="ArgumentException"></exception>
+			public static void DetachEffect(IActor actor, string animationName)
+			{
+				if (!ZoneServer.Instance.Data.PacketStringDb.TryFind(animationName, out var packetString))
+					throw new ArgumentException($"Packet string '{animationName}' not found.");
+
+				DetachEffect(actor, 1, packetString.Id);
+			}
+
+			/// <summary>
+			/// Detach an effect from an actor.
 			/// </summary>
 			/// <param name="actor"></param>
 			/// <param name="b1"></param>
-			/// <param name="i1"></param>
-			public static void Unknown_1B(IActor actor, byte b1, int i1)
+			/// <param name="packetStringId"></param>
+			public static void DetachEffect(IActor actor, byte b1, int packetStringId)
 			{
 				var packet = new Packet(Op.ZC_NORMAL);
 				packet.PutInt(NormalOp.Zone.Unknown_1B);
 
 				packet.PutByte(b1);
-				packet.PutInt(i1);
+				packet.PutInt(packetStringId);
 
 				actor.Map.Broadcast(packet, actor);
 			}
@@ -1185,6 +1219,20 @@ namespace Melia.Zone.Network
 			{
 				var packet = new Packet(Op.ZC_NORMAL);
 				packet.PutInt(NormalOp.Zone.AttackCancel);
+
+				packet.PutInt(actor.Handle);
+
+				actor.Map.Broadcast(packet);
+			}
+
+			/// <summary>
+			/// Cancel attack, seen with pet companion on Archer/Hunter/Ranger
+			/// </summary>
+			/// <param name="actor"></param>
+			public static void AttackCancelBow(IActor actor)
+			{
+				var packet = new Packet(Op.ZC_NORMAL);
+				packet.PutInt(NormalOp.Zone.AttackCancelBow);
 
 				packet.PutInt(actor.Handle);
 
@@ -1746,6 +1794,20 @@ namespace Melia.Zone.Network
 			}
 
 			/// <summary>
+			/// Stop animation
+			/// </summary>
+			/// <param name="actor"></param>
+			public static void StopAnimation(IActor actor)
+			{
+				var packet = new Packet(Op.ZC_NORMAL);
+				packet.PutInt(NormalOp.Zone.Unknown_8D);
+
+				packet.PutInt(actor.Handle);
+
+				actor.Map.Broadcast(packet);
+			}
+
+			/// <summary>
 			/// Pet play animation/state?
 			/// </summary>
 			/// <param name="conn"></param>
@@ -1911,7 +1973,7 @@ namespace Melia.Zone.Network
 				var packet = new Packet(Op.ZC_NORMAL);
 				packet.PutInt(NormalOp.Zone.PetExpUp);
 				packet.PutLong(companion.ObjectId);
-				packet.PutLong(companion.Experience);
+				packet.PutLong(companion.Exp);
 
 				character.Connection.Send(packet);
 			}
@@ -3243,8 +3305,43 @@ namespace Melia.Zone.Network
 				packet.PutLpString("Initialization_point");
 				packet.PutInt(-1);
 				packet.PutInt(0);
-				packet.PutInt(0);
+				packet.PutInt(0); // Rank Points
 				packet.PutByte(1);
+
+				conn.Send(packet);
+			}
+
+			/// <summary>
+			/// Unknown purpose, sent on login
+			/// </summary>
+			/// <param name="conn"></param>
+			public static void AdventureBookRank(IZoneConnection conn)
+			{
+				var packet = new Packet(Op.ZC_NORMAL);
+				packet.PutInt(NormalOp.Zone.AdventureBookRank);
+
+				packet.PutInt(1); // Current Rank
+				packet.PutInt(1000); // ?
+				packet.PutInt(100000); // Current Points
+				packet.PutInt(3); // 3?
+				for (var i = 0; i < 3; i++)
+				{
+					packet.PutLong(conn.SelectedCharacter.AccountObjectId);
+					packet.PutLpString(conn.SelectedCharacter.TeamName);
+					packet.PutInt(100000 - i);
+				}
+				// Nearest 5 ranks
+				for (var i = 1; i < 6; i++)
+				{
+					packet.PutInt(i);
+					packet.PutLong(conn.SelectedCharacter.AccountObjectId);
+					packet.PutInt(100000 - i);
+				}
+				packet.PutInt(100000); // Current Points
+				packet.PutInt(1);
+				packet.PutLong(conn.SelectedCharacter.AccountObjectId);
+				packet.PutInt(1); // Current Rank
+				packet.PutInt(100000); // Current Points
 
 				conn.Send(packet);
 			}

@@ -104,7 +104,7 @@ public class EP122FCASTLE101MQ05TRACK01 : TrackScript
 				//DRT_PLAY_MGAME("EP12_2_F_CASTLE_101_MQ05_MINI");
 				break;
 			case 54:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//TRACK_SETTENDENCY();
 				//DRT_RUN_FUNCTION("SCR_SUMMON_BARONG_02");
 				//SetFixAnim("event_down");

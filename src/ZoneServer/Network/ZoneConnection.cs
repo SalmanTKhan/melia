@@ -20,6 +20,11 @@ namespace Melia.Zone.Network
 	public interface IZoneConnection : IConnection
 	{
 		/// <summary>
+		/// Gets or sets whether the player is ready to receive packets.
+		/// </summary>
+		bool GameReady { get; set; }
+
+		/// <summary>
 		/// Gets or sets the account associated with the connection.
 		/// </summary>
 		Account Account { get; set; }
@@ -73,6 +78,7 @@ namespace Melia.Zone.Network
 
 	public class DummyConnection : IZoneConnection
 	{
+		public bool GameReady { get; set; } = true;
 		public Account Account { get; set; }
 		public Character SelectedCharacter { get; set; }
 		public Dialog CurrentDialog { get; set; }
@@ -108,6 +114,10 @@ namespace Melia.Zone.Network
 	/// </summary>
 	public class ZoneConnection : Connection, IZoneConnection
 	{
+		/// <summary>
+		/// Gets or sets whether the player is ready to receive packets.
+		/// </summary>
+		public bool GameReady { get; set; }
 		/// <summary>
 		/// Gets or sets the account associated with the connection.
 		/// </summary>

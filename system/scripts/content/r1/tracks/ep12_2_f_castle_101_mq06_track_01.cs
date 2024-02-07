@@ -25,7 +25,41 @@ public class EP122FCASTLE101MQ06TRACK01 : TrackScript
 	{
 		base.OnStart(character, track);
 
-		return Array.Empty<IActor>();
+		var actors = new List<IActor>();
+		character.Movement.MoveTo(new Position(-153.1427f, 52.92822f, -679.6096f));
+		actors.Add(character);
+
+		var mob0 = Shortcuts.AddMonster(0, 151019, "UnvisibleName", "f_castle_101", 117.8619, 52.92822, -522.1024, 0);
+		mob0.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob0.AddEffect(new ScriptInvisibleEffect());
+		mob0.Layer = character.Layer;
+		actors.Add(mob0);
+
+		var mob1 = Shortcuts.AddMonster(0, 150212, "", "f_castle_101", -111.7566, 52.92822, -756.3589, 0);
+		mob1.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob1.AddEffect(new ScriptInvisibleEffect());
+		mob1.Layer = character.Layer;
+		actors.Add(mob1);
+
+		var mob2 = Shortcuts.AddMonster(0, 150230, "", "f_castle_101", -192.2616, 52.92822, -706.0736, 2.61194);
+		mob2.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob2.AddEffect(new ScriptInvisibleEffect());
+		mob2.Layer = character.Layer;
+		actors.Add(mob2);
+
+		var mob3 = Shortcuts.AddMonster(0, 47269, "", "f_castle_101", 117.2889, 52.92822, -523.0613, 0);
+		mob3.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob3.AddEffect(new ScriptInvisibleEffect());
+		mob3.Layer = character.Layer;
+		actors.Add(mob3);
+
+		var mob4 = Shortcuts.AddMonster(0, 59509, "", "f_castle_101", 114.7216, 52.92822, -519.3476, 26.66667);
+		mob4.SetVisibilty(ActorVisibility.Track, character.ObjectId);
+		mob4.AddEffect(new ScriptInvisibleEffect());
+		mob4.Layer = character.Layer;
+		actors.Add(mob4);
+
+		return actors.ToArray();
 	}
 
 	public override async Task OnProgress(Character character, Track track, int frame)
@@ -72,7 +106,7 @@ public class EP122FCASTLE101MQ06TRACK01 : TrackScript
 				await track.Dialog.Msg("EP12_2_F_CASTLE_101_MQ06_DLG_3");
 				break;
 			case 79:
-				//CREATE_BATTLE_BOX_INLAYER(0);
+				CreateBattleBoxInLayer(character, track);
 				//TRACK_SETTENDENCY();
 				break;
 			default:

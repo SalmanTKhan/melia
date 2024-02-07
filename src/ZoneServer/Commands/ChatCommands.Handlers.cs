@@ -44,6 +44,7 @@ namespace Melia.Zone.Commands
 			// Client Commands
 			this.Add("requpdateequip", "", "", this.HandleReqUpdateEquip);
 			this.Add("buyabilpoint", "<amount>", "", this.HandleBuyAbilPoint);
+			this.Add("hairgacha", "", "", this.HandleHairGacha);
 			this.Add("guildexpup", "", "", this.HandleGuildExpUp);
 			this.Add("intewarp", "<warp id> 0", "", this.HandleInteWarp);
 			this.Add("mic", "", "", this.HandleShout);
@@ -52,15 +53,13 @@ namespace Melia.Zone.Commands
 			this.Add("partymake", "<partyName>", "", this.HandlePartyMake);
 			this.Add("partyDirectInvite", "<team name>", "", this.HandlePartyInvite);
 			this.Add("partyban", "0 <team name>", "", this.HandlePartyBan);
+			this.Add("pethire", "", "", this.HandlePetHire);
+			this.Add("petstat", "", "", this.HandlePetStat);
 			//this.Add("readcollection", "id", "", this.HandleReadCollection);
 			this.Add("retquest", "<quest id>", "", this.HandleReturnToQuestGiver);
 
 			//this.Add("outguildcheck", "", "", this.HandleLeaveGuildCheck);
 			//this.Add("outguildbyweb", "", "", this.HandleLeaveGuildByWeb);
-
-			this.Add("hairgacha", "", "", this.HandleHairGacha);
-			this.Add("petstat", "", "", this.HandlePetStat);
-			this.Add("pethire", "", "", this.HandlePetHire);
 
 			// Skills
 			//this.Add("sageSavePos", "", "", this.HandleSageSavePosition);
@@ -2372,13 +2371,36 @@ namespace Melia.Zone.Commands
 				return CommandResult.Okay;
 			}
 
-			if (!sender.HasCompanions)
+			if (sender.HasCompanions)
 				return CommandResult.Okay;
 
 			if (!int.TryParse(args.Get(0), out var petShopId))
 				return CommandResult.InvalidArgument;
 
-			var companion = new Companion(sender, petShopId, MonsterType.Friendly);
+			if (!ZoneServer.Instance.Data.CompanionDb.TryFind(petShopId, out var data))
+				return CommandResult.InvalidArgument;
+
+			if (!ZoneServer.Instance.Data.MonsterDb.TryFind(data.ClassName, out var monData))
+				return CommandResult.InvalidArgument;
+
+			var targetNpcName = "Companion Trader";
+			var currentNpcName = sender.Connection.CurrentDialog?.Npc.Name;
+
+			if (!currentNpcName.Contains(targetNpcName))
+				return CommandResult.InvalidArgument;
+
+			//TODO: Decide if we sell pets that don't have a price defined.
+			if (data.Price == 0)
+				return CommandResult.Okay;
+
+			if (sender.Inventory.CountItem(ItemId.Silver) < data.Price)
+			{
+				sender.SystemMessage("OwnerDontHaveSilver");
+				return CommandResult.Okay;
+			}
+
+			sender.RemoveItem(ItemId.Silver, data.Price);
+			var companion = new Companion(sender, monData.Id, MonsterType.Friendly);
 			if (args.Count > 1)
 				companion.Name = args.Get(1);
 
@@ -2391,7 +2413,7 @@ namespace Melia.Zone.Commands
 		/// Official slash command to raise pet stats
 		/// </summary>
 		/// <example>/petstat 528525790635969 MHP 1</example>
-		/// <param name="character"></param>
+		/// <param name="sender"></param>
 		/// <param name="target"></param>
 		/// <param name="message"></param>
 		/// <param name="command"></param>
