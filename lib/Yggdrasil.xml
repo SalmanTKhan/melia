@@ -5196,6 +5196,11 @@
             Console utility functions.
             </summary>
         </member>
+        <member name="P:Yggdrasil.Util.ConsoleUtil._title">
+            <summary>
+            Internal
+            </summary>
+        </member>
         <member name="M:Yggdrasil.Util.ConsoleUtil.WriteHeader(System.String,System.String,System.ConsoleColor,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">
             <summary>
             Writes logo and credits to Console.
