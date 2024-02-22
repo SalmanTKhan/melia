@@ -31,6 +31,7 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// </summary>
 		public AttributeType Attribute => AttributeType.None;
 
+		/// <summary>
 		/// Returns the monster's current HP.
 		/// </summary>
 		public int Hp => 100;
