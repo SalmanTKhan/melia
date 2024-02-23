@@ -25,8 +25,6 @@ using Melia.Zone.World.Actors.CombatEntities.Components;
 using Melia.Zone.World.Actors.Monsters;
 using Melia.Zone.World.Items;
 using Melia.Zone.World.Maps;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.FileIO;
 using Yggdrasil.Logging;
 
 namespace Melia.Zone.Network

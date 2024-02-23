@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Runtime.InteropServices;
 using System.Text;
+using Melia.Shared.IES;
 using Yggdrasil.Util;
 
 namespace Melia.Shared.Network
@@ -10,6 +12,15 @@ namespace Melia.Shared.Network
 	public class Packet
 	{
 		private static readonly Encoding DefaultEncoding = Encoding.UTF8;
+
+		/// <summary>
+		/// The max length packets may have.
+		/// </summary>
+		/// <remarks>
+		/// This is the presumed official max length of packets and can
+		/// be used as reference for deciding when to cut off packets.
+		/// </remarks>
+		public const int MaxLength = 1024 * 12;
 
 		private readonly BufferReaderWriter _buffer;
 		private readonly int _bodyStart;
@@ -63,8 +74,28 @@ namespace Melia.Shared.Network
 		}
 
 		/// <summary>
+		/// Returns the byte offset the packet writer is currently pointing
+		/// to, starting from the body.
+		/// </summary>
+		/// <returns></returns>
+		public int GetCurrentIndex()
+		{
+			return _buffer.Index;
+		}
+
+		/// <summary>
+		/// Moves the packet reader/writer to the given offset in the packet.
+		/// </summary>
+		/// <param name="offset"></param>
+		/// <param name="origin"></param>
+		public void Seek(int offset, SeekOrigin origin)
+		{
+			_buffer.Seek(offset, origin);
+		}
+
+		/// <summary>
 		/// Sets the reading and writing pointer back to the start of
-		/// the packet.
+		/// the packet's body.
 		/// </summary>
 		public void Rewind()
 		{

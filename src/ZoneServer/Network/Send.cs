@@ -2947,10 +2947,16 @@ namespace Melia.Zone.Network
 		/// <param name="conn"></param>
 		public static void ZC_IES_MODIFY_LIST(IZoneConnection conn)
 		{
-			var packet = new Packet(Op.ZC_IES_MODIFY_LIST);
-			packet.AddIesModList(ZoneServer.Instance.IesMods);
+			var allMods = ZoneServer.Instance.IesMods;
+			var modLists = IesHelper.BuildModLists(allMods);
 
-			conn.Send(packet);
+			foreach (var modList in modLists)
+			{
+				var packet = new Packet(Op.ZC_IES_MODIFY_LIST);
+				packet.AddIesModList(modList);
+
+				conn.Send(packet);
+			}
 		}
 
 		/// <summary>
@@ -5034,12 +5040,11 @@ namespace Melia.Zone.Network
 		/// <param name="conn"></param>
 		public static void ZC_ANCIENT_CARD_LOAD(IZoneConnection conn)
 		{
+			var assisterCabinet = conn.SelectedCharacter.AssisterCabinet;
 			var packet = new Packet(Op.ZC_ANCIENT_CARD_LOAD);
 
 			packet.Zlib(true, zpacket =>
 			{
-				var assisterCabinet = conn.Account.AssisterCabinet;
-
 				if (assisterCabinet != null)
 				{
 					zpacket.PutInt(assisterCabinet.Count);

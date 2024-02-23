@@ -109,5 +109,6 @@ namespace Melia.Shared.Data.Database
 		Zone,
 		Web,
 		Social,
+		Lada,
 	}
 }

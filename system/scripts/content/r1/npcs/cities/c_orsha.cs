@@ -339,6 +339,10 @@ public class COrshaNpcScript : GeneralScript
 		//-------------------------------------------------------------------------
 		AddNpc(5295, 160088, "[Skill Transmutation Helper]{nl}Kupole", "c_orsha", 549.3414, 176.3394, 576.8683, -25, "DUCTILITY_NPC", "", "");
 		
+		// [Equipment Transmutation Helper] Kupole
+		//-------------------------------------------------------------------------
+		AddNpc(5295, 160088, "[Equipment Transmutation Helper] Kupole", "c_orsha", 549.3414, 176.3394, 576.8683, -25, "DUCTILITY_NPC", "", "");
+		
 		// TOS Coin Helper
 		//-------------------------------------------------------------------------
 		AddNpc(5500, 160157, "TOS Coin Helper", "c_orsha", 184, 175, 246, 90, "EVENT_TOS_WHOLE_NPC", "", "");
@@ -358,5 +362,13 @@ public class COrshaNpcScript : GeneralScript
 		// [Snigo's Memory]{nl}Little Glacia
 		//-------------------------------------------------------------------------
 		AddNpc(5505, 160193, "[Snigo's Memory]{nl}Little Glacia", "c_orsha", 190.03, 176.29, 413.03, 45, "LITTLE_GLACIER", "", "");
+		
+		// [Winged Hussar Master]{nl}Jan Karolas
+		//-------------------------------------------------------------------------
+		AddNpc(5506, 160198, "[Winged Hussar Master]{nl}Jan Karolas", "c_orsha", -193.6049, 177.4209, -760.5928, 90, "NPC_WINGEDHUSSAR", "", "");
+		
+		// [Event]{nl}New Year's Helper Cuvid
+		//-------------------------------------------------------------------------
+		AddNpc(5507, 160204, "[Event]{nl}New Year's Helper Cuvid", "c_orsha", 234, 175, 246, 45, "EVENT_NEWYEAR_ASSIST", "", "");
 	}
 }

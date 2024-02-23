@@ -100,7 +100,7 @@ namespace Melia.Barracks
 		/// </summary>
 		private void StartCommunicator()
 		{
-			var commName = "" + this.ServerInfo.Type + this.ServerInfo.Id;
+			var commName = $"{this.ServerInfo.Type}{this.ServerInfo.Id}";
 
 			this.Communicator = new Communicator(commName);
 			this.Communicator.ClientConnected += this.Communicator_OnClientConnected;
@@ -108,6 +108,8 @@ namespace Melia.Barracks
 			this.Communicator.MessageReceived += this.Communicator_OnMessageReceived;
 
 			this.Communicator.Listen(this.ServerInfo.InterPort);
+
+			Log.Status("Communicator ready, listening on {0}.", this.ServerInfo.InterPort);
 		}
 
 		/// <summary>

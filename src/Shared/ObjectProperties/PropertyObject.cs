@@ -11,6 +11,14 @@
 		Properties Properties { get; }
 	}
 
+	public static class PropertyHolderExtensions
+	{
+		public static bool TryGetProperty<T>(this IPropertyObject holder, string propertyName, out T defaultValue)
+		{
+			return holder.Properties.TryGet(propertyName, out defaultValue);
+		}
+	}
+
 	/// <summary>
 	/// Represents an identifiable object with properties.
 	/// </summary>

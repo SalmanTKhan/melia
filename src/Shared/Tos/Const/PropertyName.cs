@@ -10444,6 +10444,13 @@
 		public const string AllMaterialType_Atk_BM = "AllMaterialType_Atk_BM";
 		public const string AllMaterialType_Def = "AllMaterialType_Def";
 
+		// PC Temp Properties
+		public const string STR_TEMP = "STR_TEMP";
+		public const string DEX_TEMP = "DEX_TEMP";
+		public const string CON_TEMP = "CON_TEMP";
+		public const string INT_TEMP = "INT_TEMP";
+		public const string MNA_TEMP = "MNA_TEMP";
+
 		// PCEtc
 		public const string FromMission = "FromMission";
 		public const string OperSpeed = "OperSpeed";

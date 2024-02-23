@@ -18592,6 +18592,9 @@ public static class ItemId
 	public const int I202402_Newyear_Package02 = 11205143;
 	public const int I202402_Newyear_Package03 = 11205144;
 	public const int I202402_Newyear_Package04 = 11205145;
+	public const int I202402_Papaya_Package01 = 11205146;
+	public const int I202402_Papaya_Package02 = 11205147;
+	public const int Special_Gift_Box_Leticia_2402_PAPAYA = 11205148;
 
 	// Quest
 	//-----------------------------------------------------------------------

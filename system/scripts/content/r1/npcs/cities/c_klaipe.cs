@@ -236,7 +236,7 @@ public class CKlaipeNpcScript : GeneralScript
 		
 		// Beauty Shop
 		//-------------------------------------------------------------------------
-		AddNpc(10063, 40001, "Beauty Shop", "c_Klaipe", -1057.47, 240.7425, 617.601, 242, "BEAUTY_IN_MOVE", "BEAUTY_IN_MOVE", "");
+		AddNpc(10063, 40001, "Beauty Shop", "c_Klaipe", -1039.639, 240.7425, 682.0443, 242, "BEAUTY_IN_MOVE", "BEAUTY_IN_MOVE", "");
 		
 		// Class Tree Change Helper
 		//-------------------------------------------------------------------------
@@ -297,6 +297,10 @@ public class CKlaipeNpcScript : GeneralScript
 		//-------------------------------------------------------------------------
 		AddNpc(10126, 160088, "[Skill Transmutation Helper]{nl}Kupole", "c_Klaipe", 300.6426, 79.85956, -30.70284, 90, "DUCTILITY_NPC", "", "");
 		
+		// [Equipment Transmutation Helper] Kupole
+		//-------------------------------------------------------------------------
+		AddNpc(10126, 160088, "[Equipment Transmutation Helper] Kupole", "c_Klaipe", 300.6426, 79.85956, -30.70284, 90, "DUCTILITY_NPC", "", "");
+		
 		// [Previous Goddess Token Shop]{nl}Kupole
 		//-------------------------------------------------------------------------
 		AddNpc(10127, 160178, "[Previous Goddess Token Shop]{nl}Kupole", "c_Klaipe", -293.0878, 149.1097, -86.89342, 144, "PREVIOUS_COIN_SHOP", "", "");
@@ -328,5 +332,9 @@ public class CKlaipeNpcScript : GeneralScript
 		// [Snigo's Memory]{nl}Little Glacia
 		//-------------------------------------------------------------------------
 		AddNpc(10133, 160193, "[Snigo's Memory]{nl}Little Glacia", "c_Klaipe", -602.16, 241.15, 628.5, 45, "LITTLE_GLACIER", "", "");
+		
+		// [Event]{nl}New Year's Helper Cuvid
+		//-------------------------------------------------------------------------
+		AddNpc(10135, 160204, "[Event]{nl}New Year's Helper Cuvid", "c_Klaipe", -604, 241, 576, 45, "EVENT_NEWYEAR_ASSIST", "", "");
 	}
 }

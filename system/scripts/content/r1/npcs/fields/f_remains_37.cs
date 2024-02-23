@@ -273,5 +273,9 @@ public class FRemains37NpcScript : GeneralScript
 		// Lepidoptera Junction Portal: Legend
 		//-------------------------------------------------------------------------
 		AddNpc(69, 154065, "Lepidoptera Junction Portal: Legend", "f_remains_37", 594.401, 1015.45, -1747.54, 90, "LEGEND_RAID_MORINGPONIA_PORTAL", "", "", 1);
+		
+		// Isle of Despair
+		//-------------------------------------------------------------------------
+		AddNpc(70, 154065, "Isle of Despair", "f_remains_37", 595.2, 1020.29, -1814.68, 90, "GODDESS_DESPAIR_ISLAND", "", "", 1);
 	}
 }

@@ -2478,7 +2478,7 @@ namespace Melia.Zone.Database
 		}
 
 		/// <summary>
-		/// Load Adventure Book monster drops from the database.
+		/// Load Adventure Book items from the database.
 		/// </summary>
 		/// <param name="character"></param>
 		private void LoadAdventureBookItems(Character character)
@@ -2504,7 +2504,7 @@ namespace Melia.Zone.Database
 		}
 
 		/// <summary>
-		/// Saves Adventure Book monster drops to the database.
+		/// Saves Adventure Book items to the database.
 		/// </summary>
 		/// <param name="character"></param>
 		private void SaveAdventureBookItems(Character character)

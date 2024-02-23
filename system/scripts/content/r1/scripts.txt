@@ -8,3 +8,4 @@ require "warps/scripts.txt"
 npcs/**/*
 quests/**/*
 tracks/**/*
+events/**/*

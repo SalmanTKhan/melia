@@ -35,5 +35,9 @@ public class PCathedral1NpcScript : GeneralScript
 		// Divine Spirit
 		//-------------------------------------------------------------------------
 		AddNpc(6, 151018, "Divine Spirit", "p_cathedral_1", 541.7883, 0.3999939, -321.3452, 90, "MIKO_SOUL_SPIRIT", "", "", 1);
+		
+		// [Illusionist Master]{nl}Cordelia
+		//-------------------------------------------------------------------------
+		AddNpc(7, 160195, "[Illusionist Master]{nl}Cordelia", "p_cathedral_1", 328.658, 0.3999939, -585.8873, 90, "NPC_ILLUSIONIST", "", "");
 	}
 }

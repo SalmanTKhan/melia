@@ -634,7 +634,9 @@ namespace Melia.Zone.Scripting
 
 			// Make chest disappear
 			Send.ZC_NORMAL.FadeOut(npc, TimeSpan.FromSeconds(4));
-			npc.SetState(NpcState.Invisible);
+			character.Variables.Perm.Set($"{npc.Map.Id}:{npc.GenType}", -1);
+			Send.ZC_SET_NPC_STATE(character, npc, -1);
+			//npc.SetState(NpcState.Invisible);
 
 			// Make chest reappear after a certain amount of time
 			// TODO: Add timer component, to set up and associate timers

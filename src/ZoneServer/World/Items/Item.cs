@@ -134,7 +134,9 @@ namespace Melia.Zone.World.Items
 		/// <summary>
 		/// Returns the if the option has random options generated
 		/// </summary>
-		public bool NeedRandomOptions => this.Properties.GetFloat(PropertyName.NeedRandomOption) != 0;
+		public bool NeedRandomOptions => this.Properties.GetFloat(PropertyName.NeedRandomOption) == 1;
+
+		public bool IsLegendGroupItem => this.Properties.GetString("LegendGroup", "None") != "None";
 
 		/// <summary>
 		/// Returns if the item is saved.
@@ -191,6 +193,8 @@ namespace Melia.Zone.World.Items
 					throw new NullReferenceException($"Unknown item '{this.Id}' cooldown group '{this.Data.CooldownGroup}'.");
 			}
 
+			this.Properties.CopyFrom(this.Data.Properties);
+
 			if (this.Data.MaxDurability != 0)
 			{
 				this.Properties.SetFloat(PropertyName.MaxDur, this.Data.MaxDurability);
@@ -202,122 +206,6 @@ namespace Melia.Zone.World.Items
 					this.Properties.SetFloat(PropertyName.Dur, this.Properties.GetFloat(PropertyName.MaxDur));
 			}
 
-			if (this.Data.MinAtk != 0) this.Properties.SetFloat(PropertyName.MINATK, this.Data.MinAtk);
-			if (this.Data.MaxAtk != 0) this.Properties.SetFloat(PropertyName.MAXATK, this.Data.MaxAtk);
-			if (this.Data.MAtk != 0) this.Properties.SetFloat(PropertyName.MATK, this.Data.MAtk);
-			if (this.Data.PAtk != 0) this.Properties.SetFloat(PropertyName.PATK, this.Data.PAtk);
-			if (this.Data.AddMinAtk != 0) this.Properties.SetFloat(PropertyName.ADD_MINATK, this.Data.AddMinAtk);
-			if (this.Data.AddMaxAtk != 0) this.Properties.SetFloat(PropertyName.ADD_MAXATK, this.Data.AddMaxAtk);
-			if (this.Data.AddMAtk != 0) this.Properties.SetFloat(PropertyName.ADD_MATK, this.Data.AddMAtk);
-			if (this.Data.Def != 0) this.Properties.SetFloat(PropertyName.DEF, this.Data.Def);
-			if (this.Data.MDef != 0) this.Properties.SetFloat(PropertyName.MDEF, this.Data.MDef);
-			if (this.Data.AddDef != 0) this.Properties.SetFloat(PropertyName.ADD_DEF, this.Data.AddDef);
-			if (this.Data.AddMDef != 0) this.Properties.SetFloat(PropertyName.ADD_MDEF, this.Data.AddMDef);
-			if (this.Data.CrtHR != 0) this.Properties.SetFloat(PropertyName.CRTHR, this.Data.CrtHR);
-			if (this.Data.CrtATK != 0) this.Properties.SetFloat(PropertyName.CRTATK, this.Data.CrtATK);
-			if (this.Data.CrtDR != 0) this.Properties.SetFloat(PropertyName.CRTDR, this.Data.CrtDR);
-			if (this.Data.AddHR != 0) this.Properties.SetFloat(PropertyName.ADD_HR, this.Data.AddHR);
-			if (this.Data.AddDR != 0) this.Properties.SetFloat(PropertyName.ADD_DR, this.Data.AddDR);
-			if (this.Data.Str != 0) this.Properties.SetFloat(PropertyName.STR, this.Data.Str);
-			if (this.Data.Dex != 0) this.Properties.SetFloat(PropertyName.DEX, this.Data.Dex);
-			if (this.Data.Con != 0) this.Properties.SetFloat(PropertyName.CON, this.Data.Con);
-			if (this.Data.Int != 0) this.Properties.SetFloat(PropertyName.INT, this.Data.Int);
-			if (this.Data.Mna != 0) this.Properties.SetFloat(PropertyName.MNA, this.Data.Mna);
-			if (this.Data.Sr != 0) this.Properties.SetFloat(PropertyName.SR, this.Data.Sr);
-			if (this.Data.Sdr != 0) this.Properties.SetFloat(PropertyName.SDR, this.Data.Sdr);
-			if (this.Data.CrtMAtk != 0) this.Properties.SetFloat(PropertyName.CRTMATK, this.Data.CrtMAtk);
-			if (this.Data.Mgp != 0) this.Properties.SetFloat(PropertyName.MGP, this.Data.Mgp);
-			if (this.Data.AddSkillMaxR != 0) this.Properties.SetFloat(PropertyName.AddSkillMaxR, this.Data.AddSkillMaxR);
-			if (this.Data.Skillrange != 0) this.Properties.SetFloat(PropertyName.SkillRange, this.Data.Skillrange);
-			if (this.Data.Skillangle != 0) this.Properties.SetFloat(PropertyName.SkillAngle, this.Data.Skillangle);
-			if (this.Data.Luck != 0) this.Properties.SetFloat(PropertyName.Luck, this.Data.Luck);
-			if (this.Data.Blockrate != 0) this.Properties.SetFloat(PropertyName.BlockRate, this.Data.Blockrate);
-			if (this.Data.Blk != 0) this.Properties.SetFloat(PropertyName.BLK, this.Data.Blk);
-			if (this.Data.BlkBreak != 0) this.Properties.SetFloat(PropertyName.BLK_BREAK, this.Data.BlkBreak);
-			if (this.Data.Revive != 0) this.Properties.SetFloat(PropertyName.Revive, this.Data.Revive);
-			if (this.Data.HitCount != 0) this.Properties.SetFloat(PropertyName.HitCount, this.Data.HitCount);
-			if (this.Data.BackHit != 0) this.Properties.SetFloat(PropertyName.BackHit, this.Data.BackHit);
-			if (this.Data.SkillPower != 0) this.Properties.SetFloat(PropertyName.SkillPower, this.Data.SkillPower);
-			if (this.Data.Aspd != 0) this.Properties.SetFloat(PropertyName.ASPD, this.Data.Aspd);
-			if (this.Data.Mspd != 0) this.Properties.SetFloat(PropertyName.MSPD, this.Data.Mspd);
-			if (this.Data.KdPow != 0) this.Properties.SetFloat(PropertyName.KDPow, this.Data.KdPow);
-			if (this.Data.MHp != 0) this.Properties.SetFloat(PropertyName.MHP, this.Data.MHp);
-			if (this.Data.MSp != 0) this.Properties.SetFloat(PropertyName.MSP, this.Data.MSp);
-			if (this.Data.Msta != 0) this.Properties.SetFloat(PropertyName.MSTA, this.Data.Msta);
-			if (this.Data.RHp != 0) this.Properties.SetFloat(PropertyName.RHP, this.Data.RHp);
-			if (this.Data.RSp != 0) this.Properties.SetFloat(PropertyName.RSP, this.Data.RSp);
-			if (this.Data.RSptime != 0) this.Properties.SetFloat(PropertyName.RSPTIME, this.Data.RSptime);
-			if (this.Data.RSta != 0) this.Properties.SetFloat(PropertyName.RSTA, this.Data.RSta);
-			if (this.Data.AddCloth != 0) this.Properties.SetFloat(PropertyName.ADD_CLOTH, this.Data.AddCloth);
-			if (this.Data.AddLeather != 0) this.Properties.SetFloat(PropertyName.ADD_LEATHER, this.Data.AddLeather);
-			if (this.Data.AddChain != 0) this.Properties.SetFloat(PropertyName.ADD_CHAIN, this.Data.AddChain);
-			if (this.Data.AddIron != 0) this.Properties.SetFloat(PropertyName.ADD_IRON, this.Data.AddIron);
-			if (this.Data.AddGhost != 0) this.Properties.SetFloat(PropertyName.ADD_GHOST, this.Data.AddGhost);
-			if (this.Data.AddSmallsize != 0) this.Properties.SetFloat(PropertyName.ADD_SMALLSIZE, this.Data.AddSmallsize);
-			if (this.Data.AddMiddlesize != 0) this.Properties.SetFloat(PropertyName.ADD_MIDDLESIZE, this.Data.AddMiddlesize);
-			if (this.Data.AddLargesize != 0) this.Properties.SetFloat(PropertyName.ADD_LARGESIZE, this.Data.AddLargesize);
-			if (this.Data.AddForester != 0) this.Properties.SetFloat(PropertyName.ADD_FORESTER, this.Data.AddForester);
-			if (this.Data.AddWidling != 0) this.Properties.SetFloat(PropertyName.ADD_WIDLING, this.Data.AddWidling);
-			if (this.Data.AddVelias != 0) this.Properties.SetFloat(PropertyName.ADD_VELIAS, this.Data.AddVelias);
-			if (this.Data.AddParamune != 0) this.Properties.SetFloat(PropertyName.ADD_PARAMUNE, this.Data.AddParamune);
-			if (this.Data.AddKlaida != 0) this.Properties.SetFloat(PropertyName.ADD_KLAIDA, this.Data.AddKlaida);
-			if (this.Data.AddFire != 0) this.Properties.SetFloat(PropertyName.ADD_FIRE, this.Data.AddFire);
-			if (this.Data.AddIce != 0) this.Properties.SetFloat(PropertyName.ADD_ICE, this.Data.AddIce);
-			if (this.Data.AddPoison != 0) this.Properties.SetFloat(PropertyName.ADD_POISON, this.Data.AddPoison);
-			if (this.Data.AddLightning != 0) this.Properties.SetFloat(PropertyName.ADD_LIGHTNING, this.Data.AddLightning);
-			if (this.Data.AddEarth != 0) this.Properties.SetFloat(PropertyName.ADD_EARTH, this.Data.AddEarth);
-			if (this.Data.AddSoul != 0) this.Properties.SetFloat(PropertyName.ADD_SOUL, this.Data.AddSoul);
-			if (this.Data.AddHoly != 0) this.Properties.SetFloat(PropertyName.ADD_HOLY, this.Data.AddHoly);
-			if (this.Data.AddDark != 0) this.Properties.SetFloat(PropertyName.ADD_DARK, this.Data.AddDark);
-			if (this.Data.BaseSocket != 0) this.Properties.SetFloat(PropertyName.BaseSocket, this.Data.BaseSocket);
-			if (this.Data.MaxSocketCount != 0) this.Properties.SetFloat(PropertyName.MaxSocket_COUNT, this.Data.MaxSocketCount);
-			if (this.Data.BaseSocketMa != 0) this.Properties.SetFloat(PropertyName.BaseSocket_MA, this.Data.BaseSocketMa);
-			if (this.Data.MaxSocketMa != 0) this.Properties.SetFloat(PropertyName.MaxSocket_MA, this.Data.MaxSocketMa);
-			if (this.Data.Minoption != 0) this.Properties.SetFloat(PropertyName.MinOption, this.Data.Minoption);
-			if (this.Data.Maxoption != 0) this.Properties.SetFloat(PropertyName.MaxOption, this.Data.Maxoption);
-			if (this.Data.Aries != 0) this.Properties.SetFloat(PropertyName.Aries, this.Data.Aries);
-			if (this.Data.AriesDefense != 0) this.Properties.SetFloat(PropertyName.AriesDEF, this.Data.AriesDefense);
-			if (this.Data.Slash != 0) this.Properties.SetFloat(PropertyName.Slash, this.Data.Slash);
-			if (this.Data.SlashDefense != 0) this.Properties.SetFloat(PropertyName.SlashDEF, this.Data.SlashDefense);
-			if (this.Data.Strike != 0) this.Properties.SetFloat(PropertyName.Strike, this.Data.Strike);
-			if (this.Data.StrikeDefense != 0) this.Properties.SetFloat(PropertyName.StrikeDEF, this.Data.StrikeDefense);
-			if (this.Data.AriesRange != 0) this.Properties.SetFloat(PropertyName.Aries_Range, this.Data.AriesRange);
-			if (this.Data.SlashRange != 0) this.Properties.SetFloat(PropertyName.Slash_Range, this.Data.SlashRange);
-			if (this.Data.StrikeRange != 0) this.Properties.SetFloat(PropertyName.Strike_Range, this.Data.StrikeRange);
-			if (this.Data.MinRDmg != 0) this.Properties.SetFloat(PropertyName.MinRDmg, this.Data.MinRDmg);
-			if (this.Data.MaxRDmg != 0) this.Properties.SetFloat(PropertyName.MaxRDmg, this.Data.MaxRDmg);
-			if (this.Data.FdMinR != 0) this.Properties.SetFloat(PropertyName.FDMinR, this.Data.FdMinR);
-			if (this.Data.FdMaxR != 0) this.Properties.SetFloat(PropertyName.FDMaxR, this.Data.FdMaxR);
-			if (this.Data.FireResistence != 0) this.Properties.SetFloat(PropertyName.RES_FIRE, this.Data.FireResistence);
-			if (this.Data.IceResistence != 0) this.Properties.SetFloat(PropertyName.RES_ICE, this.Data.IceResistence);
-			if (this.Data.PoisonResistence != 0) this.Properties.SetFloat(PropertyName.RES_POISON, this.Data.PoisonResistence);
-			if (this.Data.LightningResistence != 0) this.Properties.SetFloat(PropertyName.RES_LIGHTNING, this.Data.LightningResistence);
-			if (this.Data.EarthResistence != 0) this.Properties.SetFloat(PropertyName.RES_EARTH, this.Data.EarthResistence);
-			if (this.Data.SoulResistence != 0) this.Properties.SetFloat(PropertyName.RES_SOUL, this.Data.SoulResistence);
-			if (this.Data.HolyResistence != 0) this.Properties.SetFloat(PropertyName.RES_HOLY, this.Data.HolyResistence);
-			if (this.Data.DarkResistence != 0) this.Properties.SetFloat(PropertyName.RES_DARK, this.Data.DarkResistence);
-			if (this.Data.Lifetime != 0) this.Properties.SetFloat(PropertyName.LifeTime, this.Data.Lifetime);
-			if (this.Data.Itemlifetimeover != 0) this.Properties.SetFloat(PropertyName.ItemLifeTimeOver, this.Data.Itemlifetimeover);
-			if (this.Data.NeedAppraisal != 0) this.Properties.SetFloat(PropertyName.NeedAppraisal, this.Data.NeedAppraisal);
-			if (this.Data.NeedRandomOption != 0) this.Properties.SetFloat(PropertyName.NeedRandomOption, this.Data.NeedRandomOption);
-			if (this.Data.Lootingchance != 0) this.Properties.SetFloat(PropertyName.LootingChance, this.Data.Lootingchance);
-			if (this.Data.Isalwayshatvisible != 0) this.Properties.SetFloat(PropertyName.IsAlwaysHatVisible, this.Data.Isalwayshatvisible);
-			if (this.Data.SkillWidthRange != 0) this.Properties.SetFloat(PropertyName.SkillWidthRange, this.Data.SkillWidthRange);
-			if (this.Data.DynamicLifeTime != 0) this.Properties.SetFloat(PropertyName.DynamicLifeTime, this.Data.DynamicLifeTime);
-			if (this.Data.AddBossAtk != 0) this.Properties.SetFloat(PropertyName.ADD_BOSS_ATK, this.Data.AddBossAtk);
-			if (this.Data.Teambelonging != 0) this.Properties.SetFloat(PropertyName.TeamBelonging, this.Data.Teambelonging);
-			if (this.Data.AddDamageAtk != 0) this.Properties.SetFloat(PropertyName.Add_Damage_Atk, this.Data.AddDamageAtk);
-			if (this.Data.MagicEarthAtk != 0) this.Properties.SetFloat(PropertyName.Magic_Earth_Atk, this.Data.MagicEarthAtk);
-			if (this.Data.ResaddDamage != 0) this.Properties.SetFloat(PropertyName.ResAdd_Damage, this.Data.ResaddDamage);
-			if (this.Data.JobGrade != 0) this.Properties.SetFloat(PropertyName.JobGrade, this.Data.JobGrade);
-			if (this.Data.MagicIceAtk != 0) this.Properties.SetFloat(PropertyName.Magic_Ice_Atk, this.Data.MagicIceAtk);
-			if (this.Data.MagicSoulAtk != 0) this.Properties.SetFloat(PropertyName.Magic_Soul_Atk, this.Data.MagicSoulAtk);
-			if (this.Data.MagicDarkAtk != 0) this.Properties.SetFloat(PropertyName.Magic_Dark_Atk, this.Data.MagicDarkAtk);
-			if (this.Data.MagicMeleeAtk != 0) this.Properties.SetFloat(PropertyName.Magic_Melee_Atk, this.Data.MagicMeleeAtk);
-			if (this.Data.MagicFireAtk != 0) this.Properties.SetFloat(PropertyName.Magic_Fire_Atk, this.Data.MagicFireAtk);
-			if (this.Data.MagicLightningAtk != 0) this.Properties.SetFloat(PropertyName.Magic_Lightning_Atk, this.Data.MagicLightningAtk);
-			if (this.Data.Cooldown != 0) this.Properties.SetFloat(PropertyName.CoolDown, this.Data.Cooldown);
-			if (this.Data.MinLevel != 0) this.Properties.SetFloat(PropertyName.UseLv, this.Data.MinLevel);
 			if (this.Data.Grade != 0)
 			{
 				var modifier = (this.Data.Grade * 0.05f) + 0.05f;
@@ -495,6 +383,9 @@ namespace Melia.Zone.World.Items
 				this.Durability += amount;
 			Send.ZC_OBJECT_PROPERTY(character.Connection, this);
 		}
+
+		public bool IsLegendGroupItem
+			=> this.Properties.GetString("LegendGroup", "None") != "None";
 
 		/// <summary>
 		/// Generate random options on an item.

@@ -12,101 +12,236 @@ public class VividCKlaipeNpcScript : GeneralScript
 {
 	public override void Load()
 	{
+		AddNpc(1, 154004, "", "VIVID_c_Klaipe", -1036.838, -1.156548, -598.9962, 90, "", "", "");
+		AddNpc(2, 154004, "", "VIVID_c_Klaipe", -959.3026, -1.156542, -519.3253, 90, "", "", "");
+		AddNpc(3, 154004, "", "VIVID_c_Klaipe", -881.5294, -1.156545, -447.559, 90, "", "", "");
+		AddNpc(4, 154004, "", "VIVID_c_Klaipe", -802.579, -1.156542, -394.6275, 90, "", "", "");
+		AddNpc(5, 154004, "", "VIVID_c_Klaipe", -720.3823, -1.156548, -366.1824, 90, "", "", "");
+		AddNpc(6, 154004, "", "VIVID_c_Klaipe", -683.3245, -1.156545, -442.2512, 90, "", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -760.1963, -350.5682, 90, "EVENT_VIVID_KLAIPE_WARP1");
+		AddNpc(7, 153156, "Teleportation Device", "VIVID_c_Klaipe", -760.1963, -1.156547, -350.5682, 90, "EVENT_VIVID_KLAIPE_WARP1", "", "");
+		AddNpc(8, 154004, "", "VIVID_c_Klaipe", -600.9118, -1.156548, -530.0214, 90, "", "", "");
+		AddNpc(9, 154004, "", "VIVID_c_Klaipe", -432.9954, -1.15655, -676.4278, 90, "", "", "");
+		AddNpc(10, 154004, "", "VIVID_c_Klaipe", -345.2355, -1.156542, -731.4783, 90, "", "", "");
+		AddNpc(11, 154004, "", "VIVID_c_Klaipe", -245.24, -1.224231, -767.027, 90, "", "", "");
+		AddNpc(12, 154004, "", "VIVID_c_Klaipe", -165.1141, -1.165654, -755.5964, 90, "", "", "");
+		AddNpc(14, 154004, "", "VIVID_c_Klaipe", -86.46379, -1.182148, -817.5511, 90, "", "", "");
+		AddNpc(16, 154004, "", "VIVID_c_Klaipe", 14.78029, -1.156548, -816.9547, 90, "", "", "");
+		AddNpc(18, 154004, "", "VIVID_c_Klaipe", 106.2749, -1.156548, -804.5938, 90, "", "", "");
+		AddNpc(19, 154004, "", "VIVID_c_Klaipe", 199.1266, -1.156542, -768.728, 90, "", "", "");
+		AddNpc(25, 154004, "", "VIVID_c_Klaipe", 286.1417, -1.156551, -727.963, 90, "", "", "");
+		AddNpc(27, 154004, "", "VIVID_c_Klaipe", 334.1205, -1.156548, -629.124, 90, "", "", "");
+		AddNpc(29, 154004, "", "VIVID_c_Klaipe", 423.9949, -1.156548, -575.6836, 90, "", "", "");
+		AddNpc(31, 154004, "", "VIVID_c_Klaipe", 467.1192, -1.156548, -486.4239, 90, "", "", "");
+		AddNpc(33, 154004, "", "VIVID_c_Klaipe", 564.8471, -1.156541, -459.457, 90, "", "", "");
+		AddNpc(35, 154004, "", "VIVID_c_Klaipe", 636.6595, -1.156546, -391.5379, 90, "", "", "");
+		AddNpc(36, 154079, "", "VIVID_c_Klaipe", 274.2893, -1.15655, -850.3662, 35, "", "", "");
+		AddNpc(37, 154004, "", "VIVID_c_Klaipe", 276.6522, -1.156551, -838.9338, 120, "", "", "");
+		AddNpc(38, 154004, "", "VIVID_c_Klaipe", -115.6881, -1.156548, -901.5564, 90, "", "", "");
+		AddNpc(39, 154004, "", "VIVID_c_Klaipe", -134.5654, -1.156548, -991.7896, 90, "", "", "");
+		AddNpc(40, 154079, "", "VIVID_c_Klaipe", -130.9668, -1.156548, -933.5347, 180, "", "", "");
+		AddNpc(41, 154004, "", "VIVID_c_Klaipe", -119.438, -1.156548, -933.4332, 90, "", "", "");
 		
 		// Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151167, "Treasure Chest", "VIVID_c_Klaipe", -217.5021, -1091.075, 90, "EVENT_VIVID_KLAIPE_BOX");
+		AddNpc(43, 151167, "Treasure Chest", "VIVID_c_Klaipe", -217.5021, -1.156545, -1091.075, 90, "EVENT_VIVID_KLAIPE_BOX", "", "");
+		AddNpc(44, 154004, "", "VIVID_c_Klaipe", -174.7191, -1.156546, -1211.55, 90, "", "", "");
+		AddNpc(45, 154004, "", "VIVID_c_Klaipe", 276.7802, -1.15655, -827.2789, 90, "", "", "");
+		AddNpc(46, 154004, "", "VIVID_c_Klaipe", 284.6083, -1.156548, -931.1718, 90, "", "", "");
 		
 		// Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151167, "Treasure Chest", "VIVID_c_Klaipe", 254.3475, -1026.819, 90, "EVENT_VIVID_KLAIPE_BOX2");
+		AddNpc(47, 151167, "Treasure Chest", "VIVID_c_Klaipe", 254.3475, -1.156548, -1026.819, 90, "EVENT_VIVID_KLAIPE_BOX2", "", "");
+		AddNpc(48, 154004, "", "VIVID_c_Klaipe", 353.9705, -1.156549, -1081.42, 90, "", "", "");
+		AddNpc(49, 154004, "", "VIVID_c_Klaipe", 717.4676, -1.156543, -334.023, 90, "", "", "");
+		AddNpc(50, 154079, "", "VIVID_c_Klaipe", 755.485, -1.156546, -363.4111, 60, "", "", "");
+		AddNpc(51, 154004, "", "VIVID_c_Klaipe", 761.6094, -1.156547, -368.4741, 145, "", "", "");
+		AddNpc(52, 154004, "", "VIVID_c_Klaipe", 793.8175, -1.156552, -401.0101, 90, "", "", "");
+		AddNpc(54, 154004, "", "VIVID_c_Klaipe", 988.1386, -1.156547, -521.2625, 90, "", "", "");
 		
 		// Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151167, "Treasure Chest", "VIVID_c_Klaipe", 905.7919, -545.6175, 90, "EVENT_VIVID_KLAIPE_BOX3");
+		AddNpc(56, 151167, "Treasure Chest", "VIVID_c_Klaipe", 905.7919, -1.156548, -545.6175, 90, "EVENT_VIVID_KLAIPE_BOX3", "", "");
+		AddNpc(57, 154004, "", "VIVID_c_Klaipe", -514.6329, -1.15654, -618.1741, 90, "", "", "");
+		AddNpc(58, 154004, "", "VIVID_c_Klaipe", -160.3996, -1.15655, -1135.601, 90, "", "", "");
+		AddNpc(59, 154004, "", "VIVID_c_Klaipe", -145.7693, -1.156548, -1064.879, 90, "", "", "");
+		AddNpc(60, 154004, "", "VIVID_c_Klaipe", 406.4166, -1.156548, -1018.386, 90, "", "", "");
+		AddNpc(61, 154004, "", "VIVID_c_Klaipe", 373.5884, -1.156548, -940.7184, 90, "", "", "");
+		AddNpc(62, 154004, "", "VIVID_c_Klaipe", 957.1609, -1.156546, -441.3936, 90, "", "", "");
+		AddNpc(63, 154004, "", "VIVID_c_Klaipe", 867.3291, -1.156548, -466.2466, 90, "", "", "");
+		AddNpc(64, 154079, "", "VIVID_c_Klaipe", -311.1198, 79.74097, -573.3087, 20, "", "", "");
+		AddNpc(65, 154079, "", "VIVID_c_Klaipe", -245.5285, 79.85956, -568.6827, -30, "", "", "");
+		AddNpc(66, 154079, "", "VIVID_c_Klaipe", -67.35158, 79.84525, -578.9717, -30, "", "", "");
+		AddNpc(67, 154079, "", "VIVID_c_Klaipe", 40.89846, 79.85956, -558.7828, 30, "", "", "");
+		AddNpc(68, 154079, "", "VIVID_c_Klaipe", -360.7021, 79.85956, -554.0394, 90, "", "", "");
+		AddNpc(69, 154004, "", "VIVID_c_Klaipe", 31.7161, 79.85956, -551.7467, 120, "", "", "");
+		AddNpc(70, 154079, "", "VIVID_c_Klaipe", 487.3303, 77.29716, -162.5986, 240, "", "", "");
+		AddNpc(71, 154004, "", "VIVID_c_Klaipe", 477.1024, 79.74438, -127.6888, 155, "", "", "");
+		AddNpc(72, 154004, "", "VIVID_c_Klaipe", 713.9479, -1.156544, -240.1359, 90, "", "", "");
+		AddNpc(73, 154004, "", "VIVID_c_Klaipe", 715.3187, -1.156547, -139.4855, 90, "", "", "");
+		AddNpc(74, 154004, "", "VIVID_c_Klaipe", 719.2364, -1.156546, -34.27723, 90, "", "", "");
+		AddNpc(77, 154004, "", "VIVID_c_Klaipe", 637.9756, -1.178664, 7.159619, 90, "", "", "");
+		AddNpc(80, 40001, " ", "VIVID_c_Klaipe", 565.5126, 52.83459, -21.84555, -9, "", "", "");
+		AddNpc(81, 40001, " ", "VIVID_c_Klaipe", 550.5321, 58.3136, -82.26427, 269, "", "", "");
+		AddNpc(82, 154079, "", "VIVID_c_Klaipe", 499.0256, 79.85956, 35.02715, 240, "", "", "");
+		AddNpc(83, 154079, "", "VIVID_c_Klaipe", 500.438, 78.74406, 12.67949, 270, "", "", "");
+		AddNpc(84, 154079, "", "VIVID_c_Klaipe", 233.1573, 79.81007, 212.4279, 270, "", "", "");
+		AddNpc(85, 40001, " ", "VIVID_c_Klaipe", 436.6454, 79.85956, -24.62531, 184, "", "", "");
+		AddNpc(86, 40001, " ", "VIVID_c_Klaipe", 431.9863, 79.85956, 82.53619, 191, "", "", "");
+		AddNpc(87, 40001, " ", "VIVID_c_Klaipe", 417.9503, 79.85956, 182.4919, 249, "", "", "");
+		AddNpc(88, 154079, "", "VIVID_c_Klaipe", 43.49972, 149.9382, -133.9451, 45, "", "", "");
+		AddNpc(89, 154004, "", "VIVID_c_Klaipe", 40.22121, 150.0685, -133.0712, 135, "", "", "");
+		AddNpc(90, 154004, "", "VIVID_c_Klaipe", 334.64, 79.85956, 229.5146, 90, "", "", "");
+		AddNpc(91, 154004, "", "VIVID_c_Klaipe", 311.3389, 79.85956, 134.0749, 90, "", "", "");
+		AddNpc(92, 154004, "", "VIVID_c_Klaipe", 310.2026, 79.85956, 42.17365, 90, "", "", "");
+		AddNpc(93, 154004, "", "VIVID_c_Klaipe", 320.0997, 79.85956, -56.5899, 90, "", "", "");
+		AddNpc(95, 154004, "", "VIVID_c_Klaipe", 315.6132, 79.90836, -143.1203, 90, "", "", "");
+		AddNpc(96, 154004, "", "VIVID_c_Klaipe", 230.3495, 79.85956, -189.5268, 90, "", "", "");
+		AddNpc(98, 154079, "", "VIVID_c_Klaipe", -44.82402, 153.9798, -171.4984, 45, "", "", "");
+		AddNpc(99, 154079, "", "VIVID_c_Klaipe", 93.15375, 149.0014, -32.45082, 45, "", "", "");
+		AddNpc(100, 154079, "", "VIVID_c_Klaipe", 146.6312, 149.3014, 39.09056, 45, "", "", "");
+		AddNpc(101, 154079, "", "VIVID_c_Klaipe", 157.442, 149.1018, 85.35339, 90, "", "", "");
+		AddNpc(102, 154079, "", "VIVID_c_Klaipe", 113.6574, 149.1337, 207.1657, 90, "", "", "");
+		AddNpc(103, 154004, "", "VIVID_c_Klaipe", 162.733, 79.85956, -272.2758, 90, "", "", "");
+		AddNpc(104, 154004, "", "VIVID_c_Klaipe", 98.15551, 79.85956, -354.4344, 90, "", "", "");
+		AddNpc(105, 154004, "", "VIVID_c_Klaipe", 16.33288, 79.85956, -399.0724, 90, "", "", "");
+		AddNpc(106, 154004, "", "VIVID_c_Klaipe", -66.66819, 96.67332, -414.4832, 90, "", "", "");
+		AddNpc(107, 154004, "", "VIVID_c_Klaipe", -122.5488, 96.88016, -322.9668, 90, "", "", "");
+		AddNpc(108, 154004, "", "VIVID_c_Klaipe", -29.05241, 98.52823, -287.4179, 90, "", "", "");
+		AddNpc(109, 154004, "", "VIVID_c_Klaipe", -16.58917, 158.849, -221.2077, 90, "", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -490.2429, -687.2659, 90, "EVENT_VIVID_KLAIPE_WARP1");
+		AddNpc(111, 153156, "Teleportation Device", "VIVID_c_Klaipe", -490.2429, -1.156548, -687.2659, 90, "EVENT_VIVID_KLAIPE_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -180.6409, -857.3768, 90, "EVENT_VIVID_KLAIPE_WARP1");
+		AddNpc(112, 153156, "Teleportation Device", "VIVID_c_Klaipe", -180.6409, -1.156552, -857.3768, 90, "EVENT_VIVID_KLAIPE_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", 115.5825, -714.3409, 90, "EVENT_VIVID_KLAIPE_WARP1");
+		AddNpc(113, 153156, "Teleportation Device", "VIVID_c_Klaipe", 115.5825, -1.156541, -714.3409, 90, "EVENT_VIVID_KLAIPE_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", 401.1866, -690.0549, 90, "EVENT_VIVID_KLAIPE_WARP1");
+		AddNpc(114, 153156, "Teleportation Device", "VIVID_c_Klaipe", 401.1866, -1.156548, -690.0549, 90, "EVENT_VIVID_KLAIPE_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", 515.6812, -374.8614, 90, "EVENT_VIVID_KLAIPE_WARP1");
+		AddNpc(115, 153156, "Teleportation Device", "VIVID_c_Klaipe", 515.6812, -1.156543, -374.8614, 90, "EVENT_VIVID_KLAIPE_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", 630.2215, -103.3689, 90, "EVENT_VIVID_KLAIPE_WARP1");
+		AddNpc(116, 153156, "Teleportation Device", "VIVID_c_Klaipe", 630.2215, -1.156543, -103.3689, 90, "EVENT_VIVID_KLAIPE_WARP1", "", "");
+		AddNpc(117, 154004, "", "VIVID_c_Klaipe", -88.23257, 149.0301, -138.2832, 90, "", "", "");
+		AddNpc(118, 154004, "", "VIVID_c_Klaipe", -88.81728, 149.067, 6.602152, 90, "", "", "");
+		AddNpc(119, 154004, "", "VIVID_c_Klaipe", -26.89165, 149.067, 76.3047, 90, "", "", "");
+		AddNpc(120, 154004, "", "VIVID_c_Klaipe", 28.02024, 149.067, 139.9806, 90, "", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", 212.7078, -131.8384, 90, "EVENT_VIVID_KLAIPE_WARP2");
+		AddNpc(122, 153156, "Teleportation Device", "VIVID_c_Klaipe", 212.7078, 80.3919, -131.8384, 90, "EVENT_VIVID_KLAIPE_WARP2", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -93.40746, -353.545, 90, "EVENT_VIVID_KLAIPE_WARP2");
+		AddNpc(124, 153156, "Teleportation Device", "VIVID_c_Klaipe", -93.40746, 96.88016, -353.545, 90, "EVENT_VIVID_KLAIPE_WARP2", "", "");
+		AddNpc(125, 154004, "", "VIVID_c_Klaipe", -148.5188, 149.0847, -52.85751, 90, "", "", "");
+		AddNpc(126, 154004, "", "VIVID_c_Klaipe", -247.7082, 149.1097, -49.46302, 90, "", "", "");
+		AddNpc(127, 154004, "", "VIVID_c_Klaipe", -342.8413, 149.1097, -62.07889, 90, "", "", "");
+		AddNpc(128, 154004, "", "VIVID_c_Klaipe", -440.2789, 149.1097, -80.30293, 90, "", "", "");
+		AddNpc(129, 154004, "", "VIVID_c_Klaipe", -537.7088, 149.1097, -78.21291, 90, "", "", "");
+		AddNpc(130, 154004, "", "VIVID_c_Klaipe", -624.0585, 175.6701, -65.51907, 90, "", "", "");
+		AddNpc(131, 154004, "", "VIVID_c_Klaipe", -704.7503, 203.3371, -39.74384, 90, "", "", "");
+		AddNpc(132, 154004, "", "VIVID_c_Klaipe", -766.2397, 237.2963, 21.87203, 90, "", "", "");
+		AddNpc(133, 154004, "", "VIVID_c_Klaipe", -845.655, 241.052, 106.1651, 90, "", "", "");
+		AddNpc(134, 154004, "", "VIVID_c_Klaipe", -930.0377, 241.052, 189.4514, 90, "", "", "");
+		AddNpc(135, 154004, "", "VIVID_c_Klaipe", -863.1077, 241.052, 265.1698, 90, "", "", "");
+		AddNpc(136, 154004, "", "VIVID_c_Klaipe", -796.5191, 241.052, 329.3426, 90, "", "", "");
+		AddNpc(137, 154004, "", "VIVID_c_Klaipe", -734.0857, 241.052, 394.647, 90, "", "", "");
+		AddNpc(138, 154004, "", "VIVID_c_Klaipe", -731.6957, 241.052, 503.9654, 90, "", "", "");
+		AddNpc(139, 154004, "", "VIVID_c_Klaipe", -620.5626, 241.052, 607.8848, 90, "", "", "");
+		AddNpc(140, 154004, "", "VIVID_c_Klaipe", -525.8323, 241.052, 588.3561, 90, "", "", "");
+		AddNpc(141, 154004, "", "VIVID_c_Klaipe", -481.7943, 241.052, 669.5891, 90, "", "", "");
+		AddNpc(142, 154004, "", "VIVID_c_Klaipe", -413.1658, 241.052, 743.1703, 90, "", "", "");
+		AddNpc(143, 154004, "", "VIVID_c_Klaipe", -336.3888, 241.052, 815.5811, 90, "", "", "");
+		AddNpc(145, 154004, "", "VIVID_c_Klaipe", -240.0486, 241.052, 799.3524, 90, "", "", "");
+		AddNpc(146, 154004, "", "VIVID_c_Klaipe", -151.8758, 241.052, 754.2059, 90, "", "", "");
+		AddNpc(148, 154004, "", "VIVID_c_Klaipe", -49.88943, 203.9437, 614.6893, 90, "", "", "");
+		AddNpc(149, 154004, "", "VIVID_c_Klaipe", -19.37584, 172.4846, 527.9423, 90, "", "", "");
+		AddNpc(150, 154004, "", "VIVID_c_Klaipe", 12.41812, 149.1097, 444.22, 90, "", "", "");
+		AddNpc(151, 154004, "", "VIVID_c_Klaipe", 95.35824, 149.1097, 494.3844, 90, "", "", "");
+		AddNpc(152, 40001, " ", "VIVID_c_Klaipe", 107.7044, 149.1097, 701.4888, 180, "", "", "");
+		AddNpc(153, 40001, " ", "VIVID_c_Klaipe", 162.6976, 149.1097, 794.2407, 130, "", "", "");
+		AddNpc(154, 154079, "", "VIVID_c_Klaipe", 104.3046, 149.1097, 535.5903, 180, "", "", "");
+		AddNpc(155, 154004, "", "VIVID_c_Klaipe", 103.3623, 149.1097, 523.8316, 90, "", "", "");
+		AddNpc(156, 154004, "", "VIVID_c_Klaipe", 108.7439, 149.1097, 595.2132, 90, "", "", "");
 		
 		// Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151166, "Treasure Chest", "VIVID_c_Klaipe", 241.4297, 903.0467, 90, "EVENT_VIVID_KLAIPE_BOX4");
+		AddNpc(159, 151166, "Treasure Chest", "VIVID_c_Klaipe", 241.4297, 149.1097, 903.0467, 90, "EVENT_VIVID_KLAIPE_BOX4", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -311.1068, -0.05783081, 90, "EVENT_VIVID_KLAIPE_WARP3");
+		AddNpc(160, 153156, "Teleportation Device", "VIVID_c_Klaipe", -311.1068, 149.1097, -0.05783081, 90, "EVENT_VIVID_KLAIPE_WARP3", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -566.188, -142.3845, 90, "EVENT_VIVID_KLAIPE_WARP3");
+		AddNpc(161, 153156, "Teleportation Device", "VIVID_c_Klaipe", -566.188, 149.1097, -142.3845, 90, "EVENT_VIVID_KLAIPE_WARP3", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -812.731, -24.05574, 90, "EVENT_VIVID_KLAIPE_WARP3");
+		AddNpc(162, 153156, "Teleportation Device", "VIVID_c_Klaipe", -812.731, 235.5028, -24.05574, 90, "EVENT_VIVID_KLAIPE_WARP3", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -874.5623, 366.2594, 90, "EVENT_VIVID_KLAIPE_WARP3");
+		AddNpc(163, 153156, "Teleportation Device", "VIVID_c_Klaipe", -874.5623, 241.052, 366.2594, 90, "EVENT_VIVID_KLAIPE_WARP3", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -585.631, 438.8629, 90, "EVENT_VIVID_KLAIPE_WARP3");
+		AddNpc(164, 153156, "Teleportation Device", "VIVID_c_Klaipe", -585.631, 241.052, 438.8629, 90, "EVENT_VIVID_KLAIPE_WARP3", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -570.2396, 706.6948, 90, "EVENT_VIVID_KLAIPE_WARP3");
+		AddNpc(165, 153156, "Teleportation Device", "VIVID_c_Klaipe", -570.2396, 241.052, 706.6948, 90, "EVENT_VIVID_KLAIPE_WARP3", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -282.5164, 687.3569, 90, "EVENT_VIVID_KLAIPE_WARP3");
+		AddNpc(166, 153156, "Teleportation Device", "VIVID_c_Klaipe", -282.5164, 241.052, 687.3569, 90, "EVENT_VIVID_KLAIPE_WARP3", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -27.79168, 680.8928, 90, "EVENT_VIVID_KLAIPE_WARP3");
+		AddNpc(167, 153156, "Teleportation Device", "VIVID_c_Klaipe", -27.79168, 217.1434, 680.8928, 90, "EVENT_VIVID_KLAIPE_WARP3", "", "");
+		AddNpc(147, 154004, "", "VIVID_c_Klaipe", -87.96147, 228.1853, 680.8862, 90, "", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", -2.693768, -457.2093, 90, "EVENT_VIVID_KLAIPE_WARP2");
+		AddNpc(168, 153156, "Teleportation Device", "VIVID_c_Klaipe", -2.693768, 79.85956, -457.2093, 90, "EVENT_VIVID_KLAIPE_WARP2", "", "");
+		AddNpc(169, 154079, "", "VIVID_c_Klaipe", 323.4909, 81.75952, -210.9479, 45, "", "", "");
+		AddNpc(170, 154004, "", "VIVID_c_Klaipe", -711.3159, 241.052, 593.4888, 90, "", "", "");
+		AddNpc(171, 154079, "", "VIVID_c_Klaipe", 598.584, -1.221075, 223.9369, 240, "", "", "");
+		AddNpc(172, 154079, "", "VIVID_c_Klaipe", 642.42, -1.156543, 268.493, 230, "", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", 698.855, 198.1555, 90, "EVENT_VIVID_KLAIPE_WARP1");
+		AddNpc(173, 153156, "Teleportation Device", "VIVID_c_Klaipe", 698.855, -1.156554, 198.1555, 90, "EVENT_VIVID_KLAIPE_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_Klaipe", 569.9594, 327.8721, 90, "EVENT_VIVID_KLAIPE_WARP1");
+		AddNpc(174, 153156, "Teleportation Device", "VIVID_c_Klaipe", 569.9594, -1.156548, 327.8721, 90, "EVENT_VIVID_KLAIPE_WARP1", "", "");
+		AddNpc(175, 154079, "", "VIVID_c_Klaipe", 159.5357, 152.4848, -106.867, 220, "", "", "");
+		AddNpc(176, 154079, "", "VIVID_c_Klaipe", 230.2863, 150.8466, -29.89555, 220, "", "", "");
+		AddNpc(177, 154079, "", "VIVID_c_Klaipe", 107.9651, 130.4343, -136.6487, 140, "", "", "");
+		AddNpc(178, 156166, "OBB Wall", "VIVID_c_Klaipe", -642.2682, -1.156548, -486.5139, 135, "", "", "");
+		AddNpc(179, 156166, "OBB Wall", "VIVID_c_Klaipe", 60.92343, -1.156548, -811.9941, 180, "", "", "");
+		AddNpc(180, 156166, "OBB Wall", "VIVID_c_Klaipe", 720.3537, -1.156552, -86.32279, 90, "", "", "");
+		AddNpc(181, 156166, "OBB Wall", "VIVID_c_Klaipe", 319.9872, 79.85956, -103.6938, 90, "", "", "");
+		AddNpc(182, 156166, "OBB Wall", "VIVID_c_Klaipe", -27.52892, 79.9396, -405.7233, 180, "", "", "");
+		AddNpc(183, 156166, "OBB Wall", "VIVID_c_Klaipe", -198.6199, 149.1097, -51.69343, 180, "", "", "");
+		AddNpc(184, 156166, "OBB Wall", "VIVID_c_Klaipe", -888.5995, 241.052, 149.0378, 135, "", "", "");
+		AddNpc(185, 156166, "OBB Wall", "VIVID_c_Klaipe", -897.2076, 241.052, 226.9756, 90, "", "", "");
+		AddNpc(186, 156166, "OBB Wall", "VIVID_c_Klaipe", -116.8984, 241.052, 717.0622, 135, "", "", "");
+		AddNpc(187, 156166, "OBB Wall", "VIVID_c_Klaipe", 109.8728, 149.1097, 563.1713, 90, "", "", "");
 	}
 }

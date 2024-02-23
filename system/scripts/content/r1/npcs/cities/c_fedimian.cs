@@ -272,6 +272,10 @@ public class CFedimianNpcScript : GeneralScript
 		//-------------------------------------------------------------------------
 		AddNpc(5294, 160088, "[Skill Transmutation Helper]{nl}Kupole", "c_fedimian", -528.8466, 169.3097, -144.759, 24, "DUCTILITY_NPC", "", "");
 		
+		// [Equipment Transmutation Helper] Kupole
+		//-------------------------------------------------------------------------
+		AddNpc(5294, 160088, "[Equipment Transmutation Helper] Kupole", "c_fedimian", -528.8466, 169.3097, -144.759, 24, "DUCTILITY_NPC", "", "");
+		
 		// [Event]{nl}Ghost Maiden
 		//-------------------------------------------------------------------------
 		AddNpc(5264, 160103, "[Event]{nl}Ghost Maiden", "c_fedimian", -533.1298, 169.3096, -178.2003, 90, "CITY_EVENT_2110_NPC", "", "");
@@ -299,5 +303,9 @@ public class CFedimianNpcScript : GeneralScript
 		// [Snigo's Memory]{nl}Little Glacia
 		//-------------------------------------------------------------------------
 		AddNpc(5503, 160193, "[Snigo's Memory]{nl}Little Glacia", "c_fedimian", -484.44, 160.6, -426.36, 45, "LITTLE_GLACIER", "", "");
+		
+		// [Event]{nl}New Year's Helper Cuvid
+		//-------------------------------------------------------------------------
+		AddNpc(5504, 160204, "[Event]{nl}New Year's Helper Cuvid", "c_fedimian", -525.4, 169.4096, -348.9, 45, "EVENT_NEWYEAR_ASSIST", "", "");
 	}
 }

@@ -6,7 +6,6 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Melia.Shared.Data.Database;
-using Melia.Shared.Tos.Const;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting.Hooking;
 using Melia.Zone.World.Actors;

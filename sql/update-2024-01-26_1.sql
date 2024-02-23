@@ -19,7 +19,7 @@ ALTER TABLE `adventure_book`
 ALTER TABLE `adventure_book`
   ADD CONSTRAINT `adventure_book_ibfk_1` FOREIGN KEY (`accountId`) REFERENCES `accounts` (`accountId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-CREATE TABLE IF NOT EXISTS `adventure_book_monster_drop` (
+CREATE TABLE IF NOT EXISTS `adventure_book_monster_drops` (
   `id` bigint(20) NOT NULL,
   `accountId` bigint(20) NOT NULL,
   `monsterId` int(11)  NOT NULL,

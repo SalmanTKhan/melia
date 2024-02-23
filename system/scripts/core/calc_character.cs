@@ -5,7 +5,6 @@
 //---------------------------------------------------------------------------
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Melia.Shared.Tos.Const;
@@ -13,9 +12,7 @@ using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Actors.Characters.Components;
-using Melia.Zone.World.Actors.CombatEntities.Components;
 using Yggdrasil.Util;
-using static Melia.Shared.Network.NormalOp;
 
 public class CharacterCalculationsScript : GeneralScript
 {
@@ -33,7 +30,7 @@ public class CharacterCalculationsScript : GeneralScript
 		var byStat = properties.GetFloat(PropertyName.STR_STAT);
 		var byBonus = properties.GetFloat(PropertyName.STR_Bonus);
 		var byAdd = properties.GetFloat(PropertyName.STR_ADD);
-		var byTemp = 0; // properties.GetFloat(PropertyName.STR_TEMP);
+		var byTemp = character.Variables.Temp.GetFloat(PropertyName.STR_TEMP); // properties.GetFloat(PropertyName.STR_TEMP);
 
 		var rewardProperty = 0; // GET_REWARD_PROPERTY(self, statString);
 
@@ -55,7 +52,7 @@ public class CharacterCalculationsScript : GeneralScript
 		var byStat = properties.GetFloat(PropertyName.CON_STAT);
 		var byBonus = properties.GetFloat(PropertyName.CON_Bonus);
 		var byAdd = properties.GetFloat(PropertyName.CON_ADD);
-		var byTemp = 0; // properties.GetFloat(PropertyName.CON_TEMP);
+		var byTemp = character.Variables.Temp.GetFloat(PropertyName.CON_TEMP); // properties.GetFloat(PropertyName.CON_TEMP);
 
 		var rewardProperty = 0; // GET_REWARD_PROPERTY(self, statString);
 
@@ -77,7 +74,7 @@ public class CharacterCalculationsScript : GeneralScript
 		var byStat = properties.GetFloat(PropertyName.INT_STAT);
 		var byBonus = properties.GetFloat(PropertyName.INT_Bonus);
 		var byAdd = properties.GetFloat(PropertyName.INT_ADD);
-		var byTemp = 0; // properties.GetFloat(PropertyName.INT_TEMP);
+		var byTemp = character.Variables.Temp.GetFloat(PropertyName.INT_TEMP); // properties.GetFloat(PropertyName.INT_TEMP);
 
 		var rewardProperty = 0; // GET_REWARD_PROPERTY(self, statString);
 
@@ -99,7 +96,7 @@ public class CharacterCalculationsScript : GeneralScript
 		var byStat = properties.GetFloat(PropertyName.MNA_STAT);
 		var byBonus = properties.GetFloat(PropertyName.MNA_Bonus);
 		var byAdd = properties.GetFloat(PropertyName.MNA_ADD);
-		var byTemp = 0; // properties.GetFloat(PropertyName.MNA_TEMP);
+		var byTemp = character.Variables.Temp.GetFloat(PropertyName.MNA_TEMP); // properties.GetFloat(PropertyName.MNA_TEMP);
 
 		var rewardProperty = 0; // GET_REWARD_PROPERTY(self, statString);
 
@@ -121,11 +118,49 @@ public class CharacterCalculationsScript : GeneralScript
 		var byStat = properties.GetFloat(PropertyName.DEX_STAT);
 		var byBonus = properties.GetFloat(PropertyName.DEX_Bonus);
 		var byAdd = properties.GetFloat(PropertyName.DEX_ADD);
-		var byTemp = 0; // properties.GetFloat(PropertyName.DEX_TEMP);
+		var byTemp = character.Variables.Temp.GetFloat(PropertyName.DEX_TEMP); // properties.GetFloat(PropertyName.DEX_TEMP);
 
 		var rewardProperty = 0; // GET_REWARD_PROPERTY(self, statString);
 
 		var result = byJob + byStat + byBonus + byAdd + byTemp + rewardProperty;
+		return (float)Math.Floor(Math.Max(1, result));
+	}
+
+	/// <summary>
+	/// Returns character's total luck.
+	/// </summary>
+	/// <remarks>Legacy stat, not used currently</remarks>
+	/// <param name="character"></param>
+	/// <returns></returns>
+	[ScriptableFunction]
+	public float SCR_Get_Character_LUCK(Character character)
+	{
+		var properties = character.Properties;
+
+		var byJob = properties.GetFloat(PropertyName.LUCK_JOB);
+		var byStat = properties.GetFloat(PropertyName.LUCK_STAT);
+		var byBonus = properties.GetFloat(PropertyName.LUCK_Bonus);
+		var byAdd = properties.GetFloat(PropertyName.LUCK_ADD);
+
+		var result = byJob + byStat + byBonus + byAdd;
+		return (float)Math.Floor(Math.Max(1, result));
+	}
+
+	/// <summary>
+	/// Returns character's total luck.
+	/// </summary>
+	/// <remarks>Legacy stat, not used currently</remarks>
+	/// <param name="character"></param>
+	/// <returns></returns>
+	[ScriptableFunction]
+	public float SCR_Get_Character_ALLSTAT(Character character)
+	{
+		var properties = character.Properties;
+
+		var byStat = properties.GetFloat(PropertyName.ALLSTAT);
+		var byAdd = properties.GetFloat(PropertyName.ALLSTAT_ADD);
+
+		var result = byStat + byAdd;
 		return (float)Math.Floor(Math.Max(1, result));
 	}
 
@@ -142,8 +177,9 @@ public class CharacterCalculationsScript : GeneralScript
 		var byItem = character.Inventory.GetEquipProperties(PropertyName.STR);
 		var byBuffs = properties.GetFloat(PropertyName.STR_BM);
 		var byItemBuff = properties.GetFloat(PropertyName.STR_ITEM_BM);
+		var byAllStat = properties.GetFloat(PropertyName.ALLSTAT);
 
-		var value = byItem + byBuffs + byItemBuff;
+		var value = byItem + byBuffs + byItemBuff + byAllStat;
 
 		return value;
 	}
@@ -161,8 +197,9 @@ public class CharacterCalculationsScript : GeneralScript
 		var byItem = character.Inventory.GetEquipProperties(PropertyName.CON);
 		var byBuffs = properties.GetFloat(PropertyName.CON_BM);
 		var byItemBuff = properties.GetFloat(PropertyName.CON_ITEM_BM);
+		var byAllStat = properties.GetFloat(PropertyName.ALLSTAT);
 
-		var value = byItem + byBuffs + byItemBuff;
+		var value = byItem + byBuffs + byItemBuff + byAllStat;
 
 		return value;
 	}
@@ -180,8 +217,9 @@ public class CharacterCalculationsScript : GeneralScript
 		var byItem = character.Inventory.GetEquipProperties(PropertyName.INT);
 		var byBuffs = properties.GetFloat(PropertyName.INT_BM);
 		var byItemBuff = properties.GetFloat(PropertyName.INT_ITEM_BM);
+		var byAllStat = properties.GetFloat(PropertyName.ALLSTAT);
 
-		var value = byItem + byBuffs + byItemBuff;
+		var value = byItem + byBuffs + byItemBuff + byAllStat;
 
 		return value;
 	}
@@ -199,8 +237,9 @@ public class CharacterCalculationsScript : GeneralScript
 		var byItem = character.Inventory.GetEquipProperties(PropertyName.MNA);
 		var byBuffs = properties.GetFloat(PropertyName.MNA_BM);
 		var byItemBuff = properties.GetFloat(PropertyName.MNA_ITEM_BM);
+		var byAllStat = properties.GetFloat(PropertyName.ALLSTAT);
 
-		var value = byItem + byBuffs + byItemBuff;
+		var value = byItem + byBuffs + byItemBuff + byAllStat;
 
 		return value;
 	}
@@ -218,10 +257,50 @@ public class CharacterCalculationsScript : GeneralScript
 		var byItem = character.Inventory.GetEquipProperties(PropertyName.DEX);
 		var byBuffs = properties.GetFloat(PropertyName.DEX_BM);
 		var byItemBuff = properties.GetFloat(PropertyName.DEX_ITEM_BM);
+		var byAllStat = properties.GetFloat(PropertyName.ALLSTAT);
+
+		var value = byItem + byBuffs + byItemBuff + byAllStat;
+
+		return value;
+	}
+
+	/// <summary>
+	/// Returns character's LUCK bonus from items and buffs.
+	/// </summary>
+	/// <remarks>Legacy Stat, unused in modern ToS.</remarks>
+	/// <param name="character"></param>
+	/// <returns></returns>
+	[ScriptableFunction]
+	public float SCR_Get_Character_LUCK_ADD(Character character)
+	{
+		var properties = character.Properties;
+
+		var byItem = character.Inventory.GetEquipProperties(PropertyName.Luck);
+		var byBuffs = properties.GetFloat(PropertyName.LUCK_BM);
+		var byItemBuff = properties.GetFloat(PropertyName.LUCK_ITEM_BM);
 
 		var value = byItem + byBuffs + byItemBuff;
 
 		return value;
+	}
+
+	/// <summary>
+	/// Returns character's ALLSTAT bonus from items and buffs.
+	/// </summary>
+	/// <param name="character"></param>
+	/// <returns></returns>
+	[ScriptableFunction]
+	public float SCR_Get_Character_ALLSTAT_ADD(Character character)
+	{
+		var properties = character.Properties;
+
+		var byItem = character.Inventory.GetEquipProperties(PropertyName.ALLSTAT);
+		var byBuffs = properties.GetFloat(PropertyName.ALLSTAT_BM);
+		var byItemBuff = properties.GetFloat(PropertyName.ALLSTAT_ITEM_BM);
+
+		var value = byItem + byBuffs + byItemBuff;
+
+		return (float)Math.Floor(value);
 	}
 
 	/// <summary>

@@ -75,6 +75,9 @@ namespace Melia.Zone.World.Actors.Characters
 			this.Create(PropertyName.MNA_ADD, "SCR_Get_Character_MNA_ADD");
 			this.Create(PropertyName.DEX_ADD, "SCR_Get_Character_DEX_ADD");
 
+			this.Create(PropertyName.ALLSTAT, "SCR_Get_Character_ALLSTAT");
+			this.Create(PropertyName.ALLSTAT_ADD, "SCR_Get_Character_ALLSTAT_ADD");
+
 			this.Create(PropertyName.STR, "SCR_Get_Character_STR");
 			this.Create(PropertyName.CON, "SCR_Get_Character_CON");
 			this.Create(PropertyName.INT, "SCR_Get_Character_INT");
@@ -154,11 +157,11 @@ namespace Melia.Zone.World.Actors.Characters
 		/// </remarks>
 		public void InitAutoUpdates()
 		{
-			this.AutoUpdate(PropertyName.STR, new[] { PropertyName.Lv, PropertyName.STR_ADD, PropertyName.STR_STAT, PropertyName.STR_JOB });
-			this.AutoUpdate(PropertyName.CON, new[] { PropertyName.Lv, PropertyName.CON_ADD, PropertyName.CON_STAT, PropertyName.CON_JOB });
-			this.AutoUpdate(PropertyName.INT, new[] { PropertyName.Lv, PropertyName.INT_ADD, PropertyName.INT_STAT, PropertyName.INT_JOB });
-			this.AutoUpdate(PropertyName.MNA, new[] { PropertyName.Lv, PropertyName.MNA_ADD, PropertyName.MNA_STAT, PropertyName.MNA_JOB });
-			this.AutoUpdate(PropertyName.DEX, new[] { PropertyName.Lv, PropertyName.DEX_ADD, PropertyName.DEX_STAT, PropertyName.DEX_JOB });
+			this.AutoUpdate(PropertyName.STR, new[] { PropertyName.Lv, PropertyName.STR_ADD, PropertyName.STR_STAT, PropertyName.STR_JOB, PropertyName.ALLSTAT });
+			this.AutoUpdate(PropertyName.CON, new[] { PropertyName.Lv, PropertyName.CON_ADD, PropertyName.CON_STAT, PropertyName.CON_JOB, PropertyName.ALLSTAT });
+			this.AutoUpdate(PropertyName.INT, new[] { PropertyName.Lv, PropertyName.INT_ADD, PropertyName.INT_STAT, PropertyName.INT_JOB, PropertyName.ALLSTAT });
+			this.AutoUpdate(PropertyName.MNA, new[] { PropertyName.Lv, PropertyName.MNA_ADD, PropertyName.MNA_STAT, PropertyName.MNA_JOB, PropertyName.ALLSTAT });
+			this.AutoUpdate(PropertyName.DEX, new[] { PropertyName.Lv, PropertyName.DEX_ADD, PropertyName.DEX_STAT, PropertyName.DEX_JOB, PropertyName.ALLSTAT });
 			this.AutoUpdate(PropertyName.STR_JOB, new[] { PropertyName.Lv });
 			this.AutoUpdate(PropertyName.CON_JOB, new[] { PropertyName.Lv });
 			this.AutoUpdate(PropertyName.INT_JOB, new[] { PropertyName.Lv });

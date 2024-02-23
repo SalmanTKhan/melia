@@ -1,11 +1,8 @@
 ﻿using System.Collections;
-using Melia.Shared.World;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.AI;
 using Melia.Zone.World.Actors;
 using Melia.Zone.World.Actors.Monsters;
-using Yggdrasil.Logging;
-using Yggrasil.Ai.BehaviorTree.Leafs;
 
 [Ai("BasicMonster")]
 public class BasicMonsterAiScript : AiScript
@@ -14,7 +11,7 @@ public class BasicMonsterAiScript : AiScript
 	private const int MaxMasterDistance = 200;
 	private const int MaxRoamDistance = 300;
 
-	ICombatEntity target;
+	private ICombatEntity _target;
 
 	protected override void Setup()
 	{
@@ -57,7 +54,7 @@ public class BasicMonsterAiScript : AiScript
 	{
 		SetRunning(true);
 
-		while (!target.IsDead)
+		while (!_target.IsDead)
 		{
 			if (!TryGetRandomSkill(out var skill))
 			{
@@ -65,12 +62,12 @@ public class BasicMonsterAiScript : AiScript
 				continue;
 			}
 
-			while (!InRangeOf(target, skill.GetAttackRange()))
-				yield return MoveTo(target.Position, wait: false);
+			while (!InRangeOf(_target, skill.GetAttackRange()))
+				yield return MoveTo(_target.Position, wait: false);
 
 			yield return StopMove();
 
-			yield return UseSkill(skill, target);
+			yield return UseSkill(skill, _target);
 			yield return Wait(skill.Properties.Delay);
 		}
 
@@ -86,7 +83,7 @@ public class BasicMonsterAiScript : AiScript
 	protected IEnumerable StopAndAttack()
 	{
 		ExecuteOnce(Emoticon("I_emo_exclamation"));
-		ExecuteOnce(TurnTowards(target));
+		ExecuteOnce(TurnTowards(_target));
 
 		yield return StopMove();
 		StartRoutine("Attack", Attack());
@@ -97,7 +94,7 @@ public class BasicMonsterAiScript : AiScript
 		var mostHated = GetMostHated();
 		if (mostHated != null)
 		{
-			target = mostHated;
+			_target = mostHated;
 			StartRoutine("StopAndAttack", StopAndAttack());
 		}
 	}
@@ -105,16 +102,16 @@ public class BasicMonsterAiScript : AiScript
 	private void CheckTarget()
 	{
 		// Transition to idle if the target has vanished or is out of range
-		if (EntityGone(target) || !InRangeOf(target, MaxChaseDistance) || !IsHating(target))
+		if (EntityGone(_target) || !InRangeOf(_target, MaxChaseDistance) || !IsHating(_target))
 		{
-			target = null;
+			_target = null;
 			StartRoutine("StopAndIdle", StopAndIdle());
 		}
 	}
 
 	private void CheckMaster()
 	{
-		if (target == null)
+		if (_target == null)
 			return;
 
 		if (!TryGetMaster(out var master))
@@ -123,7 +120,7 @@ public class BasicMonsterAiScript : AiScript
 		// Reset aggro if the master left
 		if (EntityGone(master) || !InRangeOf(master, MaxMasterDistance))
 		{
-			target = null;
+			_target = null;
 			RemoveAllHate();
 			StartRoutine("StopAndIdle", StopAndIdle());
 		}

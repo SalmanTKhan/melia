@@ -29,10 +29,10 @@ namespace Melia.Shared.Data
 		/// </summary>
 		private void LoadProperties()
 		{
-			var props = this.GetType().GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+			var props = this.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
 			foreach (var prop in props)
 			{
-				var attr = prop.GetCustomAttribute<PropertyAttribute>();
+				var attr = (PropertyAttribute)Attribute.GetCustomAttribute(prop, typeof(PropertyAttribute));
 				if (attr == null)
 					continue;
 

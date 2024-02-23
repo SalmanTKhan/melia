@@ -61,7 +61,8 @@ namespace Melia.Zone.Skills.Handlers.Chronomancer
 			trigger.DisappearTime = DateTime.Now.AddSeconds(10);
 			caster.Map.AddMonster(trigger);
 
-			Task.Delay(TimeSpan.FromSeconds(10)).ContinueWith(_ => Send.ZC_NORMAL.SkillPad(caster, skill, skill.Data.ClassName, position, direction, 2.356195f, 0, effectHandle, 70, false));
+			trigger.OnDisappear += () => Send.ZC_NORMAL.SkillPad(caster, skill, skill.Data.ClassName, position, direction, 2.356195f, 0, effectHandle, 70, false);
+			//Task.Delay(TimeSpan.FromSeconds(10)).ContinueWith(_ => Send.ZC_NORMAL.SkillPad(caster, skill, skill.Data.ClassName, position, direction, 2.356195f, 0, effectHandle, 70, false));
 		}
 
 		/// <summary>

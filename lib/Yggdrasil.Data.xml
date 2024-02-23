@@ -191,192 +191,6 @@
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="T:Yggdrasil.Data.CSV.DatabaseCsvBase">
-            <summary>
-            A text-based database using CSV.
-            </summary>
-        </member>
-        <member name="F:Yggdrasil.Data.CSV.DatabaseCsvBase.Warnings">
-            <summary>
-            Warnings that occurred during load.
-            </summary>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.#ctor">
-            <summary>
-            Initializes instance.
-            </summary>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.GetWarnings">
-            <summary>
-            Returns warnings that occured while loading data.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.LoadFile(System.String)">
-            <summary>
-            Loads data from given file.
-            </summary>
-            <param name="filePath"></param>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.AfterLoad">
-            <summary>
-            Called at the end of LoadFile.
-            </summary>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.ReadEntry(Yggdrasil.Data.CSV.CsvEntry)">
-            <summary>
-            Reads entry and adds information to database.
-            </summary>
-            <param name="entry"></param>
-        </member>
-        <member name="T:Yggdrasil.Data.CSV.DatabaseCsv`1">
-            <summary>
-            A text-based database using CSV.
-            </summary>
-            <typeparam name="TData"></typeparam>
-        </member>
-        <member name="P:Yggdrasil.Data.CSV.DatabaseCsv`1.Count">
-            <summary>
-            Returns number of entries in the database.
-            </summary>
-        </member>
-        <member name="F:Yggdrasil.Data.CSV.DatabaseCsv`1.Entries">
-            <summary>
-            The database's entries.
-            </summary>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsv`1.Find(System.Func{`0,System.Boolean})">
-            <summary>
-            Searches for first entry that matches the given predicate
-            and returns it, or null if no matches were found.
-            </summary>
-            <param name="predicate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsv`1.FindAll(System.Func{`0,System.Boolean})">
-            <summary>
-            Searches for entries that match the given predicate
-            and returns them.
-            </summary>
-            <param name="predicate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsv`1.Clear">
-            <summary>
-            Removes all entries from database.
-            </summary>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsv`1.Add(`0)">
-            <summary>
-            Adds data to database.
-            </summary>
-            <param name="data"></param>
-        </member>
-        <member name="T:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2">
-            <summary>
-            A text-based database using CSV.
-            </summary>
-            <typeparam name="TIndex"></typeparam>
-            <typeparam name="TData"></typeparam>
-        </member>
-        <member name="P:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Count">
-            <summary>
-            Returns number of entries in the database.
-            </summary>
-        </member>
-        <member name="F:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Entries">
-            <summary>
-            The database's entries.
-            </summary>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Contains(`0)">
-            <summary>
-            Returns true if the database contains an element with the
-            given index.
-            </summary>
-            <param name="index"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Find(System.Func{`1,System.Boolean})">
-            <summary>
-            Searches for first entry that matches the given predicate
-            and returns it, or null if no matches were found.
-            </summary>
-            <param name="predicate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Find(`0)">
-            <summary>
-            Returns the entry with the given index, or null if it
-            wasn't found.
-            </summary>
-            <param name="index"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.TryFind(`0,`1@)">
-            <summary>
-            Returns the entry with the given index via out. Returns false
-            if the index wasn't found.
-            </summary>
-            <param name="index"></param>
-            <param name="data"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.TryFind(System.Func{`1,System.Boolean},`1@)">
-            <summary>
-            Returns the first entry matching the given predicate via out.
-            Returns false if no matches were found.
-            </summary>
-            <param name="predicate"></param>
-            <param name="data"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.FindAll(System.Func{`1,System.Boolean})">
-            <summary>
-            Searches for entries that match the given predicate
-            and returns them.
-            </summary>
-            <param name="predicate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Clear">
-            <summary>
-            Removes all entries from database.
-            </summary>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Add(`0,`1)">
-            <summary>
-            Adds data to database, fails and returns false if index exists
-            already.
-            </summary>
-            <param name="index"></param>
-            <param name="data"></param>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.AddOrReplace(`0,`1)">
-            <summary>
-            Adds data to database, replacing potentially existing values.
-            Returns whether data was replaced or not.
-            </summary>
-            <param name="index"></param>
-            <param name="data"></param>
-        </member>
-        <member name="T:Yggdrasil.Data.CSV.MinFieldCountAttribute">
-            <summary>
-            Marks a CSV database to required at least the given amount amount
-            of values in a line.
-            </summary>
-        </member>
-        <member name="P:Yggdrasil.Data.CSV.MinFieldCountAttribute.Count">
-            <summary>
-            Number of required values.
-            </summary>
-        </member>
-        <member name="M:Yggdrasil.Data.CSV.MinFieldCountAttribute.#ctor(System.Int32)">
-            <summary>
-            Creates new instance.
-            </summary>
-            <param name="count"></param>
-        </member>
         <member name="T:Yggdrasil.Data.CSV.CsvEntry">
             <summary>
             Represents a line in a CSV file, allowing simple access its data.
@@ -582,6 +396,192 @@
             </summary>
             <param name="csvLine"></param>
             <returns></returns>
+        </member>
+        <member name="T:Yggdrasil.Data.CSV.DatabaseCsvBase">
+            <summary>
+            A text-based database using CSV.
+            </summary>
+        </member>
+        <member name="F:Yggdrasil.Data.CSV.DatabaseCsvBase.Warnings">
+            <summary>
+            Warnings that occurred during load.
+            </summary>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.#ctor">
+            <summary>
+            Initializes instance.
+            </summary>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.GetWarnings">
+            <summary>
+            Returns warnings that occured while loading data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.LoadFile(System.String)">
+            <summary>
+            Loads data from given file.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.AfterLoad">
+            <summary>
+            Called at the end of LoadFile.
+            </summary>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvBase.ReadEntry(Yggdrasil.Data.CSV.CsvEntry)">
+            <summary>
+            Reads entry and adds information to database.
+            </summary>
+            <param name="entry"></param>
+        </member>
+        <member name="T:Yggdrasil.Data.CSV.DatabaseCsv`1">
+            <summary>
+            A text-based database using CSV.
+            </summary>
+            <typeparam name="TData"></typeparam>
+        </member>
+        <member name="P:Yggdrasil.Data.CSV.DatabaseCsv`1.Count">
+            <summary>
+            Returns number of entries in the database.
+            </summary>
+        </member>
+        <member name="F:Yggdrasil.Data.CSV.DatabaseCsv`1.Entries">
+            <summary>
+            The database's entries.
+            </summary>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsv`1.Find(System.Func{`0,System.Boolean})">
+            <summary>
+            Searches for first entry that matches the given predicate
+            and returns it, or null if no matches were found.
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsv`1.FindAll(System.Func{`0,System.Boolean})">
+            <summary>
+            Searches for entries that match the given predicate
+            and returns them.
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsv`1.Clear">
+            <summary>
+            Removes all entries from database.
+            </summary>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsv`1.Add(`0)">
+            <summary>
+            Adds data to database.
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2">
+            <summary>
+            A text-based database using CSV.
+            </summary>
+            <typeparam name="TIndex"></typeparam>
+            <typeparam name="TData"></typeparam>
+        </member>
+        <member name="P:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Count">
+            <summary>
+            Returns number of entries in the database.
+            </summary>
+        </member>
+        <member name="F:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Entries">
+            <summary>
+            The database's entries.
+            </summary>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Contains(`0)">
+            <summary>
+            Returns true if the database contains an element with the
+            given index.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Find(System.Func{`1,System.Boolean})">
+            <summary>
+            Searches for first entry that matches the given predicate
+            and returns it, or null if no matches were found.
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Find(`0)">
+            <summary>
+            Returns the entry with the given index, or null if it
+            wasn't found.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.TryFind(`0,`1@)">
+            <summary>
+            Returns the entry with the given index via out. Returns false
+            if the index wasn't found.
+            </summary>
+            <param name="index"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.TryFind(System.Func{`1,System.Boolean},`1@)">
+            <summary>
+            Returns the first entry matching the given predicate via out.
+            Returns false if no matches were found.
+            </summary>
+            <param name="predicate"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.FindAll(System.Func{`1,System.Boolean})">
+            <summary>
+            Searches for entries that match the given predicate
+            and returns them.
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Clear">
+            <summary>
+            Removes all entries from database.
+            </summary>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.Add(`0,`1)">
+            <summary>
+            Adds data to database, fails and returns false if index exists
+            already.
+            </summary>
+            <param name="index"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.DatabaseCsvIndexed`2.AddOrReplace(`0,`1)">
+            <summary>
+            Adds data to database, replacing potentially existing values.
+            Returns whether data was replaced or not.
+            </summary>
+            <param name="index"></param>
+            <param name="data"></param>
+        </member>
+        <member name="T:Yggdrasil.Data.CSV.MinFieldCountAttribute">
+            <summary>
+            Marks a CSV database to required at least the given amount amount
+            of values in a line.
+            </summary>
+        </member>
+        <member name="P:Yggdrasil.Data.CSV.MinFieldCountAttribute.Count">
+            <summary>
+            Number of required values.
+            </summary>
+        </member>
+        <member name="M:Yggdrasil.Data.CSV.MinFieldCountAttribute.#ctor(System.Int32)">
+            <summary>
+            Creates new instance.
+            </summary>
+            <param name="count"></param>
         </member>
         <member name="T:Yggdrasil.Data.CSV.CsvDatabaseWarningException">
             <summary>

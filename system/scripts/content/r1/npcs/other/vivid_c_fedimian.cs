@@ -12,81 +12,208 @@ public class VividCFedimianNpcScript : GeneralScript
 {
 	public override void Load()
 	{
+		AddNpc(1, 154004, "", "VIVID_c_fedimian", 749.153, 160.555, -142.89, 90, "", "", "");
+		AddNpc(2, 154004, "", "VIVID_c_fedimian", 651.2758, 160.555, -125.6535, 90, "", "", "");
+		AddNpc(3, 154004, "", "VIVID_c_fedimian", 554.0641, 160.555, -134.3774, 90, "", "", "");
+		AddNpc(4, 154004, "", "VIVID_c_fedimian", 453.8072, 160.555, -165.6074, 90, "", "", "");
+		AddNpc(5, 154004, "", "VIVID_c_fedimian", 354.0565, 160.563, -197.0613, 90, "", "", "");
+		AddNpc(6, 154004, "", "VIVID_c_fedimian", 261.3508, 160.7531, -216.9305, 90, "", "", "");
+		AddNpc(7, 154004, "", "VIVID_c_fedimian", 255.2635, 160.555, -318.1495, 90, "", "", "");
+		AddNpc(8, 154004, "", "VIVID_c_fedimian", 258.9553, 160.555, -405.9821, 90, "", "", "");
+		AddNpc(9, 154004, "", "VIVID_c_fedimian", 203.9937, 160.5551, -484.445, 90, "", "", "");
 		
 		// Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151167, "Treasure Chest", "VIVID_c_fedimian", 115.8499, -506.0249, 90, "EVENT_VIVID_FEDIMIAN_BOX");
+		AddNpc(10, 151167, "Treasure Chest", "VIVID_c_fedimian", 115.8499, 160.555, -506.0249, 90, "EVENT_VIVID_FEDIMIAN_BOX", "", "");
+		AddNpc(11, 154079, "", "VIVID_c_fedimian", 254.3454, 160.555, -291.7921, 190, "", "", "");
+		AddNpc(12, 154079, "", "VIVID_c_fedimian", 177.8934, 160.555, -310.1977, 220, "", "", "");
+		AddNpc(13, 154004, "", "VIVID_c_fedimian", 252.7667, 160.555, -288.7599, 90, "", "", "");
+		AddNpc(14, 154004, "", "VIVID_c_fedimian", 167.6396, 160.9718, -229.9684, 90, "", "", "");
+		AddNpc(15, 154004, "", "VIVID_c_fedimian", 65.28779, 160.555, -245.7203, 90, "", "", "");
+		AddNpc(16, 154004, "", "VIVID_c_fedimian", -35.61562, 160.555, -257.2985, 90, "", "", "");
+		AddNpc(17, 154004, "", "VIVID_c_fedimian", -135.7024, 160.555, -269.1016, 90, "", "", "");
+		AddNpc(18, 154004, "", "VIVID_c_fedimian", -236.1217, 160.555, -294.0971, 90, "", "", "");
+		AddNpc(19, 154004, "", "VIVID_c_fedimian", -230.0481, 160.555, -398.0516, 90, "", "", "");
+		AddNpc(20, 154004, "", "VIVID_c_fedimian", -333.5896, 160.555, -416.634, 90, "", "", "");
+		AddNpc(21, 154004, "", "VIVID_c_fedimian", -437.0331, 160.555, -433.6956, 90, "", "", "");
+		AddNpc(22, 154004, "", "VIVID_c_fedimian", -511.2629, 169.3097, -352.979, 90, "", "", "");
+		AddNpc(23, 154004, "", "VIVID_c_fedimian", -611.8619, 169.3097, -335.6772, 90, "", "", "");
+		AddNpc(24, 154004, "", "VIVID_c_fedimian", -692.0627, 169.3097, -263.8342, 90, "", "", "");
+		AddNpc(25, 154004, "", "VIVID_c_fedimian", -772.4418, 208.2247, -190.5104, 90, "", "", "");
+		AddNpc(26, 154079, "", "VIVID_c_fedimian", -715.7601, 171.9187, -252.3433, 220, "", "", "");
+		AddNpc(27, 154004, "", "VIVID_c_fedimian", -732.846, 178.7615, -255.9137, 135, "", "", "");
+		AddNpc(28, 154004, "", "VIVID_c_fedimian", -864.0665, 214.3675, -200.1039, 90, "", "", "");
 		
 		// Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151167, "Treasure Chest", "VIVID_c_fedimian", -758.3153, -120.335, 90, "EVENT_VIVID_FEDIMIAN_BOX2");
+		AddNpc(29, 151167, "Treasure Chest", "VIVID_c_fedimian", -758.3153, 208.2247, -120.335, 90, "EVENT_VIVID_FEDIMIAN_BOX2", "", "");
+		AddNpc(30, 154079, "", "VIVID_c_fedimian", 439.6987, 160.555, -114.8424, 180, "", "", "");
+		AddNpc(31, 154079, "", "VIVID_c_fedimian", 510.9444, 160.555, -42.48798, 90, "", "", "");
+		AddNpc(32, 154079, "", "VIVID_c_fedimian", 648.1492, 202.296, -9.301486, 160, "", "", "");
+		AddNpc(33, 154004, "", "VIVID_c_fedimian", 664.9586, 207.2039, -9.808501, 60, "", "", "");
+		AddNpc(34, 154004, "", "VIVID_c_fedimian", -491.2814, 171.0666, -252.9522, 90, "", "", "");
+		AddNpc(35, 154004, "", "VIVID_c_fedimian", -491.8699, 169.6223, -176.2307, 90, "", "", "");
+		AddNpc(36, 154004, "", "VIVID_c_fedimian", -413.2968, 211.2969, -106.4052, 90, "", "", "");
+		AddNpc(37, 154004, "", "VIVID_c_fedimian", -318.408, 275.3439, -99.65323, 90, "", "", "");
+		AddNpc(38, 154004, "", "VIVID_c_fedimian", -344.262, 255.5806, -118.6493, 90, "", "", "");
+		AddNpc(39, 154079, "", "VIVID_c_fedimian", -455.6866, 179.5833, -124.5422, 90, "", "", "");
+		AddNpc(40, 154004, "", "VIVID_c_fedimian", -451.7544, 185.2121, -108.307, 190, "", "", "");
+		AddNpc(41, 154004, "", "VIVID_c_fedimian", -225.917, 326.7502, -82.18681, 90, "", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", -340.8616, -301.9245, 90, "EVENT_VIVID_FEDIMIAN_WARP1");
+		AddNpc(42, 153156, "Teleportation Device", "VIVID_c_fedimian", -340.8616, 160.555, -301.9245, 90, "EVENT_VIVID_FEDIMIAN_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", 575.9946, -69.13193, 90, "EVENT_VIVID_FEDIMIAN_WARP1");
+		AddNpc(43, 153156, "Teleportation Device", "VIVID_c_fedimian", 575.9946, 160.555, -69.13193, 90, "EVENT_VIVID_FEDIMIAN_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", 249.0077, -144.912, 90, "EVENT_VIVID_FEDIMIAN_WARP1");
+		AddNpc(44, 153156, "Teleportation Device", "VIVID_c_fedimian", 249.0077, 160.8399, -144.912, 90, "EVENT_VIVID_FEDIMIAN_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", 9.05694, -224.1856, 90, "EVENT_VIVID_FEDIMIAN_WARP1");
+		AddNpc(45, 153156, "Teleportation Device", "VIVID_c_fedimian", 9.05694, 160.555, -224.1856, 90, "EVENT_VIVID_FEDIMIAN_WARP1", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", -582.6896, -218.8773, 90, "EVENT_VIVID_FEDIMIAN_WARP1");
+		AddNpc(46, 153156, "Teleportation Device", "VIVID_c_fedimian", -582.6896, 169.3363, -218.8773, 90, "EVENT_VIVID_FEDIMIAN_WARP1", "", "");
+		AddNpc(47, 40001, " ", "VIVID_c_fedimian", -264.5744, 302.4691, -111.3106, -79, "", "", "");
+		AddNpc(48, 154004, "", "VIVID_c_fedimian", -134.3861, 372.5725, -50.44463, 90, "", "", "");
+		AddNpc(49, 154004, "", "VIVID_c_fedimian", -34.33558, 344.5444, -30.78836, 90, "", "", "");
+		AddNpc(50, 154004, "", "VIVID_c_fedimian", 58.99752, 318.2917, -15.33715, 90, "", "", "");
+		AddNpc(51, 154004, "", "VIVID_c_fedimian", 161.1182, 350.7432, -12.93552, 90, "", "", "");
+		AddNpc(52, 154004, "", "VIVID_c_fedimian", 262.6694, 348.7194, 11.76566, 90, "", "", "");
+		AddNpc(53, 154004, "", "VIVID_c_fedimian", 336.1833, 312.0165, 72.89671, 90, "", "", "");
+		AddNpc(54, 40001, " ", "VIVID_c_fedimian", 351.1159, 435.4686, 140.4729, 186, "", "", "");
+		AddNpc(55, 154079, "", "VIVID_c_fedimian", 498.6031, 322.5153, 128.1635, 90, "", "", "");
+		AddNpc(56, 154079, "", "VIVID_c_fedimian", 394.91, 304.7897, -5.952344, 190, "", "", "");
+		AddNpc(57, 154079, "", "VIVID_c_fedimian", -170.2507, 366.4282, 64.2896, 90, "", "", "");
+		AddNpc(58, 154079, "", "VIVID_c_fedimian", -20.2324, 369.3186, 71.58955, 90, "", "", "");
+		AddNpc(59, 154079, "", "VIVID_c_fedimian", 248.4477, 426.2998, 236.3477, 190, "", "", "");
+		AddNpc(60, 154004, "", "VIVID_c_fedimian", 265.498, 426.2998, 229.425, 90, "", "", "");
+		AddNpc(61, 154004, "", "VIVID_c_fedimian", -39.80025, 365.9291, 64.89796, 190, "", "", "");
+		AddNpc(62, 154004, "", "VIVID_c_fedimian", -168.097, 367.2847, 52.98821, 190, "", "", "");
+		AddNpc(63, 40001, " ", "VIVID_c_fedimian", 318.5254, 426.2998, 214.9144, -79, "", "", "");
+		AddNpc(64, 40001, " ", "VIVID_c_fedimian", 203.5637, 426.2998, 183.2066, -83, "", "", "");
+		AddNpc(65, 40001, " ", "VIVID_c_fedimian", 102.3323, 426.2998, 167.6447, 231, "", "", "");
+		AddNpc(66, 40001, " ", "VIVID_c_fedimian", -5.035706, 471.3465, 191.5189, -88, "", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", -100.9548, 29.32721, 90, "EVENT_VIVID_FEDIMIAN_WARP2");
+		AddNpc(67, 153156, "Teleportation Device", "VIVID_c_fedimian", -100.9548, 365.9291, 29.32721, 90, "EVENT_VIVID_FEDIMIAN_WARP2", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", 97.88349, 18.41584, 90, "EVENT_VIVID_FEDIMIAN_WARP2");
+		AddNpc(68, 153156, "Teleportation Device", "VIVID_c_fedimian", 97.88349, 317.0866, 18.41584, 90, "EVENT_VIVID_FEDIMIAN_WARP2", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", 414.2552, 76.04771, 90, "EVENT_VIVID_FEDIMIAN_WARP2");
+		AddNpc(69, 153156, "Teleportation Device", "VIVID_c_fedimian", 414.2552, 312.0165, 76.04771, 90, "EVENT_VIVID_FEDIMIAN_WARP2", "", "");
+		AddNpc(70, 154079, "", "VIVID_c_fedimian", 118.4889, 436.152, 112.3754, 130, "", "", "");
+		AddNpc(71, 154004, "", "VIVID_c_fedimian", -91.44791, 503.9069, 176.8769, 90, "", "", "");
+		AddNpc(72, 154004, "", "VIVID_c_fedimian", -107.606, 503.9069, 268.4939, 90, "", "", "");
+		AddNpc(73, 154004, "", "VIVID_c_fedimian", -131.684, 503.9069, 355.6311, 90, "", "", "");
+		AddNpc(74, 154004, "", "VIVID_c_fedimian", -213.315, 482.1485, 318.6, 90, "", "", "");
+		AddNpc(75, 154004, "", "VIVID_c_fedimian", -244.5087, 482.0297, 227.5587, 90, "", "", "");
+		AddNpc(76, 154004, "", "VIVID_c_fedimian", -267.1406, 482.1382, 132.2058, 90, "", "", "");
+		AddNpc(77, 154004, "", "VIVID_c_fedimian", -370.5536, 452.1994, 138.1516, 90, "", "", "");
+		AddNpc(78, 154004, "", "VIVID_c_fedimian", -464.6317, 450.0467, 108.6842, 90, "", "", "");
+		AddNpc(79, 154004, "", "VIVID_c_fedimian", -562.1714, 447.5573, 93.98989, 90, "", "", "");
+		AddNpc(80, 154004, "", "VIVID_c_fedimian", -656.6904, 447.5573, 104.9233, 90, "", "", "");
+		AddNpc(81, 154004, "", "VIVID_c_fedimian", -746.3393, 451.6074, 194.4352, 90, "", "", "");
+		AddNpc(82, 154004, "", "VIVID_c_fedimian", -753.4398, 447.5573, 96.19404, 90, "", "", "");
+		AddNpc(83, 154004, "", "VIVID_c_fedimian", -840.8531, 483.1958, 213.8369, 90, "", "", "");
+		AddNpc(84, 154079, "", "VIVID_c_fedimian", -797.2424, 455.0968, 205.0385, 90, "", "", "");
+		AddNpc(85, 154004, "", "VIVID_c_fedimian", -790.0762, 451.6074, 196.4404, 180, "", "", "");
+		AddNpc(86, 40001, " ", "VIVID_c_fedimian", -879.0219, 513.8954, 256.0551, 189, "", "", "");
 		
 		// 
 		//-------------------------------------------------------------------------
-		AddNpc(12082, "", "VIVID_c_fedimian", -880.7521, 316.1089, 90, "EVENT_VIVID_FEDIMIAN_POTAL");
+		AddNpc(87, 12082, "", "VIVID_c_fedimian", -880.7521, 521.342, 316.1089, 90, "EVENT_VIVID_FEDIMIAN_POTAL", "", "");
+		AddNpc(89, 154079, "", "VIVID_c_fedimian", -23.37847, 478.5575, 276.1322, 90, "", "", "");
+		AddNpc(91, 154079, "", "VIVID_c_fedimian", -202.309, 486.7217, 611.9146, 90, "", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", -291.9403, 286.425, 90, "EVENT_VIVID_FEDIMIAN_WARP3");
+		AddNpc(92, 153156, "Teleportation Device", "VIVID_c_fedimian", -291.9403, 482.1858, 286.425, 90, "EVENT_VIVID_FEDIMIAN_WARP3", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", -414.6009, 207.7909, 90, "EVENT_VIVID_FEDIMIAN_WARP3");
+		AddNpc(93, 153156, "Teleportation Device", "VIVID_c_fedimian", -414.6009, 452.1994, 207.7909, 90, "EVENT_VIVID_FEDIMIAN_WARP3", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", -648.7213, 175.556, 90, "EVENT_VIVID_FEDIMIAN_WARP3");
+		AddNpc(94, 153156, "Teleportation Device", "VIVID_c_fedimian", -648.7213, 458.5006, 175.556, 90, "EVENT_VIVID_FEDIMIAN_WARP3", "", "");
+		AddNpc(96, 154079, "", "VIVID_c_fedimian", -303.039, 446.9499, 31.00689, 90, "", "", "");
+		AddNpc(97, 154004, "", "VIVID_c_fedimian", -292.4836, 439.7697, 53.44772, 190, "", "", "");
+		AddNpc(99, 12082, "", "VIVID_c_fedimian", 705.9624, 291.9613, 91.84003, 90, "", "", "");
+		AddNpc(100, 154079, "", "VIVID_c_fedimian", 603.9787, 522.8892, 719.9333, 90, "", "", "");
+		AddNpc(101, 154079, "", "VIVID_c_fedimian", 659.9518, 248.4446, 44.048, 75, "", "", "");
+		AddNpc(102, 154004, "", "VIVID_c_fedimian", 473.2415, 312.0162, 129.1311, 190, "", "", "");
+		AddNpc(103, 40001, " ", "VIVID_c_fedimian", 753.7122, 291.8288, 155.9891, 159, "", "", "");
+		AddNpc(104, 154004, "", "VIVID_c_fedimian", 783.1774, 291.8288, 239.2764, 90, "", "", "");
+		AddNpc(105, 154079, "", "VIVID_c_fedimian", 878.0754, 341.7264, 283.2876, 190, "", "", "");
 		
 		// Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151167, "Treasure Chest", "VIVID_c_fedimian", 798.2995, 371.3386, 90, "EVENT_VIVID_FEDIMIAN_BOX3");
+		AddNpc(106, 151167, "Treasure Chest", "VIVID_c_fedimian", 798.2995, 448.5507, 371.3386, 90, "EVENT_VIVID_FEDIMIAN_BOX3", "", "");
+		AddNpc(107, 154079, "", "VIVID_c_fedimian", 407.8967, 503.9069, 450.8475, 90, "", "", "");
+		AddNpc(108, 154004, "", "VIVID_c_fedimian", 415.6429, 498.1776, 480.9131, 190, "", "", "");
+		AddNpc(109, 154004, "", "VIVID_c_fedimian", 605.6755, 526.3961, 741.7462, 190, "", "", "");
+		AddNpc(110, 40001, " ", "VIVID_c_fedimian", 704.4142, 419.4419, 334.7902, 262, "", "", "");
+		AddNpc(111, 40001, " ", "VIVID_c_fedimian", 621.2347, 458.1757, 364.6437, 229, "", "", "");
+		AddNpc(112, 154004, "", "VIVID_c_fedimian", 562.9874, 482.2431, 436.5723, 90, "", "", "");
+		AddNpc(113, 154004, "", "VIVID_c_fedimian", 516.5345, 482.2431, 533.3279, 90, "", "", "");
+		AddNpc(114, 154004, "", "VIVID_c_fedimian", 434.7104, 482.2431, 614.7151, 90, "", "", "");
+		AddNpc(115, 154004, "", "VIVID_c_fedimian", 507.6318, 485.7542, 689.0887, 90, "", "", "");
+		AddNpc(116, 154004, "", "VIVID_c_fedimian", 430.8732, 482.2431, 750.6614, 90, "", "", "");
+		AddNpc(117, 154004, "", "VIVID_c_fedimian", 334.443, 489.9109, 737.8622, 90, "", "", "");
+		AddNpc(118, 154004, "", "VIVID_c_fedimian", 231.5307, 543.5883, 718.7682, 90, "", "", "");
+		AddNpc(119, 154004, "", "VIVID_c_fedimian", 144.3329, 543.5883, 688.7176, 90, "", "", "");
+		AddNpc(120, 154004, "", "VIVID_c_fedimian", 144.0342, 543.5883, 634.1501, 90, "", "", "");
+		AddNpc(121, 154004, "", "VIVID_c_fedimian", 90.13999, 543.5883, 689.2202, 90, "", "", "");
+		AddNpc(122, 154004, "", "VIVID_c_fedimian", 89.43858, 543.5883, 636.627, 90, "", "", "");
+		AddNpc(123, 154004, "", "VIVID_c_fedimian", -36.47811, 543.5883, 653.1822, 90, "", "", "");
+		AddNpc(128, 154079, "", "VIVID_c_fedimian", -267.7139, 818.9236, 521.4891, 196, "", "", "");
+		AddNpc(129, 40001, " ", "VIVID_c_fedimian", -79.06766, 818.9236, 649.9269, -85, "", "", "");
+		AddNpc(131, 154004, "", "VIVID_c_fedimian", 31.81636, 543.5883, 657.1202, 90, "", "", "");
+		AddNpc(132, 154079, "", "VIVID_c_fedimian", -129.3786, 818.9236, 674.8444, 100, "", "", "");
+		AddNpc(133, 154079, "", "VIVID_c_fedimian", -304.8285, 807.792, 476.5146, 196, "", "", "");
+		AddNpc(134, 154079, "", "VIVID_c_fedimian", -425.7686, 798.0674, 555.1169, 190, "", "", "");
 		
 		// Treasure Chest
 		//-------------------------------------------------------------------------
-		AddNpc(151166, "Treasure Chest", "VIVID_c_fedimian", -433.4216, 476.4886, 90, "EVENT_VIVID_FEDIMIAN_BOX4");
+		AddNpc(135, 151166, "Treasure Chest", "VIVID_c_fedimian", -433.4216, 796.6687, 476.4886, 90, "EVENT_VIVID_FEDIMIAN_BOX4", "", "");
+		AddNpc(136, 154004, "", "VIVID_c_fedimian", -405.3534, 804.6786, 569.818, 90, "", "", "");
+		AddNpc(138, 40001, " ", "VIVID_c_fedimian", -128.6759, 818.9236, 528.887, -76, "", "", "");
+		AddNpc(139, 40001, " ", "VIVID_c_fedimian", -235.3022, 818.9236, 509.2632, -75, "", "", "");
+		AddNpc(140, 40001, " ", "VIVID_c_fedimian", -91.87952, 818.9236, 614.7248, 5, "", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", 445.514, 541.4323, 90, "EVENT_VIVID_FEDIMIAN_WARP4");
+		AddNpc(141, 153156, "Teleportation Device", "VIVID_c_fedimian", 445.514, 482.2431, 541.4323, 90, "EVENT_VIVID_FEDIMIAN_WARP4", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", 383.423, 796.6361, 90, "EVENT_VIVID_FEDIMIAN_WARP4");
+		AddNpc(142, 153156, "Teleportation Device", "VIVID_c_fedimian", 383.423, 482.2431, 796.6361, 90, "EVENT_VIVID_FEDIMIAN_WARP4", "", "");
 		
 		// Teleportation Device
 		//-------------------------------------------------------------------------
-		AddNpc(153156, "Teleportation Device", "VIVID_c_fedimian", 43.34534, 556.7578, 90, "EVENT_VIVID_FEDIMIAN_WARP4");
+		AddNpc(143, 153156, "Teleportation Device", "VIVID_c_fedimian", 43.34534, 543.5764, 556.7578, 90, "EVENT_VIVID_FEDIMIAN_WARP4", "", "");
+		AddNpc(144, 154079, "", "VIVID_c_fedimian", -0.5047913, 524.5283, 436.0959, 90, "", "", "");
+		AddNpc(145, 154079, "", "VIVID_c_fedimian", 228.6149, 524.5283, 475.3705, 120, "", "", "");
+		AddNpc(146, 154079, "", "VIVID_c_fedimian", 148.6604, 238.7967, -143.8372, 190, "", "", "");
+		AddNpc(147, 156166, "OBB Wall", "VIVID_c_fedimian", 502.4231, 160.555, -152.9111, 180, "", "", "");
+		AddNpc(148, 156166, "OBB Wall", "VIVID_c_fedimian", 212.8149, 160.9587, -223.2527, 180, "", "", "");
+		AddNpc(149, 156166, "OBB Wall", "VIVID_c_fedimian", -186.3389, 160.555, -282.3572, 180, "", "", "");
+		AddNpc(150, 156166, "OBB Wall", "VIVID_c_fedimian", -474.277, 160.555, -391.646, 135, "", "", "");
+		AddNpc(151, 156166, "OBB Wall", "VIVID_c_fedimian", -177.4977, 353.3224, -66.46445, 180, "", "", "");
+		AddNpc(152, 156166, "OBB Wall", "VIVID_c_fedimian", 217.1652, 381.2529, -6.195102, 180, "", "", "");
+		AddNpc(153, 156166, "OBB Wall", "VIVID_c_fedimian", -319.9531, 466.9518, 135.1589, 180, "", "", "");
+		AddNpc(154, 156166, "OBB Wall", "VIVID_c_fedimian", -745.9622, 451.6074, 141.019, 90, "", "", "");
+		AddNpc(155, 156166, "OBB Wall", "VIVID_c_fedimian", 478.1457, 482.2431, 571.2983, 135, "", "", "");
+		AddNpc(156, 156166, "OBB Wall", "VIVID_c_fedimian", 390.4693, 482.2431, 746.7272, 180, "", "", "");
 	}
 }

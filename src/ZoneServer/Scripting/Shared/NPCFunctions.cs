@@ -24,7 +24,8 @@ namespace Melia.Zone.Scripting.Shared
 			var guild = (dialog.Npc as IGuildMember)?.Guild;
 			if (guild != null)
 			{
-				switch (await dialog.Select("@dicID_^*$ITEM_20150317_001680$*^*@*@dicID_^*$ITEM_20150317_001680$*^", "!@#$Remove#@!", "!@#$Close#@!"))
+				var selection = await dialog.Select("@dicID_^*$ITEM_20150317_001680$*^*@*@dicID_^*$ITEM_20150317_001680$*^", "!@#$Remove#@!", "!@#$Close#@!");
+				switch (selection)
 				{
 					case 1:
 						switch (await dialog.Select("@dicID_^*$ITEM_20150317_001680$*^*@*@dicID_^*$ETC_20151224_019663$*^", "!@#$Remove#@!", "!@#$No#@!"))
@@ -32,8 +33,6 @@ namespace Melia.Zone.Scripting.Shared
 							default:
 								break;
 						}
-						break;
-					default:
 						break;
 				}
 			}

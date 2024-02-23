@@ -137,6 +137,29 @@ namespace Melia.Zone.Commands
 		/// <returns></returns>
 		private CommandResult HandleTest(Character sender, Character target, string message, string command, Arguments args)
 		{
+			if (args.Count > 0)
+			{
+				Log.Debug("Testing {0}", args.Get(0));
+				switch (args.Get(0))
+				{
+					case "e":
+						var equipSlot = EquipSlot.RightHand;
+						var str = "3";
+						var b2 = (byte)1;
+						if (args.Count > 1)
+						{
+							byte.TryParse(args.Get(1), out var b0);
+							equipSlot = (EquipSlot)b0;
+						}
+						if (args.Count > 2)
+							str = args.Get(2);
+						if (args.Count > 3)
+							byte.TryParse(args.Get(3), out b2);
+
+						Send.ZC_NORMAL.PlayEquipItem(sender, equipSlot, str, b2 == 1);
+						break;
+				}
+			}
 			return CommandResult.Okay;
 		}
 

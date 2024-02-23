@@ -190,9 +190,10 @@ namespace Melia.Web
 
 				Log.Info("Successfully connected to coordinator.");
 			}
-			catch
+			catch (Exception ex)
 			{
 				Log.Error("Failed to connect to coordinator, trying again in 5 seconds...");
+				Log.Error(ex.Message);
 				Thread.Sleep(5000);
 
 				this.ConnectToCoordinator();

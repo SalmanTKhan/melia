@@ -72,6 +72,9 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// </summary>
 		public DateTime DisappearTime { get; set; } = DateTime.MaxValue;
 
+		/// <summary>
+		/// Raised when a monster in name is removed from the map.
+		/// </summary>
 		public Action OnDisappear { get; set; }
 
 		/// <summary>
