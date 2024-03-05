@@ -7,6 +7,10 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>..\..\user\tmp\build\scripts\zone\bin\</OutputPath>
     <IntermediateOutputPath>..\..\user\tmp\build\\scripts\zone\obj\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\..\user\tmp\build\scripts\zone\obj\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>..\..\cache\scripts\zone\bin\</OutputPath>

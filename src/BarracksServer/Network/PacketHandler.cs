@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Melia.Barracks.Database;
+using Melia.Barracks.Events;
 using Melia.Shared.Data.Database;
 using Melia.Shared.Database;
 using Melia.Shared.L10N;
@@ -96,6 +97,8 @@ namespace Melia.Barracks.Network
 			Log.Info("User '{0}' logged in.", conn.Account.Name);
 
 			Send.BC_LOGINOK(conn);
+
+			BarracksServer.Instance.ServerEvents.OnUserLoggedIn(conn);
 		}
 
 		/// <summary>
@@ -124,6 +127,8 @@ namespace Melia.Barracks.Network
 			// Client closes connection without this as well, but it waits a
 			// few seconds to do so.
 			Send.BC_LOGOUTOK(conn);
+
+			BarracksServer.Instance.ServerEvents.OnUserLoggedOut(conn);
 		}
 
 		/// <summary>
@@ -161,6 +166,8 @@ namespace Melia.Barracks.Network
 			// to the client
 			//conn.Account.Properties.String("foobar").Value = "print('Hello, World!')";
 			//Send.BC_ACCOUNT_PROP(conn, conn.Account);
+
+			BarracksServer.Instance.ServerEvents.OnUserEntered(conn);
 		}
 
 		/// <summary>
@@ -358,10 +365,14 @@ namespace Melia.Barracks.Network
 			//character.SprByJob = jobData.Spr;
 			//character.DexByJob = jobData.Dex;
 
+			BarracksServer.Instance.ServerEvents.OnCreatingCharacter(new CharacterEventArgs(conn, character));
+
 			conn.Account.CreateCharacter(character);
 
 			Send.BC_COMMANDER_CREATE_SLOTID(conn, character);
 			Send.BC_COMMANDER_CREATE(conn, character);
+
+			BarracksServer.Instance.ServerEvents.OnCharacterCreated(new CharacterEventArgs(conn, character));
 		}
 
 		/// <summary>
@@ -393,6 +404,8 @@ namespace Melia.Barracks.Network
 
 			Send.BC_COMMANDER_DESTROY(conn, character.Index);
 			Send.BC_NORMAL.TeamUI(conn);
+
+			BarracksServer.Instance.ServerEvents.OnCharacterRemoved(new CharacterEventArgs(conn, character));
 		}
 
 		/// <summary>

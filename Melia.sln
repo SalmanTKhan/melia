@@ -32,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Tools", "5 Tools", "{D4B9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lada", "tools\Lada\Lada.csproj", "{9CF4A2A5-0478-442E-B45E-7CA2B563E5F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptsBarracks", "system\scripts\ScriptsBarracks.csproj", "{7E0A52FC-C111-40F3-BB97-4B286BC1F8DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{9CF4A2A5-0478-442E-B45E-7CA2B563E5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CF4A2A5-0478-442E-B45E-7CA2B563E5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CF4A2A5-0478-442E-B45E-7CA2B563E5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0A52FC-C111-40F3-BB97-4B286BC1F8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E0A52FC-C111-40F3-BB97-4B286BC1F8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E0A52FC-C111-40F3-BB97-4B286BC1F8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E0A52FC-C111-40F3-BB97-4B286BC1F8DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{B3856739-7B3F-4F5E-9B36-BC8C8920D03B} = {4827E608-0822-47B0-9A94-A91702B1D220}
 		{D20F855B-5EFE-4F28-A8D3-C19A966946BE} = {0CF0FAE6-D898-4BB8-AC5F-F912D420E04D}
 		{9CF4A2A5-0478-442E-B45E-7CA2B563E5F8} = {D4B9EC9F-A0DE-434E-887F-91A0DEA66EF1}
+		{7E0A52FC-C111-40F3-BB97-4B286BC1F8DA} = {35E8C024-37C9-4EFB-AC93-D72B00F41D48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D172B2A8-8AB6-4A70-B599-83BF3F349384}
