@@ -252,7 +252,7 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// <exception cref="InvalidOperationException">
 		/// Thrown if the buff doesn't have a handler.
 		/// </exception>
-		public Buff Start(string buffClassName, float numArg1, float numArg2, TimeSpan duration)
+		public Buff Start(string buffClassName, float numArg1, float numArg2, TimeSpan duration, ICombatEntity caster)
 		{
 			if (!ZoneServer.Instance.Data.BuffDb.TryFind(a => a.ClassName == buffClassName, out var buffData))
 				throw new ArgumentException($"Buff with class name '{buffClassName}' not found.");
@@ -264,7 +264,7 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 			if (!ZoneServer.Instance.BuffHandlers.Has(buffData.Id))
 				throw new BuffNotImplementedException(buffData.Id);
 
-			return this.Start(buffData.Id, numArg1, numArg2, duration, null);
+			return this.Start(buffData.Id, numArg1, numArg2, duration, caster);
 		}
 
 		/// <summary>
@@ -315,11 +315,12 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// <summary>
 		/// Stops the buff with the given id.
 		/// </summary>
-		/// <param name="buffId"></param>
-		public void Stop(BuffId buffId)
+		/// <param name="buffIds"></param>
+		public void Stop(params BuffId[] buffIds)
 		{
-			if (this.TryGet(buffId, out var buff))
-				this.Remove(buff);
+			foreach (var buffId in buffIds)
+				if (this.TryGet(buffId, out var buff))
+					this.Remove(buff);
 		}
 
 		/// <summary>

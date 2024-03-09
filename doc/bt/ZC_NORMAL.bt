@@ -25,6 +25,7 @@
 //				Updated 0xDB, 0x135 -> 0x136
 //   - i367254: Added 0x5A, 0x88, 0x1BD
 //   - i370844: Looks like a shift 0x1BC -> 0x1BF (2 or 3 Bytes)
+//   - i383368: Added 0x1CE
 //------------------------------------------------
 
 #include "inc/common.bt"
@@ -204,8 +205,15 @@ switch (type)
     {
         typedef struct
         {
-            int itemId;
-            int equipSlot; // 0
+            int itemId; // 
+            int equipSlot; // 2
+            byte visible;
+            int hairIndex; // 483
+            if (i2 > 0)
+            {
+                int itemId;
+                int i3;
+            }
         } EquipInfo <optimize=false>;
         
         int handle; // 80148
@@ -213,8 +221,6 @@ switch (type)
         short s1; // 1
         int count;
         EquipInfo equip[count];
-        int i1;
-        byte b2;
         break;
     }
     
@@ -2113,5 +2119,23 @@ switch (type)
         lpString str1; // bip01
         lpString str2; // None
         int i2; // 0
+        break;
+        
+    case 0x1CE:
+        int handle;
+        position pos; // X: 38.213612, Y: 18.892786, Z: -5.276674
+        int i1; // 1366
+        float f2; // 0.5
+        float f3; // 225
+        float f4; // -50
+        float f5; // 225
+        byte bin[20]; // 0s
+        position pos2;
+        float f6; // 0
+        float f7; // 2
+        int64 l1; // 0
+        float f8; // 1
+        int64 l2; // 0
+        lpString str; // None
         break;
 }

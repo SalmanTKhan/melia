@@ -330,21 +330,6 @@ namespace Melia.Shared.Database
 				cmd.AddParameter("@accountId", accountId);
 				cmd.Set("loginState", (int)state);
 				cmd.Set("loginCharacter", characterDbId);
-
-				cmd.Execute();
-			}
-		}
-
-		/// <summary>
-		/// Updates the last login time for the account.
-		/// </summary>
-		/// <param name="accountId"></param>
-		public void UpdateLastLogin(long accountId)
-		{
-			using (var conn = this.GetConnection())
-			using (var cmd = new UpdateCommand("UPDATE `accounts` SET {0} WHERE `accountId` = @accountId", conn))
-			{
-				cmd.AddParameter("@accountId", accountId);
 				cmd.Set("lastLogin", DateTime.Now);
 
 				cmd.Execute();

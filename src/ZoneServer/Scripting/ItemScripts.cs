@@ -1,4 +1,5 @@
-﻿using Melia.Zone.World.Actors.Characters;
+﻿using Melia.Shared.Tos.Const;
+using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Items;
 
 namespace Melia.Zone.Scripting
@@ -35,17 +36,15 @@ namespace Melia.Zone.Scripting
 		Fail,
 	}
 
+
 	/// <summary>
 	/// A function that handles the equipping of an item.
 	/// </summary>
 	/// <param name="character">The character who equipped the item.</param>
 	/// <param name="item">The item that is being equipped.</param>
-	/// <param name="strArg">String argument, as defined in the item data.</param>
-	/// <param name="strArg2">String argument, as defined in the item data.</param>
-	/// <param name="numArg1">First number argument, as defined in the item data.</param>
-	/// <param name="numArg2">Second number argument, as defined in the item data.</param>
+	/// <param name="slot">The slot in which the item is being equipped.</param>
 	/// <returns></returns>
-	public delegate ItemEquipResult ItemEquipScriptFunc(Character character, Item item, string strArg, string strArg2, float numArg1, float numArg2);
+	public delegate ItemEquipResult ItemEquipScriptFunc(Character character, Item item, EquipSlot slot);
 
 	public enum ItemEquipResult
 	{
@@ -65,11 +64,9 @@ namespace Melia.Zone.Scripting
 	/// </summary>
 	/// <param name="character">The character who used the item.</param>
 	/// <param name="item">The item that is being unequipped.</param>
-	/// <param name="strArg">String argument, as defined in the item data.</param>
-	/// <param name="numArg1">First number argument, as defined in the item data.</param>
-	/// <param name="numArg2">Second number argument, as defined in the item data.</param>
+	/// <param name="slot">The slot in which the item is being equipped.</param>
 	/// <returns></returns>
-	public delegate ItemUnequipResult ItemUnequipScriptFunc(Character character, Item item, string strArg, string strArg2, float numArg1, float numArg2);
+	public delegate ItemUnequipResult ItemUnequipScriptFunc(Character character, Item item, EquipSlot slot);
 
 	public enum ItemUnequipResult
 	{

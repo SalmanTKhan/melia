@@ -43,6 +43,7 @@ namespace Melia.Zone.Scripting
 		public static readonly DelegateCollection<CustomCommandScriptFunc> CustomCommand = new DelegateCollection<CustomCommandScriptFunc>();
 		public static readonly DelegateCollection<AbilityUnlockFunc> AbilityUnlock = new DelegateCollection<AbilityUnlockFunc>();
 		public static readonly DelegateCollection<AbilityPriceFunc> AbilityPrice = new DelegateCollection<AbilityPriceFunc>();
+		public static readonly DelegateCollection<MapScriptFunc> Map = new DelegateCollection<MapScriptFunc>();
 
 		/// <summary>
 		/// Sets up delegate collections.
@@ -187,11 +188,17 @@ namespace Melia.Zone.Scripting
 	/// </summary>
 	/// <param name="character"></param>
 	/// <param name="abilityData"></param>
-	/// <param name="abilityTreeData"></param>
 	/// <param name="abilityLevel"></param>
 	/// <param name="maxLevel"></param>
 	/// <param name="price"></param>
 	/// <param name="time"></param>
 	/// <returns></returns>
 	public delegate void AbilityPriceFunc(Character character, AbilityData abilityData, int abilityLevel, int maxLevel, out int price, out int time);
+
+
+	/// <summary>
+	/// A function that handles map specific behaviors.
+	/// </summary>
+	/// <param name="character"></param>
+	public delegate void MapScriptFunc(Character character);
 }

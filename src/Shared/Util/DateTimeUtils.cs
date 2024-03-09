@@ -7,6 +7,17 @@ namespace Melia.Shared.Util
 	{
 		public static string ToSDateTimeNow => DateTime.Now.ToSDateTime();
 		public static string ToSPropertyDTNow => DateTime.Now.ToSPropertyDateTime();
+
+		/// <summary>
+		/// Converts a string in DateTime format (yyyy-MM-dd HH:mm:ss)
+		/// to a DateTime.
+		/// </summary>
+		/// <param name="dateString"></param>
+		/// <param name="dateTime"></param>
+		/// <returns></returns>
+		public static bool TryGetDateTime(this string dateString, out DateTime dateTime)
+			=> DateTime.TryParseExact(dateString, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime);
+
 		/// <summary>
 		/// Returns date time in a year(yyyy), month(MM), date (dd),
 		/// day of week(0-6), hour (HH), minutes (mm) and seconds (ss)

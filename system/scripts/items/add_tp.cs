@@ -12,7 +12,16 @@ using Melia.Zone.World.Items;
 
 public class AddTpItemScript : GeneralScript
 {
-	[ScriptableFunction("SCR_USE_ITEM_ADD_TP")]
+	[ScriptableFunction]
+	public ItemUseResult SCR_USE_ITEM_ADD_MEDAL(Character character, Item item, string strArg, float numArg1, float numArg2)
+	{
+		character.PlayEffect("F_sys_TPBOX_open", 2.5f, 1, "BOT", 1);
+		character.ModifyAccountProperty(PropertyName.PremiumMedal, 1);
+
+		return ItemUseResult.Okay;
+	}
+
+	[ScriptableFunction]
 	public ItemUseResult SCR_USE_ITEM_ADD_TP(Character character, Item item, string strArg, float tpAmount, float numArg2)
 	{
 		if (tpAmount < 31)
@@ -27,7 +36,7 @@ public class AddTpItemScript : GeneralScript
 		return ItemUseResult.Okay;
 	}
 
-	[ScriptableFunction("SCR_USE_ITEM_ADD_GIFTTP")]
+	[ScriptableFunction]
 	public ItemUseResult SCR_USE_ITEM_ADD_GIFTTP(Character character, Item item, string strArg, float tpAmount, float numArg2)
 	{
 		if (tpAmount < 31)

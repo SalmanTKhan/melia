@@ -495,6 +495,11 @@
 		/// StrArg: 2023-12-22 06:00:00;2023-12-23 00:00:00;High_Enchantchip_low_box1000_black;12000000;0;0;4
 		/// </summary>
 		public const string UPDATE_BLACK_MARKET_ITEM = "UPDATE_BLACK_MARKET_ITEM";
+
+		/// <summary>
+		/// Update hair color change.
+		/// </summary>
+		public const string HAIR_COLOR_CHANGE = "HAIR_COLOR_CHANGE";
 	}
 
 	/// <summary>
@@ -721,6 +726,11 @@
 		/// Update "Follower" List
 		/// </summary>
 		public const string UPDATE_PC_FOLLOWER_LIST = @"UPDATE_PC_FOLLOWER_LIST("")";
+
+		/// <summary>
+		/// Open Mercenary Badge Shop
+		/// </summary>
+		public const string REQ_PVP_MINE_SHOP_OPEN = "REQ_PVP_MINE_SHOP_OPEN()";
 	}
 
 	public static class CustomDialog

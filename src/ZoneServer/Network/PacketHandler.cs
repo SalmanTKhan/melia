@@ -114,7 +114,6 @@ namespace Melia.Zone.Network
 
 			ZoneServer.Instance.Database.SaveSessionKey(character.DbId, conn.SessionKey);
 			ZoneServer.Instance.Database.UpdateLoginState(conn.Account.Id, character.DbId, LoginState.Zone);
-			ZoneServer.Instance.Database.UpdateLastLogin(conn.Account.Id);
 
 			Send.ZC_CONNECT_OK(conn, character);
 		}
@@ -2168,11 +2167,8 @@ namespace Melia.Zone.Network
 				}
 
 				// Remove consumeable items on success
-				if (item.Data.Type == ItemType.Consume)
-				{
-					if (result != ItemUseResult.OkayNotConsumed)
-						character.Inventory.Remove(item, 1, InventoryItemRemoveMsg.Used);
-				}
+				if (item.Data.Type == ItemType.Consume && result != ItemUseResult.OkayNotConsumed)
+					character.Inventory.Remove(item, 1, InventoryItemRemoveMsg.Used);
 
 				if (item.Data.HasCooldown && item.CooldownData != null)
 					character.StartCooldown(item.CooldownData.Id, item.CooldownData.OverheatResetTime);
@@ -2200,25 +2196,7 @@ namespace Melia.Zone.Network
 		public void CZ_LOAD_COMPLETE(IZoneConnection conn, Packet packet)
 		{
 			var character = conn.SelectedCharacter;
-			var house = conn.ActiveHouse;
 
-			if (character.Map.Id >= 7000 && character.Map.Id <= 7002)
-			{
-				if (house != null)
-				{
-					Send.ZC_SET_LAYER(character, Map.DefaultLayer, false);
-					character.AddonMessage(AddonMessage.SET_PERSONAL_HOUSE_NAME, house.Name);
-					character.AddonMessage(AddonMessage.ENTER_PERSONAL_HOUSE, house.IsOwner(character) ? "YES" : "NO");
-					character.AddonMessage(AddonMessage.HOUSINGCRAFT_UPDATE_ENDTIME);
-				}
-				else
-				{
-					var lastMapId = (int)character.Properties.GetFloat(PropertyName.LastWarpMapID, 1001);
-
-					if (ZoneServer.Instance.World.Maps.TryGet(lastMapId, out var map) && map.Ground.TryGetRandomPosition(out var rndPos))
-						character.Warp(map.Id, rndPos);
-				}
-			}
 			Send.ZC_LOAD_COMPLETE(conn);
 			character.AddonMessage(AddonMessage.RECEIVE_SERVER_NATION);
 			foreach (var quest in character.Quests.GetList())
@@ -2758,6 +2736,8 @@ namespace Melia.Zone.Network
 				}
 			}
 			var character = conn.SelectedCharacter;
+			//
+			//Send.ZC_NORMAL.Unknown_0D();
 			//Send.ZC_RES_BEAUTYSHOP_PURCHASED_HAIR_LIST(character);
 		}
 
@@ -4189,6 +4169,11 @@ namespace Melia.Zone.Network
 			}
 		}
 
+		/// <summary>
+		/// Visit Barrack
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="packet"></param>
 		[PacketHandler(Op.CZ_VISIT_BARRACK)]
 		public void CZ_VISIT_BARRACK(IZoneConnection conn, Packet packet)
 		{
@@ -4202,6 +4187,25 @@ namespace Melia.Zone.Network
 			}
 			Send.ZC_SAVE_INFO(conn);
 			Send.ZC_MOVE_BARRACK(conn);
+		}
+
+		/// <summary>
+		/// Change hair dye
+		/// </summary>
+		/// <param name="conn"></param>
+		/// <param name="packet"></param>
+		[PacketHandler(Op.CZ_CHANGE_HEAD)]
+		public void CZ_CHANGE_HEAD(IZoneConnection conn, Packet packet)
+		{
+			var newHairColor = packet.GetString();
+			var character = conn.SelectedCharacter;
+
+			if (ZoneServer.Instance.Data.HairTypeDb.TryFind(character.Hair, out var currentHair))
+			{
+				var newHair = ZoneServer.Instance.Data.HairTypeDb.Find(a => a.ClassName == currentHair.ClassName && a.Color == newHairColor);
+				if (newHair != null)
+					character.ChangeHair(newHair.Index);
+			}
 		}
 
 		/// <summary>

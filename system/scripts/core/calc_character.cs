@@ -157,7 +157,7 @@ public class CharacterCalculationsScript : GeneralScript
 	{
 		var properties = character.Properties;
 
-		var byStat = properties.GetFloat(PropertyName.ALLSTAT);
+		var byStat = properties.GetFloat(PropertyName.ALLSTAT_STAT);
 		var byAdd = properties.GetFloat(PropertyName.ALLSTAT_ADD);
 
 		var result = byStat + byAdd;

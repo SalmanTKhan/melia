@@ -50,6 +50,7 @@
 			public const int Skill_MissileThrow = 0x06;
 			public const int SkillFallingProjectile = 0x07;
 			public const int Skill_ItemToss = 0x09;
+			public const int UpdateCharacterLook = 0x0D;
 			public const int PlayEquipItem = 0x0E;
 			public const int PlayEffectAtPosition = 0x0F;
 			/// <summary>

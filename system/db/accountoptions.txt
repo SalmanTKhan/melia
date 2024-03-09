@@ -157,9 +157,4 @@
 { id: 163, name: "PopupPickItem", defaultValue: 1 },
 { id: 164, name: "PickItemMessage", defaultValue: 1 },
 { id: 165, name: "RelicAutoCharge", defaultValue: 0 },
-{ id: 166, name: "InvOption_Equip_Goddess", defaultValue: 1 },
-{ id: 167, name: "InvOption_Gem_Cyan", defaultValue: 1 },
-{ id: 168, name: "InvOption_Gem_Magenta", defaultValue: 1 },
-{ id: 169, name: "InvOption_Gem_Black", defaultValue: 1 },
-{ id: 170, name: "InvOption_Gem_Aether", defaultValue: 1 },
 ]

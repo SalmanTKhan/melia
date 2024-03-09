@@ -273,7 +273,7 @@ namespace Melia.Zone.Network
 
 			// [i381490 (2023-12-XX)]
 			// The new byte should be either this or the previous one.
-			packet.PutByte(0);
+			// packet.PutByte(0); [Removed 2024-03-07]
 
 			conn.Send(packet);
 		}
@@ -2836,7 +2836,7 @@ namespace Melia.Zone.Network
 		{
 			var packet = new Packet(Op.ZC_PC_PROP_UPDATE);
 
-			packet.PutShort(property);
+			packet.PutInt(property);
 			packet.PutByte(value); // ?
 
 			character.Connection.Send(packet);
@@ -3699,7 +3699,7 @@ namespace Melia.Zone.Network
 		/// <summary>
 		/// Sends ZC_SET_CHATBALLOON_SKIN to visible players on the map.
 		/// </summary>
-		/// <param name="conn"></param>
+		/// <param name="character"></param>
 		public static void ZC_SET_CHATBALLOON_SKIN(Character character)
 		{
 			var packet = new Packet(Op.ZC_SET_CHATBALLOON_SKIN);

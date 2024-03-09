@@ -19,6 +19,17 @@ namespace Melia.Shared.ObjectProperties
 		public string Namespace { get; }
 
 		/// <summary>
+		/// Returns a property
+		/// </summary>
+		/// <param name="propertyName"></param>
+		/// <returns></returns>
+		public float this[string propertyName]
+		{
+			get { return this.GetFloat(propertyName); }
+			set { this.SetFloat(propertyName, value); }
+		}
+
+		/// <summary>
 		/// Creates new property collection with the given namespace.
 		/// </summary>
 		/// <param name="namespaceName">Namespace of the collection, controlling which properties can be added to it.</param>
@@ -312,7 +323,7 @@ namespace Melia.Shared.ObjectProperties
 		/// </remarks>
 		/// <param name="parentPropertyName"></param>
 		/// <param name="dependencyPropertyNames"></param>
-		public void AutoUpdate(string parentPropertyName, string[] dependencyPropertyNames)
+		public void AutoUpdate(string parentPropertyName, params string[] dependencyPropertyNames)
 		{
 			if (dependencyPropertyNames == null || dependencyPropertyNames.Length == 0)
 				throw new ArgumentException($"No dependencies defined.");

@@ -384,9 +384,6 @@ namespace Melia.Zone.World.Items
 			Send.ZC_OBJECT_PROPERTY(character.Connection, this);
 		}
 
-		public bool IsLegendGroupItem
-			=> this.Properties.GetString("LegendGroup", "None") != "None";
-
 		/// <summary>
 		/// Generate random options on an item.
 		/// </summary>

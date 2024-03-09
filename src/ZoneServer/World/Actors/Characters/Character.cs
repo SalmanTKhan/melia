@@ -1791,5 +1791,29 @@ namespace Melia.Zone.World.Actors.Characters
 		{
 			Send.ZC_ENABLE_CONTROL(this.Connection, controlScript, enabled);
 		}
+
+		/// <summary>
+		/// Parse items and add them to character's inventory
+		/// </summary>
+		/// <param name="itemAsString"></param>
+		/// <param name="amount"></param>
+		public void AddItems(string itemAsString, int amount = 1)
+		{
+			foreach (var itemString in itemAsString.Split(';'))
+			{
+				if (itemString.Length == 0)
+				{
+					continue;
+				}
+				var itemSplit = itemString.Split('/');
+				var itemClassName = itemSplit[0];
+				var itemData = ZoneServer.Instance.Data.ItemDb.FindByClass(itemClassName);
+				if (string.IsNullOrWhiteSpace(itemClassName))
+					continue;
+				if (itemSplit.Length > 1)
+					int.TryParse(itemSplit[1], out amount);
+				this.Inventory.Add(itemData.Id, amount, InventoryAddType.New);
+			}
+		}
 	}
 }

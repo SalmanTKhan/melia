@@ -15,7 +15,7 @@ using Melia.Zone.World.Items;
 
 public class CertificateCoinItemScript : GeneralScript
 {
-	[ScriptableFunction("SCR_USE_ITEM_CERTIFICATE_COIN")]
+	[ScriptableFunction]
 	public ItemUseResult SCR_USE_ITEM_CERTIFICATE_COIN(Character character, Item item, string propertyName, float coinAmount, float numArg2)
 	{
 		character.ModifyAccountProperty(propertyName, coinAmount);
@@ -24,7 +24,7 @@ public class CertificateCoinItemScript : GeneralScript
 		return ItemUseResult.Okay;
 	}
 
-	[ScriptableFunction("SCR_USE_MISC_PVP_MINE2")]
+	[ScriptableFunction]
 	public ItemUseResult SCR_USE_MISC_PVP_MINE2(Character character, Item item, string propertyName, float numArg1, float numArg2)
 	{
 		var previousValue = character.Connection.Account.Properties.GetFloat(PropertyName.MISC_PVP_MINE2);

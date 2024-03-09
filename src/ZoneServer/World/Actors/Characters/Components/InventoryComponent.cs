@@ -547,7 +547,7 @@ namespace Melia.Zone.World.Actors.Characters.Components
 			// Unequip existing item first.
 			var collision = false;
 			lock (_syncLock)
-				collision = !(_equip[slot] is DummyEquipItem);
+				collision = _equip[slot] is not DummyEquipItem;
 
 			if (collision)
 				this.Unequip(slot);
@@ -574,8 +574,9 @@ namespace Melia.Zone.World.Actors.Characters.Components
 			// Try to execute script
 			var script = item.Data.Script;
 
-			if (ScriptableFunctions.Equip.TryGet("SCP_ON_EQUIP_ITEM_" + item.Data.ClassName, out var scriptFunc))
-				scriptFunc(this.Character, item, script.StrArg, script.StrArg2, script.NumArg1, script.NumArg2);
+			if (string.IsNullOrEmpty(script.Function) && !string.IsNullOrEmpty(script.StrArg)
+				&& ScriptableFunctions.Equip.TryGet("SCP_ON_EQUIP_ITEM", out var scriptFunc))
+				scriptFunc(this.Character, item, slot);
 
 			if (!string.IsNullOrEmpty(item.Data.EquipSkill) && ScriptableFunctions.Equip.TryGet("SCP_ON_EQUIP_ITEM_SKILL", out scriptFunc))
 			{
@@ -587,7 +588,7 @@ namespace Melia.Zone.World.Actors.Characters.Components
 					};
 					item.Data.Script = script;
 				}
-				scriptFunc(this.Character, item, script.StrArg, item.Data.EquipSkill, script.NumArg1, script.NumArg2);
+				scriptFunc(this.Character, item, slot);
 			}
 
 			return InventoryResult.Success;
@@ -620,8 +621,9 @@ namespace Melia.Zone.World.Actors.Characters.Components
 			// Try to execute script
 			var script = item.Data.Script;
 
-			if (ScriptableFunctions.Unequip.TryGet("SCP_ON_UNEQUIP_ITEM_" + item.Data.ClassName, out var scriptFunc))
-				scriptFunc(this.Character, item, script.StrArg, script.StrArg2, script.NumArg1, script.NumArg2);
+			if (string.IsNullOrEmpty(script.Function) && !string.IsNullOrEmpty(script.StrArg)
+			&& ScriptableFunctions.Unequip.TryGet("SCP_ON_UNEQUIP_ITEM", out var scriptFunc))
+				scriptFunc(this.Character, item, slot);
 
 			if (!string.IsNullOrEmpty(item.Data.EquipSkill) && ScriptableFunctions.Unequip.TryGet("SCP_ON_UNEQUIP_ITEM_SKILL", out scriptFunc))
 			{
@@ -633,7 +635,7 @@ namespace Melia.Zone.World.Actors.Characters.Components
 					};
 					item.Data.Script = script;
 				}
-				scriptFunc(this.Character, item, script.StrArg, item.Data.EquipSkill, script.NumArg1, script.NumArg2);
+				scriptFunc(this.Character, item, slot);
 			}
 
 			return InventoryResult.Success;

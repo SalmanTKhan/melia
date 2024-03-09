@@ -272,7 +272,7 @@ namespace Melia.Zone.World.Maps
 			}
 
 			ZoneServer.Instance.UpdateServerInfo();
-			ZoneServer.Instance.ServerEvents.OnPlayerEntersMap(character);
+			ZoneServer.Instance.ServerEvents.OnPlayerEnteredMap(character);
 			PlayerEnters?.Invoke(character);
 		}
 
@@ -293,6 +293,7 @@ namespace Melia.Zone.World.Maps
 				this.RemoveMonster(monster);
 			}
 
+			ZoneServer.Instance.ServerEvents.OnPlayerLeftMap(character);
 			character.Map = null;
 
 			ZoneServer.Instance.UpdateServerInfo();

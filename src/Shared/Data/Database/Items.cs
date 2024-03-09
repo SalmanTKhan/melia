@@ -19,8 +19,11 @@ namespace Melia.Shared.Data.Database
 		public ItemGroup Group { get; set; }
 		public InventoryCategory Category { get; set; }
 
+		[Property(PropertyName.Weight)]
 		public float Weight { get; set; }
+		[Property(PropertyName.MaxStack)]
 		public int MaxStack { get; set; }
+		[Property(PropertyName.Price)]
 		public int Price { get; set; }
 		[Property(PropertyName.SellPrice)]
 		public int SellPrice { get; set; }
@@ -206,17 +209,27 @@ namespace Melia.Shared.Data.Database
 		public float AddHoly { get; set; }
 		[Property(PropertyName.ADD_DARK)]
 		public float AddDark { get; set; }
+		[Property(PropertyName.ADD_BOSS_ATK)]
+		public float AddBossAtk { get; set; }
+		[Property(PropertyName.BaseSocket)]
 		public float BaseSocket { get; set; }
+		[Property(PropertyName.MaxSocket_COUNT)]
 		public float MaxSocketCount { get; set; }
+		[Property(PropertyName.BaseSocket_MA)]
 		public float BaseSocketMa { get; set; }
+		[Property(PropertyName.MaxSocket_MA)]
 		public float MaxSocketMa { get; set; }
+		[Property(PropertyName.MinOption)]
 		public float MinOption { get; set; }
+		[Property(PropertyName.MaxOption)]
 		public float MaxOption { get; set; }
 		public float MinRDmg { get; set; }
 		public float MaxRDmg { get; set; }
 		public float FDMinR { get; set; }
 		public float FDMaxR { get; set; }
-		public float Lifetime { get; set; }
+		[Property(PropertyName.LifeTime)]
+		public float LifeTime { get; set; }
+		[Property(PropertyName.ItemLifeTimeOver)]
 		public float ItemLifeTimeOver { get; set; }
 		[Property(PropertyName.NeedAppraisal)]
 		public float NeedAppraisal { get; set; }
@@ -226,17 +239,26 @@ namespace Melia.Shared.Data.Database
 		public float IsAlwaysHatVisible { get; set; }
 		public float SkillWidthRange { get; set; }
 		public float DynamicLifeTime { get; set; }
-		public float AddBossAtk { get; set; }
 		public float TeamBelonging { get; set; }
+		[Property(PropertyName.Add_Damage_Atk)]
 		public float AddDamageAtk { get; set; }
-		public float MagicEarthAtk { get; set; }
-		public float ResaddDamage { get; set; }
+		[Property(PropertyName.ResAdd_Damage)]
+		public float ResAddDamage { get; set; }
+		[Property(PropertyName.JobGrade)]
 		public float JobGrade { get; set; }
+		[Property(PropertyName.Magic_Ice_Atk)]
 		public float MagicIceAtk { get; set; }
+		[Property(PropertyName.Magic_Earth_Atk)]
+		public float MagicEarthAtk { get; set; }
+		[Property(PropertyName.Magic_Soul_Atk)]
 		public float MagicSoulAtk { get; set; }
+		[Property(PropertyName.Magic_Dark_Atk)]
 		public float MagicDarkAtk { get; set; }
+		[Property(PropertyName.Magic_Melee_Atk)]
 		public float MagicMeleeAtk { get; set; }
+		[Property(PropertyName.Magic_Fire_Atk)]
 		public float MagicFireAtk { get; set; }
+		[Property(PropertyName.Magic_Lightning_Atk)]
 		public float MagicLightningAtk { get; set; }
 		public int Cooldown { get; set; }
 		public string CooldownGroup { get; set; }
@@ -376,8 +398,8 @@ namespace Melia.Shared.Data.Database
 			data.AddMAtk = entry.ReadFloat("addMAtk", 0);
 			data.Def = entry.ReadFloat("def", 0);
 			data.MDef = entry.ReadFloat("mDef", 0);
-			data.AddDef = entry.ReadFloat("addDef", 0);
-			data.AddMDef = entry.ReadFloat("addMDef", 0);
+			data.AddDef = entry.ReadFloat("defBonus", 0);
+			data.AddMDef = entry.ReadFloat("mDefBonus", 0);
 			data.SmallSizeBonus = entry.ReadFloat("smallSizeBonus", 0);
 			data.MediumSizeBonus = entry.ReadFloat("mediumSizeBonus", 0);
 			data.LargeSizeBonus = entry.ReadFloat("largeSizeBonus", 0);
@@ -435,7 +457,7 @@ namespace Melia.Shared.Data.Database
 			data.Msta = entry.ReadFloat("maxStamina", 0);
 			data.RHp = entry.ReadFloat("recoveryHp", 0);
 			data.RSp = entry.ReadFloat("recoverySp", 0);
-			data.RSptime = entry.ReadFloat("recoverySptime", 0);
+			data.RSptime = entry.ReadFloat("recoverySpTime", 0);
 			data.RSta = entry.ReadFloat("recoverySta", 0);
 			data.ClothBonus = entry.ReadFloat("clothDamageBonus", 0);
 			data.LeatherBonus = entry.ReadFloat("leatherDamageBonus", 0);
@@ -455,6 +477,7 @@ namespace Melia.Shared.Data.Database
 			data.AddSoul = entry.ReadFloat("soulDamageBonus", 0);
 			data.AddHoly = entry.ReadFloat("holyDamageBonus", 0);
 			data.AddDark = entry.ReadFloat("darkDamageBonus", 0);
+			data.AddBossAtk = entry.ReadFloat("bossBonusDamage", 0);
 			data.BaseSocket = entry.ReadFloat("maxSocketCount", 0);
 			data.MaxSocketCount = entry.ReadFloat("maxSocketCount", 0);
 			data.BaseSocketMa = entry.ReadFloat("baseSocketMagicAmulet", 0);
@@ -465,19 +488,18 @@ namespace Melia.Shared.Data.Database
 			data.MaxRDmg = entry.ReadFloat("maxRDmg", 0);
 			data.FDMinR = entry.ReadFloat("fdMinR", 0);
 			data.FDMaxR = entry.ReadFloat("fdMaxR", 0);
-			data.Lifetime = entry.ReadFloat("lifetime", 0);
-			data.ItemLifeTimeOver = entry.ReadFloat("itemlifetimeover", 0);
+			data.LifeTime = entry.ReadFloat("lifetime", 0);
+			data.ItemLifeTimeOver = entry.ReadFloat("itemLifeTimeOver", 0);
 			data.NeedAppraisal = entry.ReadFloat("needAppraisal", 0);
 			data.NeedRandomOption = entry.ReadFloat("needRandomOption", 0);
 			data.LootingChance = entry.ReadFloat("lootingchance", 0);
-			data.IsAlwaysHatVisible = entry.ReadFloat("isalwayshatvisible", 0);
+			data.IsAlwaysHatVisible = entry.ReadFloat("isAlwaysHatVisible", 0);
 			data.SkillWidthRange = entry.ReadFloat("skillWidthRange", 0);
 			data.DynamicLifeTime = entry.ReadFloat("dynamicLifeTime", 0);
-			data.AddBossAtk = entry.ReadFloat("addBossAtk", 0);
-			data.TeamBelonging = entry.ReadFloat("teambelonging", 0);
+			data.TeamBelonging = entry.ReadFloat("teamBelonging", 0);
 			data.AddDamageAtk = entry.ReadFloat("addDamageAtk", 0);
 			data.MagicEarthAtk = entry.ReadFloat("magicEarthAtk", 0);
-			data.ResaddDamage = entry.ReadFloat("resaddDamage", 0);
+			data.ResAddDamage = entry.ReadFloat("resAddDamage", 0);
 			data.JobGrade = entry.ReadFloat("jobGrade", 0);
 			data.MagicIceAtk = entry.ReadFloat("magicIceAtk", 0);
 			data.MagicSoulAtk = entry.ReadFloat("magicSoulAtk", 0);

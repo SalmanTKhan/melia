@@ -222,6 +222,13 @@ public class NormalTxFunctionsScript : GeneralScript
 		return NormalTxResult.Okay;
 	}
 
+	[ScriptableFunction]
+	public NormalTxResult SCR_PVP_MINE_SHOP_OPEN(Character character, int[] numArgs)
+	{
+		Send.ZC_EXEC_CLIENT_SCP(character.Connection, ClientScripts.REQ_PVP_MINE_SHOP_OPEN);
+		return NormalTxResult.Okay;
+	}
+
 	[ScriptableFunction("SCR_TX_TRADE_SELECT_ITEM")]
 	[ScriptableFunction("SCR_TX_TRADE_SELECT_ITEM_2")]
 	[ScriptableFunction("SCR_TX_TRADE_SELECT_ITEM_3")]

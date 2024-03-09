@@ -385,10 +385,40 @@ namespace Melia.Zone.Network
 			}
 
 			/// <summary>
+			/// Update's character's look and broadcasts it.
+			/// Used with hair costumes, pocket wigs, skintone changes
+			/// in beauty shop.
+			/// </summary>
+			/// <param name="actor"></param>
+			/// <param name="itemId"></param>
+			/// <param name="slot"></param>
+			/// <param name="isVisible"></param>
+			/// <param name="hairIndex"></param>
+			/// <param name="i2"></param>
+			public static void UpdateCharacterLook(IActor actor, int itemId, EquipSlot slot, bool isVisible = true, int hairIndex = 483, int i2 = 0)
+			{
+				var packet = new Packet(Op.ZC_NORMAL);
+				packet.PutInt(NormalOp.Zone.UpdateCharacterLook);
+
+				packet.PutInt(actor.Handle);
+				packet.PutByte(0);
+				packet.PutShort(1);
+				packet.PutInt(1);
+
+				packet.PutInt(itemId);
+				packet.PutInt((int)slot);
+				packet.PutByte(isVisible);
+				packet.PutInt(hairIndex);
+				packet.PutInt(i2);
+
+				actor.Map.Broadcast(packet);
+			}
+
+			/// <summary>
 			/// Show's companion food in player's hand.
 			/// </summary>
 			/// <param name="actor"></param>
-			/// <param name="b1"></param>
+			/// <param name="slot"></param>
 			/// <param name="animationId"></param>
 			/// <param name="isVisible"></param>
 			public static void PlayEquipItem(IActor actor, EquipSlot slot, string animationId, bool isVisible)

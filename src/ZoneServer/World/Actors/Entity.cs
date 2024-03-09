@@ -341,7 +341,7 @@ namespace Melia.Zone.World.Actors
 		/// </summary>
 		/// <param name="entity"></param>
 		/// <param name="buffId"></param>
-		public static void StopBuff(this ICombatEntity entity, BuffId buffId)
+		public static void StopBuff(this ICombatEntity entity, params BuffId[] buffId)
 			=> entity.Components.Get<BuffComponent>()?.Stop(buffId);
 
 		/// <summary>

@@ -328,13 +328,16 @@ namespace Melia.Zone
 				this.IesMods.Add("SkillTree", 10508, "MaxLevel", 5);
 				this.IesMods.Add("SkillTree", 10509, "MaxLevel", 5);
 			}
-			for (var i = 0; i < 26; i++)
-				this.IesMods.Add("Item", 648001 + i, "MarketCategory", "Misc_Usual");
 
-			foreach (var item in this.Data.ItemDb.Entries.Values)
+			// Magical Amulets are invisible by default, this makes them visible.
+			if (!Feature.IsEnabled("MagicalAmulet"))
 			{
-				this.IesMods.Add("Item", item.Id, "UserTrade", "YES");
+				for (var i = 0; i < 26; i++)
+					this.IesMods.Add("Item", 648001 + i, "MarketCategory", "Misc_Usual");
 			}
+
+			//foreach (var item in this.Data.ItemDb.Entries.Values)
+			//	this.IesMods.Add("Item", item.Id, "UserTrade", "YES");
 		}
 
 		/// <summary>

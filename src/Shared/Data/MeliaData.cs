@@ -33,12 +33,10 @@ namespace Melia.Shared.Data
 		public InstanceDungeonDb InstanceDungeonDb { get; } = new InstanceDungeonDb();
 		public InvBaseIdDb InvBaseIdDb { get; } = new InvBaseIdDb();
 		public ItemDb ItemDb { get; } = new ItemDb();
-		public ItemIconDb ItemIconDb { get; } = new ItemIconDb();
 		public ItemMonsterDb ItemMonsterDb { get; } = new ItemMonsterDb();
 		public JobDb JobDb { get; } = new JobDb();
 		public MapDb MapDb { get; } = new MapDb();
 		public MonsterDb MonsterDb { get; } = new MonsterDb();
-		public MonsterIconDb MonsterIconDb { get; } = new MonsterIconDb();
 		public NormalTxDb NormalTxDb { get; } = new NormalTxDb();
 		public PacketStringDb PacketStringDb { get; } = new PacketStringDb();
 		public PropertiesDb PropertiesDb { get; } = new PropertiesDb();
@@ -55,9 +53,6 @@ namespace Melia.Shared.Data
 		public SystemMessageDb SystemMessageDb { get; } = new SystemMessageDb();
 		public TradeShopDb TradeShopDb { get; }
 		public WarpDb WarpDb { get; } = new WarpDb();
-
-		public ItemIconDb ItemIconDb { get; } = new ItemIconDb();
-		public MonsterIconDb MonsterIconDb { get; } = new MonsterIconDb();
 
 		public MeliaData()
 		{

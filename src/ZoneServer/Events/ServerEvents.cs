@@ -139,17 +139,17 @@ namespace Melia.Zone.Events
 		/// </summary>
 		public event EventHandler<PlayerItemEventArgs> PlayerRemovedItem;
 		public void OnPlayerRemovedItem(Character character, int itemId, int amount) => PlayerRemovedItem?.Invoke(ZoneServer.Instance, new PlayerItemEventArgs(character, itemId, amount));
-		
+
 		/// Raised when a player enters a map.
 		/// </summary>
-		public event EventHandler<PlayerEventArgs> PlayerEntered;
-		public void OnPlayerEntersMap(Character character) => PlayerEntered?.Invoke(ZoneServer.Instance, new PlayerEventArgs(character));
+		public event EventHandler<PlayerEventArgs> PlayerEnteredMap;
+		public void OnPlayerEnteredMap(Character character) => PlayerEnteredMap?.Invoke(ZoneServer.Instance, new PlayerEventArgs(character));
 
 		/// <summary>
 		/// Raised when a player leaves a map.
 		/// </summary>
-		public event EventHandler<PlayerEventArgs> PlayerLeft;
-		public void OnPlayerLeft(Character character) => PlayerLeft?.Invoke(ZoneServer.Instance, new PlayerEventArgs(character));
+		public event EventHandler<PlayerEventArgs> PlayerLeftMap;
+		public void OnPlayerLeftMap(Character character) => PlayerLeftMap?.Invoke(ZoneServer.Instance, new PlayerEventArgs(character));
 
 		// Combat Events
 		//-------------------------------------------------------------------

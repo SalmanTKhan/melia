@@ -2183,10 +2183,12 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction]
 		public static async Task BEAUTY_SHOP_HAIR_M(Dialog dialog)
 		{
-			switch (await dialog.Select("BEAUTY_SHOP_HAIR_M1", "!@#$BEAUTY_SHOP_HAIR_M2#@!", "!@#$BEAUTY_SHOP_HAIR_M3#@!", "!@#$BEAUTY_SHOP_HAIR_M4#@!", "!@#$BEAUTY_SHOP_SKIN#@!", "!@#$BEAUTY_SHOP_HAIR_ETC#@!", "!@#$BEAUTY_SHOP_HAIR_COUPON#@!", "!@#$Close#@!"))
+			switch (await dialog.Select("BEAUTY_SHOP_HAIR_M1", ScpArgMsg("BEAUTY_SHOP_HAIR_M2"),
+				ScpArgMsg("BEAUTY_SHOP_HAIR_M3"), ScpArgMsg("BEAUTY_SHOP_HAIR_M4"), ScpArgMsg("BEAUTY_SHOP_SKIN"),
+				ScpArgMsg("BEAUTY_SHOP_HAIR_ETC"), ScpArgMsg("BEAUTY_SHOP_HAIR_COUPON"), ScpArgMsg("Close")))
 			{
 				case 1:
-					dialog.AddonMessage("BEAUTYSHOP_UI_OPEN", "HAIR", 1);
+					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "HAIR", 1);
 					break;
 				case 2:
 					dialog.AddonMessage(AddonMessage.BEAUTYSHOP_UI_OPEN, "WIG", 1);
@@ -2210,7 +2212,9 @@ namespace Melia.Zone.Scripting.Shared
 		[DialogFunction]
 		public static async Task BEAUTY_SHOP_FASHION(Dialog dialog)
 		{
-			switch (await dialog.Select("BEAUTY_SHOP_FASHION", "!@#$BEAUTY_SHOP_FASHION_1#@!", "!@#$BEAUTY_SHOP_FASHION_2#@!", "!@#$BEAUTY_SHOP_FASHION_4#@!", "!@#$PREVIEW_SILVERGACHA#@!", "!@#$Close#@!"))
+			switch (await dialog.Select("BEAUTY_SHOP_FASHION",
+				ScpArgMsg("BEAUTY_SHOP_FASHION_1"), ScpArgMsg("BEAUTY_SHOP_FASHION_2"), ScpArgMsg("BEAUTY_SHOP_FASHION_4"),
+				ScpArgMsg("PREVIEW_SILVERGACHA"), ScpArgMsg("Close")))
 			{
 				case 1:
 					dialog.AddonMessage("BEAUTYSHOP_UI_OPEN", "COSTUME", 1);
@@ -26530,238 +26534,238 @@ namespace Melia.Zone.Scripting.Shared
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_DUMMY")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_DUMMY(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_R1")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_R1(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_R2")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_R2(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_R3")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_R3(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_R4")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_R4(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_R5")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_R5(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_R6")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_R6(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_R7")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_R7(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_R8")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_R8(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L1")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L1(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L2")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L2(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L3")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L3(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L4")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L4(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L5")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L5(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L6")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L6(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L7")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L7(Dialog dialog)
 		{
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_SPOT_L8")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_SPOT_L8(Dialog dialog)
 		{
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_NPC_6")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_NPC_6(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP13_2_DPRISON3_MQ_NPC_5")]
+		[DialogFunction]
 		public static async Task EP13_2_DPRISON3_MQ_NPC_5(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_F_CASTLE_1_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_F_CASTLE_1_NPC1(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE1_MQ_2_SOLDIER")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE1_MQ_2_SOLDIER(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE1_MQ_3_SOLDIER")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE1_MQ_3_SOLDIER(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_F_CASTLE_1_NPC3")]
+		[DialogFunction]
 		public static async Task EP14_1_F_CASTLE_1_NPC3(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("D_CASTLE_19_1_PORTAL_NPC_01")]
+		[DialogFunction]
 		public static async Task D_CASTLE_19_1_PORTAL_NPC_01(Dialog dialog)
 		{
 			await dialog.Msg("D_CASTLE_19_1_PORTAL_NPC_basic1");
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_1_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_1_NPC1(Dialog dialog)
 		{
 			await dialog.Msg("EP14_1_FCASTLE2_MQ_1_NPC1_IDLE_DLG1");
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_2_DUMMYNPC_1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_2_DUMMYNPC_1(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_2_DUMMYNPC_2")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_2_DUMMYNPC_2(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_3_BEFORE1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_3_BEFORE1(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_3_BEFORE2")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_3_BEFORE2(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_3_BEFORE3")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_3_BEFORE3(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_3_BEFORE4")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_3_BEFORE4(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_4_SOLDIER")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_4_SOLDIER(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_5_SOLDIER")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_5_SOLDIER(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_6_SOLDIER")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_6_SOLDIER(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE2_MQ_7_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE2_MQ_7_NPC1(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_F_CASTLE_2_06_EV_NPC")]
+		[DialogFunction]
 		public static async Task EP14_1_F_CASTLE_2_06_EV_NPC(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("WARP_EP14_1_F_CASTLE_2")]
+		[DialogFunction]
 		public static async Task WARP_EP14_1_F_CASTLE_2(Dialog dialog)
 			=> await STATUE_WARP(dialog);
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_1_NPC1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_1_NPC1(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_3_TRACE")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_3_TRACE(Dialog dialog)
 		{
 			dialog.Close();
 		}
 
-		[DialogFunction("EP14_1_FCASTLE3_MQ_4_TENT1")]
+		[DialogFunction]
 		public static async Task EP14_1_FCASTLE3_MQ_4_TENT1(Dialog dialog)
 		{
 			dialog.Close();

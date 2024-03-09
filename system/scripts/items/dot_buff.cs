@@ -14,8 +14,24 @@ public class DotBuffItemScript : GeneralScript
 	[ScriptableFunction]
 	public ItemUseResult SCR_USE_ITEM_DotBuff(Character character, Item item, string buffName, float numArg1, float numArg2)
 	{
-		character.Buffs.Start(buffName, numArg1, numArg2, TimeSpan.FromSeconds(15));
+		character.Buffs.Start(buffName, numArg1, numArg2, TimeSpan.FromSeconds(15), character);
 		character.AddAchievePoint("Potion", 1);
+
+		return ItemUseResult.Okay;
+	}
+
+	[ScriptableFunction("SCR_USE_ITEM_AddBuff")]
+	[ScriptableFunction("SCR_USE_ITEM_DotBuff_Time")]
+	public ItemUseResult SCR_USE_ITEM_AddBuff(Character character, Item item, string buffName, float numArg1, float numArg2)
+	{
+		character.Buffs.Start(buffName, numArg1, 0, TimeSpan.FromMilliseconds(numArg2), character);
+		character.AddAchievePoint("Potion", 1);
+
+		return ItemUseResult.Okay;
+	}
+
+	public ItemUseResult SCR_USE_ITEM_DETOXIFIY(Character character, Item item, string buffName, float numArg1, float numArg2)
+	{
 		return ItemUseResult.Okay;
 	}
 }

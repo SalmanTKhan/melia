@@ -92,7 +92,6 @@ namespace Melia.Barracks.Network
 			conn.LoggedIn = true;
 
 			BarracksServer.Instance.Database.UpdateLoginState(conn.Account.DbId, 0, LoginState.Barracks);
-			BarracksServer.Instance.Database.UpdateLastLogin(conn.Account.DbId);
 
 			Log.Info("User '{0}' logged in.", conn.Account.Name);
 

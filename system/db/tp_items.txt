@@ -5,8 +5,8 @@
 //---------------------------------------------------------------------------
 
 [
-{ id: 8, className: "ClassName8", itemClassName: "Gacha_Memory_of_Snigo_CUBE_001", price: 30, itemDate: "231219" },
-{ id: 9, className: "ClassName9", itemClassName: "Gacha_Memory_of_Snigo_CUBE_010", price: 300, itemDate: "231219" },
+//{ id: 8, className: "ClassName8", itemClassName: "Gacha_Memory_of_Snigo_CUBE_001", price: 30, itemDate: "231219" },
+//{ id: 9, className: "ClassName9", itemClassName: "Gacha_Memory_of_Snigo_CUBE_010", price: 300, itemDate: "231219" },
 //{ id: 10, className: "ClassName10", itemClassName: "202312_sniego_package01", price: 78, itemDate: "231219" },
 //{ id: 11, className: "ClassName11", itemClassName: "202312_sniego_package02", price: 160, itemDate: "231219" },
 //{ id: 12, className: "ClassName12", itemClassName: "202312_sniego_package03", price: 348, itemDate: "231219" },
@@ -15,9 +15,9 @@
 { id: 11, className: "ClassName11", itemClassName: "202402_newyear_package02", price: 220, itemDate: "240206" },
 { id: 12, className: "ClassName12", itemClassName: "202402_newyear_package03", price: 320, itemDate: "240206" },
 { id: 13, className: "ClassName13", itemClassName: "202402_newyear_package04", price: 690, itemDate: "240206" },
-{ id: 14, className: "ClassName14", itemClassName: "202312_sniego_package05", price: 745, itemDate: "231219" },
-{ id: 15, className: "ClassName15", itemClassName: "202312_sniego_package06", price: 790, itemDate: "231219" },
-{ id: 16, className: "ClassName16", itemClassName: "2023_package_all_newbie", price: 499, itemDate: "230105" },
+//{ id: 14, className: "ClassName14", itemClassName: "202312_sniego_package05", price: 745, itemDate: "231219" },
+//{ id: 15, className: "ClassName15", itemClassName: "202312_sniego_package06", price: 790, itemDate: "231219" },
+//{ id: 16, className: "ClassName16", itemClassName: "2023_package_all_newbie", price: 499, itemDate: "230105" },
 { id: 51, className: "ClassName51", itemClassName: "rada_Dungeon_Key01_NoTrade_500ea", price: 49, itemDate: "210430" },
 { id: 52, className: "ClassName52", itemClassName: "GoddessCard_Reinforce_package", price: 43, itemDate: "210429" },
 { id: 53, className: "ClassName53", itemClassName: "coin_package_500", price: 38, itemDate: "210428" },
@@ -45,7 +45,7 @@
 { id: 121, className: "ClassName121", itemClassName: "EngraveSlotExtension_Ticket_60d", price: 43, itemDate: "210712" },
 { id: 122, className: "ClassName122", itemClassName: "EngraveSlotExtension_Ticket_90d", price: 58, itemDate: "210713" },
 { id: 123, className: "ClassName123", itemClassName: "Exchange_Weapon_Book_500", price: 33, itemDate: "210617" },
-{ id: 124, className: "ClassName124", itemClassName: "ExchangeACC_Book_490", price: 33, itemDate: "210617" },
+{ id: 124, className: "ClassName124", itemClassName: "ExchangeACC_Book_510", price: 33, itemDate: "210617" },
 { id: 125, className: "ClassName125", itemClassName: "premium_popoboost_ticket_2312", price: 145, itemDate: "231219" },
 { id: 126, className: "ClassName126", itemClassName: "202309_ep15package", price: 95, itemDate: "230905" },
 { id: 302, className: "ClassName302", itemClassName: "Premium_Enchantchip_high_20", price: 160, itemDate: "231101" },

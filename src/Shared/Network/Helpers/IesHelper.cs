@@ -72,7 +72,7 @@ namespace Melia.Shared.Network.Helpers
 			var curList = new IesModList();
 			modLists.Add(curList);
 
-			var splitLength = 1024 * 4;
+			var splitLength = 1024 * 44;
 			var curLength = 0;
 
 			var packet = new Packet(Op.ZC_IES_MODIFY_LIST);
