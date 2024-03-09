@@ -7,9 +7,8 @@ using Melia.Shared.Data.Database;
 using Melia.Shared.Network;
 using Melia.Shared.Network.Helpers;
 using Melia.Shared.ObjectProperties;
-using Melia.Shared.Tos.Const;
-using Melia.Shared.Tos.Properties;
-using Melia.Shared.Util;
+using Melia.Shared.Game.Const;
+using Melia.Shared.Game.Properties;
 using Melia.Shared.World;
 using Melia.Zone.Buffs;
 using Melia.Zone.Network.Helpers;
@@ -6618,6 +6617,32 @@ namespace Melia.Zone.Network
 			packet.PutInt(actor.Handle);
 
 			actor.Map.Broadcast(packet);
+		}
+
+		/// <summary>
+		/// Fixes the camera at the given position on the character's client.
+		/// </summary>
+		/// <param name="character"></param>
+		/// <param name="pos">Position to fix the camera at.</param>
+		/// <param name="zoomLevel">Defines the zoom level for the fixed camera. Use 0 for no change.</param>
+		public static void ZC_FIXCAMERA(Character character, Position pos, float zoomLevel)
+		{
+			var packet = new Packet(Op.ZC_FIXCAMERA);
+			packet.PutPosition(pos);
+			packet.PutFloat(zoomLevel);
+
+			character.Connection.Send(packet);
+		}
+
+		/// <summary>
+		/// Unfixes the camera on the character's client and makes it
+		/// follow them again.
+		/// </summary>
+		/// <param name="character"></param>
+		public static void ZC_CANCEL_FIXCAMERA(Character character)
+		{
+			var packet = new Packet(Op.ZC_CANCEL_FIXCAMERA);
+			character.Connection.Send(packet);
 		}
 	}
 }

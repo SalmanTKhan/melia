@@ -6,7 +6,7 @@
 
 using System;
 using Melia.Shared.Data.Database;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting;

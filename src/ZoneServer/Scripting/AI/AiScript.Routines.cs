@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Melia.Shared.Tos.Const;
-using Melia.Shared.Tos.Const.Web;
+using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 using Melia.Zone.Network;
 using Melia.Zone.Skills;
@@ -31,9 +29,6 @@ namespace Melia.Zone.Scripting.AI
 		/// <returns></returns>
 		protected IEnumerable MoveRandom(int min = 35, int max = 50, bool wait = true)
 		{
-			if (this.Entity.MoveType == MoveType.Holding)
-				yield break;
-
 			min = 100;
 			min = Math.Max(1, min);
 			max = Math.Max(min, max);
@@ -68,9 +63,6 @@ namespace Melia.Zone.Scripting.AI
 		/// <returns></returns>
 		protected IEnumerable MoveTo(Position destination, bool wait = true)
 		{
-			if (!this.Entity.CanMove())
-				yield break;
-
 			var movement = this.Entity.Components.Get<MovementComponent>();
 			var moveTime = movement.MoveTo(destination);
 
@@ -144,7 +136,7 @@ namespace Melia.Zone.Scripting.AI
 		{
 			skill = null;
 
-			if (this.Entity is not Mob mob)
+			if (!(this.Entity is Mob mob))
 				return false;
 
 			if (!mob.Data.Skills.Any())
@@ -178,35 +170,17 @@ namespace Melia.Zone.Scripting.AI
 		{
 			this.Entity.TurnTowards(target);
 
-			// Check if the AI is still eligible to use the skill.
-			if (!this.CanUseSkill(skill, target))
-			{
-				yield break; // Skill usage is not allowed, exit the routine.
-			}
-
 			if (!ZoneServer.Instance.SkillHandlers.TryGetHandler<ITargetSkillHandler>(skill.Id, out var handler))
 			{
 				Log.Warning($"AiScript: No handler found for skill '{skill.Id}'.");
 				yield return this.Wait(2000);
 				yield break;
 			}
-			skill.IncreaseOverheat();
+
 			handler.Handle(skill, this.Entity, target);
 
 			var useTime = skill.Properties.ShootTime;
-			yield break;
-			//yield return this.Wait(useTime);
-		}
-
-		private bool CanUseSkill(Skill skill, ICombatEntity target)
-		{
-			if (this.Entity.IsDead || target.IsDead || skill.IsOnCooldown)
-				return false;
-
-			if (this.Entity.IsBuffActive(BuffId.Stun) || this.Entity.IsBuffActive(BuffId.Common_Silence))
-				return false;
-
-			return true;
+			yield return this.Wait(useTime);
 		}
 
 		/// <summary>
@@ -227,7 +201,7 @@ namespace Melia.Zone.Scripting.AI
 		/// <param name="minDistance">The minimum distance to the target the AI attempts to stay in.</param>
 		/// <param name="matchSpeed">If true, the entity's speed will be changed to match the target's.</param>
 		/// <returns></returns>
-		protected IEnumerable Follow(ICombatEntity followTarget, float minDistance = 75, bool matchSpeed = false)
+		protected IEnumerable Follow(ICombatEntity followTarget, float minDistance = 50, bool matchSpeed = false)
 		{
 			var movement = this.Entity.Components.Get<MovementComponent>();
 			var targetWasInRange = false;
@@ -241,7 +215,7 @@ namespace Melia.Zone.Scripting.AI
 				// It's currently unknown why, but for the monster speed to
 				// match a character's speed it needs to be multiplied by 2.4.
 				// Setting them to the exact same value does not work.
-				if (followTarget is Character)
+				if (followTarget is Character character)
 					targetMspd *= 2.4f;
 
 				this.SetFixedMoveSpeed(targetMspd);
@@ -282,7 +256,7 @@ namespace Melia.Zone.Scripting.AI
 				{
 					movement.Stop();
 
-					this.Entity.Position = followTarget.Position.GetRandomInRange2D(15, (int)minDistance - 1);
+					this.Entity.Position = followTarget.Position;
 					Send.ZC_SET_POS(this.Entity);
 				}
 
@@ -302,7 +276,7 @@ namespace Melia.Zone.Scripting.AI
 
 				if (catchUp)
 				{
-					var closePos = followTarget.Position.GetRandomInRange2D(15, (int)minDistance - 1);
+					var closePos = this.Entity.Position.GetRelative(followTarget.Position, 50);
 					yield return this.MoveTo(closePos, false);
 				}
 				else if (movement.IsMoving)

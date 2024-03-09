@@ -58,20 +58,23 @@ namespace Melia.Zone.Scripting.Dialogues
 		/// <summary>
 		/// Inserts the given option at the given index.
 		/// </summary>
+		/// <remarks>
+		/// If the index is negative, it will be treated as an index from
+		/// the end of the list. The final index is clammed to the range
+		/// of options, ensuring that the option is inserted at a valid
+		/// index.
+		/// </remarks>
 		/// <param name="index"></param>
 		/// <param name="option"></param>
 		public void Insert(int index, DialogOption option)
 		{
+			if (index < 0)
+				index = _options.Count + index;
+
 			index = Math2.Clamp(0, _options.Count, index);
+
 			_options.Insert(index, option);
 		}
-
-		/// <summary>
-		/// Removes the option at the given index.
-		/// </summary>
-		/// <param name="index"></param>
-		public void Remove(int index)
-			=> _options.RemoveAt(index);
 
 		/// <summary>
 		/// Removes the option with the given key.

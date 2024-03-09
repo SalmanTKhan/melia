@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using Melia.Shared.Data.Database;
 using Melia.Shared.Network;
 using Melia.Shared.Network.Helpers;
-using Melia.Shared.ObjectProperties;
-using Melia.Shared.Tos.Const;
-using Melia.Shared.Tos.Const.Web;
-using Melia.Shared.Util;
+using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 using Melia.Zone.Network.Helpers;
 using Melia.Zone.Skills;
@@ -18,6 +15,8 @@ using Melia.Zone.World.Actors.Monsters;
 using Melia.Zone.World.Groups;
 using Melia.Zone.World.Items;
 using Yggdrasil.Logging;
+using Melia.Shared.ObjectProperties;
+using Melia.Shared.Tos.Const;
 
 namespace Melia.Zone.Network
 {

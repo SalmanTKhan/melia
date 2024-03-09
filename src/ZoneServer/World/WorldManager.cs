@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Melia.Shared.Data.Database;
 using Melia.Shared.Network;
 using Melia.Zone.Events;
 using Melia.Zone.World.Actors.Characters;
@@ -25,24 +24,18 @@ namespace Melia.Zone.World
 		// Unique handles for buffs
 		private int _buffhandles = 0;
 
-		// Unique handles for attacks
-		private int _attackHandles = 0;
-
-		// Unique handles for skills
-		private int _skillHandles = 0;
-
-		// Unique handles for effects
-		private int _effectHandles = 0;
-
 		private int _genTypes = 1_000_000;
 
+		private readonly Dictionary<int, Map> _mapsId = new Dictionary<int, Map>();
+		private readonly Dictionary<string, Map> _mapsName = new Dictionary<string, Map>();
 		private readonly Dictionary<int, MonsterSpawner> _spawners = new Dictionary<int, MonsterSpawner>();
 		private readonly Dictionary<string, SpawnAreaCollection> _spawnAreaCollections = new Dictionary<string, SpawnAreaCollection>();
+		private readonly object _mapsLock = new object();
 
 		/// <summary>
 		/// Returns the amount of maps in the world.
 		/// </summary>
-		public int Count => this.Maps.Count;
+		public int Count { get { lock (_mapsLock) return _mapsId.Count; } }
 
 		/// <summary>
 		/// Returns the world's heartbeat, a manager for regularly
@@ -54,29 +47,6 @@ namespace Melia.Zone.World
 		/// Returns the world's day/night cycle manager.
 		/// </summary>
 		public DayNightCycle DayNightCycle { get; private set; }
-
-		/// <summary>
-		/// Returns the world's parties, a manager for
-		/// all the parties in the world.
-		/// </summary>
-		public PartyManager Parties { get; } = new PartyManager();
-
-		/// <summary>
-		/// Returns the world's parties, a collection of
-		/// all the parties in the world.
-		/// </summary>
-		public GuildManager Guilds { get; } = new GuildManager();
-
-		/// <summary>
-		/// Returns the world's maps, a collection of 
-		/// all loaded maps.
-		/// </summary>
-		public MapManager Maps { get; } = new MapManager();
-
-		/// <summary>
-		/// Returns the world's NPCs indexed by their dialogue.
-		/// </summary>
-		public Dictionary<string, Npc> NPCs { get; } = new Dictionary<string, Npc>();
 
 		/// <summary>
 		/// Returns a new handle to be used for a character or monster.
@@ -100,39 +70,12 @@ namespace Melia.Zone.World
 		}
 
 		/// <summary>
-		/// Returns a new handle to be used for a casted Attack.
-		/// </summary>
-		/// <returns></returns>
-		public int CreateAttackHandle()
-		{
-			return Interlocked.Increment(ref _attackHandles);
-		}
-
-		/// <summary>
 		/// Returns a new handle to be used for a casted Buff.
 		/// </summary>
 		/// <returns></returns>
 		public int CreateBuffHandle()
 		{
 			return Interlocked.Increment(ref _buffhandles);
-		}
-
-		/// <summary>
-		/// Returns a new handle to be used for an effect added to the map.
-		/// </summary>
-		/// <returns></returns>
-		public int CreateEffectHandle()
-		{
-			return Interlocked.Increment(ref _effectHandles);
-		}
-
-		/// <summary>
-		/// Returns a new handle to be used for a casted Skill.
-		/// </summary>
-		/// <returns></returns>
-		public int CreateSkillHandle()
-		{
-			return Interlocked.Increment(ref _skillHandles);
 		}
 
 		/// <summary>
@@ -153,7 +96,8 @@ namespace Melia.Zone.World
 			foreach (var entry in ZoneServer.Instance.Data.MapDb.Entries.Values)
 			{
 				var map = new Map(entry.Id, entry.ClassName);
-				this.AddMap(map);
+				_mapsId.Add(map.Id, map);
+				_mapsName.Add(map.ClassName, map);
 
 				this.Heartbeat.Add(map);
 			}
@@ -165,11 +109,7 @@ namespace Melia.Zone.World
 		private void InitUpdatables()
 		{
 			this.Heartbeat.Add(new TimeEventRaiser());
-
-			this.DayNightCycle = new DayNightCycle();
-
-			if (ZoneServer.Instance.Conf.World.EnableDayNightCycle)
-				this.Heartbeat.Add(this.DayNightCycle);
+			this.Heartbeat.Add(this.DayNightCycle = new DayNightCycle());
 		}
 
 		/// <summary>
@@ -185,14 +125,26 @@ namespace Melia.Zone.World
 		/// </summary>
 		/// <param name="mapId"></param>
 		public Map GetMap(int mapId)
-			=> this.Maps.Get(mapId);
+		{
+			Map result;
+			lock (_mapsLock)
+				_mapsId.TryGetValue(mapId, out result);
+
+			return result;
+		}
 
 		/// <summary>
 		/// Returns map by name, or null if it doesn't exist.
 		/// </summary>
 		/// <param name="mapClassName"></param>
 		public Map GetMap(string mapClassName)
-		=> this.Maps.Get(mapClassName);
+		{
+			Map result;
+			lock (_mapsLock)
+				_mapsName.TryGetValue(mapClassName, out result);
+
+			return result;
+		}
 
 		/// <summary>
 		/// Returns map by name via out, returns false if the map doesn't
@@ -201,7 +153,10 @@ namespace Melia.Zone.World
 		/// <param name="mapClassId"></param>
 		/// <param name="map"></param>
 		public bool TryGetMap(int mapClassId, out Map map)
-		=> this.Maps.TryGet(mapClassId, out map);
+		{
+			map = this.GetMap(mapClassId);
+			return map != null;
+		}
 
 		/// <summary>
 		/// Returns map by name via out, returns false if the map doesn't
@@ -210,14 +165,21 @@ namespace Melia.Zone.World
 		/// <param name="mapClassName"></param>
 		/// <param name="map"></param>
 		public bool TryGetMap(string mapClassName, out Map map)
-		=> this.Maps.TryGet(mapClassName, out map);
+		{
+			map = this.GetMap(mapClassName);
+			return map != null;
+		}
 
 		/// <summary>
 		/// Removes all scripted entities, like NPCs.
 		/// </summary>
 		public void RemoveScriptedEntities()
 		{
-			this.Maps.RemoveScriptedEntities();
+			lock (_mapsLock)
+			{
+				foreach (var map in _mapsId.Values)
+					map.RemoveScriptedEntities();
+			}
 
 			lock (_spawners)
 			{
@@ -226,6 +188,7 @@ namespace Melia.Zone.World
 					spawner.InitializePopulation();
 					this.Heartbeat.Remove(spawner);
 				}
+
 				_spawners.Clear();
 			}
 
@@ -238,7 +201,19 @@ namespace Melia.Zone.World
 		/// or null if none were found.
 		/// </summary>
 		public Character GetCharacterByTeamName(string teamName)
-		=> this.Maps.GetCharacterByTeamName(teamName);
+		{
+			lock (_mapsLock)
+			{
+				foreach (var map in _mapsId.Values)
+				{
+					var character = map.GetCharacterByTeamName(teamName);
+					if (character != null)
+						return character;
+				}
+			}
+
+			return null;
+		}
 
 		/// <summary>
 		/// Adds a monster spawner object to the world
@@ -314,6 +289,15 @@ namespace Melia.Zone.World
 		}
 
 		/// <summary>
+		/// Returns all characters that are currently online.
+		/// </summary>
+		public Character[] GetCharacters()
+		{
+			lock (_mapsLock)
+				return _mapsId.Values.SelectMany(a => a.GetCharacters()).ToArray();
+		}
+
+		/// <summary>
 		/// Returns the first monster that matches the given predicate
 		/// on any map via out. Returns false if no matching monster was
 		/// found.
@@ -322,75 +306,53 @@ namespace Melia.Zone.World
 		/// <param name="monster"></param>
 		/// <returns></returns>
 		public bool TryGetMonster(Func<IMonster, bool> predicate, out IMonster monster)
-			=> this.Maps.TryGetMonster(predicate, out monster);
+		{
+			lock (_mapsLock)
+			{
+				foreach (var map in _mapsId.Values)
+				{
+					if (map.TryGetMonster(predicate, out var m))
+					{
+						monster = m;
+						return true;
+					}
+				}
+			}
+
+			monster = null;
+			return false;
+		}
 
 		/// <summary>
 		/// Returns the total number of player characters across all maps.
 		/// </summary>
 		/// <returns></returns>
 		public int GetCharacterCount()
-			=> this.Maps.GetCharacterCount();
-
-		/// <summary>
-		/// Returns all characters that are currently online.
-		/// </summary>
-		public Character[] GetCharacters()
-			=> this.Maps.GetCharacters();
+		{
+			lock (_mapsLock)
+				return _mapsId.Values.Sum(a => a.CharacterCount);
+		}
 
 		/// <summary>
 		/// Returns all online characters that match the given predicate.
 		/// </summary>
 		public Character[] GetCharacters(Func<Character, bool> predicate)
-			=> this.Maps.GetCharacters(predicate);
+		{
+			lock (_mapsLock)
+				return _mapsId.Values.SelectMany(a => a.GetCharacters(predicate)).ToArray();
+		}
 
 		/// <summary>
 		/// Broadcasts packet on all maps.
 		/// </summary>
 		/// <param name="packet"></param>
 		public void Broadcast(Packet packet)
-			=> this.Maps.Broadcast(packet);
-
-		/// <summary>
-		/// Returns all online characters that match the given predicate.
-		/// </summary>
-		public Character GetCharacter(Func<Character, bool> predicate)
-			=> this.Maps.GetCharacter(predicate);
-
-		/// <summary>
-		/// Returns a party if found by id or null
-		/// </summary>
-		/// <param name="partyId"></param>
-		/// <returns></returns>
-		public Party GetParty(long partyId)
-			=> this.Parties.GetParty(partyId);
-
-		/// <summary>
-		/// Returns a guild if found by id or null
-		/// </summary>
-		/// <param name="guildId"></param>
-		/// <returns></returns>
-		public Guild GetGuild(long guildId)
-			=> this.Guilds.GetGuild(guildId);
-
-		/// <summary>
-		/// Generates a new id for a dynamic region.
-		/// </summary>
-		/// <returns></returns>
-		public int GenerateDynamicMapId()
-			=> this.Maps.GenerateDynamicMapId();
-
-		/// <summary>
-		/// Adds a map to the world's maps.
-		/// </summary>
-		/// <param name="map"></param>
-		public void AddMap(Map map)
-			=> this.Maps.Add(map);
-
-		public Npc FindNPC(string dialogName)
 		{
-			this.NPCs.TryGetValue(dialogName, out var npc);
-
-			return npc;
+			lock (_mapsLock)
+			{
+				foreach (var map in _mapsId.Values)
+					map.Broadcast(packet);
+			}
 		}
 	}
 }

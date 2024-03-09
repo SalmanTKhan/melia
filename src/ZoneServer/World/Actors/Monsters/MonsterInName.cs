@@ -1,7 +1,6 @@
 ﻿using System;
 using Melia.Shared.ObjectProperties;
-using Melia.Shared.Tos.Const;
-using Melia.Shared.World;
+using Melia.Shared.Game.Const;
 
 namespace Melia.Zone.World.Actors.Monsters
 {
@@ -52,11 +51,6 @@ namespace Melia.Zone.World.Actors.Monsters
 		public float SDR => 0;
 
 		/// <summary>
-		/// Returns the monster's movement speed.
-		/// </summary>
-		public float WalkSpeed => 16;
-
-		/// <summary>
 		/// Returns whether the monster emerged from the ground.
 		/// </summary>
 		public bool FromGround { get; set; }
@@ -73,14 +67,9 @@ namespace Melia.Zone.World.Actors.Monsters
 		public DateTime DisappearTime { get; set; } = DateTime.MaxValue;
 
 		/// <summary>
-		/// Raised when a monster in name is removed from the map.
-		/// </summary>
-		public Action OnDisappear { get; set; }
-
-		/// <summary>
 		/// Returns the monster's gen type.
 		/// </summary>
-		public int GenType { get; }
+		public int GenType { get; } = ZoneServer.Instance.World.CreateGenType();
 
 		/// <summary>
 		/// Returns a reference to the monster's properties.
@@ -111,43 +100,17 @@ namespace Melia.Zone.World.Actors.Monsters
 
 		/// <summary>
 		/// Gets or sets the name of the function to call when someone
-		/// is inside the monster's trigger area.
-		/// </summary>
-		public string WhileInsideName { get; set; }
-
-		/// <summary>
-		/// Gets or sets the name of the function to call when someone
 		/// leaves the monster's trigger area.
 		/// </summary>
 		public string LeaveName { get; set; }
 
 		/// <summary>
-		/// Gets or sets the handled who is the owner.
-		/// </summary>
-		public int OwnerHandle { get; set; }
-
-		/// <summary>
-		/// Gets or sets the handle associated
-		/// with the spawn.
-		/// </summary>
-		public int AssociatedHandle { get; set; }
-
-		/// <summary>
-		/// Gets or sets the spawn location.
-		/// </summary>
-		public Location SpawnLocation { get; set; }
-
-		/// <summary>
 		/// Initializes the monster's properties.
 		/// </summary>
 		/// <param name="monsterClassId"></param>
-		public MonsterInName(int monsterClassId, int genType = 0)
+		public MonsterInName(int monsterClassId)
 		{
 			this.Id = monsterClassId;
-			if (genType == 0)
-				this.GenType = ZoneServer.Instance.World.CreateGenType();
-			else
-				this.GenType = genType;
 		}
 	}
 }

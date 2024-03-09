@@ -1,9 +1,10 @@
-﻿using Melia.Shared.Tos.Const;
+﻿using System;
+using Melia.Shared.Scripting;
+using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting.Dialogues;
 using Yggdrasil.Geometry;
-using Yggdrasil.Logging;
 using Yggdrasil.Util;
 
 namespace Melia.Zone.World.Actors.Monsters
@@ -35,12 +36,6 @@ namespace Melia.Zone.World.Actors.Monsters
 		public DialogFunc EnterFunc { get; private set; }
 
 		/// <summary>
-		/// Returns the function called when someone steps into the NPC's
-		/// trigger area.
-		/// </summary>
-		public DialogFunc WhileInsideFunc { get; private set; }
-
-		/// <summary>
 		/// Returns the function called when someone steps out of the NPC's
 		/// trigger area.
 		/// </summary>
@@ -51,8 +46,6 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// are triggered.
 		/// </summary>
 		public IShapeF Area { get; private set; }
-
-		public bool UpdateArea { get; private set; }
 
 		/// <summary>
 		/// Returns the NPC's variables.
@@ -70,8 +63,8 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// <param name="name"></param>
 		/// <param name="location"></param>
 		/// <param name="direction"></param>
-		public Npc(int monsterClassId, string name, Location location, Direction direction, int genType = 0)
-			: base(monsterClassId, genType)
+		public Npc(int monsterClassId, string name, Location location, Direction direction)
+			: base(monsterClassId)
 		{
 			this.Name = name;
 			this.Position = location.Position;
@@ -118,18 +111,6 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// </summary>
 		/// <param name="name"></param>
 		/// <param name="func"></param>
-		public void SetWhileInsideTrigger(string name, DialogFunc func)
-		{
-			this.WhileInsideName = name;
-			this.WhileInsideFunc = func;
-		}
-
-		/// <summary>
-		/// Sets up a function that is called when the NPC is triggered
-		/// by stepping into the given area.
-		/// </summary>
-		/// <param name="name"></param>
-		/// <param name="func"></param>
 		public void SetLeaveTrigger(string name, DialogFunc func)
 		{
 			this.LeaveName = name;
@@ -140,10 +121,9 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// Sets the trigger area for the NPC's enter and leave triggers.
 		/// </summary>
 		/// <param name="area"></param>
-		public void SetTriggerArea(IShapeF area, bool updateArea = false)
+		public void SetTriggerArea(IShapeF area)
 		{
 			this.Area = area;
-			this.UpdateArea = updateArea;
 		}
 	}
 
@@ -157,11 +137,6 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// Returns a function to call when someone enters the area.
 		/// </summary>
 		DialogFunc EnterFunc { get; }
-
-		/// <summary>
-		/// Returns a function to call when someone stays inside the area.
-		/// </summary>
-		DialogFunc WhileInsideFunc { get; }
 
 		/// <summary>
 		/// Returns a function to call when someone leaves the area.

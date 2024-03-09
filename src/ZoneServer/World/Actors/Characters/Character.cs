@@ -1,21 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Melia.Shared.Database;
 using Melia.Shared.L10N;
 using Melia.Shared.Network.Helpers;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Scripting;
-using Melia.Shared.Tos.Const;
-using Melia.Shared.Tos.Const.Web;
-using Melia.Shared.Tos.Properties;
-using Melia.Shared.Util;
+using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting.AI;
 using Melia.Zone.World.Actors.Characters.Components;
 using Melia.Zone.World.Actors.CombatEntities.Components;
-using Melia.Zone.World.Actors.Components;
 using Melia.Zone.World.Actors.Monsters;
 using Yggdrasil.Composition;
 using Yggdrasil.Logging;
@@ -27,7 +22,7 @@ namespace Melia.Zone.World.Actors.Characters
 	/// <summary>
 	/// Represents a player character.
 	/// </summary>
-	public class Character : Actor, ICombatEntity, ICommander, IPropertyObject, IUpdateable
+	public class Character : Actor, IActor, ICombatEntity, ICommander, IPropertyObject, IUpdateable
 	{
 		private bool _warping;
 		private int _destinationChannelId;
@@ -73,12 +68,7 @@ namespace Melia.Zone.World.Actors.Characters
 		/// <summary>
 		/// Id of the character's account.
 		/// </summary>
-		public long AccountDbId { get; set; }
-
-		/// <summary>
-		/// Id of the character's account.
-		/// </summary>
-		public long AccountObjectId => this.AccountDbId;
+		public long AccountId { get; set; }
 
 		/// <summary>
 		/// Returns the character's faction.
@@ -104,11 +94,6 @@ namespace Melia.Zone.World.Actors.Characters
 		/// Returns the character's mode of movement.
 		/// </summary>
 		public MoveType MoveType => MoveType.Normal;
-
-		/// <summary>
-		/// Gets or sets the character's tendency
-		/// </summary>
-		public TendencyType Tendency { get; set; } = TendencyType.Peaceful;
 
 		/// <summary>
 		/// Character's name.
@@ -160,11 +145,6 @@ namespace Melia.Zone.World.Actors.Characters
 		public int Hair { get; set; }
 
 		/// <summary>
-		/// Character's pose.
-		/// </summary>
-		public byte Pose { get; set; }
-
-		/// <summary>
 		/// Returns stance, based on job and other factors.
 		/// </summary>
 		public int Stance { get; protected set; }
@@ -201,17 +181,6 @@ namespace Melia.Zone.World.Actors.Characters
 		/// TODO: I'm not sure when this gets rolled over;
 		///   More investigation is needed.
 		public int HpChangeCounter { get; private set; }
-
-		/// <summary>
-		/// Gets or sets the character's chat balloon.
-		/// </summary>
-		public int ChatBalloon { get; set; } = 1;
-
-		/// <summary>
-		/// Get or set the character's chat balloon expiration
-		/// Max Date: 2999/12/31 (2) 23:59:59:00
-		/// </summary>
-		public DateTime ChatBalloonExpiration { get; set; } = new DateTime(2999, 12, 31, 23, 59, 59, DateTimeKind.Local);
 
 		/// <summary>
 		/// Specifies whether the character currently updates the visible
@@ -298,6 +267,11 @@ namespace Melia.Zone.World.Actors.Characters
 		public bool IsDead => (this.Hp == 0);
 
 		/// <summary>
+		/// Returns the character's component collection.
+		/// </summary>
+		public ComponentCollection Components { get; } = new ComponentCollection();
+
+		/// <summary>
 		/// Character's session objects.
 		/// </summary>
 		public SessionObjects SessionObjects { get; } = new SessionObjects();
@@ -323,41 +297,9 @@ namespace Melia.Zone.World.Actors.Characters
 		public QuestComponent Quests { get; }
 
 		/// <summary>
-		/// Character's timed events.
-		/// </summary>
-		public TimedEventComponent TimedEvents { get; }
-
-		/// <summary>
-		/// Character's track manager.
-		/// </summary>
-		public TrackComponent Tracks { get; }
-
-		/// <summary>
-		/// Character's achievement manager.
-		/// </summary>
-		public AchievementComponent Achievements { get; }
-
-		public AdventureBookComponent AdventureBook { get; }
-
-		/// <summary>
 		/// Returns the character's movement component.
 		/// </summary>
 		public MovementComponent Movement { get; }
-
-		/// <summary>
-		/// Returns the character's companion component.
-		/// </summary>
-		public CompanionComponent Companions { get; }
-
-		/// <summary>
-		/// Returns the character's summoned monsters.
-		/// </summary>
-		public SummonComponent Summons { get; }
-
-		/// <summary>
-		/// Returns the account's assister cabinet.
-		/// </summary>
-		public AssisterCabinet AssisterCabinet => this.Connection.Account.AssisterCabinet;
 
 		/// <summary>
 		/// Character's properties.
@@ -368,17 +310,6 @@ namespace Melia.Zone.World.Actors.Characters
 		/// possible.
 		/// </remarks>
 		public CharacterProperties Properties { get; }
-
-		/// <summary>
-		/// PCEtc Properties
-		/// Used for "Hiding NPC states", Quest Completions, Skintone, Hair
-		/// </summary>
-		public Properties EtcProperties { get; } = new Properties("PCEtc");
-
-		/// <summary>
-		/// GuildMember Properties
-		/// </summary>
-		public Properties GuildMemberProperties { get; } = new Properties("GuildMember");
 
 		/// <summary>
 		/// Returns a reference to the character's properties.
@@ -393,66 +324,12 @@ namespace Melia.Zone.World.Actors.Characters
 			get => _localizer ?? ZoneServer.Instance.MultiLocalization.GetDefault();
 			private set => _localizer = value;
 		}
-
 		private Localizer _localizer;
 
 		/// <summary>
 		/// Raised when the characters sits down or stands up.
 		/// </summary>
 		public event Action<Character> SitStatusChanged;
-
-		/// <summary>
-		/// Has Companion(s)
-		/// </summary>
-		public bool HasCompanions => this.Components.Get<CompanionComponent>()?.HasCompanions ?? false;
-
-		/// <summary>
-		/// Active Companion
-		/// </summary>
-		public Companion ActiveCompanion => this.Components.Get<CompanionComponent>()?.ActiveCompanion ?? null;
-
-		/// <summary>
-		/// Character's online status.
-		/// </summary>
-		public bool IsOnline { get; set; } = false;
-
-		/// <summary>
-		/// A dictionary with help shown
-		/// </summary>
-		public Dictionary<int, bool> Help { get; set; } = new Dictionary<int, bool>();
-
-		/// <summary>
-		/// Character's current trade
-		/// </summary>
-		public TradeComponent Trade { get; set; }
-
-		/// <summary>
-		/// Check if character is trading
-		/// </summary>
-		public bool IsTrading => this.Trade != null;
-
-		/// <summary>
-		/// Character's class change reset points
-		/// </summary>
-		public int ResetPoints { get; set; }
-
-		/// <summary>
-		/// Character's Balloon Id
-		/// </summary>
-		public int BalloonId { get; set; }
-
-		/// <summary>
-		/// Animation Pairing
-		/// </summary>
-		public bool IsPaired { get; set; }
-		/// <summary>
-		/// Character is riding a "vehicle" (Companion)
-		/// </summary>
-		public bool IsRiding { get; set; }
-		public long PartyId { get; set; }
-		public long GuildId { get; set; }
-
-		public Triggers Triggers { get; set; }
 
 		/// <summary>
 		/// Creates new character.
@@ -471,14 +348,6 @@ namespace Melia.Zone.World.Actors.Characters
 			this.Components.Add(this.Quests = new QuestComponent(this));
 			this.Components.Add(this.Movement = new MovementComponent(this));
 
-			this.Components.Add(this.TimedEvents = new TimedEventComponent(this));
-			this.Components.Add(this.Tracks = new TrackComponent(this));
-			this.Components.Add(this.Triggers = new Triggers(this));
-			this.Components.Add(this.Achievements = new AchievementComponent(this));
-			this.Components.Add(this.AdventureBook = new AdventureBookComponent(this));
-			// These two are class specific components should they go somewhere else?
-			this.Components.Add(this.Companions = new CompanionComponent(this));
-			this.Components.Add(this.Summons = new SummonComponent(this));
 			this.Properties = new CharacterProperties(this);
 
 			this.AddSessionObjects();
@@ -499,29 +368,14 @@ namespace Melia.Zone.World.Actors.Characters
 			//   look at session objects. Curiously, I don't get the
 			//   aformentioned tooltip anymore right now, even if this
 			//   object is missing.
-			// Update2: Client doesn't even have this idspace anymore.
-			// [ERROR_IES_COULDNT_FIND_CLASS] idspace:[SessionObject] classID:[770001]
 			//this.SessionObjects.Add(new SessionObject(SessionObjectId.Jansori));
-
-			this.SessionObjects.Add(new SessionObject(SessionObjectId.Drop));
-			this.SessionObjects.Add(new SessionObject(SessionObjectId.MapEventReward));
-			this.SessionObjects.Add(new SessionObject(SessionObjectId.SmartGen));
-			this.SessionObjects.Add(new SessionObject(SessionObjectId.Raid));
-			this.SessionObjects.Add(new SessionObject(SessionObjectId.NpcDialogCount));
-			this.SessionObjects.Add(new SessionObject(SessionObjectId.Request));
-			this.SessionObjects.Add(new SessionObject(SessionObjectId.Shop));
-			this.SessionObjects.Add(new SessionObject(SessionObjectId.ExpCardUse));
-
-			var sessionObject = new SessionObject(SessionObjectId.Main);
-			sessionObject.Properties.SetString(PropertyName.QSTARTZONETYPE, "StartLine1");
-			this.SessionObjects.Add(sessionObject);
 		}
 
 		/// <summary>
 		/// Gives character its initial properties if they're missing,
 		/// such as on a newly created character.
 		/// </summary>
-		public virtual void InitProperties()
+		public void InitProperties()
 		{
 			if (this.Job == null)
 				throw new InvalidOperationException("Character's jobs need to be loaded before initializing the properties.");
@@ -722,7 +576,7 @@ namespace Melia.Zone.World.Actors.Characters
 			// Check permission
 			if (!_warping)
 			{
-				Log.Warning("Character.FinalizeWarp: Player '{0}' tried to warp without permission.", this.AccountDbId);
+				Log.Warning("Character.FinalizeWarp: Player '{0}' tried to warp without permission.", this.AccountId);
 				return;
 			}
 
@@ -764,31 +618,8 @@ namespace Melia.Zone.World.Actors.Characters
 			Send.ZC_MAX_EXP_CHANGED(this, 0);
 			Send.ZC_PC_LEVELUP(this);
 			Send.ZC_OBJECT_PROPERTY(this);
-
-			this.AddonMessage("NOTICE_Dm_levelup_base", "!@#$Auto_KaeLigTeo_LeBeli_SangSeungHayeossSeupNiDa#@!", 3);
-			this.PlayEffect("F_pc_level_up", 3);
-		}
-
-		public void ClassUp(int amount = 1)
-		{
-			if (amount < 1)
-				throw new ArgumentException("Amount can't be lower than 1.");
-
-			var job = this.Job;
-			var classLevel = job.Level;
-			var classExp = ZoneServer.Instance.Data.ExpDb.GetNextTotalClassExp(this.Jobs.GetCurrentRank(), job.Level + amount - 1);
-
-			// Limit EXP to the total max, otherwise the client will
-			// display level 1 with 0%.
-			job.TotalExp = Math.Min(job.TotalMaxExp, job.TotalExp + classExp);
-
-			var newClassLevel = this.ClassLevel;
-			var classLevelsGained = (newClassLevel - classLevel);
-
-			Send.ZC_JOB_EXP_UP(this, classExp);
-
-			if (classLevelsGained > 0)
-				this.ClassLevelUp(classLevelsGained);
+			Send.ZC_ADDON_MSG(this, "NOTICE_Dm_levelup_base", 3, "!@#$Auto_KaeLigTeo_LeBeli_SangSeungHayeossSeupNiDa#@!");
+			Send.ZC_NORMAL.PlayEffect(this, "F_pc_level_up", 3);
 		}
 
 		/// <summary>
@@ -804,8 +635,8 @@ namespace Melia.Zone.World.Actors.Characters
 			this.Heal();
 
 			Send.ZC_OBJECT_PROPERTY(this);
-			this.AddonMessage("NOTICE_Dm_levelup_skill", "!@#$Auto_KeulLeSeu_LeBeli_SangSeungHayeossSeupNiDa#@!", 3);
-			this.PlayEffect("F_pc_joblevel_up", 3);
+			Send.ZC_ADDON_MSG(this, "NOTICE_Dm_levelup_skill", 3, "!@#$Auto_KeulLeSeu_LeBeli_SangSeungHayeossSeupNiDa#@!");
+			Send.ZC_NORMAL.PlayEffect(this, "F_pc_joblevel_up", 3);
 		}
 
 		/// <summary>
@@ -832,11 +663,7 @@ namespace Melia.Zone.World.Actors.Characters
 				return;
 
 			this.ModifyHpSafe(hpAmount, out var hp, out var priority);
-			if (hpAmount > 0)
-				Send.ZC_HEAL_INFO(this, hpAmount, this.Properties.GetFloat(PropertyName.MHP), HealType.Hp);
 			this.Properties.Modify(PropertyName.SP, spAmount);
-			if (spAmount > 0)
-				Send.ZC_HEAL_INFO(this, spAmount, this.Properties.GetFloat(PropertyName.MSP), HealType.Sp);
 
 			Send.ZC_UPDATE_ALL_STATUS(this, priority);
 		}
@@ -970,12 +797,6 @@ namespace Melia.Zone.World.Actors.Characters
 
 			if (classLevelsGained > 0)
 				this.ClassLevelUp(classLevelsGained);
-
-			if (this.HasCompanions)
-			{
-				foreach (var companion in this.Companions.GetList())
-					companion.GiveExp(exp, monster);
-			}
 		}
 
 		/// <summary>
@@ -1014,43 +835,23 @@ namespace Melia.Zone.World.Actors.Characters
 				{
 					Send.ZC_ENTER_MONSTER(this.Connection, monster);
 
-					monster.Components?.Get<EffectsComponent>()?.ShowEffects(this.Connection);
-
-					if (!monster.AttachableEffects.IsEmpty)
+					if (monster.AttachableEffects.Count != 0)
 					{
 						foreach (var effect in monster.AttachableEffects)
 							Send.ZC_NORMAL.AttachEffect(this.Connection, monster, effect.PacketString, effect.Scale);
-					}
-
-					if (monster.OwnerHandle != 0)
-						Send.ZC_OWNER(this, monster);
-
-					if (monster is Summon summon)
-					{
-						Send.ZC_IS_SUMMON_SORCERER_MONSTER(this, summon);
-					}
-
-					if (monster is Companion companion)
-					{
-						Send.ZC_NORMAL.PetOwner(this.Connection, companion);
-						Send.ZC_NORMAL.Pet_AssociateWorldId(this.Connection, companion);
 					}
 
 					if (monster is ICombatEntity entity)
 					{
 						Send.ZC_FACTION(this.Connection, monster, entity.Faction);
 
-						if (entity.HasBuffs())
+						if (entity.Components.Get<BuffComponent>()?.Count != 0)
 							Send.ZC_BUFF_LIST(this.Connection, entity);
 					}
 				}
 
 				foreach (var monster in disappearMonsters)
-				{
 					Send.ZC_LEAVE(this.Connection, monster);
-					if (monster is ICombatEntity entity)
-						Send.ZC_BUFF_CLEAR(this.Connection, entity);
-				}
 
 				// Characters
 				foreach (var character in appearCharacters)
@@ -1323,18 +1124,15 @@ namespace Melia.Zone.World.Actors.Characters
 		/// </summary>
 		public void SendPCEtcProperties()
 		{
-			if (!this.EtcProperties.Has(PropertyName.SkintoneName))
-			{
-				this.EtcProperties.SetString(PropertyName.SkintoneName, "skintone2");
-				if (ZoneServer.Instance.Data.HairTypeDb.TryFind(this.Hair, out var hair))
-					this.EtcProperties.SetString(PropertyName.StartHairName, hair.ClassName);
-				this.EtcProperties.SetFloat(PropertyName.LobbyMapID, this.MapId);
-				this.EtcProperties.SetString(PropertyName.RepresentationClassID, ((int)this.JobId).ToString());
-				this.EtcProperties.SetFloat(PropertyName.CTRLTYPE_RESET_EXCEPT, 1);
-			}
-			this.EtcProperties.SetFloat(PropertyName.LastPlayDate, DateTimeUtils.ToSPropertyDateToFloat(DateTime.Now));
+			var pcEtcProps = new Properties("PCEtc");
+			pcEtcProps.SetString("SkintoneName", "skintone2");
+			pcEtcProps.SetString("StartHairName", "UnbalancedShortcut");
+			pcEtcProps.SetFloat("LobbyMapID", this.MapId);
+			pcEtcProps.SetString("RepresentationClassID", this.JobId.ToString());
+			pcEtcProps.SetFloat("LastPlayDate", 20210728);
+			pcEtcProps.SetFloat("CTRLTYPE_RESET_EXCEPT", 1);
 
-			Send.ZC_OBJECT_PROPERTY(this.Connection, this.SocialUserId, this.EtcProperties.GetAll());
+			Send.ZC_OBJECT_PROPERTY(this.Connection, this, pcEtcProps);
 		}
 
 		/// <summary>
@@ -1346,7 +1144,7 @@ namespace Melia.Zone.World.Actors.Characters
 		/// <returns></returns>
 		public bool TakeDamage(float damage, ICombatEntity attacker)
 		{
-			// Don't hit an already dead character
+			// Don't hit an already dead monster
 			if (this.IsDead)
 				return true;
 
@@ -1376,8 +1174,6 @@ namespace Melia.Zone.World.Actors.Characters
 
 			Send.ZC_DEAD(this);
 
-			this.Tracks.Cancel();
-
 			_resurrectDialogTimer = ResurrectDialogDelay;
 		}
 
@@ -1406,6 +1202,18 @@ namespace Melia.Zone.World.Actors.Characters
 		}
 
 		/// <summary>
+		/// Returns true if the character can attack others.
+		/// </summary>
+		/// <returns></returns>
+		public bool CanFight()
+		{
+			if (this.IsDead)
+				return false;
+
+			return true;
+		}
+
+		/// <summary>
 		/// Returns true if the character can attack the entity.
 		/// </summary>
 		/// <param name="entity"></param>
@@ -1422,30 +1230,6 @@ namespace Melia.Zone.World.Actors.Characters
 			// monsters.
 			var isHostileMonster = (entity is IMonster monster && monster.MonsterType == MonsterType.Mob);
 			if (!isHostileMonster)
-				return false;
-
-			return true;
-		}
-
-		/// <summary>
-		/// Returns true if the character can attack others.
-		/// </summary>
-		/// <returns></returns>
-		public bool CanFight()
-		{
-			if (this.IsDead)
-				return false;
-
-			return true;
-		}
-
-		/// <summary>
-		/// Returns true if the character can move.
-		/// </summary>
-		/// <returns></returns>
-		public bool CanMove()
-		{
-			if (this.IsDead || this.IsBuffActive(BuffId.Stop_Debuff))
 				return false;
 
 			return true;
@@ -1469,16 +1253,6 @@ namespace Melia.Zone.World.Actors.Characters
 			// Add the item to the inventory
 			this.Inventory.Add(itemMonster.Item, InventoryAddType.PickUp);
 
-			if (itemMonster.Item.Data.Journal)
-			{
-				if (itemMonster.MonsterId != 0)
-					this.AdventureBook.AddMonsterDrop(itemMonster.MonsterId, itemMonster.Item.Id, itemMonster.Item.Amount);
-				if (this.AdventureBook.IsNewEntry(AdventureBookType.ItemObtained, itemMonster.Item.Id))
-					this.AddonMessage("ADVENTURE_BOOK_NEW", itemMonster.Item.Data.Name);
-
-				this.AdventureBook.AddItemObtained(itemMonster.Item.Id, itemMonster.Item.Amount);
-			}
-
 			// Remove it from the map, so it can't be picked up again.
 			this.Map.RemoveMonster(itemMonster);
 		}
@@ -1488,9 +1262,6 @@ namespace Melia.Zone.World.Actors.Characters
 		/// </summary>
 		public void ToggleSitting()
 		{
-			if (this.IsDead)
-				return;
-
 			this.IsSitting = !this.IsSitting;
 			this.SitStatusChanged?.Invoke(this);
 
@@ -1501,242 +1272,9 @@ namespace Melia.Zone.World.Actors.Characters
 		/// Plays effect for the character.
 		/// </summary>
 		/// <param name="packetString"></param>
-		public void PlayEffectLocal(string packetString, float scale = 1, string heightOffset = "BOT")
+		public void PlayEffect(string packetString)
 		{
-			this.PlayEffectLocal(this.Connection, packetString, scale, heightOffset);
-		}
-
-		/// <summary>
-		/// Reduces character's stamina and updates the client.
-		/// </summary>
-		/// <param name="staminaUsage"></param>
-		private void UseStamina(int staminaUsage)
-		{
-			var stamina = (this.Properties.Stamina -= staminaUsage);
-			Send.ZC_STAMINA(this, stamina);
-		}
-
-		/// <summary>
-		/// Add a session object
-		/// </summary>
-		/// <param name="sessionObjectId"></param>
-		public SessionObject AddSessionObject(string sessionObjectId, int i1 = 1)
-		{
-			return this.AddSessionObject(PropertyTable.GetId("SessionObject", sessionObjectId));
-		}
-
-		/// <summary>
-		/// Add a Session Object and updates client
-		/// </summary>
-		/// <param name="sessionObjectId"></param>
-		public SessionObject AddSessionObject(int sessionObjectId)
-		{
-			var sessionObject = this.SessionObjects.GetOrCreate(sessionObjectId);
-			Send.ZC_SESSION_OBJ_ADD(this, sessionObject);
-			return sessionObject;
-		}
-
-		/// <summary>
-		/// Remove Session Object and updates the client
-		/// </summary>
-		/// <param name="sessionObjectId"></param>
-		public bool RemoveSessionObject(int sessionObjectId)
-		{
-			if (this.SessionObjects.Remove(sessionObjectId))
-			{
-				Send.ZC_SESSION_OBJ_REMOVE(this, sessionObjectId);
-				return true;
-			}
-			return false;
-		}
-
-		/// <summary>
-		/// Remove an item from the inventory.
-		/// </summary>
-		/// <param name="itemClassName"></param>
-		/// <param name="amount"></param>
-		public bool HasItem(string itemClassName, int amount = 1)
-		{
-			if (ZoneServer.Instance.Data.ItemDb.TryFind(itemClassName, out var item))
-				return this.HasItem(item.Id, amount);
-			return false;
-		}
-
-		/// <summary>
-		/// Returns true if the player has the item and has at least
-		/// the request amount.
-		/// </summary>
-		/// <param name="itemId"></param>
-		/// <param name="requiredAmount"></param>
-		/// <returns></returns>
-		public bool HasItem(int itemId, int requiredAmount = 1)
-		{
-			return this.Inventory.CountItem(itemId) >= requiredAmount;
-		}
-
-		/// <summary>
-		/// Remove an item from the inventory and returns amount removed.
-		/// </summary>
-		/// <param name="itemClassName"></param>
-		/// <param name="amount"></param>
-		public int RemoveItem(string itemClassName, int amount = 1)
-		{
-			if (ZoneServer.Instance.Data.ItemDb.TryFind(itemClassName, out var item))
-				return this.RemoveItem(item.Id, amount);
-			return -1;
-		}
-
-		/// <summary>
-		/// Remove an item from the inventory and returns amount removed.
-		/// </summary>
-		/// <param name="itemId"></param>
-		/// <param name="amount"></param>
-		public int RemoveItem(int itemId, int amount = 1)
-		{
-			return this.Inventory.Remove(itemId, amount, InventoryItemRemoveMsg.Given);
-		}
-
-		/// <summary>
-		/// Add an item to the inventory.
-		/// </summary>
-		/// <param name="itemClassName"></param>
-		/// <param name="amount"></param>
-		public void AddItem(string itemClassName, int amount = 1)
-		{
-			var item = ZoneServer.Instance.Data.ItemDb.FindByClass(itemClassName);
-			if (item != null)
-				this.AddItem(item.Id, amount);
-		}
-
-		/// <summary>
-		/// Add an item to the inventory.
-		/// </summary>
-		/// <param name="itemId"></param>
-		/// <param name="amount"></param>
-		public void AddItem(int itemId, int amount = 1)
-		{
-			this.Inventory.Add(itemId, amount);
-		}
-
-		/// <summary>
-		/// Sends an addon message
-		/// </summary>
-		/// <param name="function"></param>
-		/// <param name="stringParameter"></param>
-		/// <param name="intParameter"></param>
-		public void AddonMessage(string function, string stringParameter = null, int intParameter = 0)
-		{
-			Send.ZC_ADDON_MSG(this, function, intParameter, stringParameter);
-		}
-
-		/// <summary>
-		/// Show help
-		/// </summary>
-		/// <param name="className"></param>
-		public void ShowHelp(string className)
-		{
-			var help = ZoneServer.Instance.Data.HelpDb.Find(className);
-
-			if (help == null)
-			{
-				Log.Warning("ShowHelp: Unable to find help by class name {0}.", className);
-				return;
-			}
-
-			if (this.Help.ContainsKey(help.Id) && this.Help[help.Id])
-				return;
-
-			this.Help[help.Id] = true;
-
-			Send.ZC_HELP_ADD(this, help.Id, true);
-			if (help.DbSave)
-				ZoneServer.Instance.Database.SaveHelp(this.DbId, help.Id, true);
-		}
-
-		/// <summary>
-		/// Set a Property and send it to the client
-		/// </summary>
-		/// <param name="propertyName"></param>
-		/// <param name="value"></param>
-		public void SetProperty(string propertyName, float value)
-		{
-			this.Properties.SetFloat(propertyName, value);
-			Send.ZC_OBJECT_PROPERTY(this, propertyName);
-		}
-
-		/// <summary>
-		/// Set a Property and send it to the client
-		/// </summary>
-		/// <param name="propertyName"></param>
-		/// <param name="value"></param>
-		public void SetProperty(string propertyName, string value)
-		{
-			this.Properties.SetString(propertyName, value);
-			Send.ZC_OBJECT_PROPERTY(this, propertyName);
-		}
-
-		/// <summary>
-		/// Modify a Property and send it to the client
-		/// </summary>
-		/// <param name="propertyName"></param>
-		/// <param name="value"></param>
-		public void ModifyProperty(string propertyName, float value)
-		{
-			this.Properties.Modify(propertyName, value);
-			Send.ZC_OBJECT_PROPERTY(this, propertyName);
-		}
-
-		/// <summary>
-		/// Set an account property and update the client.
-		/// </summary>
-		/// <param name="propertyName"></param>
-		/// <param name="value"></param>
-		public void SetAccountProperty(string propertyName, int value)
-		{
-			var properties = this.Connection.Account.Properties;
-			properties.SetFloat(propertyName, value);
-
-			Send.ZC_NORMAL.AccountProperties(this, propertyName);
-		}
-
-		/// <summary>
-		/// Modify an account property and update the client.
-		/// </summary>
-		/// <param name="propertyName"></param>
-		/// <param name="modifier"></param>
-		public void ModifyAccountProperty(string propertyName, float modifier)
-		{
-			var properties = this.Connection.Account.Properties;
-			properties.Modify(propertyName, modifier);
-
-			Send.ZC_OBJECT_PROPERTY(this.Connection, this.Connection.Account, propertyName);
-			Send.ZC_NORMAL.AccountProperties(this, propertyName);
-			Send.ZC_PC_PROP_UPDATE(this, (short)PropertyTable.GetId("Account", propertyName), 1);
-		}
-
-		public void AddAchievePoint(string achievementName, int value)
-		{
-			this.Achievements?.AddAchievementPoints(achievementName, value);
-		}
-
-		/// <summary>
-		/// Used to setup a "new" instance of a map in the client.
-		/// </summary>
-		public int StartLayer()
-		{
-			this.Layer = this.Map.GetNewLayer();
-			Send.ZC_SET_LAYER(this, this.Layer, true);
-
-			return this.Layer;
-		}
-
-		/// <summary>
-		/// Used to remove a "new" instance of a map in the client.
-		/// </summary>
-		public void StopLayer()
-		{
-			this.Layer = 0;
-			Send.ZC_SET_LAYER(this, this.Layer, false);
+			Send.ZC_NORMAL.PlayEffect(this, packetString);
 		}
 
 		/// <summary>
@@ -1747,73 +1285,6 @@ namespace Melia.Zone.World.Actors.Characters
 		{
 			this.Hair = hairTypeIndex;
 			Send.ZC_UPDATED_PCAPPEARANCE(this);
-		}
-
-		/// <summary>
-		/// Set ETC property and updates client.
-		/// </summary>
-		/// <param name="propertyName"></param>
-		/// <param name="value"></param>
-		public void SetEtcProperty(string propertyName, int value)
-		{
-			this.EtcProperties.SetFloat(propertyName, value);
-			Send.ZC_OBJECT_PROPERTY(this, this.SocialUserId, this.EtcProperties.GetSelect(propertyName));
-		}
-
-		/// <summary>
-		/// Set ETC property and updates client.
-		/// </summary>
-		/// <param name="propertyName"></param>
-		/// <param name="value"></param>
-		public void SetEtcProperty(string propertyName, string value)
-		{
-			this.EtcProperties.SetString(propertyName, value);
-			Send.ZC_OBJECT_PROPERTY(this, this.SocialUserId, this.EtcProperties.GetSelect(propertyName));
-		}
-
-		/// <summary>
-		/// Modify ETC property and updates client.
-		/// </summary>
-		/// <param name="propertyName"></param>
-		/// <param name="amount"></param>
-		public void ModifyEtcProperty(string propertyName, int amount)
-		{
-			this.EtcProperties.Modify(propertyName, amount);
-			Send.ZC_OBJECT_PROPERTY(this, this.SocialUserId, this.EtcProperties.GetSelect(propertyName));
-		}
-
-		/// <summary>
-		/// Enable or disable character control.
-		/// </summary>
-		/// <param name="controlScript"></param>
-		/// <param name="enabled"></param>
-		public void EnableControl(string controlScript, bool enabled)
-		{
-			Send.ZC_ENABLE_CONTROL(this.Connection, controlScript, enabled);
-		}
-
-		/// <summary>
-		/// Parse items and add them to character's inventory
-		/// </summary>
-		/// <param name="itemAsString"></param>
-		/// <param name="amount"></param>
-		public void AddItems(string itemAsString, int amount = 1)
-		{
-			foreach (var itemString in itemAsString.Split(';'))
-			{
-				if (itemString.Length == 0)
-				{
-					continue;
-				}
-				var itemSplit = itemString.Split('/');
-				var itemClassName = itemSplit[0];
-				var itemData = ZoneServer.Instance.Data.ItemDb.FindByClass(itemClassName);
-				if (string.IsNullOrWhiteSpace(itemClassName))
-					continue;
-				if (itemSplit.Length > 1)
-					int.TryParse(itemSplit[1], out amount);
-				this.Inventory.Add(itemData.Id, amount, InventoryAddType.New);
-			}
 		}
 	}
 }

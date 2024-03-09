@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Melia.Shared.Data.Database;
-using Melia.Shared.Tos.Const;
-using Melia.Shared.Tos.Const.Web;
+using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting.Dialogues;
 using Melia.Zone.World.Actors.Characters;
-using Melia.Zone.World.Actors.Components;
 using Melia.Zone.World.Actors.Monsters;
-using Yggdrasil.Composition;
 using Yggdrasil.Scheduling;
 
 namespace Melia.Zone.World.Actors.CombatEntities.Components
@@ -25,8 +21,6 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		private TimeSpan _moveTime;
 
 		private ITriggerableArea[] _triggerAreas = new ITriggerableArea[0];
-		private Position _startPosition = Position.Zero;
-		private Position _endPosition = Position.Zero;
 
 		/// <summary>
 		/// Returns the entity's current destination, if it's moving to
@@ -83,6 +77,7 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 		/// to move to the destination from its current position.
 		/// </summary>
 		/// <param name="destination"></param>
+		/// <param name="walk"></param>
 		/// <returns></returns>
 		public TimeSpan CalcMoveToTime(Position destination)
 		{
@@ -139,10 +134,7 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 					var toCellPos = this.Entity.Map.Ground.GetCellPosition(this.Destination);
 
 					// Update clients
-					if (this.Entity is Character)
-						Send.ZC_MOVE_DIR(this.Entity, this.Destination, this.Entity.Direction, 0);
-					else
-						Send.ZC_MOVE_PATH(this.Entity, fromCellPos, toCellPos, speed);
+					Send.ZC_MOVE_PATH(this.Entity, fromCellPos, toCellPos, speed);
 				}
 
 				return _moveTime;
@@ -162,9 +154,6 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 			{
 				this.IsMoving = false;
 				this.Destination = pos;
-
-				if (this.Entity is Companion)
-					Send.ZC_PLAY_ANI(this.Entity, AnimationName.Empty, false, 1);
 
 				Send.ZC_MOVE_STOP(this.Entity, pos);
 			}
@@ -235,8 +224,6 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 			this.MoveTarget = MoveTargetType.Direction;
 
 			Send.ZC_MOVE_DIR(this.Entity, pos, dir, unkFloat);
-
-			this.Entity.Components.Get<ActorPositionUpdaterComponent>()?.UpdatePosition();
 		}
 
 		/// <summary>
@@ -447,22 +434,7 @@ namespace Melia.Zone.World.Actors.CombatEntities.Components
 				triggerArea.LeaveFunc.Invoke(dialog);
 			}
 
-			foreach (var triggerArea in triggerAreas)
-			{
-				if (triggerArea.WhileInsideFunc == null)
-					continue;
-
-				var dialog = new Dialog(this.Entity, triggerArea);
-				triggerArea.WhileInsideFunc.Invoke(dialog);
-			}
-
 			_triggerAreas = triggerAreas;
-		}
-
-		public void SetPath(Position startPosition, Position endPosition)
-		{
-			_startPosition = startPosition;
-			_endPosition = startPosition;
 		}
 
 		private enum MoveTargetType
