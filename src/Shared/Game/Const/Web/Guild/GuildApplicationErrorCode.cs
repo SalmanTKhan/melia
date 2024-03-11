@@ -1,4 +1,4 @@
-﻿namespace Melia.Shared.Tos.Const.Web.Guild
+﻿namespace Melia.Shared.Game.Const.Web.Guild
 {
 	public enum GuildApplicationErrorCode
 	{

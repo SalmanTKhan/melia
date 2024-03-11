@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Melia.Shared.Tos.Const
+namespace Melia.Shared.Game.Const
 {
 	public enum PartyType
 	{

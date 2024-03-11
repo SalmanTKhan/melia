@@ -10,6 +10,7 @@ using MySqlConnector;
 using Yggdrasil.Logging;
 using Yggdrasil.Security.Hashing;
 using Yggdrasil.Util;
+using System.Drawing;
 
 namespace Melia.Barracks.Database
 {
@@ -155,6 +156,7 @@ namespace Melia.Barracks.Database
 					cmd.Set("job", character.JobId);
 					cmd.Set("gender", character.Gender);
 					cmd.Set("hair", character.Hair);
+					cmd.Set("skintone", (uint)character.Skin.ToArgb());
 
 					cmd.Set("zone", character.MapId);
 					cmd.Set("x", character.Position.X);
@@ -291,6 +293,7 @@ namespace Melia.Barracks.Database
 							character.JobId = (JobId)reader.GetInt16("job");
 							character.Gender = (Gender)reader.GetByte("gender");
 							character.Hair = reader.GetInt32("hair");
+							character.Skin = Color.FromArgb((int)reader.GetUInt32("skintone"));
 							character.Level = reader.GetInt32("level");
 							character.MapId = reader.GetInt32("zone");
 							character.Index = (byte)reader.GetInt32("slot");

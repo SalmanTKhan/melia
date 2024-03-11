@@ -5,7 +5,7 @@
 //---------------------------------------------------------------------------
 
 using System;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone.Scripting;
 using Melia.Zone.World.Actors;
 using Melia.Zone.World.Actors.Monsters;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Yggdrasil.Network.Communication;
 
 namespace Melia.Shared.Network.Inter.Messages

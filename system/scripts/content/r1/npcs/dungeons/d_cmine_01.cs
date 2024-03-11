@@ -4,7 +4,7 @@
 // NPCs found in and around Crystal Mine 1F.
 //---------------------------------------------------------------------------
 
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone.Scripting;
 using static Melia.Zone.Scripting.Shortcuts;
 

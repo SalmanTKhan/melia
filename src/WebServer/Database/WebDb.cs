@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Melia.Shared.Tos.Const.Web;
-using Melia.Shared.Tos.Const;
-using Melia.Shared.Database;
-using Yggdrasil.Logging;
 using MySqlConnector;
+using Melia.Shared.Database;
+using Melia.Shared.Game.Const;
+using Melia.Shared.Game.Const.Web;
+using Yggdrasil.Logging;
 
 namespace Melia.Web.Database
 {

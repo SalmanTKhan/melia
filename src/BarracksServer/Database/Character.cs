@@ -4,6 +4,7 @@ using Melia.Barracks.Network.Helpers;
 using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 using Melia.Shared.ObjectProperties;
+using System.Drawing;
 
 namespace Melia.Barracks.Database
 {
@@ -61,6 +62,11 @@ namespace Melia.Barracks.Database
 		/// Gets or sets id of the character's hair style.
 		/// </summary>
 		public int Hair { get; set; }
+
+		/// <summary>
+		/// Gets or sets the argb of the character's skin tone.
+		/// </summary>
+		public Color Skin { get; set; }
 
 		/// <summary>
 		/// Returns a list of equipped items.
@@ -214,6 +220,7 @@ namespace Melia.Barracks.Database
 		/// </summary>
 		public Character()
 		{
+			this.Skin = Color.FromArgb(255, 128, 128, 128);
 			this.Equipment = new EquipItem[InventoryDefaults.EquipSlotCount];
 
 			for (var i = 0; i < InventoryDefaults.EquipSlotCount; ++i)

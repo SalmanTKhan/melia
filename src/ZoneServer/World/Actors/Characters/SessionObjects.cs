@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Melia.Shared.ObjectProperties;
-using Melia.Shared.Tos.Const;
-using Melia.Shared.Tos.Properties;
+using Melia.Shared.Game.Const;
+using Melia.Shared.Game.Properties;
 
 namespace Melia.Zone.World.Actors.Characters
 {

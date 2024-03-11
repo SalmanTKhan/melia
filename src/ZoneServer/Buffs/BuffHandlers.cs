@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Melia.Zone.Buffs.Base;
 using Melia.Shared.Game.Const;
+using Melia.Zone.Buffs.Base;
 
 namespace Melia.Zone.Buffs
 {

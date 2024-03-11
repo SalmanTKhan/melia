@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone.Events;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting;

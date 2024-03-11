@@ -209,7 +209,7 @@ switch (type)
             int equipSlot; // 2
             byte visible;
             int hairIndex; // 483
-            if (i2 > 0)
+            if (hairIndex > 0)
             {
                 int itemId;
                 int i3;

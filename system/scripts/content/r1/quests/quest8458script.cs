@@ -1,11 +1,11 @@
-//--- Melia Script -----------------------------------------------------------
+ //--- Melia Script -----------------------------------------------------------
 // Old Story (7)
 //--- Description -----------------------------------------------------------
 // Quest to Talk to Coben.
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Melia.Shared.Database;
 using Melia.Shared.ObjectProperties;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Social.World;
 using MySqlConnector;
 

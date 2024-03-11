@@ -1,10 +1,10 @@
 ﻿using System;
+using Melia.Shared.Game.Const;
+using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Items;
 using Melia.Zone.World.Actors.Monsters;
-using Melia.Shared.Tos.Const;
-using Melia.Zone;
 using Melia.Zone.World.Actors.CombatEntities.Components;
 using static Melia.Zone.Scripting.Shortcuts;
 

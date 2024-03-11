@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Melia.Shared.Data.Database;
 using Melia.Shared.Database;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Game.Const;
+using Melia.Shared.Game.Const.Web;
 using Melia.Shared.Game.Properties;
 using Melia.Shared.World;
 using Melia.Zone.Buffs;
@@ -25,6 +25,7 @@ using Melia.Zone.World.Quests;
 using MySqlConnector;
 using Yggdrasil.Logging;
 using Yggdrasil.Util;
+using System.Drawing;
 
 namespace Melia.Zone.Database
 {
@@ -133,6 +134,7 @@ namespace Melia.Zone.Database
 					character.TeamName = reader.GetStringSafe("teamName");
 					character.JobId = (JobId)reader.GetInt16("job");
 					character.Gender = (Gender)reader.GetByte("gender");
+					character.Skin = Color.FromArgb((int)reader.GetUInt32("skintone"));
 					character.Hair = reader.GetInt32("hair");
 					character.MapId = reader.GetInt32("zone");
 					character.Exp = reader.GetInt64("exp");
@@ -574,6 +576,7 @@ namespace Melia.Zone.Database
 				cmd.Set("job", (short)character.JobId);
 				cmd.Set("gender", (byte)character.Gender);
 				cmd.Set("hair", character.Hair);
+				cmd.Set("skintone", (uint)character.Skin.ToArgb());
 				cmd.Set("level", character.Level);
 				cmd.Set("zone", character.MapId);
 				cmd.Set("x", character.Position.X);

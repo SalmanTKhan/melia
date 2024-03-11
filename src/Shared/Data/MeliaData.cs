@@ -49,6 +49,7 @@ namespace Melia.Shared.Data
 		public ShopDb ShopDb { get; } = new ShopDb();
 		public SkillDb SkillDb { get; } = new SkillDb();
 		public SkillTreeDb SkillTreeDb { get; } = new SkillTreeDb();
+		public SkintoneDb SkintoneDb { get; } = new SkintoneDb();
 		public StanceConditionDb StanceConditionDb { get; } = new StanceConditionDb();
 		public SystemMessageDb SystemMessageDb { get; } = new SystemMessageDb();
 		public TradeShopDb TradeShopDb { get; }

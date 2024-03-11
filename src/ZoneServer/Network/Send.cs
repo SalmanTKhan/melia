@@ -29,6 +29,7 @@ using Yggdrasil.Extensions;
 using Yggdrasil.Geometry.Shapes;
 using Yggdrasil.Logging;
 using Yggdrasil.Util;
+using Melia.Shared.Util;
 
 namespace Melia.Zone.Network
 {

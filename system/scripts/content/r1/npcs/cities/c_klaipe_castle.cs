@@ -4,7 +4,7 @@
 // NPCs found in and around Moroth Embassy in Kingdom.
 //---------------------------------------------------------------------------
 
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone.Scripting;
 using static Melia.Zone.Scripting.Shortcuts;
 

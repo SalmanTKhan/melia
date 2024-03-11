@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using EmbedIO.Routing;
 using EmbedIO;
 using EmbedIO.WebApi;
-using Melia.Shared.Tos.Const.Web;
+using Melia.Shared.Game.Const.Web;
 using Melia.Web.Serializer;
 using Melia.Web.Util;
 using Newtonsoft.Json;

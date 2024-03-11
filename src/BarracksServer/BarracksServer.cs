@@ -81,12 +81,31 @@ namespace Melia.Barracks
 			this.CheckDatabaseUpdates();
 			this.ClearLoginStates();
 			this.LoadScripts("system/scripts/scripts_barracks.txt");
+			this.LoadIesMods();
 
 			this.StartCommunicator();
 			this.StartAcceptor();
 
 			ConsoleUtil.RunningTitle();
 			new BarracksConsoleCommands().Wait();
+		}
+
+		/// <summary>
+		/// Sets up IES mods.
+		/// </summary>
+		private void LoadIesMods()
+		{
+			// This method is temporary until we have a more proper way
+			// way of handling IES mods.
+
+			// Enables overriding skintones available at character creation
+			if (!Feature.IsEnabled("OverrideSkintones"))
+			{
+				foreach (var skin in this.Data.SkintoneDb.Entries.Values)
+				{
+					this.IesMods.Add("SkinTone", skin.Id, "UseableBarrack", skin.IsAvailableInLodge ? "YES" : "NO");
+				}
+			}
 		}
 
 		/// <summary>

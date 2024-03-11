@@ -4,7 +4,7 @@
 // NPCs found in and around Goddess Roulette Over the Rainbow Event.
 //---------------------------------------------------------------------------
 
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone.Scripting;
 using static Melia.Zone.Scripting.Shortcuts;
 

@@ -18,7 +18,7 @@ namespace Melia.Web.Controllers
 	/// </summary>
 	public class TosPatchController : BaseController
 	{
-		private TOSCrypto _crypto { get; } = new TOSCrypto();
+		private Codec _codec { get; } = new Codec();
 
 		/// <summary>
 		/// Serves a list of barrack servers.
@@ -86,7 +86,7 @@ namespace Melia.Web.Controllers
 			patcherVersion.AppendLine("0    ");
 			patcherVersion.AppendLine("");
 			var result = Encoding.UTF8.GetBytes(patcherVersion.ToString());
-			result = _crypto.EncryptFile(result);
+			result = _codec.EncryptFile(result);
 			return result;
 		}
 
@@ -127,8 +127,8 @@ namespace Melia.Web.Controllers
 				if (File.Exists(filePath))
 				{
 					var encryptedFile = File.ReadAllBytes(filePath);
-					encryptedFile = _crypto.EncryptFile(encryptedFile);
-					SendText("text/plain", Encoding.ASCII.GetString(encryptedFile));
+					encryptedFile = _codec.EncryptFile(encryptedFile);
+					this.SendText("text/plain", Encoding.ASCII.GetString(encryptedFile));
 					return;
 				}
 			}

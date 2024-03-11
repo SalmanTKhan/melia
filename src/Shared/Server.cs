@@ -209,6 +209,8 @@ namespace Melia.Shared
 					this.LoadDb(this.Data.MapDb, "db/maps.txt");
 					this.LoadDb(this.Data.PropertiesDb, "db/properties.txt");
 					this.LoadDb(this.Data.ServerDb, "db/servers.txt");
+					this.LoadDb(this.Data.HairTypeDb, "db/hair_types.txt");
+					this.LoadDb(this.Data.SkintoneDb, "db/skintones.txt");
 					this.LoadDb(this.Data.StanceConditionDb, "db/stanceconditions.txt");
 
 					PropertyTable.Load(this.Data.PropertiesDb);
@@ -256,6 +258,7 @@ namespace Melia.Shared
 					this.LoadDb(this.Data.ShopDb, "db/shops.txt");
 					this.LoadDb(this.Data.SkillDb, "db/skills.txt");
 					this.LoadDb(this.Data.SkillTreeDb, "db/skilltree.txt");
+					this.LoadDb(this.Data.SkintoneDb, "db/skintones.txt");
 					this.LoadDb(this.Data.StanceConditionDb, "db/stanceconditions.txt");
 					this.LoadDb(this.Data.SystemMessageDb, "db/system_messages.txt");
 					//this.LoadDb(this.Data.TpItemDb, "db/tp_items.txt");

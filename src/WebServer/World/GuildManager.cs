@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Melia.Shared.Tos.Const.Web;
+using Melia.Shared.Game.Const.Web;
 using Yggdrasil.Logging;
 
 namespace Melia.Web.World

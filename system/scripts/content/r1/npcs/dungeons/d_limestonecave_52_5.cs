@@ -4,7 +4,7 @@
 // NPCs found in and around Tevhrin Stalactite Cave Section 5.
 //---------------------------------------------------------------------------
 
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone.Scripting;
 using static Melia.Zone.Scripting.Shortcuts;
 

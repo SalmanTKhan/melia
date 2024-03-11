@@ -33,4 +33,5 @@ uint lodge;
 int startMap;
 
 byte hair;
-ubyte bin1[5]; // byte, int (color)?
+byte b1;
+ubyte skinColor[4]; // green, blue, red, alpha?

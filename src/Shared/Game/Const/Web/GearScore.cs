@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Melia.Shared.Tos.Const.Web
+namespace Melia.Shared.Game.Const.Web
 {
 	public class GearScore
 	{

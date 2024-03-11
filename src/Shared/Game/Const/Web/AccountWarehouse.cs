@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Melia.Shared.Tos.Const.Web
+namespace Melia.Shared.Game.Const.Web
 {
 	public class AccountWarehouse
 	{

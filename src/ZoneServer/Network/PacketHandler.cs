@@ -24,6 +24,7 @@ using Melia.Zone.World.Actors.Monsters;
 using Melia.Zone.World.Items;
 using Melia.Zone.World.Maps;
 using Yggdrasil.Logging;
+using Melia.Shared.Game.Properties;
 
 namespace Melia.Zone.Network
 {
@@ -4198,7 +4199,7 @@ namespace Melia.Zone.Network
 			var newHairColor = packet.GetString();
 			var character = conn.SelectedCharacter;
 
-			if (ZoneServer.Instance.Data.HairTypeDb.TryFind(character.Hair, out var currentHair))
+			if (ZoneServer.Instance.Data.HairTypeDb.TryFind(character.Gender, character.Hair, out var currentHair))
 			{
 				var newHair = ZoneServer.Instance.Data.HairTypeDb.Find(a => a.ClassName == currentHair.ClassName && a.Color == newHairColor);
 				if (newHair != null)

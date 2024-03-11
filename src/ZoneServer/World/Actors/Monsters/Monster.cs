@@ -1,8 +1,6 @@
 ﻿using System;
 using Melia.Shared.ObjectProperties;
 using Melia.Shared.Game.Const;
-using Melia.Shared.World;
-using Melia.Zone.World.Maps;
 
 namespace Melia.Zone.World.Actors.Monsters
 {
@@ -17,9 +15,10 @@ namespace Melia.Zone.World.Actors.Monsters
 		/// map it's on.
 		/// </summary>
 		DateTime DisappearTime { get; }
+		Action OnDisappear { get; }
 	}
 
-	public interface IMonsterBase : IActor, IMonsterAppearance, IMonsterAppearanceBase
+	public interface IMonsterBase : ISubActor, IMonsterAppearance, IMonsterAppearanceBase, ISpawn
 	{
 		/// <summary>
 		/// Returns the monster's type.

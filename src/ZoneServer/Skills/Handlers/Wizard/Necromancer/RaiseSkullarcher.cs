@@ -1,5 +1,5 @@
 using System;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 using Melia.Shared.L10N;
 using Melia.Zone.Buffs;

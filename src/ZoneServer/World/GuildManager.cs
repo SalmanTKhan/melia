@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Shared.Util;
 using Melia.Zone.Network;
 using Melia.Zone.World.Actors.Characters;

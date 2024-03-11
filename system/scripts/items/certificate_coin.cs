@@ -6,8 +6,8 @@
 
 using System;
 using Melia.Shared.ObjectProperties;
-using Melia.Shared.Tos.Const;
-using Melia.Shared.Tos.Properties;
+using Melia.Shared.Game.Const;
+using Melia.Shared.Game.Properties;
 using Melia.Zone.Network;
 using Melia.Zone.Scripting;
 using Melia.Zone.World.Actors.Characters;

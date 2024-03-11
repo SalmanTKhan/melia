@@ -1,5 +1,5 @@
 ﻿using Melia.Shared.ObjectProperties;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 
 namespace Melia.Barracks.Database

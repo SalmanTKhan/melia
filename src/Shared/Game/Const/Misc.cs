@@ -1,4 +1,6 @@
-﻿namespace Melia.Shared.Game.Const
+﻿using System;
+
+namespace Melia.Shared.Game.Const
 {
 	public enum TeamNameChangeResult : int
 	{

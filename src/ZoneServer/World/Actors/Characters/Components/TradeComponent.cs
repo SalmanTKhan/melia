@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone.Network;
 using Yggdrasil.Composition;
 using Yggdrasil.Logging;

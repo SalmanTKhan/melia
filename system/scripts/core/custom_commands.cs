@@ -120,7 +120,7 @@ public class CustomCommandFunctionsScript : GeneralScript
 		var newJob = new Job(character, jobId, skillPoints: 1);
 
 		Send.ZC_PC(character, PcUpdateType.Job, (int)newJob.Id, newJob.Level);
-		Send.ZC_NORMAL.PlayEffect(character, "F_pc_class_change");
+		character.PlayEffect("F_pc_class_change");
 
 		character.JobId = jobId;
 		character.Jobs.Add(newJob);

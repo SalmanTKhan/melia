@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using Melia.Shared.Game.Const;
 
 namespace Melia.Shared.Network.Helpers
@@ -27,10 +28,10 @@ namespace Melia.Shared.Network.Helpers
 			packet.PutByte(0);
 			packet.PutInt(appearancePc.Level);
 			packet.PutInt((int)appearancePc.JobId); // i1. 5001 on Scout, maybe display job?
-			packet.PutByte(0x80); //128
-			packet.PutByte(0x80); //128
-			packet.PutByte(0x80); //128
-			packet.PutByte(0xFF); //255
+			packet.PutByte(appearancePc.Skin.B); //128
+			packet.PutByte(appearancePc.Skin.G); //128
+			packet.PutByte(appearancePc.Skin.R); //128
+			packet.PutByte(appearancePc.Skin.A); //255                                      
 			packet.PutInt(appearancePc.ChatBalloon); // i2 1 or 0
 
 			// Items
@@ -126,6 +127,11 @@ namespace Melia.Shared.Network.Helpers
 		/// Returns the character's gender.
 		/// </summary>
 		Gender Gender { get; }
+
+		/// <summary>
+		/// Returns the character's skin tone.
+		/// </summary>
+		Color Skin { get; }
 
 		/// <summary>
 		/// Returns the character's current level.

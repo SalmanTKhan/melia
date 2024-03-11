@@ -13,6 +13,7 @@ using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 using Yggdrasil.Logging;
 using Yggdrasil.Security.Hashing;
+using System.Drawing;
 
 namespace Melia.Barracks.Network
 {
@@ -286,7 +287,12 @@ namespace Melia.Barracks.Network
 			var lodge = packet.GetInt();
 			var startMap = packet.GetInt(); // [i354444] Added. 0 = lv 440 character, 1 = lv 1 character, internally called map select
 			var hair = packet.GetByte();
-			var bin1 = packet.GetBin(5);
+			var b1 = packet.GetByte();
+			var blue = packet.GetByte();
+			var green = packet.GetByte();
+			var red = packet.GetByte();
+			var alpha = packet.GetByte();
+			var skin = Color.FromArgb(alpha, red, green, blue);
 
 			// Check job
 			if (job != JobId.Swordsman && job != JobId.Wizard && job != JobId.Archer && job != JobId.Cleric && job != JobId.Scout)
@@ -300,6 +306,14 @@ namespace Melia.Barracks.Network
 			if (gender < Gender.Male || gender > Gender.Female)
 			{
 				Log.Warning("CB_COMMANDER_CREATE: User '{0}' tried to create character with invalid gender '{1}'.", conn.Account.Name, gender);
+				conn.Close();
+				return;
+			}
+
+			// Check skin tone
+			if (!BarracksServer.Instance.Data.SkintoneDb.TryFind(skin, out var skinData) || !skinData.IsAvailableInLodge)
+			{
+				Log.Warning("CB_COMMANDER_CREATE: User '{0}' tried to create character with invalid skin tone '{1}'.", conn.Account.Name, skin);
 				conn.Close();
 				return;
 			}
@@ -344,6 +358,7 @@ namespace Melia.Barracks.Network
 			character.JobId = job;
 			character.Gender = gender;
 			character.Hair = hair;
+			character.Skin = skin;
 
 			character.MapId = startMapData.Id;
 			character.Position = startPosition;

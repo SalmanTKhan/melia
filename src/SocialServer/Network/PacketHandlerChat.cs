@@ -1,5 +1,5 @@
 ﻿using Melia.Shared.Network;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Social.Database;
 using Yggdrasil.Logging;
 using Yggdrasil.Security.Hashing;

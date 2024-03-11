@@ -5,7 +5,7 @@
 //---------------------------------------------------------------------------
 
 using System.Collections.Generic;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone.Scripting;
 using Melia.Zone.World.Actors.Characters;
 using Melia.Zone.World.Items;

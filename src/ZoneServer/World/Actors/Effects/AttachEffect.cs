@@ -1,4 +1,4 @@
-﻿using Melia.Shared.Tos.Const;
+﻿using Melia.Shared.Game.Const;
 using Melia.Zone.Network;
 
 namespace Melia.Zone.World.Actors.Effects

@@ -88,6 +88,9 @@
 		// member target selection wheel
 		{ name: "ClericHealPartySelect", enabled: true },
 	]},
+	// 
+	// Enables overriding skintones available at character creation
+	{ name: "OverrideSkintones", enabled: true },
 	
 ]},
 

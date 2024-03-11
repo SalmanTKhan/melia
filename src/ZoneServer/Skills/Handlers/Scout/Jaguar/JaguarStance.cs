@@ -1,6 +1,6 @@
 using System;
 using Melia.Zone.Network;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Shared.World;
 using Melia.Zone.Skills.Handlers.Base;
 using Melia.Zone.World.Actors;

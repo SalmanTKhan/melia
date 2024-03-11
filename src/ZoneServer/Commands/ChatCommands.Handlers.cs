@@ -1550,7 +1550,7 @@ namespace Melia.Zone.Commands
 		{
 			if (target.Components.Has<AiComponent>())
 			{
-				Send.ZC_NORMAL.Cutscene(target, false, false, false);
+				Send.ZC_NORMAL.SetupCutscene(target, false, false, false);
 
 				target.Components.Remove<MovementComponent>();
 				target.Components.Remove<AiComponent>();
@@ -1574,7 +1574,7 @@ namespace Melia.Zone.Commands
 				// Characters need to be in "cutscene mode" for the server
 				// to move them, otherwise they'll just ignore the move
 				// packets.
-				Send.ZC_NORMAL.Cutscene(target, true, false, false);
+				Send.ZC_NORMAL.SetupCutscene(target, true, false, false);
 
 				target.Components.Add(new MovementComponent(target));
 				target.Components.Add(new AiComponent(target, aiName));

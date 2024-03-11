@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Melia.Shared.Tos.Const.Web
+namespace Melia.Shared.Game.Const.Web
 {
 	public class HousingInfo
 	{

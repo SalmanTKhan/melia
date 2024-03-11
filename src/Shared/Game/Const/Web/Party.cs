@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Melia.Shared.Tos.Const.Web
+namespace Melia.Shared.Game.Const.Web
 {
 	[JsonObject(NamingStrategyType = typeof(SnakeCaseNamingStrategy))]
 	public class PartyRequestLimitation

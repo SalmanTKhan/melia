@@ -1,11 +1,11 @@
-//--- Melia Script -----------------------------------------------------------
+            //--- Melia Script -----------------------------------------------------------
 // New Market District (1)
 //--- Description -----------------------------------------------------------
 // Quest to Talk to Stonemason Canolyn.
 //---------------------------------------------------------------------------
 
 using System.Threading.Tasks;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
 using Melia.Zone;
 using Melia.Zone.Scripting;
 using Melia.Zone.Scripting.Dialogues;

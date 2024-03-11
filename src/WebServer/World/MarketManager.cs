@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Melia.Shared.Tos.Const.Web;
-using Melia.Shared.Tos.Const;
+using Melia.Shared.Game.Const;
+using Melia.Shared.Game.Const.Web;
 using Yggdrasil.Logging;
 
 namespace Melia.Web.World

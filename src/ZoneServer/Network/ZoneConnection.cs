@@ -197,6 +197,9 @@ namespace Melia.Zone.Network
 				ZoneServer.Instance.Database.UpdateLoginState(this.Account.Id, 0, LoginState.LoggedOut);
 			}
 
+			foreach (var monster in character?.Summons.GetSummons())
+				character?.Map.RemoveMonster(monster);
+
 			character?.Map.RemoveCharacter(character);
 		}
 

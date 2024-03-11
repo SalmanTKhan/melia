@@ -330,7 +330,8 @@ namespace Melia.Shared.Database
 				cmd.AddParameter("@accountId", accountId);
 				cmd.Set("loginState", (int)state);
 				cmd.Set("loginCharacter", characterDbId);
-				cmd.Set("lastLogin", DateTime.Now);
+				if (state != LoginState.LoggedOut)
+					cmd.Set("lastLogin", DateTime.Now);
 
 				cmd.Execute();
 			}
