@@ -90,7 +90,7 @@
 	]},
 	// 
 	// Enables overriding skintones available at character creation
-	{ name: "OverrideSkintones", enabled: true },
+	{ name: "OverrideSkintones", enabled: false },
 	
 ]},
 

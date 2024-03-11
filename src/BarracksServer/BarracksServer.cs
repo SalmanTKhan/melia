@@ -99,7 +99,7 @@ namespace Melia.Barracks
 			// way of handling IES mods.
 
 			// Enables overriding skintones available at character creation
-			if (!Feature.IsEnabled("OverrideSkintones"))
+			if (Feature.IsEnabled("OverrideSkintones"))
 			{
 				foreach (var skin in this.Data.SkintoneDb.Entries.Values)
 				{
