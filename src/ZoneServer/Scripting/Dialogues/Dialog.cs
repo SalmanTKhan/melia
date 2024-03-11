@@ -306,16 +306,6 @@ namespace Melia.Zone.Scripting.Dialogues
 		}
 
 		/// <summary>
-		/// Returns true if value is a known client-side dialog name.
-		/// </summary>
-		/// <param name="value"></param>
-		/// <returns></returns>
-		private bool IsClientDialog(string value)
-		{
-			return ZoneServer.Instance.Data.DialogDb.Exists(value);
-		}
-
-		/// <summary>
 		/// Wraps key with dictonary id code.
 		/// </summary>
 		/// <param name="key"></param>

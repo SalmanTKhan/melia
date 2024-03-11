@@ -19,7 +19,7 @@ public class ItemEquipScript : GeneralScript
 	[ScriptableFunction]
 	public ItemEquipResult SCP_ON_EQUIP_ITEM(Character character, Item item, EquipSlot equipSlot)
 	{
-		var strArg = item.Data.Script.StrArg;
+		var strArg = item.Data.Script?.StrArg ?? "";
 
 		if (ZoneServer.Instance.Data.BuffDb.TryFind(strArg, out var buffData))
 			character.StartBuff(buffData.Id, TimeSpan.Zero);
@@ -32,7 +32,7 @@ public class ItemEquipScript : GeneralScript
 	[ScriptableFunction]
 	public ItemUnequipResult SCP_ON_UNEQUIP_ITEM(Character character, Item item, EquipSlot equipSlot)
 	{
-		var strArg = item.Data.Script.StrArg;
+		var strArg = item.Data.Script?.StrArg ?? "";
 
 		if (ZoneServer.Instance.Data.BuffDb.TryFind(strArg, out var buffData))
 			character.Buffs.Remove(buffData.Id);

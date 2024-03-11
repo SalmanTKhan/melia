@@ -31,16 +31,6 @@ namespace Melia.Shared.Data.Database
 			=> _img2cls.TryGetValue(imageName, out className);
 
 		/// <summary>
-		/// Check's if a dialog exists with a certain class name.
-		/// </summary>
-		/// <param name="className"></param>
-		/// <returns></returns>
-		public bool Exists(string className)
-		{
-			return _classNames.Contains(className);
-		}
-
-		/// <summary>
 		/// Reads given entry and adds it to the database.
 		/// </summary>
 		/// <param name="entry"></param>
