@@ -10,14 +10,25 @@ namespace Melia.Shared.Data.Database
 	{
 		public int ClassId { get; set; }
 		public string ClassName { get; set; }
+		public string Image { get; set; }
 	}
 
 	/// <summary>
 	/// Dialog database.
 	/// </summary>
-	public class DialogDb : DatabaseJson<DialogData>
+	public class DialogDb : DatabaseJsonIndexed<string, DialogData>
 	{
-		private readonly HashSet<string> _classNames = new HashSet<string>();
+		private readonly Dictionary<string, string> _img2cls = new Dictionary<string, string>();
+
+		/// <summary>
+		/// Returns a class name for the given image name via out if one
+		/// exists. Returns false if no valid entry was found.
+		/// </summary>
+		/// <param name="imageName"></param>
+		/// <param name="className"></param>
+		/// <returns></returns>
+		public bool TryGetClass(string imageName, out string className)
+			=> _img2cls.TryGetValue(imageName, out className);
 
 		/// <summary>
 		/// Check's if a dialog exists with a certain class name.
@@ -41,14 +52,12 @@ namespace Melia.Shared.Data.Database
 
 			data.ClassId = entry.ReadInt("classId");
 			data.ClassName = entry.ReadString("className");
+			data.Image = entry.ReadString("image", null);
 
-			this.Add(data);
-		}
+			this.Add(data.ClassName, data);
 
-		protected override void AfterLoad()
-		{
-			foreach (var entry in this.Entries)
-				_classNames.Add(entry.ClassName);
+			if (data.Image != null && !_img2cls.ContainsKey(data.Image))
+				_img2cls.Add(data.Image, data.ClassName);
 		}
 	}
 }

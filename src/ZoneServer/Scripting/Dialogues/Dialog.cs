@@ -177,9 +177,15 @@ namespace Melia.Zone.Scripting.Dialogues
 		/// Sets the dialog class to use in message, which affects the
 		/// displayed portrait. Set to null for the default.
 		/// </summary>
-		/// <param name="portrait"></param>
-		public void SetPortrait(string portrait)
-			=> this.Portrait = portrait;
+		/// <remarks>
+		/// The image name refers to the name of an image file in the
+		/// client's npcimg folder, without the file extension. However,
+		/// the desired image needs to be referenced in the dialog database
+		/// for the image to be recognized.
+		/// </remarks>
+		/// <param name="imageName"></param>
+		public void SetPortrait(string imageName)
+			=> this.Portrait = imageName;
 
 		/// <summary>
 		/// Returns delegates that translate strings to the language
@@ -216,8 +222,13 @@ namespace Melia.Zone.Scripting.Dialogues
 		/// <returns></returns>
 		private string AddNpcIdentity(string message)
 		{
-			if (this.IsClientDialog(message))
+			// If the title was set to a valid dialog entry, we'll use that
+			// one to get the title and portrait from the dialog database
+			if (this.Title != null && this.Portrait == null && ZoneServer.Instance.Data.DialogDb.Contains(this.Title))
+			{
+				message = this.Title + NpcDialogTextSeperator + message;
 				return message;
+			}
 
 			// Prepend title, controlling title displayed on the dialog
 			// window.
